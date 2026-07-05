@@ -1,0 +1,102 @@
+/* Pages piliers (Expertises) — matches EB Automatisation V2.dc.html sc-if isPillar (lignes 1174-1314). */
+/* Générique : réutilisé par toutes les pages piliers (automatisation-ia, agence-ia, etc.), une seule créée pour l'instant. */
+
+.pillar-wrap{ max-width:1200px; margin:0 auto; padding:48px 40px 96px; }
+
+/* ---------- breadcrumb ---------- */
+.pillar-breadcrumb{ display:flex; align-items:center; gap:8px; font-size:13px; color:var(--muted); margin-bottom:28px; flex-wrap:wrap; }
+.pillar-breadcrumb a{ text-decoration:none; color:var(--muted); }
+.pillar-breadcrumb a:hover{ color:var(--navy); }
+.pillar-breadcrumb__current{ color:var(--navy); font-weight:600; }
+
+/* ---------- hero ---------- */
+.pillar-hero{ max-width:820px; margin-bottom:56px; }
+.pillar-hero__eyebrow{ margin-bottom:16px; }
+.pillar-hero h1{ font-size:44px; line-height:1.1; letter-spacing:-.025em; margin:0 0 20px; }
+.pillar-hero__intro{ font-size:18px; line-height:1.62; color:var(--text-2); margin:0; }
+.pillar-hero__actions{ display:flex; gap:12px; flex-wrap:wrap; margin-top:28px; }
+.pillar-hero__actions .btn-primary{ padding:15px 26px; font-size:15.5px; box-shadow:0 14px 30px -14px rgba(221,122,51,.7); }
+.pillar-hero__actions .btn-secondary{ padding:15px 22px; font-size:15.5px; }
+
+/* ---------- mockup visuel ---------- */
+.pillar-mock{ margin-bottom:56px; background:var(--navy-panel); border:1px solid var(--navy-panel-border); border-radius:16px; box-shadow:0 30px 60px -38px rgba(12,30,60,.5); overflow:hidden; }
+.pillar-mock__titlebar{ display:flex; align-items:center; justify-content:space-between; padding:13px 16px; border-bottom:1px solid var(--navy-panel-border); }
+.pillar-mock__dots{ display:flex; align-items:center; gap:7px; }
+.pillar-mock__dots span{ width:10px; height:10px; border-radius:50%; display:block; }
+.pillar-mock__file{ font-family:var(--font-mono); font-size:11.5px; color:var(--muted-on-navy-3); }
+.pillar-mock__live{ display:inline-flex; align-items:center; gap:6px; font-family:var(--font-mono); font-size:10px; color:var(--green-bright); }
+.pillar-mock__live-dot{ width:6px; height:6px; border-radius:50%; background:var(--green-bright); }
+.pillar-mock__body{ padding:6px 18px 18px; }
+.pillar-mock__row{ display:flex; align-items:center; gap:12px; padding:13px 0; border-top:1px solid var(--navy-panel-border); }
+.pillar-mock__dot{ width:9px; height:9px; border-radius:50%; flex:none; }
+.pillar-mock__label{ flex:1; font-size:13.5px; color:var(--mono-on-navy); }
+.pillar-mock__val{ font-family:var(--font-mono); font-size:11px; font-weight:500; padding:4px 10px; border-radius:20px; white-space:nowrap; }
+
+/* ---------- sections de contenu ---------- */
+.pillar-section{ max-width:820px; margin-bottom:48px; }
+.pillar-section h2{ font-size:28px; letter-spacing:-.02em; margin:0 0 18px; line-height:1.2; }
+.pillar-section p{ font-size:16px; line-height:1.68; color:var(--text-3); margin:0 0 16px; }
+.pillar-section p:last-child{ margin-bottom:0; }
+.pillar-section__list{ display:flex; flex-direction:column; gap:11px; margin:20px 0 4px; }
+.pillar-section__list-item{ display:flex; align-items:flex-start; gap:11px; font-size:15.5px; line-height:1.55; color:var(--text-5); }
+.pillar-section__list-item span{ color:var(--green); flex:none; margin-top:1px; }
+.pillar-section__sub{ margin-top:22px; }
+.pillar-section__sub h3{ font-size:19px; letter-spacing:-.01em; margin:0 0 8px; }
+.pillar-section__sub p{ font-size:15.5px; line-height:1.62; color:var(--text-3); margin:0; }
+
+/* ---------- cas d'usage (3 cartes) ---------- */
+.pillar-usecases{ margin:56px 0; }
+.pillar-usecases h2{ font-size:28px; letter-spacing:-.02em; margin:0 0 22px; }
+.pillar-usecases__grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+.pillar-usecase{ background:#fff; border:1px solid var(--border-2); border-radius:16px; padding:26px; display:flex; flex-direction:column; height:100%; }
+.pillar-usecase__icon{ width:42px; height:42px; border-radius:11px; background:var(--orange-soft-bg); color:var(--orange); display:flex; align-items:center; justify-content:center; margin-bottom:14px; }
+.pillar-usecase h3{ font-size:16.5px; margin:0 0 8px; line-height:1.3; }
+.pillar-usecase p{ font-size:13.5px; line-height:1.55; color:var(--text-3); margin:0 0 16px; flex:1; }
+.pillar-usecase__gain{ border-top:1px solid var(--border); padding-top:13px; font-family:var(--font-heading); font-weight:700; font-size:15.5px; color:var(--green); }
+
+/* ---------- flow diagram ---------- */
+.pillar-flow{ margin:56px 0; background:var(--bg-soft); border:1px solid var(--border); border-radius:18px; padding:36px 32px; }
+.pillar-flow__label{ font-size:12.5px; font-weight:600; text-transform:uppercase; letter-spacing:.1em; color:var(--orange); margin-bottom:20px; text-align:center; }
+.pillar-flow__row{ display:flex; align-items:center; justify-content:center; flex-wrap:wrap; gap:0; }
+.pillar-flow__step{ display:flex; flex-direction:column; align-items:center; gap:10px; width:150px; }
+.pillar-flow__icon{ width:48px; height:48px; border-radius:13px; background:var(--navy); color:#fff; display:flex; align-items:center; justify-content:center; font-size:20px; }
+.pillar-flow__step-label{ font-family:var(--font-heading); font-weight:600; font-size:13.5px; color:var(--navy); text-align:center; line-height:1.3; }
+.pillar-flow__arrow{ color:var(--orange); font-size:20px; margin:0 4px 30px; flex:none; }
+
+/* ---------- mid CTA ---------- */
+.pillar-mid-cta{ background:var(--navy); border-radius:18px; padding:38px 42px; display:flex; align-items:center; justify-content:space-between; gap:28px; flex-wrap:wrap; margin:56px 0; }
+.pillar-mid-cta p{ font-family:var(--font-heading); font-weight:500; font-size:19px; line-height:1.4; letter-spacing:-.01em; color:#fff; margin:0; max-width:520px; }
+.pillar-mid-cta .btn-primary{ padding:14px 24px; font-size:15px; border-radius:10px; white-space:nowrap; box-shadow:none; }
+
+/* ---------- FAQ (liste simple, une colonne) ---------- */
+.pillar-faq{ max-width:820px; margin-bottom:56px; }
+.pillar-faq h2{ font-size:28px; letter-spacing:-.02em; margin:0 0 8px; }
+.pillar-faq__item{ padding:22px 0; border-top:1px solid var(--border); }
+.pillar-faq__item h3{ font-size:17px; margin:0 0 8px; }
+.pillar-faq__item p{ font-size:15px; line-height:1.6; color:var(--text-3); margin:0; }
+
+/* ---------- explorer aussi (pills) ---------- */
+.pillar-related{ margin-bottom:56px; }
+.pillar-related__label{ font-size:12.5px; font-weight:600; text-transform:uppercase; letter-spacing:.1em; color:var(--muted); margin-bottom:14px; }
+.pillar-related__list{ display:flex; flex-wrap:wrap; gap:10px; }
+.pillar-related__pill{ text-decoration:none; display:inline-flex; align-items:center; gap:8px; background:#fff; border:1px solid var(--border-3); color:var(--navy); font-family:var(--font-heading); font-weight:600; font-size:14px; padding:11px 18px; border-radius:10px; }
+.pillar-related__pill:hover{ border-color:var(--orange); }
+.pillar-related__pill span{ color:var(--orange); }
+
+/* ---------- CTA final ---------- */
+.pillar-final-cta{ background:#fff; border:1px solid var(--border-2); border-radius:22px; padding:52px; text-align:center; box-shadow:var(--shadow-cta-final); }
+.pillar-final-cta h2{ font-size:32px; line-height:1.2; letter-spacing:-.02em; margin:0 auto 14px; max-width:640px; }
+.pillar-final-cta p{ font-size:16.5px; color:var(--text-3); margin:0 0 28px; }
+.pillar-final-cta .btn-primary{ padding:16px 30px; font-size:16px; box-shadow:0 16px 36px -14px rgba(221,122,51,.8); }
+
+/* ==================== responsive — miroir du retrofit du prototype ==================== */
+@media (max-width:900px){
+  .pillar-usecases__grid{ grid-template-columns:1fr; }
+}
+@media (max-width:640px){
+  .pillar-wrap{ padding:28px 20px 60px; }
+  .pillar-hero h1{ font-size:32px; line-height:1.14; }
+  .pillar-mid-cta{ padding:28px 22px; }
+  .pillar-flow{ padding:22px; }
+  .pillar-final-cta{ padding:28px; }
+}
