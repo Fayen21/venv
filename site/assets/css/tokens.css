@@ -1,0 +1,114 @@
+/* Design tokens extracted from EB Automatisation V2.dc.html — values are literal, do not "round" or reinterpret them. */
+:root{
+  /* navy (brand dark) */
+  --navy:#0C1E3C;
+  --navy-footer:#091831;
+  --navy-card:#11264A;
+  --navy-card-border:#1E3458;
+  --navy-panel:#0A1A33;
+  --navy-panel-border:#16294a;
+  --navy-panel-border-2:#11264A;
+
+  /* orange (brand accent / CTA) */
+  --orange:#DD7A33;
+  --orange-hover:#C9692A;
+  --orange-soft-bg:#FBEEE3;
+  --orange-soft-border:#F2D8BE;
+  --orange-soft-border-2:#F0D9C4;
+  --peach:#E59B6A;
+
+  /* blue (live / accent) */
+  --blue:#2E9BFF;
+  --blue-2:#3BA5FF;
+  --blue-3:#5BB6FF;
+  --blue-deep:#1E5FD0;
+
+  /* green (success) */
+  --green:#1E8E5A;
+  --green-bright:#5BCB8B;
+  --green-bg:#E7F4EC;
+  --green-border:#BFE4CD;
+  --green-dark-text:#1E7A4E;
+  --green-dark-text-2:#1E6B45;
+  --green-alt-bg:#F3FAF5;
+  --green-alt-border:#CFE9D9;
+
+  /* red (error / warning) */
+  --red:#C0492B;
+  --red-bg:#FBEAE6;
+  --red-border:#E0A89A;
+
+  /* tan / beige (avant panels) */
+  --tan-bg:#F7F6F4;
+  --tan-border:#ECE8E1;
+  --tan-label:#A88C6E;
+  --tan-text:#7C6E5C;
+  --tan-strong:#9a5a32;
+  --tan-strong-bg:#FBF4EE;
+  --tan-strong-border:#E0A89A;
+
+  /* body text grays */
+  --text:#51607A;
+  --text-2:#55647D;
+  --text-3:#5A6880;
+  --text-4:#5C6B82;
+  --text-5:#3C4A60;
+
+  /* muted grays */
+  --muted:#8A98AD;
+  --muted-2:#9AA6B8;
+  --muted-3:#8F9DB6;
+  --muted-4:#6E7E99;
+  --muted-on-navy:#9DAAC2;
+  --muted-on-navy-2:#5e6f8c;
+  --muted-on-navy-3:#8294b2;
+  --mono-on-navy:#C7D2E4;
+  --navy-heading-on-navy:#5E6F8C;
+
+  /* borders (light) */
+  --border:#ECEFF5;
+  --border-2:#E9ECF3;
+  --border-3:#E6EAF2;
+  --border-4:#E1E6EF;
+  --border-5:#D9DFEA;
+
+  /* backgrounds */
+  --bg:#FBFCFE;
+  --bg-soft:#F7F9FC;
+  --bg-soft-2:#F2F5FA;
+
+  /* mac window dots */
+  --dot-red:#FF5F57;
+  --dot-yellow:#FEBC2E;
+  --dot-green:#28C840;
+
+  /* fonts */
+  --font-heading:'Schibsted Grotesk', sans-serif;
+  --font-body:'Hanken Grotesk', system-ui, sans-serif;
+  --font-mono:'IBM Plex Mono', monospace;
+
+  /* radii */
+  --r-sm:9px;
+  --r-md:10px;
+  --r-lg:11px;
+  --r-xl:12px;
+  --r-2xl:13px;
+  --r-3xl:14px;
+  --r-4xl:16px;
+  --r-5xl:18px;
+  --r-6xl:20px;
+  --r-7xl:22px;
+  --r-8xl:24px;
+
+  /* shadows */
+  --shadow-btn-orange-sm:0 8px 22px -10px rgba(221,122,51,.7);
+  --shadow-btn-orange-md:0 14px 30px -12px rgba(221,122,51,.7);
+  --shadow-btn-orange-lg:0 16px 36px -14px rgba(221,122,51,.8);
+  --shadow-btn-orange-xl:0 18px 40px -14px rgba(221,122,51,.9);
+  --shadow-card:0 24px 50px -34px rgba(12,30,60,.3);
+  --shadow-card-lg:0 30px 60px -24px rgba(12,30,60,.3);
+  --shadow-panel:0 0 0 1px rgba(46,155,255,.14),0 24px 60px -30px rgba(30,95,208,.55),0 40px 80px -36px rgba(12,30,60,.5);
+  --shadow-panel-navy:0 24px 50px -30px rgba(12,30,60,.6);
+  --shadow-cta-final:0 30px 70px -40px rgba(12,30,60,.25);
+  --shadow-cta-navy:0 40px 90px -50px rgba(12,30,60,.55);
+}

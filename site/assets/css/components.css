@@ -1,0 +1,136 @@
+/* Shared reusable components: buttons, cards, icon tiles, badges, mockup/terminal window. */
+
+/* ---------- buttons ---------- */
+.btn{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  border:none;
+  cursor:pointer;
+  font-family:inherit;
+  font-weight:600;
+  border-radius:var(--r-lg);
+  text-decoration:none;
+}
+.btn-primary{
+  background:var(--orange);
+  color:#fff;
+}
+.btn-primary:hover{ background:var(--orange-hover); }
+.btn-secondary{
+  background:#fff;
+  color:var(--navy);
+  border:1px solid var(--border-5);
+}
+.btn-secondary:hover{ border-color:var(--navy); }
+.btn-text{
+  background:none;
+  border:none;
+  cursor:pointer;
+  font-family:inherit;
+  font-weight:600;
+  color:var(--navy);
+  border-bottom:2px solid var(--orange);
+  padding-bottom:4px;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  text-decoration:none;
+}
+
+/* ---------- generic card ---------- */
+.card{
+  background:#fff;
+  border:1px solid var(--border-2);
+  border-radius:var(--r-4xl);
+}
+.card h3{ margin:0 0 9px; }
+
+/* ---------- icon tile ---------- */
+.icon-tile{
+  width:46px;
+  height:46px;
+  border-radius:var(--r-xl);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-bottom:18px;
+  flex:none;
+}
+.icon-tile--a{ background:var(--orange-soft-bg); color:var(--orange); }
+.icon-tile--b{ background:#E7F1FF; color:var(--blue-deep); }
+.icon-tile--green{ background:var(--green-bg); color:var(--green); }
+
+/* ---------- badge pill ---------- */
+.badge-pill{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  font-size:12.5px;
+  font-weight:600;
+  padding:6px 13px;
+  border-radius:20px;
+}
+.badge-pill--green{ background:var(--green-bg); color:var(--green); }
+.badge-pill--orange{ background:var(--orange-soft-bg); color:var(--navy); }
+
+/* ---------- check list item ---------- */
+.check-item{
+  display:flex;
+  align-items:flex-start;
+  gap:8px;
+  font-size:13.5px;
+  line-height:1.4;
+}
+.check-item__mark{ flex:none; }
+
+/* ---------- terminal / mockup window ---------- */
+.mockup{
+  border-radius:var(--r-4xl);
+  overflow:hidden;
+}
+.mockup--navy{
+  background:var(--navy-panel);
+  border:1px solid var(--navy-panel-border);
+}
+.mockup__titlebar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:13px 16px;
+  border-bottom:1px solid var(--navy-panel-border);
+}
+.mockup__dots{
+  display:flex;
+  align-items:center;
+  gap:7px;
+}
+.mockup__dots span{
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  display:block;
+}
+.mockup__dots span:nth-child(1){ background:var(--dot-red); }
+.mockup__dots span:nth-child(2){ background:var(--dot-yellow); }
+.mockup__dots span:nth-child(3){ background:var(--dot-green); }
+.mockup__filename{
+  font-family:var(--font-mono);
+  font-size:12px;
+  color:var(--muted-on-navy-3);
+}
+.mockup__live{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  font-family:var(--font-mono);
+  font-size:10.5px;
+  color:var(--green-bright);
+}
+.mockup__live-dot{
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:var(--green-bright);
+  animation:ebblink 1.4s ease-in-out infinite;
+}
