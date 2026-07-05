@@ -1,128 +1,113 @@
-/* Audit page — steps/why/highlights reuse home.css + components.css; this file is the request form + success state. */
+/* Audit — matches EB Automatisation V2.dc.html sc-if isAudit (lignes 1084-1172). */
 
-.audit-form-section{ padding-bottom:88px; }
-.audit-form{
-  max-width:640px;
+.audit-layout{
+  max-width:1160px;
   margin:0 auto;
-  background:#fff;
-  border:1px solid var(--border-2);
-  border-radius:var(--r-6xl);
-  padding:44px;
-  box-shadow:var(--shadow-card);
-}
-.audit-form__grid{
+  padding:80px 40px 96px;
   display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:20px;
-}
-.audit-form__row{
-  display:flex;
-  flex-direction:column;
-  gap:7px;
-  margin-bottom:20px;
-}
-.audit-form__row--full{ grid-column:1 / -1; }
-.audit-form__label{
-  font-family:var(--font-heading);
-  font-size:13.5px;
-  font-weight:600;
-  color:var(--navy);
-}
-.audit-form__optional{
-  font-family:var(--font-body);
-  font-weight:400;
-  color:var(--muted);
-  font-size:12px;
-}
-.audit-form__input,
-.audit-form__select,
-.audit-form__textarea{
-  width:100%;
-  font-family:inherit;
-  font-size:15px;
-  color:var(--text-5);
-  background:#fff;
-  border:1px solid var(--border-4);
-  border-radius:var(--r-lg);
-  padding:12px 14px;
-}
-.audit-form__textarea{ resize:vertical;min-height:110px; }
-.audit-form__row.has-error .audit-form__input,
-.audit-form__row.has-error .audit-form__select,
-.audit-form__row.has-error .audit-form__textarea{
-  border-color:var(--red-border);
-  background:var(--red-bg);
-}
-.audit-form__error{
-  font-size:12.5px;
-  color:var(--red);
-  display:none;
-}
-.audit-form__row.has-error .audit-form__error{ display:block; }
-
-.audit-form__row--consent{ margin-bottom:24px; }
-.audit-form__consent{
-  display:flex;
-  align-items:flex-start;
-  gap:10px;
-}
-.audit-form__consent input{ margin-top:3px;flex:none; }
-.audit-form__consent label{ font-size:13.5px;line-height:1.5;color:var(--text-3); }
-.audit-form__row--consent.has-error .audit-form__consent label{ color:var(--red); }
-
-.audit-form__submit{
-  grid-column:1 / -1;
-  width:100%;
-  justify-content:center;
-  padding:15px 24px;
-  font-size:15.5px;
-  box-shadow:var(--shadow-btn-orange-md);
+  grid-template-columns:.92fr 1.08fr;
+  gap:64px;
+  align-items:start;
 }
 
-/* ---------- success state ---------- */
-.audit-success{
-  max-width:640px;
-  margin:0 auto;
+/* ---------- colonne gauche (sticky) ---------- */
+.audit-side{ position:sticky; top:104px; }
+.audit-side__eyebrow{ margin-bottom:18px; }
+.audit-side h1{ font-size:46px; line-height:1.06; margin:0 0 20px; }
+.audit-side__lead{ font-size:17px; line-height:1.62; color:var(--text-2); margin:0 0 32px; }
+
+.audit-points{ display:flex; flex-direction:column; gap:14px; }
+.audit-point{ display:flex; align-items:flex-start; gap:13px; }
+.audit-point__check{ width:24px; height:24px; flex:none; border-radius:50%; background:var(--green-bg); color:var(--green); display:flex; align-items:center; justify-content:center; font-size:13px; }
+.audit-point__text{ font-size:15.5px; color:var(--text-5); line-height:1.45; padding-top:1px; }
+
+.audit-avatar-card{ margin-top:34px; display:flex; align-items:center; gap:13px; padding:18px 20px; background:var(--bg-soft); border:1px solid var(--border); border-radius:14px; }
+.audit-avatar-card__img{ width:42px; height:42px; flex:none; border-radius:10px; overflow:hidden; }
+.audit-avatar-card__img img{ width:100%; height:100%; object-fit:cover; object-position:center top; display:block; }
+.audit-avatar-card__name{ font-size:14.5px; font-weight:600; color:var(--navy); }
+.audit-avatar-card__sub{ font-size:13px; color:var(--muted); }
+
+.audit-alt-contact{ margin-top:16px; font-size:14px; color:var(--muted); line-height:1.55; }
+.audit-alt-contact a{ color:var(--navy); font-weight:600; text-decoration:none; border-bottom:1px solid var(--orange); }
+
+/* ---------- colonne droite : formulaire ---------- */
+.audit-form{
   background:#fff;
   border:1px solid var(--border-2);
-  border-radius:var(--r-6xl);
-  padding:48px 44px;
-  text-align:center;
-  box-shadow:var(--shadow-card);
+  border-radius:20px;
+  padding:40px;
+  box-shadow:0 30px 70px -34px rgba(12,30,60,.28);
+}
+.audit-form h2{ font-size:23px; letter-spacing:-.01em; margin:0 0 6px; }
+.audit-form__intro{ font-size:14px; color:var(--muted); margin:0 0 24px; line-height:1.5; }
+.audit-form__grid{ display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+.audit-form__row{ display:flex; flex-direction:column; gap:7px; }
+.audit-form__row--full{ grid-column:1 / -1; }
+.audit-form__label{ font-size:13px; font-weight:600; color:var(--navy); }
+.audit-form__optional{ font-weight:400; color:var(--muted); }
+.audit-form__input,
+.audit-form__textarea{
+  width:100%; font-size:15px; color:var(--navy); background:#fff;
+  border:1px solid var(--border-4); border-radius:10px; padding:13px 14px; outline:none;
+}
+.audit-form__input:focus, .audit-form__textarea:focus{ border-color:var(--orange); }
+.audit-form__textarea{ resize:vertical; line-height:1.5; font-family:inherit; }
+.audit-form__row.has-error .audit-form__input,
+.audit-form__row.has-error .audit-form__textarea{ border-color:var(--red-border); }
+.audit-form__error{ font-size:12px; color:var(--red); margin-top:5px; display:none; }
+.audit-form__row.has-error .audit-form__error{ display:block; }
+.audit-form__submit{
+  margin-top:24px; width:100%; justify-content:center;
+  padding:16px; font-size:16px; box-shadow:var(--shadow-btn-orange-md);
+}
+.audit-form__disclaimer{ text-align:center; font-size:12.5px; color:var(--muted-2); margin:16px 0 0; line-height:1.5; }
+
+/* ---------- succès ---------- */
+.audit-success{
+  background:#fff; border:1px solid var(--border-2); border-radius:20px;
+  padding:44px; box-shadow:0 30px 70px -34px rgba(12,30,60,.3);
 }
 .audit-success__icon{
-  width:60px;height:60px;margin:0 auto 20px;border-radius:50%;
-  background:var(--green-bg);color:var(--green);
-  display:flex;align-items:center;justify-content:center;font-size:28px;
+  width:56px; height:56px; border-radius:50%; background:var(--green-bg); color:var(--green);
+  display:flex; align-items:center; justify-content:center; margin-bottom:22px;
 }
-.audit-success h2{ margin-bottom:12px; }
-.audit-success__desc{ font-size:15.5px;line-height:1.62;color:var(--text-3);max-width:460px;margin:0 auto; }
+.audit-success h2{ font-size:28px; letter-spacing:-.02em; margin:0 0 12px; }
+.audit-success__desc{ font-size:16px; line-height:1.6; color:var(--text-3); margin:0 0 24px; }
 
 .calendly-placeholder{
-  margin-top:28px;
-  border:2px dashed var(--border-5);
-  border-radius:var(--r-4xl);
-  background:var(--bg-soft);
-  padding:30px;
+  border:2px dashed var(--border-5); border-radius:14px; background:var(--bg-soft);
+  padding:24px; margin-bottom:16px; text-align:center;
 }
-.calendly-placeholder__icon{ font-size:28px;margin-bottom:10px; }
-.calendly-placeholder__title{ font-family:var(--font-heading);font-weight:600;font-size:15.5px;color:var(--navy);margin-bottom:6px; }
-.calendly-placeholder__desc{ font-size:13.5px;line-height:1.55;color:var(--muted);max-width:400px;margin:0 auto 18px; }
+.calendly-placeholder__icon{ font-size:24px; margin-bottom:8px; }
+.calendly-placeholder__desc{ font-size:13px; line-height:1.5; color:var(--muted); margin:0 0 14px; }
 .btn-disabled{
-  display:inline-flex;align-items:center;gap:9px;
-  background:#fff;color:var(--muted);border:1px solid var(--border-4);
-  padding:12px 22px;border-radius:var(--r-lg);font-weight:600;font-size:14.5px;
-  cursor:not-allowed;
+  display:inline-flex; align-items:center; justify-content:center; gap:10px; width:100%;
+  background:#fff; color:var(--muted); border:1px solid var(--border-4);
+  font-weight:600; font-size:15px; padding:14px; border-radius:11px; cursor:not-allowed;
 }
 
-.audit-success__reset{
-  margin-top:26px;
-  background:none;border:none;cursor:pointer;font-family:inherit;
-  font-weight:600;font-size:13.5px;color:var(--muted);text-decoration:underline;
-  padding:0;
+.audit-success__tiles{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+.audit-success__tile{
+  text-decoration:none; display:flex; flex-direction:column; align-items:center; gap:8px;
+  background:var(--bg-soft); border:1px solid var(--border); border-radius:14px; padding:22px;
+}
+.audit-success__tile span{ font-family:var(--font-heading); font-weight:600; font-size:14.5px; color:var(--navy); }
+
+.audit-success__back{
+  margin-top:24px; background:none; border:none; cursor:pointer; font-family:inherit;
+  font-size:15px; font-weight:600; color:var(--navy); border-bottom:2px solid var(--orange);
+  padding-bottom:3px; text-decoration:none; display:inline-block;
 }
 
+/* ==================== responsive — miroir des retrofits du prototype ==================== */
+@media (max-width:900px){
+  .audit-layout{ grid-template-columns:1fr; }
+  .audit-side{ position:static; top:auto; }
+}
 @media (max-width:640px){
-  .audit-form,.audit-success{ padding:28px; }
+  .audit-layout{ padding:40px 20px 60px; }
+  .audit-side h1{ font-size:32px; line-height:1.14; }
+  .audit-form, .audit-success{ padding:28px; }
   .audit-form__grid{ grid-template-columns:1fr; }
+  .audit-success__tiles{ grid-template-columns:1fr; }
 }

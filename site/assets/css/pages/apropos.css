@@ -1,14 +1,57 @@
-/* À propos — bio section (page-specific; hero/differentiators/value-props reuse home.css + components.css). */
+/* À propos — matches EB Automatisation V2.dc.html sc-if isApropos (lignes 1006-1081). */
+/* Le texte de la biographie reste provisoire (choix produit validé) — seule la mise en page est restaurée ici. */
 
-.bio__grid{ gap:24px;align-items:stretch;margin-bottom:8px; }
-.bio-card{ padding:32px; }
-.bio-card p{ font-size:15.5px;line-height:1.68;color:var(--text-3); }
-.bio-card p + p{ margin-top:14px; }
-.bio-card__label{
-  font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.1em;
-  color:var(--muted-2);margin-bottom:14px;display:block;
+/* ============ hero 2 colonnes + photo ============ */
+.apropos-hero{
+  max-width:1200px; margin:0 auto; padding:84px 40px 50px;
+  display:grid; grid-template-columns:1.05fr .95fr; gap:60px; align-items:center;
 }
+.apropos-hero__text h1{ font-size:46px; line-height:1.08; margin:0 0 22px; }
+.apropos-hero__text p{ font-size:17px; line-height:1.64; color:var(--text-2); margin:0 0 18px; }
+.apropos-hero__text p:last-child{ margin-bottom:0; }
+.apropos-hero__photo{ position:relative; display:flex; justify-content:center; }
+.apropos-hero__photo-frame{
+  width:100%; max-width:245px; aspect-ratio:4/5; border-radius:18px; border:1px solid var(--border-4);
+  overflow:hidden; background:#EEF1F7; box-shadow:0 24px 50px -30px rgba(12,30,60,.4);
+}
+.apropos-hero__photo-frame img{ width:100%; height:100%; object-fit:cover; object-position:center top; display:block; }
 
+/* ============ citation en exergue ============ */
+.apropos-quote{ margin:18px auto; max-width:880px; padding:6px 0 6px 28px; border-left:3px solid var(--orange); }
+.apropos-quote p{ font-family:var(--font-heading); font-weight:500; font-size:26px; line-height:1.4; letter-spacing:-.015em; color:var(--navy); margin:0 0 16px; }
+.apropos-quote footer{ font-size:14.5px; color:var(--muted); }
+
+/* ============ bandeau navy "ma façon de travailler" ============ */
+.values-band{
+  margin-top:70px; background-color:var(--navy);
+  background-image:radial-gradient(circle at 1px 1px, rgba(91,181,255,.18) 1.4px, transparent 0);
+  background-size:26px 26px; color:#fff;
+}
+.values-band__inner{ max-width:1200px; margin:0 auto; padding:74px 40px; }
+.values-band h2{ font-size:34px; color:#fff; margin:0 0 44px; }
+.values-band__grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:34px; }
+.value-item__n{ font-family:var(--font-heading); font-weight:700; font-size:15px; color:var(--peach); margin-bottom:14px; }
+.value-item h3{ font-size:19px; color:#fff; margin:0 0 10px; }
+.value-item p{ font-size:15px; line-height:1.6; color:var(--muted-on-navy); margin:0; }
+
+/* ============ outils + carte RGPD ============ */
+.apropos-tools{ display:grid; grid-template-columns:1fr 1fr; gap:54px; align-items:center; }
+.apropos-tools h2{ font-size:28px; margin:0 0 20px; }
+.rgpd-card{ background:var(--bg-soft); border:1px solid var(--border); border-radius:16px; padding:32px; }
+.rgpd-card__icon{ color:var(--green); font-size:24px; margin-bottom:14px; }
+.rgpd-card h3{ font-size:20px; margin:0 0 10px; }
+.rgpd-card p{ font-size:15px; line-height:1.62; color:var(--text-3); margin:0; }
+
+/* ==================== responsive — miroir du retrofit 900px du prototype ==================== */
 @media (max-width:900px){
-  .bio__grid{ grid-template-columns:1fr; }
+  .apropos-hero, .values-band__grid, .apropos-tools{
+    grid-template-columns:1fr;
+  }
+  .apropos-hero__photo{ order:-1; }
+}
+@media (max-width:640px){
+  .apropos-hero{ padding:40px 20px 20px; }
+  .apropos-hero__text h1{ font-size:32px; line-height:1.14; }
+  .apropos-quote p{ font-size:21px; }
+  .values-band__inner{ padding:44px 20px; }
 }

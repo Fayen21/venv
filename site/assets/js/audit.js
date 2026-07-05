@@ -5,16 +5,14 @@
 
   var successPanel = document.getElementById('audit-success');
   var successName = document.getElementById('audit-success-name');
-  var resetBtn = document.getElementById('audit-reset');
+  var backBtn = document.getElementById('audit-back');
 
   var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   var rules = {
-    'audit-name': function (v) { return v.trim().length > 0; },
-    'audit-email': function (v) { return EMAIL_RE.test(v.trim()); },
-    'audit-size': function (v) { return v !== ''; },
-    'audit-message': function (v) { return v.trim().length > 0; },
-    'audit-consent': function (v, field) { return field.checked; }
+    'f-prenom': function (v) { return v.trim().length > 0; },
+    'f-email': function (v) { return EMAIL_RE.test(v.trim()); },
+    'f-besoin': function (v) { return v.trim().length > 0; }
   };
 
   function rowFor(field) {
@@ -31,7 +29,7 @@
   function validateField(field) {
     var rule = rules[field.id];
     if (!rule) return true;
-    var ok = rule(field.value, field);
+    var ok = rule(field.value);
     setError(field, !ok);
     return ok;
   }
@@ -40,7 +38,6 @@
     var field = document.getElementById(id);
     if (!field) return;
     field.addEventListener('input', function () { validateField(field); });
-    field.addEventListener('change', function () { validateField(field); });
   });
 
   form.addEventListener('submit', function (e) {
@@ -59,9 +56,8 @@
       return;
     }
 
-    var nameField = document.getElementById('audit-name');
-    var firstName = nameField ? nameField.value.trim().split(/\s+/)[0] : '';
-    if (successName) successName.textContent = firstName ? ', ' + firstName : '';
+    var prenomField = document.getElementById('f-prenom');
+    if (successName) successName.textContent = prenomField ? ', ' + prenomField.value.trim() : '';
 
     form.hidden = true;
     if (successPanel) {
@@ -70,16 +66,10 @@
     }
   });
 
-  if (resetBtn) {
-    resetBtn.addEventListener('click', function () {
-      form.reset();
-      Object.keys(rules).forEach(function (id) {
-        var field = document.getElementById(id);
-        if (field) setError(field, false);
-      });
-      if (successPanel) successPanel.hidden = true;
-      form.hidden = false;
-      form.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  if (backBtn) {
+    backBtn.addEventListener('click', function (e) {
+      e.preventDefault();
+      window.location.href = 'index.html';
     });
   }
 })();

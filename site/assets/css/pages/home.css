@@ -99,11 +99,7 @@
 .automations__gain-label{ font-size:12.5px;color:var(--muted); }
 .automations__footnote{ text-align:center;font-size:13.5px;color:var(--muted);margin:26px auto 0;max-width:640px;line-height:1.55; }
 
-/* ============ différenciation ============ */
-.differentiators__intro{ max-width:700px;margin-bottom:34px; }
-.differentiators__intro h2{ margin:0 0 14px; }
-.differentiators__intro p{ font-size:17px;line-height:1.64;color:var(--text-2); }
-.differentiators__card{ padding:30px; }
+/* différenciation : voir .differentiators__intro / .differentiators__card dans components.css (partagé avec solutions/apropos) */
 
 /* ============ vous gardez vos outils ============ */
 .trust-tools{
@@ -386,14 +382,7 @@
 .profile-quote p{ font-family:var(--font-heading);font-weight:500;font-size:22px;line-height:1.45;letter-spacing:-.015em;color:#fff;margin:0 auto;max-width:760px; }
 .profile-quote__accent{ color:var(--peach); }
 
-/* ============ final CTA ============ */
-.final-cta-section{ padding-bottom:96px; }
-.final-cta-card{
-  background:#fff;border:1px solid var(--border-2);border-radius:var(--r-7xl);
-  padding:56px;text-align:center;box-shadow:var(--shadow-cta-final);
-}
-.final-cta-card__desc{ font-size:17px;color:var(--text-3);margin:0 0 30px; }
-.final-cta-card__cta{ padding:16px 30px;font-size:16px;box-shadow:var(--shadow-btn-orange-lg); }
+/* final CTA : voir .final-cta-section / .final-cta-card dans components.css (partagé avec solutions/réalisations/apropos) */
 
 /* ==================== responsive ==================== */
 @media (max-width:900px){
@@ -402,7 +391,8 @@
   .bank-avant,
   .bank-apres,
   .flow-diagram,
-  .proof-case__compare{
+  .proof-case__compare,
+  .tools-grid{
     grid-template-columns:1fr;
   }
 }
