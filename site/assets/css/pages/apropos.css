@@ -1,0 +1,14 @@
+/* À propos — bio section (page-specific; hero/differentiators/value-props reuse home.css + components.css). */
+
+.bio__grid{ gap:24px;align-items:stretch;margin-bottom:8px; }
+.bio-card{ padding:32px; }
+.bio-card p{ font-size:15.5px;line-height:1.68;color:var(--text-3); }
+.bio-card p + p{ margin-top:14px; }
+.bio-card__label{
+  font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.1em;
+  color:var(--muted-2);margin-bottom:14px;display:block;
+}
+
+@media (max-width:900px){
+  .bio__grid{ grid-template-columns:1fr; }
+}

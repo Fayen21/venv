@@ -134,3 +134,37 @@
   background:var(--green-bright);
   animation:ebblink 1.4s ease-in-out infinite;
 }
+
+/* ---------- page hero (secondary pages: solutions, realisations, apropos, audit) ---------- */
+.page-hero{
+  max-width:840px;
+  margin:0 auto;
+  padding:60px 40px 8px;
+  text-align:center;
+}
+.page-hero__eyebrow{ margin-bottom:18px; }
+.page-hero__lead{
+  font-size:18px;
+  line-height:1.62;
+  color:var(--text-2);
+  max-width:660px;
+  margin:18px auto 0;
+}
+.page-hero__actions{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:14px;
+  margin-top:30px;
+  flex-wrap:wrap;
+}
+.page-hero__badges{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:10px;
+  margin-top:22px;
+}
+@media (max-width:640px){
+  .page-hero{ padding:40px 20px 4px; }
+}
