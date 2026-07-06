@@ -149,10 +149,20 @@ add_action( 'wp_enqueue_scripts', 'eb_enqueue_assets' );
  * (body, h1-h6, a, button, ul/ol...) entrent en conflit de cascade direct
  * avec nos tokens/typography — c'est le seul conflit réel identifié, donc
  * le seul style désactivé ici.
+ *
+ * GeneratePress enqueue aussi automatiquement un style « generate-child »
+ * (le style.css du thème enfant, ici vide de toute règle) déclaré dépendant
+ * de « generate-style ». En ne retirant que generate-style, ce dernier
+ * disparaît du registre alors que generate-child référence toujours cette
+ * dépendance : WordPress déclenche un _doing_it_wrong (« dépendances qui
+ * n'ont pas été enregistrées »). On retire donc les deux, puisque
+ * generate-child ne contient de toute façon aucune règle CSS utile ici.
  */
 function eb_dequeue_generatepress_style() {
 	wp_dequeue_style( 'generate-style' );
 	wp_deregister_style( 'generate-style' );
+	wp_dequeue_style( 'generate-child' );
+	wp_deregister_style( 'generate-child' );
 }
 add_action( 'wp_enqueue_scripts', 'eb_dequeue_generatepress_style', 100 );
 
