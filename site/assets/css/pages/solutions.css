@@ -81,5 +81,8 @@
   .trust-strip__item:last-child{ border-bottom:none; }
 }
 @media (max-width:640px){
-  .tools-band{ padding:22px; }
+  .tools-band{ padding:22px; text-align:center; }
+  .tools-band p{ text-align:left; }
+  .expertise-hub{ gap:16px; }
+  .solution-row{ padding:32px 0; gap:28px; }
 }

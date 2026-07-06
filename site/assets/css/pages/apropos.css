@@ -51,7 +51,14 @@
 }
 @media (max-width:640px){
   .apropos-hero{ padding:40px 20px 20px; }
+  .apropos-hero__text{ text-align:center; }
   .apropos-hero__text h1{ font-size:32px; line-height:1.14; }
+  .apropos-hero__text p{ text-align:left; }
+  .apropos-quote{ text-align:center; padding:6px 0; border-left:none; border-top:3px solid var(--orange); padding-top:18px; }
   .apropos-quote p{ font-size:21px; }
   .values-band__inner{ padding:44px 20px; }
+  .values-band h2{ text-align:center; }
+  .values-band__grid{ gap:36px; }
+  .apropos-tools{ gap:34px; }
+  .apropos-tools h2{ text-align:center; }
 }

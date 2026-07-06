@@ -92,4 +92,7 @@
   .case-study__body{ padding:28px; }
   .case-study__side, .case-study__side--terminal{ padding:22px; }
   .tech-band{ padding:22px; }
+  .usecase-intro{ text-align:center; }
+  .usecase-grid,.control-grid{ gap:22px; }
+  .case-study__stats{ grid-template-columns:1fr; gap:12px; }
 }

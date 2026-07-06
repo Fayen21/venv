@@ -106,8 +106,9 @@
 }
 @media (max-width:640px){
   .audit-layout{ padding:40px 20px 60px; }
+  .audit-side__eyebrow,.audit-side h1,.audit-side__lead{ text-align:center; margin-left:auto; margin-right:auto; }
   .audit-side h1{ font-size:32px; line-height:1.14; }
   .audit-form, .audit-success{ padding:28px; }
   .audit-form__grid{ grid-template-columns:1fr; }
-  .audit-success__tiles{ grid-template-columns:1fr; }
+  .audit-success__tiles{ grid-template-columns:1fr; gap:16px; }
 }
