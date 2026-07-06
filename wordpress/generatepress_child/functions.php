@@ -13,6 +13,16 @@ define( 'EB_THEME_URI', get_stylesheet_directory_uri() );
 define( 'EB_THEME_DIR', get_stylesheet_directory() );
 
 /**
+ * URL du webhook Make qui reçoit les demandes du formulaire /audit/.
+ * Voir README.md pour savoir où la renseigner. Tant qu'elle est vide, le
+ * formulaire garde son comportement de démonstration (aucun envoi réseau,
+ * succès simulé) — aucune configuration requise pour que le site fonctionne.
+ */
+if ( ! defined( 'EB_AUDIT_WEBHOOK_URL' ) ) {
+	define( 'EB_AUDIT_WEBHOOK_URL', '' );
+}
+
+/**
  * -----------------------------------------------------------------------
  * 1. Résolution des URLs internes (remplace les href="xxx.html" du HTML
  *    source par les permaliens WordPress réels — slugs validés).
@@ -139,7 +149,16 @@ function eb_enqueue_assets() {
 		// audit.js contient un lien "retour à l'accueil" en dur (index.html) dans le HTML
 		// source ; sous WordPress cette URL relative ne pointe plus vers l'accueil.
 		// On lui fournit l'URL réelle sans toucher au reste de son comportement.
-		wp_localize_script( 'eb-audit', 'ebSiteData', array( 'homeUrl' => eb_url( 'index' ) ) );
+		// webhookUrl : voir README.md — vide par défaut (aucun secret dans ce fichier,
+		// seule la constante définie ailleurs, typiquement wp-config.php, est lue ici).
+		wp_localize_script(
+			'eb-audit',
+			'ebSiteData',
+			array(
+				'homeUrl'    => eb_url( 'index' ),
+				'webhookUrl' => EB_AUDIT_WEBHOOK_URL,
+			)
+		);
 	}
 }
 add_action( 'wp_enqueue_scripts', 'eb_enqueue_assets' );

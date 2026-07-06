@@ -1,4 +1,7 @@
-// Audit page: frontend-only form validation + fake success state (no network request).
+// Page Audit : validation frontend inchangée + envoi réel vers un webhook Make
+// en POST JSON (si configuré), avec protection anti-spam basique (honeypot +
+// délai minimum) et repli sur le comportement de démonstration si le webhook
+// n'est pas encore configuré.
 (function () {
   var form = document.getElementById('audit-form');
   if (!form) return;
@@ -6,6 +9,11 @@
   var successPanel = document.getElementById('audit-success');
   var successName = document.getElementById('audit-success-name');
   var backBtn = document.getElementById('audit-back');
+  var serverError = document.getElementById('audit-form__server-error');
+
+  var loadedAt = Date.now();
+  var MIN_SUBMIT_DELAY_MS = 3000;
+  var isSubmitting = false;
 
   var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -40,8 +48,43 @@
     field.addEventListener('input', function () { validateField(field); });
   });
 
+  function fieldValue(id) {
+    var field = document.getElementById(id);
+    return field ? field.value.trim() : '';
+  }
+
+  function showServerError() {
+    if (serverError) serverError.style.display = 'block';
+  }
+
+  function hideServerError() {
+    if (serverError) serverError.style.display = 'none';
+  }
+
+  function showSuccess() {
+    var prenomField = document.getElementById('f-prenom');
+    if (successName) successName.textContent = prenomField ? ', ' + prenomField.value.trim() : '';
+
+    form.hidden = true;
+    if (successPanel) {
+      successPanel.hidden = false;
+      successPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  function looksLikeSpam() {
+    var honeypot = document.getElementById('f-website');
+    if (honeypot && honeypot.value.trim() !== '') return true;
+    if (Date.now() - loadedAt < MIN_SUBMIT_DELAY_MS) return true;
+    return false;
+  }
+
   form.addEventListener('submit', function (e) {
     e.preventDefault();
+
+    if (isSubmitting) return;
+
+    hideServerError();
 
     var firstInvalid = null;
     Object.keys(rules).forEach(function (id) {
@@ -56,14 +99,51 @@
       return;
     }
 
-    var prenomField = document.getElementById('f-prenom');
-    if (successName) successName.textContent = prenomField ? ', ' + prenomField.value.trim() : '';
-
-    form.hidden = true;
-    if (successPanel) {
-      successPanel.hidden = false;
-      successPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    // Piège à robots / soumission trop rapide : on ignore silencieusement
+    // l'envoi réel mais on affiche le même succès, pour ne pas renseigner
+    // un bot sur le fait qu'il a été détecté.
+    if (looksLikeSpam()) {
+      showSuccess();
+      return;
     }
+
+    var webhookUrl = (window.ebSiteData && window.ebSiteData.webhookUrl) || '';
+
+    // Webhook non configuré : on garde le comportement de démonstration
+    // (aucun envoi réseau), pour que le site reste fonctionnel tel quel.
+    if (!webhookUrl) {
+      showSuccess();
+      return;
+    }
+
+    var payload = {
+      prenom: fieldValue('f-prenom'),
+      nom: fieldValue('f-nom'),
+      entreprise: fieldValue('f-entreprise'),
+      email: fieldValue('f-email'),
+      telephone: fieldValue('f-tel'),
+      besoin: fieldValue('f-besoin'),
+      page: window.location.href,
+      submittedAt: new Date().toISOString()
+    };
+
+    isSubmitting = true;
+
+    fetch(webhookUrl, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    }).then(function (response) {
+      isSubmitting = false;
+      if (response.ok) {
+        showSuccess();
+      } else {
+        showServerError();
+      }
+    }).catch(function () {
+      isSubmitting = false;
+      showServerError();
+    });
   });
 
   if (backBtn) {

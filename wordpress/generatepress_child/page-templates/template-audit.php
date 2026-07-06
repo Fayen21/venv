@@ -41,6 +41,12 @@ if ( ! defined( 'ABSPATH' ) ) {
         <h2>Demander un audit gratuit</h2>
         <p class="audit-form__intro">Réponse sous 24 à 48h. Seuls les champs marqués * sont obligatoires.</p>
 
+        <!-- champ piège à robots : invisible et ignoré des lecteurs d'écran, ne doit jamais être rempli par un humain -->
+        <div style="position:absolute;left:-9999px;top:-9999px;width:1px;height:1px;overflow:hidden;" aria-hidden="true">
+          <label for="f-website">Laisser ce champ vide</label>
+          <input type="text" id="f-website" name="website" tabindex="-1" autocomplete="off">
+        </div>
+
         <div class="audit-form__grid">
           <div class="audit-form__row">
             <label class="audit-form__label" for="f-prenom">Prénom *</label>
@@ -73,6 +79,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
         <button type="submit" class="btn btn-primary audit-form__submit">Demander un audit gratuit <span>→</span></button>
         <p class="audit-form__disclaimer">En envoyant ce formulaire, vous acceptez d'être recontacté. Vos données sont traitées dans le respect du RGPD et ne sont jamais cédées.</p>
+        <p id="audit-form__server-error" class="audit-form__error" role="alert">Une erreur est survenue lors de l'envoi. Merci de réessayer, ou de nous <a href="mailto:contact@eb-automatisation.fr">écrire directement</a>.</p>
       </form>
 
       <div id="audit-success" class="audit-success" hidden>
