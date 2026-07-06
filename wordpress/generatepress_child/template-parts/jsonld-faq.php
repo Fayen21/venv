@@ -1,4 +1,8 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 /**
  * JSON-LD FAQPage — inclus uniquement pour les pages piliers.
  * $d (données SEO de la page courante) est disponible depuis eb_output_seo_tags().

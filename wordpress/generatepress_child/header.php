@@ -1,4 +1,8 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 /**
  * Header partagé — identique au bloc <header> présent à l'identique sur les
  * 10 pages du site source. Navigation en dur (pas de wp_nav_menu()), comme
@@ -12,9 +16,12 @@ $eb_is_pillar = eb_is_pillar_page( $eb_current );
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" type="image/png" href="<?php echo esc_url( eb_asset( 'images/eb-icon.png' ) ); ?>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
+<?php wp_body_open(); ?>
 
 <div class="techno-bar"></div>
 <div class="topbar">

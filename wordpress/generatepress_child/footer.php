@@ -1,4 +1,8 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 /**
  * Footer partagé — identique au bloc <footer> présent à l'identique sur les
  * 10 pages du site source.
