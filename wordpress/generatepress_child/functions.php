@@ -106,7 +106,11 @@ function eb_enqueue_assets() {
 	// Police Google Fonts — identique au CDN utilisé dans le HTML source.
 	wp_enqueue_style(
 		'eb-google-fonts',
-		'https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700&family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap',
+		// Schibsted Grotesk (titres) n'est jamais utilisée en graisse 400 dans le CSS —
+		// vérifié sur l'ensemble des fichiers (h1/h2/h3 et tous les autres usages sont
+		// en 500/600/700). Ce poids n'est donc pas demandé, pour éviter un fichier de
+		// police téléchargé pour rien.
+		'https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;600;700&family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap',
 		array(),
 		null
 	);

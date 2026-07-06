@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 <footer class="site-footer">
   <div class="site-footer__grid">
     <div>
-      <div class="site-footer__logo"><img src="<?php echo esc_url( eb_asset( 'images/uploads/156c3b91-a695-438b-b9d7-6828e90ea7ac.png' ) ); ?>" alt="EB Automatisation" width="180" height="77"></div>
+      <div class="site-footer__logo"><img src="<?php echo esc_url( eb_asset( 'images/uploads/156c3b91-a695-438b-b9d7-6828e90ea7ac.png' ) ); ?>" alt="EB Automatisation" width="180" height="77" loading="lazy"></div>
       <p class="site-footer__desc">Consultant indépendant en automatisation &amp; IA pour les dirigeants de TPE-PME françaises.</p>
       <a href="<?php echo esc_url( eb_url( 'audit' ) ); ?>" class="site-footer__cta">Audit gratuit →</a>
     </div>

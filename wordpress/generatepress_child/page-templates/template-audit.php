@@ -25,7 +25,7 @@ if ( ! defined( 'ABSPATH' ) ) {
       </div>
 
       <div class="audit-avatar-card">
-        <span class="audit-avatar-card__img"><img src="<?php echo esc_url( eb_asset('images/uploads/emmanuelavatar.png') ); ?>" alt="Emmanuel"></span>
+        <span class="audit-avatar-card__img"><img src="<?php echo esc_url( eb_asset('images/uploads/emmanuelavatar.jpg') ); ?>" alt="Emmanuel" width="800" height="800" loading="lazy"></span>
         <div>
           <div class="audit-avatar-card__name">Vous échangez directement avec moi</div>
           <div class="audit-avatar-card__sub">Pas de commercial, pas d'intermédiaire.</div>

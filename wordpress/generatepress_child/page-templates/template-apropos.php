@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     </div>
     <div class="apropos-hero__photo">
       <div class="apropos-hero__photo-frame">
-        <img src="<?php echo esc_url( eb_asset('images/uploads/emmanuelavatar.png') ); ?>" alt="Emmanuel — EB Automatisation">
+        <img src="<?php echo esc_url( eb_asset('images/uploads/emmanuelavatar.jpg') ); ?>" alt="Emmanuel — EB Automatisation" width="800" height="800" fetchpriority="high">
       </div>
     </div>
   </div>
