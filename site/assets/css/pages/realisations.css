@@ -95,4 +95,7 @@
   .usecase-intro{ text-align:center; }
   .usecase-grid,.control-grid{ gap:22px; }
   .case-study__stats{ grid-template-columns:1fr; gap:12px; }
+  .usecase-card{ padding:24px; }
+  .usecase-card__body p{ font-size:13.5px; }
+  .usecase-card h3{ font-size:16.5px; }
 }

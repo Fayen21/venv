@@ -231,26 +231,28 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
   align-items:center;
   justify-content:center;
   flex-direction:column;
-  gap:5px;
-  width:40px;
-  height:40px;
+  gap:6px;
+  width:44px;
+  height:44px;
   padding:0;
   background:none;
   border:none;
   cursor:pointer;
   flex:none;
+  border-radius:var(--r-md);
 }
+.menu-toggle:active{ background:var(--bg-soft); }
 .menu-toggle__bar{
   display:block;
-  width:22px;
+  width:24px;
   height:2px;
   background:var(--navy);
   border-radius:2px;
-  transition:transform .2s ease, opacity .2s ease;
+  transition:transform .22s cubic-bezier(.4,0,.2,1), opacity .22s cubic-bezier(.4,0,.2,1);
 }
-.site-header.is-menu-open .menu-toggle__bar:nth-child(1){ transform:translateY(7px) rotate(45deg); }
+.site-header.is-menu-open .menu-toggle__bar:nth-child(1){ transform:translateY(8px) rotate(45deg); }
 .site-header.is-menu-open .menu-toggle__bar:nth-child(2){ opacity:0; }
-.site-header.is-menu-open .menu-toggle__bar:nth-child(3){ transform:translateY(-7px) rotate(-45deg); }
+.site-header.is-menu-open .menu-toggle__bar:nth-child(3){ transform:translateY(-8px) rotate(-45deg); }
 
 /* ---------- grids ---------- */
 .grid{ display:grid; gap:20px; }
@@ -413,27 +415,32 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
   .site-nav{
     position:absolute;
     top:100%;
-    left:0;
     right:0;
-    width:auto;
+    left:auto;
+    width:100%;
+    max-width:460px;
+    max-height:calc(100vh - 74px);
+    overflow-y:auto;
     flex-direction:column;
     align-items:stretch;
     gap:0;
     background:#fff;
-    border-bottom:1px solid var(--border);
+    border-radius:0 0 var(--r-4xl) var(--r-4xl);
     box-shadow:var(--shadow-card-lg);
     padding:8px 24px 24px;
-    max-height:0;
-    overflow:hidden;
-    visibility:hidden;
+    transform-origin:top right;
+    transform:translateY(-6px) scale(.98);
     opacity:0;
-    transition:opacity .18s ease;
+    visibility:hidden;
+    pointer-events:none;
+    transition:opacity .22s cubic-bezier(.4,0,.2,1), transform .22s cubic-bezier(.4,0,.2,1), visibility 0s .22s;
   }
   .site-header.is-menu-open .site-nav{
-    max-height:calc(100vh - 74px);
-    overflow-y:auto;
+    transform:translateY(0) scale(1);
     visibility:visible;
     opacity:1;
+    pointer-events:auto;
+    transition:opacity .22s cubic-bezier(.4,0,.2,1), transform .22s cubic-bezier(.4,0,.2,1), visibility 0s;
   }
 
   .site-nav__link,.nav-dropdown__trigger{
@@ -459,10 +466,16 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
     justify-content:center;
     padding:15px 20px;
   }
+
+  .btn,.nav-cta,.site-footer__cta{ transition:transform .12s cubic-bezier(.4,0,.2,1); }
+  .btn:active,.nav-cta:active,.site-footer__cta:active{ transform:scale(.97); }
 }
 
 @media (max-width:640px){
-  .section{ padding-left:20px; padding-right:20px; }
+  /* certaines sections définissent un padding inline (desktop) qui, sans !important,
+     conserverait ses 40px latéraux même sur mobile : on force ici 20px partout,
+     sans toucher aux valeurs verticales propres à chaque section. */
+  .section{ padding-left:20px !important; padding-right:20px !important; padding-top:52px; padding-bottom:20px; }
   .container,.topbar__inner,.site-header__row{ padding-left:20px; padding-right:20px; }
   .topbar__inner{
     height:auto;
@@ -472,7 +485,14 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
     gap:4px 16px;
     font-size:12px;
   }
+  .brand img{ width:40px; height:40px; }
+  .brand{ gap:10px; }
+  .brand__name{ font-size:18px; }
   .site-nav{ padding:8px 20px 20px; }
   .site-footer__grid{ padding:48px 20px 32px; gap:36px; }
   .site-footer__bottom{ padding:18px 20px; gap:10px; }
+  .site-footer__links a{ padding:9px 0; display:inline-block; }
+  .site-footer__links{ gap:2px; }
+  .site-footer__contact > *{ padding:5px 0; }
+  .site-footer__contact{ gap:1px; }
 }

@@ -95,11 +95,13 @@
 }
 @media (max-width:640px){
   .pillar-wrap{ padding:28px 20px 60px; }
-  .pillar-hero{ text-align:center; }
+  .pillar-hero{ text-align:center; margin-bottom:40px; }
+  .pillar-hero__eyebrow{ margin-bottom:18px; }
   .pillar-hero h1{ font-size:32px; line-height:1.14; margin-left:auto; margin-right:auto; }
-  .pillar-hero__intro{ margin-left:auto; margin-right:auto; }
-  .pillar-hero__actions{ flex-direction:column; align-items:stretch; }
+  .pillar-hero__intro{ margin-left:auto; margin-right:auto; font-size:16px; line-height:1.6; }
+  .pillar-hero__actions{ flex-direction:column; align-items:stretch; gap:12px; margin-top:24px; }
   .pillar-hero__actions .btn-primary,.pillar-hero__actions .btn-secondary{ width:100%; justify-content:center; }
+  .pillar-hero__actions .btn-secondary{ padding:14px 22px; }
   .pillar-mid-cta{ padding:28px 22px; flex-direction:column; text-align:center; }
   .pillar-mid-cta .btn-primary{ width:100%; justify-content:center; }
   .pillar-flow{ padding:22px; }
@@ -107,4 +109,6 @@
   .pillar-final-cta .btn-primary{ width:100%; justify-content:center; }
   .pillar-usecases h2,.pillar-faq h2{ text-align:center; }
   .pillar-usecases__grid{ gap:22px; }
+  .pillar-usecase{ padding:24px; }
+  .pillar-usecase p{ font-size:14.5px; }
 }
