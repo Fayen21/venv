@@ -391,3 +391,11 @@ function eb_output_seo_tags() {
 	}
 }
 add_action( 'wp_head', 'eb_output_seo_tags', 1 );
+
+/**
+ * Retire le rel="canonical" que WordPress core ajoute automatiquement
+ * (rel_canonical(), accrochée par défaut à wp_head) : notre propre canonical
+ * est déjà émis ci-dessus dans eb_output_seo_tags(), avoir les deux en même
+ * temps produit deux balises <link rel="canonical"> sur la même page.
+ */
+remove_action( 'wp_head', 'rel_canonical' );
