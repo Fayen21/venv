@@ -206,5 +206,5 @@
   .differentiators__intro{ text-align:center; margin-left:auto; margin-right:auto; }
   .differentiators__intro p{ text-align:left; }
   .final-cta-card__cta{ width:100%; justify-content:center; }
-  .tool-chip-grid{ grid-template-columns:1fr; }
+  .tool-chip-grid{ grid-template-columns:repeat(2,1fr); }
 }

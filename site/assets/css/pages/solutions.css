@@ -85,4 +85,6 @@
   .tools-band p{ text-align:left; }
   .expertise-hub{ gap:16px; }
   .solution-row{ padding:32px 0; gap:28px; }
+  .solution-row__transition{ flex-direction:column; align-items:flex-start; }
+  .solution-row__arrow{ transform:rotate(90deg); }
 }

@@ -412,4 +412,6 @@
   .audit-why{ padding:28px; grid-template-columns:1fr; text-align:center; }
   .audit-why__icon{ margin:0 auto; }
   .automations__grid,.proof-cases__grid,.pricing__grid,.audit-steps,.value-props__grid{ gap:26px; }
+  .tools-grid{ grid-template-columns:repeat(2,1fr); }
+  .audit-step__rule{ display:none; }
 }

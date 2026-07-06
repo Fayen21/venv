@@ -105,6 +105,8 @@
   .pillar-mid-cta{ padding:28px 22px; flex-direction:column; text-align:center; }
   .pillar-mid-cta .btn-primary{ width:100%; justify-content:center; }
   .pillar-flow{ padding:22px; }
+  .pillar-flow__row{ flex-direction:column; gap:16px; }
+  .pillar-flow__arrow{ margin:0; transform:rotate(90deg); }
   .pillar-final-cta{ padding:28px; }
   .pillar-final-cta .btn-primary{ width:100%; justify-content:center; }
   .pillar-usecases h2,.pillar-faq h2{ text-align:center; }
