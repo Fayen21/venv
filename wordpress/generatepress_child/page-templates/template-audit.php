@@ -89,8 +89,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
         <div class="calendly-placeholder">
           <div class="calendly-placeholder__icon">📅</div>
-          <p class="calendly-placeholder__desc">La prise de rendez-vous en ligne (Calendly) sera connectée prochainement.</p>
-          <span class="btn-disabled" aria-disabled="true">Choisir mon créneau sur Calendly <span>→</span></span>
+          <p class="calendly-placeholder__desc">Réservez directement votre créneau de 45 minutes :</p>
+          <a href="https://calendly.com/emmanuel-b21850/30min" target="_blank" rel="noopener noreferrer" class="btn btn-primary" aria-label="Choisir un créneau sur Calendly (ouvre un nouvel onglet)">Choisir un créneau</a>
         </div>
 
         <div class="audit-success__tiles">
