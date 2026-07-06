@@ -1,0 +1,101 @@
+/* Réalisations — matches EB Automatisation V2.dc.html sc-if isRealisations (lignes 734-1004). */
+
+/* ============ étude de cas — carte pleine largeur 2 colonnes ============ */
+.case-study{ background:#fff; border:1px solid var(--border-2); border-radius:22px; overflow:hidden; }
+.case-study__grid{ display:grid; grid-template-columns:1.1fr .9fr; }
+.case-study__body{ padding:48px; }
+.case-study__tag{ display:inline-flex; align-items:center; gap:8px; font-size:12.5px; font-weight:600; padding:6px 12px; border-radius:20px; margin-bottom:22px; }
+.case-study__body h2{ font-size:30px; letter-spacing:-.02em; margin:0 0 22px; line-height:1.2; }
+.case-study__block{ margin-bottom:22px; }
+.case-study__block:last-of-type{ margin-bottom:26px; }
+.case-study__label{ font-size:12px; font-weight:600; text-transform:uppercase; letter-spacing:.1em; color:var(--orange); margin-bottom:7px; }
+.case-study__block p{ font-size:15.5px; line-height:1.62; color:var(--text-3); margin:0; }
+.case-study__results{ display:flex; flex-direction:column; gap:11px; }
+.case-study__result{ display:flex; align-items:flex-start; gap:11px; font-size:14.5px; line-height:1.5; color:var(--text-5); }
+.case-study__result span{ color:var(--green); flex:none; }
+.case-study__tool-note{ display:flex; align-items:center; gap:11px; background:var(--bg-soft); border:1px solid var(--border); border-radius:10px; padding:14px 16px; }
+.case-study__tool-note span.icon{ font-size:18px; }
+.case-study__tool-note span.text{ font-size:13.5px; color:var(--text-3); line-height:1.45; }
+
+/* flux RH (étapes verticales) */
+.case-flow{ display:flex; flex-direction:column; gap:0; }
+.case-flow__step{ display:flex; align-items:center; gap:12px; }
+.case-flow__icon{ width:34px; height:34px; flex:none; border-radius:9px; background:var(--navy); color:#fff; display:flex; align-items:center; justify-content:center; font-size:15px; }
+.case-flow__icon--done{ background:var(--green); }
+.case-flow__label{ font-family:var(--font-heading); font-weight:600; font-size:14.5px; color:var(--navy); }
+.case-flow__label--done{ color:var(--green-dark-text); }
+.case-flow__connector{ width:2px; height:14px; margin-left:16px; background:var(--border-4); }
+
+/* panneau navy (résultats chiffrés — cas 1) */
+.case-study__side{ background:var(--navy); color:#fff; padding:44px; display:flex; flex-direction:column; justify-content:center; gap:18px; }
+.case-study__side-label{ font-size:12px; font-weight:600; text-transform:uppercase; letter-spacing:.12em; color:var(--peach); margin-bottom:4px; }
+.case-study__stats{ display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+.case-study__stat{ background:var(--navy-card); border:1px solid var(--navy-card-border); border-radius:14px; padding:28px 24px; }
+.case-study__stat-label{ font-size:11.5px; font-weight:600; text-transform:uppercase; letter-spacing:.08em; color:var(--muted-on-navy); margin-bottom:12px; }
+.case-study__stat-value{ font-family:var(--font-heading); font-weight:700; font-size:29px; letter-spacing:-.02em; color:#fff; line-height:1.1; }
+.case-study__side-foot{ margin-top:6px; padding-top:18px; border-top:1px solid var(--navy-card-border); font-size:13.5px; color:var(--muted-on-navy); line-height:1.5; }
+
+/* panneau navy foncé (mockup terminal — cas 2-4) */
+.case-study__side--terminal{ background:var(--navy-panel); padding:36px; justify-content:flex-start; }
+.case-study__mock{ background:var(--navy); border:1px solid var(--navy-panel-border); border-radius:16px; overflow:hidden; }
+.case-study__mock-titlebar{ display:flex; align-items:center; justify-content:space-between; padding:13px 16px; border-bottom:1px solid var(--navy-panel-border); }
+.case-study__mock-dots{ display:flex; align-items:center; gap:7px; }
+.case-study__mock-dots span{ width:9px; height:9px; border-radius:50%; display:block; }
+.case-study__mock-file{ font-family:var(--font-mono); font-size:11.5px; color:var(--muted-on-navy-3); }
+.case-study__mock-live{ display:inline-flex; align-items:center; gap:6px; font-family:var(--font-mono); font-size:10px; color:var(--green-bright); }
+.case-study__mock-live-dot{ width:6px; height:6px; border-radius:50%; background:var(--green-bright); animation:ebblink 1.6s ease-in-out infinite; }
+.case-study__mock-body{ padding:6px 18px 14px; }
+.case-study__mock-row{ display:flex; align-items:center; gap:12px; padding:13px 0; border-top:1px solid var(--navy-panel-border); }
+.case-study__mock-dot{ width:9px; height:9px; border-radius:50%; flex:none; }
+.case-study__mock-label{ flex:1; font-size:13.5px; color:var(--mono-on-navy); }
+.case-study__mock-val{ font-family:var(--font-mono); font-size:11px; font-weight:500; padding:4px 10px; border-radius:20px; white-space:nowrap; }
+.case-study__big-stat{ margin-top:20px; display:inline-flex; align-items:center; gap:10px; background:var(--navy-card); border:1px solid var(--navy-card-border); border-radius:11px; padding:14px 18px; }
+.case-study__big-stat-value{ font-family:var(--font-heading); font-weight:700; font-size:24px; color:#fff; letter-spacing:-.02em; }
+.case-study__big-stat-label{ font-size:13px; color:var(--muted-on-navy); line-height:1.3; }
+
+/* ============ autres cas d'usage (grille de 12) ============ */
+.usecase-intro h2{ font-size:30px; letter-spacing:-.02em; margin:0 0 8px; }
+.usecase-intro p{ font-size:16px; color:var(--muted-3); margin:0 0 36px; }
+.usecase-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:14px; }
+.usecase-card{ background:#fff; border:1px solid var(--border-2); border-radius:16px; padding:22px; display:flex; flex-direction:column; height:100%; }
+.usecase-card__sector{ font-size:12px; font-weight:600; color:var(--orange); margin-bottom:9px; }
+.usecase-card h3{ font-size:15.5px; margin:0 0 12px; line-height:1.3; }
+.usecase-card__body{ display:flex; flex-direction:column; gap:9px; flex:1; }
+.usecase-card__body p{ font-size:12.5px; line-height:1.5; color:var(--text-3); margin:0; }
+.usecase-card__body p span{ font-weight:700; }
+.usecase-card__metric-row{ margin-top:13px; border-top:1px solid var(--border); padding-top:12px; display:flex; align-items:baseline; gap:7px; }
+.usecase-card__metric-value{ font-family:var(--font-heading); font-weight:700; font-size:21px; letter-spacing:-.02em; color:var(--green); }
+.usecase-card__metric-label{ font-size:11.5px; color:var(--muted); line-height:1.3; }
+
+/* ============ vous gardez le contrôle (4 cartes) ============ */
+.control-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:18px; }
+.control-card{ background:#fff; border:1px solid var(--border-2); border-radius:16px; padding:28px; }
+.control-card__icon{ width:44px; height:44px; border-radius:12px; background:var(--green-bg); color:var(--green); display:flex; align-items:center; justify-content:center; margin-bottom:16px; }
+.control-card h3{ font-size:17px; margin:0 0 7px; }
+.control-card p{ font-size:14px; line-height:1.55; color:var(--text-3); margin:0; }
+
+/* ============ technologies utilisées ============ */
+.tech-band{ background:var(--bg-soft); border:1px solid var(--border); border-radius:18px; padding:44px; }
+.tech-band__head{ text-align:center; margin-bottom:32px; }
+.tech-band__head h2{ font-size:28px; margin:0 0 10px; }
+.tech-band__head p{ font-size:16px; line-height:1.55; color:var(--text-3); margin:0 auto; max-width:620px; }
+.tech-band__grid{ max-width:960px; margin:0 auto; }
+/* puces d'outils : voir .tool-chip-grid / .tool-chip dans components.css */
+
+/* ==================== responsive — miroir du retrofit 900px du prototype ==================== */
+@media (max-width:900px){
+  .case-study__grid, .usecase-grid, .control-grid{
+    grid-template-columns:1fr;
+  }
+}
+@media (max-width:640px){
+  .case-study__body{ padding:28px; }
+  .case-study__side, .case-study__side--terminal{ padding:22px; }
+  .tech-band{ padding:22px; }
+  .usecase-intro{ text-align:center; }
+  .usecase-grid,.control-grid{ gap:22px; }
+  .case-study__stats{ grid-template-columns:1fr; gap:12px; }
+  .usecase-card{ padding:24px; }
+  .usecase-card__body p{ font-size:13.5px; }
+  .usecase-card h3{ font-size:16.5px; }
+}

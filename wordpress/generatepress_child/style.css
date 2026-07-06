@@ -1,0 +1,12 @@
+/*
+Theme Name: EB Automatisation (GeneratePress Child)
+Template: generatepress
+Description: Thème enfant GeneratePress — portage technique du site statique final (site/) validé. Aucune refonte : structure, CSS et JS identiques à la source.
+Author: EB Automatisation
+Version: 1.0.0
+Text Domain: eb-automatisation-child
+*/
+
+/* Ce fichier est requis par WordPress pour déclarer le thème enfant.
+   Tout le CSS visuel réel est chargé depuis assets/css/*.css via functions.php,
+   à l'identique du site HTML source — aucune règle n'est ajoutée ici. */

@@ -1,0 +1,15 @@
+/* Keyframes from EB Automatisation V2.dc.html — names kept identical to the source. */
+
+@keyframes ebpulse{
+  0%,100%{ transform:scale(1); opacity:1; }
+  50%{ transform:scale(1.55); opacity:.5; }
+}
+
+@keyframes ebflow{
+  to{ background-position:16px 0; }
+}
+
+@keyframes ebblink{
+  0%,100%{ opacity:1; }
+  50%{ opacity:.25; }
+}
