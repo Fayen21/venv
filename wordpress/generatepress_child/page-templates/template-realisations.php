@@ -8,7 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 ?>
 <?php get_header(); ?>
-<main>
+<main id="main">
 
   <!-- hero -->
   <div class="hero-left">

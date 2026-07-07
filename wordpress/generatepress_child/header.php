@@ -22,14 +22,15 @@ $eb_is_pillar = eb_is_pillar_page( $eb_current );
 </head>
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
+<a href="#main" class="skip-link">Aller au contenu</a>
 
 <div class="techno-bar"></div>
 <div class="topbar">
   <div class="topbar__inner">
     <div class="topbar__label">Consultant indépendant en automatisation &amp; IA · TPE-PME françaises</div>
     <div class="topbar__links">
-      <a href="tel:+33695204127"><span>☎</span> 06 95 20 41 27</a>
-      <a href="mailto:contact@eb-automatisation.fr"><span>✉</span> contact@eb-automatisation.fr</a>
+      <a href="tel:+33695204127"><span aria-hidden="true">☎</span> 06 95 20 41 27</a>
+      <a href="mailto:contact@eb-automatisation.fr"><span aria-hidden="true">✉</span> contact@eb-automatisation.fr</a>
     </div>
   </div>
 </div>
@@ -52,7 +53,7 @@ $eb_is_pillar = eb_is_pillar_page( $eb_current );
       <a href="<?php echo esc_url( eb_url( 'apropos' ) ); ?>" class="site-nav__link<?php echo ( 'apropos' === $eb_current ) ? ' is-active' : ''; ?>">À propos</a>
       <div class="nav-dropdown" data-dropdown>
         <button class="nav-dropdown__trigger<?php echo $eb_is_pillar ? ' is-active' : ''; ?>" type="button" aria-haspopup="true" aria-expanded="false" data-dropdown-trigger>
-          Expertises <span class="nav-dropdown__arrow">▾</span>
+          Expertises <span class="nav-dropdown__arrow" aria-hidden="true">▾</span>
         </button>
         <div class="nav-dropdown__panel" data-dropdown-panel hidden>
           <a class="nav-dropdown__item" href="<?php echo esc_url( eb_url( 'automatisation-ia' ) ); ?>">
@@ -77,7 +78,7 @@ $eb_is_pillar = eb_is_pillar_page( $eb_current );
           </a>
         </div>
       </div>
-      <a href="<?php echo esc_url( eb_url( 'audit' ) ); ?>" class="nav-cta">Audit gratuit <span>→</span></a>
+      <a href="<?php echo esc_url( eb_url( 'audit' ) ); ?>" class="nav-cta">Audit gratuit <span aria-hidden="true">→</span></a>
     </nav>
   </div>
 </header>

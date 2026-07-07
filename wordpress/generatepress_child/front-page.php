@@ -4,7 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 get_header();
 ?>
-<main>
+<main id="main">
 
   <!-- hero + live workflow switcher -->
   <section class="section hero">

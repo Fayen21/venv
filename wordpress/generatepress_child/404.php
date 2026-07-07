@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 get_header();
 ?>
-<main>
+<main id="main">
   <section class="section text-center" style="padding-top:120px;padding-bottom:120px;">
     <div class="eyebrow">Erreur 404</div>
     <h1 style="margin-top:18px;">Page introuvable</h1>
