@@ -4,6 +4,8 @@ Template: generatepress
 Description: Thème enfant GeneratePress — portage technique du site statique final (site/) validé. Aucune refonte : structure, CSS et JS identiques à la source.
 Author: EB Automatisation
 Version: 1.0.0
+Requires at least: 5.2
+Requires PHP: 7.4
 Text Domain: eb-automatisation-child
 */
 
