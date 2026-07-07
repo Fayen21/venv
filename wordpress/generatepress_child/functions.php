@@ -344,6 +344,25 @@ function eb_seo_data() {
 }
 
 /**
+ * Image Open Graph / Twitter Card d'une page.
+ *
+ * Pour donner à une page sa propre image (1200×630 recommandé), ajoutez dans
+ * son tableau au sein de eb_seo_data() une clé 'og_image' avec un chemin
+ * relatif à assets/, par exemple :
+ *   'og_image' => 'images/og/audit.jpg',
+ * Voir README.md pour l'emplacement exact où déposer ces fichiers.
+ *
+ * Tant qu'une page ne définit pas 'og_image', elle utilise le visuel
+ * partagé provisoire assets/images/og/og-default.jpg.
+ */
+function eb_og_image( $d ) {
+	if ( ! empty( $d['og_image'] ) ) {
+		return eb_asset( $d['og_image'] );
+	}
+	return eb_asset( 'images/og/og-default.jpg' );
+}
+
+/**
  * Retire le <title> généré par WordPress core et le remplace par le
  * texte exact du HTML source (aucun plugin SEO, aucune génération dynamique).
  */
@@ -371,11 +390,12 @@ function eb_output_seo_tags() {
 	}
 
 	$d   = $data[ $page ];
-	$img = eb_asset( 'images/uploads/156c3b91-a695-438b-b9d7-6828e90ea7ac.png' );
+	$img = eb_og_image( $d );
 	?>
 <meta name="robots" content="index, follow">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="EB Automatisation">
+<meta property="og:url" content="<?php echo esc_url( $d['canonical'] ); ?>">
 <meta property="og:title" content="<?php echo esc_attr( $d['og_title'] ); ?>">
 <meta property="og:description" content="<?php echo esc_attr( $d['og_desc'] ); ?>">
 <meta property="og:image" content="<?php echo esc_url( $img ); ?>">

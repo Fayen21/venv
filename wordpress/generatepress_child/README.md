@@ -49,3 +49,26 @@ client puisse l'appeler.
 Le formulaire inclut aussi une protection anti-spam basique côté front
 (champ piège invisible + délai minimum de 3 secondes avant envoi) — elle
 réduit le bruit mais ne remplace pas un filtrage côté Make si besoin.
+
+## 🖼️ Image Open Graph (partage réseaux sociaux)
+
+Chaque page peut avoir sa propre image de partage (utilisée pour
+`og:image` / `twitter:image`, format recommandé **1200×630 px**, JPG).
+
+**Où déposer les images :** `assets/images/og/`, un fichier par page,
+par exemple `assets/images/og/audit.jpg`.
+
+**Comment l'activer pour une page :** dans `functions.php`, ajoutez la clé
+`og_image` au tableau de la page concernée dans `eb_seo_data()` :
+```php
+'audit' => array(
+    // ... champs existants ...
+    'og_image' => 'images/og/audit.jpg',
+),
+```
+
+**Tant qu'une page ne définit pas `og_image`**, elle utilise l'image
+partagée `assets/images/og/og-default.jpg` — **un visuel provisoire**
+(logo EB Automatisation sur fond navy, 1200×630) généré en attendant des
+visuels définitifs par page. Remplacez ce fichier ou ajoutez des
+`og_image` par page dès que des visuels finaux sont prêts.
