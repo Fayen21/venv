@@ -83,3 +83,25 @@
     });
   });
 })();
+
+// Bouton "retour en haut" : apparaît après un peu de défilement, remonte en douceur.
+(function () {
+  var btn = document.getElementById('back-to-top');
+  if (!btn) return;
+  var SHOW_AFTER = 500;
+
+  function toggle() {
+    if (window.scrollY > SHOW_AFTER) {
+      btn.classList.add('is-visible');
+    } else {
+      btn.classList.remove('is-visible');
+    }
+  }
+
+  window.addEventListener('scroll', toggle, { passive: true });
+  toggle();
+
+  btn.addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+})();

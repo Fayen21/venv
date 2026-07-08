@@ -492,6 +492,9 @@ get_header();
 
     </div>
     <p class="pricing__footnote">Chaque projet est chiffré après audit. Les coûts dépendent de vos outils et de vos processus.</p>
+    <div class="text-center">
+      <a href="<?php echo esc_url( eb_url('audit') ); ?>" class="btn btn-primary pricing__cta">Demander un audit gratuit <span aria-hidden="true">→</span></a>
+    </div>
   </section>
 
   <!-- comment se déroule l'audit -->

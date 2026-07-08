@@ -15,13 +15,13 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div class="audit-side">
       <div class="eyebrow audit-side__eyebrow">Audit gratuit</div>
       <h1>45 minutes pour repérer vos automatisations les plus rentables</h1>
-      <p class="audit-side__lead">Décrivez votre situation. Je reviens vers vous sous 24 à 48h pour fixer un créneau. À l'issue de l'échange, vous repartez avec des pistes concrètes — que vous travailliez avec moi ou non.</p>
+      <p class="audit-side__lead">Décrivez votre situation. Je reviens vers vous sous 24h pour fixer un créneau. À l'issue de l'échange, vous repartez avec des pistes concrètes — que vous travailliez avec moi ou non.</p>
 
       <div class="audit-points">
         <div class="audit-point"><span class="audit-point__check" aria-hidden="true">✓</span><span class="audit-point__text">45 minutes, par visioconférence ou téléphone</span></div>
         <div class="audit-point"><span class="audit-point__check" aria-hidden="true">✓</span><span class="audit-point__text">Sans engagement et sans jargon technique</span></div>
         <div class="audit-point"><span class="audit-point__check" aria-hidden="true">✓</span><span class="audit-point__text">Vous repartez avec des pistes concrètes et chiffrées</span></div>
-        <div class="audit-point"><span class="audit-point__check" aria-hidden="true">✓</span><span class="audit-point__text">Réponse sous 24 à 48h pour fixer le rendez-vous</span></div>
+        <div class="audit-point"><span class="audit-point__check" aria-hidden="true">✓</span><span class="audit-point__text">Réponse sous 24h pour fixer le rendez-vous</span></div>
       </div>
 
       <div class="audit-avatar-card">
@@ -39,7 +39,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div>
       <form id="audit-form" class="audit-form" novalidate>
         <h2>Demander un audit gratuit</h2>
-        <p class="audit-form__intro">Réponse sous 24 à 48h. Seuls les champs marqués * sont obligatoires.</p>
+        <p class="audit-form__intro">Réponse sous 24h. Seuls les champs marqués * sont obligatoires.</p>
 
         <!-- champ piège à robots : invisible et ignoré des lecteurs d'écran, ne doit jamais être rempli par un humain -->
         <div style="position:absolute;left:-9999px;top:-9999px;width:1px;height:1px;overflow:hidden;" aria-hidden="true">
@@ -85,7 +85,7 @@ if ( ! defined( 'ABSPATH' ) ) {
       <div id="audit-success" class="audit-success" hidden>
         <div class="audit-success__icon" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"></path></svg></div>
         <h2>Demande bien reçue<span id="audit-success-name"></span> !</h2>
-        <p class="audit-success__desc">Je reviens vers vous par email sous 24 à 48h pour convenir d'un créneau de 45 minutes.</p>
+        <p class="audit-success__desc">Je reviens vers vous par email sous 24h pour convenir d'un créneau de 45 minutes.</p>
 
         <div class="calendly-placeholder">
           <div class="calendly-placeholder__icon" aria-hidden="true">📅</div>

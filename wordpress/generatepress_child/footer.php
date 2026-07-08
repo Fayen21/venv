@@ -41,15 +41,18 @@ if ( ! defined( 'ABSPATH' ) ) {
         <span class="site-footer__contact-name">Emmanuel Brançon</span>
         <a href="mailto:contact@eb-automatisation.fr">contact@eb-automatisation.fr</a>
         <a href="tel:+33695204127">06 95 20 41 27</a>
-        <span>Réponse sous 24-48h · France, à distance</span>
+        <span>Réponse sous 24h · France, à distance</span>
+        <span>21850 Saint-Apollinaire</span>
       </div>
     </div>
   </div>
   <div class="site-footer__bottom">
-    <span>© 2026 EB Automatisation · Emmanuel Brançon · SIRET 106 501 141 00019 · Entrepreneur individuel</span>
+    <span>© 2026 EB Automatisation · Emmanuel Brançon · SIRET 106 501 141 00019</span>
     <span><a href="<?php echo esc_url( eb_url( 'mentions-legales' ) ); ?>">Mentions légales</a> · <a href="<?php echo esc_url( eb_url( 'confidentialite' ) ); ?>">Politique de confidentialité</a> · <a href="<?php echo esc_url( eb_url( 'rgpd' ) ); ?>">RGPD</a></span>
   </div>
 </footer>
+
+<button type="button" id="back-to-top" class="back-to-top" aria-label="Retour en haut de page"><span aria-hidden="true">↑</span></button>
 
 <?php wp_footer(); ?>
 </body>

@@ -34,7 +34,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 
 /* ---------- top contact bar ---------- */
 .topbar{
-  background:var(--navy);
+  background:var(--navy-gradient);
   color:#fff;
 }
 .topbar__inner{
@@ -262,9 +262,8 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 
 /* ---------- footer ---------- */
 .site-footer{
-  background-color:var(--navy-footer);
-  background-image:radial-gradient(circle at 1px 1px, rgba(91,181,255,.14) 1.4px, transparent 0);
-  background-size:26px 26px;
+  background-color:#15305C;
+  background-image:var(--navy-gradient);
   color:#fff;
   border-top:1px solid var(--navy-panel-border-2);
 }

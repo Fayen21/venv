@@ -244,9 +244,9 @@ function eb_seo_data() {
 		),
 		'audit'                     => array(
 			'title'       => "Audit gratuit — EB Automatisation",
-			'description' => "45 minutes pour repérer vos automatisations les plus rentables. Décrivez votre situation, réponse sous 24 à 48h pour fixer un créneau.",
+			'description' => "45 minutes pour repérer vos automatisations les plus rentables. Décrivez votre situation, réponse sous 24h pour fixer un créneau.",
 			'og_title'    => "Audit gratuit — EB Automatisation",
-			'og_desc'     => "45 minutes pour repérer vos automatisations les plus rentables. Réponse sous 24 à 48h pour fixer un créneau.",
+			'og_desc'     => "45 minutes pour repérer vos automatisations les plus rentables. Réponse sous 24h pour fixer un créneau.",
 			'tw_title'    => "Audit gratuit — EB Automatisation",
 			'tw_desc'     => "45 minutes, sans engagement. Repartez avec des pistes d'automatisation concrètes.",
 			'canonical'   => eb_url( 'audit' ),

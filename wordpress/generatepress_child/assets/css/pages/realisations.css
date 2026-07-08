@@ -39,10 +39,10 @@
 .case-study__side--terminal{ background:var(--navy-panel); padding:36px; justify-content:flex-start; }
 .case-study__mock{ background:var(--navy); border:1px solid var(--navy-panel-border); border-radius:16px; overflow:hidden; }
 .case-study__mock-titlebar{ display:flex; align-items:center; justify-content:space-between; padding:13px 16px; border-bottom:1px solid var(--navy-panel-border); }
-.case-study__mock-dots{ display:flex; align-items:center; gap:7px; }
+.case-study__mock-dots{ display:flex; align-items:center; gap:7px; flex:none; }
 .case-study__mock-dots span{ width:9px; height:9px; border-radius:50%; display:block; }
-.case-study__mock-file{ font-family:var(--font-mono); font-size:11.5px; color:var(--muted-on-navy-3); }
-.case-study__mock-live{ display:inline-flex; align-items:center; gap:6px; font-family:var(--font-mono); font-size:10px; color:var(--green-bright); }
+.case-study__mock-file{ font-family:var(--font-mono); font-size:11.5px; color:var(--muted-on-navy-3); flex:1; min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; margin:0 12px; }
+.case-study__mock-live{ display:inline-flex; align-items:center; gap:6px; font-family:var(--font-mono); font-size:10px; color:var(--green-bright); flex:none; }
 .case-study__mock-live-dot{ width:6px; height:6px; border-radius:50%; background:var(--green-bright); animation:ebblink 1.6s ease-in-out infinite; }
 .case-study__mock-body{ padding:6px 18px 14px; }
 .case-study__mock-row{ display:flex; align-items:center; gap:12px; padding:13px 0; border-top:1px solid var(--navy-panel-border); }
