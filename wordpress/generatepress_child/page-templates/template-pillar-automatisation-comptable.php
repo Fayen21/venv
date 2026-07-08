@@ -1,0 +1,202 @@
+<?php
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
+/**
+ * Template Name: EB — Pilier Automatisation comptable
+ */
+?>
+<?php get_header(); ?>
+<main id="main">
+  <div class="pillar-wrap">
+
+    <!-- breadcrumb -->
+    <nav class="pillar-breadcrumb" aria-label="Fil d'Ariane">
+      <a href="<?php echo esc_url( eb_url('index') ); ?>">Accueil</a>
+      <span>／</span>
+      <a href="<?php echo esc_url( eb_url('solutions') ); ?>">Expertises</a>
+      <span>／</span>
+      <span class="pillar-breadcrumb__current">Automatisation comptable</span>
+    </nav>
+
+    <!-- hero -->
+    <div class="pillar-hero">
+      <div class="eyebrow pillar-hero__eyebrow">Automatisation comptable</div>
+      <h1>Automatisation comptable : éliminez la saisie manuelle grâce à l'IA</h1>
+      <p class="pillar-hero__intro">Factures fournisseurs, notes de frais, rapprochement bancaire : la comptabilité d'une TPE-PME reste souvent une succession de ressaisies manuelles. L'automatisation comptable connecte l'OCR de lecture de facture à votre logiciel (Pennylane, Sage, Cegid, Quadra…) pour que les écritures se génèrent seules, sans changer d'outil.</p>
+      <div class="pillar-hero__actions">
+        <a href="<?php echo esc_url( eb_url('realisations') ); ?>" class="btn btn-primary">Découvrir un cas concret <span>→</span></a>
+        <a href="<?php echo esc_url( eb_url('solutions') ); ?>" class="btn btn-secondary">Voir toutes les solutions</a>
+      </div>
+    </div>
+
+    <!-- mockup visuel -->
+    <div class="pillar-mock">
+      <div class="pillar-mock__titlebar">
+        <div class="pillar-mock__dots"><span style="background:#FF5F57;"></span><span style="background:#FEBC2E;"></span><span style="background:#28C840;"></span></div>
+        <span class="pillar-mock__file">extraction_facture · OCR</span>
+        <span class="pillar-mock__live"><span class="pillar-mock__live-dot"></span>actif</span>
+      </div>
+      <div class="pillar-mock__body">
+        <div class="pillar-mock__row"><span class="pillar-mock__dot" style="background:#3BA5FF;"></span><span class="pillar-mock__label">Facture PDF reçue par email</span><span class="pillar-mock__val" style="color:#5BB6FF;background:rgba(46,155,255,.16);">détecté</span></div>
+        <div class="pillar-mock__row"><span class="pillar-mock__dot" style="background:#5BCB8B;"></span><span class="pillar-mock__label">Lue par OCR (montant, TVA, fournisseur)</span><span class="pillar-mock__val" style="color:#5BCB8B;background:rgba(91,203,139,.12);">extrait</span></div>
+        <div class="pillar-mock__row"><span class="pillar-mock__dot" style="background:#5BCB8B;"></span><span class="pillar-mock__label">Écriture intégrée à votre logiciel</span><span class="pillar-mock__val" style="color:#5BCB8B;background:rgba(91,203,139,.12);">à jour</span></div>
+      </div>
+    </div>
+
+    <!-- le problème -->
+    <div class="pillar-section">
+      <h2>Le problème : la comptabilité reste chronophage, facture par facture</h2>
+      <p>Dans la plupart des TPE-PME, chaque facture fournisseur suit le même parcours : réception par email, ouverture, relevé manuel du montant et de la TVA, puis saisie dans le logiciel comptable. Multiplié par des dizaines de factures par mois, ce travail de ressaisie absorbe un temps disproportionné par rapport à sa valeur ajoutée réelle.</p>
+      <p>Le rapprochement bancaire suit la même logique : pointer une à une les lignes du relevé bancaire face aux écritures comptables, repérer les écarts, corriger les erreurs de saisie. C'est un travail nécessaire, mais qui ne demande pas un jugement métier à chaque ligne — exactement le type de tâche que l'automatisation comptable prend en charge.</p>
+    </div>
+
+    <!-- pourquoi automatiser -->
+    <div class="pillar-section">
+      <h2>Pourquoi automatiser sa comptabilité</h2>
+      <div class="pillar-section__list">
+        <div class="pillar-section__list-item"><span>✓</span>La saisie comptable automatique élimine la ressaisie manuelle et les erreurs de frappe qui l'accompagnent.</div>
+        <div class="pillar-section__list-item"><span>✓</span>L'OCR facture lit montant, TVA, date et fournisseur directement depuis le PDF, sans intervention humaine.</div>
+        <div class="pillar-section__list-item"><span>✓</span>Le rapprochement bancaire automatique détecte les anomalies et les doublons avant la clôture, pas après.</div>
+        <div class="pillar-section__list-item"><span>✓</span>Le temps libéré se réinvestit sur l'analyse financière et le conseil, pas sur la saisie répétitive.</div>
+      </div>
+    </div>
+
+    <!-- bénéfices -->
+    <div class="pillar-section">
+      <h2>Bénéfices concrets pour votre entreprise</h2>
+      <div class="pillar-section__list">
+        <div class="pillar-section__list-item"><span>✓</span>Moins d'erreurs de saisie, donc moins de corrections et d'écritures de régularisation en fin d'exercice.</div>
+        <div class="pillar-section__list-item"><span>✓</span>Une clôture mensuelle plus rapide, avec des écritures déjà à jour au fil de l'eau.</div>
+        <div class="pillar-section__list-item"><span>✓</span>Une meilleure visibilité sur la trésorerie, avec des rapprochements bancaires faits en continu plutôt qu'en fin de mois.</div>
+        <div class="pillar-section__list-item"><span>✓</span>Une charge de travail comptable qui n'augmente plus mécaniquement avec le volume de factures.</div>
+      </div>
+    </div>
+
+    <!-- exemples concrets -->
+    <div class="pillar-usecases">
+      <h2>Exemples concrets</h2>
+      <div class="pillar-usecases__grid">
+        <div class="pillar-usecase">
+          <div class="pillar-usecase__icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M4 6.5l8 6 8-6"></path></svg></div>
+          <h3>Gestion des factures fournisseurs</h3>
+          <p>Chaque facture reçue par email est lue par OCR, ses données extraites et intégrées comme brouillon d'écriture, prêt à valider.</p>
+          <div class="pillar-usecase__gain">−72% de temps de saisie</div>
+        </div>
+        <div class="pillar-usecase">
+          <div class="pillar-usecase__icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="5" y1="19" x2="5" y2="12"></line><line x1="12" y1="19" x2="12" y2="7"></line><line x1="19" y1="19" x2="19" y2="14"></line></svg></div>
+          <h3>Rapprochement bancaire automatique</h3>
+          <p>Connexion entre votre banque et votre logiciel comptable, avec pointage automatique et alerte sur les écarts.</p>
+          <div class="pillar-usecase__gain">−85% de temps de rapprochement</div>
+        </div>
+        <div class="pillar-usecase">
+          <div class="pillar-usecase__icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"></circle><path d="M12 8v4.5l3 2"></path></svg></div>
+          <h3>Notes de frais automatisées</h3>
+          <p>Photo du reçu envoyée par l'équipe, montant et catégorie extraits automatiquement, intégration directe en comptabilité.</p>
+          <div class="pillar-usecase__gain">−80% de temps de saisie</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- outils concernés -->
+    <div class="pillar-section">
+      <h2>Outils concernés</h2>
+      <p>L'automatisation comptable s'appuie sur les logiciels que vous utilisez déjà — aucun changement d'outil n'est nécessaire.</p>
+      <div class="tool-chip-grid">
+        <div class="tool-chip"><span class="tool-chip__abbr" style="background:#2E2AEB;color:#fff;">P</span>Pennylane</div>
+        <div class="tool-chip"><span class="tool-chip__abbr" style="background:#00D639;color:#0C2E14;">S</span>Sage</div>
+        <div class="tool-chip"><span class="tool-chip__abbr" style="background:#0C1E3C;color:#fff;">C</span>Cegid</div>
+        <div class="tool-chip"><span class="tool-chip__abbr" style="background:#7C5CFC;color:#fff;">Q</span>Quadra</div>
+        <div class="tool-chip"><span class="tool-chip__abbr" style="background:#0C1E3C;color:#fff;">Q</span>Qonto</div>
+        <div class="tool-chip"><span class="tool-chip__abbr" style="background:#1D6F42;color:#fff;">X</span>Excel</div>
+      </div>
+    </div>
+
+    <!-- comment nous intervenons -->
+    <div class="pillar-flow">
+      <div class="pillar-flow__label">Comment nous intervenons</div>
+      <div class="pillar-flow__row">
+        <div class="pillar-flow__step"><span class="pillar-flow__icon">📄</span><span class="pillar-flow__step-label">Facture reçue</span></div>
+        <span class="pillar-flow__arrow">→</span>
+        <div class="pillar-flow__step"><span class="pillar-flow__icon">🔎</span><span class="pillar-flow__step-label">Lecture OCR</span></div>
+        <span class="pillar-flow__arrow">→</span>
+        <div class="pillar-flow__step"><span class="pillar-flow__icon">🧾</span><span class="pillar-flow__step-label">Écriture générée</span></div>
+        <span class="pillar-flow__arrow">→</span>
+        <div class="pillar-flow__step"><span class="pillar-flow__icon">✅</span><span class="pillar-flow__step-label">Intégré à votre logiciel</span></div>
+      </div>
+    </div>
+
+    <!-- avant / après -->
+    <div class="pillar-compare">
+      <h2>Avant / après automatisation comptable</h2>
+      <div class="pillar-compare__grid">
+        <div class="pillar-compare__col pillar-compare__col--before">
+          <div class="pillar-compare__label">Avant</div>
+          <div class="pillar-compare__item"><span>×</span>Saisie manuelle de chaque facture fournisseur</div>
+          <div class="pillar-compare__item"><span>×</span>Rapprochement bancaire fait une fois par mois, à la main</div>
+          <div class="pillar-compare__item"><span>×</span>Erreurs de saisie détectées tardivement</div>
+          <div class="pillar-compare__item"><span>×</span>Notes de frais ressaisies depuis des photos de reçus</div>
+        </div>
+        <div class="pillar-compare__col pillar-compare__col--after">
+          <div class="pillar-compare__label">Après</div>
+          <div class="pillar-compare__item"><span>✓</span>Factures lues et pré-comptabilisées automatiquement</div>
+          <div class="pillar-compare__item"><span>✓</span>Rapprochement bancaire en continu, anomalies signalées</div>
+          <div class="pillar-compare__item"><span>✓</span>Écritures fiables dès la première saisie</div>
+          <div class="pillar-compare__item"><span>✓</span>Notes de frais extraites automatiquement par l'IA</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- mid CTA -->
+    <div class="pillar-mid-cta">
+      <p>Vos factures vous prennent encore des heures chaque semaine ?</p>
+      <a href="<?php echo esc_url( eb_url('audit') ); ?>" class="btn btn-primary">Réserver un audit gratuit <span>→</span></a>
+    </div>
+
+    <!-- FAQ -->
+    <div class="pillar-faq">
+      <h2>Questions fréquentes</h2>
+      <div class="pillar-faq__item">
+        <h3>Qu'est-ce que l'automatisation comptable, concrètement ?</h3>
+        <p>C'est la mise en place d'un enchaînement automatique entre la réception d'un document (facture, relevé bancaire, note de frais) et son enregistrement en comptabilité, en s'appuyant sur l'OCR pour lire les documents et sur des règles pour générer les écritures.</p>
+      </div>
+      <div class="pillar-faq__item">
+        <h3>L'OCR peut-il lire n'importe quelle facture ?</h3>
+        <p>L'OCR facture moderne s'adapte à des mises en page très variées (PDF natif, scan, photo), contrairement à un simple gabarit fixe. Les cas ambigus sont signalés pour validation humaine plutôt que comptabilisés à l'aveugle.</p>
+      </div>
+      <div class="pillar-faq__item">
+        <h3>Est-ce compatible avec Pennylane, Sage, Cegid ou Quadra ?</h3>
+        <p>Oui. L'automatisation se connecte à votre logiciel comptable existant via ses fonctionnalités d'import ou son API — aucun changement d'outil n'est nécessaire pour en bénéficier.</p>
+      </div>
+      <div class="pillar-faq__item">
+        <h3>Le rapprochement bancaire automatique est-il fiable ?</h3>
+        <p>Le pointage automatique traite les cas standards et signale les écarts (doublons, montants proches, opérations non reconnues) pour un contrôle humain rapide — la fiabilité vient de cette combinaison automatisation plus validation, pas d'un remplacement complet du contrôle.</p>
+      </div>
+      <div class="pillar-faq__item">
+        <h3>Dois-je changer de logiciel comptable pour automatiser ?</h3>
+        <p>Non. L'automatisation comptable se construit sur l'outil que vous utilisez déjà. L'objectif est de supprimer la ressaisie manuelle, pas de vous faire changer d'écosystème.</p>
+      </div>
+    </div>
+
+    <!-- explorer aussi -->
+    <div class="pillar-related">
+      <div class="pillar-related__label">Explorer aussi</div>
+      <div class="pillar-related__list">
+        <a href="<?php echo esc_url( eb_url('automatisation-ia') ); ?>" class="pillar-related__pill">Automatisation IA <span>→</span></a>
+        <a href="<?php echo esc_url( eb_url('automatisation-processus') ); ?>" class="pillar-related__pill">Automatisation des processus <span>→</span></a>
+        <a href="<?php echo esc_url( eb_url('rpa') ); ?>" class="pillar-related__pill">RPA <span>→</span></a>
+        <a href="<?php echo esc_url( eb_url('automatisation-rh') ); ?>" class="pillar-related__pill">Automatisation RH <span>→</span></a>
+      </div>
+    </div>
+
+    <!-- CTA final -->
+    <div class="pillar-final-cta">
+      <h2>Combien de temps votre comptabilité pourrait-elle vous faire gagner ?</h2>
+      <p>45 minutes suffisent pour identifier les automatisations comptables les plus rentables pour votre activité.</p>
+      <a href="<?php echo esc_url( eb_url('audit') ); ?>" class="btn btn-primary">Réserver un audit gratuit <span>→</span></a>
+    </div>
+
+  </div>
+</main>
+<?php get_footer(); ?>

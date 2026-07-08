@@ -40,6 +40,11 @@ function eb_url( $page ) {
 		'automatisation-ia'         => home_url( '/automatisation-ia/' ),
 		'automatisation-processus'  => home_url( '/automatisation-processus/' ),
 		'automatisation-taches'     => home_url( '/automatisation-taches/' ),
+		'automatisation-comptable'  => home_url( '/automatisation-comptable/' ),
+		'automatisation-rh'         => home_url( '/automatisation-rh/' ),
+		'automatisation-crm'        => home_url( '/automatisation-crm/' ),
+		'prospection-automatisee'   => home_url( '/prospection-automatisee/' ),
+		'rpa'                       => home_url( '/rpa/' ),
 		'mentions-legales'          => home_url( '/mentions-legales/' ),
 		'confidentialite'           => home_url( '/confidentialite/' ),
 		'rgpd'                      => home_url( '/rgpd/' ),
@@ -78,6 +83,11 @@ function eb_current_page_key() {
 		'page-templates/template-pillar-automatisation-ia.php'         => 'automatisation-ia',
 		'page-templates/template-pillar-automatisation-processus.php'  => 'automatisation-processus',
 		'page-templates/template-pillar-automatisation-taches.php'     => 'automatisation-taches',
+		'page-templates/template-pillar-automatisation-comptable.php'  => 'automatisation-comptable',
+		'page-templates/template-pillar-automatisation-rh.php'         => 'automatisation-rh',
+		'page-templates/template-pillar-automatisation-crm.php'        => 'automatisation-crm',
+		'page-templates/template-pillar-prospection-automatisee.php'   => 'prospection-automatisee',
+		'page-templates/template-pillar-rpa.php'                       => 'rpa',
 		'page-templates/template-mentions-legales.php'                 => 'mentions-legales',
 		'page-templates/template-confidentialite.php'                  => 'confidentialite',
 		'page-templates/template-rgpd.php'                             => 'rgpd',
@@ -95,7 +105,7 @@ function eb_current_page_key() {
 function eb_is_pillar_page( $key ) {
 	return in_array(
 		$key,
-		array( 'agence-ia', 'automatisation-entreprise', 'automatisation-ia', 'automatisation-processus', 'automatisation-taches' ),
+		array( 'agence-ia', 'automatisation-entreprise', 'automatisation-ia', 'automatisation-processus', 'automatisation-taches', 'automatisation-comptable', 'automatisation-rh', 'automatisation-crm', 'prospection-automatisee', 'rpa' ),
 		true
 	);
 }
@@ -140,6 +150,11 @@ function eb_enqueue_assets() {
 		'automatisation-ia'         => 'pillar',
 		'automatisation-processus'  => 'pillar',
 		'automatisation-taches'     => 'pillar',
+		'automatisation-comptable'  => 'pillar',
+		'automatisation-rh'         => 'pillar',
+		'automatisation-crm'        => 'pillar',
+		'prospection-automatisee'   => 'pillar',
+		'rpa'                       => 'pillar',
 	);
 
 	if ( isset( $page_css_map[ $page ] ) ) {
@@ -344,6 +359,101 @@ function eb_seo_data() {
 				array( 'q' => "Une tâche automatisée peut-elle évoluer vers un processus complet plus tard ?", 'a' => "Oui, c'est même l'évolution la plus fréquente. Une fois la confiance établie sur une tâche isolée, il devient naturel d'élargir l'automatisation aux étapes voisines jusqu'à couvrir un processus entier." ),
 				array( 'q' => "Combien coûte l'automatisation d'une tâche unique ?", 'a' => "Les automatisations de tâches simples démarrent autour de 800€, avec un déploiement en une à deux semaines. Le montant exact dépend du nombre d'outils impliqués et de la complexité de la règle à appliquer." ),
 				array( 'q' => "Combien de temps faut-il pour la mettre en place ?", 'a' => "Une tâche bien définie, avec un déclencheur et une règle stables, se met en place en quelques jours à deux semaines, tests inclus." ),
+			),
+		),
+		'automatisation-comptable'  => array(
+			'title'       => "Automatisation comptable : OCR facture & saisie",
+			'description' => "Automatisez la saisie comptable, l'OCR facture et le rapprochement bancaire, compatible Pennylane, Sage, Cegid, Quadra. Audit gratuit de 45 minutes.",
+			'og_title'    => "Automatisation comptable : éliminez la saisie manuelle | EB Automatisation",
+			'og_desc'     => "OCR facture, saisie comptable automatique et rapprochement bancaire automatique, compatible Pennylane, Sage, Cegid, Quadra.",
+			'tw_title'    => "Automatisation comptable : OCR facture & saisie",
+			'tw_desc'     => "Automatisez la saisie comptable et le rapprochement bancaire, compatible Pennylane, Sage, Cegid, Quadra.",
+			'canonical'   => eb_url( 'automatisation-comptable' ),
+			'article'     => array(
+				'headline' => "Automatisation comptable : comment éliminer la saisie manuelle avec l'IA",
+			),
+			'faq'         => array(
+				array( 'q' => "Qu'est-ce que l'automatisation comptable, concrètement ?", 'a' => "C'est la mise en place d'un enchaînement automatique entre la réception d'un document (facture, relevé bancaire, note de frais) et son enregistrement en comptabilité, en s'appuyant sur l'OCR pour lire les documents et sur des règles pour générer les écritures." ),
+				array( 'q' => "L'OCR peut-il lire n'importe quelle facture ?", 'a' => "L'OCR facture moderne s'adapte à des mises en page très variées (PDF natif, scan, photo), contrairement à un simple gabarit fixe. Les cas ambigus sont signalés pour validation humaine plutôt que comptabilisés à l'aveugle." ),
+				array( 'q' => "Est-ce compatible avec Pennylane, Sage, Cegid ou Quadra ?", 'a' => "Oui. L'automatisation se connecte à votre logiciel comptable existant via ses fonctionnalités d'import ou son API — aucun changement d'outil n'est nécessaire pour en bénéficier." ),
+				array( 'q' => "Le rapprochement bancaire automatique est-il fiable ?", 'a' => "Le pointage automatique traite les cas standards et signale les écarts (doublons, montants proches, opérations non reconnues) pour un contrôle humain rapide — la fiabilité vient de cette combinaison automatisation plus validation, pas d'un remplacement complet du contrôle." ),
+				array( 'q' => "Dois-je changer de logiciel comptable pour automatiser ?", 'a' => "Non. L'automatisation comptable se construit sur l'outil que vous utilisez déjà. L'objectif est de supprimer la ressaisie manuelle, pas de vous faire changer d'écosystème." ),
+			),
+		),
+		'automatisation-rh'         => array(
+			'title'       => "Automatisation RH : onboarding, congés, paie",
+			'description' => "Automatisez l'onboarding salarié, la signature électronique, la gestion des congés et les variables de paie. Workflow RH sur mesure. Audit gratuit.",
+			'og_title'    => "Automatisation RH : de l'onboarding à la paie | EB Automatisation",
+			'og_desc'     => "Onboarding salarié, signature électronique, gestion des congés, paie : un workflow RH automatisé sans ressaisie.",
+			'tw_title'    => "Automatisation RH : onboarding, congés, paie",
+			'tw_desc'     => "Automatisez l'onboarding salarié, la gestion des congés et les variables de paie.",
+			'canonical'   => eb_url( 'automatisation-rh' ),
+			'article'     => array(
+				'headline' => "Automatisation RH : de l'onboarding à la paie, sans ressaisie",
+			),
+			'faq'         => array(
+				array( 'q' => "Qu'est-ce que l'automatisation RH change concrètement ?", 'a' => "Elle connecte les étapes déjà existantes de votre gestion RH — validation d'embauche, signature de contrat, création d'accès, décompte de congés — pour qu'elles s'enchaînent automatiquement, sans ressaisie ni oubli entre chaque étape." ),
+				array( 'q' => "La signature électronique a-t-elle une valeur légale ?", 'a' => "Oui, la signature électronique est reconnue juridiquement en France dès lors qu'elle passe par un prestataire certifié. Elle s'intègre au workflow RH pour accélérer la finalisation des contrats sans étape papier." ),
+				array( 'q' => "Faut-il un logiciel de paie spécifique pour automatiser la gestion RH ?", 'a' => "Non. L'automatisation se construit autour de votre logiciel de paie actuel : elle alimente les variables et les décomptes de congés automatiquement, sans imposer de changement d'outil." ),
+				array( 'q' => "Le recrutement automatisé remplace-t-il le recruteur ?", 'a' => "Non. Il prend en charge le tri, le classement et le suivi de statut des candidatures — la décision de recruter reste humaine. L'objectif est de ne plus perdre de candidature dans un fil d'emails." ),
+				array( 'q' => "Mes données RH restent-elles confidentielles ?", 'a' => "Oui. L'automatisation s'appuie sur vos outils existants et leurs propres garanties de sécurité ; aucune donnée RH n'est revendue ni exposée à un tiers non prévu dans votre chaîne d'outils." ),
+			),
+		),
+		'automatisation-crm'        => array(
+			'title'       => "Automatisation CRM : pipeline commercial à jour",
+			'description' => "HubSpot, Pipedrive, Salesforce : automatisez la création de fiches, les relances et la qualification des leads. CRM PME toujours à jour. Audit gratuit.",
+			'og_title'    => "Automatisation CRM : pipeline commercial à jour | EB Automatisation",
+			'og_desc'     => "Automatisez votre suivi commercial (HubSpot, Pipedrive, Salesforce) : fiches, relances et qualification des leads.",
+			'tw_title'    => "Automatisation CRM : pipeline commercial à jour",
+			'tw_desc'     => "Automatisez la création de fiches, les relances et la qualification des leads dans votre CRM.",
+			'canonical'   => eb_url( 'automatisation-crm' ),
+			'article'     => array(
+				'headline' => "Automatisation CRM : un pipeline commercial qui se met à jour tout seul",
+			),
+			'faq'         => array(
+				array( 'q' => "Quel CRM est le plus adapté à une TPE-PME ?", 'a' => "HubSpot, Pipedrive et Salesforce couvrent la grande majorité des besoins d'un CRM PME ou CRM TPE. Le bon choix dépend surtout de votre volume de contacts et de votre budget — l'automatisation, elle, s'adapte à celui que vous avez déjà." ),
+				array( 'q' => "Dois-je changer de CRM pour l'automatiser ?", 'a' => "Non. L'automatisation CRM se construit sur l'outil que vous utilisez déjà, en le connectant à vos emails, formulaires et autres outils commerciaux." ),
+				array( 'q' => "Comment fonctionne la qualification automatique des leads ?", 'a' => "Chaque nouveau contact est analysé selon des règles définies avec vous (secteur, taille, origine de la demande) puis assigné et priorisé automatiquement dans le pipeline commercial, sans intervention manuelle de tri." ),
+				array( 'q' => "Les relances automatiques ne risquent-elles pas de paraître robotiques ?", 'a' => "Les messages sont personnalisés à partir des données du CRM (nom, contexte de la demande) et le ton est défini avec vous en amont. L'automatisation gère le déclenchement et le timing, pas le contenu générique." ),
+				array( 'q' => "Puis-je garder un contrôle humain sur les relances envoyées ?", 'a' => "Oui. Il est courant de démarrer avec une validation humaine avant envoi, puis de passer en automatique une fois les règles éprouvées sur vos premiers cas réels." ),
+			),
+		),
+		'prospection-automatisee'   => array(
+			'title'       => "Prospection automatisée B2B : leads & relances",
+			'description' => "Automatisation LinkedIn, relances email, enrichissement CRM : générez des leads B2B qualifiés sans y passer vos journées. Audit gratuit de 45 min.",
+			'og_title'    => "Prospection automatisée : générez des leads B2B | EB Automatisation",
+			'og_desc'     => "Automatisation LinkedIn, relances email et enrichissement CRM pour une prospection B2B régulière et qualifiée.",
+			'tw_title'    => "Prospection automatisée B2B : leads & relances",
+			'tw_desc'     => "Générez des leads B2B qualifiés grâce à l'automatisation LinkedIn et aux relances email.",
+			'canonical'   => eb_url( 'prospection-automatisee' ),
+			'article'     => array(
+				'headline' => "Prospection automatisée : générez des leads B2B sans y passer vos journées",
+			),
+			'faq'         => array(
+				array( 'q' => "L'automatisation LinkedIn respecte-t-elle les règles de la plateforme ?", 'a' => "Les volumes et rythmes d'envoi sont paramétrés pour rester dans des usages raisonnables et éviter tout signalement — l'objectif est une prospection régulière et crédible, pas un envoi massif." ),
+				array( 'q' => "Les messages envoyés sont-ils vraiment personnalisés ?", 'a' => "Oui. Les messages s'appuient sur les données enrichies du contact (fonction, entreprise, secteur) pour éviter un ton générique, tout en étant envoyés automatiquement selon la séquence définie avec vous." ),
+				array( 'q' => "Quelle est la différence entre prospection automatisée et spam ?", 'a' => "Le volume est maîtrisé, le ciblage est précis, et chaque prospect qui répond ou demande à ne plus être contacté sort automatiquement de la séquence. L'objectif est la qualité des échanges engagés, pas le volume brut de messages envoyés." ),
+				array( 'q' => "Comment se passe la qualification automatique des réponses ?", 'a' => "Chaque réponse est analysée pour distinguer un intérêt réel d'un refus ou d'une réponse automatique, afin de ne remonter à l'équipe commerciale que les échanges qui méritent un vrai suivi." ),
+				array( 'q' => "Combien de temps avant de voir des résultats ?", 'a' => "Les premières séquences de prospection automatisée sont généralement opérationnelles en une à deux semaines. Les premiers retours (ouvertures, réponses) sont visibles dès les premiers envois." ),
+			),
+		),
+		'rpa'                       => array(
+			'title'       => "RPA : robot logiciel pour vos documents",
+			'description' => "Robotic Process Automation, OCR, extraction PDF : confiez le traitement documentaire répétitif à un robot logiciel. Audit gratuit de 45 minutes.",
+			'og_title'    => "RPA : un robot logiciel pour vos documents | EB Automatisation",
+			'og_desc'     => "Robotic Process Automation, OCR et extraction PDF pour automatiser votre traitement documentaire répétitif.",
+			'tw_title'    => "RPA : robot logiciel pour vos documents",
+			'tw_desc'     => "Confiez le traitement documentaire répétitif à un robot logiciel grâce à la RPA.",
+			'canonical'   => eb_url( 'rpa' ),
+			'article'     => array(
+				'headline' => "RPA : un robot logiciel pour vos tâches documentaires répétitives",
+			),
+			'faq'         => array(
+				array( 'q' => "Qu'est-ce que la RPA exactement ?", 'a' => "La RPA (Robotic Process Automation) désigne l'automatisation de tâches répétitives via un « robot logiciel » qui reproduit des actions numériques réglées — lire, extraire, saisir, transférer — selon des règles précises et stables." ),
+				array( 'q' => "Quelle est la différence entre RPA et automatisation IA ?", 'a' => "La RPA excelle sur des règles fixes et prévisibles. L'automatisation IA intervient quand l'information est moins structurée (texte libre, mise en page variable) et nécessite une interprétation avant d'être traitée. Les deux se combinent souvent sur un même processus." ),
+				array( 'q' => "L'OCR fonctionne-t-il sur des documents scannés ou photographiés ?", 'a' => "Oui. La lecture automatique de documents moderne traite aussi bien les PDF natifs que les scans ou photos, avec une fiabilité qui dépend de la qualité du document — les cas ambigus sont signalés pour vérification humaine." ),
+				array( 'q' => "La RPA nécessite-t-elle des compétences techniques en interne ?", 'a' => "Non. Chaque robot logiciel est conçu, documenté et livré sur des outils grand public (Make, n8n) que vous pouvez consulter sans coder. Aucune compétence en développement n'est nécessaire pour l'utiliser au quotidien." ),
+				array( 'q' => "Que se passe-t-il si un document sort du cadre habituel ?", 'a' => "Les cas qui ne correspondent pas aux règles définies sont détectés et signalés pour un traitement manuel, plutôt que traités à l'aveugle avec un risque d'erreur." ),
 			),
 		),
 		'mentions-legales'          => array(

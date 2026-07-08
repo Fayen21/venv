@@ -89,6 +89,24 @@
 .pillar-final-cta p{ font-size:16.5px; color:var(--text-3); margin:0 0 28px; }
 .pillar-final-cta .btn-primary{ padding:16px 30px; font-size:16px; box-shadow:0 16px 36px -14px rgba(221,122,51,.8); }
 
+/* ---------- avant / après (comparaison 2 colonnes) ---------- */
+.pillar-compare{ margin:56px 0; }
+.pillar-compare h2{ font-size:28px; letter-spacing:-.02em; margin:0 0 22px; }
+.pillar-compare__grid{ display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+.pillar-compare__col{ border-radius:16px; padding:26px; }
+.pillar-compare__col--before{ background:var(--tan-bg); border:1px solid var(--tan-border); }
+.pillar-compare__col--after{ background:var(--green-alt-bg); border:1px solid var(--green-alt-border); }
+.pillar-compare__label{ font-size:12px; font-weight:600; text-transform:uppercase; letter-spacing:.08em; margin-bottom:14px; }
+.pillar-compare__col--before .pillar-compare__label{ color:var(--tan-label); }
+.pillar-compare__col--after .pillar-compare__label{ color:var(--green-dark-text); }
+.pillar-compare__item{ display:flex; align-items:flex-start; gap:10px; font-size:14.5px; line-height:1.55; margin-bottom:11px; }
+.pillar-compare__item:last-child{ margin-bottom:0; }
+.pillar-compare__col--before .pillar-compare__item{ color:var(--tan-text); }
+.pillar-compare__col--after .pillar-compare__item{ color:var(--green-dark-text-2); }
+.pillar-compare__item span{ flex:none; margin-top:1px; }
+.pillar-compare__col--before .pillar-compare__item span{ color:var(--tan-strong); }
+.pillar-compare__col--after .pillar-compare__item span{ color:var(--green); }
+
 /* ==================== responsive — miroir du retrofit du prototype ==================== */
 @media (max-width:900px){
   .pillar-usecases__grid{ grid-template-columns:1fr; }
@@ -109,8 +127,9 @@
   .pillar-flow__arrow{ margin:0; transform:rotate(90deg); }
   .pillar-final-cta{ padding:28px; }
   .pillar-final-cta .btn-primary{ width:100%; justify-content:center; }
-  .pillar-usecases h2,.pillar-faq h2{ text-align:center; }
+  .pillar-usecases h2,.pillar-faq h2,.pillar-compare h2{ text-align:center; }
   .pillar-usecases__grid{ gap:22px; }
   .pillar-usecase{ padding:24px; }
   .pillar-usecase p{ font-size:14.5px; }
+  .pillar-compare__grid{ grid-template-columns:1fr; gap:14px; }
 }

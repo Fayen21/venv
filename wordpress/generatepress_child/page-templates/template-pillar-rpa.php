@@ -1,0 +1,203 @@
+<?php
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
+/**
+ * Template Name: EB — Pilier RPA
+ */
+?>
+<?php get_header(); ?>
+<main id="main">
+  <div class="pillar-wrap">
+
+    <!-- breadcrumb -->
+    <nav class="pillar-breadcrumb" aria-label="Fil d'Ariane">
+      <a href="<?php echo esc_url( eb_url('index') ); ?>">Accueil</a>
+      <span>／</span>
+      <a href="<?php echo esc_url( eb_url('solutions') ); ?>">Expertises</a>
+      <span>／</span>
+      <span class="pillar-breadcrumb__current">RPA</span>
+    </nav>
+
+    <!-- hero -->
+    <div class="pillar-hero">
+      <div class="eyebrow pillar-hero__eyebrow">RPA — Robotic Process Automation</div>
+      <h1>RPA : un robot logiciel pour vos tâches documentaires répétitives</h1>
+      <p class="pillar-hero__intro">La RPA (Robotic Process Automation) consiste à confier à un robot logiciel les tâches répétitives et réglées qu'un collaborateur exécute aujourd'hui à la main : lire un document, en extraire des données, les reporter dans un autre outil. Combinée à l'OCR pour l'extraction PDF et la lecture automatique de documents, elle couvre l'essentiel du traitement documentaire d'une TPE-PME.</p>
+      <div class="pillar-hero__actions">
+        <a href="<?php echo esc_url( eb_url('realisations') ); ?>" class="btn btn-primary">Découvrir un cas concret <span>→</span></a>
+        <a href="<?php echo esc_url( eb_url('solutions') ); ?>" class="btn btn-secondary">Voir toutes les solutions</a>
+      </div>
+    </div>
+
+    <!-- mockup visuel -->
+    <div class="pillar-mock">
+      <div class="pillar-mock__titlebar">
+        <div class="pillar-mock__dots"><span style="background:#FF5F57;"></span><span style="background:#FEBC2E;"></span><span style="background:#28C840;"></span></div>
+        <span class="pillar-mock__file">traitement_documentaire · RPA</span>
+        <span class="pillar-mock__live"><span class="pillar-mock__live-dot"></span>actif</span>
+      </div>
+      <div class="pillar-mock__body">
+        <div class="pillar-mock__row"><span class="pillar-mock__dot" style="background:#3BA5FF;"></span><span class="pillar-mock__label">Document reçu (PDF, scan, photo)</span><span class="pillar-mock__val" style="color:#5BB6FF;background:rgba(46,155,255,.16);">reçu</span></div>
+        <div class="pillar-mock__row"><span class="pillar-mock__dot" style="background:#5BCB8B;"></span><span class="pillar-mock__label">Données extraites par OCR</span><span class="pillar-mock__val" style="color:#5BCB8B;background:rgba(91,203,139,.12);">extrait</span></div>
+        <div class="pillar-mock__row"><span class="pillar-mock__dot" style="background:#5BCB8B;"></span><span class="pillar-mock__label">Reporté dans votre outil métier</span><span class="pillar-mock__val" style="color:#5BCB8B;background:rgba(91,203,139,.12);">classé</span></div>
+      </div>
+    </div>
+
+    <!-- le problème -->
+    <div class="pillar-section">
+      <h2>Le problème : des tâches répétitives qui n'ont pas besoin d'un humain</h2>
+      <p>Beaucoup de tâches administratives suivent une règle stricte et prévisible : ouvrir un document, y relever une information à un endroit précis, la reporter dans un tableur ou un logiciel métier. Ce n'est pas un travail qui demande du jugement — mais tant qu'il est fait à la main, il consomme du temps et reste exposé aux erreurs de saisie et aux oublis.</p>
+      <p>Le traitement documentaire (factures, bons de commande, relevés, formulaires) illustre bien ce problème : le volume de documents à traiter augmente avec l'activité, alors que le temps disponible pour les traiter, lui, n'augmente pas.</p>
+    </div>
+
+    <!-- pourquoi automatiser -->
+    <div class="pillar-section">
+      <h2>Pourquoi mettre en place de la RPA</h2>
+      <div class="pillar-section__list">
+        <div class="pillar-section__list-item"><span>✓</span>Un robot logiciel exécute la même règle des centaines de fois sans fatigue ni erreur d'inattention.</div>
+        <div class="pillar-section__list-item"><span>✓</span>L'OCR et l'extraction PDF suppriment la ressaisie manuelle de données déjà présentes dans un document.</div>
+        <div class="pillar-section__list-item"><span>✓</span>La lecture automatique de documents s'adapte à des mises en page variées, pas seulement à un modèle unique.</div>
+        <div class="pillar-section__list-item"><span>✓</span>Le volume de documents traités peut augmenter sans augmenter la charge de travail de l'équipe.</div>
+      </div>
+    </div>
+
+    <!-- bénéfices -->
+    <div class="pillar-section">
+      <h2>Bénéfices concrets pour votre entreprise</h2>
+      <div class="pillar-section__list">
+        <div class="pillar-section__list-item"><span>✓</span>Un traitement documentaire fiable, sans erreur de report entre deux outils.</div>
+        <div class="pillar-section__list-item"><span>✓</span>Des délais de traitement raccourcis, d'heures à minutes selon le volume.</div>
+        <div class="pillar-section__list-item"><span>✓</span>Une équipe recentrée sur les cas particuliers, pendant que le robot logiciel gère les cas standards.</div>
+        <div class="pillar-section__list-item"><span>✓</span>Une traçabilité complète de chaque document traité, utile en cas de contrôle.</div>
+      </div>
+    </div>
+
+    <!-- exemples concrets -->
+    <div class="pillar-usecases">
+      <h2>Exemples concrets</h2>
+      <div class="pillar-usecases__grid">
+        <div class="pillar-usecase">
+          <div class="pillar-usecase__icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M4 6.5l8 6 8-6"></path></svg></div>
+          <h3>Tri et classement automatique des emails</h3>
+          <p>Chaque email entrant est lu, ses pièces jointes analysées, puis classé et transformé en tâche de suivi si nécessaire.</p>
+          <div class="pillar-usecase__gain">−70% de tri manuel</div>
+        </div>
+        <div class="pillar-usecase">
+          <div class="pillar-usecase__icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></div>
+          <h3>Extraction de données PDF</h3>
+          <p>Montants, dates, références extraits automatiquement depuis des bons de commande ou formulaires PDF, puis reportés dans votre outil.</p>
+          <div class="pillar-usecase__gain">−72% de temps de saisie</div>
+        </div>
+        <div class="pillar-usecase">
+          <div class="pillar-usecase__icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="9" rx="2"></rect><path d="M8 11V7a4 4 0 0 1 8 0v4"></path></svg></div>
+          <h3>Contrôle qualité fournisseurs</h3>
+          <p>Certificats de conformité reçus par email, lus automatiquement, avec alerte en cas de document manquant ou expiré.</p>
+          <div class="pillar-usecase__gain">0 certificat manquant non détecté</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- outils concernés -->
+    <div class="pillar-section">
+      <h2>Outils concernés</h2>
+      <p>La RPA s'appuie sur des outils d'orchestration et de lecture de documents, connectés à vos logiciels existants.</p>
+      <div class="tool-chip-grid">
+        <div class="tool-chip"><span class="tool-chip__abbr" style="background:#6D00CC;color:#fff;">M</span>Make</div>
+        <div class="tool-chip"><span class="tool-chip__abbr" style="background:#EA4B71;color:#fff;">n8</span>n8n</div>
+        <div class="tool-chip"><span class="tool-chip__abbr" style="background:#3776AB;color:#fff;">Py</span>Python</div>
+        <div class="tool-chip"><span class="tool-chip__abbr" style="background:#0A6FC2;color:#fff;">O</span>Outlook</div>
+        <div class="tool-chip"><span class="tool-chip__abbr" style="background:#1D6F42;color:#fff;">X</span>Excel</div>
+        <div class="tool-chip"><span class="tool-chip__abbr" style="background:#111111;color:#fff;">{}</span>API REST</div>
+      </div>
+    </div>
+
+    <!-- comment nous intervenons -->
+    <div class="pillar-flow">
+      <div class="pillar-flow__label">Comment nous intervenons</div>
+      <div class="pillar-flow__row">
+        <div class="pillar-flow__step"><span class="pillar-flow__icon">📄</span><span class="pillar-flow__step-label">Document reçu</span></div>
+        <span class="pillar-flow__arrow">→</span>
+        <div class="pillar-flow__step"><span class="pillar-flow__icon">🤖</span><span class="pillar-flow__step-label">Lu par le robot logiciel</span></div>
+        <span class="pillar-flow__arrow">→</span>
+        <div class="pillar-flow__step"><span class="pillar-flow__icon">🔎</span><span class="pillar-flow__step-label">Données extraites (OCR)</span></div>
+        <span class="pillar-flow__arrow">→</span>
+        <div class="pillar-flow__step"><span class="pillar-flow__icon">✅</span><span class="pillar-flow__step-label">Reporté dans votre outil</span></div>
+      </div>
+    </div>
+
+    <!-- avant / après -->
+    <div class="pillar-compare">
+      <h2>Avant / après RPA</h2>
+      <div class="pillar-compare__grid">
+        <div class="pillar-compare__col pillar-compare__col--before">
+          <div class="pillar-compare__label">Avant</div>
+          <div class="pillar-compare__item"><span>×</span>Documents ouverts et lus un par un, manuellement</div>
+          <div class="pillar-compare__item"><span>×</span>Données reportées à la main dans le logiciel métier</div>
+          <div class="pillar-compare__item"><span>×</span>Volume de documents limité par le temps disponible</div>
+          <div class="pillar-compare__item"><span>×</span>Erreurs de report détectées tardivement</div>
+        </div>
+        <div class="pillar-compare__col pillar-compare__col--after">
+          <div class="pillar-compare__label">Après</div>
+          <div class="pillar-compare__item"><span>✓</span>Documents lus et traités automatiquement par le robot logiciel</div>
+          <div class="pillar-compare__item"><span>✓</span>Données reportées sans intervention manuelle</div>
+          <div class="pillar-compare__item"><span>✓</span>Volume traité indépendant du temps disponible en interne</div>
+          <div class="pillar-compare__item"><span>✓</span>Anomalies signalées avant qu'elles ne posent problème</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- mid CTA -->
+    <div class="pillar-mid-cta">
+      <p>Une tâche documentaire répétitive vous fait perdre du temps chaque semaine ?</p>
+      <a href="<?php echo esc_url( eb_url('audit') ); ?>" class="btn btn-primary">Réserver un audit gratuit <span>→</span></a>
+    </div>
+
+    <!-- FAQ -->
+    <div class="pillar-faq">
+      <h2>Questions fréquentes</h2>
+      <div class="pillar-faq__item">
+        <h3>Qu'est-ce que la RPA exactement ?</h3>
+        <p>La RPA (Robotic Process Automation) désigne l'automatisation de tâches répétitives via un « robot logiciel » qui reproduit des actions numériques réglées — lire, extraire, saisir, transférer — selon des règles précises et stables.</p>
+      </div>
+      <div class="pillar-faq__item">
+        <h3>Quelle est la différence entre RPA et automatisation IA ?</h3>
+        <p>La RPA excelle sur des règles fixes et prévisibles. L'automatisation IA intervient quand l'information est moins structurée (texte libre, mise en page variable) et nécessite une interprétation avant d'être traitée. Les deux se combinent souvent sur un même processus.</p>
+      </div>
+      <div class="pillar-faq__item">
+        <h3>L'OCR fonctionne-t-il sur des documents scannés ou photographiés ?</h3>
+        <p>Oui. La lecture automatique de documents moderne traite aussi bien les PDF natifs que les scans ou photos, avec une fiabilité qui dépend de la qualité du document — les cas ambigus sont signalés pour vérification humaine.</p>
+      </div>
+      <div class="pillar-faq__item">
+        <h3>La RPA nécessite-t-elle des compétences techniques en interne ?</h3>
+        <p>Non. Chaque robot logiciel est conçu, documenté et livré sur des outils grand public (Make, n8n) que vous pouvez consulter sans coder. Aucune compétence en développement n'est nécessaire pour l'utiliser au quotidien.</p>
+      </div>
+      <div class="pillar-faq__item">
+        <h3>Que se passe-t-il si un document sort du cadre habituel ?</h3>
+        <p>Les cas qui ne correspondent pas aux règles définies sont détectés et signalés pour un traitement manuel, plutôt que traités à l'aveugle avec un risque d'erreur.</p>
+      </div>
+    </div>
+
+    <!-- explorer aussi -->
+    <div class="pillar-related">
+      <div class="pillar-related__label">Explorer aussi</div>
+      <div class="pillar-related__list">
+        <a href="<?php echo esc_url( eb_url('automatisation-ia') ); ?>" class="pillar-related__pill">Automatisation IA <span>→</span></a>
+        <a href="<?php echo esc_url( eb_url('automatisation-processus') ); ?>" class="pillar-related__pill">Automatisation des processus <span>→</span></a>
+        <a href="<?php echo esc_url( eb_url('automatisation-comptable') ); ?>" class="pillar-related__pill">Automatisation comptable <span>→</span></a>
+        <a href="<?php echo esc_url( eb_url('automatisation-rh') ); ?>" class="pillar-related__pill">Automatisation RH <span>→</span></a>
+        <a href="<?php echo esc_url( eb_url('automatisation-crm') ); ?>" class="pillar-related__pill">Automatisation CRM <span>→</span></a>
+      </div>
+    </div>
+
+    <!-- CTA final -->
+    <div class="pillar-final-cta">
+      <h2>Quelle tâche documentaire pourrait être prise en charge par un robot logiciel ?</h2>
+      <p>45 minutes suffisent pour identifier les automatisations RPA les plus rentables pour votre activité.</p>
+      <a href="<?php echo esc_url( eb_url('audit') ); ?>" class="btn btn-primary">Réserver un audit gratuit <span>→</span></a>
+    </div>
+
+  </div>
+</main>
+<?php get_footer(); ?>
