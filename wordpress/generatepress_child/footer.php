@@ -46,8 +46,8 @@ if ( ! defined( 'ABSPATH' ) ) {
     </div>
   </div>
   <div class="site-footer__bottom">
-    <span>© 2026 EB Automatisation · Emmanuel Brançon · SIRET 000 000 000 00000 · Entrepreneur individuel</span>
-    <span>Mentions légales · Politique de confidentialité · RGPD</span>
+    <span>© 2026 EB Automatisation · Emmanuel Brançon · SIRET 106 501 141 00019 · Entrepreneur individuel</span>
+    <span><a href="<?php echo esc_url( eb_url( 'mentions-legales' ) ); ?>">Mentions légales</a> · <a href="<?php echo esc_url( eb_url( 'confidentialite' ) ); ?>">Politique de confidentialité</a> · <a href="<?php echo esc_url( eb_url( 'rgpd' ) ); ?>">RGPD</a></span>
   </div>
 </footer>
 

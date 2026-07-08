@@ -40,6 +40,9 @@ function eb_url( $page ) {
 		'automatisation-ia'         => home_url( '/automatisation-ia/' ),
 		'automatisation-processus'  => home_url( '/automatisation-processus/' ),
 		'automatisation-taches'     => home_url( '/automatisation-taches/' ),
+		'mentions-legales'          => home_url( '/mentions-legales/' ),
+		'confidentialite'           => home_url( '/confidentialite/' ),
+		'rgpd'                      => home_url( '/rgpd/' ),
 	);
 
 	return isset( $map[ $page ] ) ? $map[ $page ] : home_url( '/' );
@@ -75,6 +78,9 @@ function eb_current_page_key() {
 		'page-templates/template-pillar-automatisation-ia.php'         => 'automatisation-ia',
 		'page-templates/template-pillar-automatisation-processus.php'  => 'automatisation-processus',
 		'page-templates/template-pillar-automatisation-taches.php'     => 'automatisation-taches',
+		'page-templates/template-mentions-legales.php'                 => 'mentions-legales',
+		'page-templates/template-confidentialite.php'                  => 'confidentialite',
+		'page-templates/template-rgpd.php'                             => 'rgpd',
 	);
 
 	foreach ( $templates as $file => $key ) {
@@ -339,6 +345,33 @@ function eb_seo_data() {
 				array( 'q' => "Combien coûte l'automatisation d'une tâche unique ?", 'a' => "Les automatisations de tâches simples démarrent autour de 800€, avec un déploiement en une à deux semaines. Le montant exact dépend du nombre d'outils impliqués et de la complexité de la règle à appliquer." ),
 				array( 'q' => "Combien de temps faut-il pour la mettre en place ?", 'a' => "Une tâche bien définie, avec un déclencheur et une règle stables, se met en place en quelques jours à deux semaines, tests inclus." ),
 			),
+		),
+		'mentions-legales'          => array(
+			'title'       => "Mentions légales — EB Automatisation",
+			'description' => "Mentions légales du site eb-automatisation.fr : éditeur, hébergeur, propriété intellectuelle et droit applicable.",
+			'og_title'    => "Mentions légales — EB Automatisation",
+			'og_desc'     => "Mentions légales du site eb-automatisation.fr.",
+			'tw_title'    => "Mentions légales — EB Automatisation",
+			'tw_desc'     => "Mentions légales du site eb-automatisation.fr.",
+			'canonical'   => eb_url( 'mentions-legales' ),
+		),
+		'confidentialite'           => array(
+			'title'       => "Politique de confidentialité — EB Automatisation",
+			'description' => "Comment EB Automatisation collecte, utilise et protège vos données personnelles sur eb-automatisation.fr.",
+			'og_title'    => "Politique de confidentialité — EB Automatisation",
+			'og_desc'     => "Comment EB Automatisation collecte, utilise et protège vos données personnelles.",
+			'tw_title'    => "Politique de confidentialité — EB Automatisation",
+			'tw_desc'     => "Comment EB Automatisation collecte, utilise et protège vos données personnelles.",
+			'canonical'   => eb_url( 'confidentialite' ),
+		),
+		'rgpd'                      => array(
+			'title'       => "RGPD — Vos droits sur vos données | EB Automatisation",
+			'description' => "Vos droits RGPD (accès, rectification, effacement, opposition, portabilité) et comment les exercer auprès d'EB Automatisation.",
+			'og_title'    => "RGPD — Vos droits sur vos données | EB Automatisation",
+			'og_desc'     => "Vos droits RGPD et comment les exercer auprès d'EB Automatisation.",
+			'tw_title'    => "RGPD — Vos droits sur vos données | EB Automatisation",
+			'tw_desc'     => "Vos droits RGPD et comment les exercer auprès d'EB Automatisation.",
+			'canonical'   => eb_url( 'rgpd' ),
 		),
 	);
 }
