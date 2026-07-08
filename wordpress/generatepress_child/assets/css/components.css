@@ -61,6 +61,14 @@
 .icon-tile--b{ background:#E7F1FF; color:var(--blue-deep); }
 .icon-tile--green{ background:var(--green-bg); color:var(--green); }
 
+/* Vignettes teintées : la carte entière reprend la couleur de son icône (pêche/bleu/vert). */
+.automations__card:has(.icon-tile--a),
+.differentiators__card:has(.icon-tile--a){ background:var(--orange-soft-bg); border-color:var(--orange-soft-border); }
+.automations__card:has(.icon-tile--b),
+.differentiators__card:has(.icon-tile--b){ background:#E7F1FF; border-color:#C7E1FF; }
+.automations__card:has(.icon-tile--green),
+.differentiators__card:has(.icon-tile--green){ background:var(--green-bg); border-color:var(--green-border); }
+
 /* ---------- badge pill ---------- */
 .badge-pill{
   display:inline-flex;
@@ -152,9 +160,8 @@
 
 /* ---------- CTA final navy à motif de points (Solutions, Réalisations, À propos) ---------- */
 .cta-dotted{
-  background-color:var(--navy);
-  background-image:radial-gradient(circle at 1px 1px, rgba(91,181,255,.16) 1.4px, transparent 0);
-  background-size:24px 24px;
+  background-color:#15305C;
+  background-image:var(--navy-gradient);
   border-radius:22px;
   padding:54px;
   display:flex;

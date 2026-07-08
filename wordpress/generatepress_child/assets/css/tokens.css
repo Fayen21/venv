@@ -8,6 +8,7 @@
   --navy-panel:#0A1A33;
   --navy-panel-border:#16294a;
   --navy-panel-border-2:#11264A;
+  --navy-gradient:linear-gradient(135deg,#0C1E3C 0%,#1E3A6E 55%,#2E5BA8 100%);
 
   /* orange (brand accent / CTA) */
   --orange:#DD7A33;

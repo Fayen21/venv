@@ -228,7 +228,7 @@
 .bank-apres__validated-note{ font-size:12.5px;color:var(--muted); }
 
 .bank-apres__gains{
-  background:var(--navy);border-radius:var(--r-4xl);padding:32px 28px;
+  background:var(--navy-gradient);border-radius:var(--r-4xl);padding:32px 28px;
   display:flex;flex-direction:column;justify-content:center;gap:18px;
 }
 .bank-apres__gains-label{ font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:var(--peach);margin-bottom:2px; }
@@ -295,9 +295,8 @@
 /* ============ case band (navy) ============ */
 .case-band{
   margin-top:64px;
-  background-color:var(--navy);
-  background-image:radial-gradient(circle at 1px 1px, rgba(91,181,255,.18) 1.4px, transparent 0);
-  background-size:26px 26px;
+  background-color:#15305C;
+  background-image:var(--navy-gradient);
   color:#fff;
 }
 .case-band__inner{
@@ -328,7 +327,7 @@
   background:#fff;border:1px solid var(--border-2);border-radius:var(--r-4xl);
   padding:32px;display:flex;flex-direction:column;height:100%;position:relative;
 }
-.pricing__card--featured{ background:var(--navy);border-color:var(--orange);box-shadow:0 22px 50px -22px rgba(221,122,51,.55); }
+.pricing__card--featured{ background:var(--navy-gradient);border-color:var(--orange);box-shadow:0 22px 50px -22px rgba(221,122,51,.55); }
 .pricing__ribbon{
   position:absolute;top:-13px;left:32px;background:var(--orange);color:#fff;
   font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;padding:5px 12px;border-radius:20px;
@@ -378,7 +377,7 @@
 .audit-steps__cta{ padding:16px 30px;font-size:16px;box-shadow:var(--shadow-btn-orange-md); }
 
 /* ============ pourquoi moi ============ */
-.profile-quote{ background:var(--navy);border-radius:var(--r-5xl);padding:40px 44px;margin-top:22px;text-align:center; }
+.profile-quote{ background:var(--navy-gradient);border-radius:var(--r-5xl);padding:40px 44px;margin-top:22px;text-align:center; }
 .profile-quote p{ font-family:var(--font-heading);font-weight:500;font-size:22px;line-height:1.45;letter-spacing:-.015em;color:#fff;margin:0 auto;max-width:760px; }
 .profile-quote__accent{ color:var(--peach); }
 

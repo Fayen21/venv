@@ -27,7 +27,7 @@
 .case-flow__connector{ width:2px; height:14px; margin-left:16px; background:var(--border-4); }
 
 /* panneau navy (résultats chiffrés — cas 1) */
-.case-study__side{ background:var(--navy); color:#fff; padding:44px; display:flex; flex-direction:column; justify-content:center; gap:18px; }
+.case-study__side{ background:var(--navy-gradient); color:#fff; padding:44px; display:flex; flex-direction:column; justify-content:center; gap:18px; }
 .case-study__side-label{ font-size:12px; font-weight:600; text-transform:uppercase; letter-spacing:.12em; color:var(--peach); margin-bottom:4px; }
 .case-study__stats{ display:grid; grid-template-columns:1fr 1fr; gap:16px; }
 .case-study__stat{ background:var(--navy-card); border:1px solid var(--navy-card-border); border-radius:14px; padding:28px 24px; }

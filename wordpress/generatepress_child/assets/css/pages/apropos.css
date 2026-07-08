@@ -23,9 +23,9 @@
 
 /* ============ bandeau navy "ma façon de travailler" ============ */
 .values-band{
-  margin-top:70px; background-color:var(--navy);
-  background-image:radial-gradient(circle at 1px 1px, rgba(91,181,255,.18) 1.4px, transparent 0);
-  background-size:26px 26px; color:#fff;
+  margin-top:70px; background-color:#15305C;
+  background-image:var(--navy-gradient);
+  color:#fff;
 }
 .values-band__inner{ max-width:1200px; margin:0 auto; padding:74px 40px; }
 .values-band h2{ font-size:34px; color:#fff; margin:0 0 44px; }

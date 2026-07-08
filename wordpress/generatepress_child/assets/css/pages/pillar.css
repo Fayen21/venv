@@ -64,7 +64,7 @@
 .pillar-flow__arrow{ color:var(--orange); font-size:20px; margin:0 4px 30px; flex:none; }
 
 /* ---------- mid CTA ---------- */
-.pillar-mid-cta{ background:var(--navy); border-radius:18px; padding:38px 42px; display:flex; align-items:center; justify-content:space-between; gap:28px; flex-wrap:wrap; margin:56px 0; }
+.pillar-mid-cta{ background:var(--navy-gradient); border-radius:18px; padding:38px 42px; display:flex; align-items:center; justify-content:space-between; gap:28px; flex-wrap:wrap; margin:56px 0; }
 .pillar-mid-cta p{ font-family:var(--font-heading); font-weight:500; font-size:19px; line-height:1.4; letter-spacing:-.01em; color:#fff; margin:0; max-width:520px; }
 .pillar-mid-cta .btn-primary{ padding:14px 24px; font-size:15px; border-radius:10px; white-space:nowrap; box-shadow:none; }
 
