@@ -207,8 +207,8 @@ function eb_seo_data() {
 
 	return array(
 		'index'                     => array(
-			'title'       => "EB Automatisation — Automatisez vos tâches répétitives, gardez vos outils",
-			'description' => "Consultant indépendant en automatisation IA pour TPE-PME françaises. Je connecte vos outils existants (Excel, Outlook, CRM, comptabilité) pour supprimer les tâches répétitives. Audit gratuit.",
+			'title'       => "Automatisation IA pour PME | Consultant IA indépendant | EB Automatisation",
+			'description' => "Automatisez Excel, Outlook, CRM, Sage et vos logiciels métier grâce à l'IA. Consultant indépendant en automatisation pour PME partout en France. Audit gratuit.",
 			'og_title'    => "EB Automatisation — Automatisez vos tâches répétitives, gardez vos outils",
 			'og_desc'     => "Consultant indépendant en automatisation IA pour TPE-PME françaises. Je connecte vos outils existants pour supprimer les tâches répétitives. Audit gratuit.",
 			'tw_title'    => "EB Automatisation — Automatisez vos tâches répétitives, gardez vos outils",
@@ -216,8 +216,8 @@ function eb_seo_data() {
 			'canonical'   => eb_url( 'index' ),
 		),
 		'solutions'                 => array(
-			'title'       => "Solutions d'automatisation — EB Automatisation",
-			'description' => "Je connecte les outils que vous utilisez déjà (Outlook, Excel, Sage, Qonto, CRM, logiciels RH…) afin d'éliminer les ressaisies, les oublis et les tâches chronophages. Aucun logiciel à remplacer.",
+			'title'       => "Solutions d'automatisation IA pour PME | EB Automatisation",
+			'description' => "Outlook, Excel, Sage, Qonto, CRM, RH : je connecte vos outils existants pour éliminer ressaisies et oublis. Aucun logiciel à remplacer. Audit gratuit.",
 			'og_title'    => "Solutions d'automatisation — EB Automatisation",
 			'og_desc'     => "Je connecte les outils que vous utilisez déjà (Outlook, Excel, Sage, Qonto, CRM, logiciels RH…) afin d'éliminer les ressaisies, les oublis et les tâches chronophages.",
 			'tw_title'    => "Solutions d'automatisation — EB Automatisation",
@@ -225,8 +225,8 @@ function eb_seo_data() {
 			'canonical'   => eb_url( 'solutions' ),
 		),
 		'realisations'               => array(
-			'title'       => "Réalisations — EB Automatisation",
-			'description' => "Exemples concrets d'automatisations réalisées ou représentatives pour des TPE et PME : temps gagné, erreurs supprimées et processus simplifiés.",
+			'title'       => "Exemples d'automatisation IA en entreprise | EB Automatisation",
+			'description' => "De -38% de retards de paiement à -90% de temps de rédaction : découvrez des automatisations IA réellement mises en place en TPE et PME. Audit gratuit.",
 			'og_title'    => "Réalisations — EB Automatisation",
 			'og_desc'     => "Découvrez ce que l'automatisation peut réellement vous faire gagner : temps gagné, erreurs supprimées et processus simplifiés.",
 			'tw_title'    => "Réalisations — EB Automatisation",
@@ -234,8 +234,8 @@ function eb_seo_data() {
 			'canonical'   => eb_url( 'realisations' ),
 		),
 		'apropos'                   => array(
-			'title'       => "À propos — EB Automatisation",
-			'description' => "Emmanuel Brançon, consultant indépendant en automatisation IA pour les TPE-PME françaises. Expertise gestion & comptabilité, vous restez propriétaire de vos outils.",
+			'title'       => "Consultant en automatisation IA | Emmanuel Brançon",
+			'description' => "Ex-professionnel de la gestion, je comprends vos processus avant de les automatiser. Interlocuteur unique, vous restez propriétaire de vos outils.",
 			'og_title'    => "À propos — EB Automatisation",
 			'og_desc'     => "Emmanuel Brançon, consultant indépendant en automatisation & IA pour les TPE-PME françaises.",
 			'tw_title'    => "À propos — EB Automatisation",
@@ -243,8 +243,8 @@ function eb_seo_data() {
 			'canonical'   => eb_url( 'apropos' ),
 		),
 		'audit'                     => array(
-			'title'       => "Audit gratuit — EB Automatisation",
-			'description' => "45 minutes pour repérer vos automatisations les plus rentables. Décrivez votre situation, réponse sous 24h pour fixer un créneau.",
+			'title'       => "Audit gratuit d'automatisation IA | EB Automatisation",
+			'description' => "45 minutes, sans engagement, pour identifier vos automatisations les plus rentables. Réponse sous 24h pour fixer votre créneau. C'est gratuit.",
 			'og_title'    => "Audit gratuit — EB Automatisation",
 			'og_desc'     => "45 minutes pour repérer vos automatisations les plus rentables. Réponse sous 24h pour fixer un créneau.",
 			'tw_title'    => "Audit gratuit — EB Automatisation",
@@ -252,8 +252,8 @@ function eb_seo_data() {
 			'canonical'   => eb_url( 'audit' ),
 		),
 		'agence-ia'                 => array(
-			'title'       => "Agence IA vs consultant indépendant | EB Automatisation",
-			'description' => "Agence IA ou consultant indépendant ? Comprendre les différences pour choisir le bon prestataire d'automatisation pour votre PME.",
+			'title'       => "Agence IA ou consultant indépendant ? | EB Automatisation",
+			'description' => "Interlocuteur unique, mise en place en 1 à 4 semaines, structure de coûts allégée dès 800€ : ce qu'un consultant indépendant change vs une agence.",
 			'og_title'    => "Agence IA vs consultant indépendant | EB Automatisation",
 			'og_desc'     => "Agence IA ou consultant indépendant ? Comprendre les différences pour choisir le bon prestataire d'automatisation pour votre PME.",
 			'tw_title'    => "Agence IA vs consultant indépendant | EB Automatisation",
@@ -271,8 +271,8 @@ function eb_seo_data() {
 			),
 		),
 		'automatisation-entreprise' => array(
-			'title'       => "Automatisation entreprise : par où commencer | EB Automatisation",
-			'description' => "Comment automatiser son entreprise service par service : administratif, comptabilité, RH, CRM. Méthode et exemples concrets.",
+			'title'       => "Automatisation d'entreprise : guide complet pour PME",
+			'description' => "Administratif, comptabilité, RH, CRM : automatisez service par service, dès 800€. Méthode et exemples concrets. Audit gratuit de 45 minutes.",
 			'og_title'    => "Automatisation entreprise : par où commencer | EB Automatisation",
 			'og_desc'     => "Comment automatiser son entreprise service par service : administratif, comptabilité, RH, CRM. Méthode et exemples concrets.",
 			'tw_title'    => "Automatisation entreprise : par où commencer | EB Automatisation",
@@ -290,8 +290,8 @@ function eb_seo_data() {
 			),
 		),
 		'automatisation-ia'         => array(
-			'title'       => "Automatisation IA pour TPE-PME | EB Automatisation",
-			'description' => "L'automatisation IA expliquée simplement : ce que l'IA change concrètement dans vos processus, cas d'usage et bénéfices pour votre entreprise.",
+			'title'       => "Automatisation IA pour PME : guide complet",
+			'description' => "L'IA lit vos emails et documents en 10 minutes au lieu de 45 : ce qui change concrètement dans vos processus, expliqué simplement. Audit gratuit.",
 			'og_title'    => "Automatisation IA pour TPE-PME | EB Automatisation",
 			'og_desc'     => "L'automatisation IA expliquée simplement : ce que l'IA change concrètement dans vos processus, cas d'usage et bénéfices pour votre entreprise.",
 			'tw_title'    => "Automatisation IA pour TPE-PME | EB Automatisation",
@@ -309,8 +309,8 @@ function eb_seo_data() {
 			),
 		),
 		'automatisation-processus'  => array(
-			'title'       => "Automatisation des processus métier | EB Automatisation",
-			'description' => "Cartographier et automatiser vos processus métier de bout en bout : méthode, outils et exemples pour TPE-PME.",
+			'title'       => "Automatiser un processus métier de bout en bout",
+			'description' => "Cartographiez et automatisez vos processus métier de bout en bout : méthode, outils, exemples concrets pour TPE-PME. Audit gratuit de 45 min.",
 			'og_title'    => "Automatisation des processus métier | EB Automatisation",
 			'og_desc'     => "Cartographier et automatiser vos processus métier de bout en bout : méthode, outils et exemples pour TPE-PME.",
 			'tw_title'    => "Automatisation des processus métier | EB Automatisation",
@@ -328,8 +328,8 @@ function eb_seo_data() {
 			),
 		),
 		'automatisation-taches'     => array(
-			'title'       => "Automatisation des tâches répétitives | EB Automatisation",
-			'description' => "Identifiez et automatisez les tâches répétitives qui font perdre du temps à votre équipe. Premiers gains rapides et mesurables.",
+			'title'       => "Automatiser les tâches répétitives avec l'IA",
+			'description' => "Jusqu'à -72% de temps de saisie : identifiez et automatisez les tâches qui font perdre du temps à votre équipe. Premiers gains dès 800€.",
 			'og_title'    => "Automatisation des tâches répétitives | EB Automatisation",
 			'og_desc'     => "Identifiez et automatisez les tâches répétitives qui font perdre du temps à votre équipe. Premiers gains rapides et mesurables.",
 			'tw_title'    => "Automatisation des tâches répétitives | EB Automatisation",
