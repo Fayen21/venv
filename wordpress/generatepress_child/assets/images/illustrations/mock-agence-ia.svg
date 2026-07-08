@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 212" width="800" height="212" role="img" aria-hidden="true">
+<circle cx="24" cy="28" r="6" fill="#FF5F57"/>
+<circle cx="44" cy="28" r="6" fill="#FEBC2E"/>
+<circle cx="64" cy="28" r="6" fill="#28C840"/>
+<text x="88" y="33" font-family="'IBM Plex Mono',ui-monospace,SFMono-Regular,Consolas,monospace" font-size="15" fill="#8294b2" dominant-baseline="middle">comparatif · consultant vs agence</text>
+<circle cx="727.0" cy="28" r="3.5" fill="#5BCB8B"/>
+<text x="776" y="33" font-family="'IBM Plex Mono',ui-monospace,SFMono-Regular,Consolas,monospace" font-size="13" fill="#5BCB8B" text-anchor="end" dominant-baseline="middle">actif</text>
+<line x1="0" y1="56" x2="800" y2="56" stroke="#16294a" stroke-width="2"/>
+<line x1="18" y1="62" x2="782" y2="62" stroke="#16294a" stroke-width="2"/>
+<circle cx="34" cy="85.0" r="4.5" fill="#5BCB8B"/>
+<text x="56" y="85.0" font-family="'Hanken Grotesk',system-ui,-apple-system,sans-serif" font-size="15.5" fill="#C7D2E4" dominant-baseline="middle">Interlocuteur unique</text>
+<rect x="712" y="71.0" width="70" height="28" rx="14" fill="rgba(91,203,139,.12)"/>
+<text x="747.0" y="85.0" font-family="'IBM Plex Mono',ui-monospace,SFMono-Regular,Consolas,monospace" font-size="12.5" font-weight="500" fill="#5BCB8B" text-anchor="middle" dominant-baseline="middle">oui</text>
+<line x1="18" y1="108" x2="782" y2="108" stroke="#16294a" stroke-width="2"/>
+<circle cx="34" cy="131.0" r="4.5" fill="#3BA5FF"/>
+<text x="56" y="131.0" font-family="'Hanken Grotesk',system-ui,-apple-system,sans-serif" font-size="15.5" fill="#C7D2E4" dominant-baseline="middle">Délai de mise en place</text>
+<rect x="686.0" y="117.0" width="96.0" height="28" rx="14" fill="rgba(46,155,255,.16)"/>
+<text x="734.0" y="131.0" font-family="'IBM Plex Mono',ui-monospace,SFMono-Regular,Consolas,monospace" font-size="12.5" font-weight="500" fill="#5BB6FF" text-anchor="middle" dominant-baseline="middle">1 à 4 sem.</text>
+<line x1="18" y1="154" x2="782" y2="154" stroke="#16294a" stroke-width="2"/>
+<circle cx="34" cy="177.0" r="4.5" fill="#5BCB8B"/>
+<text x="56" y="177.0" font-family="'Hanken Grotesk',system-ui,-apple-system,sans-serif" font-size="15.5" fill="#C7D2E4" dominant-baseline="middle">Structure de coûts</text>
+<rect x="708.2" y="163.0" width="73.80000000000001" height="28" rx="14" fill="rgba(91,203,139,.12)"/>
+<text x="745.1" y="177.0" font-family="'IBM Plex Mono',ui-monospace,SFMono-Regular,Consolas,monospace" font-size="12.5" font-weight="500" fill="#5BCB8B" text-anchor="middle" dominant-baseline="middle">allégée</text>
+</svg>

@@ -33,16 +33,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
     <!-- mockup visuel -->
     <div class="pillar-mock">
-      <div class="pillar-mock__titlebar">
-        <div class="pillar-mock__dots"><span style="background:#FF5F57;"></span><span style="background:#FEBC2E;"></span><span style="background:#28C840;"></span></div>
-        <span class="pillar-mock__file">extraction_facture · OCR</span>
-        <span class="pillar-mock__live"><span class="pillar-mock__live-dot"></span>actif</span>
-      </div>
-      <div class="pillar-mock__body">
-        <div class="pillar-mock__row"><span class="pillar-mock__dot" style="background:#3BA5FF;"></span><span class="pillar-mock__label">Facture PDF reçue par email</span><span class="pillar-mock__val" style="color:#5BB6FF;background:rgba(46,155,255,.16);">détecté</span></div>
-        <div class="pillar-mock__row"><span class="pillar-mock__dot" style="background:#5BCB8B;"></span><span class="pillar-mock__label">Lue par OCR (montant, TVA, fournisseur)</span><span class="pillar-mock__val" style="color:#5BCB8B;background:rgba(91,203,139,.12);">extrait</span></div>
-        <div class="pillar-mock__row"><span class="pillar-mock__dot" style="background:#5BCB8B;"></span><span class="pillar-mock__label">Écriture intégrée à votre logiciel</span><span class="pillar-mock__val" style="color:#5BCB8B;background:rgba(91,203,139,.12);">à jour</span></div>
-      </div>
+      <img src="<?php echo esc_url( eb_asset( 'images/illustrations/mock-automatisation-comptable.svg' ) ); ?>" alt="Schéma d'automatisation comptable : extraction OCR d'une facture, lecture du montant et de la TVA, écriture comptable générée automatiquement" width="800" height="212" loading="lazy">
     </div>
 
     <!-- le problème -->

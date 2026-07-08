@@ -33,16 +33,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
     <!-- mockup visuel -->
     <div class="pillar-mock">
-      <div class="pillar-mock__titlebar">
-        <div class="pillar-mock__dots"><span style="background:#FF5F57;"></span><span style="background:#FEBC2E;"></span><span style="background:#28C840;"></span></div>
-        <span class="pillar-mock__file">suivi_commercial · CRM</span>
-        <span class="pillar-mock__live"><span class="pillar-mock__live-dot"></span>actif</span>
-      </div>
-      <div class="pillar-mock__body">
-        <div class="pillar-mock__row"><span class="pillar-mock__dot" style="background:#3BA5FF;"></span><span class="pillar-mock__label">Demande de devis reçue</span><span class="pillar-mock__val" style="color:#5BB6FF;background:rgba(46,155,255,.16);">nouveau</span></div>
-        <div class="pillar-mock__row"><span class="pillar-mock__dot" style="background:#5BCB8B;"></span><span class="pillar-mock__label">Fiche et tâche créées dans le CRM</span><span class="pillar-mock__val" style="color:#5BCB8B;background:rgba(91,203,139,.12);">créée</span></div>
-        <div class="pillar-mock__row"><span class="pillar-mock__dot" style="background:#5BCB8B;"></span><span class="pillar-mock__label">Relance programmée automatiquement</span><span class="pillar-mock__val" style="color:#5BCB8B;background:rgba(91,203,139,.12);">planifiée</span></div>
-      </div>
+      <img src="<?php echo esc_url( eb_asset( 'images/illustrations/mock-automatisation-crm.svg' ) ); ?>" alt="Schéma d'automatisation CRM : demande de devis reçue, fiche créée dans le CRM, relance commerciale programmée automatiquement" width="800" height="212" loading="lazy">
     </div>
 
     <!-- le problème -->

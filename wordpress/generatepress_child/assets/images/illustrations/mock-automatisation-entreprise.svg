@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 258" width="800" height="258" role="img" aria-hidden="true">
+<circle cx="24" cy="28" r="6" fill="#FF5F57"/>
+<circle cx="44" cy="28" r="6" fill="#FEBC2E"/>
+<circle cx="64" cy="28" r="6" fill="#28C840"/>
+<text x="88" y="33" font-family="'IBM Plex Mono',ui-monospace,SFMono-Regular,Consolas,monospace" font-size="15" fill="#8294b2" dominant-baseline="middle">audit_transverse · diagnostic</text>
+<circle cx="727.0" cy="28" r="3.5" fill="#5BCB8B"/>
+<text x="776" y="33" font-family="'IBM Plex Mono',ui-monospace,SFMono-Regular,Consolas,monospace" font-size="13" fill="#5BCB8B" text-anchor="end" dominant-baseline="middle">actif</text>
+<line x1="0" y1="56" x2="800" y2="56" stroke="#16294a" stroke-width="2"/>
+<line x1="18" y1="62" x2="782" y2="62" stroke="#16294a" stroke-width="2"/>
+<circle cx="34" cy="85.0" r="4.5" fill="#3BA5FF"/>
+<text x="56" y="85.0" font-family="'Hanken Grotesk',system-ui,-apple-system,sans-serif" font-size="15.5" fill="#C7D2E4" dominant-baseline="middle">RH — onboarding</text>
+<rect x="708.2" y="71.0" width="73.80000000000001" height="28" rx="14" fill="rgba(46,155,255,.16)"/>
+<text x="745.1" y="85.0" font-family="'IBM Plex Mono',ui-monospace,SFMono-Regular,Consolas,monospace" font-size="12.5" font-weight="500" fill="#5BB6FF" text-anchor="middle" dominant-baseline="middle">2j → 2h</text>
+<line x1="18" y1="108" x2="782" y2="108" stroke="#16294a" stroke-width="2"/>
+<circle cx="34" cy="131.0" r="4.5" fill="#5BCB8B"/>
+<text x="56" y="131.0" font-family="'Hanken Grotesk',system-ui,-apple-system,sans-serif" font-size="15.5" fill="#C7D2E4" dominant-baseline="middle">Comptabilité — rapprochement</text>
+<rect x="663.8" y="117.0" width="118.2" height="28" rx="14" fill="rgba(91,203,139,.12)"/>
+<text x="722.9" y="131.0" font-family="'IBM Plex Mono',ui-monospace,SFMono-Regular,Consolas,monospace" font-size="12.5" font-weight="500" fill="#5BCB8B" text-anchor="middle" dominant-baseline="middle">−85% de temps</text>
+<line x1="18" y1="154" x2="782" y2="154" stroke="#16294a" stroke-width="2"/>
+<circle cx="34" cy="177.0" r="4.5" fill="#5BCB8B"/>
+<text x="56" y="177.0" font-family="'Hanken Grotesk',system-ui,-apple-system,sans-serif" font-size="15.5" fill="#C7D2E4" dominant-baseline="middle">Commercial — CRM</text>
+<rect x="634.2" y="163.0" width="147.8" height="28" rx="14" fill="rgba(91,203,139,.12)"/>
+<text x="708.1" y="177.0" font-family="'IBM Plex Mono',ui-monospace,SFMono-Regular,Consolas,monospace" font-size="12.5" font-weight="500" fill="#5BCB8B" text-anchor="middle" dominant-baseline="middle">0 prospect oublié</text>
+<line x1="18" y1="200" x2="782" y2="200" stroke="#16294a" stroke-width="2"/>
+<circle cx="34" cy="223.0" r="4.5" fill="#5e6f8c"/>
+<text x="56" y="223.0" font-family="'Hanken Grotesk',system-ui,-apple-system,sans-serif" font-size="15.5" fill="#C7D2E4" dominant-baseline="middle">Reporting</text>
+<rect x="649.0" y="209.0" width="133.0" height="28" rx="14" fill="rgba(255,255,255,.05)"/>
+<text x="715.5" y="223.0" font-family="'IBM Plex Mono',ui-monospace,SFMono-Regular,Consolas,monospace" font-size="12.5" font-weight="500" fill="#C7D2E4" text-anchor="middle" dominant-baseline="middle">auto mis à jour</text>
+</svg>
