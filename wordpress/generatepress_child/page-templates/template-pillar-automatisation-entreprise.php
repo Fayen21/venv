@@ -46,15 +46,15 @@ if ( ! defined( 'ABSPATH' ) ) {
       <h2>Les services où l'automatisation rapporte le plus dans une TPE-PME</h2>
       <div class="pillar-section__sub">
         <h3>RH</h3>
-        <p>L'onboarding est souvent le premier gain visible : contrat, accès et dossier d'accueil générés dès la validation d'une embauche, au lieu de deux jours de préparation manuelle dispersée sur plusieurs outils.</p>
+        <p>L'onboarding est souvent le premier gain visible : contrat, accès et dossier d'accueil générés dès la validation d'une embauche, au lieu de deux jours de préparation manuelle dispersée sur plusieurs outils. Voir le détail de l'<a href="<?php echo esc_url( eb_url('automatisation-rh') ); ?>">automatisation RH</a>.</p>
       </div>
       <div class="pillar-section__sub">
         <h3>Comptabilité et finance</h3>
-        <p>Rapprochement bancaire automatisé, relances clients personnalisées, détection d'anomalies avant clôture : c'est souvent le service avec le ratio gain de temps / effort de mise en place le plus élevé.</p>
+        <p>Rapprochement bancaire automatisé, relances clients personnalisées, détection d'anomalies avant clôture : c'est souvent le service avec le ratio gain de temps / effort de mise en place le plus élevé. Voir le détail de l'<a href="<?php echo esc_url( eb_url('automatisation-comptable') ); ?>">automatisation comptable</a>.</p>
       </div>
       <div class="pillar-section__sub">
         <h3>Commercial et CRM</h3>
-        <p>Chaque demande entrante devient automatiquement une fiche et une tâche de suivi, sans ressaisie ni prospect oublié entre la boîte mail et le CRM.</p>
+        <p>Chaque demande entrante devient automatiquement une fiche et une tâche de suivi, sans ressaisie ni prospect oublié entre la boîte mail et le CRM. Voir le détail de l'<a href="<?php echo esc_url( eb_url('automatisation-crm') ); ?>">automatisation CRM</a>.</p>
       </div>
       <div class="pillar-section__sub">
         <h3>Reporting</h3>
@@ -149,6 +149,9 @@ if ( ! defined( 'ABSPATH' ) ) {
         <a href="<?php echo esc_url( eb_url('automatisation-processus') ); ?>" class="pillar-related__pill">Automatisation des processus <span>→</span></a>
         <a href="<?php echo esc_url( eb_url('automatisation-taches') ); ?>" class="pillar-related__pill">Automatisation des tâches <span>→</span></a>
         <a href="<?php echo esc_url( eb_url('automatisation-ia') ); ?>" class="pillar-related__pill">Automatisation IA <span>→</span></a>
+        <a href="<?php echo esc_url( eb_url('automatisation-comptable') ); ?>" class="pillar-related__pill">Automatisation comptable <span>→</span></a>
+        <a href="<?php echo esc_url( eb_url('automatisation-rh') ); ?>" class="pillar-related__pill">Automatisation RH <span>→</span></a>
+        <a href="<?php echo esc_url( eb_url('automatisation-crm') ); ?>" class="pillar-related__pill">Automatisation CRM <span>→</span></a>
       </div>
     </div>
 

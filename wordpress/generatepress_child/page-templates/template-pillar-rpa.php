@@ -47,7 +47,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div class="pillar-section">
       <h2>Pourquoi mettre en place de la RPA</h2>
       <div class="pillar-section__list">
-        <div class="pillar-section__list-item"><span>✓</span>Un robot logiciel exécute la même règle des centaines de fois sans fatigue ni erreur d'inattention.</div>
+        <div class="pillar-section__list-item"><span>✓</span>Cette automatisation robotisée des processus exécute la même règle des centaines de fois sans fatigue ni erreur d'inattention.</div>
         <div class="pillar-section__list-item"><span>✓</span>L'OCR et l'extraction PDF suppriment la ressaisie manuelle de données déjà présentes dans un document.</div>
         <div class="pillar-section__list-item"><span>✓</span>La lecture automatique de documents s'adapte à des mises en page variées, pas seulement à un modèle unique.</div>
         <div class="pillar-section__list-item"><span>✓</span>Le volume de documents traités peut augmenter sans augmenter la charge de travail de l'équipe.</div>

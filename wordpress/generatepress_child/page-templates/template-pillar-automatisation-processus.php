@@ -60,7 +60,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
     <div class="pillar-section">
       <h2>Les outils utilisés pour orchestrer un processus</h2>
-      <p>Make et n8n servent de chef d'orchestre : ils relient vos logiciels via leurs API, déclenchent les étapes dans le bon ordre et gèrent les cas d'exception. Python intervient pour les traitements plus spécifiques. Sur les étapes qui nécessitent un jugement humain — validation d'une dépense inhabituelle, décision commerciale — le processus s'arrête et attend une action, plutôt que de forcer une automatisation complète là où elle n'a pas sa place.</p>
+      <p>Make et n8n servent de chef d'orchestre : ils relient vos logiciels via leurs API, déclenchent les étapes dans le bon ordre et gèrent les cas d'exception. Python intervient pour les traitements plus spécifiques. Ce workflow reste lisible de bout en bout : sur les étapes qui nécessitent un jugement humain — validation d'une dépense inhabituelle, décision commerciale — le processus s'arrête et attend une action, plutôt que de forcer une automatisation complète là où elle n'a pas sa place.</p>
     </div>
 
     <!-- cas d'usage -->

@@ -183,7 +183,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
     <!-- CTA final -->
     <div class="pillar-final-cta">
-      <h2>Combien de leads votre prospection actuelle laisse-t-elle de côté ?</h2>
+      <h2>Votre génération de leads B2B laisse-t-elle des opportunités de côté ?</h2>
       <p>45 minutes suffisent pour identifier les automatisations de prospection les plus rentables pour votre activité.</p>
       <a href="<?php echo esc_url( eb_url('audit') ); ?>" class="btn btn-primary">Réserver un audit gratuit <span>→</span></a>
     </div>

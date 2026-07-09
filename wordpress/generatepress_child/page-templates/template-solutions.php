@@ -20,9 +20,9 @@ if ( ! defined( 'ABSPATH' ) ) {
   <!-- pourquoi mon approche est différente -->
   <section class="section">
     <div class="differentiators__intro">
-      <h2>Pourquoi mon approche est différente</h2>
+      <h2>Une approche différente de l'automatisation d'entreprise</h2>
       <p style="margin-bottom:12px;">La plupart des consultants automatisent des processus qu'ils découvrent en même temps que vous.</p>
-      <p>Mon approche est différente : je m'appuie sur une expérience concrète des fonctions administratives, comptables et RH pour identifier rapidement les automatisations réellement rentables.</p>
+      <p>Mon approche est différente : je m'appuie sur une expérience concrète des fonctions administratives, comptables et RH pour identifier rapidement les automatisations réellement rentables — avec des outils no-code et de l'intelligence artificielle quand elle apporte une vraie valeur, jamais par principe.</p>
     </div>
     <div class="grid grid-3">
       <div class="card differentiators__card">
@@ -353,7 +353,7 @@ if ( ! defined( 'ABSPATH' ) ) {
   <section class="section" style="padding:70px 40px 20px;">
     <div class="section-head" style="margin-bottom:40px;">
       <span class="eyebrow">Questions fréquentes</span>
-      <h2 style="font-size:34px;max-width:620px;margin:0 auto;line-height:1.15;">Ce que les dirigeants me demandent</h2>
+      <h2 style="font-size:34px;max-width:620px;margin:0 auto;line-height:1.15;">Automatisation en PME : les questions que l'on me pose</h2>
     </div>
     <div class="faq-grid">
       <div class="faq-item">

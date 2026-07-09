@@ -41,6 +41,21 @@ $organization = array(
 		'@type' => 'Person',
 		'name'  => 'Emmanuel Brançon',
 	),
+	'knowsAbout'  => array(
+		'Automatisation IA',
+		"Automatisation d'entreprise",
+		'Automatisation des processus métier',
+		'Automatisation des tâches répétitives',
+		'Automatisation comptable',
+		'Automatisation RH',
+		'Automatisation CRM',
+		'Prospection automatisée B2B',
+		'RPA (Robotic Process Automation)',
+		'OCR et lecture automatique de documents',
+		'Intégration API',
+		'Make',
+		'n8n',
+	),
 	'identifier'  => array(
 		array(
 			'@type' => 'PropertyValue',

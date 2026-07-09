@@ -132,7 +132,7 @@ get_header();
   <section class="section">
     <div class="differentiators__intro">
       <h2>Vous n'avez pas besoin d'un nouveau logiciel</h2>
-      <p>La plupart des projets d'automatisation imposent de changer d'outil ou de revoir l'organisation de l'entreprise. Mon approche est différente : je connecte les logiciels que vous utilisez déjà et j'automatise les tâches qui vous font perdre du temps.</p>
+      <p>La plupart des projets d'automatisation imposent de changer d'outil ou de revoir l'organisation de l'entreprise. Mon approche est différente : je connecte les logiciels que vous utilisez déjà et j'automatise les tâches qui vous font perdre du temps, avec de l'<a href="<?php echo esc_url( eb_url('automatisation-ia') ); ?>">intelligence artificielle</a> quand elle apporte une vraie valeur.</p>
     </div>
     <div class="grid grid-3">
       <div class="card differentiators__card">

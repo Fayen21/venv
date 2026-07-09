@@ -55,7 +55,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
     <div class="pillar-section">
       <h2>Une tâche automatisée n'est jamais vraiment isolée</h2>
-      <p>En observant une tâche de près pour l'automatiser, on découvre presque toujours une inefficacité voisine : la même donnée ressaisie ailleurs, une étape manuelle juste avant ou après. Une automatisation de tâche bien menée devient donc souvent le point d'entrée naturel vers un processus plus large, une fois la confiance établie.</p>
+      <p>En observant une tâche de près pour l'automatiser, on découvre presque toujours une inefficacité voisine : la même donnée ressaisie ailleurs, une étape manuelle juste avant ou après — par exemple une facture qui finit par être ressaisie en <a href="<?php echo esc_url( eb_url('automatisation-comptable') ); ?>">automatisation comptable</a>. Une automatisation de tâche bien menée devient donc souvent le point d'entrée naturel vers un processus plus large, voire vers un véritable <a href="<?php echo esc_url( eb_url('rpa') ); ?>">robot logiciel</a> une fois la confiance établie.</p>
     </div>
 
     <div class="pillar-section">

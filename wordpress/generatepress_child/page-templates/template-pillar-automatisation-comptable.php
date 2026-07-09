@@ -48,9 +48,13 @@ if ( ! defined( 'ABSPATH' ) ) {
       <h2>Pourquoi automatiser sa comptabilité</h2>
       <div class="pillar-section__list">
         <div class="pillar-section__list-item"><span>✓</span>La saisie comptable automatique élimine la ressaisie manuelle et les erreurs de frappe qui l'accompagnent.</div>
-        <div class="pillar-section__list-item"><span>✓</span>L'OCR facture lit montant, TVA, date et fournisseur directement depuis le PDF, sans intervention humaine.</div>
+        <div class="pillar-section__list-item"><span>✓</span>L'OCR facture, associé à l'intelligence artificielle, lit montant, TVA, date et fournisseur directement depuis le PDF, sans intervention humaine.</div>
         <div class="pillar-section__list-item"><span>✓</span>Le rapprochement bancaire automatique détecte les anomalies et les doublons avant la clôture, pas après.</div>
         <div class="pillar-section__list-item"><span>✓</span>Le temps libéré se réinvestit sur l'analyse financière et le conseil, pas sur la saisie répétitive.</div>
+      </div>
+      <div class="pillar-section__sub">
+        <h3>Saisie comptable automatique : comment ça marche</h3>
+        <p>La facture arrive par email ou par scan, l'OCR en extrait le montant, la TVA, le fournisseur et la date, puis un brouillon d'écriture est généré directement dans votre logiciel comptable. Vous validez, l'automatisation ne remplace jamais votre contrôle sur les points sensibles. Cette lecture automatique de documents s'appuie sur les mêmes briques que la <a href="<?php echo esc_url( eb_url('rpa') ); ?>">RPA</a> et l'extraction de données PDF.</p>
       </div>
     </div>
 
