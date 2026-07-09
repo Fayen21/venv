@@ -76,6 +76,64 @@ if ( ! defined( 'ABSPATH' ) ) {
       <p>L'IA n'est pas magique et un consultant sérieux doit le dire clairement. Elle a besoin d'un cadrage précis (quelles données, quel format de sortie, quelles règles) pour être fiable. Sur les sujets sensibles — validation d'un paiement, décision RH — un contrôle humain reste recommandé, au moins dans les premiers mois. L'objectif n'est pas de remplacer le jugement, mais de le libérer des tâches de lecture et de tri répétitives.</p>
     </div>
 
+    <div class="pillar-section">
+      <h2>Automatisation classique, RPA et automatisation IA : quelle différence ?</h2>
+      <p>Ces trois notions se recoupent et créent souvent de la confusion. L'automatisation classique exécute une règle fixe sur une donnée déjà structurée (« si ce champ vaut X, alors faire Y »). La <a href="<?php echo esc_url( eb_url('rpa') ); ?>">RPA</a> reproduit des actions numériques répétitives — cliquer, copier, saisir — pour des tâches stables et bien définies. L'automatisation IA ajoute une capacité de compréhension : lire un texte libre, interpréter une mise en page variable, juger de la pertinence d'une information. Dans la pratique, un même processus combine souvent les trois couches : l'IA lit et interprète, la RPA exécute les actions répétitives, l'automatisation classique orchestre l'ensemble.</p>
+    </div>
+
+    <div class="pillar-table">
+      <h2>Comparatif : automatisation classique, RPA et IA</h2>
+      <div class="pillar-table__wrap">
+        <table>
+          <thead>
+            <tr><th>Approche</th><th>Ce qu'elle fait</th><th>Type de donnée</th><th>Exemple</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Automatisation classique</td><td>Exécute une règle fixe</td><td>Structurée</td><td>Déclencher un email à date fixe</td></tr>
+            <tr><td>RPA</td><td>Reproduit une action répétitive</td><td>Structurée à semi-structurée</td><td>Copier des données d'un outil à un autre</td></tr>
+            <tr><td>Automatisation IA</td><td>Lit, comprend, classe, décide</td><td>Non structurée</td><td>Interpréter un email ou une facture scannée</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="pillar-section">
+      <h2>Erreurs fréquentes avec l'automatisation IA</h2>
+      <div class="pillar-section__list">
+        <div class="pillar-section__list-item"><span>✕</span>Vouloir tout confier à l'IA dès le départ, y compris les décisions sensibles, sans période de contrôle humain.</div>
+        <div class="pillar-section__list-item"><span>✕</span>Ne pas cadrer précisément ce que l'IA doit lire et produire, ce qui génère des résultats incohérents.</div>
+        <div class="pillar-section__list-item"><span>✕</span>Choisir l'IA par effet de mode sur une tâche qui relevait en réalité d'une automatisation classique plus simple et moins coûteuse.</div>
+        <div class="pillar-section__list-item"><span>✕</span>Ignorer les cas où l'IA se trompe, plutôt que de les signaler pour affiner les règles au fil du temps.</div>
+      </div>
+    </div>
+
+    <div class="pillar-section">
+      <h2>Bonnes pratiques pour une automatisation IA fiable</h2>
+      <div class="pillar-section__list">
+        <div class="pillar-section__list-item"><span>✓</span>Démarrer avec un contrôle humain systématique, puis réduire progressivement à mesure que la fiabilité est démontrée.</div>
+        <div class="pillar-section__list-item"><span>✓</span>Choisir la bonne couche (règle simple, RPA, IA) selon la nature réelle de la donnée, pas selon la nouveauté de la technologie.</div>
+        <div class="pillar-section__list-item"><span>✓</span>Documenter les cas où l'IA doit s'arrêter et alerter, plutôt que de forcer une réponse à tout prix.</div>
+        <div class="pillar-section__list-item"><span>✓</span>Mesurer le taux d'erreur réel après quelques semaines d'usage, pas seulement en phase de test.</div>
+      </div>
+    </div>
+
+    <div class="pillar-section">
+      <h2>Automatisation IA et RGPD : encadrer l'usage des données</h2>
+      <p>Confier la lecture d'emails, de factures ou de documents RH à un modèle d'IA soulève légitimement des questions de confidentialité. Trois principes encadrent chaque projet : la donnée traitée reste dans le périmètre défini avec vous (aucune réutilisation à d'autres fins), le choix du modèle de langage et de son hébergement est discuté en amont selon la sensibilité des documents concernés, et un contrôle humain reste possible à tout moment sur les décisions automatisées, conformément à l'esprit du RGPD sur les traitements automatisés de données personnelles.</p>
+      <p>Pour les documents les plus sensibles, une architecture avec hébergement plus maîtrisé (voir <a href="<?php echo esc_url( eb_url('consultant-n8n') ); ?>">consultant n8n</a>) peut être privilégiée à une solution entièrement cloud, selon vos contraintes de conformité internes.</p>
+    </div>
+
+    <div class="pillar-section">
+      <h2>Combien coûte une automatisation IA</h2>
+      <p>Un premier cas d'usage ciblé — lecture d'un seul type de document ou tri d'une boîte mail — démarre généralement autour de 1 000 à 1 500€, un peu au-dessus d'une automatisation classique du fait du calibrage nécessaire au démarrage. Un projet combinant plusieurs sources de documents et une logique de décision plus fine se situe le plus souvent entre 2 000€ et 4 000€. Le chiffrage précis dépend surtout du volume de documents à traiter et de la variabilité de leur mise en forme, deux points évalués dès l'audit gratuit.</p>
+    </div>
+
+    <div class="pillar-section">
+      <h2>Évaluer la maturité IA de votre entreprise avant de se lancer</h2>
+      <p>Toutes les entreprises ne partent pas du même point, et ce n'est pas un problème : l'essentiel est de savoir où vous en êtes pour choisir un premier projet réaliste. Une entreprise « niveau 1 » n'a encore aucune automatisation IA en place — le bon départ est un cas d'usage unique et bien cadré (lecture d'un seul type de document, par exemple). Une entreprise « niveau 2 » a déjà des automatisations classiques (Make, n8n) sans IA — l'ajout d'une couche de lecture intelligente vient naturellement enrichir l'existant. Une entreprise « niveau 3 » a déjà expérimenté l'IA sur un cas isolé — l'enjeu devient alors d'industrialiser et d'élargir méthodiquement à d'autres processus, sans perdre le contrôle sur la fiabilité.</p>
+      <p>Ce diagnostic se fait en quelques minutes lors de l'audit gratuit et évite l'écueil le plus fréquent : vouloir démarrer directement par un projet trop ambitieux pour le niveau de maturité réel de l'entreprise.</p>
+    </div>
+
     <!-- cas d'usage -->
     <div class="pillar-usecases">
       <h2>Cas d'usage concrets</h2>
@@ -143,6 +201,30 @@ if ( ! defined( 'ABSPATH' ) ) {
       <div class="pillar-faq__item">
         <h3>Combien de temps avant de voir des résultats concrets ?</h3>
         <p>Les premières automatisations IA (tri d'emails, lecture de documents) sont généralement opérationnelles en une à deux semaines. Les gains de temps sont visibles dès la première semaine d'utilisation réelle.</p>
+      </div>
+      <div class="pillar-faq__item">
+        <h3>Quelle est la différence entre IA et RPA ?</h3>
+        <p>La RPA exécute des actions répétitives sur des données déjà bien définies. L'IA ajoute une couche de compréhension pour interpréter une information non structurée avant qu'elle n'entre dans le processus. Les deux se combinent fréquemment sur un même projet.</p>
+      </div>
+      <div class="pillar-faq__item">
+        <h3>L'automatisation IA est-elle accessible à une petite structure ?</h3>
+        <p>Oui. Les premières automatisations IA (tri d'emails, lecture de documents) démarrent sur des périmètres restreints et des budgets similaires à une automatisation classique — il n'est pas nécessaire d'avoir une grande structure pour en bénéficier.</p>
+      </div>
+      <div class="pillar-faq__item">
+        <h3>Mes données servent-elles à entraîner un modèle d'IA public ?</h3>
+        <p>Non. Les automatisations sont construites pour traiter vos données sans les réutiliser à d'autres fins ; le choix des modèles et des paramètres de confidentialité est discuté avec vous avant la mise en place.</p>
+      </div>
+      <div class="pillar-faq__item">
+        <h3>Que se passe-t-il si l'IA fait une erreur d'interprétation ?</h3>
+        <p>Les cas ambigus sont signalés pour validation humaine plutôt que traités à l'aveugle. Chaque erreur identifiée permet d'affiner les règles pour les cas suivants.</p>
+      </div>
+      <div class="pillar-faq__item">
+        <h3>Faut-il choisir un abonnement IA spécifique ?</h3>
+        <p>Non. Le choix du modèle de langage est fait selon le besoin technique, sans vous imposer un abonnement supplémentaire à gérer — il s'intègre dans le scénario d'automatisation livré.</p>
+      </div>
+      <div class="pillar-faq__item">
+        <h3>Peut-on commencer par un seul cas d'usage IA avant d'élargir ?</h3>
+        <p>C'est l'approche recommandée : traiter un seul type de document ou d'email en premier permet de calibrer la fiabilité avant d'élargir à d'autres cas.</p>
       </div>
     </div>
 

@@ -97,6 +97,16 @@
 .pillar-compare__col--before .pillar-compare__item span{ color:var(--tan-strong); }
 .pillar-compare__col--after .pillar-compare__item span{ color:var(--green); }
 
+/* ==================== tableau comparatif (réutilise les tokens existants) ==================== */
+.pillar-table{ margin:56px 0; max-width:820px; }
+.pillar-table h2{ font-size:28px; letter-spacing:-.02em; margin:0 0 18px; }
+.pillar-table__wrap{ overflow-x:auto; border:1px solid var(--border-2); border-radius:16px; }
+.pillar-table table{ width:100%; border-collapse:collapse; font-size:14.5px; min-width:520px; }
+.pillar-table thead th{ background:var(--bg-soft); color:var(--navy); font-family:var(--font-heading); font-weight:600; text-align:left; padding:14px 18px; border-bottom:1px solid var(--border-2); white-space:nowrap; }
+.pillar-table tbody td{ padding:14px 18px; border-bottom:1px solid var(--border); color:var(--text-3); line-height:1.5; vertical-align:top; }
+.pillar-table tbody tr:last-child td{ border-bottom:none; }
+.pillar-table tbody td:first-child{ font-weight:600; color:var(--navy); white-space:nowrap; }
+
 /* ==================== responsive — miroir du retrofit du prototype ==================== */
 @media (max-width:900px){
   .pillar-usecases__grid{ grid-template-columns:1fr; }
@@ -122,4 +132,5 @@
   .pillar-usecase{ padding:24px; }
   .pillar-usecase p{ font-size:14.5px; }
   .pillar-compare__grid{ grid-template-columns:1fr; gap:14px; }
+  .pillar-table h2{ text-align:center; }
 }

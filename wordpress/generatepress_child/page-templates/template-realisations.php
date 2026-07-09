@@ -208,6 +208,45 @@ if ( ! defined( 'ABSPATH' ) ) {
       <div class="usecase-card"><div class="usecase-card__sector">Entreprise de services — 30 salariés</div><h3>Notes de frais automatisées</h3><div class="usecase-card__body"><p><span>Problème · </span>Notes de frais soumises en PDF ou papier, saisies manuellement en comptabilité.</p><p><span>Solution · </span>Lecture IA des justificatifs, extraction des montants et <a href="<?php echo esc_url( eb_url('automatisation-comptable') ); ?>">intégration directe en comptabilité</a>.</p></div><div class="usecase-card__metric-row"><span class="usecase-card__metric-value">−80%</span><span class="usecase-card__metric-label">de temps de saisie</span></div></div>
       <div class="usecase-card"><div class="usecase-card__sector">PME de services — 18 salariés</div><h3>Génération de contrats clients</h3><div class="usecase-card__body"><p><span>Problème · </span>Contrats rédigés à la main à partir d'un modèle Word, source d'oublis et d'incohérences.</p><p><span>Solution · </span>Contrat généré automatiquement depuis les <a href="<?php echo esc_url( eb_url('automatisation-crm') ); ?>">données du CRM</a>, prêt à signer.</p></div><div class="usecase-card__metric-row"><span class="usecase-card__metric-value">−90%</span><span class="usecase-card__metric-label">de temps de rédaction</span></div></div>
       <div class="usecase-card"><div class="usecase-card__sector">TPE — 5 salariés</div><h3>Rappels de rendez-vous clients</h3><div class="usecase-card__body"><p><span>Problème · </span>Rendez-vous confirmés par téléphone, taux de rendez-vous manqués élevé.</p><p><span>Solution · </span>Rappel automatique par SMS ou email 24h avant chaque rendez-vous.</p></div><div class="usecase-card__metric-row"><span class="usecase-card__metric-value">−50%</span><span class="usecase-card__metric-label">de rendez-vous manqués</span></div></div>
+      <div class="usecase-card"><div class="usecase-card__sector">Cabinet de gestion — 14 salariés</div><h3>Tableau de bord Excel alimenté automatiquement</h3><div class="usecase-card__body"><p><span>Problème · </span>Reporting mensuel reconstruit à la main depuis plusieurs exports, plusieurs heures perdues chaque fin de mois.</p><p><span>Solution · </span><a href="<?php echo esc_url( eb_url('automatisation-excel') ); ?>">Automatisation Excel</a> : le fichier de reporting se met à jour seul depuis les outils sources.</p></div><div class="usecase-card__metric-row"><span class="usecase-card__metric-value">Auto</span><span class="usecase-card__metric-label">reporting toujours à jour</span></div></div>
+      <div class="usecase-card"><div class="usecase-card__sector">Bureau d'études — 11 salariés</div><h3>Tri automatique de la boîte mail commune</h3><div class="usecase-card__body"><p><span>Problème · </span>Boîte mail partagée où les demandes urgentes se noyaient dans le flux, traitées dans l'ordre d'arrivée.</p><p><span>Solution · </span><a href="<?php echo esc_url( eb_url('automatisation-outlook') ); ?>">Automatisation Outlook</a> : chaque email est catégorisé et affecté automatiquement à la bonne personne.</p></div><div class="usecase-card__metric-row"><span class="usecase-card__metric-value">0</span><span class="usecase-card__metric-label">email urgent manqué</span></div></div>
+      <div class="usecase-card"><div class="usecase-card__sector">PME de négoce — 16 salariés</div><h3>Synchronisation Outlook, Excel et Teams</h3><div class="usecase-card__body"><p><span>Problème · </span>Documents contractuels dispersés entre emails et dossiers locaux, aucune vue d'équipe centralisée.</p><p><span>Solution · </span><a href="<?php echo esc_url( eb_url('automatisation-microsoft-365') ); ?>">Automatisation Microsoft 365</a> : classement automatique sur SharePoint avec notification Teams.</p></div><div class="usecase-card__metric-row"><span class="usecase-card__metric-value">0</span><span class="usecase-card__metric-label">document égaré</span></div></div>
+      <div class="usecase-card"><div class="usecase-card__sector">Réseau de franchises — 28 salariés</div><h3>Consolidation multi-sites via Make</h3><div class="usecase-card__body"><p><span>Problème · </span>Chaque site remontait ses chiffres séparément, consolidation manuelle source d'erreurs et de retard.</p><p><span>Solution · </span>Scénario <a href="<?php echo esc_url( eb_url('consultant-make') ); ?>">Make</a> consolidant automatiquement les données de tous les sites chaque semaine.</p></div><div class="usecase-card__metric-row"><span class="usecase-card__metric-value">−90%</span><span class="usecase-card__metric-label">de temps de consolidation</span></div></div>
+      <div class="usecase-card"><div class="usecase-card__sector">Groupe industriel — 60 salariés</div><h3>Workflow n8n sur infrastructure interne</h3><div class="usecase-card__body"><p><span>Problème · </span>Documents de conformité fournisseurs sensibles, exigence d'hébergement maîtrisé en interne.</p><p><span>Solution · </span>Workflow <a href="<?php echo esc_url( eb_url('consultant-n8n') ); ?>">n8n</a> auto-hébergé, lecture et classement des documents sans sortie de données vers un cloud tiers.</p></div><div class="usecase-card__metric-row"><span class="usecase-card__metric-value">100%</span><span class="usecase-card__metric-label">données hébergées en interne</span></div></div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" style="padding:70px 40px 20px;">
+    <div class="section-head" style="margin-bottom:40px;">
+      <span class="eyebrow">Questions fréquentes</span>
+      <h2 style="font-size:34px;max-width:640px;margin:0 auto;line-height:1.15;">Ce que ces réalisations impliquent pour votre entreprise</h2>
+    </div>
+    <div class="faq-grid">
+      <div class="faq-item">
+        <h3>Ces chiffres sont-ils vérifiables ?</h3>
+        <p>Ce sont des exemples représentatifs de missions réalisées ou de scénarios rentables similaires, présentés de façon anonymisée. Des cas clients nommés seront publiés progressivement à mesure des autorisations obtenues.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Mon entreprise ressemble-t-elle à l'un de ces cas ?</h3>
+        <p>Très probablement sur au moins un point : la plupart des TPE-PME françaises partagent les mêmes irritants administratifs (emails, Excel, relances, RH, comptabilité), quel que soit le secteur.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Combien de temps pour obtenir un résultat similaire ?</h3>
+        <p>Entre une et quatre semaines selon la complexité, comme détaillé sur chaque cas ci-dessus. L'audit gratuit permet d'estimer un délai précis pour votre situation.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Ces automatisations fonctionnent-elles avec mes outils spécifiques ?</h3>
+        <p>La compatibilité se vérifie lors de l'audit. La grande majorité des logiciels professionnels (CRM, comptabilité, RH, ERP) disposent d'une API ou de fonctionnalités d'import/export exploitables.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Puis-je démarrer par une seule de ces automatisations ?</h3>
+        <p>Oui, c'est même l'approche recommandée : sécuriser un premier gain mesurable avant d'élargir à d'autres processus.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Quel est le point commun entre tous ces cas ?</h3>
+        <p>Aucun ne nécessite de changer de logiciel. Chaque automatisation se construit sur les outils déjà utilisés par l'entreprise, ce qui explique des délais de mise en place courts.</p>
+      </div>
     </div>
   </section>
 

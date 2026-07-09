@@ -83,6 +83,57 @@ if ( ! defined( 'ABSPATH' ) ) {
     </div>
   </section>
 
+  <!-- mon parcours -->
+  <section class="section">
+    <div class="section-head">
+      <span class="eyebrow">Mon parcours</span>
+      <h2 style="max-width:680px;margin:0 auto;">De la gestion d'entreprise à l'automatisation</h2>
+    </div>
+    <div class="grid grid-3">
+      <div class="card differentiators__card">
+        <div class="icon-tile icon-tile--a"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="5" y1="19" x2="5" y2="12"></line><line x1="12" y1="19" x2="12" y2="7"></line><line x1="19" y1="19" x2="19" y2="14"></line></svg></div>
+        <h3>Terrain — gestion &amp; comptabilité</h3>
+        <p>Plusieurs années sur les sujets de gestion, comptabilité et administration d'entreprise, à vivre de l'intérieur les tâches répétitives que je cherche aujourd'hui à supprimer chez mes clients.</p>
+      </div>
+      <div class="card differentiators__card">
+        <div class="icon-tile icon-tile--b"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3z"></path><path d="M19 15l.7 2 2 .7-2 .7-.7 2-.7-2-2-.7 2-.7.7-2z"></path></svg></div>
+        <h3>Bascule vers l'automatisation &amp; l'IA</h3>
+        <p>Passage progressif de l'exécution manuelle de ces tâches à leur automatisation, en autodidacte d'abord, puis via une pratique intensive des outils no-code (Make, n8n) et de l'IA appliquée.</p>
+      </div>
+      <div class="card differentiators__card">
+        <div class="icon-tile icon-tile--a"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M12 3l7 6.5L12 21 5 9.5z"></path></svg></div>
+        <h3>Consultant indépendant, à temps plein</h3>
+        <p>Aujourd'hui entièrement dédié à l'accompagnement des TPE-PME françaises, avec une spécialisation qui reste ancrée dans les métiers de gestion : RH, comptabilité, commercial, reporting.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- pourquoi seul / pourquoi consultant plutôt qu'agence -->
+  <section class="section">
+    <div class="section-head">
+      <span class="eyebrow">Mon positionnement</span>
+      <h2 style="max-width:720px;margin:0 auto;">Pourquoi je travaille seul, et pourquoi un consultant plutôt qu'une agence</h2>
+    </div>
+    <div class="grid grid-2">
+      <div class="card differentiators__card" style="text-align:left;">
+        <h3>Pourquoi je travaille seul</h3>
+        <p>Ce n'est pas une contrainte de taille, c'est un choix. En restant seul sur chaque projet, je garde une compréhension fine et continue de votre activité — sans perte d'information entre un commercial, un chef de projet et un développeur qui ne se parlent qu'à travers des comptes-rendus. Cette exigence a une limite assumée : je ne prends pas tous les projets. Un besoin qui nécessite une équipe de développeurs à temps plein sur plusieurs mois dépasse mon format, et je le dis clairement dès l'audit plutôt que d'accepter un projet que je ne pourrais pas honorer correctement.</p>
+      </div>
+      <div class="card differentiators__card" style="text-align:left;">
+        <h3>Pourquoi un consultant plutôt qu'une agence</h3>
+        <p>Une agence facture une structure commerciale, des chefs de projet et parfois une sous-traitance invisible pour vous. Un consultant indépendant facture le travail effectivement réalisé, avec un seul interlocuteur du premier échange à la mise en production. Pour une automatisation ciblée ou l'automatisation d'un service complet, c'est un format généralement plus rapide et plus économique — le comparatif détaillé est disponible sur la page <a href="<?php echo esc_url( eb_url('agence-ia') ); ?>">agence IA vs consultant indépendant</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ma vision -->
+  <section class="section" style="padding:18px 40px 10px;">
+    <blockquote class="apropos-quote">
+      <p>« L'automatisation ne doit jamais être un projet informatique de plus. C'est un projet de gestion, au service du temps et de la fiabilité de votre entreprise — c'est pour ça que je pars toujours des tâches, jamais des outils. »</p>
+      <footer>Ma vision de l'automatisation en TPE-PME</footer>
+    </blockquote>
+  </section>
+
   <!-- outils + RGPD -->
   <section class="section" style="padding:74px 40px 24px;">
     <div class="apropos-tools">
@@ -108,6 +159,40 @@ if ( ! defined( 'ABSPATH' ) ) {
         <div class="rgpd-card__icon">🔒</div>
         <h3>Vos données restent les vôtres</h3>
         <p>Je travaille dans le strict respect du RGPD, sur vos propres outils. Aucune revente, aucune exposition de vos données. Tout est documenté et reste votre propriété.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" style="padding:70px 40px 20px;">
+    <div class="section-head" style="margin-bottom:40px;">
+      <span class="eyebrow">Questions fréquentes</span>
+      <h2 style="font-size:34px;max-width:620px;margin:0 auto;line-height:1.15;">Travailler avec un consultant indépendant : ce que l'on me demande</h2>
+    </div>
+    <div class="faq-grid">
+      <div class="faq-item">
+        <h3>Qui réalise concrètement les automatisations ?</h3>
+        <p>Moi, du premier échange à la mise en production. Aucune sous-traitance invisible : vous savez toujours à qui vous parlez et qui construit votre projet.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Que se passe-t-il si vous êtes indisponible (congés, maladie) ?</h3>
+        <p>Chaque projet est documenté au fil de l'eau, pas seulement à la livraison. En cas d'indisponibilité ponctuelle, cette documentation permet une reprise rapide, par moi-même ou par un autre prestataire si nécessaire.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Travaillez-vous avec des clients dans toute la France ?</h3>
+        <p>Oui. L'essentiel du travail se fait à distance ; les échanges se font par visioconférence ou par téléphone, sans contrainte géographique pour vous.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Votre expérience en gestion sert-elle vraiment sur des sujets techniques ?</h3>
+        <p>Oui, c'est même l'angle central de mon approche : je sais reconnaître une automatisation comptable ou RH fiable d'un raccourci risqué, parce que j'ai pratiqué ces métiers avant de les automatiser.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Comment se passe le tout premier échange ?</h3>
+        <p>Par un audit gratuit de 45 minutes, sans engagement : vous présentez vos tâches les plus chronophages, j'identifie celles qui seraient les plus rentables à automatiser.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Prenez-vous tous les projets qu'on vous propose ?</h3>
+        <p>Non, et c'est volontaire. Si un projet dépasse le format d'un consultant indépendant ou si je ne vois pas de gain réel, je le dis clairement plutôt que d'accepter une mission mal dimensionnée.</p>
       </div>
     </div>
   </section>

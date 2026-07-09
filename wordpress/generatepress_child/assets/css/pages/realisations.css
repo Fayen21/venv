@@ -82,9 +82,15 @@
 .tech-band__grid{ max-width:960px; margin:0 auto; }
 /* puces d'outils : voir .tool-chip-grid / .tool-chip dans components.css */
 
+/* ============ FAQ (même motif que solutions.css/pillar.css) ============ */
+.faq-grid{ display:grid; grid-template-columns:1fr 1fr; gap:0 48px; }
+.faq-item{ padding:24px 0; border-top:1px solid var(--border); }
+.faq-item h3{ font-size:17px; margin:0 0 9px; }
+.faq-item p{ font-size:15px; line-height:1.6; color:var(--text-3); margin:0; }
+
 /* ==================== responsive — miroir du retrofit 900px du prototype ==================== */
 @media (max-width:900px){
-  .case-study__grid, .usecase-grid, .control-grid{
+  .case-study__grid, .usecase-grid, .control-grid, .faq-grid{
     grid-template-columns:1fr;
   }
 }

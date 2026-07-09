@@ -45,6 +45,11 @@ function eb_url( $page ) {
 		'automatisation-crm'        => home_url( '/automatisation-crm/' ),
 		'prospection-automatisee'   => home_url( '/prospection-automatisee/' ),
 		'rpa'                       => home_url( '/rpa/' ),
+		'automatisation-excel'      => home_url( '/automatisation-excel/' ),
+		'automatisation-outlook'    => home_url( '/automatisation-outlook/' ),
+		'consultant-make'           => home_url( '/consultant-make/' ),
+		'consultant-n8n'            => home_url( '/consultant-n8n/' ),
+		'automatisation-microsoft-365' => home_url( '/automatisation-microsoft-365/' ),
 		'mentions-legales'          => home_url( '/mentions-legales/' ),
 		'confidentialite'           => home_url( '/confidentialite/' ),
 		'rgpd'                      => home_url( '/rgpd/' ),
@@ -88,6 +93,11 @@ function eb_current_page_key() {
 		'page-templates/template-pillar-automatisation-crm.php'        => 'automatisation-crm',
 		'page-templates/template-pillar-prospection-automatisee.php'   => 'prospection-automatisee',
 		'page-templates/template-pillar-rpa.php'                       => 'rpa',
+		'page-templates/template-tool-automatisation-excel.php'        => 'automatisation-excel',
+		'page-templates/template-tool-automatisation-outlook.php'      => 'automatisation-outlook',
+		'page-templates/template-tool-consultant-make.php'             => 'consultant-make',
+		'page-templates/template-tool-consultant-n8n.php'              => 'consultant-n8n',
+		'page-templates/template-tool-automatisation-microsoft-365.php' => 'automatisation-microsoft-365',
 		'page-templates/template-mentions-legales.php'                 => 'mentions-legales',
 		'page-templates/template-confidentialite.php'                  => 'confidentialite',
 		'page-templates/template-rgpd.php'                             => 'rgpd',
@@ -102,10 +112,15 @@ function eb_current_page_key() {
 	return '';
 }
 
+/**
+ * Couvre les 10 pages piliers ET les 5 pages du cluster Outils : toutes
+ * partagent le même gabarit .pillar-wrap / pillar.css et le même besoin de
+ * JSON-LD (breadcrumb + article + FAQ), donc le même gating ci-dessous.
+ */
 function eb_is_pillar_page( $key ) {
 	return in_array(
 		$key,
-		array( 'agence-ia', 'automatisation-entreprise', 'automatisation-ia', 'automatisation-processus', 'automatisation-taches', 'automatisation-comptable', 'automatisation-rh', 'automatisation-crm', 'prospection-automatisee', 'rpa' ),
+		array( 'agence-ia', 'automatisation-entreprise', 'automatisation-ia', 'automatisation-processus', 'automatisation-taches', 'automatisation-comptable', 'automatisation-rh', 'automatisation-crm', 'prospection-automatisee', 'rpa', 'automatisation-excel', 'automatisation-outlook', 'consultant-make', 'consultant-n8n', 'automatisation-microsoft-365' ),
 		true
 	);
 }
@@ -155,6 +170,11 @@ function eb_enqueue_assets() {
 		'automatisation-crm'        => 'pillar',
 		'prospection-automatisee'   => 'pillar',
 		'rpa'                       => 'pillar',
+		'automatisation-excel'      => 'pillar',
+		'automatisation-outlook'    => 'pillar',
+		'consultant-make'           => 'pillar',
+		'consultant-n8n'            => 'pillar',
+		'automatisation-microsoft-365' => 'pillar',
 	);
 
 	if ( isset( $page_css_map[ $page ] ) ) {
@@ -229,6 +249,20 @@ function eb_seo_data() {
 			'tw_title'    => "Consultant en automatisation & IA — EB Automatisation",
 			'tw_desc'     => "J'automatise vos tâches répétitives en connectant vos outils existants — sans changer de logiciel. Audit gratuit.",
 			'canonical'   => eb_url( 'index' ),
+			'faq'         => array(
+				array( 'q' => "« On n'a pas les moyens d'automatiser » — est-ce vraiment le cas ?", 'a' => "Une première automatisation démarre autour de 800€ et se rentabilise souvent en quelques semaines sur le temps récupéré. L'audit gratuit sert précisément à vérifier ce calcul avant tout engagement." ),
+				array( 'q' => "« On va perdre le contrôle sur nos données » — qu'en est-il réellement ?", 'a' => "L'automatisation s'appuie sur vos outils existants et leurs propres garanties de sécurité. Aucune donnée n'est revendue ni exposée à un tiers non prévu dans votre chaîne d'outils, dans le respect du RGPD." ),
+				array( 'q' => "« Nos process sont trop spécifiques pour être automatisés » — vraiment ?", 'a' => "C'est l'objection la plus courante, et la moins souvent vérifiée. La majorité des process « spécifiques » se décomposent en étapes standards (recevoir, vérifier, transmettre, relancer) parfaitement automatisables. L'audit permet de le vérifier sur votre cas précis." ),
+				array( 'q' => "« On n'a pas de service informatique » — est-ce un frein ?", 'a' => "Non. C'est justement le principe : chaque automatisation est conçue, déployée et documentée pour être utilisée sans aucune compétence technique de votre part." ),
+				array( 'q' => "Combien de temps pour mettre en place une automatisation ?", 'a' => "Les premiers résultats arrivent souvent en quelques jours à quelques semaines, selon la complexité du processus." ),
+				array( 'q' => "Mes données sont-elles en sécurité ?", 'a' => "Oui. Je travaille dans le respect du RGPD, sur vos propres outils, sans revente ni exposition de vos données." ),
+				array( 'q' => "Faut-il changer de logiciels ?", 'a' => "Non. Je m'appuie sur vos outils existants — Sage, Qonto, Excel, Outlook… — et je les connecte entre eux." ),
+				array( 'q' => "Et si je veux internaliser plus tard ?", 'a' => "Tout est documenté et vous appartient. Vous restez parfaitement autonome, sans dépendance à moi." ),
+				array( 'q' => "Combien coûte une automatisation ?", 'a' => "Chaque projet est différent. Certaines automatisations simples démarrent autour de 800 €, tandis que les projets plus complets font l'objet d'un devis après audit." ),
+				array( 'q' => "Ai-je besoin d'une équipe informatique ?", 'a' => "Non. Je m'occupe de la conception, du déploiement et de la documentation. Vous utilisez simplement les résultats." ),
+				array( 'q' => "Pourquoi un consultant indépendant plutôt qu'une agence ?", 'a' => "Un seul interlocuteur du premier audit à la mise en production, des coûts sans structure commerciale à financer, et une expertise gestion/comptabilité qui aide à cibler les automatisations vraiment rentables." ),
+				array( 'q' => "Que se passe-t-il si l'audit ne révèle aucun gain intéressant ?", 'a' => "Je vous le dis franchement. L'objectif n'est pas de vendre une prestation à tout prix : si le retour sur investissement n'est pas au rendez-vous, vous repartez simplement avec des pistes d'amélioration, sans obligation d'achat." ),
+			),
 		),
 		'solutions'                 => array(
 			'title'       => "Solutions d'automatisation : compta, RH, CRM, Excel, Outlook",
@@ -238,6 +272,19 @@ function eb_seo_data() {
 			'tw_title'    => "Solutions d'automatisation — EB Automatisation",
 			'tw_desc'     => "Connectez vos logiciels et supprimez les tâches répétitives. Aucun logiciel à remplacer.",
 			'canonical'   => eb_url( 'solutions' ),
+			'faq'         => array(
+				array( 'q' => "Combien de temps pour mettre en place une automatisation ?", 'a' => "Les premiers résultats arrivent souvent en quelques jours à quelques semaines, selon la complexité du processus." ),
+				array( 'q' => "Mes données sont-elles en sécurité ?", 'a' => "Oui. Je travaille dans le respect du RGPD, sur vos propres outils, sans revente ni exposition de vos données." ),
+				array( 'q' => "Faut-il changer de logiciels ?", 'a' => "Non. Je m'appuie sur vos outils existants — Sage, Qonto, Excel, Outlook… — et je les connecte entre eux." ),
+				array( 'q' => "Et si je veux internaliser plus tard ?", 'a' => "Tout est documenté et vous appartient. Vous restez parfaitement autonome, sans dépendance à moi." ),
+				array( 'q' => "Combien coûte une automatisation ?", 'a' => "Chaque projet est différent. Certaines automatisations simples démarrent autour de 800 €, tandis que les projets plus complets font l'objet d'un devis après audit." ),
+				array( 'q' => "Ai-je besoin d'une équipe informatique ?", 'a' => "Non. Je m'occupe de la conception, du déploiement et de la documentation. Vous utilisez simplement les résultats." ),
+				array( 'q' => "Comment choisir par quel domaine commencer ?", 'a' => "Le critère le plus fiable est le temps perdu le plus visible et le plus facile à quantifier. L'audit gratuit permet d'objectiver ce choix plutôt que de le deviner." ),
+				array( 'q' => "Peut-on combiner plusieurs de ces solutions dans un même projet ?", 'a' => "Oui, c'est même fréquent : une automatisation commerciale s'articule souvent avec la comptabilité, ou un traitement documentaire IA vient renforcer une automatisation RH existante." ),
+				array( 'q' => "Quelle est la différence entre les solutions et les pages d'expertise ?", 'a' => "Cette page présente une vue d'ensemble par domaine. Chaque pilier (entreprise, processus, IA) et chaque page d'expertise détaille ensuite la méthode, les cas d'usage et les questions spécifiques à ce sujet." ),
+				array( 'q' => "Proposez-vous des solutions sectorielles spécifiques ?", 'a' => "Les solutions présentées ici sont transversales à la plupart des secteurs. Voir la page réalisations pour des exemples concrets par typologie d'entreprise." ),
+				array( 'q' => "Comment savoir si un outil que j'utilise est automatisable ?", 'a' => "La quasi-totalité des logiciels professionnels modernes proposent une API ou des fonctionnalités d'import/export exploitables. La faisabilité exacte se vérifie lors de l'audit, outil par outil." ),
+			),
 		),
 		'realisations'               => array(
 			'title'       => "Exemples concrets d'automatisation en entreprise (chiffrés)",
@@ -247,6 +294,14 @@ function eb_seo_data() {
 			'tw_title'    => "Réalisations — EB Automatisation",
 			'tw_desc'     => "Exemples concrets d'automatisations réalisées ou représentatives pour des TPE et PME.",
 			'canonical'   => eb_url( 'realisations' ),
+			'faq'         => array(
+				array( 'q' => "Ces chiffres sont-ils vérifiables ?", 'a' => "Ce sont des exemples représentatifs de missions réalisées ou de scénarios rentables similaires, présentés de façon anonymisée. Des cas clients nommés seront publiés progressivement à mesure des autorisations obtenues." ),
+				array( 'q' => "Mon entreprise ressemble-t-elle à l'un de ces cas ?", 'a' => "Très probablement sur au moins un point : la plupart des TPE-PME françaises partagent les mêmes irritants administratifs (emails, Excel, relances, RH, comptabilité), quel que soit le secteur." ),
+				array( 'q' => "Combien de temps pour obtenir un résultat similaire ?", 'a' => "Entre une et quatre semaines selon la complexité, comme détaillé sur chaque cas. L'audit gratuit permet d'estimer un délai précis pour votre situation." ),
+				array( 'q' => "Ces automatisations fonctionnent-elles avec mes outils spécifiques ?", 'a' => "La compatibilité se vérifie lors de l'audit. La grande majorité des logiciels professionnels (CRM, comptabilité, RH, ERP) disposent d'une API ou de fonctionnalités d'import/export exploitables." ),
+				array( 'q' => "Puis-je démarrer par une seule de ces automatisations ?", 'a' => "Oui, c'est même l'approche recommandée : sécuriser un premier gain mesurable avant d'élargir à d'autres processus." ),
+				array( 'q' => "Quel est le point commun entre tous ces cas ?", 'a' => "Aucun ne nécessite de changer de logiciel. Chaque automatisation se construit sur les outils déjà utilisés par l'entreprise, ce qui explique des délais de mise en place courts." ),
+			),
 		),
 		'apropos'                   => array(
 			'title'       => "Emmanuel Brançon — consultant indépendant en automatisation",
@@ -256,6 +311,14 @@ function eb_seo_data() {
 			'tw_title'    => "À propos — EB Automatisation",
 			'tw_desc'     => "Un professionnel de la gestion qui automatise ce qu'il maîtrise déjà.",
 			'canonical'   => eb_url( 'apropos' ),
+			'faq'         => array(
+				array( 'q' => "Qui réalise concrètement les automatisations ?", 'a' => "Moi, du premier échange à la mise en production. Aucune sous-traitance invisible : vous savez toujours à qui vous parlez et qui construit votre projet." ),
+				array( 'q' => "Que se passe-t-il si vous êtes indisponible (congés, maladie) ?", 'a' => "Chaque projet est documenté au fil de l'eau, pas seulement à la livraison. En cas d'indisponibilité ponctuelle, cette documentation permet une reprise rapide, par moi-même ou par un autre prestataire si nécessaire." ),
+				array( 'q' => "Travaillez-vous avec des clients dans toute la France ?", 'a' => "Oui. L'essentiel du travail se fait à distance ; les échanges se font par visioconférence ou par téléphone, sans contrainte géographique pour vous." ),
+				array( 'q' => "Votre expérience en gestion sert-elle vraiment sur des sujets techniques ?", 'a' => "Oui, c'est même l'angle central de mon approche : je sais reconnaître une automatisation comptable ou RH fiable d'un raccourci risqué, parce que j'ai pratiqué ces métiers avant de les automatiser." ),
+				array( 'q' => "Comment se passe le tout premier échange ?", 'a' => "Par un audit gratuit de 45 minutes, sans engagement : vous présentez vos tâches les plus chronophages, j'identifie celles qui seraient les plus rentables à automatiser." ),
+				array( 'q' => "Prenez-vous tous les projets qu'on vous propose ?", 'a' => "Non, et c'est volontaire. Si un projet dépasse le format d'un consultant indépendant ou si je ne vois pas de gain réel, je le dis clairement plutôt que d'accepter une mission mal dimensionnée." ),
+			),
 		),
 		'audit'                     => array(
 			'title'       => "Audit d'automatisation gratuit : 45 minutes, zéro engagement",
@@ -306,6 +369,15 @@ function eb_seo_data() {
 				array( 'q' => "Par quel service faut-il commencer ?", 'a' => "Celui où le temps perdu est le plus visible et le plus facilement quantifiable — souvent les relances clients ou le rapprochement bancaire. L'audit permet d'objectiver ce choix plutôt que de le deviner." ),
 				array( 'q' => "Les équipes risquent-elles de mal accepter ces changements ?", 'a' => "C'est une préoccupation légitime. L'automatisation vise à retirer les tâches répétitives, pas les responsabilités : les équipes gagnent du temps sur la saisie pour se concentrer sur l'analyse et la relation client, ce qui est généralement bien accueilli une fois expliqué." ),
 				array( 'q' => "Comment mesurer le retour sur investissement ?", 'a' => "Chaque automatisation est chiffrée sur un gain de temps mesurable (heures récupérées par semaine ou par mois). Rapporté au coût de mise en place, le retour sur investissement se calcule simplement et se vérifie après quelques semaines d'usage réel." ),
+				array( 'q' => "Quel est le coût réel de ne rien faire ?", 'a' => "Difficile à voir au quotidien, mais facile à calculer : quelques heures perdues chaque semaine par plusieurs personnes représentent souvent plusieurs semaines de travail cumulées sur une année, sans compter les erreurs et les opportunités manquées faute de suivi." ),
+				array( 'q' => "Faut-il un projet global ou peut-on commencer petit ?", 'a' => "Il vaut presque toujours mieux commencer petit. Une automatisation ciblée, mesurée, puis étendue progressivement limite le risque et permet de prouver la valeur avant d'investir davantage." ),
+				array( 'q' => "Travaillez-vous avec des entreprises de tous secteurs ?", 'a' => "Oui. Les processus administratifs, RH, comptables et commerciaux se ressemblent fortement d'un secteur à l'autre — services, industrie, commerce, conseil — même si les outils spécifiques varient." ),
+				array( 'q' => "Que se passe-t-il si l'automatisation ne fonctionne pas comme prévu ?", 'a' => "Chaque automatisation est testée sur des cas réels avant sa mise en production, avec une phase d'ajustement. Si un scénario ne tient pas la route, il est révisé ou simplifié plutôt que déployé tel quel." ),
+				array( 'q' => "Puis-je automatiser un seul service sans engager toute l'entreprise ?", 'a' => "Oui, c'est même l'approche la plus courante. Rien n'oblige à traiter tous les services en même temps : chaque automatisation est indépendante et peut s'arrêter là où vous le souhaitez." ),
+				array( 'q' => "Quels outils utilisez-vous le plus souvent à l'échelle d'une entreprise ?", 'a' => "Le plus souvent Excel et Outlook comme points d'entrée, orchestrés avec Make ou n8n selon la complexité du projet." ),
+				array( 'q' => "Qui reste propriétaire des automatisations mises en place ?", 'a' => "Vous. Les accès, les scénarios et la documentation vous appartiennent dès la livraison ; vous pouvez les faire évoluer avec n'importe quel prestataire, y compris en interne par la suite." ),
+				array( 'q' => "Comment se déroule la première prise de contact ?", 'a' => "Par un audit gratuit de 45 minutes, sans engagement : vous présentez vos tâches les plus chronophages, j'identifie celles qui seraient les plus rentables à automatiser et vous repartez avec des pistes concrètes." ),
+				array( 'q' => "Une petite entreprise a-t-elle vraiment besoin d'automatiser plusieurs services ?", 'a' => "Cela dépend de sa taille et de son organisation. Dès qu'une même tâche revient chaque semaine dans plusieurs services (relances, saisies, suivis), l'effet cumulé justifie souvent une approche transverse plutôt que des correctifs isolés." ),
 			),
 		),
 		'automatisation-ia'         => array(
@@ -327,6 +399,12 @@ function eb_seo_data() {
 				array( 'q' => "Faut-il des compétences techniques en interne pour la maintenir ?", 'a' => "Non. Chaque automatisation est documentée et livrée sur des outils grand public (Make, n8n) que vous pouvez consulter sans coder. Aucune compétence en développement n'est nécessaire pour l'utiliser au quotidien." ),
 				array( 'q' => "Quels outils utilisez-vous pour l'IA ?", 'a' => "Make et n8n pour l'orchestration, Python pour les traitements sur mesure, et des modèles de langage pour la lecture et la compréhension — choisis selon le besoin, sans dépendance à un outil propriétaire fermé." ),
 				array( 'q' => "Combien de temps avant de voir des résultats concrets ?", 'a' => "Les premières automatisations IA (tri d'emails, lecture de documents) sont généralement opérationnelles en une à deux semaines. Les gains de temps sont visibles dès la première semaine d'utilisation réelle." ),
+				array( 'q' => "Quelle est la différence entre IA et RPA ?", 'a' => "La RPA exécute des actions répétitives sur des données déjà bien définies. L'IA ajoute une couche de compréhension pour interpréter une information non structurée avant qu'elle n'entre dans le processus. Les deux se combinent fréquemment sur un même projet." ),
+				array( 'q' => "L'automatisation IA est-elle accessible à une petite structure ?", 'a' => "Oui. Les premières automatisations IA (tri d'emails, lecture de documents) démarrent sur des périmètres restreints et des budgets similaires à une automatisation classique — il n'est pas nécessaire d'avoir une grande structure pour en bénéficier." ),
+				array( 'q' => "Mes données servent-elles à entraîner un modèle d'IA public ?", 'a' => "Non. Les automatisations sont construites pour traiter vos données sans les réutiliser à d'autres fins ; le choix des modèles et des paramètres de confidentialité est discuté avec vous avant la mise en place." ),
+				array( 'q' => "Que se passe-t-il si l'IA fait une erreur d'interprétation ?", 'a' => "Les cas ambigus sont signalés pour validation humaine plutôt que traités à l'aveugle. Chaque erreur identifiée permet d'affiner les règles pour les cas suivants." ),
+				array( 'q' => "Faut-il choisir un abonnement IA spécifique ?", 'a' => "Non. Le choix du modèle de langage est fait selon le besoin technique, sans vous imposer un abonnement supplémentaire à gérer — il s'intègre dans le scénario d'automatisation livré." ),
+				array( 'q' => "Peut-on commencer par un seul cas d'usage IA avant d'élargir ?", 'a' => "C'est l'approche recommandée : traiter un seul type de document ou d'email en premier permet de calibrer la fiabilité avant d'élargir à d'autres cas." ),
 			),
 		),
 		'automatisation-processus'  => array(
@@ -348,6 +426,13 @@ function eb_seo_data() {
 				array( 'q' => "Comment sont gérées les exceptions dans un processus automatisé ?", 'a' => "Elles sont identifiées dès la phase de cartographie et traitées soit par une règle spécifique, soit par un point d'arrêt qui notifie une personne pour décision. Un processus bien conçu prévoit ces cas plutôt que de les découvrir en production." ),
 				array( 'q' => "La cartographie du processus est-elle incluse dans l'audit gratuit ?", 'a' => "L'audit de 45 minutes permet d'identifier les processus à fort potentiel et d'estimer le gain. La cartographie détaillée, elle, fait partie de la phase de mise en place une fois le projet validé." ),
 				array( 'q' => "Un processus automatisé peut-il évoluer si mon activité change ?", 'a' => "Oui. Chaque processus est documenté et construit de façon modulaire : une étape peut être ajoutée, modifiée ou retirée sans reconstruire l'ensemble du scénario." ),
+				array( 'q' => "Faut-il choisir entre Make et n8n, ou peut-on combiner les deux ?", 'a' => "Il est possible de combiner les deux, mais la plupart des projets se stabilisent sur un seul outil pour rester simples à maintenir. Le choix se fait au démarrage selon le processus concerné." ),
+				array( 'q' => "Que se passe-t-il si mon processus change souvent ?", 'a' => "Un processus construit de façon modulaire absorbe bien les changements fréquents : chaque étape peut être ajustée indépendamment, sans reconstruire le scénario complet." ),
+				array( 'q' => "Peut-on automatiser un processus qui implique un logiciel métier spécifique ?", 'a' => "Dans la majorité des cas, oui, via son API ou ses fonctionnalités d'import/export. La faisabilité exacte se vérifie lors de l'audit, logiciel par logiciel." ),
+				array( 'q' => "Comment savoir si mon entreprise a un processus prioritaire à automatiser ?", 'a' => "Le bon indicateur est la fréquence et la friction ressentie : un enchaînement qui revient chaque semaine, qui implique plusieurs personnes et génère régulièrement des oublis ou des relances, est presque toujours un bon candidat." ),
+				array( 'q' => "Un processus automatisé remplace-t-il les validations managériales ?", 'a' => "Non. Les points de décision qui nécessitent un jugement humain restent en place ; l'automatisation orchestre les étapes autour de ces validations, elle ne les supprime pas." ),
+				array( 'q' => "Combien de temps faut-il pour cartographier un processus complexe ?", 'a' => "Quelques jours suffisent généralement pour cartographier un processus impliquant deux à quatre outils, en échangeant avec les personnes qui le vivent au quotidien." ),
+				array( 'q' => "Puis-je commencer par un seul processus avant d'en automatiser d'autres ?", 'a' => "C'est même l'approche recommandée : un premier processus bien automatisé et mesuré donne une base de confiance et une méthode réutilisable pour les suivants." ),
 			),
 		),
 		'automatisation-taches'     => array(
@@ -476,6 +561,138 @@ function eb_seo_data() {
 				array( 'q' => "Que se passe-t-il si un document sort du cadre habituel ?", 'a' => "Les cas qui ne correspondent pas aux règles définies sont détectés et signalés pour un traitement manuel, plutôt que traités à l'aveugle avec un risque d'erreur." ),
 			),
 		),
+		'automatisation-excel'      => array(
+			'title'       => "Automatisation Excel : fiabilisez vos tableurs sans les remplacer",
+			'description' => "Alimentez vos fichiers Excel automatiquement depuis vos autres outils : reporting, extraction PDF, contrôles de cohérence. Aucun changement de logiciel.",
+			'og_title'    => "Automatisation Excel : fiabilisez vos tableurs sans les remplacer",
+			'og_desc'     => "Alimentez vos fichiers Excel automatiquement depuis vos autres outils : reporting, extraction PDF, contrôles de cohérence. Aucun changement de logiciel.",
+			'tw_title'    => "Automatisation Excel — EB Automatisation",
+			'tw_desc'     => "Fiabilisez vos tableurs Excel sans les remplacer : reporting et contrôles automatiques.",
+			'canonical'   => eb_url( 'automatisation-excel' ),
+			'og_image'    => 'images/og/og-automatisation-excel.jpg',
+			'breadcrumb'  => 'Automatisation Excel',
+			'article'     => array(
+				'headline' => "Automatisation Excel : fiabilisez vos tableurs sans les remplacer",
+			),
+			'faq'         => array(
+				array( 'q' => "Dois-je changer de logiciel pour automatiser Excel ?", 'a' => "Non. L'automatisation Excel connecte votre fichier existant à vos autres outils ; vous continuez à l'utiliser exactement comme avant, simplement sans le remplir à la main." ),
+				array( 'q' => "Cela fonctionne-t-il avec des fichiers Excel complexes (macros, formules avancées) ?", 'a' => "Oui, dans la grande majorité des cas. L'automatisation s'adapte à la structure existante du fichier ; une adaptation mineure peut être nécessaire si la mise en page est très irrégulière." ),
+				array( 'q' => "Est-ce compatible avec Excel en ligne (Microsoft 365) et Google Sheets ?", 'a' => "Oui pour les deux. Excel de bureau, Excel en ligne dans Microsoft 365 et Google Sheets disposent chacun de connecteurs permettant une automatisation fiable." ),
+				array( 'q' => "Quel est le risque d'erreur dans un fichier automatisé ?", 'a' => "Le risque diminue par rapport à une saisie manuelle : les règles de transformation sont fixes et testées, alors qu'une ressaisie humaine répétée introduit statistiquement plus d'erreurs." ),
+				array( 'q' => "Combien coûte l'automatisation d'un fichier Excel ?", 'a' => "Les automatisations Excel simples démarrent autour de 800€, avec un déploiement en une à deux semaines. Le tarif exact dépend du nombre de sources de données à connecter." ),
+				array( 'q' => "Puis-je continuer à modifier le fichier à la main si besoin ?", 'a' => "Oui. L'automatisation alimente des zones définies du fichier ; les autres zones restent à votre main comme avant, sans conflit." ),
+				array( 'q' => "Que se passe-t-il si une donnée source est incorrecte ?", 'a' => "Les incohérences (montant manquant, format inattendu) sont détectées et signalées plutôt que reportées silencieusement dans le fichier final." ),
+				array( 'q' => "Combien de temps pour mettre en place ce type d'automatisation ?", 'a' => "Une automatisation Excel ciblée (une source, un fichier) se met en place en quelques jours à deux semaines, tests inclus." ),
+				array( 'q' => "Peut-on automatiser plusieurs fichiers Excel liés entre eux ?", 'a' => "Oui, c'est même fréquent — un fichier de suivi alimente un tableau de synthèse, qui alimente à son tour un reporting de direction. Chaque niveau peut être automatisé indépendamment." ),
+				array( 'q' => "L'automatisation Excel remplace-t-elle un logiciel de BI ?", 'a' => "Pas nécessairement. Pour beaucoup de TPE-PME, un Excel bien alimenté automatiquement couvre le besoin sans la complexité et le coût d'un outil de Business Intelligence dédié." ),
+				array( 'q' => "Mes données Excel restent-elles confidentielles ?", 'a' => "Oui. Le fichier reste hébergé sur vos propres outils (poste local, OneDrive, Google Drive) ; l'automatisation ne fait que le lire et l'écrire selon les règles définies avec vous." ),
+			),
+		),
+		'automatisation-outlook'    => array(
+			'title'       => "Automatisation Outlook : triez et traitez vos emails sans y passer vos journées",
+			'description' => "Catégorisation automatique, extraction de pièces jointes, création de fiches CRM : l'automatisation Outlook trie votre boîte mail sans changer votre messagerie.",
+			'og_title'    => "Automatisation Outlook : triez vos emails sans y passer vos journées",
+			'og_desc'     => "Catégorisation automatique, extraction de pièces jointes, création de fiches CRM : l'automatisation Outlook trie votre boîte mail sans changer votre messagerie.",
+			'tw_title'    => "Automatisation Outlook — EB Automatisation",
+			'tw_desc'     => "Triez, classez et traitez vos emails Outlook automatiquement.",
+			'canonical'   => eb_url( 'automatisation-outlook' ),
+			'og_image'    => 'images/og/og-automatisation-outlook.jpg',
+			'breadcrumb'  => 'Automatisation Outlook',
+			'article'     => array(
+				'headline' => "Automatisation Outlook : triez, classez et traitez vos emails sans y passer vos journées",
+			),
+			'faq'         => array(
+				array( 'q' => "Dois-je changer de messagerie pour automatiser Outlook ?", 'a' => "Non. L'automatisation se connecte à votre compte Outlook existant (professionnel ou Microsoft 365) sans aucun changement d'interface pour vous ou vos équipes." ),
+				array( 'q' => "L'automatisation peut-elle répondre à ma place sans validation ?", 'a' => "C'est possible sur des cas très standards, mais la plupart des projets démarrent avec une validation humaine avant envoi, puis passent en automatique une fois la confiance établie." ),
+				array( 'q' => "Est-ce que ça fonctionne sur une boîte mail partagée par plusieurs personnes ?", 'a' => "Oui, c'est même l'un des cas d'usage les plus fréquents : la répartition automatique des emails entre plusieurs destinataires selon leur contenu." ),
+				array( 'q' => "Mes emails restent-ils confidentiels ?", 'a' => "Oui. L'automatisation lit et traite vos emails selon les règles définies avec vous, sans les exposer à un tiers non prévu dans votre chaîne d'outils ni les revendre." ),
+				array( 'q' => "Combien coûte l'automatisation d'une boîte Outlook ?", 'a' => "Les automatisations simples (tri, classement) démarrent autour de 800€. Un traitement plus poussé (lecture IA, création automatique de fiches) se chiffre après audit selon le volume d'emails concerné." ),
+				array( 'q' => "Combien de temps pour la mettre en place ?", 'a' => "Un tri et classement automatique se déploie en une à deux semaines. Une lecture IA plus fine des emails prend généralement deux à trois semaines, avec une phase de calibrage." ),
+				array( 'q' => "Que se passe-t-il si un email ne correspond à aucune règle connue ?", 'a' => "Il est laissé dans la boîte de réception standard, sans action automatique, plutôt que d'être classé au hasard — l'automatisation ne force jamais une décision incertaine." ),
+				array( 'q' => "Puis-je garder le contrôle total sur les règles de tri ?", 'a' => "Oui. Chaque règle est documentée et peut être ajustée ou désactivée à tout moment, sans dépendance technique de votre part." ),
+				array( 'q' => "L'automatisation fonctionne-t-elle aussi sur mobile ?", 'a' => "Oui. Le traitement se fait côté serveur, en amont de votre messagerie : les emails arrivent déjà triés, que vous les consultiez sur ordinateur ou sur mobile." ),
+				array( 'q' => "Peut-on combiner Outlook et un CRM en même temps ?", 'a' => "Oui, c'est un des flux les plus demandés : chaque email qualifié comme commercial crée automatiquement une fiche dans le CRM, sans ressaisie." ),
+				array( 'q' => "Faut-il des compétences techniques pour utiliser le résultat ?", 'a' => "Non. Une fois en place, l'automatisation fonctionne en arrière-plan ; vous continuez à utiliser Outlook normalement, simplement avec moins de tri manuel à faire." ),
+			),
+		),
+		'consultant-make'           => array(
+			'title'       => "Consultant Make : scénarios d'automatisation sur mesure, sans code",
+			'description' => "Conception, construction et documentation de vos scénarios Make : connexions fiables entre vos outils, gestion des erreurs, intégration IA. Devis après audit gratuit.",
+			'og_title'    => "Consultant Make : scénarios d'automatisation sur mesure",
+			'og_desc'     => "Conception, construction et documentation de vos scénarios Make : connexions fiables entre vos outils, gestion des erreurs, intégration IA. Devis après audit gratuit.",
+			'tw_title'    => "Consultant Make — EB Automatisation",
+			'tw_desc'     => "Scénarios d'automatisation Make sur mesure, robustes et documentés.",
+			'canonical'   => eb_url( 'consultant-make' ),
+			'og_image'    => 'images/og/og-consultant-make.jpg',
+			'breadcrumb'  => 'Consultant Make',
+			'article'     => array(
+				'headline' => "Consultant Make : des scénarios d'automatisation sur mesure, sans code",
+			),
+			'faq'         => array(
+				array( 'q' => "Qu'est-ce que Make exactement ?", 'a' => "Make est une plateforme no-code d'automatisation qui permet de connecter des applications entre elles via une interface visuelle, sans écrire de code." ),
+				array( 'q' => "Ai-je besoin d'un compte Make pour que vous travailliez pour moi ?", 'a' => "Oui, un compte Make à votre nom est nécessaire : les scénarios développés vous appartiennent dès la livraison, sans dépendance à mon compte personnel." ),
+				array( 'q' => "Combien coûte un abonnement Make ?", 'a' => "Make propose une offre gratuite limitée et des abonnements payants selon le volume d'opérations mensuelles. Le bon palier est déterminé ensemble selon le volume réel de vos scénarios." ),
+				array( 'q' => "Combien coûte une mission de consultant Make ?", 'a' => "Les scénarios simples démarrent autour de 800€. Les projets combinant plusieurs outils et de l'intelligence artificielle se chiffrent après audit, généralement entre 1 500€ et plusieurs milliers d'euros." ),
+				array( 'q' => "Puis-je modifier moi-même le scénario une fois livré ?", 'a' => "Oui. Chaque scénario est documenté avec un schéma clair de son fonctionnement, pour que vous puissiez le consulter et le faire évoluer, avec ou sans moi." ),
+				array( 'q' => "Que se passe-t-il si un scénario échoue en cours d'exécution ?", 'a' => "Une alerte est envoyée automatiquement en cas d'échec, avec les informations nécessaires pour diagnostiquer rapidement la cause plutôt que de découvrir le problème plusieurs jours après." ),
+				array( 'q' => "Make peut-il gérer de gros volumes de données ?", 'a' => "Oui, dans la plupart des cas de figure d'une TPE-PME. Pour des volumes très importants ou des besoins d'hébergement spécifiques, n8n est parfois plus adapté — ce choix est évalué lors de l'audit." ),
+				array( 'q' => "Make est-il compatible avec l'intelligence artificielle ?", 'a' => "Oui. Make se connecte nativement à des modules d'IA pour lire des documents, comprendre des emails ou générer du texte, dans le cadre d'une automatisation IA plus large." ),
+				array( 'q' => "Combien de temps pour concevoir un premier scénario ?", 'a' => "Un scénario simple se conçoit et se teste en une à deux semaines. Un scénario combinant plusieurs outils et de la logique conditionnelle prend généralement deux à quatre semaines." ),
+				array( 'q' => "Travaillez-vous aussi avec Zapier ?", 'a' => "Je me concentre sur Make et n8n, deux outils qui couvrent l'essentiel des besoins d'automatisation d'une TPE-PME avec un excellent rapport entre coût et puissance." ),
+			),
+		),
+		'consultant-n8n'            => array(
+			'title'       => "Consultant n8n : automatisation open-source et API sur mesure",
+			'description' => "Workflows n8n robustes, hébergement maîtrisé, connexions API sur mesure. Idéal pour des projets techniques ou des données sensibles. Devis après audit gratuit.",
+			'og_title'    => "Consultant n8n : automatisation open-source et API sur mesure",
+			'og_desc'     => "Workflows n8n robustes, hébergement maîtrisé, connexions API sur mesure. Idéal pour des projets techniques ou des données sensibles. Devis après audit gratuit.",
+			'tw_title'    => "Consultant n8n — EB Automatisation",
+			'tw_desc'     => "Workflows n8n sur mesure, open-source et hébergement maîtrisé.",
+			'canonical'   => eb_url( 'consultant-n8n' ),
+			'og_image'    => 'images/og/og-consultant-n8n.jpg',
+			'breadcrumb'  => 'Consultant n8n',
+			'article'     => array(
+				'headline' => "Consultant n8n : automatisation open-source et API sur mesure",
+			),
+			'faq'         => array(
+				array( 'q' => "Qu'est-ce que n8n exactement ?", 'a' => "n8n est une plateforme d'automatisation open-source qui permet de construire des workflows connectant des applications entre elles, avec la possibilité d'un hébergement auto-géré." ),
+				array( 'q' => "Faut-il héberger n8n moi-même ?", 'a' => "Non, ce n'est pas obligatoire. n8n propose aussi une offre cloud managée. L'auto-hébergement est une option choisie quand la confidentialité ou la maîtrise technique le justifie." ),
+				array( 'q' => "n8n est-il plus difficile à utiliser que Make ?", 'a' => "La construction initiale est un peu plus technique, mais une fois le workflow livré et documenté, l'usage au quotidien reste simple : vous n'avez pas à toucher à la configuration technique." ),
+				array( 'q' => "Combien coûte une mission de consultant n8n ?", 'a' => "Les workflows standards démarrent autour de 1 000 à 1 500€, un peu au-dessus de Make du fait de la complexité technique. Les projets avec hébergement dédié ou API sur mesure sont chiffrés après audit." ),
+				array( 'q' => "Puis-je faire évoluer le workflow moi-même après la livraison ?", 'a' => "Oui, avec de bonnes bases techniques en interne. Sinon, la documentation fournie permet à n'importe quel développeur ou consultant de reprendre le projet facilement." ),
+				array( 'q' => "n8n convient-il à une petite entreprise sans équipe technique ?", 'a' => "Oui, tant que l'hébergement cloud managé est choisi. La complexité technique reste alors de mon ressort ; vous n'avez besoin d'aucune compétence pour utiliser le résultat." ),
+				array( 'q' => "Quelle est la différence de coût entre l'hébergement cloud et auto-géré ?", 'a' => "L'hébergement cloud managé a un coût d'abonnement mensuel simple. L'auto-hébergement demande un serveur (parfois déjà existant chez vous) mais peut réduire les coûts récurrents à volume élevé — ce choix est évalué ensemble selon votre volumétrie." ),
+				array( 'q' => "n8n peut-il se connecter à un logiciel métier propriétaire ?", 'a' => "Dans la majorité des cas, oui, via son API si elle existe. C'est justement l'un des points forts de n8n : sa flexibilité pour des connexions non standards." ),
+				array( 'q' => "n8n est-il compatible avec l'intelligence artificielle ?", 'a' => "Oui. n8n dispose de nœuds dédiés pour intégrer des modèles de langage dans un workflow, dans le cadre d'une automatisation IA plus large." ),
+				array( 'q' => "Combien de temps pour livrer un premier workflow n8n ?", 'a' => "Un workflow simple se livre en deux à trois semaines. Un projet avec hébergement dédié ou connexions API sur mesure prend généralement trois à six semaines." ),
+			),
+		),
+		'automatisation-microsoft-365' => array(
+			'title'       => "Automatisation Microsoft 365 : Outlook, Excel, Teams et SharePoint connectés",
+			'description' => "Faites circuler l'information entre Outlook, Excel, Teams et SharePoint sans ressaisie. Aucune licence supplémentaire, tout repose sur votre abonnement existant.",
+			'og_title'    => "Automatisation Microsoft 365 : Outlook, Excel, Teams, SharePoint connectés",
+			'og_desc'     => "Faites circuler l'information entre Outlook, Excel, Teams et SharePoint sans ressaisie. Aucune licence supplémentaire, tout repose sur votre abonnement existant.",
+			'tw_title'    => "Automatisation Microsoft 365 — EB Automatisation",
+			'tw_desc'     => "Connectez Outlook, Excel, Teams et SharePoint sans ressaisie manuelle.",
+			'canonical'   => eb_url( 'automatisation-microsoft-365' ),
+			'og_image'    => 'images/og/og-automatisation-microsoft-365.jpg',
+			'breadcrumb'  => 'Automatisation Microsoft 365',
+			'article'     => array(
+				'headline' => "Automatisation Microsoft 365 : connectez Outlook, Excel, Teams et SharePoint",
+			),
+			'faq'         => array(
+				array( 'q' => "Faut-il un abonnement Microsoft 365 spécifique pour automatiser ?", 'a' => "La plupart des automatisations fonctionnent avec les abonnements Microsoft 365 Business standards. Certains scénarios avancés avec Power Automate premium peuvent nécessiter une licence complémentaire, évaluée au cas par cas." ),
+				array( 'q' => "Dois-je changer d'outils si je choisis Make ou n8n plutôt que Power Automate ?", 'a' => "Non. Make et n8n se connectent à Microsoft 365 sans rien changer à votre utilisation quotidienne d'Outlook, Excel, Teams ou SharePoint." ),
+				array( 'q' => "Mes données Microsoft 365 restent-elles dans mon tenant ?", 'a' => "Oui. L'automatisation lit et écrit dans votre environnement Microsoft 365 existant selon les autorisations que vous accordez ; les données ne sont pas dupliquées ailleurs sans raison." ),
+				array( 'q' => "Combien coûte une automatisation Microsoft 365 ?", 'a' => "Les automatisations simples démarrent autour de 800€. Un projet reliant plusieurs applications de la suite à un outil tiers se chiffre après audit, entre 1 500€ et plusieurs milliers d'euros." ),
+				array( 'q' => "Faut-il des droits d'administrateur pour mettre en place ces automatisations ?", 'a' => "Certains scénarios nécessitent une validation de votre administrateur informatique ou de votre référent Microsoft 365 ; ce point est clarifié dès l'audit pour éviter tout blocage en cours de projet." ),
+				array( 'q' => "Peut-on automatiser Teams pour les notifications d'équipe ?", 'a' => "Oui. Les notifications automatiques dans un canal Teams, déclenchées par un événement externe (email, document, mise à jour), sont un cas d'usage fréquent et rapide à mettre en place." ),
+				array( 'q' => "SharePoint peut-il servir de base de données pour une automatisation ?", 'a' => "Oui, pour des volumes modérés. SharePoint est souvent utilisé comme espace de stockage structuré alimenté automatiquement, en complément ou à la place d'un fichier Excel partagé." ),
+				array( 'q' => "Combien de temps pour mettre en place une automatisation Microsoft 365 ?", 'a' => "Un scénario simple (classement, notification) se déploie en une à deux semaines. Un projet reliant plusieurs applications prend généralement deux à quatre semaines." ),
+				array( 'q' => "Cela fonctionne-t-il avec une petite structure de moins de 10 salariés ?", 'a' => "Oui. Le nombre de salariés n'est pas déterminant : ce qui compte est le volume de tâches répétitives dans la suite Microsoft 365, qui peut être élevé même dans une petite structure." ),
+				array( 'q' => "Qui reste propriétaire des automatisations mises en place ?", 'a' => "Vous. Les scénarios sont construits dans votre environnement Microsoft 365 et documentés, pour que vous puissiez les faire évoluer avec ou sans moi par la suite." ),
+			),
+		),
 		'mentions-legales'          => array(
 			'title'       => "Mentions légales — EB Automatisation",
 			'description' => "Mentions légales du site eb-automatisation.fr : éditeur, hébergeur, propriété intellectuelle et droit applicable.",
@@ -599,7 +816,10 @@ function eb_output_seo_tags() {
 	if ( eb_is_pillar_page( $page ) && isset( $d['article'] ) ) {
 		include EB_THEME_DIR . '/template-parts/jsonld-article.php';
 	}
-	if ( eb_is_pillar_page( $page ) && isset( $d['faq'] ) ) {
+	// FAQPage : n'importe quelle page peut désormais déclarer un 'faq' dans
+	// eb_seo_data() (pas seulement les piliers) — jsonld-faq.php se charge
+	// déjà de ne rien sortir si $d['faq'] est absent.
+	if ( isset( $d['faq'] ) ) {
 		include EB_THEME_DIR . '/template-parts/jsonld-faq.php';
 	}
 }

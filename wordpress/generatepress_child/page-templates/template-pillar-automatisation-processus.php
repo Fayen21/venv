@@ -60,7 +60,73 @@ if ( ! defined( 'ABSPATH' ) ) {
 
     <div class="pillar-section">
       <h2>Les outils utilisés pour orchestrer un processus</h2>
-      <p>Make et n8n servent de chef d'orchestre : ils relient vos logiciels via leurs API, déclenchent les étapes dans le bon ordre et gèrent les cas d'exception. Python intervient pour les traitements plus spécifiques. Ce workflow reste lisible de bout en bout : sur les étapes qui nécessitent un jugement humain — validation d'une dépense inhabituelle, décision commerciale — le processus s'arrête et attend une action, plutôt que de forcer une automatisation complète là où elle n'a pas sa place.</p>
+      <p><a href="<?php echo esc_url( eb_url('consultant-make') ); ?>">Make</a> et <a href="<?php echo esc_url( eb_url('consultant-n8n') ); ?>">n8n</a> servent de chef d'orchestre : ils relient vos logiciels via leurs API, déclenchent les étapes dans le bon ordre et gèrent les cas d'exception. Python intervient pour les traitements plus spécifiques. Ce workflow reste lisible de bout en bout : sur les étapes qui nécessitent un jugement humain — validation d'une dépense inhabituelle, décision commerciale — le processus s'arrête et attend une action, plutôt que de forcer une automatisation complète là où elle n'a pas sa place.</p>
+    </div>
+
+    <div class="pillar-section">
+      <h2>Make ou n8n : lequel choisir pour orchestrer un processus ?</h2>
+      <p>Les deux outils jouent le même rôle de chef d'orchestre, mais avec des logiques différentes. Make privilégie une interface visuelle très accessible et un vaste catalogue de connecteurs prêts à l'emploi, idéale pour un processus qui doit être compris rapidement par vos équipes. n8n, plus technique, offre davantage de souplesse pour des logiques complexes ou un hébergement maîtrisé. Le choix se fait au cas par cas, selon le processus à automatiser et le niveau d'autonomie souhaité — pas par préférence personnelle pour un outil plutôt qu'un autre.</p>
+    </div>
+
+    <div class="pillar-section">
+      <h2>Erreurs fréquentes dans l'automatisation de processus</h2>
+      <div class="pillar-section__list">
+        <div class="pillar-section__list-item"><span>✕</span>Automatiser le processus tel qu'il est décrit sur le papier, sans vérifier comment il se déroule vraiment dans les faits.</div>
+        <div class="pillar-section__list-item"><span>✕</span>Oublier de prévoir un point de sortie clair quand une étape échoue ou qu'une donnée est manquante.</div>
+        <div class="pillar-section__list-item"><span>✕</span>Automatiser un processus qui devrait d'abord être simplifié — l'automatisation accélère un mauvais processus autant qu'un bon.</div>
+        <div class="pillar-section__list-item"><span>✕</span>Ne pas notifier les bonnes personnes au bon moment, ce qui recrée artificiellement des délais que l'automatisation devait supprimer.</div>
+      </div>
+    </div>
+
+    <div class="pillar-section">
+      <h2>Bonnes pratiques pour un processus fiable dans la durée</h2>
+      <div class="pillar-section__list">
+        <div class="pillar-section__list-item"><span>✓</span>Tester le scénario sur des cas réels, y compris les cas limites, avant toute mise en production.</div>
+        <div class="pillar-section__list-item"><span>✓</span>Prévoir un journal ou un historique des exécutions pour pouvoir diagnostiquer un incident rapidement.</div>
+        <div class="pillar-section__list-item"><span>✓</span>Garder chaque étape modulaire, pour pouvoir la modifier sans reconstruire tout le processus.</div>
+        <div class="pillar-section__list-item"><span>✓</span>Documenter les règles de décision, pas seulement les actions, pour que le processus reste compréhensible dans le temps.</div>
+      </div>
+    </div>
+
+    <!-- comparatif -->
+    <div class="pillar-table">
+      <h2>Comparatif : type de processus et complexité type</h2>
+      <div class="pillar-table__wrap">
+        <table>
+          <thead>
+            <tr><th>Type de processus</th><th>Nombre d'outils reliés</th><th>Complexité</th><th>Délai type</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Devis → relance → commande</td><td>1 à 2</td><td>Faible</td><td>1 à 2 semaines</td></tr>
+            <tr><td>Onboarding RH complet</td><td>2 à 4</td><td>Moyenne</td><td>2 à 3 semaines</td></tr>
+            <tr><td>Cycle achat → facture → paiement</td><td>2 à 3</td><td>Moyenne</td><td>2 à 4 semaines</td></tr>
+            <tr><td>Clôture mensuelle comptable</td><td>2 à 3</td><td>Moyenne à élevée</td><td>3 à 4 semaines</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="pillar-section">
+      <h2>Que faire quand un processus semble impossible à automatiser</h2>
+      <p>Certains processus paraissent trop irréguliers, trop dépendants du jugement humain, ou trop mal documentés pour être automatisés tels quels. Dans la pratique, ce diagnostic est souvent trompeur : la partie réellement irrégulière représente rarement plus de 20% du processus. La bonne approche consiste à automatiser d'abord le socle stable (80% des cas standards) et à laisser le reste en traitement manuel assisté, plutôt que de renoncer à l'ensemble du processus sous prétexte que quelques cas ne rentrent pas dans une règle fixe.</p>
+      <p>Dans certains cas, le vrai problème n'est pas l'automatisation mais le processus lui-même : trop d'étapes inutiles, des validations redondantes, un enchaînement jamais remis à plat depuis sa création. La cartographie initiale sert justement à repérer ces situations — simplifier avant d'automatiser donne souvent un meilleur résultat que d'automatiser un processus qui gagnerait d'abord à être raccourci.</p>
+    </div>
+
+    <div class="pillar-section">
+      <h2>Comment prioriser plusieurs processus candidats</h2>
+      <p>Il est rare qu'une entreprise n'ait qu'un seul processus à automatiser — la difficulté est souvent de choisir par lequel commencer. Trois critères permettent d'arbitrer objectivement : la fréquence (un processus hebdomadaire génère plus de valeur cumulée qu'un processus mensuel), le nombre de personnes impliquées (plus il y en a, plus les oublis et les délais de relance coûtent cher), et la facilité de cartographie (un processus déjà bien documenté se met en place plus vite qu'un processus informel, connu uniquement d'une seule personne).</p>
+      <p>Le bon réflexe est de croiser ces trois critères plutôt que de choisir sur un seul — un processus très fréquent mais mal documenté demandera plus de temps de cartographie qu'un processus mensuel mais déjà clair, ce qui peut inverser la priorité initiale.</p>
+    </div>
+
+    <div class="pillar-section">
+      <h2>Combien coûte l'automatisation d'un processus</h2>
+      <p>Le coût dépend directement du nombre d'outils reliés et du nombre de branches conditionnelles à gérer. Un processus simple à deux étapes (par exemple devis puis relance automatique) démarre autour de 800 à 1 200€. Un processus plus complet, impliquant trois à quatre outils et plusieurs points de décision — un onboarding RH complet ou un cycle achat-facture-paiement — se situe généralement entre 1 500€ et 3 000€. Les processus les plus complexes, avec de nombreuses exceptions ou une intégration à un logiciel métier spécifique, sont chiffrés au cas par cas après l'audit.</p>
+      <p>Dans tous les cas, le chiffrage est communiqué avant tout engagement, avec une estimation du gain de temps attendu pour évaluer le retour sur investissement réel avant de démarrer.</p>
+    </div>
+
+    <div class="pillar-section">
+      <h2>Indicateurs de succès d'un processus automatisé</h2>
+      <p>Un processus automatisé se juge sur trois plans : le délai de bout en bout (du déclenchement à la clôture), le taux d'exceptions traitées correctement sans intervention manuelle, et le nombre de relances ou d'oublis évités. Ces indicateurs, mesurés avant et après la mise en place, permettent de vérifier objectivement que le processus tient ses promesses une fois en production — pas seulement en phase de test.</p>
     </div>
 
     <!-- cas d'usage -->
@@ -131,6 +197,34 @@ if ( ! defined( 'ABSPATH' ) ) {
         <h3>Un processus automatisé peut-il évoluer si mon activité change ?</h3>
         <p>Oui. Chaque processus est documenté et construit de façon modulaire : une étape peut être ajoutée, modifiée ou retirée sans reconstruire l'ensemble du scénario.</p>
       </div>
+      <div class="pillar-faq__item">
+        <h3>Faut-il choisir entre Make et n8n, ou peut-on combiner les deux ?</h3>
+        <p>Il est possible de combiner les deux, mais la plupart des projets se stabilisent sur un seul outil pour rester simples à maintenir. Le choix se fait au démarrage selon le processus concerné.</p>
+      </div>
+      <div class="pillar-faq__item">
+        <h3>Que se passe-t-il si mon processus change souvent ?</h3>
+        <p>Un processus construit de façon modulaire absorbe bien les changements fréquents : chaque étape peut être ajustée indépendamment, sans reconstruire le scénario complet.</p>
+      </div>
+      <div class="pillar-faq__item">
+        <h3>Peut-on automatiser un processus qui implique un logiciel métier spécifique ?</h3>
+        <p>Dans la majorité des cas, oui, via son API ou ses fonctionnalités d'import/export. La faisabilité exacte se vérifie lors de l'audit, logiciel par logiciel.</p>
+      </div>
+      <div class="pillar-faq__item">
+        <h3>Comment savoir si mon entreprise a un processus prioritaire à automatiser ?</h3>
+        <p>Le bon indicateur est la fréquence et la friction ressentie : un enchaînement qui revient chaque semaine, qui implique plusieurs personnes et génère régulièrement des oublis ou des relances, est presque toujours un bon candidat.</p>
+      </div>
+      <div class="pillar-faq__item">
+        <h3>Un processus automatisé remplace-t-il les validations managériales ?</h3>
+        <p>Non. Les points de décision qui nécessitent un jugement humain restent en place ; l'automatisation orchestre les étapes autour de ces validations, elle ne les supprime pas.</p>
+      </div>
+      <div class="pillar-faq__item">
+        <h3>Combien de temps faut-il pour cartographier un processus complexe ?</h3>
+        <p>Quelques jours suffisent généralement pour cartographier un processus impliquant deux à quatre outils, en échangeant avec les personnes qui le vivent au quotidien.</p>
+      </div>
+      <div class="pillar-faq__item">
+        <h3>Puis-je commencer par un seul processus avant d'en automatiser d'autres ?</h3>
+        <p>C'est même l'approche recommandée : un premier processus bien automatisé et mesuré donne une base de confiance et une méthode réutilisable pour les suivants.</p>
+      </div>
     </div>
 
     <!-- explorer aussi -->
@@ -145,6 +239,8 @@ if ( ! defined( 'ABSPATH' ) ) {
         <a href="<?php echo esc_url( eb_url('automatisation-crm') ); ?>" class="pillar-related__pill">Automatisation CRM <span>→</span></a>
         <a href="<?php echo esc_url( eb_url('prospection-automatisee') ); ?>" class="pillar-related__pill">Prospection automatisée <span>→</span></a>
         <a href="<?php echo esc_url( eb_url('rpa') ); ?>" class="pillar-related__pill">RPA <span>→</span></a>
+        <a href="<?php echo esc_url( eb_url('consultant-make') ); ?>" class="pillar-related__pill">Consultant Make <span>→</span></a>
+        <a href="<?php echo esc_url( eb_url('consultant-n8n') ); ?>" class="pillar-related__pill">Consultant n8n <span>→</span></a>
       </div>
     </div>
 

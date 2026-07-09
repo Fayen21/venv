@@ -191,6 +191,35 @@ get_header();
     </div>
   </section>
 
+  <!-- pourquoi automatiser maintenant -->
+  <section class="section">
+    <div class="section-head">
+      <span class="eyebrow">Pourquoi maintenant</span>
+      <h2 style="max-width:760px;margin:0 auto;">Pourquoi automatiser maintenant, et ce que coûte vraiment d'attendre</h2>
+    </div>
+    <div class="differentiators__intro">
+      <p style="margin-bottom:12px;">La question n'est presque jamais « faut-il automatiser un jour ? », mais « combien de temps ce report coûte-t-il déjà ? ». Une tâche répétitive non automatisée ne disparaît pas : elle continue, semaine après semaine, à consommer des heures qui ne sont jamais comptabilisées comme une dépense — alors qu'elles en sont une. Trois facteurs rendent 2026 un moment particulièrement pertinent pour s'y mettre : les outils d'automatisation et d'IA sont devenus accessibles à des budgets de TPE-PME, la compatibilité avec les logiciels existants (Excel, Outlook, CRM, comptabilité) est aujourd'hui excellente, et l'écart se creuse avec les entreprises qui ont déjà commencé.</p>
+      <p>Le coût de l'inaction se mesure en trois strates. La première est directe : le temps passé sur des ressaisies, des tris et des relances manuelles — souvent 5 à 10 heures par semaine pour une PME de 15 à 25 salariés, soit plusieurs semaines de travail sur une année. La deuxième est indirecte : les erreurs de saisie non détectées, les relances oubliées, les décisions prises sur un tableau de bord obsolète. La troisième est stratégique : le temps que vos équipes ne consacrent pas à l'analyse, à la relation client ou à la vente parce qu'il est absorbé par la saisie.</p>
+    </div>
+    <div class="grid grid-3">
+      <div class="card differentiators__card">
+        <div class="icon-tile icon-tile--a"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"></circle><path d="M12 8v4.5l3 2"></path></svg></div>
+        <h3>≈ 240 h perdues par an</h3>
+        <p>5 heures par semaine de ressaisies évitables, cumulées, représentent environ six semaines de travail à temps plein chaque année.</p>
+      </div>
+      <div class="card differentiators__card">
+        <div class="icon-tile icon-tile--b"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4M12 17h.01"></path><path d="M10.3 3.9L2.6 17.5a1.6 1.6 0 0 0 1.4 2.4h16a1.6 1.6 0 0 0 1.4-2.4L13.7 3.9a1.6 1.6 0 0 0-2.8 0z"></path></svg></div>
+        <h3>Des erreurs invisibles jusqu'à ce qu'elles coûtent cher</h3>
+        <p>Écarts comptables détectés trop tard, relances client oubliées : le coût réel apparaît souvent après coup, quand il aurait pu être évité.</p>
+      </div>
+      <div class="card differentiators__card">
+        <div class="icon-tile icon-tile--a"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M12 3l7 6.5L12 21 5 9.5z"></path></svg></div>
+        <h3>Un écart qui se creuse</h3>
+        <p>Chaque mois sans automatisation est un mois où des concurrents, eux, prennent de l'avance sur leur réactivité et leur coût de fonctionnement.</p>
+      </div>
+    </div>
+  </section>
+
   <!-- vous gardez vos outils -->
   <section class="section">
     <div class="trust-tools">
@@ -421,6 +450,37 @@ get_header();
     <div class="flow-diagram__footnote"><span class="mono-label">Make · n8n · Python · lecture IA</span> — vos outils existants, connectés. Pas de logiciel à remplacer.</div>
   </section>
 
+  <!-- méthodologie & déroulement d'un projet -->
+  <section class="section">
+    <div class="section-head">
+      <span class="eyebrow">Méthodologie</span>
+      <h2 style="max-width:720px;margin:0 auto;">Comment se déroule concrètement un projet d'automatisation</h2>
+    </div>
+    <div class="grid grid-4 audit-steps">
+      <div class="audit-step">
+        <div class="audit-step__head"><span class="audit-step__num">1</span><span class="audit-step__rule"></span></div>
+        <p class="audit-step__text"><strong>Audit &amp; cartographie.</strong> On liste vos tâches les plus chronophages et on estime le gain de temps réaliste de chacune.</p>
+      </div>
+      <div class="audit-step">
+        <div class="audit-step__head"><span class="audit-step__num">2</span><span class="audit-step__rule"></span></div>
+        <p class="audit-step__text"><strong>Conception &amp; devis.</strong> Vous recevez un plan d'action priorisé et un chiffrage clair, avant tout engagement.</p>
+      </div>
+      <div class="audit-step">
+        <div class="audit-step__head"><span class="audit-step__num">3</span><span class="audit-step__rule"></span></div>
+        <p class="audit-step__text"><strong>Construction &amp; tests.</strong> Le scénario est développé puis testé sur vos cas réels, exceptions comprises, avant mise en production.</p>
+      </div>
+      <div class="audit-step">
+        <div class="audit-step__head"><span class="audit-step__num">4</span><span class="audit-step__rule"></span></div>
+        <p class="audit-step__text"><strong>Livraison &amp; autonomie.</strong> Documentation complète, prise en main de vos équipes, puis mesure du temps réellement récupéré.</p>
+      </div>
+    </div>
+    <div class="differentiators__intro" style="margin-top:44px;">
+      <h2 style="font-size:26px;">Les technologies utilisées, sans jargon inutile</h2>
+      <p style="margin-bottom:12px;">Techniquement, la quasi-totalité des projets s'appuient sur trois briques : <a href="<?php echo esc_url( eb_url('consultant-make') ); ?>">Make</a> ou <a href="<?php echo esc_url( eb_url('consultant-n8n') ); ?>">n8n</a> pour orchestrer les échanges entre vos logiciels, Python pour les traitements sur mesure quand un connecteur standard ne suffit pas, et des modèles de langage pour la <a href="<?php echo esc_url( eb_url('automatisation-ia') ); ?>">lecture et la compréhension</a> de documents non structurés (emails, PDF, scans). Le choix entre ces briques n'est jamais fait par préférence technologique : il dépend uniquement de ce qui rend votre automatisation la plus fiable et la plus simple à maintenir dans la durée.</p>
+      <p>Un principe reste constant sur chaque projet : ces technologies s'ajoutent à vos outils existants, elles ne les remplacent pas. Vous continuez à utiliser Excel, Outlook, votre CRM ou votre logiciel comptable exactement comme avant.</p>
+    </div>
+  </section>
+
   <!-- case band (navy) — onboarding RH -->
   <section class="case-band">
     <div class="case-band__inner">
@@ -574,6 +634,64 @@ get_header();
     </div>
     <div class="text-center">
       <a href="<?php echo esc_url( eb_url('audit') ); ?>" class="btn btn-primary audit-steps__cta">Réserver mon audit gratuit <span>→</span></a>
+    </div>
+  </section>
+
+  <!-- objections / FAQ -->
+  <section class="section" style="padding:70px 40px 20px;">
+    <div class="section-head" style="margin-bottom:40px;">
+      <span class="eyebrow">Questions fréquentes</span>
+      <h2 style="font-size:34px;max-width:680px;margin:0 auto;line-height:1.15;">Les questions — et objections — que l'on me pose le plus souvent</h2>
+    </div>
+    <div class="faq-grid">
+      <div class="faq-item">
+        <h3>« On n'a pas les moyens d'automatiser » — est-ce vraiment le cas ?</h3>
+        <p>Une première automatisation démarre autour de 800€ et se rentabilise souvent en quelques semaines sur le temps récupéré. L'audit gratuit sert précisément à vérifier ce calcul avant tout engagement.</p>
+      </div>
+      <div class="faq-item">
+        <h3>« On va perdre le contrôle sur nos données » — qu'en est-il réellement ?</h3>
+        <p>L'automatisation s'appuie sur vos outils existants et leurs propres garanties de sécurité. Aucune donnée n'est revendue ni exposée à un tiers non prévu dans votre chaîne d'outils, dans le respect du RGPD.</p>
+      </div>
+      <div class="faq-item">
+        <h3>« Nos process sont trop spécifiques pour être automatisés » — vraiment ?</h3>
+        <p>C'est l'objection la plus courante, et la moins souvent vérifiée. La majorité des process « spécifiques » se décomposent en étapes standards (recevoir, vérifier, transmettre, relancer) parfaitement automatisables. L'audit permet de le vérifier sur votre cas précis.</p>
+      </div>
+      <div class="faq-item">
+        <h3>« On n'a pas de service informatique » — est-ce un frein ?</h3>
+        <p>Non. C'est justement le principe : chaque automatisation est conçue, déployée et documentée pour être utilisée sans aucune compétence technique de votre part.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Combien de temps pour mettre en place une automatisation ?</h3>
+        <p>Les premiers résultats arrivent souvent en quelques jours à quelques semaines, selon la complexité du processus.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Mes données sont-elles en sécurité ?</h3>
+        <p>Oui. Je travaille dans le respect du RGPD, sur vos propres outils, sans revente ni exposition de vos données.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Faut-il changer de logiciels ?</h3>
+        <p>Non. Je m'appuie sur vos outils existants — Sage, Qonto, Excel, Outlook… — et je les connecte entre eux.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Et si je veux internaliser plus tard ?</h3>
+        <p>Tout est documenté et vous appartient. Vous restez parfaitement autonome, sans dépendance à moi.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Combien coûte une automatisation ?</h3>
+        <p>Chaque projet est différent. Certaines automatisations simples démarrent autour de 800 €, tandis que les projets plus complets font l'objet d'un devis après audit.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Ai-je besoin d'une équipe informatique ?</h3>
+        <p>Non. Je m'occupe de la conception, du déploiement et de la documentation. Vous utilisez simplement les résultats.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Pourquoi un consultant indépendant plutôt qu'une agence ?</h3>
+        <p>Un seul interlocuteur du premier audit à la mise en production, des coûts sans structure commerciale à financer, et une expertise gestion/comptabilité qui aide à cibler les automatisations vraiment rentables. Le détail de cette comparaison est développé sur la page <a href="<?php echo esc_url( eb_url('agence-ia') ); ?>">agence IA vs consultant indépendant</a>.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Que se passe-t-il si l'audit ne révèle aucun gain intéressant ?</h3>
+        <p>Je vous le dis franchement. L'objectif n'est pas de vendre une prestation à tout prix : si le retour sur investissement n'est pas au rendez-vous, vous repartez simplement avec des pistes d'amélioration, sans obligation d'achat.</p>
+      </div>
     </div>
   </section>
 

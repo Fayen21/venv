@@ -100,6 +100,42 @@ if ( ! defined( 'ABSPATH' ) ) {
     </div>
   </section>
 
+  <!-- cluster outils & plateformes -->
+  <section class="section" style="padding-top:6px;">
+    <div class="section-head" style="margin-bottom:32px;">
+      <span class="eyebrow">Outils &amp; plateformes</span>
+      <h2 style="font-size:28px;">Les outils que je connecte le plus souvent, expliqués un par un</h2>
+      <p style="font-size:16px;line-height:1.6;color:var(--text-2);max-width:640px;margin:14px auto 0;">Au-delà des trois piliers, certains outils reviennent dans la quasi-totalité des projets. Voici comment je les automatise concrètement, outil par outil.</p>
+    </div>
+    <div class="grid grid-3">
+      <a class="card differentiators__card" style="text-align:left;text-decoration:none;" href="<?php echo esc_url( eb_url('automatisation-excel') ); ?>">
+        <div class="icon-tile icon-tile--a"><span class="tool-chip__abbr" style="background:#1D6F42;color:#fff;display:inline-flex;">X</span></div>
+        <h3>Automatisation Excel</h3>
+        <p>Fiabiliser vos tableurs sans les remplacer : reporting, extraction PDF, contrôles de cohérence automatiques.</p>
+      </a>
+      <a class="card differentiators__card" style="text-align:left;text-decoration:none;" href="<?php echo esc_url( eb_url('automatisation-outlook') ); ?>">
+        <div class="icon-tile icon-tile--b"><span class="tool-chip__abbr" style="background:#0A6FC2;color:#fff;display:inline-flex;">O</span></div>
+        <h3>Automatisation Outlook</h3>
+        <p>Trier, classer et traiter vos emails automatiquement, sans changer de messagerie ni d'habitude.</p>
+      </a>
+      <a class="card differentiators__card" style="text-align:left;text-decoration:none;" href="<?php echo esc_url( eb_url('automatisation-microsoft-365') ); ?>">
+        <div class="icon-tile icon-tile--a"><span class="tool-chip__abbr" style="background:#EB3C00;color:#fff;display:inline-flex;">365</span></div>
+        <h3>Automatisation Microsoft 365</h3>
+        <p>Connecter Outlook, Excel, Teams et SharePoint pour faire circuler l'information sans ressaisie.</p>
+      </a>
+      <a class="card differentiators__card" style="text-align:left;text-decoration:none;" href="<?php echo esc_url( eb_url('consultant-make') ); ?>">
+        <div class="icon-tile icon-tile--b"><span class="tool-chip__abbr" style="background:#6D00CC;color:#fff;display:inline-flex;">M</span></div>
+        <h3>Consultant Make</h3>
+        <p>Scénarios d'automatisation no-code sur mesure : connexions fiables, gestion des erreurs, intégration IA.</p>
+      </a>
+      <a class="card differentiators__card" style="text-align:left;text-decoration:none;" href="<?php echo esc_url( eb_url('consultant-n8n') ); ?>">
+        <div class="icon-tile icon-tile--a"><span class="tool-chip__abbr" style="background:#EA4B71;color:#fff;display:inline-flex;">n8</span></div>
+        <h3>Consultant n8n</h3>
+        <p>Workflows open-source, hébergement maîtrisé et connexions API sur mesure pour les projets techniques.</p>
+      </a>
+    </div>
+  </section>
+
   <!-- trust strip -->
   <section class="section" style="padding:0 40px 10px;">
     <div class="trust-strip">
@@ -401,6 +437,26 @@ if ( ! defined( 'ABSPATH' ) ) {
       <div class="faq-item">
         <h3>Ai-je besoin d'une équipe informatique ?</h3>
         <p>Non. Je m'occupe de la conception, du déploiement et de la documentation. Vous utilisez simplement les résultats.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Comment choisir par quel domaine commencer ?</h3>
+        <p>Le critère le plus fiable est le temps perdu le plus visible et le plus facile à quantifier. L'audit gratuit permet d'objectiver ce choix plutôt que de le deviner.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Peut-on combiner plusieurs de ces solutions dans un même projet ?</h3>
+        <p>Oui, c'est même fréquent : une automatisation commerciale s'articule souvent avec la comptabilité, ou un traitement documentaire IA vient renforcer une automatisation RH existante.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Quelle est la différence entre les solutions et les pages d'expertise ?</h3>
+        <p>Cette page présente une vue d'ensemble par domaine. Chaque pilier (entreprise, processus, IA) et chaque page d'expertise détaille ensuite la méthode, les cas d'usage et les questions spécifiques à ce sujet.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Proposez-vous des solutions sectorielles spécifiques ?</h3>
+        <p>Les solutions présentées ici sont transversales à la plupart des secteurs. Voir la page <a href="<?php echo esc_url( eb_url('realisations') ); ?>">réalisations</a> pour des exemples concrets par typologie d'entreprise.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Comment savoir si un outil que j'utilise est automatisable ?</h3>
+        <p>La quasi-totalité des logiciels professionnels modernes proposent une API ou des fonctionnalités d'import/export exploitables. La faisabilité exacte se vérifie lors de l'audit, outil par outil.</p>
       </div>
     </div>
   </section>
