@@ -56,25 +56,17 @@ $eb_is_pillar = eb_is_pillar_page( $eb_current );
           Expertises <span class="nav-dropdown__arrow" aria-hidden="true">▾</span>
         </button>
         <div class="nav-dropdown__panel" data-dropdown-panel hidden>
-          <a class="nav-dropdown__item" href="<?php echo esc_url( eb_url( 'automatisation-ia' ) ); ?>">
-            <span class="nav-dropdown__item-label">Automatisation IA</span>
-            <span class="nav-dropdown__item-desc">Ce que l'IA change concrètement</span>
-          </a>
-          <a class="nav-dropdown__item" href="<?php echo esc_url( eb_url( 'agence-ia' ) ); ?>">
-            <span class="nav-dropdown__item-label">Agence IA vs consultant indépendant</span>
-            <span class="nav-dropdown__item-desc">Comprendre les options</span>
-          </a>
           <a class="nav-dropdown__item" href="<?php echo esc_url( eb_url( 'automatisation-entreprise' ) ); ?>">
-            <span class="nav-dropdown__item-label">Automatisation entreprise</span>
-            <span class="nav-dropdown__item-desc">Par où commencer</span>
+            <span class="nav-dropdown__item-label">Automatisation d'entreprise</span>
+            <span class="nav-dropdown__item-desc">RH, comptabilité, CRM : par où commencer</span>
           </a>
           <a class="nav-dropdown__item" href="<?php echo esc_url( eb_url( 'automatisation-processus' ) ); ?>">
             <span class="nav-dropdown__item-label">Automatisation des processus</span>
-            <span class="nav-dropdown__item-desc">Cartographier et orchestrer</span>
+            <span class="nav-dropdown__item-desc">Cartographier et orchestrer un flux complet</span>
           </a>
-          <a class="nav-dropdown__item" href="<?php echo esc_url( eb_url( 'automatisation-taches' ) ); ?>">
-            <span class="nav-dropdown__item-label">Automatisation des tâches</span>
-            <span class="nav-dropdown__item-desc">Les premiers gains rapides</span>
+          <a class="nav-dropdown__item" href="<?php echo esc_url( eb_url( 'automatisation-ia' ) ); ?>">
+            <span class="nav-dropdown__item-label">Automatisation IA</span>
+            <span class="nav-dropdown__item-desc">Ce que l'IA change concrètement</span>
           </a>
         </div>
       </div>

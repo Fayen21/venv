@@ -1,5 +1,21 @@
 /* Home page — sections in DOM order matching EB Automatisation V2.dc.html (isHome block). */
 
+/* ============ nos expertises (3 piliers + spécialisations) ============ */
+.home-expertise__card{ text-decoration:none; color:inherit; background:#fff; border:1px solid var(--border-2); border-radius:18px; padding:30px 26px; display:flex; flex-direction:column; gap:12px; height:100%; }
+.home-expertise__icon{ width:52px; height:52px; border-radius:14px; background:var(--orange-soft-bg); color:var(--orange); display:flex; align-items:center; justify-content:center; }
+.home-expertise__title{ font-family:var(--font-heading); font-weight:700; font-size:19px; color:var(--navy); letter-spacing:-.01em; }
+.home-expertise__desc{ font-size:14px; color:var(--muted); line-height:1.55; flex:1; }
+.home-expertise__link{ font-size:13.5px; font-weight:600; color:var(--orange); }
+.home-expertise__card:hover .home-expertise__title{ color:var(--orange); }
+.home-expertise__specializations{ margin-top:30px; display:flex; flex-direction:column; gap:14px; align-items:center; text-align:center; }
+.home-expertise__spec-label{ font-size:12.5px; font-weight:600; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); }
+.home-expertise__spec-list{ display:flex; flex-wrap:wrap; gap:10px; justify-content:center; }
+.home-expertise__spec-pill{ text-decoration:none; font-size:13.5px; font-weight:600; color:var(--navy); background:var(--bg-soft-2); border:1px solid var(--border-2); padding:9px 16px; border-radius:20px; }
+.home-expertise__spec-pill:hover{ border-color:var(--orange); color:var(--orange); }
+@media (max-width:640px){
+  .home-expertise__card{ padding:24px 20px; }
+}
+
 /* ============ hero ============ */
 .hero{
   display:grid;

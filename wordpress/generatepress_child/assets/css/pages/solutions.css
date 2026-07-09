@@ -2,16 +2,19 @@
 
 /* solutionsWhy 3-cards reuses .differentiators__card from home.css — no new rule needed. */
 
-/* ============ hub des expertises ============ */
-.expertise-hub{ display:grid; grid-template-columns:repeat(5,1fr); gap:14px; }
-.expertise-hub__card{
-  text-decoration:none; background:#fff; border:1px solid var(--border-2); border-radius:14px;
-  padding:22px 18px; display:flex; flex-direction:column; gap:10px; height:100%; color:inherit;
-}
-.expertise-hub__card:hover{ border-color:var(--orange); }
-.expertise-hub__label{ font-family:var(--font-heading); font-weight:600; font-size:15px; color:var(--navy); line-height:1.3; }
-.expertise-hub__desc{ font-size:12.5px; color:var(--muted); line-height:1.4; flex:1; }
-.expertise-hub__more{ font-size:13px; font-weight:600; color:var(--orange); }
+/* ============ hub des expertises — 3 piliers + sous-pages ============ */
+.pillar-hub{ display:flex; flex-direction:column; gap:18px; }
+.pillar-hub__group{ background:#fff; border:1px solid var(--border-2); border-radius:18px; padding:26px 28px; }
+.pillar-hub__main{ display:flex; align-items:center; gap:18px; text-decoration:none; color:inherit; }
+.pillar-hub__icon{ width:52px; height:52px; border-radius:14px; background:var(--orange-soft-bg); color:var(--orange); display:flex; align-items:center; justify-content:center; flex:none; }
+.pillar-hub__body{ flex:1; display:flex; flex-direction:column; gap:4px; }
+.pillar-hub__title{ font-family:var(--font-heading); font-weight:700; font-size:19px; color:var(--navy); letter-spacing:-.01em; }
+.pillar-hub__desc{ font-size:14px; color:var(--muted); line-height:1.5; }
+.pillar-hub__arrow{ color:var(--orange); font-size:18px; flex:none; }
+.pillar-hub__main:hover .pillar-hub__title{ color:var(--orange); }
+.pillar-hub__children{ display:flex; flex-wrap:wrap; gap:9px; margin-top:20px; padding-top:20px; border-top:1px solid var(--border); }
+.pillar-hub__child{ text-decoration:none; font-size:13.5px; font-weight:600; color:var(--navy); background:var(--bg-soft-2); border:1px solid var(--border-2); padding:8px 14px; border-radius:9px; }
+.pillar-hub__child:hover{ border-color:var(--orange); color:var(--orange); }
 
 /* ============ trust strip 3-col ============ */
 .trust-strip{ display:grid; grid-template-columns:repeat(3,1fr); background:#fff; border:1px solid var(--border-2); border-radius:16px; overflow:hidden; }
@@ -74,7 +77,7 @@
 
 /* ==================== responsive — miroir du retrofit 900px du prototype (toute grille -> 1fr) ==================== */
 @media (max-width:900px){
-  .expertise-hub, .trust-strip, .solution-row, .tools-band, .faq-grid{
+  .trust-strip, .solution-row, .tools-band, .faq-grid{
     grid-template-columns:1fr;
   }
   .trust-strip__item{ border-right:none; border-bottom:1px solid var(--border); }
@@ -83,7 +86,11 @@
 @media (max-width:640px){
   .tools-band{ padding:22px; text-align:center; }
   .tools-band p{ text-align:left; }
-  .expertise-hub{ gap:16px; }
+  .pillar-hub__group{ padding:20px; }
+  .pillar-hub__main{ gap:14px; }
+  .pillar-hub__icon{ width:44px; height:44px; }
+  .pillar-hub__title{ font-size:17px; }
+  .pillar-hub__arrow{ display:none; }
   .solution-row{ padding:32px 0; gap:28px; }
   .solution-row__transition{ flex-direction:column; align-items:flex-start; }
   .solution-row__arrow{ transform:rotate(90deg); }

@@ -74,6 +74,44 @@ get_header();
     </div>
   </section>
 
+  <!-- nos expertises -->
+  <section class="section">
+    <div class="section-head">
+      <span class="eyebrow">Nos expertises</span>
+      <h2 style="max-width:760px;margin:0 auto;">Trois piliers pour automatiser votre entreprise</h2>
+    </div>
+    <div class="home-expertise">
+      <div class="grid grid-3">
+        <a class="home-expertise__card" href="<?php echo esc_url( eb_url('automatisation-entreprise') ); ?>">
+          <span class="home-expertise__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="1"></rect><line x1="8" y1="7" x2="8" y2="7.01"></line><line x1="12" y1="7" x2="12" y2="7.01"></line><line x1="16" y1="7" x2="16" y2="7.01"></line><line x1="8" y1="11" x2="8" y2="11.01"></line><line x1="12" y1="11" x2="12" y2="11.01"></line><line x1="16" y1="11" x2="16" y2="11.01"></line><path d="M9 21v-4h6v4"></path></svg></span>
+          <span class="home-expertise__title">Automatisation d'entreprise</span>
+          <span class="home-expertise__desc">RH, comptabilité, commercial, reporting : par où commencer et comment prioriser service par service.</span>
+          <span class="home-expertise__link">Explorer <span aria-hidden="true">→</span></span>
+        </a>
+        <a class="home-expertise__card" href="<?php echo esc_url( eb_url('automatisation-processus') ); ?>">
+          <span class="home-expertise__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="12" r="2.4"></circle><circle cx="19" cy="6" r="2.4"></circle><circle cx="19" cy="18" r="2.4"></circle><path d="M7.2 11.2L16.8 6.9"></path><path d="M7.2 12.8L16.8 17.1"></path></svg></span>
+          <span class="home-expertise__title">Automatisation des processus</span>
+          <span class="home-expertise__desc">Cartographier et orchestrer un enchaînement complet, de bout en bout, avec Make et n8n.</span>
+          <span class="home-expertise__link">Explorer <span aria-hidden="true">→</span></span>
+        </a>
+        <a class="home-expertise__card" href="<?php echo esc_url( eb_url('automatisation-ia') ); ?>">
+          <span class="home-expertise__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3z"></path><path d="M19 15l.7 2 2 .7-2 .7-.7 2-.7-2-2-.7 2-.7.7-2z"></path></svg></span>
+          <span class="home-expertise__title">Automatisation IA</span>
+          <span class="home-expertise__desc">Ce que l'intelligence artificielle change concrètement dans vos processus, sans jargon technique.</span>
+          <span class="home-expertise__link">Explorer <span aria-hidden="true">→</span></span>
+        </a>
+      </div>
+      <div class="home-expertise__specializations">
+        <span class="home-expertise__spec-label">Spécialisations les plus demandées</span>
+        <div class="home-expertise__spec-list">
+          <a class="home-expertise__spec-pill" href="<?php echo esc_url( eb_url('automatisation-comptable') ); ?>">Automatisation comptable</a>
+          <a class="home-expertise__spec-pill" href="<?php echo esc_url( eb_url('automatisation-rh') ); ?>">Automatisation RH</a>
+          <a class="home-expertise__spec-pill" href="<?php echo esc_url( eb_url('automatisation-crm') ); ?>">Automatisation CRM</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ce que j'automatise -->
   <section class="section">
     <div class="section-head">

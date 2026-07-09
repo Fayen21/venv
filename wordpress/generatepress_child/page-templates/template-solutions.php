@@ -47,34 +47,56 @@ if ( ! defined( 'ABSPATH' ) ) {
   <section class="section" style="padding-top:10px;">
     <div class="section-head" style="margin-bottom:32px;">
       <span class="eyebrow">Nos domaines d'expertise</span>
-      <h2 style="font-size:30px;">Cinq entrées pour approfondir un sujet précis</h2>
+      <h2 style="font-size:30px;">Trois piliers, une expertise par sujet précis</h2>
     </div>
-    <div class="expertise-hub">
-      <a class="expertise-hub__card" href="<?php echo esc_url( eb_url('automatisation-ia') ); ?>">
-        <span class="expertise-hub__label">Automatisation IA</span>
-        <span class="expertise-hub__desc">Ce que l'IA change concrètement dans vos tâches administratives.</span>
-        <span class="expertise-hub__more">En savoir plus →</span>
-      </a>
-      <a class="expertise-hub__card" href="<?php echo esc_url( eb_url('agence-ia') ); ?>">
-        <span class="expertise-hub__label">Agence IA vs consultant indépendant</span>
-        <span class="expertise-hub__desc">Comprendre les options avant de choisir un prestataire.</span>
-        <span class="expertise-hub__more">En savoir plus →</span>
-      </a>
-      <a class="expertise-hub__card" href="<?php echo esc_url( eb_url('automatisation-entreprise') ); ?>">
-        <span class="expertise-hub__label">Automatisation entreprise</span>
-        <span class="expertise-hub__desc">Par où commencer et comment prioriser service par service.</span>
-        <span class="expertise-hub__more">En savoir plus →</span>
-      </a>
-      <a class="expertise-hub__card" href="<?php echo esc_url( eb_url('automatisation-processus') ); ?>">
-        <span class="expertise-hub__label">Automatisation des processus</span>
-        <span class="expertise-hub__desc">Cartographier et orchestrer un enchaînement complet.</span>
-        <span class="expertise-hub__more">En savoir plus →</span>
-      </a>
-      <a class="expertise-hub__card" href="<?php echo esc_url( eb_url('automatisation-taches') ); ?>">
-        <span class="expertise-hub__label">Automatisation des tâches</span>
-        <span class="expertise-hub__desc">Les premiers gains rapides et faciles à mesurer.</span>
-        <span class="expertise-hub__more">En savoir plus →</span>
-      </a>
+    <div class="pillar-hub">
+
+      <div class="pillar-hub__group">
+        <a class="pillar-hub__main" href="<?php echo esc_url( eb_url('automatisation-entreprise') ); ?>">
+          <span class="pillar-hub__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="1"></rect><line x1="8" y1="7" x2="8" y2="7.01"></line><line x1="12" y1="7" x2="12" y2="7.01"></line><line x1="16" y1="7" x2="16" y2="7.01"></line><line x1="8" y1="11" x2="8" y2="11.01"></line><line x1="12" y1="11" x2="12" y2="11.01"></line><line x1="16" y1="11" x2="16" y2="11.01"></line><path d="M9 21v-4h6v4"></path></svg></span>
+          <span class="pillar-hub__body">
+            <span class="pillar-hub__title">Automatisation d'entreprise</span>
+            <span class="pillar-hub__desc">Par où commencer et comment prioriser service par service.</span>
+          </span>
+          <span class="pillar-hub__arrow" aria-hidden="true">→</span>
+        </a>
+        <div class="pillar-hub__children">
+          <a class="pillar-hub__child" href="<?php echo esc_url( eb_url('automatisation-comptable') ); ?>">Automatisation comptable</a>
+          <a class="pillar-hub__child" href="<?php echo esc_url( eb_url('automatisation-rh') ); ?>">Automatisation RH</a>
+          <a class="pillar-hub__child" href="<?php echo esc_url( eb_url('automatisation-crm') ); ?>">Automatisation CRM</a>
+          <a class="pillar-hub__child" href="<?php echo esc_url( eb_url('prospection-automatisee') ); ?>">Prospection automatisée</a>
+        </div>
+      </div>
+
+      <div class="pillar-hub__group">
+        <a class="pillar-hub__main" href="<?php echo esc_url( eb_url('automatisation-processus') ); ?>">
+          <span class="pillar-hub__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="12" r="2.4"></circle><circle cx="19" cy="6" r="2.4"></circle><circle cx="19" cy="18" r="2.4"></circle><path d="M7.2 11.2L16.8 6.9"></path><path d="M7.2 12.8L16.8 17.1"></path></svg></span>
+          <span class="pillar-hub__body">
+            <span class="pillar-hub__title">Automatisation des processus</span>
+            <span class="pillar-hub__desc">Cartographier et orchestrer un enchaînement complet.</span>
+          </span>
+          <span class="pillar-hub__arrow" aria-hidden="true">→</span>
+        </a>
+        <div class="pillar-hub__children">
+          <a class="pillar-hub__child" href="<?php echo esc_url( eb_url('automatisation-taches') ); ?>">Automatisation des tâches</a>
+          <a class="pillar-hub__child" href="<?php echo esc_url( eb_url('rpa') ); ?>">RPA</a>
+        </div>
+      </div>
+
+      <div class="pillar-hub__group">
+        <a class="pillar-hub__main" href="<?php echo esc_url( eb_url('automatisation-ia') ); ?>">
+          <span class="pillar-hub__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3z"></path><path d="M19 15l.7 2 2 .7-2 .7-.7 2-.7-2-2-.7 2-.7.7-2z"></path></svg></span>
+          <span class="pillar-hub__body">
+            <span class="pillar-hub__title">Automatisation IA</span>
+            <span class="pillar-hub__desc">Ce que l'IA change concrètement dans vos tâches administratives.</span>
+          </span>
+          <span class="pillar-hub__arrow" aria-hidden="true">→</span>
+        </a>
+        <div class="pillar-hub__children">
+          <a class="pillar-hub__child" href="<?php echo esc_url( eb_url('agence-ia') ); ?>">Agence IA vs consultant indépendant</a>
+        </div>
+      </div>
+
     </div>
   </section>
 
