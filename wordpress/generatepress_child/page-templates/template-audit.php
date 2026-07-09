@@ -50,7 +50,7 @@ if ( ! defined( 'ABSPATH' ) ) {
         <div class="audit-form__grid">
           <div class="audit-form__row">
             <label class="audit-form__label" for="f-prenom">Prénom *</label>
-            <input class="audit-form__input" type="text" id="f-prenom" name="prenom" autocomplete="given-name" placeholder="Marie" aria-required="true" aria-describedby="f-prenom-error">
+            <input class="audit-form__input" type="text" id="f-prenom" name="prenom" autocomplete="given-name" placeholder="Marie" required aria-required="true" aria-describedby="f-prenom-error">
             <span class="audit-form__error" id="f-prenom-error">Merci d'indiquer votre prénom.</span>
           </div>
           <div class="audit-form__row">
@@ -63,7 +63,7 @@ if ( ! defined( 'ABSPATH' ) ) {
           </div>
           <div class="audit-form__row">
             <label class="audit-form__label" for="f-email">Email *</label>
-            <input class="audit-form__input" type="email" id="f-email" name="email" autocomplete="email" placeholder="marie@entreprise.fr" aria-required="true" aria-describedby="f-email-error">
+            <input class="audit-form__input" type="email" id="f-email" name="email" autocomplete="email" placeholder="marie@entreprise.fr" required aria-required="true" aria-describedby="f-email-error">
             <span class="audit-form__error" id="f-email-error">Merci d'indiquer une adresse email valide.</span>
           </div>
           <div class="audit-form__row">
@@ -72,7 +72,7 @@ if ( ! defined( 'ABSPATH' ) ) {
           </div>
           <div class="audit-form__row audit-form__row--full">
             <label class="audit-form__label" for="f-besoin">Décrivez votre besoin *</label>
-            <textarea class="audit-form__textarea" id="f-besoin" name="besoin" rows="4" placeholder="Quelle tâche vous fait perdre le plus de temps aujourd'hui ?" aria-required="true" aria-describedby="f-besoin-error"></textarea>
+            <textarea class="audit-form__textarea" id="f-besoin" name="besoin" rows="4" placeholder="Quelle tâche vous fait perdre le plus de temps aujourd'hui ?" required aria-required="true" aria-describedby="f-besoin-error"></textarea>
             <span class="audit-form__error" id="f-besoin-error">Merci de décrire brièvement votre besoin.</span>
           </div>
         </div>

@@ -28,11 +28,16 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div>
       <div class="site-footer__heading">Expertises</div>
       <div class="site-footer__links">
-        <a href="<?php echo esc_url( eb_url( 'automatisation-ia' ) ); ?>">Automatisation IA</a>
-        <a href="<?php echo esc_url( eb_url( 'agence-ia' ) ); ?>">Agence IA</a>
         <a href="<?php echo esc_url( eb_url( 'automatisation-entreprise' ) ); ?>">Automatisation entreprise</a>
         <a href="<?php echo esc_url( eb_url( 'automatisation-processus' ) ); ?>">Automatisation des processus</a>
+        <a href="<?php echo esc_url( eb_url( 'automatisation-ia' ) ); ?>">Automatisation IA</a>
+        <a href="<?php echo esc_url( eb_url( 'automatisation-comptable' ) ); ?>">Automatisation comptable</a>
+        <a href="<?php echo esc_url( eb_url( 'automatisation-rh' ) ); ?>">Automatisation RH</a>
+        <a href="<?php echo esc_url( eb_url( 'automatisation-crm' ) ); ?>">Automatisation CRM</a>
+        <a href="<?php echo esc_url( eb_url( 'prospection-automatisee' ) ); ?>">Prospection automatisée</a>
+        <a href="<?php echo esc_url( eb_url( 'rpa' ) ); ?>">RPA</a>
         <a href="<?php echo esc_url( eb_url( 'automatisation-taches' ) ); ?>">Automatisation des tâches</a>
+        <a href="<?php echo esc_url( eb_url( 'agence-ia' ) ); ?>">Agence IA</a>
       </div>
     </div>
     <div>

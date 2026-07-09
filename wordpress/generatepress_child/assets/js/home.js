@@ -51,6 +51,8 @@
   };
   var ORDER = ['relances', 'rh', 'emails', 'pdf', 'crm'];
 
+  var prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
   var demoRoot = document.querySelector('[data-workflow-tabs]');
   if (demoRoot) {
     var state = { scenario: 'relances', step: 0 };
@@ -92,6 +94,7 @@
     }
 
     function startRotation() {
+      if (prefersReducedMotion) return;
       if (rotateTimer) clearInterval(rotateTimer);
       rotateTimer = setInterval(function () {
         var idx = ORDER.indexOf(state.scenario);
@@ -115,7 +118,9 @@
     });
 
     render();
-    setInterval(tick, 1500);
+    if (!prefersReducedMotion) {
+      setInterval(tick, 1500);
+    }
     startRotation();
   }
 

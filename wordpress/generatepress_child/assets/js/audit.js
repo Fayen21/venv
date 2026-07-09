@@ -69,6 +69,13 @@
     if (successPanel) {
       successPanel.hidden = false;
       successPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      // Déplace le focus clavier/lecteur d'écran sur le message de succès :
+      // sans ça, le changement de contenu n'est annoncé à personne d'autre
+      // qu'aux utilisateurs voyants suivant le défilement.
+      if (!successPanel.hasAttribute('tabindex')) {
+        successPanel.setAttribute('tabindex', '-1');
+      }
+      successPanel.focus();
     }
   }
 

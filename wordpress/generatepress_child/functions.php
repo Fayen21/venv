@@ -271,7 +271,7 @@ function eb_seo_data() {
 			'description' => "Délais, coûts, interlocuteurs : comparez objectivement agence IA et consultant indépendant avant de confier votre projet d'automatisation. Dès 800€.",
 			'og_title'    => "Agence IA ou consultant indépendant : que choisir en PME ?",
 			'og_desc'     => "Délais, coûts, interlocuteurs : comparez objectivement agence IA et consultant indépendant avant de confier votre projet d'automatisation. Dès 800€.",
-			'tw_title'    => "Agence IA vs consultant indépendant | EB Automatisation",
+			'tw_title'    => "Agence IA ou consultant indépendant : que choisir en PME ?",
 			'tw_desc'     => "Comprendre les différences pour choisir le bon prestataire d'automatisation pour votre PME.",
 			'canonical'   => eb_url( 'agence-ia' ),
 			'breadcrumb'  => 'Agence IA',
@@ -291,7 +291,7 @@ function eb_seo_data() {
 			'description' => "RH, comptabilité, commercial, reporting : par où commencer pour automatiser votre entreprise et comment prioriser selon le gain réel. Méthode éprouvée.",
 			'og_title'    => "Automatisation d'entreprise : la méthode service par service",
 			'og_desc'     => "RH, comptabilité, commercial, reporting : par où commencer pour automatiser votre entreprise et comment prioriser selon le gain réel. Méthode éprouvée.",
-			'tw_title'    => "Automatisation entreprise : par où commencer | EB Automatisation",
+			'tw_title'    => "Automatisation d'entreprise : la méthode service par service",
 			'tw_desc'     => "Comment automatiser son entreprise service par service : méthode et exemples concrets.",
 			'canonical'   => eb_url( 'automatisation-entreprise' ),
 			'breadcrumb'  => 'Automatisation entreprise',
@@ -311,7 +311,7 @@ function eb_seo_data() {
 			'description' => "Ce que l'intelligence artificielle change vraiment dans vos processus : lecture de documents, tri d'emails, détection d'anomalies. Sans jargon technique.",
 			'og_title'    => "Automatisation IA : le guide concret pour votre entreprise",
 			'og_desc'     => "Ce que l'intelligence artificielle change vraiment dans vos processus : lecture de documents, tri d'emails, détection d'anomalies. Sans jargon technique.",
-			'tw_title'    => "Automatisation IA pour TPE-PME | EB Automatisation",
+			'tw_title'    => "Automatisation IA : le guide concret pour votre entreprise",
 			'tw_desc'     => "Ce que l'IA change concrètement dans vos processus, cas d'usage et bénéfices pour votre entreprise.",
 			'canonical'   => eb_url( 'automatisation-ia' ),
 			'breadcrumb'  => 'Automatisation IA',
@@ -331,7 +331,7 @@ function eb_seo_data() {
 			'description' => "Cartographier, orchestrer puis fiabiliser un processus complet : devis, onboarding, clôture mensuelle. La méthode pas à pas, avec Make et n8n.",
 			'og_title'    => "Automatisation des processus métier : méthode et exemples",
 			'og_desc'     => "Cartographier, orchestrer puis fiabiliser un processus complet : devis, onboarding, clôture mensuelle. La méthode pas à pas, avec Make et n8n.",
-			'tw_title'    => "Automatisation des processus métier | EB Automatisation",
+			'tw_title'    => "Automatisation des processus métier : méthode et exemples",
 			'tw_desc'     => "Cartographier et automatiser vos processus métier de bout en bout.",
 			'canonical'   => eb_url( 'automatisation-processus' ),
 			'breadcrumb'  => 'Automatisation des processus',
@@ -351,7 +351,7 @@ function eb_seo_data() {
 			'description' => "Classement de PDF, rappels d'échéance, mises à jour de tableaux : automatisez d'abord les tâches simples, rentabilisées en quelques semaines dès 800€.",
 			'og_title'    => "Automatisation des tâches répétitives : par où commencer",
 			'og_desc'     => "Classement de PDF, rappels d'échéance, mises à jour de tableaux : automatisez d'abord les tâches simples, rentabilisées en quelques semaines dès 800€.",
-			'tw_title'    => "Automatisation des tâches répétitives | EB Automatisation",
+			'tw_title'    => "Automatisation des tâches répétitives : par où commencer",
 			'tw_desc'     => "Identifiez et automatisez les tâches répétitives qui font perdre du temps à votre équipe.",
 			'canonical'   => eb_url( 'automatisation-taches' ),
 			'breadcrumb'  => 'Automatisation des tâches',
@@ -485,11 +485,11 @@ function eb_seo_data() {
 			'canonical'   => eb_url( 'confidentialite' ),
 		),
 		'rgpd'                      => array(
-			'title'       => "RGPD — Vos droits sur vos données | EB Automatisation",
+			'title'       => "RGPD — Vos droits sur vos données",
 			'description' => "Vos droits RGPD (accès, rectification, effacement, opposition, portabilité) et comment les exercer auprès d'EB Automatisation.",
-			'og_title'    => "RGPD — Vos droits sur vos données | EB Automatisation",
+			'og_title'    => "RGPD — Vos droits sur vos données",
 			'og_desc'     => "Vos droits RGPD et comment les exercer auprès d'EB Automatisation.",
-			'tw_title'    => "RGPD — Vos droits sur vos données | EB Automatisation",
+			'tw_title'    => "RGPD — Vos droits sur vos données",
 			'tw_desc'     => "Vos droits RGPD et comment les exercer auprès d'EB Automatisation.",
 			'canonical'   => eb_url( 'rgpd' ),
 		),
@@ -513,6 +513,23 @@ function eb_og_image( $d ) {
 		return eb_asset( $d['og_image'] );
 	}
 	return eb_asset( 'images/og/og-default.jpg' );
+}
+
+/**
+ * Largeur/hauteur réelles de l'image OG courante (og:image:width/height) :
+ * recommandé par la spec Open Graph pour que Facebook/LinkedIn affichent
+ * l'aperçu sans devoir télécharger l'image pour en déduire les dimensions.
+ * Lit le fichier réel plutôt que de figer "1200x630" en dur, pour rester
+ * juste même si une page définit un jour un 'og_image' à d'autres dimensions.
+ */
+function eb_og_image_dimensions( $d ) {
+	$relative = ! empty( $d['og_image'] ) ? $d['og_image'] : 'images/og/og-default.jpg';
+	$path     = EB_THEME_DIR . '/assets/' . ltrim( $relative, '/' );
+	$size     = @getimagesize( $path );
+	if ( $size ) {
+		return array( $size[0], $size[1] );
+	}
+	return array( 1200, 630 );
 }
 
 /**
@@ -542,9 +559,10 @@ function eb_output_seo_tags() {
 		return;
 	}
 
-	$d       = $data[ $page ];
-	$img     = eb_og_image( $d );
-	$og_type = eb_is_pillar_page( $page ) && isset( $d['article'] ) ? 'article' : 'website';
+	$d           = $data[ $page ];
+	$img         = eb_og_image( $d );
+	$img_w_h     = eb_og_image_dimensions( $d );
+	$og_type     = eb_is_pillar_page( $page ) && isset( $d['article'] ) ? 'article' : 'website';
 	?>
 <meta name="robots" content="index, follow">
 <meta property="og:type" content="<?php echo esc_attr( $og_type ); ?>">
@@ -553,6 +571,9 @@ function eb_output_seo_tags() {
 <meta property="og:title" content="<?php echo esc_attr( $d['og_title'] ); ?>">
 <meta property="og:description" content="<?php echo esc_attr( $d['og_desc'] ); ?>">
 <meta property="og:image" content="<?php echo esc_url( $img ); ?>">
+<meta property="og:image:width" content="<?php echo esc_attr( $img_w_h[0] ); ?>">
+<meta property="og:image:height" content="<?php echo esc_attr( $img_w_h[1] ); ?>">
+<meta property="og:image:alt" content="<?php echo esc_attr( $d['og_title'] ); ?>">
 <meta property="og:locale" content="fr_FR">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="<?php echo esc_attr( $d['tw_title'] ); ?>">
@@ -581,3 +602,24 @@ add_action( 'wp_head', 'eb_output_seo_tags', 1 );
  * temps produit deux balises <link rel="canonical"> sur la même page.
  */
 remove_action( 'wp_head', 'rel_canonical' );
+
+/**
+ * -----------------------------------------------------------------------
+ * 5. Nettoyage de wp_head() — retire les balises injectées par WordPress
+ *    core qui n'ont aucune utilité sur ce site (aucun client XML-RPC/Windows
+ *    Live Writer, pas de flux RSS consommé, emoji rendus nativement par les
+ *    navigateurs modernes) : moins de requêtes, moins de poids, et on
+ *    n'annonce plus la version de WordPress utilisée.
+ * -----------------------------------------------------------------------
+ */
+function eb_clean_wp_head() {
+	remove_action( 'wp_head', 'wp_generator' );
+	remove_action( 'wp_head', 'rsd_link' );
+	remove_action( 'wp_head', 'wlwmanifest_link' );
+	remove_action( 'wp_head', 'wp_shortlink_wp_head' );
+	remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+	remove_action( 'wp_print_styles', 'print_emoji_styles' );
+	remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
+	remove_action( 'admin_print_styles', 'print_emoji_styles' );
+}
+add_action( 'init', 'eb_clean_wp_head' );

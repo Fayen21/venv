@@ -15,7 +15,9 @@ $eb_is_pillar = eb_is_pillar_page( $eb_current );
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0C1E3C">
 <link rel="icon" type="image/png" href="<?php echo esc_url( eb_asset( 'images/eb-icon.png' ) ); ?>">
+<link rel="apple-touch-icon" href="<?php echo esc_url( eb_asset( 'images/eb-icon.png' ) ); ?>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <?php wp_head(); ?>
@@ -46,7 +48,7 @@ $eb_is_pillar = eb_is_pillar_page( $eb_current );
       <span class="menu-toggle__bar"></span>
       <span class="menu-toggle__bar"></span>
     </button>
-    <nav class="site-nav">
+    <nav class="site-nav" aria-label="Navigation principale">
       <a href="<?php echo esc_url( eb_url( 'index' ) ); ?>" class="site-nav__link<?php echo ( 'index' === $eb_current ) ? ' is-active' : ''; ?>">Accueil</a>
       <a href="<?php echo esc_url( eb_url( 'solutions' ) ); ?>" class="site-nav__link<?php echo ( 'solutions' === $eb_current ) ? ' is-active' : ''; ?>">Solutions</a>
       <a href="<?php echo esc_url( eb_url( 'realisations' ) ); ?>" class="site-nav__link<?php echo ( 'realisations' === $eb_current ) ? ' is-active' : ''; ?>">Réalisations</a>
