@@ -5,13 +5,13 @@
 .home-expertise__icon{ width:52px; height:52px; border-radius:14px; background:var(--orange-soft-bg); color:var(--orange); display:flex; align-items:center; justify-content:center; }
 .home-expertise__title{ font-family:var(--font-heading); font-weight:700; font-size:19px; color:var(--navy); letter-spacing:-.01em; }
 .home-expertise__desc{ font-size:14px; color:var(--muted); line-height:1.55; flex:1; }
-.home-expertise__link{ font-size:13.5px; font-weight:600; color:var(--orange); }
-.home-expertise__card:hover .home-expertise__title{ color:var(--orange); }
+.home-expertise__link{ font-size:13.5px; font-weight:600; color:var(--orange-a11y); }
+.home-expertise__card:hover .home-expertise__title{ color:var(--orange-a11y); }
 .home-expertise__specializations{ margin-top:30px; display:flex; flex-direction:column; gap:14px; align-items:center; text-align:center; }
 .home-expertise__spec-label{ font-size:12.5px; font-weight:600; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); }
 .home-expertise__spec-list{ display:flex; flex-wrap:wrap; gap:10px; justify-content:center; }
 .home-expertise__spec-pill{ text-decoration:none; font-size:13.5px; font-weight:600; color:var(--navy); background:var(--bg-soft-2); border:1px solid var(--border-2); padding:9px 16px; border-radius:20px; }
-.home-expertise__spec-pill:hover{ border-color:var(--orange); color:var(--orange); }
+.home-expertise__spec-pill:hover{ border-color:var(--orange-a11y); color:var(--orange-a11y); }
 @media (max-width:640px){
   .home-expertise__card{ padding:24px 20px; }
 }
@@ -170,7 +170,7 @@
   padding:10px 22px;border-radius:var(--r-lg);background:transparent;color:var(--muted);transition:all .25s;
 }
 .ba-toggle__btn[data-ba="avant"].is-active{ background:#fff;color:var(--navy); }
-.ba-toggle__btn[data-ba="apres"].is-active{ background:var(--orange);color:#fff;box-shadow:0 6px 16px -8px rgba(221,122,51,.8); }
+.ba-toggle__btn[data-ba="apres"].is-active{ background:var(--orange-a11y);color:#fff;box-shadow:0 6px 16px -8px rgba(221,122,51,.8); }
 
 [hidden]{ display:none !important; }
 
@@ -345,7 +345,7 @@
 }
 .pricing__card--featured{ background:var(--navy-gradient);border-color:var(--orange);box-shadow:0 22px 50px -22px rgba(221,122,51,.55); }
 .pricing__ribbon{
-  position:absolute;top:-13px;left:32px;background:var(--orange);color:#fff;
+  position:absolute;top:-13px;left:32px;background:var(--orange-a11y);color:#fff;
   font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;padding:5px 12px;border-radius:20px;
 }
 .pricing__name{ font-family:var(--font-heading);font-weight:600;font-size:20px;letter-spacing:-.01em;margin-bottom:6px;color:var(--navy); }

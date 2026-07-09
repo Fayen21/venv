@@ -211,7 +211,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
   display:inline-flex;
   align-items:center;
   gap:9px;
-  background:var(--orange);
+  background:var(--orange-a11y);
   color:#fff;
   border:none;
   cursor:pointer;
@@ -295,7 +295,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
   display:inline-flex;
   align-items:center;
   gap:9px;
-  background:var(--orange);
+  background:var(--orange-a11y);
   color:#fff;
   border:none;
   cursor:pointer;

@@ -11,10 +11,10 @@
 .pillar-hub__title{ font-family:var(--font-heading); font-weight:700; font-size:19px; color:var(--navy); letter-spacing:-.01em; }
 .pillar-hub__desc{ font-size:14px; color:var(--muted); line-height:1.5; }
 .pillar-hub__arrow{ color:var(--orange); font-size:18px; flex:none; }
-.pillar-hub__main:hover .pillar-hub__title{ color:var(--orange); }
+.pillar-hub__main:hover .pillar-hub__title{ color:var(--orange-a11y); }
 .pillar-hub__children{ display:flex; flex-wrap:wrap; gap:9px; margin-top:20px; padding-top:20px; border-top:1px solid var(--border); }
 .pillar-hub__child{ text-decoration:none; font-size:13.5px; font-weight:600; color:var(--navy); background:var(--bg-soft-2); border:1px solid var(--border-2); padding:8px 14px; border-radius:9px; }
-.pillar-hub__child:hover{ border-color:var(--orange); color:var(--orange); }
+.pillar-hub__child:hover{ border-color:var(--orange-a11y); color:var(--orange-a11y); }
 
 /* ============ trust strip 3-col ============ */
 .trust-strip{ display:grid; grid-template-columns:repeat(3,1fr); background:#fff; border:1px solid var(--border-2); border-radius:16px; overflow:hidden; }

@@ -48,7 +48,7 @@ a{
   letter-spacing:.15em;
   font-size:12.5px;
   font-weight:600;
-  color:var(--orange);
+  color:var(--orange-a11y);
 }
 
 .section-head{

@@ -17,6 +17,11 @@
   --orange-soft-border:#F2D8BE;
   --orange-soft-border-2:#F0D9C4;
   --peach:#E59B6A;
+  /* variante assombrie de --orange, conforme WCAG AA (4.5:1+) pour le texte
+     et les boutons à texte blanc — --orange reste inchangé pour les usages
+     décoratifs (icônes, bordures) où le contraste texte ne s'applique pas */
+  --orange-a11y:#AC5F28;
+  --orange-a11y-hover:#9B5524;
 
   /* blue (live / accent) */
   --blue:#2E9BFF;
@@ -42,7 +47,7 @@
   /* tan / beige (avant panels) */
   --tan-bg:#F7F6F4;
   --tan-border:#ECE8E1;
-  --tan-label:#A88C6E;
+  --tan-label:#816C55;
   --tan-text:#7C6E5C;
   --tan-strong:#9a5a32;
   --tan-strong-bg:#FBF4EE;
@@ -56,10 +61,10 @@
   --text-5:#3C4A60;
 
   /* muted grays */
-  --muted:#8A98AD;
-  --muted-2:#9AA6B8;
-  --muted-3:#8F9DB6;
-  --muted-4:#6E7E99;
+  --muted:#697483;
+  --muted-2:#6C7481;
+  --muted-3:#6A7487;
+  --muted-4:#66758E;
   --muted-on-navy:#9DAAC2;
   --muted-on-navy-2:#5e6f8c;
   --muted-on-navy-3:#8294b2;

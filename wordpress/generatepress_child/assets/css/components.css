@@ -13,10 +13,10 @@
   text-decoration:none;
 }
 .btn-primary{
-  background:var(--orange);
+  background:var(--orange-a11y);
   color:#fff;
 }
-.btn-primary:hover{ background:var(--orange-hover); }
+.btn-primary:hover{ background:var(--orange-a11y-hover); }
 .btn-secondary{
   background:#fff;
   color:var(--navy);

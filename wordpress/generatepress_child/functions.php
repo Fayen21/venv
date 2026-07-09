@@ -274,6 +274,7 @@ function eb_seo_data() {
 			'tw_title'    => "Agence IA ou consultant indépendant : que choisir en PME ?",
 			'tw_desc'     => "Comprendre les différences pour choisir le bon prestataire d'automatisation pour votre PME.",
 			'canonical'   => eb_url( 'agence-ia' ),
+			'og_image'    => 'images/og/og-agence-ia.jpg',
 			'breadcrumb'  => 'Agence IA',
 			'article'     => array(
 				'headline' => "Vous cherchez une agence IA ? Voici ce qu'un consultant indépendant peut vous apporter de différent",
@@ -294,6 +295,7 @@ function eb_seo_data() {
 			'tw_title'    => "Automatisation d'entreprise : la méthode service par service",
 			'tw_desc'     => "Comment automatiser son entreprise service par service : méthode et exemples concrets.",
 			'canonical'   => eb_url( 'automatisation-entreprise' ),
+			'og_image'    => 'images/og/og-automatisation-entreprise.jpg',
 			'breadcrumb'  => 'Automatisation entreprise',
 			'article'     => array(
 				'headline' => "Automatiser son entreprise : par où commencer et jusqu'où aller",
@@ -314,6 +316,7 @@ function eb_seo_data() {
 			'tw_title'    => "Automatisation IA : le guide concret pour votre entreprise",
 			'tw_desc'     => "Ce que l'IA change concrètement dans vos processus, cas d'usage et bénéfices pour votre entreprise.",
 			'canonical'   => eb_url( 'automatisation-ia' ),
+			'og_image'    => 'images/og/og-automatisation-ia.jpg',
 			'breadcrumb'  => 'Automatisation IA',
 			'article'     => array(
 				'headline' => "L'automatisation IA, expliquée simplement pour les dirigeants de TPE-PME",
@@ -334,6 +337,7 @@ function eb_seo_data() {
 			'tw_title'    => "Automatisation des processus métier : méthode et exemples",
 			'tw_desc'     => "Cartographier et automatiser vos processus métier de bout en bout.",
 			'canonical'   => eb_url( 'automatisation-processus' ),
+			'og_image'    => 'images/og/og-automatisation-processus.jpg',
 			'breadcrumb'  => 'Automatisation des processus',
 			'article'     => array(
 				'headline' => "Automatiser un processus métier : méthode et exemples concrets",
@@ -354,6 +358,7 @@ function eb_seo_data() {
 			'tw_title'    => "Automatisation des tâches répétitives : par où commencer",
 			'tw_desc'     => "Identifiez et automatisez les tâches répétitives qui font perdre du temps à votre équipe.",
 			'canonical'   => eb_url( 'automatisation-taches' ),
+			'og_image'    => 'images/og/og-automatisation-taches.jpg',
 			'breadcrumb'  => 'Automatisation des tâches',
 			'article'     => array(
 				'headline' => "Automatiser les tâches répétitives : la première étape la plus rentable",
@@ -374,6 +379,7 @@ function eb_seo_data() {
 			'tw_title'    => "Automatisation comptable : OCR facture & saisie",
 			'tw_desc'     => "Automatisez la saisie comptable et le rapprochement bancaire, compatible Pennylane, Sage, Cegid, Quadra.",
 			'canonical'   => eb_url( 'automatisation-comptable' ),
+			'og_image'    => 'images/og/og-automatisation-comptable.jpg',
 			'breadcrumb'  => 'Automatisation comptable',
 			'article'     => array(
 				'headline' => "Automatisation comptable : comment éliminer la saisie manuelle avec l'IA",
@@ -394,6 +400,7 @@ function eb_seo_data() {
 			'tw_title'    => "Automatisation RH : onboarding, congés, paie",
 			'tw_desc'     => "Automatisez l'onboarding salarié, la gestion des congés et les variables de paie.",
 			'canonical'   => eb_url( 'automatisation-rh' ),
+			'og_image'    => 'images/og/og-automatisation-rh.jpg',
 			'breadcrumb'  => 'Automatisation RH',
 			'article'     => array(
 				'headline' => "Automatisation RH : de l'onboarding à la paie, sans ressaisie",
@@ -414,6 +421,7 @@ function eb_seo_data() {
 			'tw_title'    => "Automatisation CRM : pipeline commercial à jour",
 			'tw_desc'     => "Automatisez la création de fiches, les relances et la qualification des leads dans votre CRM.",
 			'canonical'   => eb_url( 'automatisation-crm' ),
+			'og_image'    => 'images/og/og-automatisation-crm.jpg',
 			'breadcrumb'  => 'Automatisation CRM',
 			'article'     => array(
 				'headline' => "Automatisation CRM : un pipeline commercial qui se met à jour tout seul",
@@ -434,6 +442,7 @@ function eb_seo_data() {
 			'tw_title'    => "Prospection automatisée B2B : leads & relances",
 			'tw_desc'     => "Générez des leads B2B qualifiés grâce à l'automatisation LinkedIn et aux relances email.",
 			'canonical'   => eb_url( 'prospection-automatisee' ),
+			'og_image'    => 'images/og/og-prospection-automatisee.jpg',
 			'breadcrumb'  => 'Prospection automatisée',
 			'article'     => array(
 				'headline' => "Prospection automatisée : générez des leads B2B sans y passer vos journées",
@@ -454,6 +463,7 @@ function eb_seo_data() {
 			'tw_title'    => "RPA : robot logiciel pour vos documents",
 			'tw_desc'     => "Confiez le traitement documentaire répétitif à un robot logiciel grâce à la RPA.",
 			'canonical'   => eb_url( 'rpa' ),
+			'og_image'    => 'images/og/og-rpa.jpg',
 			'breadcrumb'  => 'RPA',
 			'article'     => array(
 				'headline' => "RPA : un robot logiciel pour vos tâches documentaires répétitives",
