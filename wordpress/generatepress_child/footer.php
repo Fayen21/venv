@@ -26,7 +26,7 @@ if ( ! defined( 'ABSPATH' ) ) {
       </div>
     </div>
     <div>
-      <div class="site-footer__heading">Expertises</div>
+      <div class="site-footer__heading">Expertises métier</div>
       <div class="site-footer__links">
         <a href="<?php echo esc_url( eb_url( 'automatisation-entreprise' ) ); ?>">Automatisation entreprise</a>
         <a href="<?php echo esc_url( eb_url( 'automatisation-processus' ) ); ?>">Automatisation des processus</a>
@@ -39,7 +39,7 @@ if ( ! defined( 'ABSPATH' ) ) {
         <a href="<?php echo esc_url( eb_url( 'automatisation-taches' ) ); ?>">Automatisation des tâches</a>
         <a href="<?php echo esc_url( eb_url( 'agence-ia' ) ); ?>">Agence IA</a>
       </div>
-      <div class="site-footer__heading" style="margin-top:24px;">Outils</div>
+      <div class="site-footer__heading site-footer__heading--outils">Outils &amp; plateformes</div>
       <div class="site-footer__links">
         <a href="<?php echo esc_url( eb_url( 'automatisation-excel' ) ); ?>">Automatisation Excel</a>
         <a href="<?php echo esc_url( eb_url( 'automatisation-outlook' ) ); ?>">Automatisation Outlook</a>
