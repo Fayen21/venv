@@ -84,11 +84,15 @@
   });
 })();
 
-// Bouton "retour en haut" : apparaît après un peu de défilement, remonte en douceur.
+// Bouton "retour en haut" : apparaît après un peu de défilement, remonte en douceur,
+// et se décale vers le haut quand le footer arrive en vue pour ne jamais recouvrir
+// les liens légaux.
 (function () {
   var btn = document.getElementById('back-to-top');
+  var footer = document.querySelector('.site-footer');
   if (!btn) return;
   var SHOW_AFTER = 500;
+  var SAFE_GAP = 24;
 
   function toggle() {
     if (window.scrollY > SHOW_AFTER) {
@@ -96,9 +100,18 @@
     } else {
       btn.classList.remove('is-visible');
     }
+    if (!footer) return;
+    var footerTop = footer.getBoundingClientRect().top;
+    var overlap = window.innerHeight - footerTop;
+    if (overlap > SAFE_GAP) {
+      btn.style.bottom = (overlap + SAFE_GAP) + 'px';
+    } else {
+      btn.style.bottom = '';
+    }
   }
 
   window.addEventListener('scroll', toggle, { passive: true });
+  window.addEventListener('resize', toggle);
   toggle();
 
   btn.addEventListener('click', function () {

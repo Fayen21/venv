@@ -10,55 +10,59 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 <footer class="site-footer">
   <div class="site-footer__grid">
-    <div>
+    <div class="site-footer__identity">
       <div class="site-footer__logo"><img src="<?php echo esc_url( eb_asset( 'images/uploads/156c3b91-a695-438b-b9d7-6828e90ea7ac.png' ) ); ?>" alt="EB Automatisation" width="180" height="77" loading="lazy"></div>
       <p class="site-footer__desc">Consultant indépendant en automatisation &amp; IA pour les dirigeants de TPE-PME françaises.</p>
       <a href="<?php echo esc_url( eb_url( 'audit' ) ); ?>" class="site-footer__cta">Audit gratuit →</a>
     </div>
-    <div>
-      <div class="site-footer__heading">Navigation</div>
-      <div class="site-footer__links">
-        <a href="<?php echo esc_url( eb_url( 'index' ) ); ?>">Accueil</a>
-        <a href="<?php echo esc_url( eb_url( 'solutions' ) ); ?>">Solutions</a>
-        <a href="<?php echo esc_url( eb_url( 'realisations' ) ); ?>">Réalisations</a>
-        <a href="<?php echo esc_url( eb_url( 'apropos' ) ); ?>">À propos</a>
-        <a href="<?php echo esc_url( eb_url( 'audit' ) ); ?>">Audit gratuit</a>
+    <div class="site-footer__nav">
+      <div class="site-footer__col">
+        <div class="site-footer__heading">Navigation</div>
+        <div class="site-footer__links">
+          <a href="<?php echo esc_url( eb_url( 'index' ) ); ?>">Accueil</a>
+          <a href="<?php echo esc_url( eb_url( 'solutions' ) ); ?>">Solutions</a>
+          <a href="<?php echo esc_url( eb_url( 'realisations' ) ); ?>">Réalisations</a>
+          <a href="<?php echo esc_url( eb_url( 'apropos' ) ); ?>">À propos</a>
+          <a href="<?php echo esc_url( eb_url( 'audit' ) ); ?>">Audit gratuit</a>
+        </div>
       </div>
-    </div>
-    <div>
-      <div class="site-footer__heading">Expertises métier</div>
-      <div class="site-footer__links">
-        <a href="<?php echo esc_url( eb_url( 'automatisation-entreprise' ) ); ?>">Automatisation entreprise</a>
-        <a href="<?php echo esc_url( eb_url( 'automatisation-processus' ) ); ?>">Automatisation des processus</a>
-        <a href="<?php echo esc_url( eb_url( 'automatisation-ia' ) ); ?>">Automatisation IA</a>
-        <a href="<?php echo esc_url( eb_url( 'automatisation-comptable' ) ); ?>">Automatisation comptable</a>
-        <a href="<?php echo esc_url( eb_url( 'automatisation-rh' ) ); ?>">Automatisation RH</a>
-        <a href="<?php echo esc_url( eb_url( 'automatisation-crm' ) ); ?>">Automatisation CRM</a>
-        <a href="<?php echo esc_url( eb_url( 'prospection-automatisee' ) ); ?>">Prospection automatisée</a>
-        <a href="<?php echo esc_url( eb_url( 'rpa' ) ); ?>">RPA</a>
-        <a href="<?php echo esc_url( eb_url( 'automatisation-taches' ) ); ?>">Automatisation des tâches</a>
-        <a href="<?php echo esc_url( eb_url( 'agence-ia' ) ); ?>">Agence IA</a>
+      <div class="site-footer__col">
+        <div class="site-footer__heading">Expertises métier</div>
+        <div class="site-footer__links">
+          <a href="<?php echo esc_url( eb_url( 'automatisation-entreprise' ) ); ?>">Automatisation entreprise</a>
+          <a href="<?php echo esc_url( eb_url( 'automatisation-processus' ) ); ?>">Automatisation des processus</a>
+          <a href="<?php echo esc_url( eb_url( 'automatisation-ia' ) ); ?>">Automatisation IA</a>
+          <a href="<?php echo esc_url( eb_url( 'automatisation-comptable' ) ); ?>">Automatisation comptable</a>
+          <a href="<?php echo esc_url( eb_url( 'automatisation-rh' ) ); ?>">Automatisation RH</a>
+          <a href="<?php echo esc_url( eb_url( 'automatisation-crm' ) ); ?>">Automatisation CRM</a>
+          <a href="<?php echo esc_url( eb_url( 'prospection-automatisee' ) ); ?>">Prospection automatisée</a>
+          <a href="<?php echo esc_url( eb_url( 'rpa' ) ); ?>">RPA</a>
+          <a href="<?php echo esc_url( eb_url( 'automatisation-taches' ) ); ?>">Automatisation des tâches</a>
+          <a href="<?php echo esc_url( eb_url( 'agence-ia' ) ); ?>">Agence IA</a>
+        </div>
       </div>
-      <div class="site-footer__heading site-footer__heading--outils">Outils &amp; plateformes</div>
-      <div class="site-footer__links">
-        <a href="<?php echo esc_url( eb_url( 'automatisation-excel' ) ); ?>">Automatisation Excel</a>
-        <a href="<?php echo esc_url( eb_url( 'automatisation-outlook' ) ); ?>">Automatisation Outlook</a>
-        <a href="<?php echo esc_url( eb_url( 'automatisation-microsoft-365' ) ); ?>">Automatisation Microsoft 365</a>
-        <a href="<?php echo esc_url( eb_url( 'consultant-make' ) ); ?>">Consultant Make</a>
-        <a href="<?php echo esc_url( eb_url( 'consultant-n8n' ) ); ?>">Consultant n8n</a>
-        <a href="<?php echo esc_url( eb_url( 'automatisation-ocr' ) ); ?>">Automatisation OCR</a>
-        <a href="<?php echo esc_url( eb_url( 'extraction-pdf' ) ); ?>">Extraction de données PDF</a>
-        <a href="<?php echo esc_url( eb_url( 'automatisation-facturation' ) ); ?>">Automatisation facturation</a>
+      <div class="site-footer__col">
+        <div class="site-footer__heading">Outils &amp; plateformes</div>
+        <div class="site-footer__links">
+          <a href="<?php echo esc_url( eb_url( 'automatisation-excel' ) ); ?>">Automatisation Excel</a>
+          <a href="<?php echo esc_url( eb_url( 'automatisation-outlook' ) ); ?>">Automatisation Outlook</a>
+          <a href="<?php echo esc_url( eb_url( 'automatisation-microsoft-365' ) ); ?>">Automatisation Microsoft 365</a>
+          <a href="<?php echo esc_url( eb_url( 'consultant-make' ) ); ?>">Consultant Make</a>
+          <a href="<?php echo esc_url( eb_url( 'consultant-n8n' ) ); ?>">Consultant n8n</a>
+          <a href="<?php echo esc_url( eb_url( 'automatisation-ocr' ) ); ?>">Automatisation OCR</a>
+          <a href="<?php echo esc_url( eb_url( 'extraction-pdf' ) ); ?>">Extraction de données PDF</a>
+          <a href="<?php echo esc_url( eb_url( 'automatisation-facturation' ) ); ?>">Automatisation facturation</a>
+        </div>
       </div>
-    </div>
-    <div>
-      <div class="site-footer__heading">Contact</div>
-      <div class="site-footer__contact">
-        <span class="site-footer__contact-name">Emmanuel Brançon</span>
-        <a href="mailto:contact@eb-automatisation.fr">contact@eb-automatisation.fr</a>
-        <a href="tel:+33695204127">06 95 20 41 27</a>
-        <span>Réponse sous 24h · France, à distance</span>
-        <span>21850 Saint-Apollinaire</span>
+      <div class="site-footer__col">
+        <div class="site-footer__heading">Contact</div>
+        <div class="site-footer__contact">
+          <span class="site-footer__contact-name">Emmanuel Brançon</span>
+          <a href="mailto:contact@eb-automatisation.fr">contact@eb-automatisation.fr</a>
+          <a href="tel:+33695204127">06 95 20 41 27</a>
+          <span>Réponse sous 24h · France, à distance</span>
+          <span>21850 Saint-Apollinaire</span>
+        </div>
       </div>
     </div>
   </div>

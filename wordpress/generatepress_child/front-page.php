@@ -123,42 +123,45 @@ get_header();
       <div class="card automations__card">
         <div class="icon-tile icon-tile--a"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M4 6.5l8 6 8-6"></path></svg></div>
         <h3>Emails et relances</h3>
-        <p class="automations__example">Factures impayées détectées et relances personnalisées envoyées au bon moment, sans oubli.</p>
+        <p class="automations__example"><strong>Factures impayées</strong> détectées et relances personnalisées envoyées au bon moment, sans oubli.</p>
         <div class="automations__gain"><span class="automations__gain-value">−38%</span><span class="automations__gain-label">de retards de paiement</span></div>
       </div>
 
       <div class="card automations__card">
         <div class="icon-tile icon-tile--b"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"></rect><line x1="8" y1="8" x2="16" y2="8"></line><line x1="8" y1="12" x2="16" y2="12"></line><line x1="8" y1="16" x2="13" y2="16"></line></svg></div>
         <h3>Excel, PDF et OCR</h3>
-        <p class="automations__example">Données lues et extraites de vos fichiers Excel et PDF, puis rangées sans aucune ressaisie.</p>
+        <p class="automations__example">Données lues et extraites de vos fichiers <a href="<?php echo esc_url( eb_url('automatisation-excel') ); ?>">Excel</a> et <a href="<?php echo esc_url( eb_url('extraction-pdf') ); ?>">PDF</a>, puis rangées sans aucune ressaisie.</p>
         <div class="automations__gain"><span class="automations__gain-value">−72%</span><span class="automations__gain-label">de temps de saisie</span></div>
       </div>
 
-      <div class="card automations__card">
+      <a href="<?php echo esc_url( eb_url('automatisation-crm') ); ?>" class="card automations__card automations__card--link">
         <div class="icon-tile icon-tile--a"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7z"></path></svg></div>
+        <span class="automations__card__chevron" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></span>
         <h3>CRM et suivi commercial</h3>
-        <p class="automations__example">Chaque demande entrante crée une fiche et une tâche de suivi dans votre CRM.</p>
+        <p class="automations__example">Chaque demande entrante crée une <strong>fiche et une tâche de suivi</strong> dans votre CRM.</p>
         <div class="automations__gain"><span class="automations__gain-value">0</span><span class="automations__gain-label">prospect oublié</span></div>
-      </div>
+      </a>
 
-      <div class="card automations__card">
+      <a href="<?php echo esc_url( eb_url('automatisation-rh') ); ?>" class="card automations__card automations__card--link">
         <div class="icon-tile icon-tile--b"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"></circle><circle cx="17" cy="9" r="2.4"></circle><path d="M3.5 19.5a5.5 5.5 0 0 1 11 0"></path><path d="M14.5 19.5a4.5 4.5 0 0 1 7.5-3.3"></path></svg></div>
+        <span class="automations__card__chevron" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></span>
         <h3>Ressources humaines</h3>
-        <p class="automations__example">Onboarding automatisé : contrat, accès et dossier d'accueil prêts pour le premier jour.</p>
+        <p class="automations__example">Onboarding automatisé : <strong>contrat, accès et dossier d'accueil</strong> prêts pour le premier jour.</p>
         <div class="automations__gain"><span class="automations__gain-value">2 jours</span><span class="automations__gain-label">gagnés à chaque embauche</span></div>
-      </div>
+      </a>
 
-      <div class="card automations__card">
+      <a href="<?php echo esc_url( eb_url('automatisation-comptable') ); ?>" class="card automations__card automations__card--link">
         <div class="icon-tile icon-tile--a"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="5" y1="19" x2="5" y2="12"></line><line x1="12" y1="19" x2="12" y2="7"></line><line x1="19" y1="19" x2="19" y2="14"></line></svg></div>
+        <span class="automations__card__chevron" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></span>
         <h3>Comptabilité</h3>
-        <p class="automations__example">Rapprochement bancaire et contrôles de cohérence automatisés, anomalies signalées.</p>
+        <p class="automations__example"><strong>Rapprochement bancaire</strong> et contrôles de cohérence automatisés, anomalies signalées.</p>
         <div class="automations__gain"><span class="automations__gain-value">−85%</span><span class="automations__gain-label">de temps de rapprochement</span></div>
-      </div>
+      </a>
 
       <div class="card automations__card">
-        <div class="icon-tile icon-tile--b"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="5" y1="19" x2="5" y2="12"></line><line x1="12" y1="19" x2="12" y2="7"></line><line x1="19" y1="19" x2="19" y2="14"></line></svg></div>
+        <div class="icon-tile icon-tile--b"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="14" width="7" height="7" rx="1.5"></rect><rect x="3" y="14" width="7" height="7" rx="1.5"></rect></svg></div>
         <h3>Reporting</h3>
-        <p class="automations__example">Vos chiffres consolidés depuis vos outils, tableaux de bord mis à jour automatiquement.</p>
+        <p class="automations__example">Vos chiffres consolidés depuis vos outils, <strong>tableaux de bord mis à jour automatiquement</strong>.</p>
         <div class="automations__gain"><span class="automations__gain-value">Auto</span><span class="automations__gain-label">tableaux toujours à jour</span></div>
       </div>
 
@@ -198,26 +201,33 @@ get_header();
       <h2 style="max-width:760px;margin:0 auto;">Pourquoi automatiser maintenant, et ce que coûte vraiment d'attendre</h2>
     </div>
     <div class="differentiators__intro">
-      <p style="margin-bottom:12px;">La question n'est presque jamais « faut-il automatiser un jour ? », mais « combien de temps ce report coûte-t-il déjà ? ». Une tâche répétitive non automatisée ne disparaît pas : elle continue, semaine après semaine, à consommer des heures qui ne sont jamais comptabilisées comme une dépense — alors qu'elles en sont une. Trois facteurs rendent 2026 un moment particulièrement pertinent pour s'y mettre : les outils d'automatisation et d'IA sont devenus accessibles à des budgets de TPE-PME, la compatibilité avec les logiciels existants (Excel, Outlook, CRM, comptabilité) est aujourd'hui excellente, et l'écart se creuse avec les entreprises qui ont déjà commencé.</p>
-      <p>Le coût de l'inaction se mesure en trois strates. La première est directe : le temps passé sur des ressaisies, des tris et des relances manuelles — souvent 5 à 10 heures par semaine pour une PME de 15 à 25 salariés, soit plusieurs semaines de travail sur une année. La deuxième est indirecte : les erreurs de saisie non détectées, les relances oubliées, les décisions prises sur un tableau de bord obsolète. La troisième est stratégique : le temps que vos équipes ne consacrent pas à l'analyse, à la relation client ou à la vente parce qu'il est absorbé par la saisie.</p>
+      <p>La question n'est presque jamais « faut-il automatiser un jour ? », mais « <strong>combien ce report coûte-t-il déjà ?</strong> ». Les outils sont désormais accessibles aux budgets TPE-PME, compatibles avec vos outils existants (<a href="<?php echo esc_url( eb_url('automatisation-excel') ); ?>">Excel</a>, <a href="<?php echo esc_url( eb_url('automatisation-outlook') ); ?>">Outlook</a>, <a href="<?php echo esc_url( eb_url('automatisation-crm') ); ?>">CRM</a>, <a href="<?php echo esc_url( eb_url('automatisation-comptable') ); ?>">comptabilité</a>), et l'écart se creuse avec les entreprises qui ont déjà commencé.</p>
+    </div>
+    <div class="cost-callout">
+      <span class="cost-callout__value">5 à 10 h</span>
+      <span class="cost-callout__label">perdues <strong>chaque semaine</strong> dans une PME de 15 à 25 salariés, sur les ressaisies, tris et relances manuelles.</span>
     </div>
     <div class="grid grid-3">
-      <div class="card differentiators__card">
+      <div class="card differentiators__card cost-card">
         <div class="icon-tile icon-tile--a"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"></circle><path d="M12 8v4.5l3 2"></path></svg></div>
+        <span class="cost-card__tag">Coût direct</span>
         <h3>≈ 240 h perdues par an</h3>
-        <p>5 heures par semaine de ressaisies évitables, cumulées, représentent environ six semaines de travail à temps plein chaque année.</p>
+        <p><strong>5 heures par semaine</strong> de ressaisies évitables, cumulées, représentent environ <strong>six semaines</strong> de travail à temps plein chaque année.</p>
       </div>
-      <div class="card differentiators__card">
+      <div class="card differentiators__card cost-card">
         <div class="icon-tile icon-tile--b"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4M12 17h.01"></path><path d="M10.3 3.9L2.6 17.5a1.6 1.6 0 0 0 1.4 2.4h16a1.6 1.6 0 0 0 1.4-2.4L13.7 3.9a1.6 1.6 0 0 0-2.8 0z"></path></svg></div>
+        <span class="cost-card__tag">Coût indirect</span>
         <h3>Des erreurs invisibles jusqu'à ce qu'elles coûtent cher</h3>
-        <p>Écarts comptables détectés trop tard, relances client oubliées : le coût réel apparaît souvent après coup, quand il aurait pu être évité.</p>
+        <p>Écarts comptables détectés trop tard, relances client oubliées : le <strong>coût réel apparaît après coup</strong>, quand il aurait pu être évité.</p>
       </div>
-      <div class="card differentiators__card">
+      <div class="card differentiators__card cost-card">
         <div class="icon-tile icon-tile--a"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M12 3l7 6.5L12 21 5 9.5z"></path></svg></div>
+        <span class="cost-card__tag">Coût stratégique</span>
         <h3>Un écart qui se creuse</h3>
-        <p>Chaque mois sans automatisation est un mois où des concurrents, eux, prennent de l'avance sur leur réactivité et leur coût de fonctionnement.</p>
+        <p>Chaque mois sans automatisation est un mois où vos <strong>concurrents prennent de l'avance</strong> sur leur réactivité et leur coût de fonctionnement.</p>
       </div>
     </div>
+    <p class="text-center" style="margin-top:30px;"><a href="<?php echo esc_url( eb_url('audit') ); ?>" class="btn-text">Estimer le coût de votre inaction →</a></p>
   </section>
 
   <!-- vous gardez vos outils -->
@@ -226,21 +236,22 @@ get_header();
       <span class="badge-pill badge-pill--green">🔒 Aucune migration</span>
       <h2 class="trust-tools__title">Compatible avec les outils que vous utilisez déjà</h2>
       <p class="trust-tools__desc">Aucune migration. Aucun changement d'habitude pour vos équipes.</p>
-      <div class="tools-grid">
-        <div class="tools-grid__item"><span class="tools-grid__abbr" style="background:#0A6FC2;color:#fff;">O</span>Outlook</div>
-        <div class="tools-grid__item"><span class="tools-grid__abbr" style="background:#1D6F42;color:#fff;">X</span>Excel</div>
-        <div class="tools-grid__item"><span class="tools-grid__abbr" style="background:#EB3C00;color:#fff;">365</span>Microsoft 365</div>
-        <div class="tools-grid__item"><span class="tools-grid__abbr" style="background:#EA4335;color:#fff;">G</span>Google Workspace</div>
-        <div class="tools-grid__item"><span class="tools-grid__abbr" style="background:#00D639;color:#0C2E14;">S</span>Sage</div>
-        <div class="tools-grid__item"><span class="tools-grid__abbr" style="background:#0C1E3C;color:#fff;">Q</span>Qonto</div>
-        <div class="tools-grid__item"><span class="tools-grid__abbr" style="background:#2E2AEB;color:#fff;">P</span>Pennylane</div>
-        <div class="tools-grid__item"><span class="tools-grid__abbr" style="background:#111111;color:#fff;">N</span>Notion</div>
-        <div class="tools-grid__item"><span class="tools-grid__abbr" style="background:#FF5C35;color:#fff;">H</span>HubSpot</div>
-        <div class="tools-grid__item"><span class="tools-grid__abbr" style="background:#1A1A1A;color:#fff;">Pd</span>Pipedrive</div>
-        <div class="tools-grid__item"><span class="tools-grid__abbr" style="background:#6D00CC;color:#fff;">M</span>Make</div>
-        <div class="tools-grid__item"><span class="tools-grid__abbr" style="background:#EA4B71;color:#fff;">n8</span>n8n</div>
-        <div class="tools-grid__item"><span class="tools-grid__abbr" style="background:#F29200;color:#fff;">Og</span>Ogust</div>
+      <div class="tool-chip-grid tool-chip-grid--home">
+        <a href="<?php echo esc_url( eb_url('automatisation-outlook') ); ?>" class="tool-chip tool-chip--link"><span class="tool-chip__abbr" style="background:#0A6FC2;color:#fff;">O</span>Outlook<span class="tool-chip__chevron" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></span></a>
+        <a href="<?php echo esc_url( eb_url('automatisation-excel') ); ?>" class="tool-chip tool-chip--link"><span class="tool-chip__abbr" style="background:#1D6F42;color:#fff;">X</span>Excel<span class="tool-chip__chevron" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></span></a>
+        <a href="<?php echo esc_url( eb_url('automatisation-microsoft-365') ); ?>" class="tool-chip tool-chip--link"><span class="tool-chip__abbr" style="background:#EB3C00;color:#fff;">365</span>Microsoft 365<span class="tool-chip__chevron" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></span></a>
+        <div class="tool-chip"><span class="tool-chip__abbr" style="background:#EA4335;color:#fff;">G</span>Google Workspace</div>
+        <div class="tool-chip"><span class="tool-chip__abbr" style="background:#00D639;color:#0C2E14;">S</span>Sage</div>
+        <div class="tool-chip"><span class="tool-chip__abbr" style="background:#0C1E3C;color:#fff;">Q</span>Qonto</div>
+        <div class="tool-chip"><span class="tool-chip__abbr" style="background:#2E2AEB;color:#fff;">P</span>Pennylane</div>
+        <div class="tool-chip"><span class="tool-chip__abbr" style="background:#111111;color:#fff;">N</span>Notion</div>
+        <div class="tool-chip"><span class="tool-chip__abbr" style="background:#FF5C35;color:#fff;">H</span>HubSpot</div>
+        <div class="tool-chip"><span class="tool-chip__abbr" style="background:#1A1A1A;color:#fff;">Pd</span>Pipedrive</div>
+        <a href="<?php echo esc_url( eb_url('consultant-make') ); ?>" class="tool-chip tool-chip--link"><span class="tool-chip__abbr" style="background:#6D00CC;color:#fff;">M</span>Make<span class="tool-chip__chevron" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></span></a>
+        <a href="<?php echo esc_url( eb_url('consultant-n8n') ); ?>" class="tool-chip tool-chip--link"><span class="tool-chip__abbr" style="background:#EA4B71;color:#fff;">n8</span>n8n<span class="tool-chip__chevron" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></span></a>
+        <div class="tool-chip"><span class="tool-chip__abbr" style="background:#F29200;color:#fff;">Og</span>Ogust</div>
       </div>
+      <p class="trust-tools__note">Les outils marqués d'une flèche renvoient vers une page dédiée.</p>
     </div>
   </section>
 
@@ -476,8 +487,8 @@ get_header();
     </div>
     <div class="differentiators__intro" style="margin-top:44px;">
       <h2 style="font-size:26px;">Les technologies utilisées, sans jargon inutile</h2>
-      <p style="margin-bottom:12px;">Techniquement, la quasi-totalité des projets s'appuient sur trois briques : <a href="<?php echo esc_url( eb_url('consultant-make') ); ?>">Make</a> ou <a href="<?php echo esc_url( eb_url('consultant-n8n') ); ?>">n8n</a> pour orchestrer les échanges entre vos logiciels, Python pour les traitements sur mesure quand un connecteur standard ne suffit pas, et des modèles de langage pour la <a href="<?php echo esc_url( eb_url('automatisation-ia') ); ?>">lecture et la compréhension</a> de documents non structurés (emails, PDF, scans). Le choix entre ces briques n'est jamais fait par préférence technologique : il dépend uniquement de ce qui rend votre automatisation la plus fiable et la plus simple à maintenir dans la durée.</p>
-      <p>Un principe reste constant sur chaque projet : ces technologies s'ajoutent à vos outils existants, elles ne les remplacent pas. Vous continuez à utiliser Excel, Outlook, votre CRM ou votre logiciel comptable exactement comme avant.</p>
+      <p style="margin-bottom:12px;">Techniquement, la quasi-totalité des projets s'appuient sur trois briques : <a href="<?php echo esc_url( eb_url('consultant-make') ); ?>">Make</a> ou <a href="<?php echo esc_url( eb_url('consultant-n8n') ); ?>">n8n</a> pour orchestrer les échanges entre vos logiciels, Python pour les traitements sur mesure quand un connecteur standard ne suffit pas, et des modèles de langage pour la <a href="<?php echo esc_url( eb_url('automatisation-ia') ); ?>">lecture et la compréhension</a> de documents non structurés : emails, <a href="<?php echo esc_url( eb_url('extraction-pdf') ); ?>">PDF</a>, ou scans traités par <a href="<?php echo esc_url( eb_url('automatisation-ocr') ); ?>">OCR</a>. Le choix entre ces briques n'est jamais fait par préférence technologique : il dépend uniquement de <strong>ce qui rend votre automatisation la plus fiable</strong> et la plus simple à maintenir dans la durée.</p>
+      <p>Un principe reste constant sur chaque projet : <strong>ces technologies s'ajoutent à vos outils existants, elles ne les remplacent pas</strong>. Vous continuez à utiliser <a href="<?php echo esc_url( eb_url('automatisation-excel') ); ?>">Excel</a>, <a href="<?php echo esc_url( eb_url('automatisation-outlook') ); ?>">Outlook</a>, votre <a href="<?php echo esc_url( eb_url('automatisation-crm') ); ?>">CRM</a> ou votre <a href="<?php echo esc_url( eb_url('automatisation-comptable') ); ?>">logiciel comptable</a> exactement comme avant.</p>
     </div>
   </section>
 

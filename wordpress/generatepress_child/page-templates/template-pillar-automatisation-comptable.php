@@ -104,7 +104,7 @@ if ( ! defined( 'ABSPATH' ) ) {
         <div class="tool-chip"><span class="tool-chip__abbr" style="background:#0C1E3C;color:#fff;">C</span>Cegid</div>
         <div class="tool-chip"><span class="tool-chip__abbr" style="background:#7C5CFC;color:#fff;">Q</span>Quadra</div>
         <div class="tool-chip"><span class="tool-chip__abbr" style="background:#0C1E3C;color:#fff;">Q</span>Qonto</div>
-        <div class="tool-chip"><span class="tool-chip__abbr" style="background:#1D6F42;color:#fff;">X</span>Excel</div>
+        <a href="<?php echo esc_url( eb_url('automatisation-excel') ); ?>" class="tool-chip tool-chip--link"><span class="tool-chip__abbr" style="background:#1D6F42;color:#fff;">X</span>Excel<span class="tool-chip__chevron" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></span></a>
       </div>
     </div>
 

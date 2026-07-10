@@ -16,6 +16,13 @@
 
 .is-hidden{ display:none !important; }
 
+/* ---------- editorial content widths ---------- */
+/* Conteneurs de texte réutilisables : évite les blocs coupés artificiellement
+   au milieu de la page (colonne étroite + vide à droite sans justification). */
+.content-narrow{ max-width:720px; margin-inline:auto; }
+.content-reading{ max-width:920px; margin-inline:auto; }
+.content-wide{ max-width:1140px; margin-inline:auto; }
+
 .skip-link{
   position:absolute;
   top:-48px;

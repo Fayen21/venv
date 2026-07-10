@@ -107,15 +107,50 @@
 .workflow-step.is-done .workflow-step__badge{ color:#5BCB8B;background:rgba(91,203,139,.12); }
 
 /* ============ ce que j'automatise ============ */
-.automations__grid{ gap:20px; }
-.automations__card{ padding:28px;display:flex;flex-direction:column;height:100%; }
+.automations__grid{ gap:20px; align-items:stretch; }
+.automations__card{ padding:28px;display:flex;flex-direction:column;height:100%; position:relative; }
 .automations__example{ font-size:14.5px;line-height:1.55;color:#5A6880;margin:0 0 18px;flex:1; }
+.automations__example strong{ color:var(--text-5);font-weight:700; }
+.automations__example a{ font-weight:600; }
 .automations__gain{ border-top:1px solid var(--border);padding-top:14px;display:flex;align-items:center;gap:9px; }
 .automations__gain-value{ font-family:var(--font-heading);font-weight:700;font-size:17px;color:var(--green); }
 .automations__gain-label{ font-size:12.5px;color:var(--muted); }
 .automations__footnote{ text-align:center;font-size:13.5px;color:var(--muted);margin:26px auto 0;max-width:640px;line-height:1.55; }
 
+/* cartes cliquables : mêmes proportions que .automations__card, affordance de lien ajoutée */
+.automations__card--link{
+  text-decoration:none;color:inherit;cursor:pointer;
+  transition:transform .16s ease,box-shadow .16s ease,border-color .16s ease;
+}
+.automations__card--link:hover{ transform:translateY(-3px);box-shadow:var(--shadow-card);border-color:var(--border-5); }
+.automations__card--link:focus-visible{ outline:2px solid var(--orange);outline-offset:3px; }
+.automations__card__chevron{
+  position:absolute;top:26px;right:22px;color:var(--muted);opacity:.55;
+  transition:transform .16s ease,opacity .16s ease;
+}
+.automations__card--link:hover .automations__card__chevron,
+.automations__card--link:focus-visible .automations__card__chevron{ transform:translateX(3px);opacity:1; }
+
 /* différenciation : voir .differentiators__intro / .differentiators__card dans components.css (partagé avec solutions/apropos) */
+
+/* ============ pourquoi maintenant : encadré chiffre + cartes de coût ============ */
+.cost-callout{
+  display:flex;align-items:center;gap:20px;
+  background:var(--orange-soft-bg);border:1px solid var(--orange-soft-border);
+  border-radius:var(--r-4xl);padding:22px 30px;margin:0 auto 32px;max-width:920px;
+}
+.cost-callout__value{
+  font-family:var(--font-heading);font-weight:700;font-size:30px;color:var(--orange-a11y);
+  flex:none;letter-spacing:-.02em;
+}
+.cost-callout__label{ font-size:14.5px;line-height:1.5;color:var(--text-3); }
+.cost-card__tag{
+  display:block;font-size:11.5px;font-weight:700;text-transform:uppercase;
+  letter-spacing:.08em;color:var(--text-3);margin-bottom:8px;
+}
+@media (max-width:640px){
+  .cost-callout{ flex-direction:column;text-align:center;gap:8px;padding:24px; }
+}
 
 /* ============ vous gardez vos outils ============ */
 .trust-tools{
@@ -125,20 +160,8 @@
 .trust-tools .badge-pill{ margin-bottom:18px; }
 .trust-tools__title{ font-size:32px;letter-spacing:-.02em;color:var(--navy);margin:0 0 12px; }
 .trust-tools__desc{ font-size:17px;line-height:1.55;color:var(--text-3);margin:0 auto 32px;max-width:560px; }
-.tools-grid{
-  display:grid;grid-template-columns:repeat(auto-fit,minmax(158px,1fr));
-  gap:12px;max-width:960px;margin:0 auto;
-}
-.tools-grid__item{
-  display:flex;align-items:center;gap:12px;
-  font-family:var(--font-heading);font-weight:600;font-size:15px;color:var(--navy);
-  background:#fff;border:1px solid var(--border-4);padding:13px 16px;border-radius:var(--r-lg);
-}
-.tools-grid__abbr{
-  width:34px;height:34px;flex:none;border-radius:var(--r-sm);
-  display:flex;align-items:center;justify-content:center;
-  font-family:var(--font-heading);font-weight:700;font-size:13px;letter-spacing:-.02em;
-}
+.trust-tools__note{ font-size:12.5px;color:var(--muted);margin:20px auto 0; }
+/* .tool-chip-grid / .tool-chip : voir components.css (composant partagé avec solutions/réalisations/apropos/piliers) */
 
 /* ============ preuves sociales ============ */
 .proof-cases__grid{ gap:20px; }
@@ -414,7 +437,6 @@
   .bank-apres,
   .flow-diagram,
   .proof-case__compare,
-  .tools-grid,
   .faq-grid{
     grid-template-columns:1fr;
   }
@@ -435,6 +457,5 @@
   .audit-why{ padding:28px; grid-template-columns:1fr; text-align:center; }
   .audit-why__icon{ margin:0 auto; }
   .automations__grid,.proof-cases__grid,.pricing__grid,.audit-steps,.value-props__grid{ gap:26px; }
-  .tools-grid{ grid-template-columns:repeat(2,1fr); }
   .audit-step__rule{ display:none; }
 }

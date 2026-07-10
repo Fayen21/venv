@@ -10,7 +10,7 @@
 .pillar-breadcrumb__current{ color:var(--navy); font-weight:600; }
 
 /* ---------- hero ---------- */
-.pillar-hero{ max-width:820px; margin-bottom:56px; }
+.pillar-hero{ max-width:820px; margin:0 auto 56px; }
 .pillar-hero__eyebrow{ margin-bottom:16px; }
 .pillar-hero h1{ font-size:44px; line-height:1.1; letter-spacing:-.025em; margin:0 0 20px; }
 .pillar-hero__intro{ font-size:18px; line-height:1.62; color:var(--text-2); margin:0; }
@@ -23,7 +23,7 @@
 .pillar-mock img{ display:block; width:100%; height:auto; }
 
 /* ---------- sections de contenu ---------- */
-.pillar-section{ max-width:820px; margin-bottom:48px; }
+.pillar-section{ max-width:820px; margin:0 auto 48px; }
 .pillar-section h2{ font-size:28px; letter-spacing:-.02em; margin:0 0 18px; line-height:1.2; }
 .pillar-section p{ font-size:16px; line-height:1.68; color:var(--text-3); margin:0 0 16px; }
 .pillar-section p:last-child{ margin-bottom:0; }
@@ -59,7 +59,7 @@
 .pillar-mid-cta .btn-primary{ padding:14px 24px; font-size:15px; border-radius:10px; white-space:nowrap; box-shadow:none; }
 
 /* ---------- FAQ (liste simple, une colonne) ---------- */
-.pillar-faq{ max-width:820px; margin-bottom:56px; }
+.pillar-faq{ max-width:820px; margin:0 auto 56px; }
 .pillar-faq h2{ font-size:28px; letter-spacing:-.02em; margin:0 0 8px; }
 .pillar-faq__item{ padding:22px 0; border-top:1px solid var(--border); }
 .pillar-faq__item h3{ font-size:17px; margin:0 0 8px; }
@@ -98,7 +98,7 @@
 .pillar-compare__col--after .pillar-compare__item span{ color:var(--green); }
 
 /* ==================== tableau comparatif (réutilise les tokens existants) ==================== */
-.pillar-table{ margin:56px 0; max-width:820px; }
+.pillar-table{ margin:56px auto; max-width:820px; }
 .pillar-table h2{ font-size:28px; letter-spacing:-.02em; margin:0 0 18px; }
 .pillar-table__wrap{ overflow-x:auto; border:1px solid var(--border-2); border-radius:16px; }
 .pillar-table table{ width:100%; border-collapse:collapse; font-size:14.5px; min-width:520px; }
