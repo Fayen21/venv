@@ -54,7 +54,7 @@ if ( ! defined( 'ABSPATH' ) ) {
       </div>
       <div class="pillar-section__sub">
         <h3>Saisie comptable automatique : comment ça marche</h3>
-        <p>La facture arrive par email ou par scan, l'OCR en extrait le montant, la TVA, le fournisseur et la date, puis un brouillon d'écriture est généré directement dans votre logiciel comptable. Vous validez, l'automatisation ne remplace jamais votre contrôle sur les points sensibles. Cette lecture automatique de documents s'appuie sur les mêmes briques que la <a href="<?php echo esc_url( eb_url('rpa') ); ?>">RPA</a> et l'extraction de données PDF.</p>
+        <p>La facture arrive par email ou par scan, l'<a href="<?php echo esc_url( eb_url('automatisation-ocr') ); ?>">OCR</a> en extrait le montant, la TVA, le fournisseur et la date, puis un brouillon d'écriture est généré directement dans votre logiciel comptable. Vous validez, l'automatisation ne remplace jamais votre contrôle sur les points sensibles. Cette lecture automatique de documents s'appuie sur les mêmes briques que la <a href="<?php echo esc_url( eb_url('rpa') ); ?>">RPA</a> et l'<a href="<?php echo esc_url( eb_url('extraction-pdf') ); ?>">extraction de données PDF</a>. Le cycle complet, du devis à l'encaissement, est détaillé sur la page <a href="<?php echo esc_url( eb_url('automatisation-facturation') ); ?>">automatisation de la facturation</a>.</p>
       </div>
     </div>
 

@@ -133,6 +133,21 @@ if ( ! defined( 'ABSPATH' ) ) {
         <h3>Consultant n8n</h3>
         <p>Workflows open-source, hébergement maîtrisé et connexions API sur mesure pour les projets techniques.</p>
       </a>
+      <a class="card differentiators__card" style="text-align:left;text-decoration:none;" href="<?php echo esc_url( eb_url('automatisation-ocr') ); ?>">
+        <div class="icon-tile icon-tile--b"><span class="tool-chip__abbr" style="background:#3776AB;color:#fff;display:inline-flex;">OC</span></div>
+        <h3>Automatisation OCR</h3>
+        <p>Lisez et exploitez automatiquement vos documents scannés ou photographiés, sans ressaisie.</p>
+      </a>
+      <a class="card differentiators__card" style="text-align:left;text-decoration:none;" href="<?php echo esc_url( eb_url('extraction-pdf') ); ?>">
+        <div class="icon-tile icon-tile--a"><span class="tool-chip__abbr" style="background:#C3272B;color:#fff;display:inline-flex;">PDF</span></div>
+        <h3>Extraction de données PDF</h3>
+        <p>Devis, bons de commande, contrats : extrayez automatiquement les données de vos PDF natifs ou scannés.</p>
+      </a>
+      <a class="card differentiators__card" style="text-align:left;text-decoration:none;" href="<?php echo esc_url( eb_url('automatisation-facturation') ); ?>">
+        <div class="icon-tile icon-tile--b"><span class="tool-chip__abbr" style="background:#1E8A6E;color:#fff;display:inline-flex;">€</span></div>
+        <h3>Automatisation de la facturation</h3>
+        <p>Du devis au paiement : génération, envoi, relances et rapprochement automatisés.</p>
+      </a>
     </div>
   </section>
 
@@ -415,32 +430,16 @@ if ( ! defined( 'ABSPATH' ) ) {
     </div>
     <div class="faq-grid">
       <div class="faq-item">
-        <h3>Combien de temps pour mettre en place une automatisation ?</h3>
-        <p>Les premiers résultats arrivent souvent en quelques jours à quelques semaines, selon la complexité du processus.</p>
+        <h3>Par où commencer si plusieurs domaines me semblent pertinents ?</h3>
+        <p>Commencez par celui où le temps perdu est le plus visible et le plus facile à chiffrer, quitte à élargir ensuite. L'audit gratuit sert précisément à trancher objectivement entre plusieurs pistes.</p>
       </div>
       <div class="faq-item">
-        <h3>Mes données sont-elles en sécurité ?</h3>
-        <p>Oui. Je travaille dans le respect du RGPD, sur vos propres outils, sans revente ni exposition de vos données.</p>
+        <h3>Ces solutions sont-elles vendues comme des forfaits fixes ?</h3>
+        <p>Non. Chaque solution présentée ici est une famille de cas d'usage, pas un produit standard : le périmètre exact et le chiffrage se construisent avec vous après audit.</p>
       </div>
       <div class="faq-item">
-        <h3>Faut-il changer de logiciels ?</h3>
-        <p>Non. Je m'appuie sur vos outils existants — Sage, Qonto, Excel, Outlook… — et je les connecte entre eux.</p>
-      </div>
-      <div class="faq-item">
-        <h3>Et si je veux internaliser plus tard ?</h3>
-        <p>Tout est documenté et vous appartient. Vous restez parfaitement autonome, sans dépendance à moi.</p>
-      </div>
-      <div class="faq-item">
-        <h3>Combien coûte une automatisation ?</h3>
-        <p>Chaque projet est différent. Certaines automatisations simples démarrent autour de 800 €, tandis que les projets plus complets font l'objet d'un devis après audit.</p>
-      </div>
-      <div class="faq-item">
-        <h3>Ai-je besoin d'une équipe informatique ?</h3>
-        <p>Non. Je m'occupe de la conception, du déploiement et de la documentation. Vous utilisez simplement les résultats.</p>
-      </div>
-      <div class="faq-item">
-        <h3>Comment choisir par quel domaine commencer ?</h3>
-        <p>Le critère le plus fiable est le temps perdu le plus visible et le plus facile à quantifier. L'audit gratuit permet d'objectiver ce choix plutôt que de le deviner.</p>
+        <h3>Comment cette page s'articule avec les pages piliers et les pages Outils ?</h3>
+        <p>Cette page distribue vers deux niveaux de détail : les 3 piliers (méthode par domaine) pour comprendre l'approche, et les pages Outils pour un outil précis (Excel, Outlook, Make, n8n, Microsoft 365).</p>
       </div>
       <div class="faq-item">
         <h3>Peut-on combiner plusieurs de ces solutions dans un même projet ?</h3>

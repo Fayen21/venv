@@ -60,7 +60,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
     <div class="pillar-section">
       <h2>Ce que je propose, concrètement</h2>
-      <p>Un audit gratuit de 45 minutes pour identifier les automatisations les plus rentables, un chiffrage clair avant tout engagement, une mise en place sur les outils que vous utilisez déjà, et une documentation complète qui vous laisse propriétaire de chaque automatisation livrée.</p>
+      <p>Un audit gratuit de 45 minutes pour identifier les automatisations les plus rentables, un chiffrage clair avant tout engagement, une mise en place sur les outils que vous utilisez déjà, et une documentation complète qui vous laisse propriétaire de chaque automatisation livrée. Ce positionnement n'est pas un argument marketing : <a href="<?php echo esc_url( eb_url('apropos') ); ?>">découvrir mon parcours et ma méthode</a> permet de vérifier d'où vient cette approche.</p>
     </div>
 
     <!-- cas d'usage -->

@@ -46,6 +46,9 @@ if ( ! defined( 'ABSPATH' ) ) {
         <a href="<?php echo esc_url( eb_url( 'automatisation-microsoft-365' ) ); ?>">Automatisation Microsoft 365</a>
         <a href="<?php echo esc_url( eb_url( 'consultant-make' ) ); ?>">Consultant Make</a>
         <a href="<?php echo esc_url( eb_url( 'consultant-n8n' ) ); ?>">Consultant n8n</a>
+        <a href="<?php echo esc_url( eb_url( 'automatisation-ocr' ) ); ?>">Automatisation OCR</a>
+        <a href="<?php echo esc_url( eb_url( 'extraction-pdf' ) ); ?>">Extraction de données PDF</a>
+        <a href="<?php echo esc_url( eb_url( 'automatisation-facturation' ) ); ?>">Automatisation facturation</a>
       </div>
     </div>
     <div>

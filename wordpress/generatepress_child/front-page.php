@@ -721,6 +721,7 @@ get_header();
     <div class="profile-quote">
       <p>Je ne suis pas seulement un spécialiste de l'automatisation. Je suis <span class="profile-quote__accent">un professionnel de la gestion qui automatise ce qu'il maîtrise déjà.</span></p>
     </div>
+    <p class="text-center" style="margin-top:18px;"><a href="<?php echo esc_url( eb_url('apropos') ); ?>" class="btn-text">Découvrir mon parcours et ma méthode →</a></p>
   </section>
 
   <!-- final CTA -->
