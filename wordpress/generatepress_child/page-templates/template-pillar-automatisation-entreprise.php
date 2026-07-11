@@ -39,18 +39,18 @@ if ( ! defined( 'ABSPATH' ) ) {
     <!-- sections -->
     <div class="pillar-section">
       <h2>Automatiser une entreprise, ce n'est pas automatiser au hasard</h2>
-      <p>L'erreur la plus fréquente consiste à acheter un outil tendance avant d'avoir cartographié où part réellement le temps de l'équipe. Un logiciel puissant mal ciblé n'apporte aucun gain — il ajoute même une charge d'apprentissage. La bonne séquence est inverse : identifier les tâches et processus les plus chronophages, puis choisir l'outil ou le scénario d'automatisation adapté à chacun.</p>
+      <p>L'erreur la plus fréquente consiste à acheter un outil tendance avant d'avoir cartographié où part réellement le temps de l'équipe. Un logiciel puissant mal ciblé n'apporte aucun gain — il ajoute même une charge d'apprentissage. <strong>La bonne séquence est inverse</strong> : identifier les tâches et processus les plus chronophages, puis choisir l'outil ou le scénario d'automatisation adapté à chacun.</p>
     </div>
 
     <div class="pillar-section">
       <h2>Les services où l'automatisation rapporte le plus dans une TPE-PME</h2>
       <div class="pillar-section__sub">
         <h3>RH</h3>
-        <p>L'onboarding est souvent le premier gain visible : contrat, accès et dossier d'accueil générés dès la validation d'une embauche, au lieu de deux jours de préparation manuelle dispersée sur plusieurs outils. Voir le détail de l'<a href="<?php echo esc_url( eb_url('automatisation-rh') ); ?>">automatisation RH</a>.</p>
+        <p>L'onboarding est souvent le premier gain visible : contrat, accès et dossier d'accueil générés dès la validation d'une embauche, <strong>au lieu de deux jours de préparation manuelle</strong> dispersée sur plusieurs outils. Voir le détail de l'<a href="<?php echo esc_url( eb_url('automatisation-rh') ); ?>">automatisation RH</a>.</p>
       </div>
       <div class="pillar-section__sub">
         <h3>Comptabilité et finance</h3>
-        <p>Rapprochement bancaire automatisé, relances clients personnalisées, détection d'anomalies avant clôture : c'est souvent le service avec le ratio gain de temps / effort de mise en place le plus élevé. Voir le détail de l'<a href="<?php echo esc_url( eb_url('automatisation-comptable') ); ?>">automatisation comptable</a>.</p>
+        <p>Rapprochement bancaire automatisé, relances clients personnalisées, détection d'anomalies avant clôture : c'est souvent <strong>le service avec le ratio gain de temps / effort de mise en place le plus élevé</strong>. Voir le détail de l'<a href="<?php echo esc_url( eb_url('automatisation-comptable') ); ?>">automatisation comptable</a>.</p>
       </div>
       <div class="pillar-section__sub">
         <h3>Commercial et CRM</h3>
@@ -74,8 +74,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
     <div class="pillar-section">
       <h2>Le coût réel de l'inaction</h2>
-      <p>Une entreprise qui ne mesure pas le temps perdu en tâches répétitives ne le voit pas disparaître pour autant : il se déplace, dilué dans les journées de chacun. À raison de 5 heures par semaine passées sur des ressaisies évitables — une estimation basse pour une PME de 15 à 25 salariés — ce sont environ 240 heures par an, soit l'équivalent de six semaines de travail à temps plein, immobilisées sur des tâches sans valeur ajoutée. À cela s'ajoute un coût plus difficile à chiffrer mais tout aussi réel : les erreurs de saisie non détectées, les relances oubliées qui coûtent un client, les décisions prises sur un tableau de bord obsolète de plusieurs semaines. Attendre « le bon moment » pour automatiser revient souvent à laisser ce coût s'accumuler silencieusement pendant que des concurrents, eux, ont déjà commencé.</p>
-      <p>Le raisonnement inverse est tout aussi important : il n'est pas nécessaire d'attendre une grande transformation digitale pour démarrer. La bonne approche est incrémentale — une automatisation ciblée, un gain mesuré, puis la suivante — plutôt qu'un grand projet qui repousse indéfiniment le premier résultat concret.</p>
+      <p>Une entreprise qui ne mesure pas le temps perdu en tâches répétitives ne le voit pas disparaître pour autant : il se déplace, dilué dans les journées de chacun. À raison de <strong>5 heures par semaine</strong> passées sur des ressaisies évitables — une estimation basse pour une PME de 15 à 25 salariés — ce sont <strong>environ 240 heures par an, soit l'équivalent de six semaines de travail à temps plein</strong>, immobilisées sur des tâches sans valeur ajoutée. À cela s'ajoute un coût plus difficile à chiffrer mais tout aussi réel : les erreurs de saisie non détectées, les relances oubliées qui coûtent un client, les décisions prises sur un tableau de bord obsolète de plusieurs semaines. Attendre « le bon moment » pour automatiser revient souvent à laisser ce coût s'accumuler silencieusement pendant que des concurrents, eux, ont déjà commencé.</p>
+      <p>Le raisonnement inverse est tout aussi important : il n'est pas nécessaire d'attendre une grande transformation digitale pour démarrer. <strong>La bonne approche est incrémentale</strong> — une automatisation ciblée, un gain mesuré, puis la suivante — plutôt qu'un grand projet qui repousse indéfiniment le premier résultat concret.</p>
     </div>
 
     <div class="pillar-section">
@@ -85,7 +85,7 @@ if ( ! defined( 'ABSPATH' ) ) {
         <div class="pillar-section__list-item"><span>✕</span>Vouloir tout automatiser en même temps plutôt que de sécuriser un premier gain rapide et mesurable.</div>
         <div class="pillar-section__list-item"><span>✕</span>Négliger les cas particuliers et les exceptions, qui finissent par représenter plus de travail correctif que la tâche automatisée n'en faisait gagner.</div>
         <div class="pillar-section__list-item"><span>✕</span>Ne pas impliquer les équipes concernées, ce qui génère de la résistance au changement même quand l'automatisation leur profite directement.</div>
-        <div class="pillar-section__list-item"><span>✕</span>Confondre automatisation et migration d'outil : dans la grande majorité des cas, vos logiciels actuels suffisent.</div>
+        <div class="pillar-section__list-item"><span>✕</span>Confondre automatisation et migration d'outil : <strong>dans la grande majorité des cas, vos logiciels actuels suffisent</strong>.</div>
       </div>
     </div>
 

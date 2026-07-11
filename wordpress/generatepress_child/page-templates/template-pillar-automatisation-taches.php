@@ -39,14 +39,14 @@ if ( ! defined( 'ABSPATH' ) ) {
     <!-- sections -->
     <div class="pillar-section">
       <h2>Pourquoi commencer par les tâches plutôt que par les processus</h2>
-      <p>Une tâche automatisée se met en place en quelques jours et son gain se mesure immédiatement — contrairement à un processus complet, qui demande une cartographie plus longue. Pour un dirigeant qui découvre l'automatisation, commencer petit permet de constater un résultat concret avant d'investir dans un projet plus ambitieux.</p>
+      <p><strong>Une tâche automatisée se met en place en quelques jours et son gain se mesure immédiatement</strong> — contrairement à un processus complet, qui demande une cartographie plus longue. Pour un dirigeant qui découvre l'automatisation, commencer petit permet de constater un résultat concret avant d'investir dans un projet plus ambitieux.</p>
     </div>
 
     <div class="pillar-section">
       <h2>Les tâches les plus fréquemment automatisées</h2>
       <div class="pillar-section__list">
         <div class="pillar-section__list-item"><span>✓</span>Renommer et classer des fichiers et pièces jointes selon leur contenu.</div>
-        <div class="pillar-section__list-item"><span>✓</span>Ressaisir une donnée d'un outil vers un autre (email → CRM, facture → comptabilité).</div>
+        <div class="pillar-section__list-item"><span>✓</span><strong>Ressaisir une donnée d'un outil vers un autre</strong> (email → CRM, facture → comptabilité).</div>
         <div class="pillar-section__list-item"><span>✓</span>Envoyer une relance ou un rappel à échéance fixe.</div>
         <div class="pillar-section__list-item"><span>✓</span>Mettre à jour un tableau de suivi à partir d'une nouvelle donnée reçue.</div>
         <div class="pillar-section__list-item"><span>✓</span>Extraire une information précise d'un document (montant, date, référence).</div>
@@ -55,7 +55,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
     <div class="pillar-section">
       <h2>Une tâche automatisée n'est jamais vraiment isolée</h2>
-      <p>En observant une tâche de près pour l'automatiser, on découvre presque toujours une inefficacité voisine : la même donnée ressaisie ailleurs, une étape manuelle juste avant ou après — par exemple une facture qui finit par être ressaisie en <a href="<?php echo esc_url( eb_url('automatisation-comptable') ); ?>">automatisation comptable</a>. Une automatisation de tâche bien menée devient donc souvent le point d'entrée naturel vers un processus plus large, voire vers un véritable <a href="<?php echo esc_url( eb_url('rpa') ); ?>">robot logiciel</a> une fois la confiance établie.</p>
+      <p>En observant une tâche de près pour l'automatiser, on découvre presque toujours <strong>une inefficacité voisine</strong> : la même donnée ressaisie ailleurs, une étape manuelle juste avant ou après — par exemple une facture qui finit par être ressaisie en <a href="<?php echo esc_url( eb_url('automatisation-comptable') ); ?>">automatisation comptable</a>. Une automatisation de tâche bien menée devient donc souvent le point d'entrée naturel vers un processus plus large, voire vers un véritable <a href="<?php echo esc_url( eb_url('rpa') ); ?>">robot logiciel</a> une fois la confiance établie.</p>
     </div>
 
     <div class="pillar-section">
@@ -105,7 +105,7 @@ if ( ! defined( 'ABSPATH' ) ) {
       <div class="pillar-flow__row">
         <div class="pillar-flow__step"><span class="pillar-flow__icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="5"></circle><circle cx="12" cy="12" r="1"></circle></svg></span><span class="pillar-flow__step-label">Tâche isolée</span></div>
         <span class="pillar-flow__arrow">→</span>
-        <div class="pillar-flow__step"><span class="pillar-flow__icon">⚡</span><span class="pillar-flow__step-label">Automatisation rapide</span></div>
+        <div class="pillar-flow__step"><span class="pillar-flow__icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h8l-1 8 10-12h-8l1-8z"></path></svg></span><span class="pillar-flow__step-label">Automatisation rapide</span></div>
         <span class="pillar-flow__arrow">→</span>
         <div class="pillar-flow__step"><span class="pillar-flow__icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"></path><path d="M15 7h6v6"></path></svg></span><span class="pillar-flow__step-label">Gain mesuré</span></div>
         <span class="pillar-flow__arrow">→</span>

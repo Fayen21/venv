@@ -24,7 +24,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div class="pillar-hero">
       <div class="eyebrow pillar-hero__eyebrow">Outils · Microsoft 365</div>
       <h1>Automatisation Microsoft 365 : connectez Outlook, Excel, Teams et SharePoint</h1>
-      <p class="pillar-hero__intro">La plupart des TPE-PME françaises utilisent déjà Microsoft 365 sans exploiter tout son potentiel d'automatisation : Outlook, Excel, Teams et SharePoint fonctionnent souvent en silos, chacun alimenté à la main. L'automatisation Microsoft 365 fait circuler l'information entre ces outils sans ressaisie, en s'appuyant sur la suite que vous payez déjà — sans licence supplémentaire ni changement d'écosystème.</p>
+      <p class="pillar-hero__intro">La plupart des TPE-PME françaises utilisent déjà Microsoft 365 sans exploiter tout son potentiel d'automatisation : Outlook, Excel, Teams et SharePoint fonctionnent souvent en silos, chacun alimenté à la main. <strong>L'automatisation Microsoft 365 fait circuler l'information entre ces outils sans ressaisie</strong>, en s'appuyant sur la suite que vous payez déjà — sans licence supplémentaire ni changement d'écosystème.</p>
       <div class="pillar-hero__actions">
         <a href="<?php echo esc_url( eb_url('audit') ); ?>" class="btn btn-primary">Identifier vos automatisations rentables <span>→</span></a>
         <a href="<?php echo esc_url( eb_url('solutions') ); ?>" class="btn btn-secondary">Voir toutes les solutions</a>
@@ -33,18 +33,18 @@ if ( ! defined( 'ABSPATH' ) ) {
 
     <div class="pillar-section">
       <h2>Le potentiel inexploité de votre abonnement Microsoft 365</h2>
-      <p>Une PME qui utilise Microsoft 365 dispose déjà de tout un écosystème connecté par nature : Outlook pour les emails, Excel pour les données, Teams pour la communication interne, SharePoint pour le stockage documentaire, et Power Automate en toile de fond pour orchestrer l'ensemble. Le problème n'est presque jamais l'outil, mais l'absence de scénarios construits pour exploiter ces connexions : chaque application est utilisée isolément, comme si les autres n'existaient pas.</p>
+      <p>Une PME qui utilise Microsoft 365 dispose déjà de tout un écosystème connecté par nature : Outlook pour les emails, Excel pour les données, Teams pour la communication interne, SharePoint pour le stockage documentaire, et Power Automate en toile de fond pour orchestrer l'ensemble. <strong>Le problème n'est presque jamais l'outil, mais l'absence de scénarios construits pour exploiter ces connexions</strong> : chaque application est utilisée isolément, comme si les autres n'existaient pas.</p>
       <p>L'automatisation Microsoft 365 consiste précisément à faire circuler l'information d'une application à l'autre selon des règles définies avec vous, en s'appuyant sur ce que vous possédez déjà plutôt que d'ajouter un nouvel outil au-dessus.</p>
     </div>
 
     <div class="pillar-section">
       <h2>Ce que je peux automatiser dans votre environnement Microsoft 365</h2>
       <div class="pillar-section__list">
-        <div class="pillar-section__list-item"><span>✓</span>Un email Outlook classé déclenche l'archivage automatique de sa pièce jointe dans le bon dossier SharePoint.</div>
+        <div class="pillar-section__list-item"><span>✓</span>Un email Outlook classé déclenche <strong>l'archivage automatique de sa pièce jointe</strong> dans le bon dossier SharePoint.</div>
         <div class="pillar-section__list-item"><span>✓</span>Une notification Teams envoyée automatiquement à la bonne équipe dès qu'un document important est ajouté.</div>
         <div class="pillar-section__list-item"><span>✓</span>Un fichier Excel mis à jour automatiquement à partir de formulaires ou de données collectées ailleurs dans la suite.</div>
         <div class="pillar-section__list-item"><span>✓</span>Une approbation demandée automatiquement dans Teams avant qu'un document ne soit publié ou envoyé.</div>
-        <div class="pillar-section__list-item"><span>✓</span>Un tableau de bord SharePoint alimenté en continu depuis vos autres outils métier.</div>
+        <div class="pillar-section__list-item"><span>✓</span>Un <strong>tableau de bord SharePoint alimenté en continu</strong> depuis vos autres outils métier.</div>
       </div>
     </div>
 

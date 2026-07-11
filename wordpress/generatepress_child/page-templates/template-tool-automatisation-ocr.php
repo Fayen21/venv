@@ -24,7 +24,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div class="pillar-hero">
       <div class="eyebrow pillar-hero__eyebrow">Outils · OCR</div>
       <h1>Automatisation OCR : lisez et exploitez vos documents automatiquement</h1>
-      <p class="pillar-hero__intro">L'OCR (reconnaissance optique de caractères) permet à un ordinateur de lire un document scanné ou photographié comme s'il s'agissait de texte natif. Combiné à l'intelligence artificielle, il ne se contente plus de reconnaître des lettres : il comprend la structure du document — montant, date, fournisseur, référence — et transmet directement ces informations à vos outils, sans ressaisie manuelle.</p>
+      <p class="pillar-hero__intro">L'OCR (reconnaissance optique de caractères) permet à un ordinateur de lire un document scanné ou photographié comme s'il s'agissait de texte natif. Combiné à l'intelligence artificielle, il ne se contente plus de reconnaître des lettres : <strong>il comprend la structure du document</strong> — montant, date, fournisseur, référence — et transmet directement ces informations à vos outils, sans ressaisie manuelle.</p>
       <div class="pillar-hero__actions">
         <a href="<?php echo esc_url( eb_url('audit') ); ?>" class="btn btn-primary">Identifier vos automatisations rentables <span>→</span></a>
         <a href="<?php echo esc_url( eb_url('solutions') ); ?>" class="btn btn-secondary">Voir toutes les solutions</a>
@@ -34,15 +34,15 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div class="pillar-section">
       <h2>Qu'est-ce que l'OCR, et pourquoi ce n'est plus un simple scanner de texte</h2>
       <p>L'OCR historique se contentait de transformer une image en texte brut, sans en comprendre le sens — charge ensuite à un humain de relire et de ranger l'information au bon endroit. L'OCR moderne, associé à un modèle de langage, va plus loin : il identifie les champs qui comptent (montant TTC, date d'échéance, numéro de facture, nom du fournisseur) directement dans le document, quelle que soit sa mise en page, puis les transmet structurés à votre logiciel cible.</p>
-      <p>Pour une TPE-PME, cette évolution change concrètement ce qui devient automatisable : factures, notes de frais, bons de livraison, certificats, contrats — tout document reçu en PDF, scan ou photo peut désormais alimenter vos outils sans étape de saisie manuelle.</p>
+      <p>Pour une TPE-PME, cette évolution change concrètement ce qui devient automatisable : factures, notes de frais, bons de livraison, certificats, contrats — <strong>tout document reçu en PDF, scan ou photo peut désormais alimenter vos outils sans étape de saisie manuelle</strong>.</p>
     </div>
 
     <div class="pillar-section">
       <h2>Ce que je peux automatiser avec l'OCR</h2>
       <div class="pillar-section__list">
-        <div class="pillar-section__list-item"><span>✓</span>Lecture de factures fournisseurs et génération automatique de l'écriture comptable correspondante.</div>
+        <div class="pillar-section__list-item"><span>✓</span><strong>Lecture de factures fournisseurs</strong> et génération automatique de l'écriture comptable correspondante.</div>
         <div class="pillar-section__list-item"><span>✓</span>Extraction des notes de frais (montant, catégorie, date) depuis une simple photo de reçu.</div>
-        <div class="pillar-section__list-item"><span>✓</span>Vérification automatique de certificats et documents de conformité fournisseurs, avec alerte en cas de document manquant ou expiré.</div>
+        <div class="pillar-section__list-item"><span>✓</span>Vérification automatique de certificats et documents de conformité fournisseurs, avec <strong>alerte en cas de document manquant ou expiré</strong>.</div>
         <div class="pillar-section__list-item"><span>✓</span>Lecture de bons de commande ou bons de livraison pour mise à jour automatique du stock ou de la facturation.</div>
         <div class="pillar-section__list-item"><span>✓</span>Numérisation et classement automatique d'archives papier lors d'une reprise de dossiers.</div>
       </div>

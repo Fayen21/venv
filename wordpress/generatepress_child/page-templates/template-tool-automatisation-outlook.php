@@ -24,7 +24,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div class="pillar-hero">
       <div class="eyebrow pillar-hero__eyebrow">Outils · Outlook</div>
       <h1>Automatisation Outlook : triez, classez et traitez vos emails sans y passer vos journées</h1>
-      <p class="pillar-hero__intro">Un dirigeant de PME reçoit en moyenne plusieurs dizaines d'emails par jour : demandes clients, factures fournisseurs, relances internes, newsletters. Trier, classer et répondre à ce flux manuellement représente souvent une à deux heures perdues chaque jour. L'automatisation Outlook lit, catégorise et déclenche la bonne action automatiquement — sans changer votre messagerie ni votre façon de travailler.</p>
+      <p class="pillar-hero__intro">Un dirigeant de PME reçoit en moyenne plusieurs dizaines d'emails par jour : demandes clients, factures fournisseurs, relances internes, newsletters. Trier, classer et répondre à ce flux manuellement représente souvent <strong>une à deux heures perdues chaque jour</strong>. L'automatisation Outlook lit, catégorise et déclenche la bonne action automatiquement — sans changer votre messagerie ni votre façon de travailler.</p>
       <div class="pillar-hero__actions">
         <a href="<?php echo esc_url( eb_url('audit') ); ?>" class="btn btn-primary">Estimer votre gain de temps <span>→</span></a>
         <a href="<?php echo esc_url( eb_url('solutions') ); ?>" class="btn btn-secondary">Voir toutes les solutions</a>
@@ -33,16 +33,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 
     <div class="pillar-section">
       <h2>Pourquoi la boîte mail reste le principal goulot d'étranglement</h2>
-      <p>Contrairement à un logiciel métier, la boîte mail n'a pas de structure imposée : chaque message est un texte libre, avec sa propre mise en forme, son propre degré d'urgence, ses propres pièces jointes. C'est justement ce qui la rend difficile à automatiser avec des règles simples — et c'est précisément ce que l'automatisation IA sait faire : lire un email comme le ferait un assistant, en comprendre le contenu, et décider de l'action à mener.</p>
-      <p>Le résultat n'est pas une boîte mail « zéro humain » : c'est une boîte mail où le tri, le classement et les actions répétitives sont déjà faits quand vous l'ouvrez, pour vous laisser traiter en priorité ce qui demande réellement votre attention.</p>
+      <p>Contrairement à un logiciel métier, la boîte mail n'a pas de structure imposée : chaque message est un texte libre, avec sa propre mise en forme, son propre degré d'urgence, ses propres pièces jointes. C'est justement ce qui la rend difficile à automatiser avec des règles simples — et c'est précisément ce que l'automatisation IA sait faire : <strong>lire un email comme le ferait un assistant, en comprendre le contenu, et décider de l'action à mener</strong>.</p>
+      <p>Le résultat n'est pas une boîte mail « zéro humain » : <strong>c'est une boîte mail où le tri, le classement et les actions répétitives sont déjà faits quand vous l'ouvrez</strong>, pour vous laisser traiter en priorité ce qui demande réellement votre attention.</p>
     </div>
 
     <div class="pillar-section">
       <h2>Ce que je peux automatiser concrètement sur Outlook</h2>
       <div class="pillar-section__list">
-        <div class="pillar-section__list-item"><span>✓</span>Catégorisation automatique des emails entrants (commercial, RH, fournisseur, urgent) et affectation à la bonne personne.</div>
+        <div class="pillar-section__list-item"><span>✓</span><strong>Catégorisation automatique des emails entrants</strong> (commercial, RH, fournisseur, urgent) et affectation à la bonne personne.</div>
         <div class="pillar-section__list-item"><span>✓</span>Extraction des pièces jointes (factures, devis, contrats) et classement automatique dans le bon dossier ou le bon outil.</div>
-        <div class="pillar-section__list-item"><span>✓</span>Création automatique d'une tâche ou d'une fiche CRM à partir d'un email entrant, sans ressaisie.</div>
+        <div class="pillar-section__list-item"><span>✓</span>Création automatique d'une tâche ou d'une fiche CRM à partir d'un email entrant, <strong>sans ressaisie</strong>.</div>
         <div class="pillar-section__list-item"><span>✓</span>Réponses automatiques ou pré-rédigées pour les demandes récurrentes, avec validation avant envoi si souhaité.</div>
         <div class="pillar-section__list-item"><span>✓</span>Rappels et relances automatiques sur les emails restés sans réponse au-delà d'un délai défini.</div>
       </div>

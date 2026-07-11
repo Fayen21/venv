@@ -376,7 +376,7 @@ get_header();
             <div class="bank-avant__row"><span>Vir. client — DUPONT SARL</span><span class="mono">1 250,00</span><span class="ok">✓</span></div>
             <div class="bank-avant__row bank-avant__row--warn"><span>Prlvt — fournisseur ?</span><span class="mono bad">−380,40</span><span class="blink">?</span></div>
             <div class="bank-avant__row bank-avant__row--muted"><span>Frais bancaires</span><span class="mono">−12,90</span><span>○</span></div>
-            <div class="bank-avant__warning"><span>⚠</span> Pointage ligne à ligne · écarts repérés trop tard</div>
+            <div class="bank-avant__warning"><span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9L2.6 17.5a1.6 1.6 0 0 0 1.4 2.4h16a1.6 1.6 0 0 0 1.4-2.4L13.7 3.9a1.6 1.6 0 0 0-2.8 0z"></path><path d="M12 9v4M12 17h.01"></path></svg></span> Pointage ligne à ligne · écarts repérés trop tard</div>
           </div>
         </div>
         <div class="bank-avant__cost">

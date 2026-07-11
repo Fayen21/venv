@@ -39,18 +39,18 @@ if ( ! defined( 'ABSPATH' ) ) {
     <!-- le problème -->
     <div class="pillar-section">
       <h2>Le problème : des tâches répétitives qui n'ont pas besoin d'un humain</h2>
-      <p>Beaucoup de tâches administratives suivent une règle stricte et prévisible : ouvrir un document, y relever une information à un endroit précis, la reporter dans un tableur ou un logiciel métier. Ce n'est pas un travail qui demande du jugement — mais tant qu'il est fait à la main, il consomme du temps et reste exposé aux erreurs de saisie et aux oublis.</p>
-      <p>Le traitement documentaire (factures, bons de commande, relevés, formulaires) illustre bien ce problème : le volume de documents à traiter augmente avec l'activité, alors que le temps disponible pour les traiter, lui, n'augmente pas.</p>
+      <p>Beaucoup de tâches administratives suivent une règle stricte et prévisible : ouvrir un document, y relever une information à un endroit précis, la reporter dans un tableur ou un logiciel métier. Ce n'est pas un travail qui demande du jugement — mais tant qu'il est fait à la main, <strong>il consomme du temps et reste exposé aux erreurs de saisie</strong> et aux oublis.</p>
+      <p>Le traitement documentaire (factures, bons de commande, relevés, formulaires) illustre bien ce problème : <strong>le volume de documents à traiter augmente avec l'activité</strong>, alors que le temps disponible pour les traiter, lui, n'augmente pas.</p>
     </div>
 
     <!-- pourquoi automatiser -->
     <div class="pillar-section">
       <h2>Pourquoi mettre en place de la RPA</h2>
       <div class="pillar-section__list">
-        <div class="pillar-section__list-item"><span>✓</span>Cette automatisation robotisée des processus exécute la même règle des centaines de fois sans fatigue ni erreur d'inattention.</div>
+        <div class="pillar-section__list-item"><span>✓</span>Cette automatisation robotisée des processus <strong>exécute la même règle des centaines de fois sans fatigue ni erreur</strong> d'inattention.</div>
         <div class="pillar-section__list-item"><span>✓</span>L'OCR et l'extraction PDF suppriment la ressaisie manuelle de données déjà présentes dans un document.</div>
         <div class="pillar-section__list-item"><span>✓</span>La lecture automatique de documents s'adapte à des mises en page variées, pas seulement à un modèle unique.</div>
-        <div class="pillar-section__list-item"><span>✓</span>Le volume de documents traités peut augmenter sans augmenter la charge de travail de l'équipe.</div>
+        <div class="pillar-section__list-item"><span>✓</span>Le volume de documents traités peut <strong>augmenter sans augmenter la charge de travail</strong> de l'équipe.</div>
       </div>
     </div>
 
@@ -58,8 +58,8 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div class="pillar-section">
       <h2>Bénéfices concrets pour votre entreprise</h2>
       <div class="pillar-section__list">
-        <div class="pillar-section__list-item"><span>✓</span>Un traitement documentaire fiable, sans erreur de report entre deux outils.</div>
-        <div class="pillar-section__list-item"><span>✓</span>Des délais de traitement raccourcis, d'heures à minutes selon le volume.</div>
+        <div class="pillar-section__list-item"><span>✓</span>Un <strong>traitement documentaire fiable</strong>, sans erreur de report entre deux outils.</div>
+        <div class="pillar-section__list-item"><span>✓</span><strong>Des délais de traitement raccourcis, d'heures à minutes</strong> selon le volume.</div>
         <div class="pillar-section__list-item"><span>✓</span>Une équipe recentrée sur les cas particuliers, pendant que le robot logiciel gère les cas standards.</div>
         <div class="pillar-section__list-item"><span>✓</span>Une traçabilité complète de chaque document traité, utile en cas de contrôle.</div>
       </div>

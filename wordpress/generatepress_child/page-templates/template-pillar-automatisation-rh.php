@@ -24,7 +24,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div class="pillar-hero">
       <div class="eyebrow pillar-hero__eyebrow">Automatisation RH</div>
       <h1>Automatisation RH : de l'onboarding à la paie, sans ressaisie</h1>
-      <p class="pillar-hero__intro">Onboarding salarié, gestion des congés, préparation de la paie, signature électronique des contrats : la gestion RH d'une TPE-PME repose encore souvent sur des échanges d'emails et des tableurs. Un workflow RH automatisé connecte ces étapes entre elles, sans ajouter de logiciel supplémentaire à gérer.</p>
+      <p class="pillar-hero__intro">Onboarding salarié, gestion des congés, préparation de la paie, signature électronique des contrats : la gestion RH d'une TPE-PME repose encore souvent sur des échanges d'emails et des tableurs. <strong>Un workflow RH automatisé connecte ces étapes entre elles</strong>, sans ajouter de logiciel supplémentaire à gérer.</p>
       <div class="pillar-hero__actions">
         <a href="<?php echo esc_url( eb_url('realisations') ); ?>" class="btn btn-primary">Découvrir un cas concret <span>→</span></a>
         <a href="<?php echo esc_url( eb_url('solutions') ); ?>" class="btn btn-secondary">Voir toutes les solutions</a>
@@ -39,7 +39,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     <!-- le problème -->
     <div class="pillar-section">
       <h2>Le problème : la gestion RH se disperse entre emails et tableurs</h2>
-      <p>Une embauche déclenche une série de tâches administratives — contrat, accès aux outils, dossier d'accueil, déclarations — souvent réalisées manuellement, dans l'ordre où elles reviennent en mémoire plutôt que selon un processus fiable. Résultat : des oublis, des délais qui s'allongent, et un salarié qui arrive sans que tout soit prêt.</p>
+      <p>Une embauche déclenche une série de tâches administratives — contrat, accès aux outils, dossier d'accueil, déclarations — souvent réalisées manuellement, dans l'ordre où elles reviennent en mémoire plutôt que selon un processus fiable. Résultat : <strong>des oublis, des délais qui s'allongent</strong>, et un salarié qui arrive sans que tout soit prêt.</p>
       <p>La gestion des congés et la préparation de la paie suivent le même schéma : demandes par email, décompte manuel dans un tableur, variables de paie collectées service par service. Un recrutement automatisé et un workflow RH structuré éliminent cette dispersion sans nécessiter une nouvelle plateforme RH complexe.</p>
     </div>
 
@@ -47,9 +47,9 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div class="pillar-section">
       <h2>Pourquoi automatiser sa gestion RH</h2>
       <div class="pillar-section__list">
-        <div class="pillar-section__list-item"><span>✓</span>L'onboarding salarié devient un parcours fiable : contrat, accès et dossier d'accueil prêts avant le premier jour.</div>
+        <div class="pillar-section__list-item"><span>✓</span><strong>L'onboarding salarié devient un parcours fiable</strong> : contrat, accès et dossier d'accueil prêts avant le premier jour.</div>
         <div class="pillar-section__list-item"><span>✓</span>La signature électronique élimine les allers-retours papier et accélère la finalisation des contrats.</div>
-        <div class="pillar-section__list-item"><span>✓</span>La gestion des congés se synchronise automatiquement avec le logiciel de paie, sans ressaisie.</div>
+        <div class="pillar-section__list-item"><span>✓</span>La gestion des congés se synchronise automatiquement avec le logiciel de paie, <strong>sans ressaisie</strong>.</div>
         <div class="pillar-section__list-item"><span>✓</span>Le recrutement automatisé qualifie et trie les candidatures reçues, sans que rien ne se perde entre email et tableur.</div>
       </div>
     </div>
@@ -58,9 +58,9 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div class="pillar-section">
       <h2>Bénéfices concrets pour votre entreprise</h2>
       <div class="pillar-section__list">
-        <div class="pillar-section__list-item"><span>✓</span>Des arrivées de salariés préparées en heures plutôt qu'en jours, sans oubli d'accès ou de document.</div>
+        <div class="pillar-section__list-item"><span>✓</span><strong>Des arrivées de salariés préparées en heures plutôt qu'en jours</strong>, sans oubli d'accès ou de document.</div>
         <div class="pillar-section__list-item"><span>✓</span>Des variables de paie collectées et consolidées automatiquement avant chaque échéance.</div>
-        <div class="pillar-section__list-item"><span>✓</span>Une équipe RH qui passe moins de temps sur l'administratif répétitif et davantage sur l'accompagnement des équipes.</div>
+        <div class="pillar-section__list-item"><span>✓</span>Une équipe RH qui passe <strong>moins de temps sur l'administratif répétitif</strong> et davantage sur l'accompagnement des équipes.</div>
         <div class="pillar-section__list-item"><span>✓</span>Une traçabilité complète des demandes de congés et des documents signés, sans classeur ni fil d'emails à retrouver.</div>
       </div>
     </div>
@@ -110,7 +110,7 @@ if ( ! defined( 'ABSPATH' ) ) {
       <div class="pillar-flow__row">
         <div class="pillar-flow__step"><span class="pillar-flow__icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M8.5 12.5l2.3 2.3 4.7-4.8"></path></svg></span><span class="pillar-flow__step-label">Embauche validée</span></div>
         <span class="pillar-flow__arrow">→</span>
-        <div class="pillar-flow__step"><span class="pillar-flow__icon">✍️</span><span class="pillar-flow__step-label">Contrat signé électroniquement</span></div>
+        <div class="pillar-flow__step"><span class="pillar-flow__icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.85 2.85 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5z"></path></svg></span><span class="pillar-flow__step-label">Contrat signé électroniquement</span></div>
         <span class="pillar-flow__arrow">→</span>
         <div class="pillar-flow__step"><span class="pillar-flow__icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="15" r="4"></circle><path d="M11 12l8-8M16 7l2 2M13 10l2 2"></path></svg></span><span class="pillar-flow__step-label">Accès créés</span></div>
         <span class="pillar-flow__arrow">→</span>
@@ -154,11 +154,11 @@ if ( ! defined( 'ABSPATH' ) ) {
       </div>
       <div class="pillar-faq__item">
         <h3>La signature électronique a-t-elle une valeur légale ?</h3>
-        <p>Oui, la signature électronique est reconnue juridiquement en France dès lors qu'elle passe par un prestataire certifié. Elle s'intègre au workflow RH pour accélérer la finalisation des contrats sans étape papier.</p>
+        <p>Oui, <strong>la signature électronique est reconnue juridiquement en France</strong> dès lors qu'elle passe par un prestataire certifié. Elle s'intègre au workflow RH pour accélérer la finalisation des contrats sans étape papier.</p>
       </div>
       <div class="pillar-faq__item">
         <h3>Faut-il un logiciel de paie spécifique pour automatiser la gestion RH ?</h3>
-        <p>Non. L'automatisation se construit autour de votre logiciel de paie actuel : elle alimente les variables et les décomptes de congés automatiquement, sans imposer de changement d'outil.</p>
+        <p>Non. <strong>L'automatisation se construit autour de votre logiciel de paie actuel</strong> : elle alimente les variables et les décomptes de congés automatiquement, sans imposer de changement d'outil.</p>
       </div>
       <div class="pillar-faq__item">
         <h3>Le recrutement automatisé remplace-t-il le recruteur ?</h3>

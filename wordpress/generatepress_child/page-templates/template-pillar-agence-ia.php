@@ -40,27 +40,27 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div class="pillar-section">
       <h2>Agence IA : ce que ça recouvre en pratique</h2>
       <p>Sous cette même appellation cohabitent des studios spécialisés en développement IA sur mesure, des agences marketing ayant ajouté « IA » à leur offre ces deux dernières années, et des plateformes no-code qui revendent de l'intégration. Le niveau d'expertise métier réelle — comprendre vos processus administratifs, comptables ou RH avant de les automatiser — varie énormément derrière une appellation identique.</p>
-      <p>Pour une TPE-PME, le risque n'est pas de mal choisir une technologie, mais de payer une structure dimensionnée pour des projets bien plus lourds que le vôtre, avec des coûts de gestion de compte qui ne créent aucune valeur pour votre automatisation.</p>
+      <p>Pour une TPE-PME, <strong>le risque n'est pas de mal choisir une technologie, mais de payer une structure dimensionnée pour des projets bien plus lourds que le vôtre</strong>, avec des coûts de gestion de compte qui ne créent aucune valeur pour votre automatisation.</p>
     </div>
 
     <div class="pillar-section">
       <h2>Pourquoi un consultant indépendant peut être un meilleur choix pour une TPE-PME</h2>
       <div class="pillar-section__list">
-        <div class="pillar-section__list-item"><span>✓</span>Un seul interlocuteur du premier échange à la mise en production — pas de chef de projet qui traduit entre vous et un développeur qui ne vous a jamais parlé.</div>
+        <div class="pillar-section__list-item"><span>✓</span><strong>Un seul interlocuteur du premier échange à la mise en production</strong> — pas de chef de projet qui traduit entre vous et un développeur qui ne vous a jamais parlé.</div>
         <div class="pillar-section__list-item"><span>✓</span>Une expertise métier réelle (gestion, comptabilité, RH) avant la couche technique : l'automatisation part de votre processus, pas d'une technologie à vendre.</div>
-        <div class="pillar-section__list-item"><span>✓</span>Une structure de coûts plus légère qu'une agence, sans marge de gestion de compte ni de commercial à financer.</div>
+        <div class="pillar-section__list-item"><span>✓</span>Une <strong>structure de coûts plus légère qu'une agence</strong>, sans marge de gestion de compte ni de commercial à financer.</div>
         <div class="pillar-section__list-item"><span>✓</span>Une relation dans la durée : c'est la même personne qui a conçu l'automatisation qui la fait évoluer six mois plus tard.</div>
       </div>
     </div>
 
     <div class="pillar-section">
       <h2>Quand une agence reste le bon choix</h2>
-      <p>Il faut être honnête : si votre projet nécessite une équipe pluridisciplinaire sur plusieurs mois — un produit IA à part entière, une infrastructure dédiée, des développements front et back en parallèle — une agence structurée a davantage de sens qu'un consultant seul. Pour l'automatisation ciblée d'un service ou d'un processus métier, en revanche, un consultant indépendant est le plus souvent plus rapide, plus économique et plus simple à piloter au quotidien.</p>
+      <p>Il faut être honnête : si votre projet nécessite une équipe pluridisciplinaire sur plusieurs mois — un produit IA à part entière, une infrastructure dédiée, des développements front et back en parallèle — une agence structurée a davantage de sens qu'un consultant seul. Pour l'automatisation ciblée d'un service ou d'un processus métier, en revanche, un consultant indépendant est le plus souvent <strong>plus rapide, plus économique et plus simple à piloter</strong> au quotidien.</p>
     </div>
 
     <div class="pillar-section">
       <h2>Ce que je propose, concrètement</h2>
-      <p>Un audit gratuit de 45 minutes pour identifier les automatisations les plus rentables, un chiffrage clair avant tout engagement, une mise en place sur les outils que vous utilisez déjà, et une documentation complète qui vous laisse propriétaire de chaque automatisation livrée. Ce positionnement n'est pas un argument marketing : <a href="<?php echo esc_url( eb_url('apropos') ); ?>">découvrir mon parcours et ma méthode</a> permet de vérifier d'où vient cette approche.</p>
+      <p><strong>Un audit gratuit de 45 minutes</strong> pour identifier les automatisations les plus rentables, un chiffrage clair avant tout engagement, une mise en place sur les outils que vous utilisez déjà, et une documentation complète qui vous laisse propriétaire de chaque automatisation livrée. Ce positionnement n'est pas un argument marketing : <a href="<?php echo esc_url( eb_url('apropos') ); ?>">découvrir mon parcours et ma méthode</a> permet de vérifier d'où vient cette approche.</p>
     </div>
 
     <!-- cas d'usage -->

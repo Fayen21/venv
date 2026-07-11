@@ -39,17 +39,17 @@ if ( ! defined( 'ABSPATH' ) ) {
     <!-- le problème -->
     <div class="pillar-section">
       <h2>Le problème : un CRM que personne ne met vraiment à jour</h2>
-      <p>Un CRM PME est censé centraliser le suivi commercial, mais dans la pratique, la saisie manuelle prend du retard : une demande reçue par email n'est pas toujours créée dans le CRM, une relance planifiée dans un coin de tête n'est pas toujours faite, un changement de statut n'est pas toujours répercuté. Le pipeline commercial affiché ne reflète plus la réalité du terrain.</p>
-      <p>Résultat : des opportunités oubliées, des relances qui arrivent trop tard, et un reporting commercial qui demande une reconstruction manuelle avant chaque réunion. L'automatisation CRM répond directement à ce problème de fraîcheur des données.</p>
+      <p>Un CRM PME est censé centraliser le suivi commercial, mais dans la pratique, la saisie manuelle prend du retard : une demande reçue par email n'est pas toujours créée dans le CRM, une relance planifiée dans un coin de tête n'est pas toujours faite, un changement de statut n'est pas toujours répercuté. <strong>Le pipeline commercial affiché ne reflète plus la réalité du terrain.</strong></p>
+      <p>Résultat : <strong>des opportunités oubliées, des relances qui arrivent trop tard</strong>, et un reporting commercial qui demande une reconstruction manuelle avant chaque réunion. L'automatisation CRM répond directement à ce problème de fraîcheur des données.</p>
     </div>
 
     <!-- pourquoi automatiser -->
     <div class="pillar-section">
       <h2>Pourquoi automatiser son CRM</h2>
       <div class="pillar-section__list">
-        <div class="pillar-section__list-item"><span>✓</span>Chaque demande entrante (email, formulaire, appel) crée automatiquement une fiche et une tâche de suivi dans le CRM.</div>
+        <div class="pillar-section__list-item"><span>✓</span><strong>Chaque demande entrante crée automatiquement une fiche et une tâche de suivi</strong> dans le CRM.</div>
         <div class="pillar-section__list-item"><span>✓</span>Le pipeline commercial reste à jour sans ressaisie manuelle de la part des commerciaux.</div>
-        <div class="pillar-section__list-item"><span>✓</span>Les relances s'envoient au bon moment, sans dépendre de la mémoire de chacun.</div>
+        <div class="pillar-section__list-item"><span>✓</span>Les relances s'envoient <strong>au bon moment</strong>, sans dépendre de la mémoire de chacun.</div>
         <div class="pillar-section__list-item"><span>✓</span>Le reporting commercial se génère directement depuis des données fiables, sans reconstruction manuelle.</div>
       </div>
     </div>
@@ -58,9 +58,9 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div class="pillar-section">
       <h2>Bénéfices concrets pour votre entreprise</h2>
       <div class="pillar-section__list">
-        <div class="pillar-section__list-item"><span>✓</span>Zéro prospect oublié entre la première demande et la relance.</div>
+        <div class="pillar-section__list-item"><span>✓</span><strong>Zéro prospect oublié</strong> entre la première demande et la relance.</div>
         <div class="pillar-section__list-item"><span>✓</span>Un temps de premier contact réduit, avec une qualification automatique dès l'arrivée du lead.</div>
-        <div class="pillar-section__list-item"><span>✓</span>Une équipe commerciale qui passe moins de temps sur la saisie CRM et davantage sur les échanges clients.</div>
+        <div class="pillar-section__list-item"><span>✓</span>Une équipe commerciale qui passe <strong>moins de temps sur la saisie CRM</strong> et davantage sur les échanges clients.</div>
         <div class="pillar-section__list-item"><span>✓</span>Un pipeline commercial fiable pour piloter l'activité sans attendre la fin du mois.</div>
       </div>
     </div>
@@ -154,7 +154,7 @@ if ( ! defined( 'ABSPATH' ) ) {
       </div>
       <div class="pillar-faq__item">
         <h3>Dois-je changer de CRM pour l'automatiser ?</h3>
-        <p>Non. L'automatisation CRM se construit sur l'outil que vous utilisez déjà, en le connectant à vos emails, formulaires et autres outils commerciaux.</p>
+        <p>Non. <strong>L'automatisation CRM se construit sur l'outil que vous utilisez déjà</strong>, en le connectant à vos emails, formulaires et autres outils commerciaux.</p>
       </div>
       <div class="pillar-faq__item">
         <h3>Comment fonctionne la qualification automatique des leads ?</h3>
@@ -166,7 +166,7 @@ if ( ! defined( 'ABSPATH' ) ) {
       </div>
       <div class="pillar-faq__item">
         <h3>Puis-je garder un contrôle humain sur les relances envoyées ?</h3>
-        <p>Oui. Il est courant de démarrer avec une validation humaine avant envoi, puis de passer en automatique une fois les règles éprouvées sur vos premiers cas réels.</p>
+        <p>Oui. Il est courant de <strong>démarrer avec une validation humaine avant envoi</strong>, puis de passer en automatique une fois les règles éprouvées sur vos premiers cas réels.</p>
       </div>
     </div>
 

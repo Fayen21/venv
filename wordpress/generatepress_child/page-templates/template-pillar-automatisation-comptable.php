@@ -24,7 +24,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div class="pillar-hero">
       <div class="eyebrow pillar-hero__eyebrow">Automatisation comptable</div>
       <h1>Automatisation comptable : éliminez la saisie manuelle grâce à l'IA</h1>
-      <p class="pillar-hero__intro">Factures fournisseurs, notes de frais, rapprochement bancaire : la comptabilité d'une TPE-PME reste souvent une succession de ressaisies manuelles. L'automatisation comptable connecte l'OCR de lecture de facture à votre logiciel (Pennylane, Sage, Cegid, Quadra…) pour que les écritures se génèrent seules, sans changer d'outil.</p>
+      <p class="pillar-hero__intro">Factures fournisseurs, notes de frais, rapprochement bancaire : la comptabilité d'une TPE-PME reste souvent une succession de ressaisies manuelles. L'automatisation comptable connecte l'OCR de lecture de facture à votre logiciel (Pennylane, Sage, Cegid, Quadra…) pour que <strong>les écritures se génèrent seules, sans changer d'outil</strong>.</p>
       <div class="pillar-hero__actions">
         <a href="<?php echo esc_url( eb_url('realisations') ); ?>" class="btn btn-primary">Découvrir un cas concret <span>→</span></a>
         <a href="<?php echo esc_url( eb_url('solutions') ); ?>" class="btn btn-secondary">Voir toutes les solutions</a>
@@ -39,7 +39,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     <!-- le problème -->
     <div class="pillar-section">
       <h2>Le problème : la comptabilité reste chronophage, facture par facture</h2>
-      <p>Dans la plupart des TPE-PME, chaque facture fournisseur suit le même parcours : réception par email, ouverture, relevé manuel du montant et de la TVA, puis saisie dans le logiciel comptable. Multiplié par des dizaines de factures par mois, ce travail de ressaisie absorbe un temps disproportionné par rapport à sa valeur ajoutée réelle.</p>
+      <p>Dans la plupart des TPE-PME, chaque facture fournisseur suit le même parcours : réception par email, ouverture, relevé manuel du montant et de la TVA, puis saisie dans le logiciel comptable. Multiplié par des dizaines de factures par mois, ce travail de ressaisie <strong>absorbe un temps disproportionné</strong> par rapport à sa valeur ajoutée réelle.</p>
       <p>Le rapprochement bancaire suit la même logique : pointer une à une les lignes du relevé bancaire face aux écritures comptables, repérer les écarts, corriger les erreurs de saisie. C'est un travail nécessaire, mais qui ne demande pas un jugement métier à chaque ligne — exactement le type de tâche que l'automatisation comptable prend en charge.</p>
     </div>
 
@@ -47,14 +47,14 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div class="pillar-section">
       <h2>Pourquoi automatiser sa comptabilité</h2>
       <div class="pillar-section__list">
-        <div class="pillar-section__list-item"><span>✓</span>La saisie comptable automatique élimine la ressaisie manuelle et les erreurs de frappe qui l'accompagnent.</div>
+        <div class="pillar-section__list-item"><span>✓</span><strong>La saisie comptable automatique élimine la ressaisie manuelle</strong> et les erreurs de frappe qui l'accompagnent.</div>
         <div class="pillar-section__list-item"><span>✓</span>L'OCR facture, associé à l'intelligence artificielle, lit montant, TVA, date et fournisseur directement depuis le PDF, sans intervention humaine.</div>
-        <div class="pillar-section__list-item"><span>✓</span>Le rapprochement bancaire automatique détecte les anomalies et les doublons avant la clôture, pas après.</div>
+        <div class="pillar-section__list-item"><span>✓</span>Le rapprochement bancaire automatique <strong>détecte les anomalies et les doublons avant la clôture</strong>, pas après.</div>
         <div class="pillar-section__list-item"><span>✓</span>Le temps libéré se réinvestit sur l'analyse financière et le conseil, pas sur la saisie répétitive.</div>
       </div>
       <div class="pillar-section__sub">
         <h3>Saisie comptable automatique : comment ça marche</h3>
-        <p>La facture arrive par email ou par scan, l'<a href="<?php echo esc_url( eb_url('automatisation-ocr') ); ?>">OCR</a> en extrait le montant, la TVA, le fournisseur et la date, puis un brouillon d'écriture est généré directement dans votre logiciel comptable. Vous validez, l'automatisation ne remplace jamais votre contrôle sur les points sensibles. Cette lecture automatique de documents s'appuie sur les mêmes briques que la <a href="<?php echo esc_url( eb_url('rpa') ); ?>">RPA</a> et l'<a href="<?php echo esc_url( eb_url('extraction-pdf') ); ?>">extraction de données PDF</a>. Le cycle complet, du devis à l'encaissement, est détaillé sur la page <a href="<?php echo esc_url( eb_url('automatisation-facturation') ); ?>">automatisation de la facturation</a>.</p>
+        <p>La facture arrive par email ou par scan, l'<a href="<?php echo esc_url( eb_url('automatisation-ocr') ); ?>">OCR</a> en extrait le montant, la TVA, le fournisseur et la date, puis un brouillon d'écriture est généré directement dans votre logiciel comptable. <strong>Vous validez, l'automatisation ne remplace jamais votre contrôle</strong> sur les points sensibles. Cette lecture automatique de documents s'appuie sur les mêmes briques que la <a href="<?php echo esc_url( eb_url('rpa') ); ?>">RPA</a> et l'<a href="<?php echo esc_url( eb_url('extraction-pdf') ); ?>">extraction de données PDF</a>. Le cycle complet, du devis à l'encaissement, est détaillé sur la page <a href="<?php echo esc_url( eb_url('automatisation-facturation') ); ?>">automatisation de la facturation</a>.</p>
       </div>
     </div>
 
@@ -62,8 +62,8 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div class="pillar-section">
       <h2>Bénéfices concrets pour votre entreprise</h2>
       <div class="pillar-section__list">
-        <div class="pillar-section__list-item"><span>✓</span>Moins d'erreurs de saisie, donc moins de corrections et d'écritures de régularisation en fin d'exercice.</div>
-        <div class="pillar-section__list-item"><span>✓</span>Une clôture mensuelle plus rapide, avec des écritures déjà à jour au fil de l'eau.</div>
+        <div class="pillar-section__list-item"><span>✓</span><strong>Moins d'erreurs de saisie</strong>, donc moins de corrections et d'écritures de régularisation en fin d'exercice.</div>
+        <div class="pillar-section__list-item"><span>✓</span><strong>Une clôture mensuelle plus rapide</strong>, avec des écritures déjà à jour au fil de l'eau.</div>
         <div class="pillar-section__list-item"><span>✓</span>Une meilleure visibilité sur la trésorerie, avec des rapprochements bancaires faits en continu plutôt qu'en fin de mois.</div>
         <div class="pillar-section__list-item"><span>✓</span>Une charge de travail comptable qui n'augmente plus mécaniquement avec le volume de factures.</div>
       </div>
@@ -162,7 +162,7 @@ if ( ! defined( 'ABSPATH' ) ) {
       </div>
       <div class="pillar-faq__item">
         <h3>Est-ce compatible avec Pennylane, Sage, Cegid ou Quadra ?</h3>
-        <p>Oui. L'automatisation se connecte à votre logiciel comptable existant via ses fonctionnalités d'import ou son API — aucun changement d'outil n'est nécessaire pour en bénéficier.</p>
+        <p>Oui. L'automatisation se connecte à votre logiciel comptable existant via ses fonctionnalités d'import ou son API — <strong>aucun changement d'outil n'est nécessaire</strong> pour en bénéficier.</p>
       </div>
       <div class="pillar-faq__item">
         <h3>Le rapprochement bancaire automatique est-il fiable ?</h3>
@@ -170,7 +170,7 @@ if ( ! defined( 'ABSPATH' ) ) {
       </div>
       <div class="pillar-faq__item">
         <h3>Dois-je changer de logiciel comptable pour automatiser ?</h3>
-        <p>Non. L'automatisation comptable se construit sur l'outil que vous utilisez déjà. L'objectif est de supprimer la ressaisie manuelle, pas de vous faire changer d'écosystème.</p>
+        <p>Non. <strong>L'automatisation comptable se construit sur l'outil que vous utilisez déjà.</strong> L'objectif est de supprimer la ressaisie manuelle, pas de vous faire changer d'écosystème.</p>
       </div>
     </div>
 

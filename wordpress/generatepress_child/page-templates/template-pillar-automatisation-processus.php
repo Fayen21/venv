@@ -24,7 +24,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div class="pillar-hero">
       <div class="eyebrow pillar-hero__eyebrow">Automatisation des processus</div>
       <h1>Automatiser un processus métier : méthode et exemples concrets</h1>
-      <p class="pillar-hero__intro">Un processus, ce n'est pas une tâche isolée : c'est un enchaînement d'étapes, de validations et de décisions qui traverse souvent plusieurs outils, parfois plusieurs personnes. L'automatiser mal ne fait que déplacer le goulot d'étranglement plus loin dans la chaîne — l'automatiser bien demande une cartographie préalable.</p>
+      <p class="pillar-hero__intro">Un processus, ce n'est pas une tâche isolée : c'est un enchaînement d'étapes, de validations et de décisions qui traverse souvent plusieurs outils, parfois plusieurs personnes. L'automatiser mal ne fait que déplacer le goulot d'étranglement plus loin dans la chaîne — <strong>l'automatiser bien demande une cartographie préalable</strong>.</p>
       <div class="pillar-hero__actions">
         <a href="<?php echo esc_url( eb_url('realisations') ); ?>" class="btn btn-primary">Découvrir un cas concret <span>→</span></a>
         <a href="<?php echo esc_url( eb_url('solutions') ); ?>" class="btn btn-secondary">Voir toutes les solutions</a>
@@ -44,13 +44,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 
     <div class="pillar-section">
       <h2>Cartographier avant d'automatiser</h2>
-      <p>La première étape n'est jamais technique : c'est de lister précisément les étapes réelles du processus, y compris les exceptions et les cas particuliers que personne ne documente jamais spontanément. Un processus automatisé sans cette cartographie traite bien le cas standard et échoue silencieusement sur les 20% de cas particuliers — qui sont souvent ceux qui comptent le plus.</p>
+      <p>La première étape n'est jamais technique : c'est de lister précisément les étapes réelles du processus, y compris les exceptions et les cas particuliers que personne ne documente jamais spontanément. Un processus automatisé sans cette cartographie traite bien le cas standard et <strong>échoue silencieusement sur les 20% de cas particuliers</strong> — qui sont souvent ceux qui comptent le plus.</p>
     </div>
 
     <div class="pillar-section">
       <h2>Types de processus fréquemment automatisés</h2>
       <div class="pillar-section__list">
-        <div class="pillar-section__list-item"><span>✓</span>Validation de devis et de commande, avec relance automatique en cas d'absence de réponse.</div>
+        <div class="pillar-section__list-item"><span>✓</span><strong>Validation de devis et de commande</strong>, avec relance automatique en cas d'absence de réponse.</div>
         <div class="pillar-section__list-item"><span>✓</span>Cycle achat → facture → paiement, avec contrôle de cohérence entre les montants.</div>
         <div class="pillar-section__list-item"><span>✓</span>Onboarding et offboarding RH, de la validation d'embauche à la clôture d'un départ.</div>
         <div class="pillar-section__list-item"><span>✓</span>Cycle de relance client, de la facture échue à l'escalade si nécessaire.</div>
@@ -60,7 +60,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
     <div class="pillar-section">
       <h2>Les outils utilisés pour orchestrer un processus</h2>
-      <p><a href="<?php echo esc_url( eb_url('consultant-make') ); ?>">Make</a> et <a href="<?php echo esc_url( eb_url('consultant-n8n') ); ?>">n8n</a> servent de chef d'orchestre : ils relient vos logiciels via leurs API, déclenchent les étapes dans le bon ordre et gèrent les cas d'exception. Python intervient pour les traitements plus spécifiques. Ce workflow reste lisible de bout en bout : sur les étapes qui nécessitent un jugement humain — validation d'une dépense inhabituelle, décision commerciale — le processus s'arrête et attend une action, plutôt que de forcer une automatisation complète là où elle n'a pas sa place.</p>
+      <p><a href="<?php echo esc_url( eb_url('consultant-make') ); ?>">Make</a> et <a href="<?php echo esc_url( eb_url('consultant-n8n') ); ?>">n8n</a> servent de chef d'orchestre : ils relient vos logiciels via leurs API, déclenchent les étapes dans le bon ordre et gèrent les cas d'exception. Python intervient pour les traitements plus spécifiques. Ce workflow reste lisible de bout en bout : sur les étapes qui nécessitent un jugement humain — validation d'une dépense inhabituelle, décision commerciale — <strong>le processus s'arrête et attend une action</strong>, plutôt que de forcer une automatisation complète là où elle n'a pas sa place.</p>
     </div>
 
     <div class="pillar-section">
@@ -73,7 +73,7 @@ if ( ! defined( 'ABSPATH' ) ) {
       <div class="pillar-section__list">
         <div class="pillar-section__list-item"><span>✕</span>Automatiser le processus tel qu'il est décrit sur le papier, sans vérifier comment il se déroule vraiment dans les faits.</div>
         <div class="pillar-section__list-item"><span>✕</span>Oublier de prévoir un point de sortie clair quand une étape échoue ou qu'une donnée est manquante.</div>
-        <div class="pillar-section__list-item"><span>✕</span>Automatiser un processus qui devrait d'abord être simplifié — l'automatisation accélère un mauvais processus autant qu'un bon.</div>
+        <div class="pillar-section__list-item"><span>✕</span>Automatiser un processus qui devrait d'abord être simplifié — <strong>l'automatisation accélère un mauvais processus autant qu'un bon</strong>.</div>
         <div class="pillar-section__list-item"><span>✕</span>Ne pas notifier les bonnes personnes au bon moment, ce qui recrée artificiellement des délais que l'automatisation devait supprimer.</div>
       </div>
     </div>
@@ -81,7 +81,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div class="pillar-section">
       <h2>Bonnes pratiques pour un processus fiable dans la durée</h2>
       <div class="pillar-section__list">
-        <div class="pillar-section__list-item"><span>✓</span>Tester le scénario sur des cas réels, y compris les cas limites, avant toute mise en production.</div>
+        <div class="pillar-section__list-item"><span>✓</span><strong>Tester le scénario sur des cas réels</strong>, y compris les cas limites, avant toute mise en production.</div>
         <div class="pillar-section__list-item"><span>✓</span>Prévoir un journal ou un historique des exécutions pour pouvoir diagnostiquer un incident rapidement.</div>
         <div class="pillar-section__list-item"><span>✓</span>Garder chaque étape modulaire, pour pouvoir la modifier sans reconstruire tout le processus.</div>
         <div class="pillar-section__list-item"><span>✓</span>Documenter les règles de décision, pas seulement les actions, pour que le processus reste compréhensible dans le temps.</div>
@@ -160,7 +160,7 @@ if ( ! defined( 'ABSPATH' ) ) {
       <div class="pillar-flow__row">
         <div class="pillar-flow__step"><span class="pillar-flow__icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3L3 5v16l6-2 6 2 6-2V3l-6 2-6-2z"></path><path d="M9 3v16M15 5v16"></path></svg></span><span class="pillar-flow__step-label">Cartographie</span></div>
         <span class="pillar-flow__arrow">→</span>
-        <div class="pillar-flow__step"><span class="pillar-flow__icon">⚙️</span><span class="pillar-flow__step-label">Orchestration Make/n8n</span></div>
+        <div class="pillar-flow__step"><span class="pillar-flow__icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg></span><span class="pillar-flow__step-label">Orchestration Make/n8n</span></div>
         <span class="pillar-flow__arrow">→</span>
         <div class="pillar-flow__step"><span class="pillar-flow__icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"></path></svg></span><span class="pillar-flow__step-label">Point de contrôle humain</span></div>
         <span class="pillar-flow__arrow">→</span>

@@ -24,7 +24,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div class="pillar-hero">
       <div class="eyebrow pillar-hero__eyebrow">Automatisation IA</div>
       <h1>L'automatisation IA, expliquée simplement pour les dirigeants de TPE-PME</h1>
-      <p class="pillar-hero__intro">« Automatisation IA » est devenu un terme fourre-tout. Derrière l'expression, il y a une distinction très concrète à comprendre avant d'investir un euro : l'automatisation classique déplace et exécute, l'intelligence artificielle lit et comprend. Les deux se combinent, et c'est cette combinaison qui change vraiment la donne pour une petite structure.</p>
+      <p class="pillar-hero__intro">« Automatisation IA » est devenu un terme fourre-tout. Derrière l'expression, il y a une distinction très concrète à comprendre avant d'investir un euro : <strong>l'automatisation classique déplace et exécute, l'intelligence artificielle lit et comprend</strong>. Les deux se combinent, et c'est cette combinaison qui change vraiment la donne pour une petite structure.</p>
       <div class="pillar-hero__actions">
         <a href="<?php echo esc_url( eb_url('audit') ); ?>" class="btn btn-primary">Estimer votre gain de temps <span>→</span></a>
         <a href="<?php echo esc_url( eb_url('solutions') ); ?>" class="btn btn-secondary">Voir toutes les solutions</a>
@@ -40,18 +40,18 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div class="pillar-section">
       <h2>Automatisation IA : de quoi parle-t-on réellement ?</h2>
       <p>Un scénario Make ou n8n classique sait déplacer une donnée d'un point A à un point B, déclencher une action ou remplir un champ — à condition que cette donnée soit déjà structurée. Il ne sait pas lire un email rédigé en langage naturel, interpréter une facture scannée dont la mise en page change à chaque fournisseur, ni juger si une anomalie mérite d'être signalée.</p>
-      <p>L'automatisation IA ajoute cette couche de compréhension. Un modèle de langage vient lire, extraire, classer ou résumer une information non structurée, puis la transmet au reste du scénario d'automatisation qui l'exécute. Pour une TPE-PME, l'essentiel de la charge administrative — emails, PDF, comptes-rendus, devis — est justement fait de ce type d'information non structurée. C'est pour cela que l'IA change concrètement la portée de ce qui devient automatisable.</p>
+      <p>L'automatisation IA ajoute cette couche de compréhension. Un modèle de langage vient lire, extraire, classer ou résumer une information non structurée, puis la transmet au reste du scénario d'automatisation qui l'exécute. Pour une TPE-PME, l'essentiel de la charge administrative — emails, PDF, comptes-rendus, devis — est justement fait de ce type d'information non structurée. <strong>C'est pour cela que l'IA change concrètement la portée de ce qui devient automatisable.</strong></p>
     </div>
 
     <div class="pillar-section">
       <h2>Ce que l'IA change concrètement dans vos processus</h2>
       <p>Concrètement, ajouter de l'IA à une automatisation permet de :</p>
       <div class="pillar-section__list">
-        <div class="pillar-section__list-item"><span>✓</span>Lire un PDF ou un scan et en extraire les bonnes informations, même sans gabarit fixe.</div>
+        <div class="pillar-section__list-item"><span>✓</span><strong>Lire un PDF ou un scan et en extraire les bonnes informations</strong>, même sans gabarit fixe.</div>
         <div class="pillar-section__list-item"><span>✓</span>Comprendre le contenu d'un email et décider de l'action à mener (relance, transfert, création de tâche).</div>
         <div class="pillar-section__list-item"><span>✓</span>Classer un document selon son contenu réel, pas seulement selon son nom de fichier.</div>
         <div class="pillar-section__list-item"><span>✓</span>Générer un résumé ou une première réponse à partir de plusieurs documents sources.</div>
-        <div class="pillar-section__list-item"><span>✓</span>Détecter une incohérence ou une anomalie dans une série de données comptables ou commerciales.</div>
+        <div class="pillar-section__list-item"><span>✓</span><strong>Détecter une incohérence ou une anomalie</strong> dans une série de données comptables ou commerciales.</div>
       </div>
     </div>
 
@@ -73,12 +73,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 
     <div class="pillar-section">
       <h2>Les limites à connaître avant de se lancer</h2>
-      <p>L'IA n'est pas magique et un consultant sérieux doit le dire clairement. Elle a besoin d'un cadrage précis (quelles données, quel format de sortie, quelles règles) pour être fiable. Sur les sujets sensibles — validation d'un paiement, décision RH — un contrôle humain reste recommandé, au moins dans les premiers mois. L'objectif n'est pas de remplacer le jugement, mais de le libérer des tâches de lecture et de tri répétitives.</p>
+      <p>L'IA n'est pas magique et un consultant sérieux doit le dire clairement. Elle a besoin d'un cadrage précis (quelles données, quel format de sortie, quelles règles) pour être fiable. Sur les sujets sensibles — validation d'un paiement, décision RH — <strong>un contrôle humain reste recommandé</strong>, au moins dans les premiers mois. L'objectif n'est pas de remplacer le jugement, mais de le libérer des tâches de lecture et de tri répétitives.</p>
     </div>
 
     <div class="pillar-section">
       <h2>Automatisation classique, RPA et automatisation IA : quelle différence ?</h2>
-      <p>Ces trois notions se recoupent et créent souvent de la confusion. L'automatisation classique exécute une règle fixe sur une donnée déjà structurée (« si ce champ vaut X, alors faire Y »). La <a href="<?php echo esc_url( eb_url('rpa') ); ?>">RPA</a> reproduit des actions numériques répétitives — cliquer, copier, saisir — pour des tâches stables et bien définies. L'automatisation IA ajoute une capacité de compréhension : lire un texte libre, interpréter une mise en page variable, juger de la pertinence d'une information. Dans la pratique, un même processus combine souvent les trois couches : l'IA lit et interprète, la RPA exécute les actions répétitives, l'automatisation classique orchestre l'ensemble.</p>
+      <p>Ces trois notions se recoupent et créent souvent de la confusion. L'automatisation classique exécute une règle fixe sur une donnée déjà structurée (« si ce champ vaut X, alors faire Y »). La <a href="<?php echo esc_url( eb_url('rpa') ); ?>">RPA</a> reproduit des actions numériques répétitives — cliquer, copier, saisir — pour des tâches stables et bien définies. L'automatisation IA ajoute une capacité de compréhension : lire un texte libre, interpréter une mise en page variable, juger de la pertinence d'une information. Dans la pratique, un même processus combine souvent les trois couches : <strong>l'IA lit et interprète, la RPA exécute les actions répétitives, l'automatisation classique orchestre l'ensemble</strong>.</p>
     </div>
 
     <div class="pillar-table">

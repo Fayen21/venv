@@ -24,7 +24,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div class="pillar-hero">
       <div class="eyebrow pillar-hero__eyebrow">Outils · Excel</div>
       <h1>Automatisation Excel : fiabilisez vos tableurs sans les remplacer</h1>
-      <p class="pillar-hero__intro">Excel reste, de loin, l'outil le plus utilisé dans la gestion quotidienne d'une TPE-PME française — suivi commercial, reporting, budgets, plannings. Le problème n'est presque jamais le logiciel lui-même, mais la façon dont il est alimenté : à la main, ligne par ligne, avec le risque d'erreur et de perte de temps que cela suppose. L'automatisation Excel consiste à connecter vos fichiers à vos autres outils pour qu'ils se remplissent et se mettent à jour tout seuls, sans jamais vous faire changer de tableur.</p>
+      <p class="pillar-hero__intro">Excel reste, de loin, l'outil le plus utilisé dans la gestion quotidienne d'une TPE-PME française — suivi commercial, reporting, budgets, plannings. Le problème n'est presque jamais le logiciel lui-même, mais la façon dont il est alimenté : à la main, ligne par ligne, avec le risque d'erreur et de perte de temps que cela suppose. <strong>L'automatisation Excel consiste à connecter vos fichiers à vos autres outils</strong> pour qu'ils se remplissent et se mettent à jour tout seuls, sans jamais vous faire changer de tableur.</p>
       <div class="pillar-hero__actions">
         <a href="<?php echo esc_url( eb_url('audit') ); ?>" class="btn btn-primary">Identifier vos automatisations rentables <span>→</span></a>
         <a href="<?php echo esc_url( eb_url('solutions') ); ?>" class="btn btn-secondary">Voir toutes les solutions</a>
@@ -33,7 +33,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
     <div class="pillar-section">
       <h2>Pourquoi Excel reste un point de blocage dans tant d'entreprises</h2>
-      <p>Un tableur bien construit peut piloter une bonne partie d'une petite entreprise : suivi de trésorerie, tableau de bord commercial, planning des équipes, calcul de marge. Le problème apparaît quand ce fichier doit être mis à jour manuellement à partir de plusieurs sources — un export du CRM, un relevé bancaire, une liste de commandes — recopiées ou collées à la main, souvent plusieurs fois par semaine. C'est un travail à faible valeur ajoutée, source d'erreurs de copier-coller et de fichiers qui finissent par vivre leur vie en plusieurs versions incohérentes.</p>
+      <p>Un tableur bien construit peut piloter une bonne partie d'une petite entreprise : suivi de trésorerie, tableau de bord commercial, planning des équipes, calcul de marge. Le problème apparaît quand ce fichier doit être mis à jour manuellement à partir de plusieurs sources — un export du CRM, un relevé bancaire, une liste de commandes — recopiées ou collées à la main, souvent plusieurs fois par semaine. C'est <strong>un travail à faible valeur ajoutée, source d'erreurs de copier-coller</strong> et de fichiers qui finissent par vivre leur vie en plusieurs versions incohérentes.</p>
       <p>L'automatisation Excel ne consiste pas à migrer vers un autre outil de gestion. Elle consiste à traiter le fichier Excel comme une destination (ou une source) dans un flux automatisé : les données y arrivent seules, au bon endroit, au bon format, sans ressaisie.</p>
     </div>
 
@@ -43,14 +43,14 @@ if ( ! defined( 'ABSPATH' ) ) {
         <div class="pillar-section__list-item"><span>✓</span>Alimentation automatique d'un tableau de bord depuis votre CRM, votre compta ou votre outil RH.</div>
         <div class="pillar-section__list-item"><span>✓</span>Extraction de données depuis des PDF (factures, bons de commande) directement vers un fichier Excel structuré.</div>
         <div class="pillar-section__list-item"><span>✓</span>Consolidation de plusieurs fichiers Excel provenant de différents sites ou services en un seul reporting.</div>
-        <div class="pillar-section__list-item"><span>✓</span>Contrôles de cohérence automatiques (doublons, totaux, valeurs manquantes) avec alerte en cas d'anomalie.</div>
+        <div class="pillar-section__list-item"><span>✓</span><strong>Contrôles de cohérence automatiques</strong> (doublons, totaux, valeurs manquantes) avec alerte en cas d'anomalie.</div>
         <div class="pillar-section__list-item"><span>✓</span>Génération de fichiers Excel formatés (devis, exports, bilans) à partir d'un autre outil, prêts à envoyer.</div>
       </div>
     </div>
 
     <div class="pillar-section">
       <h2>Ce qui reste manuel — et pourquoi c'est un choix</h2>
-      <p>L'automatisation Excel ne remplace pas votre jugement sur les chiffres : elle vous évite la collecte et la ressaisie qui précèdent l'analyse. Les décisions, arbitrages et corrections restent de votre ressort. C'est une différence importante avec l'idée reçue selon laquelle « automatiser Excel » signifierait le rendre incontrôlable ou opaque — au contraire, un fichier alimenté automatiquement selon des règles documentées est souvent plus fiable qu'un fichier mis à jour à la main.</p>
+      <p>L'automatisation Excel ne remplace pas votre jugement sur les chiffres : elle vous évite la collecte et la ressaisie qui précèdent l'analyse. Les décisions, arbitrages et corrections restent de votre ressort. C'est une différence importante avec l'idée reçue selon laquelle « automatiser Excel » signifierait le rendre incontrôlable ou opaque — au contraire, <strong>un fichier alimenté automatiquement selon des règles documentées est souvent plus fiable</strong> qu'un fichier mis à jour à la main.</p>
     </div>
 
     <!-- cas d'usage -->
@@ -103,7 +103,7 @@ if ( ! defined( 'ABSPATH' ) ) {
       <div class="pillar-flow__row">
         <div class="pillar-flow__step"><span class="pillar-flow__icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h4l2 3h4l2-3h4"></path><path d="M4 12v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6"></path><path d="M4 12l2-7h12l2 7"></path></svg></span><span class="pillar-flow__step-label">Données sources collectées</span></div>
         <span class="pillar-flow__arrow">→</span>
-        <div class="pillar-flow__step"><span class="pillar-flow__icon">⚙️</span><span class="pillar-flow__step-label">Traitement Make/n8n</span></div>
+        <div class="pillar-flow__step"><span class="pillar-flow__icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg></span><span class="pillar-flow__step-label">Traitement Make/n8n</span></div>
         <span class="pillar-flow__arrow">→</span>
         <div class="pillar-flow__step"><span class="pillar-flow__icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="19" x2="5" y2="12"></line><line x1="12" y1="19" x2="12" y2="7"></line><line x1="19" y1="19" x2="19" y2="14"></line></svg></span><span class="pillar-flow__step-label">Fichier Excel mis à jour</span></div>
         <span class="pillar-flow__arrow">→</span>

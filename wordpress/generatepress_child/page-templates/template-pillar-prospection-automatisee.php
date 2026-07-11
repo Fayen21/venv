@@ -39,8 +39,8 @@ if ( ! defined( 'ABSPATH' ) ) {
     <!-- le problème -->
     <div class="pillar-section">
       <h2>Le problème : la prospection s'arrête dès que le rythme retombe</h2>
-      <p>La prospection B2B fonctionne quand elle est régulière : identifier des contacts pertinents, engager la conversation, relancer sans lâcher l'affaire trop tôt. Mais dès qu'un dirigeant ou un commercial se retrouve pris par le quotidien, la recherche de nouveaux contacts s'arrête en premier — et le pipeline commercial se vide quelques semaines plus tard.</p>
-      <p>La relance manuelle pose le même problème : sans rappel automatique, une majorité des prospects qui n'ont pas répondu au premier message ne seront jamais relancés, alors qu'une part significative des réponses positives arrive justement à la deuxième ou troisième relance.</p>
+      <p>La prospection B2B fonctionne quand elle est régulière : identifier des contacts pertinents, engager la conversation, relancer sans lâcher l'affaire trop tôt. Mais dès qu'un dirigeant ou un commercial se retrouve pris par le quotidien, <strong>la recherche de nouveaux contacts s'arrête en premier</strong> — et le pipeline commercial se vide quelques semaines plus tard.</p>
+      <p>La relance manuelle pose le même problème : sans rappel automatique, <strong>une majorité des prospects qui n'ont pas répondu au premier message ne seront jamais relancés</strong>, alors qu'une part significative des réponses positives arrive justement à la deuxième ou troisième relance.</p>
     </div>
 
     <!-- pourquoi automatiser -->
@@ -49,7 +49,7 @@ if ( ! defined( 'ABSPATH' ) ) {
       <div class="pillar-section__list">
         <div class="pillar-section__list-item"><span>✓</span>L'automatisation LinkedIn identifie et engage des contacts pertinents selon des critères précis, sans recherche manuelle profil par profil.</div>
         <div class="pillar-section__list-item"><span>✓</span>La relance email s'envoie automatiquement selon un calendrier fixe, sans dépendre d'y penser au bon moment.</div>
-        <div class="pillar-section__list-item"><span>✓</span>L'enrichissement CRM complète automatiquement les fiches contact avec les informations utiles à la qualification.</div>
+        <div class="pillar-section__list-item"><span>✓</span>L'<a href="<?php echo esc_url( eb_url('automatisation-crm') ); ?>">enrichissement CRM</a> complète automatiquement les fiches contact avec les informations utiles à la qualification.</div>
         <div class="pillar-section__list-item"><span>✓</span>La qualification automatique trie les réponses pour ne remonter que les échanges qui méritent un vrai suivi humain.</div>
       </div>
     </div>
@@ -58,9 +58,9 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div class="pillar-section">
       <h2>Bénéfices concrets pour votre entreprise</h2>
       <div class="pillar-section__list">
-        <div class="pillar-section__list-item"><span>✓</span>Un flux de prospection qui continue même dans les périodes chargées.</div>
+        <div class="pillar-section__list-item"><span>✓</span>Un <strong>flux de prospection qui continue même dans les périodes chargées</strong>.</div>
         <div class="pillar-section__list-item"><span>✓</span>Plus de leads qualifiés, sans y consacrer plus de temps qu'aujourd'hui.</div>
-        <div class="pillar-section__list-item"><span>✓</span>Des relances systématiques, là où la plupart des opportunités se perdent aujourd'hui par oubli.</div>
+        <div class="pillar-section__list-item"><span>✓</span><strong>Des relances systématiques</strong>, là où la plupart des opportunités se perdent aujourd'hui par oubli.</div>
         <div class="pillar-section__list-item"><span>✓</span>Un CRM enrichi automatiquement, prêt à être exploité par l'équipe commerciale.</div>
       </div>
     </div>
@@ -110,7 +110,7 @@ if ( ! defined( 'ABSPATH' ) ) {
       <div class="pillar-flow__row">
         <div class="pillar-flow__step"><span class="pillar-flow__icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="5"></circle><circle cx="12" cy="12" r="1"></circle></svg></span><span class="pillar-flow__step-label">Ciblage défini</span></div>
         <span class="pillar-flow__arrow">→</span>
-        <div class="pillar-flow__step"><span class="pillar-flow__icon">✉️</span><span class="pillar-flow__step-label">Premier message envoyé</span></div>
+        <div class="pillar-flow__step"><span class="pillar-flow__icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M4 6.5l8 6 8-6"></path></svg></span><span class="pillar-flow__step-label">Premier message envoyé</span></div>
         <span class="pillar-flow__arrow">→</span>
         <div class="pillar-flow__step"><span class="pillar-flow__icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 0 1 14-5l2 2"></path><path d="M20 5v4h-4"></path><path d="M20 12a8 8 0 0 1-14 5l-2-2"></path><path d="M4 19v-4h4"></path></svg></span><span class="pillar-flow__step-label">Relances automatiques</span></div>
         <span class="pillar-flow__arrow">→</span>

@@ -33,18 +33,18 @@ if ( ! defined( 'ABSPATH' ) ) {
 
     <div class="pillar-section">
       <h2>Pourquoi choisir n8n plutôt qu'un autre outil</h2>
-      <p>n8n se distingue par trois caractéristiques qui comptent pour certaines PME : son code source ouvert permet un audit technique complet si nécessaire, son modèle d'hébergement peut être auto-géré (sur votre propre serveur ou une infrastructure choisie par vous) plutôt que systématiquement dans le cloud d'un éditeur, et sa logique de construction plus proche du développement offre une souplesse supérieure pour des workflows non standards.</p>
-      <p>Cette flexibilité a une contrepartie : n8n demande une prise en main plus technique que Make. C'est précisément le rôle d'un consultant n8n de construire des workflows fiables sans que vous ayez à maîtriser cette complexité vous-même — vous récupérez un système qui fonctionne et une documentation claire, pas une charge technique supplémentaire.</p>
+      <p>n8n se distingue par trois caractéristiques qui comptent pour certaines PME : son code source ouvert permet un audit technique complet si nécessaire, <strong>son modèle d'hébergement peut être auto-géré</strong> (sur votre propre serveur ou une infrastructure choisie par vous) plutôt que systématiquement dans le cloud d'un éditeur, et sa logique de construction plus proche du développement offre une souplesse supérieure pour des workflows non standards.</p>
+      <p>Cette flexibilité a une contrepartie : n8n demande une prise en main plus technique que Make. C'est précisément le rôle d'un consultant n8n de construire des workflows fiables sans que vous ayez à maîtriser cette complexité vous-même — <strong>vous récupérez un système qui fonctionne et une documentation claire</strong>, pas une charge technique supplémentaire.</p>
     </div>
 
     <div class="pillar-section">
       <h2>Ce que je construis avec n8n</h2>
       <div class="pillar-section__list">
         <div class="pillar-section__list-item"><span>✓</span>Workflows connectant des logiciels via API, y compris des outils métier sans connecteur préexistant.</div>
-        <div class="pillar-section__list-item"><span>✓</span>Automatisations hébergées sur une infrastructure maîtrisée, pour les projets avec des contraintes de confidentialité renforcées.</div>
+        <div class="pillar-section__list-item"><span>✓</span><strong>Automatisations hébergées sur une infrastructure maîtrisée</strong>, pour les projets avec des contraintes de confidentialité renforcées.</div>
         <div class="pillar-section__list-item"><span>✓</span>Logiques conditionnelles complexes, avec plusieurs branches de traitement selon le contenu des données.</div>
         <div class="pillar-section__list-item"><span>✓</span>Intégration de modèles d'intelligence artificielle pour la lecture et le traitement de documents non structurés.</div>
-        <div class="pillar-section__list-item"><span>✓</span>Documentation technique complète, pour une reprise en main éventuelle par une équipe interne.</div>
+        <div class="pillar-section__list-item"><span>✓</span>Documentation technique complète, pour <strong>une reprise en main éventuelle par une équipe interne</strong>.</div>
       </div>
     </div>
 
@@ -86,7 +86,7 @@ if ( ! defined( 'ABSPATH' ) ) {
         <span class="pillar-flow__arrow">→</span>
         <div class="pillar-flow__step"><span class="pillar-flow__icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 21V9l6-4 6 4v12"></path><path d="M9 21v-6h6v6"></path><path d="M6 21h12"></path></svg></span><span class="pillar-flow__step-label">Choix d'hébergement</span></div>
         <span class="pillar-flow__arrow">→</span>
-        <div class="pillar-flow__step"><span class="pillar-flow__icon">⚙️</span><span class="pillar-flow__step-label">Construction &amp; tests</span></div>
+        <div class="pillar-flow__step"><span class="pillar-flow__icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg></span><span class="pillar-flow__step-label">Construction &amp; tests</span></div>
         <span class="pillar-flow__arrow">→</span>
         <div class="pillar-flow__step"><span class="pillar-flow__icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"></rect><path d="M9 8h6M9 12h6M9 16h4"></path></svg></span><span class="pillar-flow__step-label">Documentation &amp; livraison</span></div>
       </div>

@@ -24,7 +24,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div class="pillar-hero">
       <div class="eyebrow pillar-hero__eyebrow">Outils · Facturation</div>
       <h1>Automatisation de la facturation : du devis au paiement, sans ressaisie</h1>
-      <p class="pillar-hero__intro">Entre le devis accepté, la facture émise, son envoi, sa relance et son encaissement, le cycle de facturation d'une TPE-PME est fait d'une dizaine de petites tâches répétitives — chacune source d'oubli ou de retard. L'automatiser ne veut pas dire changer de logiciel de facturation : cela veut dire connecter les étapes entre elles pour qu'elles s'enchaînent sans intervention manuelle.</p>
+      <p class="pillar-hero__intro">Entre le devis accepté, la facture émise, son envoi, sa relance et son encaissement, le cycle de facturation d'une TPE-PME est fait d'une dizaine de petites tâches répétitives — chacune source d'oubli ou de retard. <strong>L'automatiser ne veut pas dire changer de logiciel de facturation</strong> : cela veut dire connecter les étapes entre elles pour qu'elles s'enchaînent sans intervention manuelle.</p>
       <div class="pillar-hero__actions">
         <a href="<?php echo esc_url( eb_url('audit') ); ?>" class="btn btn-primary">Identifier vos automatisations rentables <span>→</span></a>
         <a href="<?php echo esc_url( eb_url('solutions') ); ?>" class="btn btn-secondary">Voir toutes les solutions</a>
@@ -33,17 +33,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 
     <div class="pillar-section">
       <h2>Le cycle de facturation, un processus fait de petites tâches répétitives</h2>
-      <p>Pris isolément, chaque geste du cycle de facturation semble anodin : générer un document, l'envoyer, vérifier s'il a été payé, relancer si besoin. Multiplié par le nombre de factures émises chaque mois, ce cumul de petites tâches représente souvent plusieurs heures par semaine — sans compter le coût caché des relances oubliées et des retards de paiement qui en découlent.</p>
+      <p>Pris isolément, chaque geste du cycle de facturation semble anodin : générer un document, l'envoyer, vérifier s'il a été payé, relancer si besoin. Multiplié par le nombre de factures émises chaque mois, <strong>ce cumul de petites tâches représente souvent plusieurs heures par semaine</strong> — sans compter le coût caché des relances oubliées et des retards de paiement qui en découlent.</p>
       <p>Automatiser ce cycle ne consiste pas à remplacer votre logiciel de facturation ou votre comptabilité : cela consiste à orchestrer automatiquement le passage de l'un à l'autre, du devis accepté jusqu'à l'encaissement constaté.</p>
     </div>
 
     <div class="pillar-section">
       <h2>Ce que je peux automatiser dans votre facturation</h2>
       <div class="pillar-section__list">
-        <div class="pillar-section__list-item"><span>✓</span>Génération automatique de la facture dès l'acceptation d'un devis, sans recomposition manuelle.</div>
+        <div class="pillar-section__list-item"><span>✓</span><strong>Génération automatique de la facture dès l'acceptation d'un devis</strong>, sans recomposition manuelle.</div>
         <div class="pillar-section__list-item"><span>✓</span>Envoi automatique au client, avec accusé de réception tracé.</div>
         <div class="pillar-section__list-item"><span>✓</span>Relances automatiques selon un calendrier défini, jusqu'au paiement ou à une action explicite.</div>
-        <div class="pillar-section__list-item"><span>✓</span>Rapprochement automatique entre les paiements reçus et les factures émises, avec signalement des écarts.</div>
+        <div class="pillar-section__list-item"><span>✓</span>Rapprochement automatique entre les paiements reçus et les factures émises, avec <strong>signalement des écarts</strong>.</div>
         <div class="pillar-section__list-item"><span>✓</span>Transmission automatique des factures validées vers votre comptabilité, prêtes à être comptabilisées.</div>
       </div>
     </div>

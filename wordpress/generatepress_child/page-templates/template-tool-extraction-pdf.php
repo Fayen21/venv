@@ -24,7 +24,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div class="pillar-hero">
       <div class="eyebrow pillar-hero__eyebrow">Outils · Extraction PDF</div>
       <h1>Extraction de données PDF : automatisez la lecture de vos documents</h1>
-      <p class="pillar-hero__intro">Devis, bons de commande, contrats, relevés : la majorité des documents professionnels transitent en PDF. Copier ces données à la main dans un tableur ou un logiciel métier est l'une des tâches les plus chronophages et les plus sources d'erreurs d'une TPE-PME. L'extraction PDF automatise cette lecture, qu'il s'agisse d'un PDF généré directement par un logiciel ou d'un scan.</p>
+      <p class="pillar-hero__intro">Devis, bons de commande, contrats, relevés : la majorité des documents professionnels transitent en PDF. Copier ces données à la main dans un tableur ou un logiciel métier est <strong>l'une des tâches les plus chronophages et les plus sources d'erreurs</strong> d'une TPE-PME. L'extraction PDF automatise cette lecture, qu'il s'agisse d'un PDF généré directement par un logiciel ou d'un scan.</p>
       <div class="pillar-hero__actions">
         <a href="<?php echo esc_url( eb_url('audit') ); ?>" class="btn btn-primary">Identifier vos automatisations rentables <span>→</span></a>
         <a href="<?php echo esc_url( eb_url('solutions') ); ?>" class="btn btn-secondary">Voir toutes les solutions</a>
@@ -33,7 +33,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
     <div class="pillar-section">
       <h2>Pourquoi l'extraction PDF est différente de l'OCR classique</h2>
-      <p>Un PDF n'est pas toujours une image : lorsqu'il est généré directement par un logiciel (facturation, export comptable, devis en ligne), il contient déjà du texte sélectionnable, sans qu'aucune reconnaissance optique ne soit nécessaire. L'enjeu n'est alors plus de « lire » le document mais d'en extraire les bons champs, malgré des mises en page qui varient d'un émetteur à l'autre. Ce n'est que pour les PDF scannés ou photographiés que l'<a href="<?php echo esc_url( eb_url('automatisation-ocr') ); ?>">OCR</a> entre en jeu, en amont de l'extraction.</p>
+      <p>Un PDF n'est pas toujours une image : lorsqu'il est généré directement par un logiciel (facturation, export comptable, devis en ligne), il contient déjà du texte sélectionnable, sans qu'aucune reconnaissance optique ne soit nécessaire. <strong>L'enjeu n'est alors plus de « lire » le document mais d'en extraire les bons champs</strong>, malgré des mises en page qui varient d'un émetteur à l'autre. Ce n'est que pour les PDF scannés ou photographiés que l'<a href="<?php echo esc_url( eb_url('automatisation-ocr') ); ?>">OCR</a> entre en jeu, en amont de l'extraction.</p>
     </div>
 
     <div class="pillar-section">
@@ -41,9 +41,9 @@ if ( ! defined( 'ABSPATH' ) ) {
       <div class="pillar-section__list">
         <div class="pillar-section__list-item"><span>✓</span>Montants, dates, références et lignes de détail d'un devis ou d'une facture, vers Excel ou votre logiciel comptable.</div>
         <div class="pillar-section__list-item"><span>✓</span>Tableaux complets (quantités, prix unitaires, totaux) depuis un bon de commande ou un catalogue fournisseur.</div>
-        <div class="pillar-section__list-item"><span>✓</span>Clauses et dates clés d'un contrat (durée, reconduction, montant), pour un suivi automatisé des échéances.</div>
+        <div class="pillar-section__list-item"><span>✓</span><strong>Clauses et dates clés d'un contrat</strong> (durée, reconduction, montant), pour un suivi automatisé des échéances.</div>
         <div class="pillar-section__list-item"><span>✓</span>Données de relevés bancaires ou de bulletins de paie au format PDF, vers un tableau de suivi.</div>
-        <div class="pillar-section__list-item"><span>✓</span>Fusion de plusieurs PDF sources en un seul fichier de synthèse structuré.</div>
+        <div class="pillar-section__list-item"><span>✓</span><strong>Fusion de plusieurs PDF sources</strong> en un seul fichier de synthèse structuré.</div>
       </div>
     </div>
 

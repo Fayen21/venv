@@ -33,8 +33,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
     <div class="pillar-section">
       <h2>Pourquoi passer par un consultant Make plutôt que de le faire soi-même</h2>
-      <p>Make est conçu pour être accessible, mais la différence entre un scénario qui fonctionne en démonstration et un scénario fiable en production tient à des détails qu'on ne découvre qu'à l'usage : gestion des erreurs, cas limites, volumes de données, limites d'API des outils connectés. Un consultant Make expérimenté construit des scénarios robustes dès le départ — avec gestion des exceptions, notifications en cas d'échec et documentation claire — plutôt que des automatisations qui fonctionnent seulement sur le cas testé le jour de la mise en place.</p>
-      <p>L'autre bénéfice concret est le gain de temps : concevoir un scénario fiable demande de connaître les subtilités de chaque connecteur (Outlook, CRM, comptabilité, IA) et leurs limites respectives. Un consultant qui les pratique au quotidien évite les essais-erreurs qui prennent des semaines en autodidacte.</p>
+      <p>Make est conçu pour être accessible, mais la différence entre un scénario qui fonctionne en démonstration et un scénario fiable en production tient à des détails qu'on ne découvre qu'à l'usage : gestion des erreurs, cas limites, volumes de données, limites d'API des outils connectés. <strong>Un consultant Make expérimenté construit des scénarios robustes dès le départ</strong> — avec gestion des exceptions, notifications en cas d'échec et documentation claire — plutôt que des automatisations qui fonctionnent seulement sur le cas testé le jour de la mise en place.</p>
+      <p>L'autre bénéfice concret est le gain de temps : concevoir un scénario fiable demande de connaître les subtilités de chaque connecteur (Outlook, CRM, comptabilité, IA) et leurs limites respectives. <strong>Un consultant qui les pratique au quotidien évite les essais-erreurs qui prennent des semaines en autodidacte.</strong></p>
     </div>
 
     <div class="pillar-section">
@@ -43,8 +43,8 @@ if ( ! defined( 'ABSPATH' ) ) {
         <div class="pillar-section__list-item"><span>✓</span>Connexions entre vos outils existants (email, CRM, comptabilité, RH) sans développement lourd.</div>
         <div class="pillar-section__list-item"><span>✓</span>Scénarios combinant plusieurs étapes et conditions, avec points de contrôle humain sur les décisions sensibles.</div>
         <div class="pillar-section__list-item"><span>✓</span>Intégration de modules d'intelligence artificielle pour lire et interpréter des documents non structurés.</div>
-        <div class="pillar-section__list-item"><span>✓</span>Gestion des erreurs et des cas limites, avec alertes automatiques en cas d'échec d'exécution.</div>
-        <div class="pillar-section__list-item"><span>✓</span>Documentation complète de chaque scénario, pour que vous restiez autonome sur son fonctionnement.</div>
+        <div class="pillar-section__list-item"><span>✓</span><strong>Gestion des erreurs et des cas limites</strong>, avec alertes automatiques en cas d'échec d'exécution.</div>
+        <div class="pillar-section__list-item"><span>✓</span>Documentation complète de chaque scénario, pour que <strong>vous restiez autonome</strong> sur son fonctionnement.</div>
       </div>
     </div>
 
@@ -99,7 +99,7 @@ if ( ! defined( 'ABSPATH' ) ) {
         <span class="pillar-flow__arrow">→</span>
         <div class="pillar-flow__step"><span class="pillar-flow__icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3L3 5v16l6-2 6 2 6-2V3l-6 2-6-2z"></path><path d="M9 3v16M15 5v16"></path></svg></span><span class="pillar-flow__step-label">Conception du scénario</span></div>
         <span class="pillar-flow__arrow">→</span>
-        <div class="pillar-flow__step"><span class="pillar-flow__icon">⚙️</span><span class="pillar-flow__step-label">Construction &amp; tests</span></div>
+        <div class="pillar-flow__step"><span class="pillar-flow__icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg></span><span class="pillar-flow__step-label">Construction &amp; tests</span></div>
         <span class="pillar-flow__arrow">→</span>
         <div class="pillar-flow__step"><span class="pillar-flow__icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"></rect><path d="M9 8h6M9 12h6M9 16h4"></path></svg></span><span class="pillar-flow__step-label">Documentation &amp; livraison</span></div>
       </div>
