@@ -46,9 +46,9 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div class="pillar-section">
       <h2>Pourquoi un consultant indépendant peut être un meilleur choix pour une TPE-PME</h2>
       <div class="pillar-section__list">
-        <div class="pillar-section__list-item"><span>✓</span><strong>Un seul interlocuteur du premier échange à la mise en production</strong> — pas de chef de projet qui traduit entre vous et un développeur qui ne vous a jamais parlé.</div>
+        <div class="pillar-section__list-item"><span>✓</span><span><strong>Un seul interlocuteur du premier échange à la mise en production</strong> — pas de chef de projet qui traduit entre vous et un développeur qui ne vous a jamais parlé.</span></div>
         <div class="pillar-section__list-item"><span>✓</span>Une expertise métier réelle (gestion, comptabilité, RH) avant la couche technique : l'automatisation part de votre processus, pas d'une technologie à vendre.</div>
-        <div class="pillar-section__list-item"><span>✓</span>Une <strong>structure de coûts plus légère qu'une agence</strong>, sans marge de gestion de compte ni de commercial à financer.</div>
+        <div class="pillar-section__list-item"><span>✓</span><span>Une <strong>structure de coûts plus légère qu'une agence</strong>, sans marge de gestion de compte ni de commercial à financer.</span></div>
         <div class="pillar-section__list-item"><span>✓</span>Une relation dans la durée : c'est la même personne qui a conçu l'automatisation qui la fait évoluer six mois plus tard.</div>
       </div>
     </div>

@@ -43,8 +43,8 @@ if ( ! defined( 'ABSPATH' ) ) {
         <div class="pillar-section__list-item"><span>✓</span>Connexions entre vos outils existants (email, CRM, comptabilité, RH) sans développement lourd.</div>
         <div class="pillar-section__list-item"><span>✓</span>Scénarios combinant plusieurs étapes et conditions, avec points de contrôle humain sur les décisions sensibles.</div>
         <div class="pillar-section__list-item"><span>✓</span>Intégration de modules d'intelligence artificielle pour lire et interpréter des documents non structurés.</div>
-        <div class="pillar-section__list-item"><span>✓</span><strong>Gestion des erreurs et des cas limites</strong>, avec alertes automatiques en cas d'échec d'exécution.</div>
-        <div class="pillar-section__list-item"><span>✓</span>Documentation complète de chaque scénario, pour que <strong>vous restiez autonome</strong> sur son fonctionnement.</div>
+        <div class="pillar-section__list-item"><span>✓</span><span><strong>Gestion des erreurs et des cas limites</strong>, avec alertes automatiques en cas d'échec d'exécution.</span></div>
+        <div class="pillar-section__list-item"><span>✓</span><span>Documentation complète de chaque scénario, pour que <strong>vous restiez autonome</strong> sur son fonctionnement.</span></div>
       </div>
     </div>
 

@@ -40,9 +40,9 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div class="pillar-section">
       <h2>Ce que je peux automatiser concrètement sur Outlook</h2>
       <div class="pillar-section__list">
-        <div class="pillar-section__list-item"><span>✓</span><strong>Catégorisation automatique des emails entrants</strong> (commercial, RH, fournisseur, urgent) et affectation à la bonne personne.</div>
+        <div class="pillar-section__list-item"><span>✓</span><span><strong>Catégorisation automatique des emails entrants</strong> (commercial, RH, fournisseur, urgent) et affectation à la bonne personne.</span></div>
         <div class="pillar-section__list-item"><span>✓</span>Extraction des pièces jointes (factures, devis, contrats) et classement automatique dans le bon dossier ou le bon outil.</div>
-        <div class="pillar-section__list-item"><span>✓</span>Création automatique d'une tâche ou d'une fiche CRM à partir d'un email entrant, <strong>sans ressaisie</strong>.</div>
+        <div class="pillar-section__list-item"><span>✓</span><span>Création automatique d'une tâche ou d'une fiche CRM à partir d'un email entrant, <strong>sans ressaisie</strong>.</span></div>
         <div class="pillar-section__list-item"><span>✓</span>Réponses automatiques ou pré-rédigées pour les demandes récurrentes, avec validation avant envoi si souhaité.</div>
         <div class="pillar-section__list-item"><span>✓</span>Rappels et relances automatiques sur les emails restés sans réponse au-delà d'un délai défini.</div>
       </div>

@@ -40,11 +40,11 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div class="pillar-section">
       <h2>Ce que je peux automatiser dans votre environnement Microsoft 365</h2>
       <div class="pillar-section__list">
-        <div class="pillar-section__list-item"><span>✓</span>Un email Outlook classé déclenche <strong>l'archivage automatique de sa pièce jointe</strong> dans le bon dossier SharePoint.</div>
+        <div class="pillar-section__list-item"><span>✓</span><span>Un email Outlook classé déclenche <strong>l'archivage automatique de sa pièce jointe</strong> dans le bon dossier SharePoint.</span></div>
         <div class="pillar-section__list-item"><span>✓</span>Une notification Teams envoyée automatiquement à la bonne équipe dès qu'un document important est ajouté.</div>
         <div class="pillar-section__list-item"><span>✓</span>Un fichier Excel mis à jour automatiquement à partir de formulaires ou de données collectées ailleurs dans la suite.</div>
         <div class="pillar-section__list-item"><span>✓</span>Une approbation demandée automatiquement dans Teams avant qu'un document ne soit publié ou envoyé.</div>
-        <div class="pillar-section__list-item"><span>✓</span>Un <strong>tableau de bord SharePoint alimenté en continu</strong> depuis vos autres outils métier.</div>
+        <div class="pillar-section__list-item"><span>✓</span><span>Un <strong>tableau de bord SharePoint alimenté en continu</strong> depuis vos autres outils métier.</span></div>
       </div>
     </div>
 

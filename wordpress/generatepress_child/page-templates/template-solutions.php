@@ -428,7 +428,7 @@ if ( ! defined( 'ABSPATH' ) ) {
   </section>
 
   <!-- FAQ -->
-  <section class="section" style="padding:70px 40px 20px;">
+  <section class="section" style="padding:50px 40px 20px;">
     <div class="section-head" style="margin-bottom:40px;">
       <span class="eyebrow">Questions fréquentes</span>
       <h2 style="font-size:34px;max-width:620px;margin:0 auto;line-height:1.15;">Automatisation en PME : les questions que l'on me pose</h2>

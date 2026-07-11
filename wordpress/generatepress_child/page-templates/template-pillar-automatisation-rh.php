@@ -47,9 +47,9 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div class="pillar-section">
       <h2>Pourquoi automatiser sa gestion RH</h2>
       <div class="pillar-section__list">
-        <div class="pillar-section__list-item"><span>✓</span><strong>L'onboarding salarié devient un parcours fiable</strong> : contrat, accès et dossier d'accueil prêts avant le premier jour.</div>
+        <div class="pillar-section__list-item"><span>✓</span><span><strong>L'onboarding salarié devient un parcours fiable</strong> : contrat, accès et dossier d'accueil prêts avant le premier jour.</span></div>
         <div class="pillar-section__list-item"><span>✓</span>La signature électronique élimine les allers-retours papier et accélère la finalisation des contrats.</div>
-        <div class="pillar-section__list-item"><span>✓</span>La gestion des congés se synchronise automatiquement avec le logiciel de paie, <strong>sans ressaisie</strong>.</div>
+        <div class="pillar-section__list-item"><span>✓</span><span>La gestion des congés se synchronise automatiquement avec le logiciel de paie, <strong>sans ressaisie</strong>.</span></div>
         <div class="pillar-section__list-item"><span>✓</span>Le recrutement automatisé qualifie et trie les candidatures reçues, sans que rien ne se perde entre email et tableur.</div>
       </div>
     </div>
@@ -58,9 +58,9 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div class="pillar-section">
       <h2>Bénéfices concrets pour votre entreprise</h2>
       <div class="pillar-section__list">
-        <div class="pillar-section__list-item"><span>✓</span><strong>Des arrivées de salariés préparées en heures plutôt qu'en jours</strong>, sans oubli d'accès ou de document.</div>
+        <div class="pillar-section__list-item"><span>✓</span><span><strong>Des arrivées de salariés préparées en heures plutôt qu'en jours</strong>, sans oubli d'accès ou de document.</span></div>
         <div class="pillar-section__list-item"><span>✓</span>Des variables de paie collectées et consolidées automatiquement avant chaque échéance.</div>
-        <div class="pillar-section__list-item"><span>✓</span>Une équipe RH qui passe <strong>moins de temps sur l'administratif répétitif</strong> et davantage sur l'accompagnement des équipes.</div>
+        <div class="pillar-section__list-item"><span>✓</span><span>Une équipe RH qui passe <strong>moins de temps sur l'administratif répétitif</strong> et davantage sur l'accompagnement des équipes.</span></div>
         <div class="pillar-section__list-item"><span>✓</span>Une traçabilité complète des demandes de congés et des documents signés, sans classeur ni fil d'emails à retrouver.</div>
       </div>
     </div>

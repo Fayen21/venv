@@ -81,11 +81,11 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div class="pillar-section">
       <h2>Erreurs fréquentes à éviter</h2>
       <div class="pillar-section__list">
-        <div class="pillar-section__list-item"><span>✕</span>Choisir l'outil avant d'avoir cartographié le temps réellement perdu, au risque de payer pour une automatisation qui ne sert presque personne.</div>
-        <div class="pillar-section__list-item"><span>✕</span>Vouloir tout automatiser en même temps plutôt que de sécuriser un premier gain rapide et mesurable.</div>
-        <div class="pillar-section__list-item"><span>✕</span>Négliger les cas particuliers et les exceptions, qui finissent par représenter plus de travail correctif que la tâche automatisée n'en faisait gagner.</div>
-        <div class="pillar-section__list-item"><span>✕</span>Ne pas impliquer les équipes concernées, ce qui génère de la résistance au changement même quand l'automatisation leur profite directement.</div>
-        <div class="pillar-section__list-item"><span>✕</span>Confondre automatisation et migration d'outil : <strong>dans la grande majorité des cas, vos logiciels actuels suffisent</strong>.</div>
+        <div class="pillar-section__list-item pillar-section__list-item--bad"><span>✕</span>Choisir l'outil avant d'avoir cartographié le temps réellement perdu, au risque de payer pour une automatisation qui ne sert presque personne.</div>
+        <div class="pillar-section__list-item pillar-section__list-item--bad"><span>✕</span>Vouloir tout automatiser en même temps plutôt que de sécuriser un premier gain rapide et mesurable.</div>
+        <div class="pillar-section__list-item pillar-section__list-item--bad"><span>✕</span>Négliger les cas particuliers et les exceptions, qui finissent par représenter plus de travail correctif que la tâche automatisée n'en faisait gagner.</div>
+        <div class="pillar-section__list-item pillar-section__list-item--bad"><span>✕</span>Ne pas impliquer les équipes concernées, ce qui génère de la résistance au changement même quand l'automatisation leur profite directement.</div>
+        <div class="pillar-section__list-item pillar-section__list-item--bad"><span>✕</span><span>Confondre automatisation et migration d'outil : <strong>dans la grande majorité des cas, vos logiciels actuels suffisent</strong>.</span></div>
       </div>
     </div>
 

@@ -47,11 +47,11 @@ if ( ! defined( 'ABSPATH' ) ) {
       <h2>Ce que l'IA change concrètement dans vos processus</h2>
       <p>Concrètement, ajouter de l'IA à une automatisation permet de :</p>
       <div class="pillar-section__list">
-        <div class="pillar-section__list-item"><span>✓</span><strong>Lire un PDF ou un scan et en extraire les bonnes informations</strong>, même sans gabarit fixe.</div>
+        <div class="pillar-section__list-item"><span>✓</span><span><strong>Lire un PDF ou un scan et en extraire les bonnes informations</strong>, même sans gabarit fixe.</span></div>
         <div class="pillar-section__list-item"><span>✓</span>Comprendre le contenu d'un email et décider de l'action à mener (relance, transfert, création de tâche).</div>
         <div class="pillar-section__list-item"><span>✓</span>Classer un document selon son contenu réel, pas seulement selon son nom de fichier.</div>
         <div class="pillar-section__list-item"><span>✓</span>Générer un résumé ou une première réponse à partir de plusieurs documents sources.</div>
-        <div class="pillar-section__list-item"><span>✓</span><strong>Détecter une incohérence ou une anomalie</strong> dans une série de données comptables ou commerciales.</div>
+        <div class="pillar-section__list-item"><span>✓</span><span><strong>Détecter une incohérence ou une anomalie</strong> dans une série de données comptables ou commerciales.</span></div>
       </div>
     </div>
 
@@ -100,10 +100,10 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div class="pillar-section">
       <h2>Erreurs fréquentes avec l'automatisation IA</h2>
       <div class="pillar-section__list">
-        <div class="pillar-section__list-item"><span>✕</span>Vouloir tout confier à l'IA dès le départ, y compris les décisions sensibles, sans période de contrôle humain.</div>
-        <div class="pillar-section__list-item"><span>✕</span>Ne pas cadrer précisément ce que l'IA doit lire et produire, ce qui génère des résultats incohérents.</div>
-        <div class="pillar-section__list-item"><span>✕</span>Choisir l'IA par effet de mode sur une tâche qui relevait en réalité d'une automatisation classique plus simple et moins coûteuse.</div>
-        <div class="pillar-section__list-item"><span>✕</span>Ignorer les cas où l'IA se trompe, plutôt que de les signaler pour affiner les règles au fil du temps.</div>
+        <div class="pillar-section__list-item pillar-section__list-item--bad"><span>✕</span>Vouloir tout confier à l'IA dès le départ, y compris les décisions sensibles, sans période de contrôle humain.</div>
+        <div class="pillar-section__list-item pillar-section__list-item--bad"><span>✕</span>Ne pas cadrer précisément ce que l'IA doit lire et produire, ce qui génère des résultats incohérents.</div>
+        <div class="pillar-section__list-item pillar-section__list-item--bad"><span>✕</span>Choisir l'IA par effet de mode sur une tâche qui relevait en réalité d'une automatisation classique plus simple et moins coûteuse.</div>
+        <div class="pillar-section__list-item pillar-section__list-item--bad"><span>✕</span>Ignorer les cas où l'IA se trompe, plutôt que de les signaler pour affiner les règles au fil du temps.</div>
       </div>
     </div>
 

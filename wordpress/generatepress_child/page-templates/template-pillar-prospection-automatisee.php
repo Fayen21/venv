@@ -49,7 +49,7 @@ if ( ! defined( 'ABSPATH' ) ) {
       <div class="pillar-section__list">
         <div class="pillar-section__list-item"><span>✓</span>L'automatisation LinkedIn identifie et engage des contacts pertinents selon des critères précis, sans recherche manuelle profil par profil.</div>
         <div class="pillar-section__list-item"><span>✓</span>La relance email s'envoie automatiquement selon un calendrier fixe, sans dépendre d'y penser au bon moment.</div>
-        <div class="pillar-section__list-item"><span>✓</span>L'<a href="<?php echo esc_url( eb_url('automatisation-crm') ); ?>">enrichissement CRM</a> complète automatiquement les fiches contact avec les informations utiles à la qualification.</div>
+        <div class="pillar-section__list-item"><span>✓</span><span>L'<a href="<?php echo esc_url( eb_url('automatisation-crm') ); ?>">enrichissement CRM</a> complète automatiquement les fiches contact avec les informations utiles à la qualification.</span></div>
         <div class="pillar-section__list-item"><span>✓</span>La qualification automatique trie les réponses pour ne remonter que les échanges qui méritent un vrai suivi humain.</div>
       </div>
     </div>
@@ -58,9 +58,9 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div class="pillar-section">
       <h2>Bénéfices concrets pour votre entreprise</h2>
       <div class="pillar-section__list">
-        <div class="pillar-section__list-item"><span>✓</span>Un <strong>flux de prospection qui continue même dans les périodes chargées</strong>.</div>
+        <div class="pillar-section__list-item"><span>✓</span><span>Un <strong>flux de prospection qui continue même dans les périodes chargées</strong>.</span></div>
         <div class="pillar-section__list-item"><span>✓</span>Plus de leads qualifiés, sans y consacrer plus de temps qu'aujourd'hui.</div>
-        <div class="pillar-section__list-item"><span>✓</span><strong>Des relances systématiques</strong>, là où la plupart des opportunités se perdent aujourd'hui par oubli.</div>
+        <div class="pillar-section__list-item"><span>✓</span><span><strong>Des relances systématiques</strong>, là où la plupart des opportunités se perdent aujourd'hui par oubli.</span></div>
         <div class="pillar-section__list-item"><span>✓</span>Un CRM enrichi automatiquement, prêt à être exploité par l'équipe commerciale.</div>
       </div>
     </div>

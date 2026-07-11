@@ -23,7 +23,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 .section{
   max-width:1200px;
   margin:0 auto;
-  padding:64px 40px 24px;
+  padding:48px 40px 20px;
 }
 
 /* ---------- top techno bar ---------- */
@@ -278,9 +278,17 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 .site-footer__identity{ max-width:300px; }
 .site-footer__nav{
   display:grid;
-  grid-template-columns:repeat(4,1fr);
+  /* colonnes dimensionnées à leur contenu : avec des tracks 1fr, une colonne
+     aux libellés courts (Navigation) laisse un grand vide avant la colonne
+     suivante alors qu'une colonne aux libellés longs colle presque au gap —
+     l'écart visuel perçu variait donc d'une colonne à l'autre malgré un gap
+     identique. minmax(0,max-content) fait que l'espace visible entre deux
+     colonnes est partout égal au gap. */
+  grid-template-columns:repeat(4,minmax(0,max-content));
+  justify-content:space-between;
   gap:28px;
 }
+.site-footer__col{ min-width:0; }
 .site-footer__logo{
   margin-bottom:18px;
 }

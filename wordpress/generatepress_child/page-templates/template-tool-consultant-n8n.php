@@ -41,10 +41,10 @@ if ( ! defined( 'ABSPATH' ) ) {
       <h2>Ce que je construis avec n8n</h2>
       <div class="pillar-section__list">
         <div class="pillar-section__list-item"><span>✓</span>Workflows connectant des logiciels via API, y compris des outils métier sans connecteur préexistant.</div>
-        <div class="pillar-section__list-item"><span>✓</span><strong>Automatisations hébergées sur une infrastructure maîtrisée</strong>, pour les projets avec des contraintes de confidentialité renforcées.</div>
+        <div class="pillar-section__list-item"><span>✓</span><span><strong>Automatisations hébergées sur une infrastructure maîtrisée</strong>, pour les projets avec des contraintes de confidentialité renforcées.</span></div>
         <div class="pillar-section__list-item"><span>✓</span>Logiques conditionnelles complexes, avec plusieurs branches de traitement selon le contenu des données.</div>
         <div class="pillar-section__list-item"><span>✓</span>Intégration de modèles d'intelligence artificielle pour la lecture et le traitement de documents non structurés.</div>
-        <div class="pillar-section__list-item"><span>✓</span>Documentation technique complète, pour <strong>une reprise en main éventuelle par une équipe interne</strong>.</div>
+        <div class="pillar-section__list-item"><span>✓</span><span>Documentation technique complète, pour <strong>une reprise en main éventuelle par une équipe interne</strong>.</span></div>
       </div>
     </div>
 

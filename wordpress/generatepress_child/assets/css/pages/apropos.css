@@ -23,11 +23,11 @@
 
 /* ============ bandeau navy "ma façon de travailler" ============ */
 .values-band{
-  margin-top:70px; background-color:#15305C;
+  margin-top:24px; background-color:#15305C;
   background-image:var(--navy-gradient);
   color:#fff;
 }
-.values-band__inner{ max-width:1200px; margin:0 auto; padding:74px 40px; }
+.values-band__inner{ max-width:1200px; margin:0 auto; padding:56px 40px; }
 .values-band h2{ font-size:34px; color:#fff; margin:0 0 44px; }
 .values-band__grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:34px; }
 .value-item__n{ font-family:var(--font-heading); font-weight:700; font-size:15px; color:var(--peach); margin-bottom:14px; }

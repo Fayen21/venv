@@ -43,7 +43,7 @@ if ( ! defined( 'ABSPATH' ) ) {
         <div class="pillar-section__list-item"><span>✓</span>Alimentation automatique d'un tableau de bord depuis votre CRM, votre compta ou votre outil RH.</div>
         <div class="pillar-section__list-item"><span>✓</span>Extraction de données depuis des PDF (factures, bons de commande) directement vers un fichier Excel structuré.</div>
         <div class="pillar-section__list-item"><span>✓</span>Consolidation de plusieurs fichiers Excel provenant de différents sites ou services en un seul reporting.</div>
-        <div class="pillar-section__list-item"><span>✓</span><strong>Contrôles de cohérence automatiques</strong> (doublons, totaux, valeurs manquantes) avec alerte en cas d'anomalie.</div>
+        <div class="pillar-section__list-item"><span>✓</span><span><strong>Contrôles de cohérence automatiques</strong> (doublons, totaux, valeurs manquantes) avec alerte en cas d'anomalie.</span></div>
         <div class="pillar-section__list-item"><span>✓</span>Génération de fichiers Excel formatés (devis, exports, bilans) à partir d'un autre outil, prêts à envoyer.</div>
       </div>
     </div>

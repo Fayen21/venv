@@ -41,9 +41,9 @@ if ( ! defined( 'ABSPATH' ) ) {
       <div class="pillar-section__list">
         <div class="pillar-section__list-item"><span>✓</span>Montants, dates, références et lignes de détail d'un devis ou d'une facture, vers Excel ou votre logiciel comptable.</div>
         <div class="pillar-section__list-item"><span>✓</span>Tableaux complets (quantités, prix unitaires, totaux) depuis un bon de commande ou un catalogue fournisseur.</div>
-        <div class="pillar-section__list-item"><span>✓</span><strong>Clauses et dates clés d'un contrat</strong> (durée, reconduction, montant), pour un suivi automatisé des échéances.</div>
+        <div class="pillar-section__list-item"><span>✓</span><span><strong>Clauses et dates clés d'un contrat</strong> (durée, reconduction, montant), pour un suivi automatisé des échéances.</span></div>
         <div class="pillar-section__list-item"><span>✓</span>Données de relevés bancaires ou de bulletins de paie au format PDF, vers un tableau de suivi.</div>
-        <div class="pillar-section__list-item"><span>✓</span><strong>Fusion de plusieurs PDF sources</strong> en un seul fichier de synthèse structuré.</div>
+        <div class="pillar-section__list-item"><span>✓</span><span><strong>Fusion de plusieurs PDF sources</strong> en un seul fichier de synthèse structuré.</span></div>
       </div>
     </div>
 

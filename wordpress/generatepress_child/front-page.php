@@ -251,7 +251,6 @@ get_header();
         <a href="<?php echo esc_url( eb_url('consultant-n8n') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('n8n'); ?>n8n<span class="tool-chip__chevron" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></span></a>
         <div class="tool-chip"><?php echo eb_tool_icon_html('ogust'); ?>Ogust</div>
       </div>
-      <p class="trust-tools__note">Les outils marqués d'une flèche renvoient vers une page dédiée.</p>
     </div>
   </section>
 
@@ -649,7 +648,7 @@ get_header();
   </section>
 
   <!-- objections / FAQ -->
-  <section class="section" style="padding:70px 40px 20px;">
+  <section class="section" style="padding:50px 40px 20px;">
     <div class="section-head" style="margin-bottom:40px;">
       <span class="eyebrow">Questions fréquentes</span>
       <h2 style="font-size:34px;max-width:680px;margin:0 auto;line-height:1.15;">Les questions — et objections — que l'on me pose le plus souvent</h2>

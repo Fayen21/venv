@@ -47,9 +47,9 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div class="pillar-section">
       <h2>Pourquoi automatiser son CRM</h2>
       <div class="pillar-section__list">
-        <div class="pillar-section__list-item"><span>✓</span><strong>Chaque demande entrante crée automatiquement une fiche et une tâche de suivi</strong> dans le CRM.</div>
+        <div class="pillar-section__list-item"><span>✓</span><span><strong>Chaque demande entrante crée automatiquement une fiche et une tâche de suivi</strong> dans le CRM.</span></div>
         <div class="pillar-section__list-item"><span>✓</span>Le pipeline commercial reste à jour sans ressaisie manuelle de la part des commerciaux.</div>
-        <div class="pillar-section__list-item"><span>✓</span>Les relances s'envoient <strong>au bon moment</strong>, sans dépendre de la mémoire de chacun.</div>
+        <div class="pillar-section__list-item"><span>✓</span><span>Les relances s'envoient <strong>au bon moment</strong>, sans dépendre de la mémoire de chacun.</span></div>
         <div class="pillar-section__list-item"><span>✓</span>Le reporting commercial se génère directement depuis des données fiables, sans reconstruction manuelle.</div>
       </div>
     </div>
@@ -58,9 +58,9 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div class="pillar-section">
       <h2>Bénéfices concrets pour votre entreprise</h2>
       <div class="pillar-section__list">
-        <div class="pillar-section__list-item"><span>✓</span><strong>Zéro prospect oublié</strong> entre la première demande et la relance.</div>
+        <div class="pillar-section__list-item"><span>✓</span><span><strong>Zéro prospect oublié</strong> entre la première demande et la relance.</span></div>
         <div class="pillar-section__list-item"><span>✓</span>Un temps de premier contact réduit, avec une qualification automatique dès l'arrivée du lead.</div>
-        <div class="pillar-section__list-item"><span>✓</span>Une équipe commerciale qui passe <strong>moins de temps sur la saisie CRM</strong> et davantage sur les échanges clients.</div>
+        <div class="pillar-section__list-item"><span>✓</span><span>Une équipe commerciale qui passe <strong>moins de temps sur la saisie CRM</strong> et davantage sur les échanges clients.</span></div>
         <div class="pillar-section__list-item"><span>✓</span>Un pipeline commercial fiable pour piloter l'activité sans attendre la fin du mois.</div>
       </div>
     </div>

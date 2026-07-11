@@ -50,7 +50,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div class="pillar-section">
       <h2>Types de processus fréquemment automatisés</h2>
       <div class="pillar-section__list">
-        <div class="pillar-section__list-item"><span>✓</span><strong>Validation de devis et de commande</strong>, avec relance automatique en cas d'absence de réponse.</div>
+        <div class="pillar-section__list-item"><span>✓</span><span><strong>Validation de devis et de commande</strong>, avec relance automatique en cas d'absence de réponse.</span></div>
         <div class="pillar-section__list-item"><span>✓</span>Cycle achat → facture → paiement, avec contrôle de cohérence entre les montants.</div>
         <div class="pillar-section__list-item"><span>✓</span>Onboarding et offboarding RH, de la validation d'embauche à la clôture d'un départ.</div>
         <div class="pillar-section__list-item"><span>✓</span>Cycle de relance client, de la facture échue à l'escalade si nécessaire.</div>
@@ -71,17 +71,17 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div class="pillar-section">
       <h2>Erreurs fréquentes dans l'automatisation de processus</h2>
       <div class="pillar-section__list">
-        <div class="pillar-section__list-item"><span>✕</span>Automatiser le processus tel qu'il est décrit sur le papier, sans vérifier comment il se déroule vraiment dans les faits.</div>
-        <div class="pillar-section__list-item"><span>✕</span>Oublier de prévoir un point de sortie clair quand une étape échoue ou qu'une donnée est manquante.</div>
-        <div class="pillar-section__list-item"><span>✕</span>Automatiser un processus qui devrait d'abord être simplifié — <strong>l'automatisation accélère un mauvais processus autant qu'un bon</strong>.</div>
-        <div class="pillar-section__list-item"><span>✕</span>Ne pas notifier les bonnes personnes au bon moment, ce qui recrée artificiellement des délais que l'automatisation devait supprimer.</div>
+        <div class="pillar-section__list-item pillar-section__list-item--bad"><span>✕</span>Automatiser le processus tel qu'il est décrit sur le papier, sans vérifier comment il se déroule vraiment dans les faits.</div>
+        <div class="pillar-section__list-item pillar-section__list-item--bad"><span>✕</span>Oublier de prévoir un point de sortie clair quand une étape échoue ou qu'une donnée est manquante.</div>
+        <div class="pillar-section__list-item pillar-section__list-item--bad"><span>✕</span><span>Automatiser un processus qui devrait d'abord être simplifié — <strong>l'automatisation accélère un mauvais processus autant qu'un bon</strong>.</span></div>
+        <div class="pillar-section__list-item pillar-section__list-item--bad"><span>✕</span>Ne pas notifier les bonnes personnes au bon moment, ce qui recrée artificiellement des délais que l'automatisation devait supprimer.</div>
       </div>
     </div>
 
     <div class="pillar-section">
       <h2>Bonnes pratiques pour un processus fiable dans la durée</h2>
       <div class="pillar-section__list">
-        <div class="pillar-section__list-item"><span>✓</span><strong>Tester le scénario sur des cas réels</strong>, y compris les cas limites, avant toute mise en production.</div>
+        <div class="pillar-section__list-item"><span>✓</span><span><strong>Tester le scénario sur des cas réels</strong>, y compris les cas limites, avant toute mise en production.</span></div>
         <div class="pillar-section__list-item"><span>✓</span>Prévoir un journal ou un historique des exécutions pour pouvoir diagnostiquer un incident rapidement.</div>
         <div class="pillar-section__list-item"><span>✓</span>Garder chaque étape modulaire, pour pouvoir la modifier sans reconstruire tout le processus.</div>
         <div class="pillar-section__list-item"><span>✓</span>Documenter les règles de décision, pas seulement les actions, pour que le processus reste compréhensible dans le temps.</div>

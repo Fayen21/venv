@@ -40,10 +40,10 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div class="pillar-section">
       <h2>Ce que je peux automatiser dans votre facturation</h2>
       <div class="pillar-section__list">
-        <div class="pillar-section__list-item"><span>✓</span><strong>Génération automatique de la facture dès l'acceptation d'un devis</strong>, sans recomposition manuelle.</div>
+        <div class="pillar-section__list-item"><span>✓</span><span><strong>Génération automatique de la facture dès l'acceptation d'un devis</strong>, sans recomposition manuelle.</span></div>
         <div class="pillar-section__list-item"><span>✓</span>Envoi automatique au client, avec accusé de réception tracé.</div>
         <div class="pillar-section__list-item"><span>✓</span>Relances automatiques selon un calendrier défini, jusqu'au paiement ou à une action explicite.</div>
-        <div class="pillar-section__list-item"><span>✓</span>Rapprochement automatique entre les paiements reçus et les factures émises, avec <strong>signalement des écarts</strong>.</div>
+        <div class="pillar-section__list-item"><span>✓</span><span>Rapprochement automatique entre les paiements reçus et les factures émises, avec <strong>signalement des écarts</strong>.</span></div>
         <div class="pillar-section__list-item"><span>✓</span>Transmission automatique des factures validées vers votre comptabilité, prêtes à être comptabilisées.</div>
       </div>
     </div>

@@ -40,9 +40,9 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div class="pillar-section">
       <h2>Ce que je peux automatiser avec l'OCR</h2>
       <div class="pillar-section__list">
-        <div class="pillar-section__list-item"><span>✓</span><strong>Lecture de factures fournisseurs</strong> et génération automatique de l'écriture comptable correspondante.</div>
+        <div class="pillar-section__list-item"><span>✓</span><span><strong>Lecture de factures fournisseurs</strong> et génération automatique de l'écriture comptable correspondante.</span></div>
         <div class="pillar-section__list-item"><span>✓</span>Extraction des notes de frais (montant, catégorie, date) depuis une simple photo de reçu.</div>
-        <div class="pillar-section__list-item"><span>✓</span>Vérification automatique de certificats et documents de conformité fournisseurs, avec <strong>alerte en cas de document manquant ou expiré</strong>.</div>
+        <div class="pillar-section__list-item"><span>✓</span><span>Vérification automatique de certificats et documents de conformité fournisseurs, avec <strong>alerte en cas de document manquant ou expiré</strong>.</span></div>
         <div class="pillar-section__list-item"><span>✓</span>Lecture de bons de commande ou bons de livraison pour mise à jour automatique du stock ou de la facturation.</div>
         <div class="pillar-section__list-item"><span>✓</span>Numérisation et classement automatique d'archives papier lors d'une reprise de dossiers.</div>
       </div>

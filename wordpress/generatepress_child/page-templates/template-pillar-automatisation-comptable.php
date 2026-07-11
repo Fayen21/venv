@@ -47,9 +47,9 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div class="pillar-section">
       <h2>Pourquoi automatiser sa comptabilité</h2>
       <div class="pillar-section__list">
-        <div class="pillar-section__list-item"><span>✓</span><strong>La saisie comptable automatique élimine la ressaisie manuelle</strong> et les erreurs de frappe qui l'accompagnent.</div>
+        <div class="pillar-section__list-item"><span>✓</span><span><strong>La saisie comptable automatique élimine la ressaisie manuelle</strong> et les erreurs de frappe qui l'accompagnent.</span></div>
         <div class="pillar-section__list-item"><span>✓</span>L'OCR facture, associé à l'intelligence artificielle, lit montant, TVA, date et fournisseur directement depuis le PDF, sans intervention humaine.</div>
-        <div class="pillar-section__list-item"><span>✓</span>Le rapprochement bancaire automatique <strong>détecte les anomalies et les doublons avant la clôture</strong>, pas après.</div>
+        <div class="pillar-section__list-item"><span>✓</span><span>Le rapprochement bancaire automatique <strong>détecte les anomalies et les doublons avant la clôture</strong>, pas après.</span></div>
         <div class="pillar-section__list-item"><span>✓</span>Le temps libéré se réinvestit sur l'analyse financière et le conseil, pas sur la saisie répétitive.</div>
       </div>
       <div class="pillar-section__sub">
@@ -62,8 +62,8 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div class="pillar-section">
       <h2>Bénéfices concrets pour votre entreprise</h2>
       <div class="pillar-section__list">
-        <div class="pillar-section__list-item"><span>✓</span><strong>Moins d'erreurs de saisie</strong>, donc moins de corrections et d'écritures de régularisation en fin d'exercice.</div>
-        <div class="pillar-section__list-item"><span>✓</span><strong>Une clôture mensuelle plus rapide</strong>, avec des écritures déjà à jour au fil de l'eau.</div>
+        <div class="pillar-section__list-item"><span>✓</span><span><strong>Moins d'erreurs de saisie</strong>, donc moins de corrections et d'écritures de régularisation en fin d'exercice.</span></div>
+        <div class="pillar-section__list-item"><span>✓</span><span><strong>Une clôture mensuelle plus rapide</strong>, avec des écritures déjà à jour au fil de l'eau.</span></div>
         <div class="pillar-section__list-item"><span>✓</span>Une meilleure visibilité sur la trésorerie, avec des rapprochements bancaires faits en continu plutôt qu'en fin de mois.</div>
         <div class="pillar-section__list-item"><span>✓</span>Une charge de travail comptable qui n'augmente plus mécaniquement avec le volume de factures.</div>
       </div>

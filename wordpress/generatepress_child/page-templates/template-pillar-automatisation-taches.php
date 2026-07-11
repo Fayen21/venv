@@ -46,7 +46,7 @@ if ( ! defined( 'ABSPATH' ) ) {
       <h2>Les tâches les plus fréquemment automatisées</h2>
       <div class="pillar-section__list">
         <div class="pillar-section__list-item"><span>✓</span>Renommer et classer des fichiers et pièces jointes selon leur contenu.</div>
-        <div class="pillar-section__list-item"><span>✓</span><strong>Ressaisir une donnée d'un outil vers un autre</strong> (email → CRM, facture → comptabilité).</div>
+        <div class="pillar-section__list-item"><span>✓</span><span><strong>Ressaisir une donnée d'un outil vers un autre</strong> (email → CRM, facture → comptabilité).</span></div>
         <div class="pillar-section__list-item"><span>✓</span>Envoyer une relance ou un rappel à échéance fixe.</div>
         <div class="pillar-section__list-item"><span>✓</span>Mettre à jour un tableau de suivi à partir d'une nouvelle donnée reçue.</div>
         <div class="pillar-section__list-item"><span>✓</span>Extraire une information précise d'un document (montant, date, référence).</div>
