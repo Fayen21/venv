@@ -26,11 +26,11 @@ if ( ! defined( 'ABSPATH' ) ) {
           <h2>Automatiser l'onboarding RH, de la validation à l'arrivée</h2>
           <div class="case-study__block">
             <div class="case-study__label">Le problème</div>
-            <p>À chaque embauche, le contrat, les accès et les documents d'accueil étaient créés à la main et dispersés sur plusieurs outils. Près de deux jours de préparation, avec des oublis fréquents.</p>
+            <p>À chaque embauche, le contrat, les accès et les documents d'accueil étaient créés à la main et dispersés sur plusieurs outils. <strong>Près de deux jours de préparation</strong>, avec des oublis fréquents.</p>
           </div>
           <div class="case-study__block">
             <div class="case-study__label">La solution</div>
-            <p>Dès la validation d'une embauche, un flux Make + IA génère le contrat pré-rempli, crée les accès, constitue le dossier d'accueil et envoie une checklist au manager. Cette approche s'inscrit dans une <a href="<?php echo esc_url( eb_url('automatisation-rh') ); ?>">automatisation RH</a> plus large, de l'embauche jusqu'à la paie.</p>
+            <p>Dès la validation d'une embauche, <strong>un flux Make + IA génère le contrat pré-rempli, crée les accès, constitue le dossier d'accueil</strong> et envoie une checklist au manager. Cette approche s'inscrit dans une <a href="<?php echo esc_url( eb_url('automatisation-rh') ); ?>">automatisation RH</a> plus large, de l'embauche jusqu'à la paie.</p>
           </div>
           <div class="case-study__block">
             <div class="case-study__label" style="margin-bottom:12px;">Le flux automatisé</div>
@@ -71,11 +71,11 @@ if ( ! defined( 'ABSPATH' ) ) {
           <h2>Rapprochement bancaire automatisé</h2>
           <div class="case-study__block">
             <div class="case-study__label">Le problème</div>
-            <p>Le dirigeant pointait manuellement les opérations Qonto et vérifiait les écarts avec la comptabilité, plusieurs heures chaque mois.</p>
+            <p>Le dirigeant pointait manuellement les opérations Qonto et vérifiait les écarts avec la comptabilité, <strong>plusieurs heures chaque mois</strong>.</p>
           </div>
           <div class="case-study__block">
             <div class="case-study__label">La solution</div>
-            <p>Connexion Qonto + comptabilité (Sage) avec pointage et détection automatique des anomalies. L'automatisation Excel des écarts alerte en cas de doublon ou d'incohérence. Un exemple représentatif d'<a href="<?php echo esc_url( eb_url('automatisation-comptable') ); ?>">automatisation comptable</a> appliquée au quotidien.</p>
+            <p>Connexion Qonto + comptabilité (Sage) avec <strong>pointage et détection automatique des anomalies</strong>. L'automatisation Excel des écarts alerte en cas de doublon ou d'incohérence. Un exemple représentatif d'<a href="<?php echo esc_url( eb_url('automatisation-comptable') ); ?>">automatisation comptable</a> appliquée au quotidien.</p>
           </div>
           <div class="case-study__results">
             <div class="case-study__result"><span>✓</span>Rapprochement quasi immédiat au lieu de plusieurs heures</div>
@@ -114,7 +114,7 @@ if ( ! defined( 'ABSPATH' ) ) {
           <h2>Traitement automatique des emails et pièces jointes</h2>
           <div class="case-study__block">
             <div class="case-study__label">Le problème</div>
-            <p>Classement manuel des emails et documents entrants, chronophage et source de pièces égarées.</p>
+            <p>Classement manuel des emails et documents entrants, <strong>chronophage et source de pièces égarées</strong>.</p>
           </div>
           <div class="case-study__block">
             <div class="case-study__label">La solution</div>
@@ -157,11 +157,11 @@ if ( ! defined( 'ABSPATH' ) ) {
           <h2>Génération et relance automatique des devis</h2>
           <div class="case-study__block">
             <div class="case-study__label">Le problème</div>
-            <p>Chaque devis était recomposé manuellement dans Excel, puis suivi à l'œil dans un tableau — avec des relances oubliées et des opportunités perdues faute de suivi.</p>
+            <p>Chaque devis était recomposé manuellement dans Excel, puis suivi à l'œil dans un tableau — avec <strong>des relances oubliées et des opportunités perdues</strong> faute de suivi.</p>
           </div>
           <div class="case-study__block">
             <div class="case-study__label">La solution</div>
-            <p>Le devis est généré automatiquement depuis les données du CRM, envoyé au client, puis relancé selon un calendrier fixe tant qu'aucune réponse n'est enregistrée. Un flux typique d'<a href="<?php echo esc_url( eb_url('automatisation-crm') ); ?>">automatisation CRM</a> appliqué au cycle commercial.</p>
+            <p>Le devis est généré automatiquement depuis les données du CRM, envoyé au client, puis <strong>relancé selon un calendrier fixe</strong> tant qu'aucune réponse n'est enregistrée. Un flux typique d'<a href="<?php echo esc_url( eb_url('automatisation-crm') ); ?>">automatisation CRM</a> appliqué au cycle commercial.</p>
           </div>
           <div class="case-study__results">
             <div class="case-study__result"><span>✓</span>0 devis oublié sans relance</div>

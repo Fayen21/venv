@@ -33,10 +33,12 @@ if ( ! defined( 'ABSPATH' ) ) {
       <p>Vos données sont transmises à Emmanuel Brançon (responsable du traitement) via l'outil d'automatisation Make, utilisé comme sous-traitant technique pour l'acheminement du formulaire. Elles ne sont ni vendues, ni cédées à des tiers à des fins commerciales.</p>
 
       <h2 style="font-size:22px;margin-top:36px;margin-bottom:14px;">6. Durées de conservation</h2>
-      <p><strong>Candidats non recrutés :</strong> 2 ans à compter de la date d'entretien.</p>
-      <p><strong>Intervenants / collaborateurs :</strong> durant toute la période d'embauche, puis 3 ans après le départ.</p>
-      <p><strong>Prospects</strong> (ex. formulaire Audit) : 1 an à compter de la date du dernier contact.</p>
-      <p><strong>Clients :</strong> 5 ans à compter de la fin du dernier contrat de prestations, ou du dernier contact.</p>
+      <ul style="margin:0;padding-left:22px;">
+        <li style="margin-bottom:10px;"><strong>Candidats non recrutés :</strong> 2 ans à compter de la date d'entretien.</li>
+        <li style="margin-bottom:10px;"><strong>Intervenants / collaborateurs :</strong> durant toute la période d'embauche, puis 3 ans après le départ.</li>
+        <li style="margin-bottom:10px;"><strong>Prospects</strong> (ex. formulaire Audit) : 1 an à compter de la date du dernier contact.</li>
+        <li><strong>Clients :</strong> 5 ans à compter de la fin du dernier contrat de prestations, ou du dernier contact.</li>
+      </ul>
 
       <h2 style="font-size:22px;margin-top:36px;margin-bottom:14px;">7. Sécurité</h2>
       <p>Des mesures techniques et organisationnelles raisonnables sont mises en œuvre pour protéger vos données contre tout accès non autorisé, perte ou divulgation.</p>

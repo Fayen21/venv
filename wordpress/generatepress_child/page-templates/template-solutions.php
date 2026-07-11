@@ -22,7 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div class="differentiators__intro">
       <h2>Une approche différente de l'automatisation d'entreprise</h2>
       <p style="margin-bottom:12px;">La plupart des consultants automatisent des processus qu'ils découvrent en même temps que vous.</p>
-      <p>Mon approche est différente : je m'appuie sur une expérience concrète des fonctions administratives, comptables et RH pour identifier rapidement les automatisations réellement rentables — avec des outils no-code et de l'intelligence artificielle quand elle apporte une vraie valeur, jamais par principe.</p>
+      <p>Mon approche est différente : je m'appuie sur <strong>une expérience concrète des fonctions administratives, comptables et RH</strong> pour identifier rapidement les automatisations réellement rentables — avec des outils no-code et de l'intelligence artificielle quand elle apporte une vraie valeur, jamais par principe.</p>
     </div>
     <div class="grid grid-3">
       <div class="card differentiators__card">
@@ -176,7 +176,7 @@ if ( ! defined( 'ABSPATH' ) ) {
       <div class="solution-row__badge" style="background:#EEF1F7;color:#3C4A60;">01</div>
       <div>
         <h2>Tâches administratives répétitives</h2>
-        <p class="solution-row__desc">Emails, fichiers Excel, PDF, saisies manuelles : je supprime les manipulations qui vous coûtent des heures chaque semaine.</p>
+        <p class="solution-row__desc">Emails, fichiers Excel, PDF, saisies manuelles : je supprime <strong>les manipulations qui vous coûtent des heures chaque semaine</strong>.</p>
         <div class="solution-row__tags">
           <span class="solution-row__tag">Emails</span><span class="solution-row__tag">Excel</span><span class="solution-row__tag">PDF</span><span class="solution-row__tag">OCR</span>
         </div>
@@ -194,6 +194,7 @@ if ( ! defined( 'ABSPATH' ) ) {
           <span class="solution-row__gain-icon">↑</span>
           <span class="solution-row__gain-text">≈ 5 à 10 heures récupérées chaque semaine</span>
         </div>
+        <a href="<?php echo esc_url( eb_url('automatisation-taches') ); ?>" class="btn-text" style="margin-top:16px;">Voir le détail de l'automatisation des tâches →</a>
       </div>
       <div class="solution-row__mock">
         <div class="solution-row__mock-titlebar">
@@ -213,7 +214,7 @@ if ( ! defined( 'ABSPATH' ) ) {
       <div class="solution-row__badge" style="background:#E5F3EF;color:#1E8A6E;">02</div>
       <div>
         <h2>Comptabilité &amp; finance</h2>
-        <p class="solution-row__desc">Rapprochements bancaires, contrôles de cohérence, suivi des paiements : des flux fiables, traçables et prêts pour votre comptable.</p>
+        <p class="solution-row__desc">Rapprochements bancaires, contrôles de cohérence, suivi des paiements : <strong>des flux fiables, traçables et prêts pour votre comptable</strong>.</p>
         <div class="solution-row__tags">
           <span class="solution-row__tag">Rapprochement</span><span class="solution-row__tag">Qonto</span><span class="solution-row__tag">Sage</span><span class="solution-row__tag">Relances</span>
         </div>
@@ -231,6 +232,7 @@ if ( ! defined( 'ABSPATH' ) ) {
           <span class="solution-row__gain-icon">↑</span>
           <span class="solution-row__gain-text">≈ 1 journée de travail économisée chaque mois</span>
         </div>
+        <a href="<?php echo esc_url( eb_url('automatisation-comptable') ); ?>" class="btn-text" style="margin-top:16px;">Voir le détail de l'automatisation comptable →</a>
       </div>
       <div class="solution-row__mock">
         <div class="solution-row__mock-titlebar">
@@ -250,7 +252,7 @@ if ( ! defined( 'ABSPATH' ) ) {
       <div class="solution-row__badge" style="background:#EFEAFB;color:#6E4FCB;">03</div>
       <div>
         <h2>RH &amp; paie</h2>
-        <p class="solution-row__desc">Onboarding, génération de contrats, suivi des salariés et préparation de paie, automatisés et conformes.</p>
+        <p class="solution-row__desc">Onboarding, génération de contrats, suivi des salariés et préparation de paie, <strong>automatisés et conformes</strong>.</p>
         <div class="solution-row__tags">
           <span class="solution-row__tag">Onboarding</span><span class="solution-row__tag">Contrats</span><span class="solution-row__tag">Paie</span><span class="solution-row__tag">RGPD</span>
         </div>
@@ -268,6 +270,7 @@ if ( ! defined( 'ABSPATH' ) ) {
           <span class="solution-row__gain-icon">↑</span>
           <span class="solution-row__gain-text">≈ 2 heures gagnées à chaque embauche</span>
         </div>
+        <a href="<?php echo esc_url( eb_url('automatisation-rh') ); ?>" class="btn-text" style="margin-top:16px;">Voir le détail de l'automatisation RH →</a>
       </div>
       <div class="solution-row__mock">
         <div class="solution-row__mock-titlebar">
@@ -287,7 +290,7 @@ if ( ! defined( 'ABSPATH' ) ) {
       <div class="solution-row__badge" style="background:#E7EFFC;color:#2C5FC7;">04</div>
       <div>
         <h2>Intégration de vos logiciels</h2>
-        <p class="solution-row__desc">Je connecte vos outils — Qonto, Outlook, Excel, Sage, Notion — pour que vos données circulent sans ressaisie.</p>
+        <p class="solution-row__desc">Je connecte vos outils — Qonto, Outlook, Excel, Sage, Notion — pour que <strong>vos données circulent sans ressaisie</strong>.</p>
         <div class="solution-row__tags">
           <span class="solution-row__tag">Make</span><span class="solution-row__tag">n8n</span><span class="solution-row__tag">API</span><span class="solution-row__tag">Python</span>
         </div>
@@ -305,6 +308,7 @@ if ( ! defined( 'ABSPATH' ) ) {
           <span class="solution-row__gain-icon">↑</span>
           <span class="solution-row__gain-text">0 ressaisie entre les outils connectés</span>
         </div>
+        <a href="<?php echo esc_url( eb_url('automatisation-processus') ); ?>" class="btn-text" style="margin-top:16px;">Voir le détail de l'automatisation des processus →</a>
       </div>
       <div class="solution-row__mock">
         <div class="solution-row__mock-titlebar">
@@ -324,7 +328,7 @@ if ( ! defined( 'ABSPATH' ) ) {
       <div class="solution-row__badge" style="background:#FBEBE0;color:#C3672B;">05</div>
       <div>
         <h2>Agents IA internes</h2>
-        <p class="solution-row__desc">Un assistant qui répond aux questions de vos équipes à partir de vos propres procédures et documents internes.</p>
+        <p class="solution-row__desc">Un assistant qui répond aux questions de vos équipes à partir de <strong>vos propres procédures et documents internes</strong>.</p>
         <div class="solution-row__tags">
           <span class="solution-row__tag">Assistant IA</span><span class="solution-row__tag">Procédures</span><span class="solution-row__tag">Recherche</span>
         </div>
@@ -342,6 +346,7 @@ if ( ! defined( 'ABSPATH' ) ) {
           <span class="solution-row__gain-icon">↑</span>
           <span class="solution-row__gain-text">Réponses en quelques secondes au lieu de plusieurs minutes</span>
         </div>
+        <a href="<?php echo esc_url( eb_url('automatisation-ia') ); ?>" class="btn-text" style="margin-top:16px;">Voir le détail de l'automatisation IA →</a>
       </div>
       <div class="solution-row__mock">
         <div class="solution-row__mock-titlebar">

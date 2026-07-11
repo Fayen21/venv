@@ -15,9 +15,9 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div class="apropos-hero__text">
       <div class="eyebrow" style="margin-bottom:18px;">À propos</div>
       <h1>Un professionnel de la gestion qui automatise ce qu'il maîtrise déjà</h1>
-      <p>Avant de me consacrer à l'automatisation, j'ai travaillé sur les sujets de gestion, de comptabilité et d'administration d'entreprise — les processus mêmes que j'aide aujourd'hui à automatiser. Cette expérience de terrain change l'angle d'approche : je pars des tâches qui font perdre du temps à une équipe, puis je regarde quel outil permet de les supprimer proprement.</p>
-      <p>Je travaille en indépendant, à distance, avec des TPE et PME françaises de tous secteurs. Je conçois, documente et livre chaque automatisation avec les outils grand public que vous utilisez déjà, afin que vous restiez autonome et propriétaire de ce qui est mis en place.</p>
-      <p>Mon approche s'appuie sur une méthode simple : je cartographie vos processus existants avant de choisir les bons outils — intelligence artificielle, RPA ou simple connecteur — pour chaque cas. Cette rigueur vient directement de mon parcours en gestion et en comptabilité : je sais distinguer une <a href="<?php echo esc_url( eb_url('automatisation-comptable') ); ?>">automatisation comptable</a> fiable d'un raccourci risqué. Contrairement à une <a href="<?php echo esc_url( eb_url('agence-ia') ); ?>">agence IA</a>, vous n'avez qu'un seul interlocuteur, du premier audit à la mise en production — ce qui simplifie le suivi de votre <a href="<?php echo esc_url( eb_url('automatisation-processus') ); ?>">automatisation des processus</a>, service par service.</p>
+      <p>Avant de me consacrer à l'automatisation, j'ai travaillé sur les sujets de gestion, de comptabilité et d'administration d'entreprise — les processus mêmes que j'aide aujourd'hui à automatiser. <strong>Cette expérience de terrain change l'angle d'approche</strong> : je pars des tâches qui font perdre du temps à une équipe, puis je regarde quel outil permet de les supprimer proprement.</p>
+      <p>Je travaille en indépendant, à distance, avec des TPE et PME françaises de tous secteurs, sur l'ensemble de <a href="<?php echo esc_url( eb_url('solutions') ); ?>">mes solutions d'automatisation</a>. Je conçois, documente et livre chaque automatisation avec les outils grand public que vous utilisez déjà, afin que <strong>vous restiez autonome et propriétaire</strong> de ce qui est mis en place.</p>
+      <p>Mon approche s'appuie sur une méthode simple : je cartographie vos processus existants avant de choisir les bons outils — intelligence artificielle, RPA ou simple connecteur — pour chaque cas. Cette rigueur vient directement de mon parcours en gestion et en comptabilité : je sais distinguer une <a href="<?php echo esc_url( eb_url('automatisation-comptable') ); ?>">automatisation comptable</a> fiable d'un raccourci risqué. Contrairement à une <a href="<?php echo esc_url( eb_url('agence-ia') ); ?>">agence IA</a>, vous n'avez qu'<strong>un seul interlocuteur, du premier audit à la mise en production</strong> — ce qui simplifie le suivi de votre <a href="<?php echo esc_url( eb_url('automatisation-processus') ); ?>">automatisation des processus</a>, service par service.</p>
     </div>
     <div class="apropos-hero__photo">
       <div class="apropos-hero__photo-frame">
@@ -67,7 +67,7 @@ if ( ! defined( 'ABSPATH' ) ) {
         <div class="value-item">
           <div class="value-item__n">01</div>
           <h3>Concret avant tout</h3>
-          <p>On part de vos vraies tâches, pas d'une démo. Chaque automatisation doit faire gagner du temps mesurable.</p>
+          <p>On part de vos vraies tâches, pas d'une démo. Chaque automatisation doit faire gagner du temps mesurable, comme le montrent mes <a href="<?php echo esc_url( eb_url('realisations') ); ?>">réalisations</a>.</p>
         </div>
         <div class="value-item">
           <div class="value-item__n">02</div>
@@ -117,11 +117,11 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div class="grid grid-2">
       <div class="card differentiators__card" style="text-align:left;">
         <h3>Pourquoi je travaille seul</h3>
-        <p>Ce n'est pas une contrainte de taille, c'est un choix. En restant seul sur chaque projet, je garde une compréhension fine et continue de votre activité — sans perte d'information entre un commercial, un chef de projet et un développeur qui ne se parlent qu'à travers des comptes-rendus. Cette exigence a une limite assumée : je ne prends pas tous les projets. Un besoin qui nécessite une équipe de développeurs à temps plein sur plusieurs mois dépasse mon format, et je le dis clairement dès l'audit plutôt que d'accepter un projet que je ne pourrais pas honorer correctement.</p>
+        <p>Ce n'est pas une contrainte de taille, c'est un choix. En restant seul sur chaque projet, <strong>je garde une compréhension fine et continue de votre activité</strong> — sans perte d'information entre un commercial, un chef de projet et un développeur qui ne se parlent qu'à travers des comptes-rendus. Cette exigence a une limite assumée : je ne prends pas tous les projets. Un besoin qui nécessite une équipe de développeurs à temps plein sur plusieurs mois dépasse mon format, et je le dis clairement dès l'audit plutôt que d'accepter un projet que je ne pourrais pas honorer correctement.</p>
       </div>
       <div class="card differentiators__card" style="text-align:left;">
         <h3>Pourquoi un consultant plutôt qu'une agence</h3>
-        <p>Une agence facture une structure commerciale, des chefs de projet et parfois une sous-traitance invisible pour vous. Un consultant indépendant facture le travail effectivement réalisé, avec un seul interlocuteur du premier échange à la mise en production. Pour une automatisation ciblée ou l'automatisation d'un service complet, c'est un format généralement plus rapide et plus économique — le comparatif détaillé est disponible sur la page <a href="<?php echo esc_url( eb_url('agence-ia') ); ?>">agence IA vs consultant indépendant</a>.</p>
+        <p>Une agence facture une structure commerciale, des chefs de projet et parfois une sous-traitance invisible pour vous. Un consultant indépendant facture le travail effectivement réalisé, avec un seul interlocuteur du premier échange à la mise en production. Pour une automatisation ciblée ou l'automatisation d'un service complet, c'est <strong>un format généralement plus rapide et plus économique</strong> — le comparatif détaillé est disponible sur la page <a href="<?php echo esc_url( eb_url('agence-ia') ); ?>">agence IA vs consultant indépendant</a>.</p>
       </div>
     </div>
   </section>
@@ -158,7 +158,7 @@ if ( ! defined( 'ABSPATH' ) ) {
       <div class="rgpd-card">
         <div class="rgpd-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="9" rx="2"></rect><path d="M8 11V7a4 4 0 0 1 8 0v4"></path></svg></div>
         <h3>Vos données restent les vôtres</h3>
-        <p>Je travaille dans le strict respect du RGPD, sur vos propres outils. Aucune revente, aucune exposition de vos données. Tout est documenté et reste votre propriété.</p>
+        <p>Je travaille dans le strict respect du RGPD, sur vos propres outils. <strong>Aucune revente, aucune exposition de vos données</strong>. Tout est documenté et reste votre propriété.</p>
       </div>
     </div>
   </section>
@@ -188,7 +188,7 @@ if ( ! defined( 'ABSPATH' ) ) {
       </div>
       <div class="faq-item">
         <h3>Comment se passe le tout premier échange ?</h3>
-        <p>Par un audit gratuit de 45 minutes, sans engagement : vous présentez vos tâches les plus chronophages, j'identifie celles qui seraient les plus rentables à automatiser.</p>
+        <p>Par un <strong>audit gratuit de 45 minutes, sans engagement</strong> : vous présentez vos tâches les plus chronophages, j'identifie celles qui seraient les plus rentables à automatiser.</p>
       </div>
       <div class="faq-item">
         <h3>Prenez-vous tous les projets qu'on vous propose ?</h3>
