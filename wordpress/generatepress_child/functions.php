@@ -80,7 +80,7 @@ function eb_brand_icon( $key ) {
 	$registry = array(
 		'outlook'          => array( 'label' => 'Outlook', 'bg' => '#0A6FC2', 'fg' => '#fff', 'letter' => 'O' ),
 		'excel'            => array( 'label' => 'Excel', 'bg' => '#1D6F42', 'fg' => '#fff', 'letter' => 'X' ),
-		'microsoft365'     => array( 'label' => 'Microsoft 365', 'bg' => '#EB3C00', 'fg' => '#fff', 'letter' => '365' ),
+		'microsoft365'     => array( 'label' => 'Microsoft 365', 'bg' => '#EB3C00', 'fg' => '#fff', 'letter' => 'MS' ),
 		'google-workspace' => array( 'label' => 'Google Workspace', 'bg' => '#EA4335', 'fg' => '#fff', 'letter' => 'G', 'logo' => 'google' ),
 		'sage'             => array( 'label' => 'Sage', 'bg' => '#00D639', 'fg' => '#0C2E14', 'letter' => 'S', 'logo' => 'sage' ),
 		'qonto'            => array( 'label' => 'Qonto', 'bg' => '#0C1E3C', 'fg' => '#fff', 'letter' => 'Q' ),
@@ -96,7 +96,7 @@ function eb_brand_icon( $key ) {
 		'salesforce'       => array( 'label' => 'Salesforce', 'bg' => '#00A1E0', 'fg' => '#fff', 'letter' => 'Sf' ),
 		'linkedin'         => array( 'label' => 'LinkedIn', 'bg' => '#0A66C2', 'fg' => '#fff', 'letter' => 'in' ),
 		'cegid'            => array( 'label' => 'Cegid', 'bg' => '#0C1E3C', 'fg' => '#fff', 'letter' => 'C' ),
-		'quadra'           => array( 'label' => 'Quadra', 'bg' => '#7C5CFC', 'fg' => '#fff', 'letter' => 'Q' ),
+		'quadra'           => array( 'label' => 'Quadra', 'bg' => '#7C5CFC', 'fg' => '#fff', 'letter' => 'Qd' ),
 	);
 	return isset( $registry[ $key ] ) ? $registry[ $key ] : null;
 }
