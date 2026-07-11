@@ -99,12 +99,12 @@ if ( ! defined( 'ABSPATH' ) ) {
       <h2>Outils concernés</h2>
       <p>L'automatisation comptable s'appuie sur les logiciels que vous utilisez déjà — aucun changement d'outil n'est nécessaire.</p>
       <div class="tool-chip-grid">
-        <div class="tool-chip"><span class="tool-chip__abbr" style="background:#2E2AEB;color:#fff;">P</span>Pennylane</div>
-        <div class="tool-chip"><span class="tool-chip__abbr" style="background:#00D639;color:#0C2E14;">S</span>Sage</div>
-        <div class="tool-chip"><span class="tool-chip__abbr" style="background:#0C1E3C;color:#fff;">C</span>Cegid</div>
-        <div class="tool-chip"><span class="tool-chip__abbr" style="background:#7C5CFC;color:#fff;">Q</span>Quadra</div>
-        <div class="tool-chip"><span class="tool-chip__abbr" style="background:#0C1E3C;color:#fff;">Q</span>Qonto</div>
-        <a href="<?php echo esc_url( eb_url('automatisation-excel') ); ?>" class="tool-chip tool-chip--link"><span class="tool-chip__abbr" style="background:#1D6F42;color:#fff;">X</span>Excel<span class="tool-chip__chevron" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></span></a>
+        <div class="tool-chip"><?php echo eb_tool_icon_html('pennylane'); ?>Pennylane</div>
+        <div class="tool-chip"><?php echo eb_tool_icon_html('sage'); ?>Sage</div>
+        <div class="tool-chip"><?php echo eb_tool_icon_html('cegid'); ?>Cegid</div>
+        <div class="tool-chip"><?php echo eb_tool_icon_html('quadra'); ?>Quadra</div>
+        <div class="tool-chip"><?php echo eb_tool_icon_html('qonto'); ?>Qonto</div>
+        <a href="<?php echo esc_url( eb_url('automatisation-excel') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('excel'); ?>Excel<span class="tool-chip__chevron" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></span></a>
       </div>
     </div>
 
@@ -112,13 +112,13 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div class="pillar-flow">
       <div class="pillar-flow__label">Comment nous intervenons</div>
       <div class="pillar-flow__row">
-        <div class="pillar-flow__step"><span class="pillar-flow__icon">📄</span><span class="pillar-flow__step-label">Facture reçue</span></div>
+        <div class="pillar-flow__step"><span class="pillar-flow__icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"></rect><path d="M9 8h6M9 12h6M9 16h4"></path></svg></span><span class="pillar-flow__step-label">Facture reçue</span></div>
         <span class="pillar-flow__arrow">→</span>
-        <div class="pillar-flow__step"><span class="pillar-flow__icon">🔎</span><span class="pillar-flow__step-label">Lecture OCR</span></div>
+        <div class="pillar-flow__step"><span class="pillar-flow__icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="6.5"></circle><path d="M20 20l-4.35-4.35"></path></svg></span><span class="pillar-flow__step-label">Lecture OCR</span></div>
         <span class="pillar-flow__arrow">→</span>
-        <div class="pillar-flow__step"><span class="pillar-flow__icon">🧾</span><span class="pillar-flow__step-label">Écriture générée</span></div>
+        <div class="pillar-flow__step"><span class="pillar-flow__icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"></path><path d="M9 8h6M9 12h6"></path></svg></span><span class="pillar-flow__step-label">Écriture générée</span></div>
         <span class="pillar-flow__arrow">→</span>
-        <div class="pillar-flow__step"><span class="pillar-flow__icon">✅</span><span class="pillar-flow__step-label">Intégré à votre logiciel</span></div>
+        <div class="pillar-flow__step"><span class="pillar-flow__icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M8.5 12.5l2.3 2.3 4.7-4.8"></path></svg></span><span class="pillar-flow__step-label">Intégré à votre logiciel</span></div>
       </div>
     </div>
 

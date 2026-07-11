@@ -101,11 +101,11 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div class="pillar-flow">
       <div class="pillar-flow__label">Comment ça s'enchaîne</div>
       <div class="pillar-flow__row">
-        <div class="pillar-flow__step"><span class="pillar-flow__icon">📥</span><span class="pillar-flow__step-label">Données sources collectées</span></div>
+        <div class="pillar-flow__step"><span class="pillar-flow__icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h4l2 3h4l2-3h4"></path><path d="M4 12v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6"></path><path d="M4 12l2-7h12l2 7"></path></svg></span><span class="pillar-flow__step-label">Données sources collectées</span></div>
         <span class="pillar-flow__arrow">→</span>
         <div class="pillar-flow__step"><span class="pillar-flow__icon">⚙️</span><span class="pillar-flow__step-label">Traitement Make/n8n</span></div>
         <span class="pillar-flow__arrow">→</span>
-        <div class="pillar-flow__step"><span class="pillar-flow__icon">📊</span><span class="pillar-flow__step-label">Fichier Excel mis à jour</span></div>
+        <div class="pillar-flow__step"><span class="pillar-flow__icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="19" x2="5" y2="12"></line><line x1="12" y1="19" x2="12" y2="7"></line><line x1="19" y1="19" x2="19" y2="14"></line></svg></span><span class="pillar-flow__step-label">Fichier Excel mis à jour</span></div>
         <span class="pillar-flow__arrow">→</span>
         <div class="pillar-flow__step"><span class="pillar-flow__icon">✓</span><span class="pillar-flow__step-label">Prêt à l'analyse</span></div>
       </div>

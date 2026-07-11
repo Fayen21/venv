@@ -103,13 +103,13 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div class="pillar-flow">
       <div class="pillar-flow__label">Comment ça s'enchaîne</div>
       <div class="pillar-flow__row">
-        <div class="pillar-flow__step"><span class="pillar-flow__icon">🎯</span><span class="pillar-flow__step-label">Tâche isolée</span></div>
+        <div class="pillar-flow__step"><span class="pillar-flow__icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="5"></circle><circle cx="12" cy="12" r="1"></circle></svg></span><span class="pillar-flow__step-label">Tâche isolée</span></div>
         <span class="pillar-flow__arrow">→</span>
         <div class="pillar-flow__step"><span class="pillar-flow__icon">⚡</span><span class="pillar-flow__step-label">Automatisation rapide</span></div>
         <span class="pillar-flow__arrow">→</span>
-        <div class="pillar-flow__step"><span class="pillar-flow__icon">📏</span><span class="pillar-flow__step-label">Gain mesuré</span></div>
+        <div class="pillar-flow__step"><span class="pillar-flow__icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"></path><path d="M15 7h6v6"></path></svg></span><span class="pillar-flow__step-label">Gain mesuré</span></div>
         <span class="pillar-flow__arrow">→</span>
-        <div class="pillar-flow__step"><span class="pillar-flow__icon">🔁</span><span class="pillar-flow__step-label">Extension possible</span></div>
+        <div class="pillar-flow__step"><span class="pillar-flow__icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 0 1 14-5l2 2"></path><path d="M20 5v4h-4"></path><path d="M20 12a8 8 0 0 1-14 5l-2-2"></path><path d="M4 19v-4h4"></path></svg></span><span class="pillar-flow__step-label">Extension possible</span></div>
       </div>
     </div>
 

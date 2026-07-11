@@ -206,7 +206,7 @@
 .bank-avant__dots{ display:flex;align-items:center;gap:7px;flex:none; }
 .bank-avant__dots span{ width:10px;height:10px;border-radius:50%;background:#cfc9c0;display:block; }
 .bank-avant__filename{ font-family:var(--font-mono);font-size:12px;color:#9a8f81;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;margin:0 12px; }
-.bank-avant__timer{ font-family:var(--font-mono);font-size:11px;color:var(--red);background:var(--red-bg);padding:3px 9px;border-radius:20px;flex:none; }
+.bank-avant__timer{ font-family:var(--font-mono);font-size:11px;color:var(--red);background:var(--red-bg);padding:3px 9px;border-radius:20px;flex:none;display:inline-flex;align-items:center;gap:4px; }
 .bank-avant__body{ padding:20px 24px; }
 .bank-avant__row{
   display:grid;grid-template-columns:1fr auto auto;gap:8px;align-items:center;
@@ -240,7 +240,7 @@
 .bank-avant__cost-sub{ font-size:13px;color:var(--muted); }
 
 .bank-apres{ grid-template-columns:1.25fr .75fr;gap:24px;align-items:stretch; }
-.bank-apres__timer{ font-family:var(--font-mono);font-size:11px;color:var(--green-bright);background:rgba(91,203,139,.14);padding:3px 9px;border-radius:20px; }
+.bank-apres__timer{ font-family:var(--font-mono);font-size:11px;color:var(--green-bright);background:rgba(91,203,139,.14);padding:3px 9px;border-radius:20px;display:inline-flex;align-items:center;gap:4px; }
 .bank-apres__body{ padding:20px 24px; }
 .bank-apres__row{
   display:grid;grid-template-columns:1fr auto auto;gap:8px;align-items:center;

@@ -35,18 +35,18 @@ if ( ! defined( 'ABSPATH' ) ) {
           <div class="case-study__block">
             <div class="case-study__label" style="margin-bottom:12px;">Le flux automatisé</div>
             <div class="case-flow">
-              <div class="case-flow__step"><span class="case-flow__icon">✅</span><span class="case-flow__label">Validation embauche</span></div>
+              <div class="case-flow__step"><span class="case-flow__icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M8.5 12.5l2.3 2.3 4.7-4.8"></path></svg></span><span class="case-flow__label">Validation embauche</span></div>
               <div class="case-flow__connector"></div>
-              <div class="case-flow__step"><span class="case-flow__icon">📄</span><span class="case-flow__label">Contrat généré</span></div>
+              <div class="case-flow__step"><span class="case-flow__icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"></rect><path d="M9 8h6M9 12h6M9 16h4"></path></svg></span><span class="case-flow__label">Contrat généré</span></div>
               <div class="case-flow__connector"></div>
-              <div class="case-flow__step"><span class="case-flow__icon">🔑</span><span class="case-flow__label">Accès créés</span></div>
+              <div class="case-flow__step"><span class="case-flow__icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="15" r="4"></circle><path d="M11 12l8-8M16 7l2 2M13 10l2 2"></path></svg></span><span class="case-flow__label">Accès créés</span></div>
               <div class="case-flow__connector"></div>
-              <div class="case-flow__step"><span class="case-flow__icon">🗂️</span><span class="case-flow__label">Dossier salarié préparé</span></div>
+              <div class="case-flow__step"><span class="case-flow__icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7z"></path></svg></span><span class="case-flow__label">Dossier salarié préparé</span></div>
               <div class="case-flow__connector"></div>
               <div class="case-flow__step"><span class="case-flow__icon case-flow__icon--done">✓</span><span class="case-flow__label case-flow__label--done">Notification manager</span></div>
             </div>
           </div>
-          <div class="case-study__tool-note"><span class="icon">🛠️</span><span class="text">Réalisé avec Make, génération de documents par IA et connexion aux outils RH. Mise en place en 2 semaines.</span></div>
+          <div class="case-study__tool-note"><span class="icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2-2z"></path></svg></span><span class="text">Réalisé avec Make, génération de documents par IA et connexion aux outils RH. Mise en place en 2 semaines.</span></div>
         </div>
         <div class="case-study__side">
           <div class="case-study__side-label">Résultats</div>
@@ -287,17 +287,17 @@ if ( ! defined( 'ABSPATH' ) ) {
         <p>Je sélectionne les technologies les plus adaptées à vos besoins et à vos logiciels existants.</p>
       </div>
       <div class="tech-band__grid tool-chip-grid">
-        <a href="<?php echo esc_url( eb_url('consultant-make') ); ?>" class="tool-chip tool-chip--link"><span class="tool-chip__abbr" style="background:#6D00CC;color:#fff;">M</span>Make<span class="tool-chip__chevron" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></span></a>
-        <a href="<?php echo esc_url( eb_url('consultant-n8n') ); ?>" class="tool-chip tool-chip--link"><span class="tool-chip__abbr" style="background:#EA4B71;color:#fff;">n8</span>n8n<span class="tool-chip__chevron" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></span></a>
-        <div class="tool-chip"><span class="tool-chip__abbr" style="background:#3776AB;color:#fff;">Py</span>Python</div>
-        <div class="tool-chip"><span class="tool-chip__abbr" style="background:#0C1E3C;color:#fff;">Q</span>Qonto</div>
-        <a href="<?php echo esc_url( eb_url('automatisation-microsoft-365') ); ?>" class="tool-chip tool-chip--link"><span class="tool-chip__abbr" style="background:#EB3C00;color:#fff;">365</span>Microsoft 365<span class="tool-chip__chevron" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></span></a>
-        <a href="<?php echo esc_url( eb_url('automatisation-outlook') ); ?>" class="tool-chip tool-chip--link"><span class="tool-chip__abbr" style="background:#0A6FC2;color:#fff;">O</span>Outlook<span class="tool-chip__chevron" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></span></a>
-        <div class="tool-chip"><span class="tool-chip__abbr" style="background:#00D639;color:#0C2E14;">S</span>Sage</div>
-        <a href="<?php echo esc_url( eb_url('automatisation-excel') ); ?>" class="tool-chip tool-chip--link"><span class="tool-chip__abbr" style="background:#1D6F42;color:#fff;">X</span>Excel<span class="tool-chip__chevron" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></span></a>
-        <div class="tool-chip"><span class="tool-chip__abbr" style="background:#111111;color:#fff;">N</span>Notion</div>
-        <div class="tool-chip"><span class="tool-chip__abbr" style="background:#FF5C35;color:#fff;">H</span>HubSpot</div>
-        <div class="tool-chip"><span class="tool-chip__abbr" style="background:#1A1A1A;color:#fff;">Pd</span>Pipedrive</div>
+        <a href="<?php echo esc_url( eb_url('consultant-make') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('make'); ?>Make<span class="tool-chip__chevron" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></span></a>
+        <a href="<?php echo esc_url( eb_url('consultant-n8n') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('n8n'); ?>n8n<span class="tool-chip__chevron" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></span></a>
+        <div class="tool-chip"><?php echo eb_tool_icon_html('python'); ?>Python</div>
+        <div class="tool-chip"><?php echo eb_tool_icon_html('qonto'); ?>Qonto</div>
+        <a href="<?php echo esc_url( eb_url('automatisation-microsoft-365') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('microsoft365'); ?>Microsoft 365<span class="tool-chip__chevron" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></span></a>
+        <a href="<?php echo esc_url( eb_url('automatisation-outlook') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('outlook'); ?>Outlook<span class="tool-chip__chevron" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></span></a>
+        <div class="tool-chip"><?php echo eb_tool_icon_html('sage'); ?>Sage</div>
+        <a href="<?php echo esc_url( eb_url('automatisation-excel') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('excel'); ?>Excel<span class="tool-chip__chevron" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></span></a>
+        <div class="tool-chip"><?php echo eb_tool_icon_html('notion'); ?>Notion</div>
+        <div class="tool-chip"><?php echo eb_tool_icon_html('hubspot'); ?>HubSpot</div>
+        <div class="tool-chip"><?php echo eb_tool_icon_html('pipedrive'); ?>Pipedrive</div>
         <div class="tool-chip"><span class="tool-chip__abbr" style="background:#0C1E3C;color:#E59B6A;">{}</span>API REST</div>
       </div>
     </div>

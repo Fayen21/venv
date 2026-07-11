@@ -26,11 +26,11 @@ get_header();
         <span class="hero__demo-rule"></span>
       </div>
       <div class="workflow-tabs" data-workflow-tabs>
-        <button class="workflow-tabs__btn is-active" type="button" data-scenario="relances">📨 Relances</button>
-        <button class="workflow-tabs__btn" type="button" data-scenario="rh">👥 RH</button>
-        <button class="workflow-tabs__btn" type="button" data-scenario="emails">📥 Emails</button>
-        <button class="workflow-tabs__btn" type="button" data-scenario="pdf">📄 PDF</button>
-        <button class="workflow-tabs__btn" type="button" data-scenario="crm">🗂️ CRM</button>
+        <button class="workflow-tabs__btn is-active" type="button" data-scenario="relances"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M4 6.5l8 6 8-6"></path></svg>Relances</button>
+        <button class="workflow-tabs__btn" type="button" data-scenario="rh"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"></circle><circle cx="17" cy="9" r="2.4"></circle><path d="M3.5 19.5a5.5 5.5 0 0 1 11 0"></path><path d="M14.5 19.5a4.5 4.5 0 0 1 7.5-3.3"></path></svg>RH</button>
+        <button class="workflow-tabs__btn" type="button" data-scenario="emails"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h4l2 3h4l2-3h4"></path><path d="M4 12v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6"></path><path d="M4 12l2-7h12l2 7"></path></svg>Emails</button>
+        <button class="workflow-tabs__btn" type="button" data-scenario="pdf"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"></rect><path d="M9 8h6M9 12h6M9 16h4"></path></svg>PDF</button>
+        <button class="workflow-tabs__btn" type="button" data-scenario="crm"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7z"></path></svg>CRM</button>
       </div>
       <div class="mockup mockup--navy workflow-panel">
         <div class="mockup__titlebar">
@@ -233,23 +233,23 @@ get_header();
   <!-- vous gardez vos outils -->
   <section class="section">
     <div class="trust-tools">
-      <span class="badge-pill badge-pill--green">🔒 Aucune migration</span>
+      <span class="badge-pill badge-pill--green"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="9" rx="2"></rect><path d="M8 11V7a4 4 0 0 1 8 0v4"></path></svg>Aucune migration</span>
       <h2 class="trust-tools__title">Compatible avec les outils que vous utilisez déjà</h2>
       <p class="trust-tools__desc">Aucune migration. Aucun changement d'habitude pour vos équipes.</p>
       <div class="tool-chip-grid tool-chip-grid--home">
-        <a href="<?php echo esc_url( eb_url('automatisation-outlook') ); ?>" class="tool-chip tool-chip--link"><span class="tool-chip__abbr" style="background:#0A6FC2;color:#fff;">O</span>Outlook<span class="tool-chip__chevron" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></span></a>
-        <a href="<?php echo esc_url( eb_url('automatisation-excel') ); ?>" class="tool-chip tool-chip--link"><span class="tool-chip__abbr" style="background:#1D6F42;color:#fff;">X</span>Excel<span class="tool-chip__chevron" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></span></a>
-        <a href="<?php echo esc_url( eb_url('automatisation-microsoft-365') ); ?>" class="tool-chip tool-chip--link"><span class="tool-chip__abbr" style="background:#EB3C00;color:#fff;">365</span>Microsoft 365<span class="tool-chip__chevron" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></span></a>
-        <div class="tool-chip"><span class="tool-chip__abbr" style="background:#EA4335;color:#fff;">G</span>Google Workspace</div>
-        <div class="tool-chip"><span class="tool-chip__abbr" style="background:#00D639;color:#0C2E14;">S</span>Sage</div>
-        <div class="tool-chip"><span class="tool-chip__abbr" style="background:#0C1E3C;color:#fff;">Q</span>Qonto</div>
-        <div class="tool-chip"><span class="tool-chip__abbr" style="background:#2E2AEB;color:#fff;">P</span>Pennylane</div>
-        <div class="tool-chip"><span class="tool-chip__abbr" style="background:#111111;color:#fff;">N</span>Notion</div>
-        <div class="tool-chip"><span class="tool-chip__abbr" style="background:#FF5C35;color:#fff;">H</span>HubSpot</div>
-        <div class="tool-chip"><span class="tool-chip__abbr" style="background:#1A1A1A;color:#fff;">Pd</span>Pipedrive</div>
-        <a href="<?php echo esc_url( eb_url('consultant-make') ); ?>" class="tool-chip tool-chip--link"><span class="tool-chip__abbr" style="background:#6D00CC;color:#fff;">M</span>Make<span class="tool-chip__chevron" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></span></a>
-        <a href="<?php echo esc_url( eb_url('consultant-n8n') ); ?>" class="tool-chip tool-chip--link"><span class="tool-chip__abbr" style="background:#EA4B71;color:#fff;">n8</span>n8n<span class="tool-chip__chevron" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></span></a>
-        <div class="tool-chip"><span class="tool-chip__abbr" style="background:#F29200;color:#fff;">Og</span>Ogust</div>
+        <a href="<?php echo esc_url( eb_url('automatisation-outlook') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('outlook'); ?>Outlook<span class="tool-chip__chevron" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></span></a>
+        <a href="<?php echo esc_url( eb_url('automatisation-excel') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('excel'); ?>Excel<span class="tool-chip__chevron" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></span></a>
+        <a href="<?php echo esc_url( eb_url('automatisation-microsoft-365') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('microsoft365'); ?>Microsoft 365<span class="tool-chip__chevron" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></span></a>
+        <div class="tool-chip"><?php echo eb_tool_icon_html('google-workspace'); ?>Google Workspace</div>
+        <div class="tool-chip"><?php echo eb_tool_icon_html('sage'); ?>Sage</div>
+        <div class="tool-chip"><?php echo eb_tool_icon_html('qonto'); ?>Qonto</div>
+        <div class="tool-chip"><?php echo eb_tool_icon_html('pennylane'); ?>Pennylane</div>
+        <div class="tool-chip"><?php echo eb_tool_icon_html('notion'); ?>Notion</div>
+        <div class="tool-chip"><?php echo eb_tool_icon_html('hubspot'); ?>HubSpot</div>
+        <div class="tool-chip"><?php echo eb_tool_icon_html('pipedrive'); ?>Pipedrive</div>
+        <a href="<?php echo esc_url( eb_url('consultant-make') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('make'); ?>Make<span class="tool-chip__chevron" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></span></a>
+        <a href="<?php echo esc_url( eb_url('consultant-n8n') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('n8n'); ?>n8n<span class="tool-chip__chevron" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></span></a>
+        <div class="tool-chip"><?php echo eb_tool_icon_html('ogust'); ?>Ogust</div>
       </div>
       <p class="trust-tools__note">Les outils marqués d'une flèche renvoient vers une page dédiée.</p>
     </div>
@@ -369,7 +369,7 @@ get_header();
           <div class="bank-avant__titlebar">
             <div class="bank-avant__dots"><span></span><span></span><span></span></div>
             <span class="bank-avant__filename">Pointage manuel — relevé Qonto ↔ Sage</span>
-            <span class="bank-avant__timer">⏱ ~5 h / mois</span>
+            <span class="bank-avant__timer"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"></circle><path d="M12 8v4.5l3 2"></path></svg> ~5 h / mois</span>
           </div>
           <div class="bank-avant__body">
             <div class="bank-avant__row bank-avant__row--head"><span>Opération bancaire</span><span>Montant</span><span>Pointé ?</span></div>
@@ -394,7 +394,7 @@ get_header();
           <div class="mockup__titlebar">
             <div class="mockup__dots"><span></span><span></span><span></span></div>
             <span class="mockup__filename">Rapprochement automatisé — Make + IA</span>
-            <span class="bank-apres__timer">⏱ quasi 0</span>
+            <span class="bank-apres__timer"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"></circle><path d="M12 8v4.5l3 2"></path></svg> quasi 0</span>
           </div>
           <div class="bank-apres__body">
             <div class="bank-apres__row bank-apres__row--head"><span>Opération bancaire</span><span>Montant</span><span>Statut</span></div>
@@ -425,7 +425,7 @@ get_header();
     <div class="flow-diagram">
 
       <div class="card flow-panel">
-        <div class="flow-panel__head"><span class="flow-panel__icon" style="background:var(--navy);color:#fff;">📥</span><span class="flow-panel__title">Boîte de réception</span></div>
+        <div class="flow-panel__head"><span class="flow-panel__icon" style="background:var(--navy);color:#fff;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h4l2 3h4l2-3h4"></path><path d="M4 12v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6"></path><path d="M4 12l2-7h12l2 7"></path></svg></span><span class="flow-panel__title">Boîte de réception</span></div>
         <div class="flow-panel__body">
           <div class="flow-inbox__row"><span class="flow-inbox__dot"></span><div class="flow-inbox__text"><div class="flow-inbox__subject">Newsletter — secteur</div></div></div>
           <div class="flow-inbox__row flow-inbox__row--highlight"><span class="flow-inbox__dot flow-inbox__dot--orange"></span><div class="flow-inbox__text"><div class="flow-inbox__subject flow-inbox__subject--strong">Demande de devis</div><div class="flow-inbox__meta">DUPONT SARL · prospect</div></div></div>
@@ -436,7 +436,7 @@ get_header();
       <div class="flow-connector"><span class="flow-connector__line"></span><span class="flow-connector__arrow">▶</span></div>
 
       <div class="flow-panel flow-panel--navy">
-        <div class="flow-panel__head"><span class="flow-panel__icon" style="background:var(--orange);color:#fff;">🤖</span><span class="flow-panel__title" style="color:#fff;">Lecture IA</span><span class="flow-panel__dots">●●●</span></div>
+        <div class="flow-panel__head"><span class="flow-panel__icon" style="background:var(--orange);color:#fff;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="8" width="16" height="11" rx="3"></rect><circle cx="9" cy="13.5" r="1.2"></circle><circle cx="15" cy="13.5" r="1.2"></circle><path d="M12 8V4M9 4h6"></path></svg></span><span class="flow-panel__title" style="color:#fff;">Lecture IA</span><span class="flow-panel__dots">●●●</span></div>
         <div class="flow-ia__body">
           <div class="flow-ia__row"><span class="flow-ia__key">expéditeur</span><span class="flow-ia__val">DUPONT SARL ✓</span></div>
           <div class="flow-ia__row"><span class="flow-ia__key">catégorie</span><span class="flow-ia__val">Commercial ✓</span></div>
@@ -448,7 +448,7 @@ get_header();
       <div class="flow-connector"><span class="flow-connector__line"></span><span class="flow-connector__arrow">▶</span></div>
 
       <div class="card flow-panel">
-        <div class="flow-panel__head"><span class="flow-panel__icon" style="background:var(--green);color:#fff;">🗂️</span><span class="flow-panel__title">CRM — Nouvelle fiche</span></div>
+        <div class="flow-panel__head"><span class="flow-panel__icon" style="background:var(--green);color:#fff;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7z"></path></svg></span><span class="flow-panel__title">CRM — Nouvelle fiche</span></div>
         <div class="flow-crm__body">
           <div class="flow-crm__row flow-crm__row--border"><span>Contact</span><span class="flow-crm__strong">DUPONT SARL</span></div>
           <div class="flow-crm__row"><span>Type</span><span class="flow-crm__val">Demande de devis</span></div>
@@ -560,7 +560,7 @@ get_header();
           <div class="pricing__feature"><span class="pricing__check">✓</span>Une automatisation ciblée</div>
           <div class="pricing__feature"><span class="pricing__check">✓</span>Mise en place rapide</div>
           <div class="pricing__feature"><span class="pricing__check">✓</span>ROI immédiat</div>
-          <div class="pricing__feature"><span class="pricing__check">⏱</span>Déploiement : 1 à 2 semaines</div>
+          <div class="pricing__feature"><span class="pricing__check"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"></circle><path d="M12 8v4.5l3 2"></path></svg></span>Déploiement : 1 à 2 semaines</div>
         </div>
         <div class="pricing__price-row">
           <div class="pricing__price-label">À partir de</div>
@@ -577,7 +577,7 @@ get_header();
           <div class="pricing__feature"><span class="pricing__check">✓</span>RH</div>
           <div class="pricing__feature"><span class="pricing__check">✓</span>Comptabilité</div>
           <div class="pricing__feature"><span class="pricing__check">✓</span>Reporting</div>
-          <div class="pricing__feature"><span class="pricing__check">⏱</span>Déploiement : 2 à 4 semaines</div>
+          <div class="pricing__feature"><span class="pricing__check"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"></circle><path d="M12 8v4.5l3 2"></path></svg></span>Déploiement : 2 à 4 semaines</div>
         </div>
         <div class="pricing__price-row">
           <div class="pricing__price-label">À partir de</div>
@@ -636,7 +636,7 @@ get_header();
       </div>
     </div>
     <div class="audit-why">
-      <span class="audit-why__icon">🤝</span>
+      <span class="audit-why__icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3.5v5c0 5-3.4 8.4-8 9.5-4.6-1.1-8-4.5-8-9.5v-5z"></path><path d="M9 12l2 2 4-4"></path></svg></span>
       <div>
         <h3 style="font-size:21px;margin-bottom:12px;">Pourquoi l'audit est gratuit ?</h3>
         <p class="audit-why__text">L'objectif n'est pas de vendre une prestation à tout prix. Si je ne vois pas de gain concret ou de retour sur investissement réaliste, je vous le dirai immédiatement.</p>

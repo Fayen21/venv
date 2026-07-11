@@ -70,6 +70,54 @@ function eb_asset( $relative_path ) {
 }
 
 /**
+ * Registre centralisé des marques affichées dans les bandeaux d'outils.
+ * 'logo' pointe vers un SVG officiel (Simple Icons, licence CC0) copié
+ * localement dans assets/images/logos/. Sans 'logo', la marque n'a pas de
+ * ressource officielle fiable disponible : on utilise un repli typographique
+ * propre (carré coloré + initiale), jamais une reconstitution du logo.
+ */
+function eb_brand_icon( $key ) {
+	$registry = array(
+		'outlook'          => array( 'label' => 'Outlook', 'bg' => '#0A6FC2', 'fg' => '#fff', 'letter' => 'O' ),
+		'excel'            => array( 'label' => 'Excel', 'bg' => '#1D6F42', 'fg' => '#fff', 'letter' => 'X' ),
+		'microsoft365'     => array( 'label' => 'Microsoft 365', 'bg' => '#EB3C00', 'fg' => '#fff', 'letter' => '365' ),
+		'google-workspace' => array( 'label' => 'Google Workspace', 'bg' => '#EA4335', 'fg' => '#fff', 'letter' => 'G', 'logo' => 'google' ),
+		'sage'             => array( 'label' => 'Sage', 'bg' => '#00D639', 'fg' => '#0C2E14', 'letter' => 'S', 'logo' => 'sage' ),
+		'qonto'            => array( 'label' => 'Qonto', 'bg' => '#0C1E3C', 'fg' => '#fff', 'letter' => 'Q' ),
+		'pennylane'        => array( 'label' => 'Pennylane', 'bg' => '#2E2AEB', 'fg' => '#fff', 'letter' => 'P' ),
+		'notion'           => array( 'label' => 'Notion', 'bg' => '#111111', 'fg' => '#fff', 'letter' => 'N', 'logo' => 'notion' ),
+		'hubspot'          => array( 'label' => 'HubSpot', 'bg' => '#FF5C35', 'fg' => '#fff', 'letter' => 'H', 'logo' => 'hubspot' ),
+		'pipedrive'        => array( 'label' => 'Pipedrive', 'bg' => '#1A1A1A', 'fg' => '#fff', 'letter' => 'Pd' ),
+		'make'             => array( 'label' => 'Make', 'bg' => '#6D00CC', 'fg' => '#fff', 'letter' => 'M', 'logo' => 'make' ),
+		'n8n'              => array( 'label' => 'n8n', 'bg' => '#EA4B71', 'fg' => '#fff', 'letter' => 'n8', 'logo' => 'n8n' ),
+		'ogust'            => array( 'label' => 'Ogust', 'bg' => '#F29200', 'fg' => '#fff', 'letter' => 'Og' ),
+		'python'           => array( 'label' => 'Python', 'bg' => '#3776AB', 'fg' => '#fff', 'letter' => 'Py', 'logo' => 'python' ),
+		'docusign'         => array( 'label' => 'DocuSign', 'bg' => '#0C1E3C', 'fg' => '#fff', 'letter' => 'DS' ),
+		'salesforce'       => array( 'label' => 'Salesforce', 'bg' => '#00A1E0', 'fg' => '#fff', 'letter' => 'Sf' ),
+		'linkedin'         => array( 'label' => 'LinkedIn', 'bg' => '#0A66C2', 'fg' => '#fff', 'letter' => 'in' ),
+		'cegid'            => array( 'label' => 'Cegid', 'bg' => '#0C1E3C', 'fg' => '#fff', 'letter' => 'C' ),
+		'quadra'           => array( 'label' => 'Quadra', 'bg' => '#7C5CFC', 'fg' => '#fff', 'letter' => 'Q' ),
+	);
+	return isset( $registry[ $key ] ) ? $registry[ $key ] : null;
+}
+
+/**
+ * Rend l'icône d'un outil : vrai logo SVG local si disponible, sinon un
+ * repli typographique (carré coloré + initiale(s)), jamais un logo recréé.
+ */
+function eb_tool_icon_html( $key ) {
+	$data = eb_brand_icon( $key );
+	if ( ! $data ) {
+		return '';
+	}
+	if ( ! empty( $data['logo'] ) ) {
+		$src = eb_asset( 'images/logos/' . $data['logo'] . '.svg' );
+		return '<span class="tool-chip__abbr tool-chip__abbr--logo"><img src="' . esc_url( $src ) . '" alt="' . esc_attr( $data['label'] ) . '" width="20" height="20" loading="lazy"></span>';
+	}
+	return '<span class="tool-chip__abbr" style="background:' . esc_attr( $data['bg'] ) . ';color:' . esc_attr( $data['fg'] ) . ';">' . esc_html( $data['letter'] ) . '</span>';
+}
+
+/**
  * -----------------------------------------------------------------------
  * 2. Identification de la page courante (pour la classe .is-active du menu
  *    et pour savoir quelles données SEO / CSS de page charger).

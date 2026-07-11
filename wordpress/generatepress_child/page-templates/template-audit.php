@@ -88,7 +88,7 @@ if ( ! defined( 'ABSPATH' ) ) {
         <p class="audit-success__desc">Je reviens vers vous par email sous 24h pour convenir d'un créneau de 45 minutes.</p>
 
         <div class="calendly-placeholder">
-          <div class="calendly-placeholder__icon" aria-hidden="true">📅</div>
+          <div class="calendly-placeholder__icon" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M8 3v4M16 3v4M3 10h18"></path></svg></div>
           <p class="calendly-placeholder__desc">Réservez directement votre créneau de 45 minutes :</p>
           <a href="https://calendly.com/emmanuel-b21850/new-meeting" target="_blank" rel="noopener noreferrer" class="btn btn-primary" aria-label="Choisir un créneau sur Calendly (ouvre un nouvel onglet)">Choisir un créneau</a>
         </div>
