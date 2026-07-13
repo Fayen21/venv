@@ -190,8 +190,8 @@ function eb_hero_fx_effects() {
 		'solutions'                    => 'globe',
 		'realisations'                 => 'flow',
 		'apropos'                      => 'constellation',
-		'automatisation-entreprise'    => 'textparticles',
-		'automatisation-processus'     => 'dotsgrid',
+		'automatisation-entreprise'    => 'network',
+		'automatisation-processus'     => 'globe',
 		'automatisation-ia'            => 'orbit',
 		'agence-ia'                    => 'network',
 		'automatisation-taches'        => 'flow',
@@ -230,7 +230,6 @@ function eb_hero_fx( $effect = 'network' ) {
 	<canvas class="eb-hero-fx__canvas" data-hero-effect="<?php echo esc_attr( $effect ); ?>" aria-hidden="true"></canvas>
 	<div class="eb-hero-fx__aurora eb-hero-fx__aurora--1" aria-hidden="true"></div>
 	<div class="eb-hero-fx__aurora eb-hero-fx__aurora--2" aria-hidden="true"></div>
-	<div class="eb-hero-fx__aurora eb-hero-fx__aurora--3" aria-hidden="true"></div>
 	<?php
 }
 
@@ -328,6 +327,28 @@ function eb_enqueue_assets() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'eb_enqueue_assets' );
+
+/**
+ * Sort la feuille Google Fonts du chemin de rendu bloquant (LCP mobile) : le
+ * <link rel="stylesheet"> classique bloque le premier paint le temps du
+ * fetch. On le charge en `media="print"` (non bloquant) puis on le bascule
+ * sur `all` une fois chargé — motif standard loadCSS. Sans risque de FOIT :
+ * l'URL Google Fonts porte déjà `display=swap`, donc le texte s'affiche
+ * immédiatement avec la police de repli, puis bascule sur la vraie police.
+ * <noscript> fournit le fallback classique si JS est désactivé.
+ */
+function eb_async_google_fonts( $html, $handle ) {
+	if ( 'eb-google-fonts' !== $handle ) {
+		return $html;
+	}
+	// WP_Styles::do_item() imprime toujours media='all' par défaut (aucun 4e
+	// argument passé à wp_enqueue_style ici) — on remplace cette valeur pour
+	// charger la feuille en tâche de fond, puis on la bascule sur 'all' une
+	// fois prête. $html d'origine sert de repli complet pour le <noscript>.
+	$async = str_replace( "media='all'", "media='print' onload=\"this.media='all'\"", $html );
+	return $async . '<noscript>' . $html . '</noscript>';
+}
+add_filter( 'style_loader_tag', 'eb_async_google_fonts', 10, 2 );
 
 /**
  * Retire le style principal du parent GeneratePress : ses règles de base

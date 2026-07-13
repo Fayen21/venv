@@ -77,36 +77,55 @@
     var noteEl = document.querySelector('[data-workflow-note]');
     var tabs = demoRoot.querySelectorAll('.workflow-tabs__btn');
     var stepEls = document.querySelectorAll('.workflow-step[data-step]');
+    // Références mises en cache une seule fois : la structure DOM des étapes
+    // est statique, seuls le texte et les classes changent au fil du temps —
+    // requêter le DOM à chaque tick (toutes les 1,5s) est un coût inutile qui
+    // s'ajoute à la boucle canvas du hero tournant en parallèle.
+    var stepRefs = Array.prototype.map.call(stepEls, function (stepEl) {
+      return {
+        el: stepEl,
+        icon: stepEl.querySelector('[data-step-icon-emoji]'),
+        title: stepEl.querySelector('[data-step-title]'),
+        sub: stepEl.querySelector('[data-step-sub]'),
+        badge: stepEl.querySelector('[data-step-badge]')
+      };
+    });
 
-    function render() {
+    // Étapes (icône + titre + sous-titre) : ne changent qu'au changement de
+    // scénario, jamais à chaque tick de progression.
+    function renderScenario() {
       var scen = SCENARIOS[state.scenario];
       if (fileEl) fileEl.textContent = scen.file;
       if (noteEl) noteEl.textContent = scen.note;
       tabs.forEach(function (btn) {
         btn.classList.toggle('is-active', btn.dataset.scenario === state.scenario);
       });
-      var allDone = state.step >= 3;
-      stepEls.forEach(function (stepEl, i) {
+      stepRefs.forEach(function (ref, i) {
         var st = scen.steps[i];
+        if (ref.icon) ref.icon.innerHTML = stepIconSvg(st.icon);
+        if (ref.title) ref.title.textContent = st.title;
+        if (ref.sub) ref.sub.textContent = st.sub;
+      });
+      renderStepStates();
+    }
+
+    // État de progression (done/active/pending + badge) : seul ce qui change
+    // à chaque tick — aucune réécriture d'icône ni de texte d'étape.
+    function renderStepStates() {
+      var allDone = state.step >= 3;
+      stepRefs.forEach(function (ref, i) {
         var done = allDone || state.step > i;
         var active = !allDone && state.step === i;
-        stepEl.classList.toggle('is-done', done);
-        stepEl.classList.toggle('is-active', active);
-        stepEl.classList.toggle('is-pending', !done && !active);
-        var iconEmoji = stepEl.querySelector('[data-step-icon-emoji]');
-        var titleEl = stepEl.querySelector('[data-step-title]');
-        var subEl = stepEl.querySelector('[data-step-sub]');
-        var badgeEl = stepEl.querySelector('[data-step-badge]');
-        if (iconEmoji) iconEmoji.innerHTML = stepIconSvg(st.icon);
-        if (titleEl) titleEl.textContent = st.title;
-        if (subEl) subEl.textContent = st.sub;
-        if (badgeEl) badgeEl.textContent = done ? 'terminé' : (active ? 'traitement…' : 'en attente');
+        ref.el.classList.toggle('is-done', done);
+        ref.el.classList.toggle('is-active', active);
+        ref.el.classList.toggle('is-pending', !done && !active);
+        if (ref.badge) ref.badge.textContent = done ? 'terminé' : (active ? 'traitement…' : 'en attente');
       });
     }
 
     function tick() {
       state.step = Math.min(state.step + 1, 3);
-      render();
+      renderStepStates();
     }
 
     function startRotation() {
@@ -116,14 +135,14 @@
         var idx = ORDER.indexOf(state.scenario);
         state.scenario = ORDER[(idx + 1) % ORDER.length];
         state.step = 0;
-        render();
+        renderScenario();
       }, 6000);
     }
 
     function selectScenario(key) {
       state.scenario = key;
       state.step = 0;
-      render();
+      renderScenario();
       startRotation();
     }
 
@@ -133,7 +152,7 @@
       });
     });
 
-    render();
+    renderScenario();
     if (!prefersReducedMotion) {
       setInterval(tick, 1500);
     }
