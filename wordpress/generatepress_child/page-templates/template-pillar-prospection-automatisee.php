@@ -21,6 +21,9 @@ if ( ! defined( 'ABSPATH' ) ) {
     </nav>
 
     <!-- hero -->
+    <div class="eb-hero-fx eb-hero-fx--bleed eb-hero-fx--dim-halo">
+    <?php eb_hero_fx( eb_hero_fx_effects()['prospection-automatisee'] ); ?>
+    <div class="eb-hero-fx__inner">
     <div class="pillar-hero">
       <div class="eyebrow pillar-hero__eyebrow">Prospection automatisée</div>
       <h1>Prospection automatisée : générez des leads B2B sans y passer vos journées</h1>
@@ -34,6 +37,8 @@ if ( ! defined( 'ABSPATH' ) ) {
     <!-- mockup visuel -->
     <div class="pillar-mock">
       <img src="<?php echo esc_url( eb_asset( 'images/illustrations/mock-prospection-automatisee.svg' ) ); ?>" alt="Schéma de prospection automatisée : contact enrichi, premier message envoyé, relance programmée à J+4" width="800" height="212" loading="lazy">
+    </div>
+    </div>
     </div>
 
     <!-- le problème -->

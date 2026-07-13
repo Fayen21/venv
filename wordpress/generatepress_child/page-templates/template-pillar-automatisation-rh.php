@@ -21,6 +21,9 @@ if ( ! defined( 'ABSPATH' ) ) {
     </nav>
 
     <!-- hero -->
+    <div class="eb-hero-fx eb-hero-fx--bleed eb-hero-fx--dim-halo">
+    <?php eb_hero_fx( eb_hero_fx_effects()['automatisation-rh'] ); ?>
+    <div class="eb-hero-fx__inner">
     <div class="pillar-hero">
       <div class="eyebrow pillar-hero__eyebrow">Automatisation RH</div>
       <h1>Automatisation RH : de l'onboarding à la paie, sans ressaisie</h1>
@@ -34,6 +37,8 @@ if ( ! defined( 'ABSPATH' ) ) {
     <!-- mockup visuel -->
     <div class="pillar-mock">
       <img src="<?php echo esc_url( eb_asset( 'images/illustrations/mock-automatisation-rh.svg' ) ); ?>" alt="Schéma d'automatisation RH : embauche validée, contrat généré et signé électroniquement, accès et dossier salarié créés" width="800" height="212" loading="lazy">
+    </div>
+    </div>
     </div>
 
     <!-- le problème -->

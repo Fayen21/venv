@@ -21,7 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     </nav>
 
     <!-- hero -->
-    <div class="eb-hero-fx eb-hero-fx--bleed">
+    <div class="eb-hero-fx eb-hero-fx--bleed eb-hero-fx--dim-halo">
     <?php eb_hero_fx( eb_hero_fx_effects()['automatisation-ia'] ); ?>
     <div class="eb-hero-fx__inner">
     <div class="pillar-hero">

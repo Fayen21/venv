@@ -21,6 +21,9 @@ if ( ! defined( 'ABSPATH' ) ) {
     </nav>
 
     <!-- hero -->
+    <div class="eb-hero-fx eb-hero-fx--bleed">
+    <?php eb_hero_fx( eb_hero_fx_effects()['automatisation-outlook'] ); ?>
+    <div class="eb-hero-fx__inner">
     <div class="pillar-hero">
       <div class="eyebrow pillar-hero__eyebrow">Outils · Outlook</div>
       <h1>Automatisation Outlook : triez, classez et traitez vos emails sans y passer vos journées</h1>
@@ -29,6 +32,8 @@ if ( ! defined( 'ABSPATH' ) ) {
         <a href="<?php echo esc_url( eb_url('audit') ); ?>" class="btn btn-primary">Estimer votre gain de temps <span>→</span></a>
         <a href="<?php echo esc_url( eb_url('solutions') ); ?>" class="btn btn-secondary">Voir toutes les solutions</a>
       </div>
+    </div>
+    </div>
     </div>
 
     <div class="pillar-section">

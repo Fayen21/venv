@@ -21,6 +21,9 @@ if ( ! defined( 'ABSPATH' ) ) {
     </nav>
 
     <!-- hero -->
+    <div class="eb-hero-fx eb-hero-fx--bleed">
+    <?php eb_hero_fx( eb_hero_fx_effects()['automatisation-comptable'] ); ?>
+    <div class="eb-hero-fx__inner">
     <div class="pillar-hero">
       <div class="eyebrow pillar-hero__eyebrow">Automatisation comptable</div>
       <h1>Automatisation comptable : éliminez la saisie manuelle grâce à l'IA</h1>
@@ -34,6 +37,8 @@ if ( ! defined( 'ABSPATH' ) ) {
     <!-- mockup visuel -->
     <div class="pillar-mock">
       <img src="<?php echo esc_url( eb_asset( 'images/illustrations/mock-automatisation-comptable.svg' ) ); ?>" alt="Schéma d'automatisation comptable : extraction OCR d'une facture, lecture du montant et de la TVA, écriture comptable générée automatiquement" width="800" height="212" loading="lazy">
+    </div>
+    </div>
     </div>
 
     <!-- le problème -->

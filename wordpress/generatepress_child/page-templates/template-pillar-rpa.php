@@ -21,6 +21,9 @@ if ( ! defined( 'ABSPATH' ) ) {
     </nav>
 
     <!-- hero -->
+    <div class="eb-hero-fx eb-hero-fx--bleed">
+    <?php eb_hero_fx( eb_hero_fx_effects()['rpa'] ); ?>
+    <div class="eb-hero-fx__inner">
     <div class="pillar-hero">
       <div class="eyebrow pillar-hero__eyebrow">RPA — Robotic Process Automation</div>
       <h1>RPA : un robot logiciel pour vos tâches documentaires répétitives</h1>
@@ -34,6 +37,8 @@ if ( ! defined( 'ABSPATH' ) ) {
     <!-- mockup visuel -->
     <div class="pillar-mock">
       <img src="<?php echo esc_url( eb_asset( 'images/illustrations/mock-rpa.svg' ) ); ?>" alt="Schéma RPA : document reçu, données extraites par OCR, reporté automatiquement dans l'outil métier" width="800" height="212" loading="lazy">
+    </div>
+    </div>
     </div>
 
     <!-- le problème -->

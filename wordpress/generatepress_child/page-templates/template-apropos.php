@@ -10,24 +10,28 @@ if ( ! defined( 'ABSPATH' ) ) {
 <?php get_header(); ?>
 <main id="main">
 
-  <!-- hero 2 colonnes + photo -->
+  <!-- hero (fond sombre, même gabarit que les autres pages) -->
   <div class="eb-hero-fx">
   <?php eb_hero_fx( eb_hero_fx_effects()['apropos'] ); ?>
-  <div class="apropos-hero">
-    <div class="apropos-hero__text">
-      <div class="eyebrow" style="margin-bottom:18px;">À propos</div>
-      <h1>Un professionnel de la gestion qui automatise ce qu'il maîtrise déjà</h1>
-      <p>Avant de me consacrer à l'automatisation, j'ai travaillé sur les sujets de gestion, de comptabilité et d'administration d'entreprise — les processus mêmes que j'aide aujourd'hui à automatiser. <strong>Cette expérience de terrain change l'angle d'approche</strong> : je pars des tâches qui font perdre du temps à une équipe, puis je regarde quel outil permet de les supprimer proprement.</p>
+  <div class="hero-left">
+    <div class="eyebrow hero-left__eyebrow">À propos</div>
+    <h1>Un professionnel de la gestion qui automatise ce qu'il maîtrise déjà</h1>
+    <p>Avant de me consacrer à l'automatisation, j'ai travaillé sur les sujets de gestion, de comptabilité et d'administration d'entreprise — les processus mêmes que j'aide aujourd'hui à automatiser. <strong>Cette expérience de terrain change l'angle d'approche</strong> : je pars des tâches qui font perdre du temps à une équipe, puis je regarde quel outil permet de les supprimer proprement.</p>
+  </div>
+  </div>
+
+  <!-- présentation détaillée + photo (fond clair, sans effet) -->
+  <section class="section apropos-intro">
+    <div class="apropos-intro__text">
       <p>Je travaille en indépendant, à distance, avec des TPE et PME françaises de tous secteurs, sur l'ensemble de <a href="<?php echo esc_url( eb_url('solutions') ); ?>">mes solutions d'automatisation</a>. Je conçois, documente et livre chaque automatisation avec les outils grand public que vous utilisez déjà, afin que <strong>vous restiez autonome et propriétaire</strong> de ce qui est mis en place.</p>
       <p>Mon approche s'appuie sur une méthode simple : je cartographie vos processus existants avant de choisir les bons outils — intelligence artificielle, RPA ou simple connecteur — pour chaque cas. Cette rigueur vient directement de mon parcours en gestion et en comptabilité : je sais distinguer une <a href="<?php echo esc_url( eb_url('automatisation-comptable') ); ?>">automatisation comptable</a> fiable d'un raccourci risqué. Contrairement à une <a href="<?php echo esc_url( eb_url('agence-ia') ); ?>">agence IA</a>, vous n'avez qu'<strong>un seul interlocuteur, du premier audit à la mise en production</strong> — ce qui simplifie le suivi de votre <a href="<?php echo esc_url( eb_url('automatisation-processus') ); ?>">automatisation des processus</a>, service par service.</p>
     </div>
-    <div class="apropos-hero__photo">
-      <div class="apropos-hero__photo-frame">
-        <img src="<?php echo esc_url( eb_asset('images/uploads/emmanuelavatar.jpg') ); ?>" alt="Emmanuel — EB Automatisation" width="800" height="800" fetchpriority="high">
+    <div class="apropos-intro__photo">
+      <div class="apropos-intro__photo-frame">
+        <img src="<?php echo esc_url( eb_asset('images/uploads/emmanuelavatar.jpg') ); ?>" alt="Emmanuel — EB Automatisation" width="800" height="800" loading="lazy">
       </div>
     </div>
-  </div>
-  </div>
+  </section>
 
   <!-- citation en exergue -->
   <section class="section" style="padding:18px 40px 10px;">

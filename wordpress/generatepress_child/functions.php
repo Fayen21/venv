@@ -181,30 +181,56 @@ function eb_is_pillar_page( $key ) {
 
 /**
  * Effet canvas décoratif du hero — un seul par page, choisi via ce mapping.
- * Le fallback 'network' couvre toutes les pages piliers/outils non listées
- * explicitement. Voir assets/js/hero-fx.js pour les 7 algorithmes.
+ * Voir assets/js/hero-fx.js pour les 7 algorithmes. Le reste des pages
+ * piliers/outils alterne 'network'/'flow' pour varier visuellement.
  */
 function eb_hero_fx_effects() {
 	return array(
-		'index'                     => 'network',
-		'solutions'                 => 'globe',
-		'realisations'               => 'flow',
-		'apropos'                   => 'constellation',
-		'automatisation-entreprise' => 'textparticles',
-		'automatisation-processus'  => 'dotsgrid',
-		'automatisation-ia'         => 'orbit',
+		'index'                        => 'network',
+		'solutions'                    => 'globe',
+		'realisations'                 => 'flow',
+		'apropos'                      => 'constellation',
+		'automatisation-entreprise'    => 'textparticles',
+		'automatisation-processus'     => 'dotsgrid',
+		'automatisation-ia'            => 'orbit',
+		'agence-ia'                    => 'network',
+		'automatisation-taches'        => 'flow',
+		'automatisation-comptable'     => 'network',
+		'automatisation-rh'            => 'flow',
+		'automatisation-crm'           => 'network',
+		'prospection-automatisee'      => 'flow',
+		'rpa'                          => 'network',
+		'automatisation-excel'         => 'flow',
+		'automatisation-outlook'       => 'network',
+		'consultant-make'              => 'flow',
+		'consultant-n8n'               => 'network',
+		'automatisation-microsoft-365' => 'flow',
+		'automatisation-ocr'           => 'network',
+		'extraction-pdf'               => 'flow',
+		'automatisation-facturation'   => 'network',
 	);
 }
 
 /**
- * Canvas du hero — un seul point d'entrée pour éviter de dupliquer ce
- * balisage sur chaque template. Voir assets/css/hero-fx.css et
+ * Effets déjà très lumineux par eux-mêmes : les halos aurora y sont adoucis
+ * (voir .eb-hero-fx--dim-halo dans hero-fx.css) pour ne pas surcharger.
+ */
+function eb_hero_fx_is_dim( $effect ) {
+	return in_array( $effect, array( 'globe', 'orbit', 'flow' ), true );
+}
+
+/**
+ * Canvas + halos aurora du hero — un seul point d'entrée pour éviter de
+ * dupliquer ce balisage sur chaque template. Voir assets/css/hero-fx.css et
  * assets/js/hero-fx.js pour le comportement (IntersectionObserver +
  * prefers-reduced-motion, aucune librairie).
  */
 function eb_hero_fx( $effect = 'network' ) {
 	?>
 	<canvas class="eb-hero-fx__canvas" data-hero-effect="<?php echo esc_attr( $effect ); ?>" aria-hidden="true"></canvas>
+	<div class="eb-hero-fx__aurora eb-hero-fx__aurora--1" aria-hidden="true"></div>
+	<div class="eb-hero-fx__aurora eb-hero-fx__aurora--2" aria-hidden="true"></div>
+	<div class="eb-hero-fx__aurora eb-hero-fx__aurora--3" aria-hidden="true"></div>
 	<?php
 }
 

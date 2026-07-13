@@ -21,6 +21,9 @@ if ( ! defined( 'ABSPATH' ) ) {
     </nav>
 
     <!-- hero -->
+    <div class="eb-hero-fx eb-hero-fx--bleed">
+    <?php eb_hero_fx( eb_hero_fx_effects()['agence-ia'] ); ?>
+    <div class="eb-hero-fx__inner">
     <div class="pillar-hero">
       <div class="eyebrow pillar-hero__eyebrow">Agence IA vs consultant indépendant</div>
       <h1>Vous cherchez une agence IA ? Voici ce qu'un consultant indépendant peut vous apporter de différent</h1>
@@ -34,6 +37,8 @@ if ( ! defined( 'ABSPATH' ) ) {
     <!-- mockup visuel -->
     <div class="pillar-mock">
       <img src="<?php echo esc_url( eb_asset( 'images/illustrations/mock-agence-ia.svg' ) ); ?>" alt="Schéma comparatif agence IA vs consultant indépendant : interlocuteur unique, délai de mise en place de 1 à 4 semaines, structure de coûts allégée" width="800" height="212" loading="lazy">
+    </div>
+    </div>
     </div>
 
     <!-- sections -->

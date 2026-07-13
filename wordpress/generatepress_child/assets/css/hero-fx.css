@@ -24,10 +24,21 @@
   z-index:2;
   max-width:1200px;
   margin:0 auto;
-  /* pas de padding-bottom : .pillar-hero/.pillar-mock ont déjà leur propre
-     margin-bottom, et overflow:hidden sur .eb-hero-fx empêche ce margin de
-     s'échapper — le doubler ici créerait un bas de bandeau trop grand. */
   padding:56px 40px 0;
+}
+/* .pillar-hero/.pillar-mock portent leur propre margin-bottom (56px) pour
+   l'espacement normal entre sections. Sans butée de padding en bas de
+   .eb-hero-fx__inner, cette margin traverse le conteneur (collapse-through)
+   et gonfle la boîte sombre de .eb-hero-fx (qui l'absorbe via son propre
+   overflow:hidden) au lieu de rester invisible — d'où un bandeau sombre
+   trop haut, avec un vide sous le contenu. On neutralise cette marge dans
+   la zone sombre et on la restitue à l'identique hors du bandeau, dans le
+   fond clair qui suit. */
+.eb-hero-fx__inner > *:last-child{
+  margin-bottom:0;
+}
+.eb-hero-fx--bleed{
+  margin-bottom:56px;
 }
 
 .eb-hero-fx__canvas{
@@ -38,12 +49,52 @@
   display:block;
 }
 
+/* ---------- halos aurora respirants (derrière le contenu, au-dessus du canvas) ---------- */
+.eb-hero-fx__aurora{
+  position:absolute;
+  z-index:1;
+  pointer-events:none;
+  border-radius:50%;
+  filter:blur(60px);
+  will-change:transform;
+}
+.eb-hero-fx__aurora--1{
+  width:520px; height:520px; top:-14%; right:4%;
+  background:rgba(46,155,255,.42);
+  animation:ebaurora 14s ease-in-out infinite;
+}
+.eb-hero-fx__aurora--2{
+  width:460px; height:460px; bottom:-18%; left:2%;
+  filter:blur(64px);
+  background:rgba(221,122,51,.36);
+  animation:ebaurora 18s ease-in-out infinite reverse;
+}
+.eb-hero-fx__aurora--3{
+  width:340px; height:340px; top:32%; left:40%;
+  background:rgba(120,90,255,.30);
+  animation:ebaurora 22s ease-in-out infinite;
+}
+/* effets déjà très lumineux par eux-mêmes (globe/orbit/flow) : halos adoucis
+   pour ne pas surcharger. */
+.eb-hero-fx--dim-halo .eb-hero-fx__aurora--1{ background:rgba(46,155,255,.28); }
+.eb-hero-fx--dim-halo .eb-hero-fx__aurora--2{ background:rgba(221,122,51,.28); }
+.eb-hero-fx--dim-halo .eb-hero-fx__aurora--3{ background:rgba(120,90,255,.22); }
+@keyframes ebaurora{
+  0%{ transform:translate(0,0) scale(1); }
+  33%{ transform:translate(6%,-4%) scale(1.15); }
+  66%{ transform:translate(-5%,5%) scale(.92); }
+  100%{ transform:translate(0,0) scale(1); }
+}
+@media (prefers-reduced-motion: reduce){
+  .eb-hero-fx__aurora{ animation:none; }
+}
+
 /* sans position/z-index propre, le contenu du hero (bloc en flux normal)
    peint AVANT les descendants positionnés dans l'ordre d'empilement CSS —
-   le canvas (positionné, z-index:0) passerait donc au-dessus du texte.
-   On sort chaque conteneur de contenu du hero du flux normal pour qu'il
-   s'empile après le canvas. */
-.eb-hero-fx > *:not(.eb-hero-fx__canvas){
+   le canvas et les halos (positionnés, z-index 0/1) passeraient donc
+   au-dessus du texte. On sort chaque conteneur de contenu du hero du flux
+   normal pour qu'il s'empile après eux. */
+.eb-hero-fx > *:not(.eb-hero-fx__canvas):not(.eb-hero-fx__aurora){
   position:relative;
   z-index:2;
 }
@@ -53,8 +104,7 @@
 
 .eb-hero-fx .hero__lead,
 .eb-hero-fx .pillar-hero__intro,
-.eb-hero-fx .hero-left p,
-.eb-hero-fx .apropos-hero__text p{ color:var(--muted-on-navy); }
+.eb-hero-fx .hero-left p{ color:var(--muted-on-navy); }
 
 .eb-hero-fx .hero__reassurance{ color:var(--muted-on-navy); }
 .eb-hero-fx .hero__demo-label span:first-child{ color:var(--muted-on-navy); }

@@ -21,6 +21,9 @@ if ( ! defined( 'ABSPATH' ) ) {
     </nav>
 
     <!-- hero -->
+    <div class="eb-hero-fx eb-hero-fx--bleed eb-hero-fx--dim-halo">
+    <?php eb_hero_fx( eb_hero_fx_effects()['automatisation-microsoft-365'] ); ?>
+    <div class="eb-hero-fx__inner">
     <div class="pillar-hero">
       <div class="eyebrow pillar-hero__eyebrow">Outils · Microsoft 365</div>
       <h1>Automatisation Microsoft 365 : connectez Outlook, Excel, Teams et SharePoint</h1>
@@ -29,6 +32,8 @@ if ( ! defined( 'ABSPATH' ) ) {
         <a href="<?php echo esc_url( eb_url('audit') ); ?>" class="btn btn-primary">Identifier vos automatisations rentables <span>→</span></a>
         <a href="<?php echo esc_url( eb_url('solutions') ); ?>" class="btn btn-secondary">Voir toutes les solutions</a>
       </div>
+    </div>
+    </div>
     </div>
 
     <div class="pillar-section">

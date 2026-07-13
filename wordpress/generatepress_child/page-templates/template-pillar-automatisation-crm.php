@@ -21,6 +21,9 @@ if ( ! defined( 'ABSPATH' ) ) {
     </nav>
 
     <!-- hero -->
+    <div class="eb-hero-fx eb-hero-fx--bleed">
+    <?php eb_hero_fx( eb_hero_fx_effects()['automatisation-crm'] ); ?>
+    <div class="eb-hero-fx__inner">
     <div class="pillar-hero">
       <div class="eyebrow pillar-hero__eyebrow">Automatisation CRM</div>
       <h1>Automatisation CRM : un pipeline commercial qui se met à jour tout seul</h1>
@@ -34,6 +37,8 @@ if ( ! defined( 'ABSPATH' ) ) {
     <!-- mockup visuel -->
     <div class="pillar-mock">
       <img src="<?php echo esc_url( eb_asset( 'images/illustrations/mock-automatisation-crm.svg' ) ); ?>" alt="Schéma d'automatisation CRM : demande de devis reçue, fiche créée dans le CRM, relance commerciale programmée automatiquement" width="800" height="212" loading="lazy">
+    </div>
+    </div>
     </div>
 
     <!-- le problème -->

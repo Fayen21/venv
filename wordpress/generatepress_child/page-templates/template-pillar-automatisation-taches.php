@@ -21,6 +21,9 @@ if ( ! defined( 'ABSPATH' ) ) {
     </nav>
 
     <!-- hero -->
+    <div class="eb-hero-fx eb-hero-fx--bleed eb-hero-fx--dim-halo">
+    <?php eb_hero_fx( eb_hero_fx_effects()['automatisation-taches'] ); ?>
+    <div class="eb-hero-fx__inner">
     <div class="pillar-hero">
       <div class="eyebrow pillar-hero__eyebrow">Automatisation des tâches</div>
       <h1>Automatiser les tâches répétitives : la première étape la plus rentable</h1>
@@ -34,6 +37,8 @@ if ( ! defined( 'ABSPATH' ) ) {
     <!-- mockup visuel -->
     <div class="pillar-mock">
       <img src="<?php echo esc_url( eb_asset( 'images/illustrations/mock-automatisation-taches.svg' ) ); ?>" alt="Schéma d'automatisation des tâches répétitives : PDF reçu, lecture par OCR et IA, document renommé et classé automatiquement" width="800" height="212" loading="lazy">
+    </div>
+    </div>
     </div>
 
     <!-- sections -->

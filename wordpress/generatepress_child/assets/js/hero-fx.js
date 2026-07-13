@@ -95,7 +95,7 @@
 	effects.network = function (cv, wrap, setup, loop) {
 		var ctx = setup(cv).ctx, st = setup(cv).st;
 		var r = setup(cv); ctx = r.ctx; st = r.st;
-		var N = window.innerWidth < 768 ? 24 : 44;
+		var N = window.innerWidth < 768 ? 30 : 55;
 		var pts = [];
 		for (var i = 0; i < N; i++) {
 			pts.push({ x: Math.random(), y: Math.random(), vx: (Math.random() - 0.5) * 0.0004, vy: (Math.random() - 0.5) * 0.0004 });
@@ -114,7 +114,7 @@
 					var dx = (a.x - b.x) * st.w, dy = (a.y - b.y) * st.h;
 					var d = Math.hypot(dx, dy);
 					if (d < 150) {
-						ctx.strokeStyle = 'rgba(70,160,255,' + (1 - d / 150) * 0.45 + ')';
+						ctx.strokeStyle = 'rgba(90,175,255,' + (1 - d / 150) * 0.6 + ')';
 						ctx.lineWidth = 1;
 						ctx.beginPath();
 						ctx.moveTo(a.x * st.w, a.y * st.h);
@@ -125,9 +125,9 @@
 			}
 			for (var i = 0; i < N; i++) {
 				var p = pts[i];
-				ctx.fillStyle = 'rgba(150,205,255,.9)';
+				ctx.fillStyle = 'rgba(180,220,255,1)';
 				ctx.beginPath();
-				ctx.arc(p.x * st.w, p.y * st.h, 1.9, 0, 7);
+				ctx.arc(p.x * st.w, p.y * st.h, 2.1, 0, 7);
 				ctx.fill();
 			}
 		});
@@ -145,9 +145,21 @@
 			pts.push({ x: Math.cos(t) * rad, y: y, z: Math.sin(t) * rad });
 		}
 		var ang = 0;
+		var rScale = 1;
+		var mx = -9999, my = -9999;
+		wrap.addEventListener('pointermove', function (e) {
+			var rect = wrap.getBoundingClientRect();
+			mx = e.clientX - rect.left;
+			my = e.clientY - rect.top;
+		});
+		wrap.addEventListener('pointerleave', function () { mx = my = -9999; });
 		loop(function () {
-			ang += 0.0035;
-			var R = Math.min(st.w, st.h) * 0.42, cx = st.w * 0.72, cy = st.h * 0.5;
+			var baseR = Math.min(st.w, st.h) * 0.42, cx = st.w * 0.72, cy = st.h * 0.5;
+			var dist = Math.hypot(mx - cx, my - cy);
+			var prox = Math.max(0, Math.min(1, 1 - dist / baseR));
+			rScale += (1 + prox * 0.22 - rScale) * 0.08;
+			ang += 0.0035 + prox * 0.012;
+			var R = baseR * rScale;
 			ctx.clearRect(0, 0, st.w, st.h);
 			var pr = pts.map(function (p) {
 				var x = p.x * Math.cos(ang) - p.z * Math.sin(ang);
@@ -187,9 +199,12 @@
 			ps.push({ x: Math.random(), y: Math.random(), c: Math.random() < 0.22 ? '221,140,70' : '90,165,255' });
 		}
 		var t = 0;
+		var frameN = 0;
+		var cometCycle = 360; // ~6s à 60fps
 		loop(function () {
 			t += 0.0016;
-			ctx.fillStyle = 'rgba(4,11,27,.09)';
+			frameN++;
+			ctx.fillStyle = 'rgba(4,11,27,.05)';
 			ctx.fillRect(0, 0, st.w, st.h);
 			for (var i = 0; i < N; i++) {
 				var p = ps[i];
@@ -203,13 +218,30 @@
 				ctx.fillStyle = 'rgba(' + p.c + ',.5)';
 				ctx.fillRect(p.x * st.w, p.y * st.h, 1.5, 1.5);
 			}
+			// comète : traverse le hero en diagonale toutes les ~6s, traînée en
+			// dégradé qui s'estompe grâce au fondu de fond ci-dessus.
+			var cp = (frameN % cometCycle) / cometCycle;
+			var cx = (-0.15 + cp * 1.3) * st.w;
+			var cy = (-0.15 + cp * 1.3) * st.h;
+			var glow = ctx.createRadialGradient(cx, cy, 0, cx, cy, 26);
+			glow.addColorStop(0, 'rgba(255,255,255,.95)');
+			glow.addColorStop(0.35, 'rgba(150,205,255,.55)');
+			glow.addColorStop(1, 'rgba(150,205,255,0)');
+			ctx.fillStyle = glow;
+			ctx.beginPath();
+			ctx.arc(cx, cy, 26, 0, 7);
+			ctx.fill();
+			ctx.fillStyle = 'rgba(255,255,255,.95)';
+			ctx.beginPath();
+			ctx.arc(cx, cy, 2.2, 0, 7);
+			ctx.fill();
 		});
 	};
 
 	// constellation — À propos (parallaxe souris + onde)
 	effects.constellation = function (cv, wrap, setup, loop) {
 		var r = setup(cv), ctx = r.ctx, st = r.st;
-		var layers = [{ n: 16, d: 0.4, s: 1.2 }, { n: 16, d: 0.7, s: 1.7 }, { n: 14, d: 1.1, s: 2.3 }];
+		var layers = [{ n: 26, d: 0.4, s: 1.2 }, { n: 24, d: 0.7, s: 1.7 }, { n: 20, d: 1.1, s: 2.3 }];
 		layers.forEach(function (L) {
 			L.pts = [];
 			for (var i = 0; i < L.n; i++) {
@@ -240,8 +272,8 @@
 				for (var i = 0; i < sc.length; i++) {
 					for (var j = i + 1; j < sc.length; j++) {
 						var d = Math.hypot(sc[i].x - sc[j].x, sc[i].y - sc[j].y);
-						if (d < 150) {
-							ctx.strokeStyle = 'rgba(90,165,255,' + ((1 - d / 150) * 0.4 * L.d) + ')';
+						if (d < 175) {
+							ctx.strokeStyle = 'rgba(120,185,255,' + ((1 - d / 175) * 0.6 * L.d) + ')';
 							ctx.lineWidth = 1;
 							ctx.beginPath();
 							ctx.moveTo(sc[i].x, sc[i].y);
@@ -252,15 +284,15 @@
 				}
 				for (var i = 0; i < sc.length; i++) {
 					var s = sc[i];
-					ctx.fillStyle = 'rgba(150,205,255,' + (0.3 + L.d * 0.5) + ')';
+					ctx.fillStyle = 'rgba(190,225,255,' + (0.45 + L.d * 0.55) + ')';
 					ctx.beginPath();
 					ctx.arc(s.x, s.y, L.s, 0, 7);
 					ctx.fill();
 				}
 			}
-			var cx = st.w * 0.72, cy = st.h * 0.42, pr = (t % 160) / 160, rad = pr * Math.min(st.w, st.h) * 0.5;
-			ctx.strokeStyle = 'rgba(46,155,255,' + ((1 - pr) * 0.4) + ')';
-			ctx.lineWidth = 1.5;
+			var cx = st.w * 0.5, cy = st.h * 0.5, pr = (t % 160) / 160, rad = pr * Math.min(st.w, st.h) * 0.5;
+			ctx.strokeStyle = 'rgba(46,155,255,' + ((1 - pr) * 0.6) + ')';
+			ctx.lineWidth = 2;
 			ctx.beginPath();
 			ctx.arc(cx, cy, rad, 0, 7);
 			ctx.stroke();

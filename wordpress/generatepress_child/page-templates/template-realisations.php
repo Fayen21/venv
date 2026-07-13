@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 <main id="main">
 
   <!-- hero -->
-  <div class="eb-hero-fx">
+  <div class="eb-hero-fx eb-hero-fx--dim-halo">
   <?php eb_hero_fx( eb_hero_fx_effects()['realisations'] ); ?>
   <div class="hero-left">
     <div class="eyebrow hero-left__eyebrow">Réalisations</div>

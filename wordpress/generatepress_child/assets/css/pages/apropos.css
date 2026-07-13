@@ -1,20 +1,19 @@
 /* À propos — matches EB Automatisation V2.dc.html sc-if isApropos (lignes 1006-1081). */
 /* Le texte de la biographie reste provisoire (choix produit validé) — seule la mise en page est restaurée ici. */
 
-/* ============ hero 2 colonnes + photo ============ */
-.apropos-hero{
-  max-width:1200px; margin:0 auto; padding:84px 40px 50px;
+/* ============ présentation 2 colonnes + photo (sous le hero, fond clair) ============ */
+.apropos-intro{
+  max-width:1200px; margin:0 auto; padding:64px 40px 70px;
   display:grid; grid-template-columns:1.05fr .95fr; gap:60px; align-items:center;
 }
-.apropos-hero__text h1{ font-size:46px; line-height:1.08; margin:0 0 22px; }
-.apropos-hero__text p{ font-size:17px; line-height:1.64; color:var(--text-2); margin:0 0 18px; }
-.apropos-hero__text p:last-child{ margin-bottom:0; }
-.apropos-hero__photo{ position:relative; display:flex; justify-content:center; }
-.apropos-hero__photo-frame{
+.apropos-intro__text p{ font-size:17px; line-height:1.64; color:var(--text-2); margin:0 0 18px; }
+.apropos-intro__text p:last-child{ margin-bottom:0; }
+.apropos-intro__photo{ position:relative; display:flex; justify-content:center; }
+.apropos-intro__photo-frame{
   width:100%; max-width:245px; aspect-ratio:4/5; border-radius:18px; border:1px solid var(--border-4);
   overflow:hidden; background:#EEF1F7; box-shadow:0 24px 50px -30px rgba(12,30,60,.4);
 }
-.apropos-hero__photo-frame img{ width:100%; height:100%; object-fit:cover; object-position:center top; display:block; }
+.apropos-intro__photo-frame img{ width:100%; height:100%; object-fit:cover; object-position:center top; display:block; }
 
 /* ============ citation en exergue ============ */
 .apropos-quote{ margin:18px auto; max-width:880px; padding:6px 0 6px 28px; border-left:3px solid var(--orange); }
@@ -50,16 +49,15 @@
 
 /* ==================== responsive — miroir du retrofit 900px du prototype ==================== */
 @media (max-width:900px){
-  .apropos-hero, .values-band__grid, .apropos-tools, .faq-grid{
+  .apropos-intro, .values-band__grid, .apropos-tools, .faq-grid{
     grid-template-columns:1fr;
   }
-  .apropos-hero__photo{ order:-1; }
+  .apropos-intro__photo{ order:-1; }
 }
 @media (max-width:640px){
-  .apropos-hero{ padding:40px 20px 20px; }
-  .apropos-hero__text{ text-align:center; }
-  .apropos-hero__text h1{ font-size:32px; line-height:1.14; }
-  .apropos-hero__text p{ text-align:left; }
+  .apropos-intro{ padding:36px 20px 44px; }
+  .apropos-intro__text{ text-align:center; }
+  .apropos-intro__text p{ text-align:left; }
   .apropos-quote{ text-align:center; padding:6px 0; border-left:none; border-top:3px solid var(--orange); padding-top:18px; }
   .apropos-quote p{ font-size:21px; }
   .values-band__inner{ padding:44px 20px; }
