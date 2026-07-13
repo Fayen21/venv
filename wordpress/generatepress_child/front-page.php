@@ -7,6 +7,8 @@ get_header();
 <main id="main">
 
   <!-- hero + live workflow switcher -->
+  <div class="eb-hero-fx">
+  <?php eb_hero_fx( eb_hero_fx_effects()['index'] ); ?>
   <section class="section hero">
     <div class="hero__glow" aria-hidden="true"></div>
     <div class="hero__content">
@@ -73,6 +75,7 @@ get_header();
       </div>
     </div>
   </section>
+  </div>
 
   <!-- nos expertises -->
   <section class="section">

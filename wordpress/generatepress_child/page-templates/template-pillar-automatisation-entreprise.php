@@ -21,6 +21,9 @@ if ( ! defined( 'ABSPATH' ) ) {
     </nav>
 
     <!-- hero -->
+    <div class="eb-hero-fx eb-hero-fx--bleed">
+    <?php eb_hero_fx( eb_hero_fx_effects()['automatisation-entreprise'] ); ?>
+    <div class="eb-hero-fx__inner">
     <div class="pillar-hero">
       <div class="eyebrow pillar-hero__eyebrow">Automatisation entreprise</div>
       <h1>Automatiser son entreprise : par où commencer et jusqu'où aller</h1>
@@ -34,6 +37,8 @@ if ( ! defined( 'ABSPATH' ) ) {
     <!-- mockup visuel -->
     <div class="pillar-mock">
       <img src="<?php echo esc_url( eb_asset( 'images/illustrations/mock-automatisation-entreprise.svg' ) ); ?>" alt="Schéma d'automatisation d'entreprise : onboarding RH, rapprochement bancaire comptable, suivi CRM et reporting automatisés" width="800" height="258" loading="lazy">
+    </div>
+    </div>
     </div>
 
     <!-- sections -->

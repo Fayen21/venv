@@ -1,0 +1,61 @@
+/* ============================================================
+   Hero FX — un canvas décoratif par page (réseau, globe, flow,
+   constellation, particules de texte, grille de points ou orbite),
+   fond sombre commun. Un seul effet actif par page, piloté par
+   assets/js/hero-fx.js (IntersectionObserver + prefers-reduced-motion).
+   ============================================================ */
+
+.eb-hero-fx{
+  position:relative;
+  overflow:hidden;
+  background:#07142A;
+}
+/* rupture pleine largeur quand le hero est imbriqué dans un conteneur
+   max-width (pages piliers/outils, dans .pillar-wrap) — l'accueil, Solutions,
+   Réalisations et À propos n'en ont pas besoin : leur hero est déjà la
+   première chose sous le header, dans le même conteneur .section/.hero-left. */
+.eb-hero-fx--bleed{
+  width:100vw;
+  margin-left:50%;
+  transform:translateX(-50%);
+}
+.eb-hero-fx__inner{
+  position:relative;
+  z-index:2;
+  max-width:1200px;
+  margin:0 auto;
+  /* pas de padding-bottom : .pillar-hero/.pillar-mock ont déjà leur propre
+     margin-bottom, et overflow:hidden sur .eb-hero-fx empêche ce margin de
+     s'échapper — le doubler ici créerait un bas de bandeau trop grand. */
+  padding:56px 40px 0;
+}
+
+.eb-hero-fx__canvas{
+  position:absolute; inset:0;
+  width:100%; height:100%;
+  z-index:0;
+  pointer-events:none;
+  display:block;
+}
+
+/* sans position/z-index propre, le contenu du hero (bloc en flux normal)
+   peint AVANT les descendants positionnés dans l'ordre d'empilement CSS —
+   le canvas (positionné, z-index:0) passerait donc au-dessus du texte.
+   On sort chaque conteneur de contenu du hero du flux normal pour qu'il
+   s'empile après le canvas. */
+.eb-hero-fx > *:not(.eb-hero-fx__canvas){
+  position:relative;
+  z-index:2;
+}
+
+/* ---------- texte du hero sur fond sombre ---------- */
+.eb-hero-fx h1{ color:#fff; }
+
+.eb-hero-fx .hero__lead,
+.eb-hero-fx .pillar-hero__intro,
+.eb-hero-fx .hero-left p,
+.eb-hero-fx .apropos-hero__text p{ color:var(--muted-on-navy); }
+
+.eb-hero-fx .hero__reassurance{ color:var(--muted-on-navy); }
+.eb-hero-fx .hero__demo-label span:first-child{ color:var(--muted-on-navy); }
+.eb-hero-fx .hero__demo-rule{ background:rgba(255,255,255,.14); }

@@ -180,6 +180,35 @@ function eb_is_pillar_page( $key ) {
 }
 
 /**
+ * Effet canvas décoratif du hero — un seul par page, choisi via ce mapping.
+ * Le fallback 'network' couvre toutes les pages piliers/outils non listées
+ * explicitement. Voir assets/js/hero-fx.js pour les 7 algorithmes.
+ */
+function eb_hero_fx_effects() {
+	return array(
+		'index'                     => 'network',
+		'solutions'                 => 'globe',
+		'realisations'               => 'flow',
+		'apropos'                   => 'constellation',
+		'automatisation-entreprise' => 'textparticles',
+		'automatisation-processus'  => 'dotsgrid',
+		'automatisation-ia'         => 'orbit',
+	);
+}
+
+/**
+ * Canvas du hero — un seul point d'entrée pour éviter de dupliquer ce
+ * balisage sur chaque template. Voir assets/css/hero-fx.css et
+ * assets/js/hero-fx.js pour le comportement (IntersectionObserver +
+ * prefers-reduced-motion, aucune librairie).
+ */
+function eb_hero_fx( $effect = 'network' ) {
+	?>
+	<canvas class="eb-hero-fx__canvas" data-hero-effect="<?php echo esc_attr( $effect ); ?>" aria-hidden="true"></canvas>
+	<?php
+}
+
+/**
  * -----------------------------------------------------------------------
  * 3. CSS / JS — même ordre de chargement que les <link>/<script> du HTML
  *    source, fichiers copiés à l'identique dans assets/.
@@ -244,6 +273,15 @@ function eb_enqueue_assets() {
 
 	if ( 'index' === $page ) {
 		wp_enqueue_script( 'eb-home', EB_THEME_URI . '/assets/js/home.js', array(), filemtime( EB_THEME_DIR . '/assets/js/home.js' ), true );
+	}
+
+	// Effet canvas du hero — accueil, Solutions, Réalisations, À propos et
+	// toutes les pages piliers/outils (cf. eb_hero_fx_effects() pour le mapping
+	// page → effet). Jamais sur Audit ni les pages légales, qui n'utilisent pas
+	// le gabarit .hero / .hero-left / .apropos-hero / .pillar-hero.
+	if ( 'index' === $page || 'solutions' === $page || 'realisations' === $page || 'apropos' === $page || eb_is_pillar_page( $page ) ) {
+		wp_enqueue_style( 'eb-hero-fx', EB_THEME_URI . '/assets/css/hero-fx.css', array( 'eb-utilities' ), filemtime( EB_THEME_DIR . '/assets/css/hero-fx.css' ) );
+		wp_enqueue_script( 'eb-hero-fx', EB_THEME_URI . '/assets/js/hero-fx.js', array(), filemtime( EB_THEME_DIR . '/assets/js/hero-fx.js' ), true );
 	}
 
 	if ( 'audit' === $page ) {

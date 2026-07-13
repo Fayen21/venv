@@ -11,6 +11,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 <main id="main">
 
   <!-- hero 2 colonnes + photo -->
+  <div class="eb-hero-fx">
+  <?php eb_hero_fx( eb_hero_fx_effects()['apropos'] ); ?>
   <div class="apropos-hero">
     <div class="apropos-hero__text">
       <div class="eyebrow" style="margin-bottom:18px;">À propos</div>
@@ -24,6 +26,7 @@ if ( ! defined( 'ABSPATH' ) ) {
         <img src="<?php echo esc_url( eb_asset('images/uploads/emmanuelavatar.jpg') ); ?>" alt="Emmanuel — EB Automatisation" width="800" height="800" fetchpriority="high">
       </div>
     </div>
+  </div>
   </div>
 
   <!-- citation en exergue -->

@@ -21,6 +21,9 @@ if ( ! defined( 'ABSPATH' ) ) {
     </nav>
 
     <!-- hero -->
+    <div class="eb-hero-fx eb-hero-fx--bleed">
+    <?php eb_hero_fx( eb_hero_fx_effects()['automatisation-processus'] ); ?>
+    <div class="eb-hero-fx__inner">
     <div class="pillar-hero">
       <div class="eyebrow pillar-hero__eyebrow">Automatisation des processus</div>
       <h1>Automatiser un processus métier : méthode et exemples concrets</h1>
@@ -34,6 +37,8 @@ if ( ! defined( 'ABSPATH' ) ) {
     <!-- mockup visuel -->
     <div class="pillar-mock">
       <img src="<?php echo esc_url( eb_asset( 'images/illustrations/mock-automatisation-processus.svg' ) ); ?>" alt="Schéma d'automatisation de processus métier : devis envoyé, relance automatique à J+5, commande et facture générées automatiquement" width="800" height="212" loading="lazy">
+    </div>
+    </div>
     </div>
 
     <!-- sections -->
