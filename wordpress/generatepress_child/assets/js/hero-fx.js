@@ -291,6 +291,14 @@
 			t++;
 			ctx.clearRect(0, 0, st.w, st.h);
 			var ox = m.x - 0.5, oy = m.y - 0.5;
+			// pulsar central — cercle net (pas déformé), calculé avant les couches
+			// pour que l'onde puisse pousser/illuminer les particules qu'elle
+			// traverse au passage (déformation de ce qu'elle touche, pas d'elle-même).
+			var cx = st.w * 0.5, cy = st.h * 0.5;
+			var minSide = Math.min(st.w, st.h);
+			var pr = (t % 160) / 160;
+			var ringRadius = pr * minSide * 0.62;
+			var pushBand = 50;
 			for (var li = 0; li < layers.length; li++) {
 				var L = layers[li];
 				var px = ox * L.d * 60, py = oy * L.d * 60, sc = [];
@@ -299,7 +307,23 @@
 					p.x += p.vx; p.y += p.vy;
 					if (p.x < 0 || p.x > 1) p.vx *= -1;
 					if (p.y < 0 || p.y > 1) p.vy *= -1;
-					sc.push({ x: p.x * st.w + px, y: p.y * st.h + py });
+					sc.push({ x: p.x * st.w + px, y: p.y * st.h + py, boost: 0 });
+				}
+				// l'onde de choc déplace et illumine brièvement les particules dans
+				// sa bande de passage — relâchées dès qu'elle s'éloigne (recalculé
+				// depuis leur position naturelle à chaque frame, aucun état à gérer).
+				for (var i = 0; i < sc.length; i++) {
+					var sp = sc[i];
+					var ddx = sp.x - cx, ddy = sp.y - cy;
+					var dist = Math.hypot(ddx, ddy) || 1;
+					var diff = dist - ringRadius;
+					if (Math.abs(diff) < pushBand) {
+						var force = (1 - Math.abs(diff) / pushBand) * 14 * (0.5 + L.d * 0.5);
+						var dirSign = diff >= 0 ? 1 : -1;
+						sp.x += (ddx / dist) * force * dirSign;
+						sp.y += (ddy / dist) * force * dirSign;
+						sp.boost = 1 - Math.abs(diff) / pushBand;
+					}
 				}
 				for (var i = 0; i < sc.length; i++) {
 					for (var j = i + 1; j < sc.length; j++) {
@@ -316,31 +340,24 @@
 				}
 				for (var i = 0; i < sc.length; i++) {
 					var s = sc[i];
-					ctx.fillStyle = 'rgba(190,225,255,' + (0.45 + L.d * 0.55) + ')';
+					var dotA = Math.min(1, (0.45 + L.d * 0.55) * (1 + s.boost * 0.9));
+					ctx.fillStyle = 'rgba(190,225,255,' + dotA + ')';
 					ctx.beginPath();
-					ctx.arc(s.x, s.y, L.s, 0, 7);
+					ctx.arc(s.x, s.y, L.s * (1 + s.boost * 0.6), 0, 7);
 					ctx.fill();
 				}
 			}
-			// pulsar central — onde de choc déformée (sensation de puissance) : le
-			// cercle n'est pas parfait, son rayon oscille selon l'angle et le temps,
-			// et une seconde onde en écho suit la première.
-			var cx = st.w * 0.5, cy = st.h * 0.5;
-			var minSide = Math.min(st.w, st.h);
-			var pr = (t % 160) / 160;
-			var baseRad = pr * minSide * 0.62;
-			var segs = 96;
-			ctx.strokeStyle = 'rgba(46,155,255,' + ((1 - pr) * 0.75) + ')';
-			ctx.lineWidth = 3.5 * (1 - pr * 0.35);
+			// anneau du pulsar : cercle net, plus visible qu'avant (plus épais,
+			// plus lumineux, glow en 2 passes), avec une onde en écho qui suit.
+			ctx.strokeStyle = 'rgba(46,155,255,' + ((1 - pr) * 0.22) + ')';
+			ctx.lineWidth = 10;
 			ctx.beginPath();
-			for (var s = 0; s <= segs; s++) {
-				var a = (s / segs) * Math.PI * 2;
-				var wobble = Math.sin(a * 6 + t * 0.15) * (6 + pr * 14);
-				var rr = baseRad + wobble;
-				var wx = cx + Math.cos(a) * rr, wy = cy + Math.sin(a) * rr;
-				if (s === 0) ctx.moveTo(wx, wy); else ctx.lineTo(wx, wy);
-			}
-			ctx.closePath();
+			ctx.arc(cx, cy, ringRadius, 0, 7);
+			ctx.stroke();
+			ctx.strokeStyle = 'rgba(70,180,255,' + ((1 - pr) * 0.85) + ')';
+			ctx.lineWidth = 3;
+			ctx.beginPath();
+			ctx.arc(cx, cy, ringRadius, 0, 7);
 			ctx.stroke();
 			var pr2 = Math.max(0, pr - 0.18);
 			if (pr2 > 0) {
