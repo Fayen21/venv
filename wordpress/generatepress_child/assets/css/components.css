@@ -195,7 +195,15 @@
   display:flex; align-items:center; gap:12px;
   font-family:var(--font-heading); font-weight:700; font-size:14.5px; color:var(--navy);
   background:#fff; border:1px solid var(--border-3); padding:12px 15px; border-radius:11px;
+  overflow:hidden;
 }
+/* le libellé est un noeud de texte brut, flanqué de l'icône et parfois du
+   chevron (éléments) : en display:flex, un noeud de texte devient son propre
+   item flex anonyme avec un min-width:auto implicite — il ne peut alors pas
+   rétrécir sous sa largeur intrinsèque (ex. "Google Workspace" sur 2 colonnes
+   mobile) et déborde de la puce, non contenu. On l'enveloppe dans un span
+   qui peut, lui, rétrécir et passer à la ligne normalement. */
+.tool-chip__label{ flex:1; min-width:0; }
 .tool-chip__abbr{
   width:34px; height:34px; flex:none; border-radius:9px;
   display:flex; align-items:center; justify-content:center;

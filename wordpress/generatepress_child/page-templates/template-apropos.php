@@ -147,19 +147,19 @@ if ( ! defined( 'ABSPATH' ) ) {
       <div>
         <h2>Les outils que je maîtrise</h2>
         <div class="tool-chip-grid">
-          <a href="<?php echo esc_url( eb_url('automatisation-outlook') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('outlook'); ?>Outlook<span class="tool-chip__chevron" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></span></a>
-          <a href="<?php echo esc_url( eb_url('automatisation-excel') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('excel'); ?>Excel<span class="tool-chip__chevron" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></span></a>
-          <a href="<?php echo esc_url( eb_url('automatisation-microsoft-365') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('microsoft365'); ?>Microsoft 365<span class="tool-chip__chevron" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></span></a>
-          <div class="tool-chip"><?php echo eb_tool_icon_html('google-workspace'); ?>Google Workspace</div>
-          <div class="tool-chip"><?php echo eb_tool_icon_html('sage'); ?>Sage</div>
-          <div class="tool-chip"><?php echo eb_tool_icon_html('qonto'); ?>Qonto</div>
-          <div class="tool-chip"><?php echo eb_tool_icon_html('pennylane'); ?>Pennylane</div>
-          <div class="tool-chip"><?php echo eb_tool_icon_html('notion'); ?>Notion</div>
-          <div class="tool-chip"><?php echo eb_tool_icon_html('hubspot'); ?>HubSpot</div>
-          <div class="tool-chip"><?php echo eb_tool_icon_html('pipedrive'); ?>Pipedrive</div>
-          <a href="<?php echo esc_url( eb_url('consultant-make') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('make'); ?>Make<span class="tool-chip__chevron" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></span></a>
-          <a href="<?php echo esc_url( eb_url('consultant-n8n') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('n8n'); ?>n8n<span class="tool-chip__chevron" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></span></a>
-          <div class="tool-chip"><?php echo eb_tool_icon_html('ogust'); ?>Ogust</div>
+          <a href="<?php echo esc_url( eb_url('automatisation-outlook') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('outlook'); ?><span class="tool-chip__label">Outlook</span><span class="tool-chip__chevron" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></span></a>
+          <a href="<?php echo esc_url( eb_url('automatisation-excel') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('excel'); ?><span class="tool-chip__label">Excel</span><span class="tool-chip__chevron" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></span></a>
+          <a href="<?php echo esc_url( eb_url('automatisation-microsoft-365') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('microsoft365'); ?><span class="tool-chip__label">Microsoft 365</span><span class="tool-chip__chevron" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></span></a>
+          <div class="tool-chip"><?php echo eb_tool_icon_html('google-workspace'); ?><span class="tool-chip__label">Google Workspace</span></div>
+          <div class="tool-chip"><?php echo eb_tool_icon_html('sage'); ?><span class="tool-chip__label">Sage</span></div>
+          <div class="tool-chip"><?php echo eb_tool_icon_html('qonto'); ?><span class="tool-chip__label">Qonto</span></div>
+          <div class="tool-chip"><?php echo eb_tool_icon_html('pennylane'); ?><span class="tool-chip__label">Pennylane</span></div>
+          <div class="tool-chip"><?php echo eb_tool_icon_html('notion'); ?><span class="tool-chip__label">Notion</span></div>
+          <div class="tool-chip"><?php echo eb_tool_icon_html('hubspot'); ?><span class="tool-chip__label">HubSpot</span></div>
+          <div class="tool-chip"><?php echo eb_tool_icon_html('pipedrive'); ?><span class="tool-chip__label">Pipedrive</span></div>
+          <a href="<?php echo esc_url( eb_url('consultant-make') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('make'); ?><span class="tool-chip__label">Make</span><span class="tool-chip__chevron" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></span></a>
+          <a href="<?php echo esc_url( eb_url('consultant-n8n') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('n8n'); ?><span class="tool-chip__label">n8n</span><span class="tool-chip__chevron" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></span></a>
+          <div class="tool-chip"><?php echo eb_tool_icon_html('ogust'); ?><span class="tool-chip__label">Ogust</span></div>
         </div>
       </div>
       <div class="rgpd-card">

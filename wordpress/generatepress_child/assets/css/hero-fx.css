@@ -107,6 +107,21 @@
 /* ---------- texte du hero sur fond sombre ---------- */
 .eb-hero-fx h1{ color:#fff; }
 
+/* --orange-a11y (#AC5F28) est assombri pour rester lisible sur fond CLAIR —
+   sur le bandeau sombre du hero il tombe à 3.87:1, sous le seuil AA (4.5:1)
+   pour un texte de cette taille. --orange (#DD7A33, la teinte de marque déjà
+   utilisée pour les halos aurora sur ce même fond) atteint 6.04:1. */
+.eb-hero-fx .eyebrow{ color:var(--orange); }
+
+/* même raison : les liens en texte courant (p a / li a) héritent par défaut
+   de --orange-a11y, sous le seuil AA sur fond sombre. */
+.eb-hero-fx p a,
+.eb-hero-fx li a{ color:var(--orange); }
+.eb-hero-fx p a:hover,
+.eb-hero-fx li a:hover,
+.eb-hero-fx p a:focus-visible,
+.eb-hero-fx li a:focus-visible{ color:var(--orange-hover); }
+
 .eb-hero-fx .hero__lead,
 .eb-hero-fx .pillar-hero__intro,
 .eb-hero-fx .hero-left p{ color:var(--muted-on-navy); }
@@ -114,3 +129,8 @@
 .eb-hero-fx .hero__reassurance{ color:var(--muted-on-navy); }
 .eb-hero-fx .hero__demo-label span:first-child{ color:var(--muted-on-navy); }
 .eb-hero-fx .hero__demo-rule{ background:rgba(255,255,255,.14); }
+
+/* --green (#1E8E5A) tombe à 4.44:1 sur le bandeau sombre, sous le seuil AA —
+   --green-bright est déjà la teinte utilisée pour ce même vert sur les fonds
+   sombres ailleurs sur le site (ex. .workflow-panel__note-check). */
+.eb-hero-fx .hero__reassurance-check{ color:var(--green-bright); }

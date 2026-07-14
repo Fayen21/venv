@@ -104,12 +104,12 @@ if ( ! defined( 'ABSPATH' ) ) {
       <h2>Outils concernés</h2>
       <p>L'automatisation comptable s'appuie sur les logiciels que vous utilisez déjà — aucun changement d'outil n'est nécessaire.</p>
       <div class="tool-chip-grid">
-        <div class="tool-chip"><?php echo eb_tool_icon_html('pennylane'); ?>Pennylane</div>
-        <div class="tool-chip"><?php echo eb_tool_icon_html('sage'); ?>Sage</div>
-        <div class="tool-chip"><?php echo eb_tool_icon_html('cegid'); ?>Cegid</div>
-        <div class="tool-chip"><?php echo eb_tool_icon_html('quadra'); ?>Quadra</div>
-        <div class="tool-chip"><?php echo eb_tool_icon_html('qonto'); ?>Qonto</div>
-        <a href="<?php echo esc_url( eb_url('automatisation-excel') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('excel'); ?>Excel<span class="tool-chip__chevron" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></span></a>
+        <div class="tool-chip"><?php echo eb_tool_icon_html('pennylane'); ?><span class="tool-chip__label">Pennylane</span></div>
+        <div class="tool-chip"><?php echo eb_tool_icon_html('sage'); ?><span class="tool-chip__label">Sage</span></div>
+        <div class="tool-chip"><?php echo eb_tool_icon_html('cegid'); ?><span class="tool-chip__label">Cegid</span></div>
+        <div class="tool-chip"><?php echo eb_tool_icon_html('quadra'); ?><span class="tool-chip__label">Quadra</span></div>
+        <div class="tool-chip"><?php echo eb_tool_icon_html('qonto'); ?><span class="tool-chip__label">Qonto</span></div>
+        <a href="<?php echo esc_url( eb_url('automatisation-excel') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('excel'); ?><span class="tool-chip__label">Excel</span><span class="tool-chip__chevron" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></span></a>
       </div>
     </div>
 

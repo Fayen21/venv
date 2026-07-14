@@ -444,6 +444,23 @@
   .faq-grid{
     grid-template-columns:1fr;
   }
+  /* les enfants directs d'une grille 1fr ont un min-width:auto implicite : sans
+     ce reset, une piste ne peut pas rétrécir sous la largeur intrinsèque de son
+     contenu (ici .workflow-tabs) et fait déborder .hero au-delà du viewport —
+     invisible avant (juste un débordement de page scrollable), mais découpé net
+     depuis que .eb-hero-fx a un overflow:hidden. */
+  .hero > *{ min-width:0; }
+  /* .flow-connector (ligne + flèche ▶) est conçu pour relier des cartes côte à
+     côte ; une fois .flow-diagram empilé en 1 colonne, il se retrouve entre des
+     cartes l'une sous l'autre mais reste dessiné à l'horizontale — d'où les
+     flèches mal rendues. On le fait pivoter pour qu'il pointe vers le bas. */
+  .flow-connector{ height:32px; width:100%; }
+  .flow-connector__line{
+    width:3px; height:100%;
+    background:linear-gradient(180deg,#DD7A33 0 50%,transparent 0);
+    background-size:3px 16px;
+  }
+  .flow-connector__arrow{ right:auto; left:50%; bottom:-2px; top:auto; transform:translateX(-50%) rotate(90deg); }
 }
 
 @media (max-width:640px){
@@ -462,4 +479,9 @@
   .audit-why__icon{ margin:0 auto; }
   .automations__grid,.proof-cases__grid,.pricing__grid,.audit-steps,.value-props__grid{ gap:26px; }
   .audit-step__rule{ display:none; }
+  /* les 5 onglets ne tiennent pas sur un tout petit écran sans devenir
+     illisibles : on les laisse défiler horizontalement plutôt que de les
+     écraser ou de casser la mise en page (cf. min-width:0 ci-dessus). */
+  .workflow-tabs{ overflow-x:auto; -webkit-overflow-scrolling:touch; }
+  .workflow-tabs__btn{ flex:0 0 auto; white-space:nowrap; }
 }

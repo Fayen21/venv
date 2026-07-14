@@ -416,7 +416,11 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
     gap:36px;
   }
   .site-footer__identity{ max-width:420px; margin:0 auto; text-align:center; }
-  .site-footer__logo{ margin-left:auto; margin-right:auto; }
+  /* .site-footer__logo est un simple <div> déjà pleine largeur : ces marges
+     auto n'avaient aucun effet. L'image, elle, est en display:block — sur
+     laquelle text-align:center (hérité) ne s'applique pas non plus — d'où le
+     logo resté collé à gauche malgré le reste du bloc centré. */
+  .site-footer__logo img{ margin-left:auto; margin-right:auto; }
   .site-footer__desc{ margin-left:auto; margin-right:auto; }
   .site-footer__nav{ grid-template-columns:repeat(2,1fr); gap:32px 24px; }
   .site-footer__bottom{ justify-content:center; text-align:center; }

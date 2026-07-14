@@ -379,19 +379,38 @@
 			{ tilt: 0.2, rot: 2.4, sp: 0.013, n: 6, col: '150,205,255', ph: 2 }
 		];
 		var t = 0;
+		// engage : 0..1, s'anime en douceur vers 1 quand le curseur cible l'astre
+		// central (et seulement lui, pas l'ensemble des anneaux), vers 0 sinon —
+		// jamais de saut instantané, d'où l'accélération/ralentissement progressifs.
+		var engage = 0;
+		var mx = -9999, my = -9999;
+		wrap.addEventListener('pointermove', function (e) {
+			var rect = wrap.getBoundingClientRect();
+			mx = e.clientX - rect.left;
+			my = e.clientY - rect.top;
+		});
+		wrap.addEventListener('pointerleave', function () { mx = my = -9999; });
 		loop(function () {
 			t++;
 			ctx.clearRect(0, 0, st.w, st.h);
-			var cx = st.w * 0.72, cy = st.h * 0.47, R = Math.min(st.w, st.h) * 0.4, items = [];
+			var cx = st.w * 0.72, cy = st.h * 0.47, baseR = Math.min(st.w, st.h) * 0.4;
+			var coreHitR = Math.max(46, baseR * 0.16);
+			var targeting = Math.hypot(mx - cx, my - cy) < coreHitR ? 1 : 0;
+			engage += (targeting - engage) * 0.045;
+			var R = baseR * (1 + engage * 0.22);
+			var speedMul = 1 + engage * 3.0;
+			var spacingBoost = engage * 0.06;
+			var speedNorm = engage;
+			var items = [];
 			for (var ri = 0; ri < rings.length; ri++) {
 				var ring = rings[ri];
-				var rr = R * (0.7 + ring.ph * 0.16);
+				var rr = R * (0.7 + ring.ph * (0.16 + spacingBoost));
 				for (var s = 0; s <= 64; s++) {
 					var a = s / 64 * Math.PI * 2 + ring.rot;
 					items.push({ type: 'seg', ring: ring, x: cx + Math.cos(a) * rr, y: cy + Math.sin(a) * rr * ring.tilt, z: Math.sin(a) });
 				}
 				for (var i = 0; i < ring.n; i++) {
-					var a = t * ring.sp + i / ring.n * Math.PI * 2 + ring.rot;
+					var a = t * ring.sp * speedMul + i / ring.n * Math.PI * 2 + ring.rot;
 					items.push({ type: 'dot', ring: ring, x: cx + Math.cos(a) * rr, y: cy + Math.sin(a) * rr * ring.tilt, z: Math.sin(a) });
 				}
 			}
@@ -400,30 +419,31 @@
 				var it = items[i];
 				var depth = (it.z + 1) / 2;
 				if (it.type === 'seg') {
-					ctx.fillStyle = 'rgba(' + it.ring.col + ',' + (0.05 + depth * 0.18) + ')';
+					ctx.fillStyle = 'rgba(' + it.ring.col + ',' + Math.min(1, (0.05 + depth * 0.18) * (1 + speedNorm * 0.5)) + ')';
 					ctx.fillRect(it.x, it.y, 1.4, 1.4);
 				} else {
 					var s = 1.5 + depth * 3.5;
 					var g = ctx.createRadialGradient(it.x, it.y, 0, it.x, it.y, s * 3);
-					g.addColorStop(0, 'rgba(' + it.ring.col + ',' + (0.35 + depth * 0.6) + ')');
+					g.addColorStop(0, 'rgba(' + it.ring.col + ',' + Math.min(1, (0.35 + depth * 0.6) * (1 + speedNorm * 0.5)) + ')');
 					g.addColorStop(1, 'rgba(' + it.ring.col + ',0)');
 					ctx.fillStyle = g;
 					ctx.beginPath();
 					ctx.arc(it.x, it.y, s * 3, 0, 7);
 					ctx.fill();
-					ctx.fillStyle = 'rgba(230,242,255,' + (0.5 + depth * 0.5) + ')';
+					ctx.fillStyle = 'rgba(230,242,255,' + Math.min(1, (0.5 + depth * 0.5) * (1 + speedNorm * 0.4)) + ')';
 					ctx.beginPath();
 					ctx.arc(it.x, it.y, s, 0, 7);
 					ctx.fill();
 				}
 			}
-			var core = ctx.createRadialGradient(cx, cy, 0, cx, cy, 40);
-			core.addColorStop(0, 'rgba(200,230,255,.95)');
-			core.addColorStop(0.4, 'rgba(46,155,255,.55)');
+			var coreR = 40 * (1 + engage * 0.2);
+			var core = ctx.createRadialGradient(cx, cy, 0, cx, cy, coreR);
+			core.addColorStop(0, 'rgba(200,230,255,' + Math.min(1, 0.95 * (1 + speedNorm * 0.3)) + ')');
+			core.addColorStop(0.4, 'rgba(46,155,255,' + Math.min(1, 0.55 * (1 + speedNorm * 0.4)) + ')');
 			core.addColorStop(1, 'rgba(46,155,255,0)');
 			ctx.fillStyle = core;
 			ctx.beginPath();
-			ctx.arc(cx, cy, 40, 0, 7);
+			ctx.arc(cx, cy, coreR, 0, 7);
 			ctx.fill();
 		});
 	};
