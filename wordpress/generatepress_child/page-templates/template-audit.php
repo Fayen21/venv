@@ -95,11 +95,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 
         <div class="audit-success__tiles">
           <a href="tel:+33695204127" class="audit-success__tile">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0C1E3C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l1.5 4.5-2 1.5a11 11 0 0 0 5.5 5.5l1.5-2 4.5 1.5v4a2 2 0 0 1-2 2c-8 0-14-6-14-14a2 2 0 0 1 2-2z"></path></svg>
+            <?php echo eb_contact_icon( 'phone-alt', 22, '1.6' ); ?>
             <span>06 95 20 41 27</span>
           </a>
           <a href="mailto:contact@eb-automatisation.fr" class="audit-success__tile">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0C1E3C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M4 6.5l8 6 8-6"></path></svg>
+            <?php echo eb_contact_icon( 'email', 22, '1.6' ); ?>
             <span>Écrire un email</span>
           </a>
         </div>

@@ -109,7 +109,7 @@ if ( ! defined( 'ABSPATH' ) ) {
         <div class="tool-chip"><?php echo eb_tool_icon_html('cegid'); ?><span class="tool-chip__label">Cegid</span></div>
         <div class="tool-chip"><?php echo eb_tool_icon_html('quadra'); ?><span class="tool-chip__label">Quadra</span></div>
         <div class="tool-chip"><?php echo eb_tool_icon_html('qonto'); ?><span class="tool-chip__label">Qonto</span></div>
-        <a href="<?php echo esc_url( eb_url('automatisation-excel') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('excel'); ?><span class="tool-chip__label">Excel</span><span class="tool-chip__chevron" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></span></a>
+        <a href="<?php echo esc_url( eb_url('automatisation-excel') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('excel'); ?><span class="tool-chip__label">Excel</span><?php echo eb_tool_chevron(); ?></a>
       </div>
     </div>
 

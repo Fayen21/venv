@@ -21,6 +21,9 @@
 .trust-strip__item{ display:flex; align-items:center; gap:14px; padding:22px 26px; border-right:1px solid var(--border); }
 .trust-strip__item:last-child{ border-right:none; }
 .trust-strip__icon{ width:38px; height:38px; flex:none; border-radius:10px; display:flex; align-items:center; justify-content:center; }
+.trust-strip__icon--orange{ background:var(--orange-soft-bg); color:var(--orange); }
+.trust-strip__icon--green{ background:var(--green-bg); color:var(--green); }
+.trust-strip__icon--neutral{ background:#EEF1F7; color:var(--navy); }
 .trust-strip__title{ font-family:var(--font-heading); font-weight:600; font-size:15px; color:var(--navy); }
 .trust-strip__desc{ font-size:13px; color:var(--muted); }
 
@@ -48,14 +51,28 @@
 .solution-row__mock-titlebar{ display:flex; align-items:center; justify-content:space-between; padding:13px 16px; border-bottom:1px solid var(--navy-panel-border); }
 .solution-row__mock-dots{ display:flex; align-items:center; gap:7px; flex:none; }
 .solution-row__mock-dots span{ width:9px; height:9px; border-radius:50%; display:block; }
+/* feu tricolore façon macOS : couleurs pilotées par les tokens --dot-* déjà
+   définis dans tokens.css (identiques à .mockup__dots), plutôt que par des
+   hex répétés en style="" inline sur chaque puce. */
+.solution-row__mock-dots span:nth-child(1){ background:var(--dot-red); }
+.solution-row__mock-dots span:nth-child(2){ background:var(--dot-yellow); }
+.solution-row__mock-dots span:nth-child(3){ background:var(--dot-green); }
 .solution-row__mock-file{ font-family:var(--font-mono); font-size:11.5px; color:var(--muted-on-navy-3); flex:1; min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; margin:0 12px; }
 .solution-row__mock-live{ display:inline-flex; align-items:center; gap:6px; font-family:var(--font-mono); font-size:10px; color:var(--green-bright); flex:none; }
 .solution-row__mock-live-dot{ width:6px; height:6px; border-radius:50%; background:var(--green-bright); animation:ebblink 1.6s ease-in-out infinite; }
 .solution-row__mock-body{ padding:6px 18px 14px; }
 .solution-row__mock-row{ display:flex; align-items:center; gap:12px; padding:13px 0; border-top:1px solid var(--navy-panel-border); }
 .solution-row__mock-dot{ width:9px; height:9px; border-radius:50%; flex:none; }
+/* états de la puce de statut — mêmes teintes que les valeurs .solution-row__mock-val
+   ci-dessous, pilotées par token plutôt que par un hex répété en style="" inline. */
+.solution-row__mock-dot--neutral{ background:var(--muted-on-navy-2); }
+.solution-row__mock-dot--info{ background:var(--blue-2); }
+.solution-row__mock-dot--success{ background:var(--green-bright); }
 .solution-row__mock-label{ flex:1; font-size:13.5px; color:var(--mono-on-navy); }
 .solution-row__mock-val{ font-family:var(--font-mono); font-size:11px; font-weight:500; padding:4px 10px; border-radius:20px; white-space:nowrap; }
+.solution-row__mock-val--neutral{ color:var(--mono-on-navy); background:rgba(255,255,255,.05); }
+.solution-row__mock-val--info{ color:var(--blue-3); background:rgba(46,155,255,.16); }
+.solution-row__mock-val--success{ color:var(--green-bright); background:rgba(91,203,139,.12); }
 
 /* ============ méthode (réutilise .grid .grid-4 pour le collapse) ============ */
 .method-step__num{ width:42px; height:42px; border-radius:11px; border:1px solid var(--border-4); background:#fff; color:var(--navy); display:flex; align-items:center; justify-content:center; font-family:var(--font-heading); font-weight:700; font-size:16px; }

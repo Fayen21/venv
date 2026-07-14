@@ -112,7 +112,7 @@ if ( ! defined( 'ABSPATH' ) ) {
         <span class="pillar-flow__arrow">→</span>
         <div class="pillar-flow__step"><span class="pillar-flow__icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="19" x2="5" y2="12"></line><line x1="12" y1="19" x2="12" y2="7"></line><line x1="19" y1="19" x2="19" y2="14"></line></svg></span><span class="pillar-flow__step-label">Fichier Excel mis à jour</span></div>
         <span class="pillar-flow__arrow">→</span>
-        <div class="pillar-flow__step"><span class="pillar-flow__icon">✓</span><span class="pillar-flow__step-label">Prêt à l'analyse</span></div>
+        <div class="pillar-flow__step"><span class="pillar-flow__icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M8.5 12.5l2.3 2.3 4.7-4.8"></path></svg></span><span class="pillar-flow__step-label">Prêt à l'analyse</span></div>
       </div>
     </div>
 

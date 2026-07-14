@@ -158,15 +158,15 @@ if ( ! defined( 'ABSPATH' ) ) {
   <section class="section" style="padding:0 40px 10px;">
     <div class="trust-strip">
       <div class="trust-strip__item">
-        <span class="trust-strip__icon" style="background:var(--orange-soft-bg);color:var(--orange);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="3"></circle><circle cx="12" cy="12" r="7.2"></circle><path d="M12 3v2.4M12 18.6V21M21 12h-2.4M5.4 12H3M18.4 5.6l-1.7 1.7M7.3 16.7l-1.7 1.7M18.4 18.4l-1.7-1.7M7.3 7.3L5.6 5.6"></path></svg></span>
+        <span class="trust-strip__icon trust-strip__icon--orange"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="3"></circle><circle cx="12" cy="12" r="7.2"></circle><path d="M12 3v2.4M12 18.6V21M21 12h-2.4M5.4 12H3M18.4 5.6l-1.7 1.7M7.3 16.7l-1.7 1.7M18.4 18.4l-1.7-1.7M7.3 7.3L5.6 5.6"></path></svg></span>
         <div><div class="trust-strip__title">Sur vos outils existants</div><div class="trust-strip__desc">Aucun logiciel à remplacer.</div></div>
       </div>
       <div class="trust-strip__item">
-        <span class="trust-strip__icon" style="background:var(--green-bg);color:var(--green);"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"></circle><path d="M8.5 12.3l2.3 2.3 4.7-5"></path></svg></span>
+        <span class="trust-strip__icon trust-strip__icon--green"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"></circle><path d="M8.5 12.3l2.3 2.3 4.7-5"></path></svg></span>
         <div><div class="trust-strip__title">Sans engagement</div><div class="trust-strip__desc">L'audit est gratuit, vous décidez ensuite.</div></div>
       </div>
       <div class="trust-strip__item">
-        <span class="trust-strip__icon" style="background:#EEF1F7;color:var(--navy);"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="9" rx="2"></rect><path d="M8 11V7a4 4 0 0 1 8 0v4"></path></svg></span>
+        <span class="trust-strip__icon trust-strip__icon--neutral"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="9" rx="2"></rect><path d="M8 11V7a4 4 0 0 1 8 0v4"></path></svg></span>
         <div><div class="trust-strip__title">Vous restez propriétaire</div><div class="trust-strip__desc">Tout est documenté et conforme RGPD.</div></div>
       </div>
     </div>
@@ -201,14 +201,14 @@ if ( ! defined( 'ABSPATH' ) ) {
       </div>
       <div class="solution-row__mock">
         <div class="solution-row__mock-titlebar">
-          <div class="solution-row__mock-dots"><span style="background:#FF5F57;"></span><span style="background:#FEBC2E;"></span><span style="background:#28C840;"></span></div>
+          <div class="solution-row__mock-dots"><span></span><span></span><span></span></div>
           <span class="solution-row__mock-file">classement_auto · n8n</span>
           <span class="solution-row__mock-live"><span class="solution-row__mock-live-dot"></span>actif</span>
         </div>
         <div class="solution-row__mock-body">
-          <div class="solution-row__mock-row"><span class="solution-row__mock-dot" style="background:#5e6f8c;"></span><span class="solution-row__mock-label">Email + pièce jointe reçus</span><span class="solution-row__mock-val" style="color:#C7D2E4;background:rgba(255,255,255,.05);">détecté</span></div>
-          <div class="solution-row__mock-row"><span class="solution-row__mock-dot" style="background:#3BA5FF;"></span><span class="solution-row__mock-label">Données extraites du PDF</span><span class="solution-row__mock-val" style="color:#5BB6FF;background:rgba(46,155,255,.16);">12 champs</span></div>
-          <div class="solution-row__mock-row"><span class="solution-row__mock-dot" style="background:#5BCB8B;"></span><span class="solution-row__mock-label">Document renommé &amp; classé</span><span class="solution-row__mock-val" style="color:#5BCB8B;background:rgba(91,203,139,.12);">dossier ✓</span></div>
+          <div class="solution-row__mock-row"><span class="solution-row__mock-dot solution-row__mock-dot--neutral"></span><span class="solution-row__mock-label">Email + pièce jointe reçus</span><span class="solution-row__mock-val solution-row__mock-val--neutral">détecté</span></div>
+          <div class="solution-row__mock-row"><span class="solution-row__mock-dot solution-row__mock-dot--info"></span><span class="solution-row__mock-label">Données extraites du PDF</span><span class="solution-row__mock-val solution-row__mock-val--info">12 champs</span></div>
+          <div class="solution-row__mock-row"><span class="solution-row__mock-dot solution-row__mock-dot--success"></span><span class="solution-row__mock-label">Document renommé &amp; classé</span><span class="solution-row__mock-val solution-row__mock-val--success">dossier ✓</span></div>
         </div>
       </div>
     </div>
@@ -239,14 +239,14 @@ if ( ! defined( 'ABSPATH' ) ) {
       </div>
       <div class="solution-row__mock">
         <div class="solution-row__mock-titlebar">
-          <div class="solution-row__mock-dots"><span style="background:#FF5F57;"></span><span style="background:#FEBC2E;"></span><span style="background:#28C840;"></span></div>
+          <div class="solution-row__mock-dots"><span></span><span></span><span></span></div>
           <span class="solution-row__mock-file">rapprochement · Make</span>
           <span class="solution-row__mock-live"><span class="solution-row__mock-live-dot"></span>actif</span>
         </div>
         <div class="solution-row__mock-body">
-          <div class="solution-row__mock-row"><span class="solution-row__mock-dot" style="background:#5e6f8c;"></span><span class="solution-row__mock-label">Opérations Qonto importées</span><span class="solution-row__mock-val" style="color:#C7D2E4;background:rgba(255,255,255,.05);">48 lignes</span></div>
-          <div class="solution-row__mock-row"><span class="solution-row__mock-dot" style="background:#5BCB8B;"></span><span class="solution-row__mock-label">Pointage automatique</span><span class="solution-row__mock-val" style="color:#5BCB8B;background:rgba(91,203,139,.12);">46 ✓</span></div>
-          <div class="solution-row__mock-row"><span class="solution-row__mock-dot" style="background:#3BA5FF;"></span><span class="solution-row__mock-label">Écart détecté &amp; signalé</span><span class="solution-row__mock-val" style="color:#5BB6FF;background:rgba(46,155,255,.16);">1 ⚑</span></div>
+          <div class="solution-row__mock-row"><span class="solution-row__mock-dot solution-row__mock-dot--neutral"></span><span class="solution-row__mock-label">Opérations Qonto importées</span><span class="solution-row__mock-val solution-row__mock-val--neutral">48 lignes</span></div>
+          <div class="solution-row__mock-row"><span class="solution-row__mock-dot solution-row__mock-dot--success"></span><span class="solution-row__mock-label">Pointage automatique</span><span class="solution-row__mock-val solution-row__mock-val--success">46 ✓</span></div>
+          <div class="solution-row__mock-row"><span class="solution-row__mock-dot solution-row__mock-dot--info"></span><span class="solution-row__mock-label">Écart détecté &amp; signalé</span><span class="solution-row__mock-val solution-row__mock-val--info">1 ⚑</span></div>
         </div>
       </div>
     </div>
@@ -277,14 +277,14 @@ if ( ! defined( 'ABSPATH' ) ) {
       </div>
       <div class="solution-row__mock">
         <div class="solution-row__mock-titlebar">
-          <div class="solution-row__mock-dots"><span style="background:#FF5F57;"></span><span style="background:#FEBC2E;"></span><span style="background:#28C840;"></span></div>
+          <div class="solution-row__mock-dots"><span></span><span></span><span></span></div>
           <span class="solution-row__mock-file">onboarding_rh · Make</span>
           <span class="solution-row__mock-live"><span class="solution-row__mock-live-dot"></span>actif</span>
         </div>
         <div class="solution-row__mock-body">
-          <div class="solution-row__mock-row"><span class="solution-row__mock-dot" style="background:#5e6f8c;"></span><span class="solution-row__mock-label">Embauche validée</span><span class="solution-row__mock-val" style="color:#C7D2E4;background:rgba(255,255,255,.05);">OK</span></div>
-          <div class="solution-row__mock-row"><span class="solution-row__mock-dot" style="background:#3BA5FF;"></span><span class="solution-row__mock-label">Contrat généré par l'IA</span><span class="solution-row__mock-val" style="color:#5BB6FF;background:rgba(46,155,255,.16);">PDF</span></div>
-          <div class="solution-row__mock-row"><span class="solution-row__mock-dot" style="background:#5BCB8B;"></span><span class="solution-row__mock-label">Accès &amp; dossier créés</span><span class="solution-row__mock-val" style="color:#5BCB8B;background:rgba(91,203,139,.12);">prêt ✓</span></div>
+          <div class="solution-row__mock-row"><span class="solution-row__mock-dot solution-row__mock-dot--neutral"></span><span class="solution-row__mock-label">Embauche validée</span><span class="solution-row__mock-val solution-row__mock-val--neutral">OK</span></div>
+          <div class="solution-row__mock-row"><span class="solution-row__mock-dot solution-row__mock-dot--info"></span><span class="solution-row__mock-label">Contrat généré par l'IA</span><span class="solution-row__mock-val solution-row__mock-val--info">PDF</span></div>
+          <div class="solution-row__mock-row"><span class="solution-row__mock-dot solution-row__mock-dot--success"></span><span class="solution-row__mock-label">Accès &amp; dossier créés</span><span class="solution-row__mock-val solution-row__mock-val--success">prêt ✓</span></div>
         </div>
       </div>
     </div>
@@ -315,14 +315,14 @@ if ( ! defined( 'ABSPATH' ) ) {
       </div>
       <div class="solution-row__mock">
         <div class="solution-row__mock-titlebar">
-          <div class="solution-row__mock-dots"><span style="background:#FF5F57;"></span><span style="background:#FEBC2E;"></span><span style="background:#28C840;"></span></div>
+          <div class="solution-row__mock-dots"><span></span><span></span><span></span></div>
           <span class="solution-row__mock-file">connecteurs · API</span>
           <span class="solution-row__mock-live"><span class="solution-row__mock-live-dot"></span>actif</span>
         </div>
         <div class="solution-row__mock-body">
-          <div class="solution-row__mock-row"><span class="solution-row__mock-dot" style="background:#5BCB8B;"></span><span class="solution-row__mock-label">Qonto ↔ Sage</span><span class="solution-row__mock-val" style="color:#5BCB8B;background:rgba(91,203,139,.12);">synchronisé</span></div>
-          <div class="solution-row__mock-row"><span class="solution-row__mock-dot" style="background:#5BCB8B;"></span><span class="solution-row__mock-label">Outlook ↔ Notion</span><span class="solution-row__mock-val" style="color:#5BCB8B;background:rgba(91,203,139,.12);">synchronisé</span></div>
-          <div class="solution-row__mock-row"><span class="solution-row__mock-dot" style="background:#5BCB8B;"></span><span class="solution-row__mock-label">Tableau de bord consolidé</span><span class="solution-row__mock-val" style="color:#5BCB8B;background:rgba(91,203,139,.12);">à jour ✓</span></div>
+          <div class="solution-row__mock-row"><span class="solution-row__mock-dot solution-row__mock-dot--success"></span><span class="solution-row__mock-label">Qonto ↔ Sage</span><span class="solution-row__mock-val solution-row__mock-val--success">synchronisé</span></div>
+          <div class="solution-row__mock-row"><span class="solution-row__mock-dot solution-row__mock-dot--success"></span><span class="solution-row__mock-label">Outlook ↔ Notion</span><span class="solution-row__mock-val solution-row__mock-val--success">synchronisé</span></div>
+          <div class="solution-row__mock-row"><span class="solution-row__mock-dot solution-row__mock-dot--success"></span><span class="solution-row__mock-label">Tableau de bord consolidé</span><span class="solution-row__mock-val solution-row__mock-val--success">à jour ✓</span></div>
         </div>
       </div>
     </div>
@@ -353,14 +353,14 @@ if ( ! defined( 'ABSPATH' ) ) {
       </div>
       <div class="solution-row__mock">
         <div class="solution-row__mock-titlebar">
-          <div class="solution-row__mock-dots"><span style="background:#FF5F57;"></span><span style="background:#FEBC2E;"></span><span style="background:#28C840;"></span></div>
+          <div class="solution-row__mock-dots"><span></span><span></span><span></span></div>
           <span class="solution-row__mock-file">assistant_interne · IA</span>
           <span class="solution-row__mock-live"><span class="solution-row__mock-live-dot"></span>actif</span>
         </div>
         <div class="solution-row__mock-body">
-          <div class="solution-row__mock-row"><span class="solution-row__mock-dot" style="background:#5e6f8c;"></span><span class="solution-row__mock-label">Question d'un collaborateur</span><span class="solution-row__mock-val" style="color:#C7D2E4;background:rgba(255,255,255,.05);">« congés ? »</span></div>
-          <div class="solution-row__mock-row"><span class="solution-row__mock-dot" style="background:#3BA5FF;"></span><span class="solution-row__mock-label">Recherche dans vos documents</span><span class="solution-row__mock-val" style="color:#5BB6FF;background:rgba(46,155,255,.16);">3 sources</span></div>
-          <div class="solution-row__mock-row"><span class="solution-row__mock-dot" style="background:#5BCB8B;"></span><span class="solution-row__mock-label">Réponse sourcée renvoyée</span><span class="solution-row__mock-val" style="color:#5BCB8B;background:rgba(91,203,139,.12);">citée ✓</span></div>
+          <div class="solution-row__mock-row"><span class="solution-row__mock-dot solution-row__mock-dot--neutral"></span><span class="solution-row__mock-label">Question d'un collaborateur</span><span class="solution-row__mock-val solution-row__mock-val--neutral">« congés ? »</span></div>
+          <div class="solution-row__mock-row"><span class="solution-row__mock-dot solution-row__mock-dot--info"></span><span class="solution-row__mock-label">Recherche dans vos documents</span><span class="solution-row__mock-val solution-row__mock-val--info">3 sources</span></div>
+          <div class="solution-row__mock-row"><span class="solution-row__mock-dot solution-row__mock-dot--success"></span><span class="solution-row__mock-label">Réponse sourcée renvoyée</span><span class="solution-row__mock-val solution-row__mock-val--success">citée ✓</span></div>
         </div>
       </div>
     </div>
@@ -413,9 +413,9 @@ if ( ! defined( 'ABSPATH' ) ) {
         <p>Vos données circulent entre vos logiciels, sans ressaisie et sans migration. Côté technique, je m'appuie sur des outils éprouvés.</p>
       </div>
       <div class="tool-chip-grid">
-        <a href="<?php echo esc_url( eb_url('automatisation-outlook') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('outlook'); ?><span class="tool-chip__label">Outlook</span><span class="tool-chip__chevron" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></span></a>
-        <a href="<?php echo esc_url( eb_url('automatisation-excel') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('excel'); ?><span class="tool-chip__label">Excel</span><span class="tool-chip__chevron" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></span></a>
-        <a href="<?php echo esc_url( eb_url('automatisation-microsoft-365') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('microsoft365'); ?><span class="tool-chip__label">Microsoft 365</span><span class="tool-chip__chevron" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></span></a>
+        <a href="<?php echo esc_url( eb_url('automatisation-outlook') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('outlook'); ?><span class="tool-chip__label">Outlook</span><?php echo eb_tool_chevron(); ?></a>
+        <a href="<?php echo esc_url( eb_url('automatisation-excel') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('excel'); ?><span class="tool-chip__label">Excel</span><?php echo eb_tool_chevron(); ?></a>
+        <a href="<?php echo esc_url( eb_url('automatisation-microsoft-365') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('microsoft365'); ?><span class="tool-chip__label">Microsoft 365</span><?php echo eb_tool_chevron(); ?></a>
         <div class="tool-chip"><?php echo eb_tool_icon_html('google-workspace'); ?><span class="tool-chip__label">Google Workspace</span></div>
         <div class="tool-chip"><?php echo eb_tool_icon_html('sage'); ?><span class="tool-chip__label">Sage</span></div>
         <div class="tool-chip"><?php echo eb_tool_icon_html('qonto'); ?><span class="tool-chip__label">Qonto</span></div>
@@ -423,8 +423,8 @@ if ( ! defined( 'ABSPATH' ) ) {
         <div class="tool-chip"><?php echo eb_tool_icon_html('notion'); ?><span class="tool-chip__label">Notion</span></div>
         <div class="tool-chip"><?php echo eb_tool_icon_html('hubspot'); ?><span class="tool-chip__label">HubSpot</span></div>
         <div class="tool-chip"><?php echo eb_tool_icon_html('pipedrive'); ?><span class="tool-chip__label">Pipedrive</span></div>
-        <a href="<?php echo esc_url( eb_url('consultant-make') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('make'); ?><span class="tool-chip__label">Make</span><span class="tool-chip__chevron" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></span></a>
-        <a href="<?php echo esc_url( eb_url('consultant-n8n') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('n8n'); ?><span class="tool-chip__label">n8n</span><span class="tool-chip__chevron" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></span></a>
+        <a href="<?php echo esc_url( eb_url('consultant-make') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('make'); ?><span class="tool-chip__label">Make</span><?php echo eb_tool_chevron(); ?></a>
+        <a href="<?php echo esc_url( eb_url('consultant-n8n') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('n8n'); ?><span class="tool-chip__label">n8n</span><?php echo eb_tool_chevron(); ?></a>
         <div class="tool-chip"><?php echo eb_tool_icon_html('ogust'); ?><span class="tool-chip__label">Ogust</span></div>
       </div>
     </div>

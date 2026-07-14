@@ -89,14 +89,14 @@ if ( ! defined( 'ABSPATH' ) ) {
         <div class="case-study__side case-study__side--terminal">
           <div class="case-study__mock">
             <div class="case-study__mock-titlebar">
-              <div class="case-study__mock-dots"><span style="background:#FF5F57;"></span><span style="background:#FEBC2E;"></span><span style="background:#28C840;"></span></div>
+              <div class="case-study__mock-dots"><span></span><span></span><span></span></div>
               <span class="case-study__mock-file">rapprochement · Make</span>
               <span class="case-study__mock-live"><span class="case-study__mock-live-dot"></span>actif</span>
             </div>
             <div class="case-study__mock-body">
-              <div class="case-study__mock-row"><span class="case-study__mock-dot" style="background:#5e6f8c;"></span><span class="case-study__mock-label">Opérations Qonto importées</span><span class="case-study__mock-val" style="color:#C7D2E4;background:rgba(255,255,255,.05);">48 lignes</span></div>
-              <div class="case-study__mock-row"><span class="case-study__mock-dot" style="background:#5BCB8B;"></span><span class="case-study__mock-label">Pointage automatique ↔ Sage</span><span class="case-study__mock-val" style="color:#5BCB8B;background:rgba(91,203,139,.12);">46 ✓</span></div>
-              <div class="case-study__mock-row"><span class="case-study__mock-dot" style="background:#3BA5FF;"></span><span class="case-study__mock-label">Anomalie détectée &amp; signalée</span><span class="case-study__mock-val" style="color:#5BB6FF;background:rgba(46,155,255,.16);">1 ⚑</span></div>
+              <div class="case-study__mock-row"><span class="case-study__mock-dot case-study__mock-dot--neutral"></span><span class="case-study__mock-label">Opérations Qonto importées</span><span class="case-study__mock-val case-study__mock-val--neutral">48 lignes</span></div>
+              <div class="case-study__mock-row"><span class="case-study__mock-dot case-study__mock-dot--success"></span><span class="case-study__mock-label">Pointage automatique ↔ Sage</span><span class="case-study__mock-val case-study__mock-val--success">46 ✓</span></div>
+              <div class="case-study__mock-row"><span class="case-study__mock-dot case-study__mock-dot--info"></span><span class="case-study__mock-label">Anomalie détectée &amp; signalée</span><span class="case-study__mock-val case-study__mock-val--info">1 ⚑</span></div>
             </div>
           </div>
           <div class="case-study__big-stat">
@@ -132,14 +132,14 @@ if ( ! defined( 'ABSPATH' ) ) {
         <div class="case-study__side case-study__side--terminal">
           <div class="case-study__mock">
             <div class="case-study__mock-titlebar">
-              <div class="case-study__mock-dots"><span style="background:#FF5F57;"></span><span style="background:#FEBC2E;"></span><span style="background:#28C840;"></span></div>
+              <div class="case-study__mock-dots"><span></span><span></span><span></span></div>
               <span class="case-study__mock-file">tri_emails · n8n + IA</span>
               <span class="case-study__mock-live"><span class="case-study__mock-live-dot"></span>actif</span>
             </div>
             <div class="case-study__mock-body">
-              <div class="case-study__mock-row"><span class="case-study__mock-dot" style="background:#5e6f8c;"></span><span class="case-study__mock-label">Email + pièce jointe reçus</span><span class="case-study__mock-val" style="color:#C7D2E4;background:rgba(255,255,255,.05);">détecté</span></div>
-              <div class="case-study__mock-row"><span class="case-study__mock-dot" style="background:#3BA5FF;"></span><span class="case-study__mock-label">Lu &amp; extrait par l'IA</span><span class="case-study__mock-val" style="color:#5BB6FF;background:rgba(46,155,255,.16);">8 champs</span></div>
-              <div class="case-study__mock-row"><span class="case-study__mock-dot" style="background:#5BCB8B;"></span><span class="case-study__mock-label">Classé &amp; tâche créée</span><span class="case-study__mock-val" style="color:#5BCB8B;background:rgba(91,203,139,.12);">dossier ✓</span></div>
+              <div class="case-study__mock-row"><span class="case-study__mock-dot case-study__mock-dot--neutral"></span><span class="case-study__mock-label">Email + pièce jointe reçus</span><span class="case-study__mock-val case-study__mock-val--neutral">détecté</span></div>
+              <div class="case-study__mock-row"><span class="case-study__mock-dot case-study__mock-dot--info"></span><span class="case-study__mock-label">Lu &amp; extrait par l'IA</span><span class="case-study__mock-val case-study__mock-val--info">8 champs</span></div>
+              <div class="case-study__mock-row"><span class="case-study__mock-dot case-study__mock-dot--success"></span><span class="case-study__mock-label">Classé &amp; tâche créée</span><span class="case-study__mock-val case-study__mock-val--success">dossier ✓</span></div>
             </div>
           </div>
           <div class="case-study__big-stat">
@@ -175,14 +175,14 @@ if ( ! defined( 'ABSPATH' ) ) {
         <div class="case-study__side case-study__side--terminal">
           <div class="case-study__mock">
             <div class="case-study__mock-titlebar">
-              <div class="case-study__mock-dots"><span style="background:#FF5F57;"></span><span style="background:#FEBC2E;"></span><span style="background:#28C840;"></span></div>
+              <div class="case-study__mock-dots"><span></span><span></span><span></span></div>
               <span class="case-study__mock-file">suivi_devis · Make + CRM</span>
               <span class="case-study__mock-live"><span class="case-study__mock-live-dot"></span>actif</span>
             </div>
             <div class="case-study__mock-body">
-              <div class="case-study__mock-row"><span class="case-study__mock-dot" style="background:#5e6f8c;"></span><span class="case-study__mock-label">Devis généré depuis le CRM</span><span class="case-study__mock-val" style="color:#C7D2E4;background:rgba(255,255,255,.05);">2 min</span></div>
-              <div class="case-study__mock-row"><span class="case-study__mock-dot" style="background:#5BCB8B;"></span><span class="case-study__mock-label">Envoyé au client</span><span class="case-study__mock-val" style="color:#5BCB8B;background:rgba(91,203,139,.12);">tracé</span></div>
-              <div class="case-study__mock-row"><span class="case-study__mock-dot" style="background:#3BA5FF;"></span><span class="case-study__mock-label">Relance automatique J+7</span><span class="case-study__mock-val" style="color:#5BB6FF;background:rgba(46,155,255,.16);">programmée</span></div>
+              <div class="case-study__mock-row"><span class="case-study__mock-dot case-study__mock-dot--neutral"></span><span class="case-study__mock-label">Devis généré depuis le CRM</span><span class="case-study__mock-val case-study__mock-val--neutral">2 min</span></div>
+              <div class="case-study__mock-row"><span class="case-study__mock-dot case-study__mock-dot--success"></span><span class="case-study__mock-label">Envoyé au client</span><span class="case-study__mock-val case-study__mock-val--success">tracé</span></div>
+              <div class="case-study__mock-row"><span class="case-study__mock-dot case-study__mock-dot--info"></span><span class="case-study__mock-label">Relance automatique J+7</span><span class="case-study__mock-val case-study__mock-val--info">programmée</span></div>
             </div>
           </div>
           <div class="case-study__big-stat">
@@ -290,14 +290,14 @@ if ( ! defined( 'ABSPATH' ) ) {
         <p>Je sélectionne les technologies les plus adaptées à vos besoins et à vos logiciels existants.</p>
       </div>
       <div class="tech-band__grid tool-chip-grid">
-        <a href="<?php echo esc_url( eb_url('consultant-make') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('make'); ?><span class="tool-chip__label">Make</span><span class="tool-chip__chevron" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></span></a>
-        <a href="<?php echo esc_url( eb_url('consultant-n8n') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('n8n'); ?><span class="tool-chip__label">n8n</span><span class="tool-chip__chevron" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></span></a>
+        <a href="<?php echo esc_url( eb_url('consultant-make') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('make'); ?><span class="tool-chip__label">Make</span><?php echo eb_tool_chevron(); ?></a>
+        <a href="<?php echo esc_url( eb_url('consultant-n8n') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('n8n'); ?><span class="tool-chip__label">n8n</span><?php echo eb_tool_chevron(); ?></a>
         <div class="tool-chip"><?php echo eb_tool_icon_html('python'); ?><span class="tool-chip__label">Python</span></div>
         <div class="tool-chip"><?php echo eb_tool_icon_html('qonto'); ?><span class="tool-chip__label">Qonto</span></div>
-        <a href="<?php echo esc_url( eb_url('automatisation-microsoft-365') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('microsoft365'); ?><span class="tool-chip__label">Microsoft 365</span><span class="tool-chip__chevron" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></span></a>
-        <a href="<?php echo esc_url( eb_url('automatisation-outlook') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('outlook'); ?><span class="tool-chip__label">Outlook</span><span class="tool-chip__chevron" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></span></a>
+        <a href="<?php echo esc_url( eb_url('automatisation-microsoft-365') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('microsoft365'); ?><span class="tool-chip__label">Microsoft 365</span><?php echo eb_tool_chevron(); ?></a>
+        <a href="<?php echo esc_url( eb_url('automatisation-outlook') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('outlook'); ?><span class="tool-chip__label">Outlook</span><?php echo eb_tool_chevron(); ?></a>
         <div class="tool-chip"><?php echo eb_tool_icon_html('sage'); ?><span class="tool-chip__label">Sage</span></div>
-        <a href="<?php echo esc_url( eb_url('automatisation-excel') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('excel'); ?><span class="tool-chip__label">Excel</span><span class="tool-chip__chevron" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></span></a>
+        <a href="<?php echo esc_url( eb_url('automatisation-excel') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('excel'); ?><span class="tool-chip__label">Excel</span><?php echo eb_tool_chevron(); ?></a>
         <div class="tool-chip"><?php echo eb_tool_icon_html('notion'); ?><span class="tool-chip__label">Notion</span></div>
         <div class="tool-chip"><?php echo eb_tool_icon_html('hubspot'); ?><span class="tool-chip__label">HubSpot</span></div>
         <div class="tool-chip"><?php echo eb_tool_icon_html('pipedrive'); ?><span class="tool-chip__label">Pipedrive</span></div>

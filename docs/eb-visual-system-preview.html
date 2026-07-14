@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>EB Automatisation — Système visuel (prévisualisation privée)</title>
+<style>
+  :root{
+    --navy:#0C1E3C; --navy-panel:#0A1A33; --navy-panel-border:#16294a;
+    --orange:#DD7A33; --orange-soft-bg:#FBEEE3;
+    --blue:#2E9BFF; --blue-2:#3BA5FF; --blue-3:#5BB6FF; --blue-deep:#1E5FD0;
+    --green:#1E8E5A; --green-bright:#5BCB8B; --green-bg:#E7F4EC;
+    --text-3:#5A6880; --muted:#697483; --border-2:#E9ECF3; --bg-soft:#F7F9FC;
+    --font-heading:'Schibsted Grotesk', system-ui, sans-serif;
+    --font-body:'Hanken Grotesk', system-ui, sans-serif;
+    --font-mono:'IBM Plex Mono', ui-monospace, monospace;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; font-family:var(--font-body); color:var(--navy); background:#fff;
+    line-height:1.5;
+  }
+  header.page-head{
+    background:var(--navy); color:#fff; padding:40px 32px 32px;
+  }
+  header.page-head h1{ font-family:var(--font-heading); font-size:28px; margin:0 0 8px; }
+  header.page-head p{ margin:0; color:#9DAAC2; font-size:14.5px; max-width:760px; }
+  .banner{
+    background:#3a2410; color:#F2D8BE; font-size:13px; padding:10px 32px;
+    border-bottom:1px solid #5c3a1c;
+  }
+  main{ max-width:1180px; margin:0 auto; padding:0 32px 100px; }
+  section{ padding:48px 0; border-bottom:1px solid var(--border-2); }
+  section:last-child{ border-bottom:none; }
+  h2{ font-family:var(--font-heading); font-size:22px; margin:0 0 6px; }
+  .section-desc{ color:var(--text-3); font-size:14.5px; margin:0 0 28px; max-width:760px; }
+  h3{ font-family:var(--font-heading); font-size:15.5px; margin:28px 0 12px; color:var(--navy); }
+
+  /* logos */
+  .logo-grid{ display:flex; gap:24px; flex-wrap:wrap; }
+  .logo-card{
+    background:var(--bg-soft); border:1px solid var(--border-2); border-radius:14px;
+    padding:28px; display:flex; flex-direction:column; align-items:center; gap:14px; width:220px;
+  }
+  .logo-card img{ max-width:140px; max-height:100px; }
+  .logo-card span{ font-size:12.5px; color:var(--muted); text-align:center; }
+
+  /* palette */
+  .palette-grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); gap:12px; }
+  .swatch{ border-radius:12px; overflow:hidden; border:1px solid var(--border-2); }
+  .swatch__color{ height:64px; }
+  .swatch__label{ padding:9px 12px; font-family:var(--font-mono); font-size:11.5px; background:#fff; }
+  .swatch__label b{ display:block; font-family:var(--font-body); font-size:12.5px; font-weight:600; margin-bottom:2px; }
+
+  /* principles */
+  .principles{ display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:16px; }
+  .principle{ background:var(--bg-soft); border:1px solid var(--border-2); border-radius:14px; padding:18px 20px; font-size:13.5px; color:var(--text-3); }
+  .principle b{ display:block; color:var(--navy); font-size:14px; margin-bottom:4px; font-family:var(--font-heading); }
+
+  /* components */
+  .comp-grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:16px; }
+  .comp-card{ background:var(--navy); border-radius:14px; padding:22px; color:#fff; }
+  .comp-card__demo{ display:flex; align-items:center; justify-content:center; height:70px; }
+  .comp-card__name{ font-family:var(--font-heading); font-weight:600; font-size:14px; margin:12px 0 4px; }
+  .comp-card__desc{ font-size:12.5px; color:#9DAAC2; line-height:1.5; }
+  .php-sample{ background:#0A1A33; color:#C7D2E4; font-family:var(--font-mono); font-size:12.5px; padding:14px 16px; border-radius:10px; overflow-x:auto; }
+  .php-sample .fn{ color:#5BB6FF; }
+  .php-sample .str{ color:#5BCB8B; }
+
+  /* contrast rules */
+  table{ width:100%; border-collapse:collapse; font-size:13.5px; }
+  th, td{ text-align:left; padding:10px 14px; border-bottom:1px solid var(--border-2); }
+  th{ font-family:var(--font-heading); font-size:12.5px; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .pass{ color:#1E8E5A; font-weight:600; }
+  .fail{ color:#C0492B; font-weight:600; }
+  .swatch-inline{ display:inline-block; width:14px; height:14px; border-radius:4px; vertical-align:-2px; margin-right:6px; border:1px solid rgba(0,0,0,.1); }
+
+  /* illustrations */
+  .illus-block{ margin-bottom:44px; border:1px solid var(--border-2); border-radius:16px; overflow:hidden; }
+  .illus-block__head{ display:flex; align-items:center; justify-content:space-between; padding:14px 20px; background:var(--bg-soft); border-bottom:1px solid var(--border-2); flex-wrap:wrap; gap:8px; }
+  .illus-block__head h3{ margin:0; }
+  .illus-block__weight{ font-family:var(--font-mono); font-size:12px; color:var(--muted); }
+  .illus-row{ padding:20px; }
+  .illus-row--light{ background:#fff; }
+  .illus-row--dark{ background:var(--navy); }
+  .illus-row img{ display:block; width:100%; max-width:800px; height:auto; margin:0 auto; }
+  .illus-row-label{ font-size:11.5px; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); margin-bottom:10px; font-weight:600; }
+  .illus-row--dark .illus-row-label{ color:#9DAAC2; }
+  .illus-row--mobile{ background:var(--bg-soft); display:flex; justify-content:center; }
+  .illus-row--mobile .mobile-frame{ width:375px; max-width:100%; }
+  .illus-row--mobile img{ border:1px solid var(--border-2); border-radius:8px; }
+
+  footer{ text-align:center; padding:30px; font-size:12px; color:var(--muted); }
+</style>
+</head>
+<body>
+
+<div class="banner">Page privée de prévisualisation — <code>noindex,nofollow</code>, non liée depuis le site, non chargée par WordPress. Les 6 illustrations montrées ici ne sont pas encore intégrées aux pages publiques.</div>
+
+<header class="page-head">
+  <h1>EB Automatisation — Système visuel</h1>
+  <p>Étape 2 de la premiumisation de l'iconographie : logos officiels, palette, principes visuels, bibliothèque de composants et les 6 illustrations maîtresses SVG créées pour validation. Voir <code>docs/audit-iconographie-eb.md</code> pour l'audit initial et <code>docs/iconographie-phase-2-report.md</code> pour le rapport complet de cette phase.</p>
+</header>
+
+<main>
+
+  <section id="logos">
+    <h2>1. Logos officiels</h2>
+    <p class="section-desc">Fichiers strictement inchangés — référence de l'identité de marque. Jamais redessinés, jamais recolorés.</p>
+    <div class="logo-grid">
+      <div class="logo-card" style="background:var(--navy);">
+        <img src="../wordpress/generatepress_child/assets/images/eb-icon.png" alt="Logo EB — icône carrée">
+        <span style="color:#9DAAC2;">eb-icon.png — favicon &amp; en-tête</span>
+      </div>
+      <div class="logo-card" style="background:var(--navy);">
+        <img src="../wordpress/generatepress_child/assets/images/uploads/156c3b91-a695-438b-b9d7-6828e90ea7ac.png" alt="Logo EB — version horizontale, pied de page">
+        <span style="color:#9DAAC2;">uploads/156c3b91…png — pied de page</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="palette">
+    <h2>2. Palette existante</h2>
+    <p class="section-desc">Tokens déjà définis dans <code>assets/css/tokens.css</code> — aucune couleur nouvelle n'a été introduite pour cette phase.</p>
+    <h3>Bleu nuit &amp; navy</h3>
+    <div class="palette-grid">
+      <div class="swatch"><div class="swatch__color" style="background:#0C1E3C;"></div><div class="swatch__label"><b>--navy</b>#0C1E3C</div></div>
+      <div class="swatch"><div class="swatch__color" style="background:#0A1A33;"></div><div class="swatch__label"><b>--navy-panel</b>#0A1A33</div></div>
+      <div class="swatch"><div class="swatch__color" style="background:#16294a;"></div><div class="swatch__label"><b>--navy-panel-border</b>#16294a</div></div>
+    </div>
+    <h3>Bleu électrique</h3>
+    <div class="palette-grid">
+      <div class="swatch"><div class="swatch__color" style="background:#2E9BFF;"></div><div class="swatch__label"><b>--blue</b>#2E9BFF</div></div>
+      <div class="swatch"><div class="swatch__color" style="background:#3BA5FF;"></div><div class="swatch__label"><b>--blue-2</b>#3BA5FF</div></div>
+      <div class="swatch"><div class="swatch__color" style="background:#5BB6FF;"></div><div class="swatch__label"><b>--blue-3</b>#5BB6FF</div></div>
+      <div class="swatch"><div class="swatch__color" style="background:#1E5FD0;"></div><div class="swatch__label"><b>--blue-deep</b>#1E5FD0</div></div>
+    </div>
+    <h3>Orange (accent secondaire)</h3>
+    <div class="palette-grid">
+      <div class="swatch"><div class="swatch__color" style="background:#DD7A33;"></div><div class="swatch__label"><b>--orange</b>#DD7A33</div></div>
+      <div class="swatch"><div class="swatch__color" style="background:#AC5F28;"></div><div class="swatch__label"><b>--orange-a11y</b>#AC5F28 (texte)</div></div>
+    </div>
+    <h3>Blanc &amp; neutres</h3>
+    <div class="palette-grid">
+      <div class="swatch"><div class="swatch__color" style="background:#fff;border-bottom:1px solid #eee;"></div><div class="swatch__label"><b>#fff</b>blanc</div></div>
+      <div class="swatch"><div class="swatch__color" style="background:#9DAAC2;"></div><div class="swatch__label"><b>--muted-on-navy</b>#9DAAC2</div></div>
+      <div class="swatch"><div class="swatch__color" style="background:#5e6f8c;"></div><div class="swatch__label"><b>--muted-on-navy-2</b>#5e6f8c</div></div>
+    </div>
+  </section>
+
+  <section id="principles">
+    <h2>3. Principes visuels validés</h2>
+    <div class="principles">
+      <div class="principle"><b>Identité</b>E blanc, B bleu (variation bleu clair), fond bleu nuit, lignes de circuits électroniques, trois points de connexion, angles à 90° arrondis.</div>
+      <div class="principle"><b>Trait</b>Fin et précis, cohérent avec les 103 pictogrammes déjà en place (viewBox 24×24, currentColor, stroke-width 1.6–2.2).</div>
+      <div class="principle"><b>Couleur</b>Contraste blanc / bleu nuit / bleu électrique en base ; orange conservé comme seul accent secondaire, jamais dominant.</div>
+      <div class="principle"><b>Dégradé</b>Un seul dégradé bleu, utilisé avec modération (halo discret derrière un point focal, jamais en fond plein).</div>
+      <div class="principle"><b>Ce qu'on évite</b>Robots cartoon, personnages, 3D lourde, scènes isométriques, ombres réalistes, verre prononcé, halos multiples, texte dessiné dans le SVG, flou animé.</div>
+      <div class="principle"><b>Cohérence</b>Aucun nouveau système de couleurs concurrent ; les illustrations complètent le langage existant, elles ne le remplacent pas.</div>
+    </div>
+  </section>
+
+  <section id="components">
+    <h2>4. Bibliothèque de composants</h2>
+    <p class="section-desc">Petits pictogrammes factorisés en PHP (<code>functions.php</code>) et vocabulaire de construction des illustrations maîtresses. Voir aussi <code>assets/images/illustrations/eb-flow/README.md</code>.</p>
+
+    <h3>Helpers PHP (utilisables dans les templates)</h3>
+    <div class="php-sample">
+      <span class="fn">eb_tool_chevron</span>();  <span style="color:#5e6f8c;">// chevron de fin de puce outil — 35 usages factorisés</span><br>
+      <span class="fn">eb_contact_icon</span>(<span class="str">'phone'</span>, 14, <span class="str">'2'</span>);  <span style="color:#5e6f8c;">// téléphone / email, header + audit</span><br>
+      <span class="fn">eb_icon</span>(<span class="str">'node'</span> | <span class="str">'validation'</span> | <span class="str">'circuit'</span>, 20, <span class="str">'1.8'</span>);  <span style="color:#5e6f8c;">// registre étendu</span><br>
+      <span class="fn">eb_status_step</span>($icon_svg, $label);  <span style="color:#5e6f8c;">// icône + libellé d'une étape de flux</span><br>
+      <span class="fn">eb_flow_connector</span>();  <span style="color:#5e6f8c;">// flèche entre deux étapes</span>
+    </div>
+
+    <h3>Motifs des illustrations maîtresses</h3>
+    <div class="comp-grid">
+      <div class="comp-card">
+        <div class="comp-card__demo"><svg width="70" height="70" viewBox="0 0 70 70"><path d="M10 30h20a8 8 0 0 0 8-8V10" fill="none" stroke="#5BB6FF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path><circle cx="10" cy="30" r="3" fill="#3BA5FF"></circle><circle cx="38" cy="10" r="3" fill="#3BA5FF"></circle></svg></div>
+        <div class="comp-card__name">EB Circuit</div>
+        <div class="comp-card__desc">Trace à angle droit, coin arrondi. Relie deux composants.</div>
+      </div>
+      <div class="comp-card">
+        <div class="comp-card__demo"><svg width="40" height="40" viewBox="0 0 40 40"><circle cx="20" cy="20" r="6" fill="#3BA5FF"></circle></svg></div>
+        <div class="comp-card__name">EB Node</div>
+        <div class="comp-card__desc">Point de connexion rond, à chaque jonction d'un EB Circuit.</div>
+      </div>
+      <div class="comp-card">
+        <div class="comp-card__demo"><svg width="70" height="60" viewBox="0 0 70 60"><rect x="5" y="5" width="60" height="50" rx="12" fill="#0A1A33" stroke="#16294a" stroke-width="1.4"></rect><rect x="24" y="20" width="22" height="20" rx="3" fill="none" stroke="#5BB6FF" stroke-width="1.8"></rect></svg></div>
+        <div class="comp-card__name">EB Data Card</div>
+        <div class="comp-card__desc">Carte navy à coins arrondis, une icône centrée. Max 5/illustration.</div>
+      </div>
+      <div class="comp-card">
+        <div class="comp-card__demo"><svg width="80" height="30" viewBox="0 0 80 30"><path d="M5 15h30l10-10h30" fill="none" stroke="#16294a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><circle cx="5" cy="15" r="3" fill="#3BA5FF"></circle><circle cx="75" cy="5" r="3" fill="#3BA5FF"></circle></svg></div>
+        <div class="comp-card__name">EB Flow Connector</div>
+        <div class="comp-card__desc">EB Circuit + 2 EB Node. Relie deux EB Data Card. Max 8/illustration.</div>
+      </div>
+      <div class="comp-card">
+        <div class="comp-card__demo"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#5BCB8B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"></path></svg></div>
+        <div class="comp-card__name">EB Validation</div>
+        <div class="comp-card__desc">Coche de confirmation, réservée aux cartes de résultat.</div>
+      </div>
+      <div class="comp-card">
+        <div class="comp-card__demo"><svg width="70" height="50" viewBox="0 0 70 50"><rect x="2" y="2" width="66" height="46" rx="8" fill="none" stroke="#3BA5FF" stroke-width="1.4" stroke-dasharray="3 3"></rect><text x="35" y="29" font-family="sans-serif" font-size="10" fill="#9DAAC2" text-anchor="middle">800×212</text></svg></div>
+        <div class="comp-card__name">EB Master Illustration Container</div>
+        <div class="comp-card__desc">Cadre général : viewBox 800×212, 3 zones (entrée → hub → résultat).</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contrast">
+    <h2>5. Règles de contraste</h2>
+    <p class="section-desc">Seuils WCAG 2.2 AA (4.5:1 texte normal, 3:1 grands éléments/graphiques) déjà appliqués sur le site — vérifiés à nouveau ici pour les couleurs utilisées dans les illustrations.</p>
+    <table>
+      <thead><tr><th>Paire</th><th>Contexte</th><th>Ratio</th><th>Statut</th></tr></thead>
+      <tbody>
+        <tr><td><span class="swatch-inline" style="background:#5BB6FF;"></span>--blue-3 sur <span class="swatch-inline" style="background:#0C1E3C;"></span>--navy</td><td>Icônes dans les EB Data Card</td><td>7.1:1</td><td class="pass">Conforme</td></tr>
+        <tr><td><span class="swatch-inline" style="background:#fff;border:1px solid #ddd;"></span>Blanc sur <span class="swatch-inline" style="background:#0C1E3C;"></span>--navy</td><td>Icône du hub central</td><td>16.7:1</td><td class="pass">Conforme</td></tr>
+        <tr><td><span class="swatch-inline" style="background:#5e6f8c;"></span>--muted-on-navy-2 sur fond blanc</td><td>Texte gris sur fond bleu nuit (déjà en place)</td><td>—</td><td class="pass">Inchangé, déjà conforme</td></tr>
+        <tr><td><span class="swatch-inline" style="background:#DD7A33;"></span>--orange (décoratif)</td><td>Fond de carte accent — usage décoratif uniquement, pas de texte dessus</td><td>3:1 (graphique)</td><td class="pass">Conforme (seuil graphique, pas texte)</td></tr>
+        <tr><td>Traits fins sur fond beige</td><td>Non utilisé dans ce lot — les illustrations n'utilisent que fond transparent / navy / blanc</td><td>—</td><td class="pass">Sans objet</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="illustrations">
+    <h2>6. Les 6 illustrations maîtresses</h2>
+    <p class="section-desc">Rendu sur fond clair, sur fond bleu nuit, et à largeur mobile (375px). Poids indiqué = fichier brut sur disque.</p>
+
+    <div class="illus-block">
+      <div class="illus-block__head"><h3>1 — Emails et relances</h3><span class="illus-block__weight">eb-flow-emails-relances.svg — 3 486 o (3,40 Ko)</span></div>
+      <div class="illus-row illus-row--light"><div class="illus-row-label">Fond clair</div><img src="../wordpress/generatepress_child/assets/images/illustrations/eb-flow/eb-flow-emails-relances.svg" alt=""></div>
+      <div class="illus-row illus-row--dark"><div class="illus-row-label">Fond bleu nuit</div><img src="../wordpress/generatepress_child/assets/images/illustrations/eb-flow/eb-flow-emails-relances.svg" alt=""></div>
+      <div class="illus-row illus-row--mobile"><div class="mobile-frame"><div class="illus-row-label">Largeur mobile (375px)</div><img src="../wordpress/generatepress_child/assets/images/illustrations/eb-flow/eb-flow-emails-relances.svg" alt=""></div></div>
+    </div>
+
+    <div class="illus-block">
+      <div class="illus-block__head"><h3>2 — Excel, PDF et OCR</h3><span class="illus-block__weight">eb-flow-excel-pdf-ocr.svg — 3 376 o (3,30 Ko)</span></div>
+      <div class="illus-row illus-row--light"><div class="illus-row-label">Fond clair</div><img src="../wordpress/generatepress_child/assets/images/illustrations/eb-flow/eb-flow-excel-pdf-ocr.svg" alt=""></div>
+      <div class="illus-row illus-row--dark"><div class="illus-row-label">Fond bleu nuit</div><img src="../wordpress/generatepress_child/assets/images/illustrations/eb-flow/eb-flow-excel-pdf-ocr.svg" alt=""></div>
+      <div class="illus-row illus-row--mobile"><div class="mobile-frame"><div class="illus-row-label">Largeur mobile (375px)</div><img src="../wordpress/generatepress_child/assets/images/illustrations/eb-flow/eb-flow-excel-pdf-ocr.svg" alt=""></div></div>
+    </div>
+
+    <div class="illus-block">
+      <div class="illus-block__head"><h3>3 — CRM et suivi commercial</h3><span class="illus-block__weight">eb-flow-crm.svg — 3 456 o (3,38 Ko)</span></div>
+      <div class="illus-row illus-row--light"><div class="illus-row-label">Fond clair</div><img src="../wordpress/generatepress_child/assets/images/illustrations/eb-flow/eb-flow-crm.svg" alt=""></div>
+      <div class="illus-row illus-row--dark"><div class="illus-row-label">Fond bleu nuit</div><img src="../wordpress/generatepress_child/assets/images/illustrations/eb-flow/eb-flow-crm.svg" alt=""></div>
+      <div class="illus-row illus-row--mobile"><div class="mobile-frame"><div class="illus-row-label">Largeur mobile (375px)</div><img src="../wordpress/generatepress_child/assets/images/illustrations/eb-flow/eb-flow-crm.svg" alt=""></div></div>
+    </div>
+
+    <div class="illus-block">
+      <div class="illus-block__head"><h3>4 — Ressources humaines</h3><span class="illus-block__weight">eb-flow-rh.svg — 3 627 o (3,54 Ko)</span></div>
+      <div class="illus-row illus-row--light"><div class="illus-row-label">Fond clair</div><img src="../wordpress/generatepress_child/assets/images/illustrations/eb-flow/eb-flow-rh.svg" alt=""></div>
+      <div class="illus-row illus-row--dark"><div class="illus-row-label">Fond bleu nuit</div><img src="../wordpress/generatepress_child/assets/images/illustrations/eb-flow/eb-flow-rh.svg" alt=""></div>
+      <div class="illus-row illus-row--mobile"><div class="mobile-frame"><div class="illus-row-label">Largeur mobile (375px)</div><img src="../wordpress/generatepress_child/assets/images/illustrations/eb-flow/eb-flow-rh.svg" alt=""></div></div>
+    </div>
+
+    <div class="illus-block">
+      <div class="illus-block__head"><h3>5 — Comptabilité automatisée</h3><span class="illus-block__weight">eb-flow-comptabilite.svg — 3 465 o (3,38 Ko)</span></div>
+      <div class="illus-row illus-row--light"><div class="illus-row-label">Fond clair</div><img src="../wordpress/generatepress_child/assets/images/illustrations/eb-flow/eb-flow-comptabilite.svg" alt=""></div>
+      <div class="illus-row illus-row--dark"><div class="illus-row-label">Fond bleu nuit</div><img src="../wordpress/generatepress_child/assets/images/illustrations/eb-flow/eb-flow-comptabilite.svg" alt=""></div>
+      <div class="illus-row illus-row--mobile"><div class="mobile-frame"><div class="illus-row-label">Largeur mobile (375px)</div><img src="../wordpress/generatepress_child/assets/images/illustrations/eb-flow/eb-flow-comptabilite.svg" alt=""></div></div>
+    </div>
+
+    <div class="illus-block">
+      <div class="illus-block__head"><h3>6 — Reporting automatisé</h3><span class="illus-block__weight">eb-flow-reporting.svg — 3 696 o (3,61 Ko)</span></div>
+      <div class="illus-row illus-row--light"><div class="illus-row-label">Fond clair</div><img src="../wordpress/generatepress_child/assets/images/illustrations/eb-flow/eb-flow-reporting.svg" alt=""></div>
+      <div class="illus-row illus-row--dark"><div class="illus-row-label">Fond bleu nuit</div><img src="../wordpress/generatepress_child/assets/images/illustrations/eb-flow/eb-flow-reporting.svg" alt=""></div>
+      <div class="illus-row illus-row--mobile"><div class="mobile-frame"><div class="illus-row-label">Largeur mobile (375px)</div><img src="../wordpress/generatepress_child/assets/images/illustrations/eb-flow/eb-flow-reporting.svg" alt=""></div></div>
+    </div>
+
+  </section>
+
+</main>
+
+<footer>Page de travail interne — EB Automatisation. Non indexée, non liée depuis le site public.</footer>
+
+</body>
+</html>

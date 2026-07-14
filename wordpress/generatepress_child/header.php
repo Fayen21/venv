@@ -31,8 +31,8 @@ $eb_is_pillar = eb_is_pillar_page( $eb_current );
   <div class="topbar__inner">
     <div class="topbar__label">Consultant indépendant en automatisation &amp; IA · TPE-PME françaises</div>
     <div class="topbar__links">
-      <a href="tel:+33695204127"><span aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6.6 10.8a15.9 15.9 0 0 0 6.6 6.6l2.2-2.2a1.4 1.4 0 0 1 1.4-.35c1.1.35 2.3.55 3.5.55a1.4 1.4 0 0 1 1.4 1.4V20.6a1.4 1.4 0 0 1-1.4 1.4C10.7 22 2 13.3 2 3.4A1.4 1.4 0 0 1 3.4 2H7a1.4 1.4 0 0 1 1.4 1.4c0 1.2.2 2.4.55 3.5.13.46.02.98-.35 1.4z"></path></svg></span> 06 95 20 41 27</a>
-      <a href="mailto:contact@eb-automatisation.fr"><span aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M4 6.5l8 6 8-6"></path></svg></span> contact@eb-automatisation.fr</a>
+      <a href="tel:+33695204127"><span aria-hidden="true"><?php echo eb_contact_icon( 'phone', 14, '2' ); ?></span> 06 95 20 41 27</a>
+      <a href="mailto:contact@eb-automatisation.fr"><span aria-hidden="true"><?php echo eb_contact_icon( 'email', 14, '1.8' ); ?></span> contact@eb-automatisation.fr</a>
     </div>
   </div>
 </div>

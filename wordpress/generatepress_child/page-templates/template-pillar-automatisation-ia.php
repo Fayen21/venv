@@ -174,7 +174,7 @@ if ( ! defined( 'ABSPATH' ) ) {
         <span class="pillar-flow__arrow">→</span>
         <div class="pillar-flow__step"><span class="pillar-flow__icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7z"></path></svg></span><span class="pillar-flow__step-label">Classé automatiquement</span></div>
         <span class="pillar-flow__arrow">→</span>
-        <div class="pillar-flow__step"><span class="pillar-flow__icon">✓</span><span class="pillar-flow__step-label">Action déclenchée</span></div>
+        <div class="pillar-flow__step"><span class="pillar-flow__icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M8.5 12.5l2.3 2.3 4.7-4.8"></path></svg></span><span class="pillar-flow__step-label">Action déclenchée</span></div>
       </div>
     </div>
 

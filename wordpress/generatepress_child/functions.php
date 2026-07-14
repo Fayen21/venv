@@ -118,6 +118,106 @@ function eb_tool_icon_html( $key ) {
 }
 
 /**
+ * Chevron de fin de puce outil cliquable (.tool-chip--link) — un seul bloc
+ * SVG, jusqu'ici copié-collé à l'identique (38 fois sur 9 templates) au lieu
+ * d'être factorisé comme eb_tool_icon_html() l'est déjà pour le logo.
+ */
+function eb_tool_chevron() {
+	return '<span class="tool-chip__chevron" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></span>';
+}
+
+/**
+ * Icônes téléphone/email de la barre du haut (header.php) et des tuiles de
+ * contact de la page de succès d'audit (template-audit.php) — même paire de
+ * pictogrammes, redessinée deux fois avec des réglages différents (couleur
+ * figée au lieu de currentColor, épaisseur de trait différente). Factorisée
+ * ici en un seul point d'entrée ; $size et $stroke_width restent réglables
+ * par appelant puisque les deux contextes n'affichent pas l'icône à la même
+ * taille, mais la couleur est toujours héritée via currentColor.
+ */
+function eb_contact_icon( $type, $size = 14, $stroke_width = '1.8' ) {
+	$paths = array(
+		// glyphe combiné, utilisé dans la barre du haut (header.php)
+		'phone'     => '<path d="M6.6 10.8a15.9 15.9 0 0 0 6.6 6.6l2.2-2.2a1.4 1.4 0 0 1 1.4-.35c1.1.35 2.3.55 3.5.55a1.4 1.4 0 0 1 1.4 1.4V20.6a1.4 1.4 0 0 1-1.4 1.4C10.7 22 2 13.3 2 3.4A1.4 1.4 0 0 1 3.4 2H7a1.4 1.4 0 0 1 1.4 1.4c0 1.2.2 2.4.55 3.5.13.46.02.98-.35 1.4z"></path>',
+		// glyphe téléphone distinct, utilisé sur les tuiles de la page de succès
+		// de l'audit (template-audit.php) — même famille de trait, dessin différent ;
+		// on ne les fusionne pas en un seul glyphe pour ne rien changer visuellement.
+		'phone-alt' => '<path d="M5 4h4l1.5 4.5-2 1.5a11 11 0 0 0 5.5 5.5l1.5-2 4.5 1.5v4a2 2 0 0 1-2 2c-8 0-14-6-14-14a2 2 0 0 1 2-2z"></path>',
+		'email'     => '<rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M4 6.5l8 6 8-6"></path>',
+	);
+	if ( ! isset( $paths[ $type ] ) ) {
+		return '';
+	}
+	return '<svg width="' . (int) $size . '" height="' . (int) $size . '" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="' . esc_attr( $stroke_width ) . '" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' . $paths[ $type ] . '</svg>';
+}
+
+/**
+ * -----------------------------------------------------------------------
+ * Bibliothèque de composants graphiques EB — étape 2 de la premiumisation
+ * de l'iconographie (docs/audit-iconographie-eb.md). Point d'entrée unique
+ * pour tout nouveau petit pictogramme ajouté après cette phase, sur le même
+ * modèle que eb_tool_chevron()/eb_contact_icon() ci-dessus. Les 103 icônes
+ * déjà en place dans les templates ne sont PAS migrées vers ce registre —
+ * seule une migration ultérieure, explicitement demandée, justifierait de
+ * toucher à nouveau ce qui fonctionne déjà et n'a pas de défaut visuel.
+ *
+ * Langage visuel dérivé des deux logos officiels EB (jamais redessinés,
+ * jamais modifiés) : lignes de circuit à angles 90° arrondis, points de
+ * connexion ronds, contraste blanc / bleu nuit / bleu électrique, orange du
+ * site conservé comme seul accent secondaire. Ce même vocabulaire est celui
+ * utilisé pour construire les 6 illustrations maîtresses SVG (Phase D) —
+ * voir assets/images/illustrations/eb-flow/README.md pour la déclinaison en
+ * fichiers SVG autonomes (les <use> vers un sprite externe ne fonctionnent
+ * pas quand le SVG est chargé en <img>, donc les mêmes <defs> sont dupliqués
+ * localement dans chaque fichier plutôt que factorisés en un sprite partagé).
+ * -----------------------------------------------------------------------
+ */
+
+/**
+ * eb_icon( $key, $size, $stroke_width ) : petits pictogrammes inline
+ * additionnels au même standard que le reste du site (viewBox 24×24,
+ * stroke currentColor, angles arrondis). 'node' et 'validation' reprennent
+ * les motifs "point de connexion" et "coche" utilisés dans les illustrations
+ * maîtresses, pour un composant PHP qui rende le même glyphe si besoin dans
+ * un template plus tard (ex. légender une illustration).
+ */
+function eb_icon( $key, $size = 20, $stroke_width = '1.8' ) {
+	$paths = array(
+		// point de connexion (motif "EB Node" des illustrations maîtresses)
+		'node'       => '<circle cx="12" cy="12" r="3"></circle>',
+		// coche de validation (motif "EB Validation")
+		'validation' => '<path d="M5 12.5l4.5 4.5L19 7"></path>',
+		// segment de trace de circuit à angle droit arrondi (motif "EB Circuit")
+		'circuit'    => '<path d="M4 8h6a2 2 0 0 0 2-2V4"></path><path d="M4 16h10a2 2 0 0 1 2 2v2"></path><circle cx="4" cy="8" r="1.3"></circle><circle cx="4" cy="16" r="1.3"></circle>',
+	);
+	if ( ! isset( $paths[ $key ] ) ) {
+		return '';
+	}
+	return '<svg width="' . (int) $size . '" height="' . (int) $size . '" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="' . esc_attr( $stroke_width ) . '" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' . $paths[ $key ] . '</svg>';
+}
+
+/**
+ * eb_status_step( $icon_svg, $label, $modifier ) : une étape d'un flux
+ * (icône + libellé), même structure que .pillar-flow__step déjà répété à
+ * l'identique dans 9+ templates (voir docs/audit-iconographie-eb.md, C3).
+ * Disponible pour toute nouvelle étape de flux ajoutée après cette phase ;
+ * les .pillar-flow__step existants ne sont pas ré-écrits avec ce helper
+ * (hors périmètre des 9 harmonisations validées, aucun défaut à corriger).
+ */
+function eb_status_step( $icon_svg, $label, $modifier = '' ) {
+	$class = 'pillar-flow__step' . ( $modifier ? ' pillar-flow__step--' . sanitize_html_class( $modifier ) : '' );
+	return '<div class="' . esc_attr( $class ) . '"><span class="pillar-flow__icon">' . $icon_svg . '</span><span class="pillar-flow__step-label">' . esc_html( $label ) . '</span></div>';
+}
+
+/**
+ * eb_flow_connector() : flèche entre deux eb_status_step() (motif "EB Flow
+ * Connector"), même glyphe texte que .pillar-flow__arrow déjà en place.
+ */
+function eb_flow_connector() {
+	return '<span class="pillar-flow__arrow">→</span>';
+}
+
+/**
  * -----------------------------------------------------------------------
  * 2. Identification de la page courante (pour la classe .is-active du menu
  *    et pour savoir quelles données SEO / CSS de page charger).
