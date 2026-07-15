@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>EB Automatisation — Directions pilotes (Excel/PDF/OCR)</title>
+<link rel="stylesheet" href="../wordpress/generatepress_child/assets/css/tokens.css">
+<link rel="stylesheet" href="../wordpress/generatepress_child/assets/css/pages/pillar.css">
+<style>
+  *{box-sizing:border-box;}
+  body{ margin:0; font-family:'Hanken Grotesk',system-ui,sans-serif; color:var(--navy); background:#fff; line-height:1.5; }
+  header.page-head{ background:var(--navy); color:#fff; padding:40px 32px 32px; }
+  header.page-head h1{ font-family:'Schibsted Grotesk',sans-serif; font-size:26px; margin:0 0 10px; }
+  header.page-head p{ margin:0 0 6px; color:#9DAAC2; font-size:14.5px; max-width:820px; }
+  .banner{ background:#3a2410; color:#F2D8BE; font-size:13px; padding:10px 32px; border-bottom:1px solid #5c3a1c; }
+  .reject-banner{ background:#3a1010; color:#F2C4BE; font-size:13px; padding:10px 32px; border-bottom:1px solid #5c1c1c; }
+  main{ max-width:1180px; margin:0 auto; padding:0 32px 100px; }
+  .direction{ padding:52px 0; border-bottom:1px solid #E9ECF3; }
+  .direction:last-child{ border-bottom:none; }
+  .direction__head{ margin-bottom:22px; }
+  .direction__label{ font-size:12.5px; font-weight:700; text-transform:uppercase; letter-spacing:.06em; color:var(--orange); }
+  .direction__title{ font-family:'Schibsted Grotesk',sans-serif; font-size:23px; margin:6px 0 10px; }
+  .direction__desc{ font-size:14.5px; color:#5A6880; max-width:760px; margin:0 0 4px; }
+  .direction__traits{ display:flex; flex-wrap:wrap; gap:8px; margin-top:14px; }
+  .trait{ font-size:12.5px; font-weight:600; background:#F2F5FA; border:1px solid #E9ECF3; padding:6px 12px; border-radius:20px; color:#3C4A60; }
+
+  .demo-row{ border:1px solid #E9ECF3; border-radius:14px; overflow:hidden; margin-top:18px; }
+  .demo-row__label{ font-size:11.5px; text-transform:uppercase; letter-spacing:.06em; font-weight:700; color:#697483; padding:12px 18px 0; }
+  .demo-row__body{ padding:18px; }
+  .demo-row--light .demo-row__body{ background:#fff; }
+  .demo-row--dark{ background:var(--navy); }
+  .demo-row--dark .demo-row__label{ color:#9DAAC2; }
+  .demo-row img{ display:block; width:100%; max-width:800px; height:auto; margin:0 auto; }
+  .demo-row--mobile .demo-row__body{ background:#F7F9FC; display:flex; justify-content:center; }
+  .demo-row--mobile .mobile-frame{ width:375px; max-width:100%; }
+  .demo-row--mobile img{ border:1px solid #E9ECF3; border-radius:8px; }
+  .demo-row--card .demo-row__body{ background:#F7F9FC; padding:30px; }
+
+  .weight-line{ display:flex; gap:18px; margin-top:16px; font-family:'IBM Plex Mono',ui-monospace,monospace; font-size:12.5px; color:#5A6880; flex-wrap:wrap; }
+  .weight-line b{ color:var(--navy); }
+
+  footer{ text-align:center; padding:30px; font-size:12px; color:#697483; }
+</style>
+</head>
+<body>
+
+<div class="banner">Page privée de prévisualisation — <code>noindex,nofollow</code>, non liée depuis le site, non chargée par WordPress. Aucune illustration de cette page n'est intégrée aux templates publics.</div>
+<div class="reject-banner">Les 6 illustrations « eb-flow » de la première tentative (<code>assets/images/illustrations/eb-flow/</code>) sont refusées : composition identique répétée (deux cartes / cercle / deux cartes), robot générique, connecteurs peu lisibles. Cette page présente trois directions radicalement différentes construites uniquement sur une seule thématique pilote (Excel, PDF et OCR), en attente de validation avant toute déclinaison.</div>
+
+<header class="page-head">
+  <h1>Directions pilotes — iconographie de marque EB</h1>
+  <p>Trois partis pris graphiques distincts pour une même thématique (Excel, PDF et OCR), construits sur la géométrie réelle du logo officiel : segments de circuit horizontaux + coupes à 45°, points de connexion en anneau creux de tailles variées, palette bleu nuit / bleu électrique existante, orange en accent ponctuel.</p>
+  <p>Aucune des trois ne reprend la composition « deux cartes à gauche → cercle → deux cartes à droite » de la tentative précédente. Chaque direction porte sa propre logique de composition et pourrait, si validée, être déclinée aux 20 composants de la bibliothèque de marque.</p>
+</header>
+
+<main>
+
+  <section class="direction">
+    <div class="direction__head">
+      <div class="direction__label">Direction A</div>
+      <h2 class="direction__title">Circuits EB Premium</h2>
+      <p class="direction__desc">Composition directement inspirée des trois circuits du logo : un document PDF (grande carte, à gauche) envoie trois traces vers un noyau abstrait facetté — un losange, jamais un cercle ni un robot — qui les redistribue vers une grille de cellules Excel se peuplant progressivement. Aucun organigramme : les traces suivent la même géométrie segment + coupe à 45° que le logo, avec des points de connexion de tailles variées.</p>
+      <div class="direction__traits">
+        <span class="trait">Noyau en losange facetté (pas de cercle)</span>
+        <span class="trait">3 tailles d'éléments (document / noyau / cellules)</span>
+        <span class="trait">1 seul dégradé + halo bleu discret</span>
+        <span class="trait">Aucune icône de robot</span>
+      </div>
+    </div>
+
+    <div class="demo-row demo-row--light"><div class="demo-row__label">Fond clair</div><div class="demo-row__body"><img src="eb-iconography-directions/direction-a-excel-pdf-ocr.svg" alt=""></div></div>
+    <div class="demo-row demo-row--dark"><div class="demo-row__label">Fond bleu nuit</div><div class="demo-row__body"><img src="eb-iconography-directions/direction-a-excel-pdf-ocr.svg" alt=""></div></div>
+    <div class="demo-row demo-row--mobile"><div class="mobile-frame"><div class="demo-row__label">Largeur mobile (375px)</div><img src="eb-iconography-directions/direction-a-excel-pdf-ocr.svg" alt=""></div></div>
+    <div class="demo-row demo-row--card"><div class="demo-row__label">Dans une carte réelle du site (.pillar-mock)</div><div class="demo-row__body">
+      <div class="pillar-mock"><img src="eb-iconography-directions/direction-a-excel-pdf-ocr.svg" width="800" height="212" alt=""></div>
+    </div></div>
+
+    <div class="weight-line"><span>Poids brut : <b>4 884 o (4,77 Ko)</b></span><span>Gzip (poids transféré estimé) : <b>942 o (0,92 Ko)</b></span></div>
+  </section>
+
+  <section class="direction">
+    <div class="direction__head">
+      <div class="direction__label">Direction B</div>
+      <h2 class="direction__title">Cartes de données superposées</h2>
+      <p class="direction__desc">Trois cartes réelles, empilées et partiellement superposées de façon asymétrique — jamais alignées côte à côte. Le document source (arrière, incliné) laisse des lignes de données se détacher via un connecteur inspiré du logo vers une petite carte d'extraction, elle-même connectée à la carte de résultat Excel, la plus grande et la plus nette, au premier plan. La profondeur vient de la superposition réelle (z-order), pas d'un effet de flou.</p>
+      <div class="direction__traits">
+        <span class="trait">3 cartes, rotations différentes</span>
+        <span class="trait">Superposition réelle (pas d'alignement)</span>
+        <span class="trait">Carte résultat = point focal (plus grande, plus nette)</span>
+        <span class="trait">Aucune structure d'organigramme</span>
+      </div>
+    </div>
+
+    <div class="demo-row demo-row--light"><div class="demo-row__label">Fond clair</div><div class="demo-row__body"><img src="eb-iconography-directions/direction-b-excel-pdf-ocr.svg" alt=""></div></div>
+    <div class="demo-row demo-row--dark"><div class="demo-row__label">Fond bleu nuit</div><div class="demo-row__body"><img src="eb-iconography-directions/direction-b-excel-pdf-ocr.svg" alt=""></div></div>
+    <div class="demo-row demo-row--mobile"><div class="mobile-frame"><div class="demo-row__label">Largeur mobile (375px)</div><img src="eb-iconography-directions/direction-b-excel-pdf-ocr.svg" alt=""></div></div>
+    <div class="demo-row demo-row--card"><div class="demo-row__label">Dans une carte réelle du site (.pillar-mock)</div><div class="demo-row__body">
+      <div class="pillar-mock"><img src="eb-iconography-directions/direction-b-excel-pdf-ocr.svg" width="800" height="212" alt=""></div>
+    </div></div>
+
+    <div class="weight-line"><span>Poids brut : <b>5 010 o (4,89 Ko)</b></span><span>Gzip (poids transféré estimé) : <b>1 017 o (0,99 Ko)</b></span></div>
+  </section>
+
+  <section class="direction">
+    <div class="direction__head">
+      <div class="direction__label">Direction C</div>
+      <h2 class="direction__title">Interface technologique minimaliste</h2>
+      <p class="direction__desc">Un seul panneau, comme un fragment d'interface produit : trois zones internes (document → reconnaissance avec ligne de balayage figée → données structurées qui se forment), séparées par de fines lignes, avec un indicateur de progression à trois points en bas. Aucun faux écran complexe, aucune icône superflue — beaucoup d'espace vide, dans l'esprit d'une capture d'écran SaaS épurée plutôt que d'un schéma technique.</p>
+      <div class="direction__traits">
+        <span class="trait">Un seul panneau contenu</span>
+        <span class="trait">Ligne de balayage statique (pas d'animation)</span>
+        <span class="trait">Indicateur de progression à 3 points</span>
+        <span class="trait">Le plus léger des trois (3,35 Ko)</span>
+      </div>
+    </div>
+
+    <div class="demo-row demo-row--light"><div class="demo-row__label">Fond clair</div><div class="demo-row__body"><img src="eb-iconography-directions/direction-c-excel-pdf-ocr.svg" alt=""></div></div>
+    <div class="demo-row demo-row--dark"><div class="demo-row__label">Fond bleu nuit</div><div class="demo-row__body"><img src="eb-iconography-directions/direction-c-excel-pdf-ocr.svg" alt=""></div></div>
+    <div class="demo-row demo-row--mobile"><div class="mobile-frame"><div class="demo-row__label">Largeur mobile (375px)</div><img src="eb-iconography-directions/direction-c-excel-pdf-ocr.svg" alt=""></div></div>
+    <div class="demo-row demo-row--card"><div class="demo-row__label">Dans une carte réelle du site (.pillar-mock)</div><div class="demo-row__body">
+      <div class="pillar-mock"><img src="eb-iconography-directions/direction-c-excel-pdf-ocr.svg" width="800" height="212" alt=""></div>
+    </div></div>
+
+    <div class="weight-line"><span>Poids brut : <b>3 350 o (3,27 Ko)</b></span><span>Gzip (poids transféré estimé) : <b>830 o (0,81 Ko)</b></span></div>
+  </section>
+
+  <section class="direction" style="border-bottom:none;">
+    <div class="direction__head">
+      <div class="direction__label">Note technique</div>
+      <h2 class="direction__title">Pourquoi ces illustrations restent lisibles sur n'importe quel fond</h2>
+      <p class="direction__desc">Chaque illustration est autoportante : les éléments clairs (document, cartes) reposent sur leur propre fond bleu nuit plutôt que sur un simple contour, exactement comme le logo officiel n'est jamais un dessin flottant mais toujours posé sur son propre carré bleu nuit. Ce choix a été fait après un bug réel détecté en cours de route : un document en contour blanc seul, sans fond, devient invisible sur une page blanche (visible sur la version « fond clair » de la Direction A avant correction). Alternative envisagée et écartée : variables CSS internes au SVG pilotées par <code>prefers-color-scheme</code> — cette media query répond au mode sombre du système, pas à la couleur de fond réelle de la carte qui accueille l'illustration, donc elle n'aurait pas résolu le cas concret (illustration sur fond clair alors que le système est en mode sombre, ou l'inverse).</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>Page de travail interne — EB Automatisation. Non indexée, non liée depuis le site public. En attente de validation de direction avant toute déclinaison aux 20 composants de la bibliothèque de marque.</footer>
+
+</body>
+</html>
