@@ -3,7 +3,25 @@
 Date : 2026-07-15
 Suite à la demande de correction de l'identité visuelle avant validation de l'étape 2.
 
-**Conclusion : aucun remplacement effectué. Le fichier actuel `assets/images/eb-icon.png` est déjà conforme au fichier officiel fourni.**
+---
+
+## ADDENDUM (même journée) — le fichier a finalement été remplacé, un vrai bug a été trouvé
+
+La conclusion « aucun remplacement nécessaire » ci-dessous (§1-7, analyse initiale) **s'est révélée incorrecte**. L'utilisateur a maintenu son diagnostic (« si le fond est blanc tout va bien, mais sinon ça va pas »), avec raison. Nouvelle investigation, ciblée cette fois sur le canal alpha plutôt que sur un rendu composité sur blanc :
+
+- **Cause identifiée** : dans `eb-icon.png` (version en place jusqu'ici), les pixels blancs du E et une partie des pixels bleus du B/circuits étaient stockés avec un canal alpha proche de 0 (valeurs 1 à 13 sur 255) au lieu d'être opaques. Sur fond blanc, un pixel blanc quasi-transparent composite avec le blanc et reste blanc — le défaut est invisible. Sur tout autre fond (le bleu nuit de l'en-tête, une carte de démonstration, etc.), ce même pixel laisse transparaître le fond et le E apparaît sombre/navy au lieu de blanc. C'est exactement le symptôme signalé.
+- **Preuve** : sur l'ancien fichier, aucun pixel blanc (255,255,255) n'apparaît dans la liste des couleurs pleinement opaques (alpha=255) de toute l'image. Sur le fichier de référence fourni par l'utilisateur, (255,255,255) opaque est la couleur la plus fréquente de l'image (5 728 pixels).
+- **Pourquoi l'analyse initiale (§1-7) n'a pas vu le problème** : elle comparait les deux fichiers après composition sur un fond **blanc**, ce qui masque exactement ce défaut par construction. Erreur de méthode reconnue — la bonne vérification consistait à composer sur un fond non blanc (ou à inspecter le canal alpha directement), ce qui a été fait dans cette seconde passe.
+
+**Action corrective effectuée :**
+- `assets/images/eb-icon.png` remplacé par le fichier officiel fourni par l'utilisateur (chemin conservé à l'identique).
+- Optimisation PNG sans perte (`optipng -o7`) — vérifié pixel-perfect identique à la source avant/après compression (`ImageChops.difference` → bbox `None`).
+- **Poids : 65 274 o → 54 627 o (-16,3 %)** — la version corrigée est aussi plus légère, malgré une image visuellement plus riche (contour clair, blanc réellement opaque).
+- Vérifié sur les 5 emplacements listés au §4 (favicon, apple-touch-icon, en-tête desktop/mobile, 2× JSON-LD) — tous pointent vers le même fichier, aucune référence de code à modifier.
+- Vérifié spécifiquement sur fond bleu nuit (le cas qui révélait le bug) : E parfaitement blanc et opaque, capture à l'appui.
+- Aucune régression de poids transféré (fichier plus léger), aucun changement d'élément LCP (aucune page publique dont la structure a changé).
+
+Le reste de ce document (§1-7 ci-dessous) est conservé tel quel pour la traçabilité de la première investigation, mais sa conclusion (« conservé à l'identique ») est **remplacée par ce qui précède**.
 
 ---
 
