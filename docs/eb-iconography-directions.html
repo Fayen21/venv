@@ -41,17 +41,35 @@
   .weight-line b{ color:var(--navy); }
 
   footer{ text-align:center; padding:30px; font-size:12px; color:#697483; }
+
+  .interpretation-note{ background:#F7F9FC; border-radius:16px; padding:28px 30px; margin-top:8px; }
+  .interpretation-list{ margin:14px 0 0; padding-left:20px; font-size:14px; color:#3C4A60; line-height:1.6; }
+  .interpretation-list li{ margin-bottom:10px; }
+  .interpretation-list code{ background:#E9ECF3; padding:1px 5px; border-radius:4px; font-size:12.5px; }
+
+  .eb-icon-tiles{ display:flex; flex-wrap:wrap; gap:16px; }
+  .eb-icon-tile{ display:flex; flex-direction:column; align-items:center; gap:9px; width:84px; }
+  .eb-icon-tile__box{ width:56px; height:56px; border-radius:var(--r-lg); background:var(--navy-panel); border:1px solid var(--navy-panel-border-2); display:flex; align-items:center; justify-content:center; color:var(--blue-3); box-shadow:var(--shadow-panel-navy); }
+  .eb-icon-tile__box svg{ width:26px; height:26px; }
+  .eb-icon-tile__label{ font-size:11.5px; font-weight:600; text-align:center; color:var(--navy); line-height:1.25; }
+
+  .eb-stat-card{ width:260px; background:var(--navy-panel); border:1px solid var(--navy-panel-border); border-radius:var(--r-4xl); box-shadow:var(--shadow-panel-navy); padding:20px 22px; }
+  .eb-stat-card__label{ font-size:12.5px; font-weight:600; color:var(--muted-on-navy); }
+  .eb-stat-card__value-row{ display:flex; align-items:baseline; gap:10px; margin:8px 0 14px; }
+  .eb-stat-card__value{ font-family:'Schibsted Grotesk',sans-serif; font-weight:600; font-size:30px; color:#fff; }
+  .eb-stat-card__delta{ font-family:'IBM Plex Mono',ui-monospace,monospace; font-size:12.5px; font-weight:600; color:var(--green-bright); background:rgba(91,203,139,.14); padding:3px 8px; border-radius:20px; }
+  .eb-stat-card__spark{ display:block; width:100%; height:40px; }
 </style>
 </head>
 <body>
 
-<div class="banner">Page privée de prévisualisation — <code>noindex,nofollow</code>, non liée depuis le site, non chargée par WordPress. Aucune illustration de cette page n'est intégrée aux templates publics.</div>
-<div class="reject-banner">Les 6 illustrations « eb-flow » de la première tentative (<code>assets/images/illustrations/eb-flow/</code>) sont refusées : composition identique répétée (deux cartes / cercle / deux cartes), robot générique, connecteurs peu lisibles. Cette page présente trois directions radicalement différentes construites uniquement sur une seule thématique pilote (Excel, PDF et OCR), en attente de validation avant toute déclinaison.</div>
+<div class="banner">Page privée de prévisualisation — <code>noindex,nofollow</code>, non liée depuis le site, non chargée par WordPress. Aucune illustration ni aucun composant de cette page n'est intégré aux templates publics.</div>
+<div class="reject-banner">Les 6 illustrations « eb-flow » de la première tentative (<code>assets/images/illustrations/eb-flow/</code>) sont refusées : composition identique répétée (deux cartes / cercle / deux cartes), robot générique, connecteurs peu lisibles. Les directions A/B/C ci-dessous ont ensuite été refusées en bloc également. La <b>Direction D</b> et la section « Bibliothèque de composants » plus bas sont la nouvelle tentative, construite à partir de la référence graphique fournie (« EB Flow — Design System ») dont seuls certains éléments ont été retenus — voir la note d'interprétation avant la Direction D.</div>
 
 <header class="page-head">
   <h1>Directions pilotes — iconographie de marque EB</h1>
-  <p>Trois partis pris graphiques distincts pour une même thématique (Excel, PDF et OCR), construits sur la géométrie réelle du logo officiel : segments de circuit horizontaux + coupes à 45°, points de connexion en anneau creux de tailles variées, palette bleu nuit / bleu électrique existante, orange en accent ponctuel.</p>
-  <p>Aucune des trois ne reprend la composition « deux cartes à gauche → cercle → deux cartes à droite » de la tentative précédente. Chaque direction porte sa propre logique de composition et pourrait, si validée, être déclinée aux 20 composants de la bibliothèque de marque.</p>
+  <p>Quatre partis pris graphiques pour une même thématique pilote (Excel, PDF et OCR), tous construits sur la géométrie du logo officiel : bleu nuit / bleu électrique existants, orange en accent ponctuel, jamais de nouvelle couleur ni de nouvelle police. Les directions A/B/C explorent des compositions distinctes ; la Direction D reprend plus directement la structure de la référence externe fournie (noyau central, trois entrées, trois sorties, connecteurs à angles arrondis).</p>
+  <p>Rien n'est intégré aux templates publics avant validation explicite. Poids, contraste et lisibilité (fond clair / fond bleu nuit / 375px / carte réelle du site) sont vérifiés pour chaque proposition.</p>
 </header>
 
 <main>
@@ -123,6 +141,101 @@
     </div></div>
 
     <div class="weight-line"><span>Poids brut : <b>3 350 o (3,27 Ko)</b></span><span>Gzip (poids transféré estimé) : <b>830 o (0,81 Ko)</b></span></div>
+  </section>
+
+  <section class="direction interpretation-note">
+    <div class="direction__head">
+      <div class="direction__label">Note d'interprétation</div>
+      <h2 class="direction__title">Ce qui a été retenu de la référence « EB Flow — Design System », et ce qui ne l'a pas été</h2>
+      <p class="direction__desc">La référence fournie utilise sa propre palette (bleu nuit #0A1020, cyan #00E5FF…) et sa propre police (« Exo 2 »), différentes de celles du site. Consigne explicite reçue : pas de changement de police, pas de refonte de mise en page, protéger le score vitesse mobile (90/100). En conséquence :</p>
+      <ul class="interpretation-list">
+        <li><b>Conservé de la référence (principes visuels, approuvés) :</b> connexions électroniques avec points de connexion, angles arrondis en équerre à 90° (au lieu des coupes à 45° de la Direction A), lueur/profondeur restreinte autour du noyau central, composition minimale.</li>
+        <li><b>Non repris :</b> la palette bleu nuit/cyan de la référence (le site garde exclusivement les couleurs de <code>tokens.css</code>) et la police « Exo 2 » (le site garde Schibsted Grotesk / Hanken Grotesk / IBM Plex Mono). Aucun des deux n'a été mentionné comme validé.</li>
+        <li><b>Noyau central :</b> la référence centre le logo carré officiel dans chaque illustration. Le brief précédent interdisait explicitement de redessiner les lettres E/B dans une illustration. Choix fait ici : un noyau abstrait à trois branches (écho des trois circuits du logo, sans texte ni lettre) plutôt que le fichier logo lui-même — à corriger facilement si un logo littéral est préféré.</li>
+        <li><b>Bibliothèque de composants :</b> carte stat/KPI avec sparkline et rangée de tuiles d'icônes de catégories ajoutées ci-dessous (nouveauté réelle, absente de la bibliothèque existante) ; le stepper et la coche de validation existent déjà (<code>eb_status_step()</code>, <code>eb_icon('validation')</code>) et ne sont pas reconstruits.</li>
+        <li><b>Contrastes :</b> tous les éléments neufs restent au-dessus de 4,5:1 (texte/valeurs) et 3:1 (icônes/traits) sur leurs deux fonds d'usage — voir les relevés sous chaque bloc.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="direction">
+    <div class="direction__head">
+      <div class="direction__label">Direction D</div>
+      <h2 class="direction__title">Inspirée de la référence — noyau central, 3 entrées, 3 sorties</h2>
+      <p class="direction__desc">Structure directement adaptée de la section « Illustrations maîtresses » de la référence : un noyau central (angles arrondis, lueur discrète) relié à trois tuiles d'entrée (document PDF, reconnaissance OCR, données brutes) et trois tuiles de sortie (grille Excel structurée, validation, tableau de bord), par des connecteurs en équerre à 90° avec points de connexion — au lieu des traces à coupe 45° de la Direction A. Chaque tuile porte son propre fond bleu nuit (autoportante sur tout arrière-plan).</p>
+      <div class="direction__traits">
+        <span class="trait">Angles arrondis à 90° (pas de coupe à 45°)</span>
+        <span class="trait">Noyau abstrait à 3 branches (pas de lettres)</span>
+        <span class="trait">3 entrées + 3 sorties, tuiles autoportantes</span>
+        <span class="trait">7,1 Ko — le plus riche des quatre, dans le budget</span>
+      </div>
+    </div>
+
+    <div class="demo-row demo-row--light"><div class="demo-row__label">Fond clair</div><div class="demo-row__body"><img src="eb-iconography-directions/direction-d-reference-excel-pdf-ocr.svg" alt=""></div></div>
+    <div class="demo-row demo-row--dark"><div class="demo-row__label">Fond bleu nuit</div><div class="demo-row__body"><img src="eb-iconography-directions/direction-d-reference-excel-pdf-ocr.svg" alt=""></div></div>
+    <div class="demo-row demo-row--mobile"><div class="mobile-frame"><div class="demo-row__label">Largeur mobile (375px)</div><img src="eb-iconography-directions/direction-d-reference-excel-pdf-ocr.svg" alt=""></div></div>
+    <div class="demo-row demo-row--card"><div class="demo-row__label">Dans une carte réelle du site (.pillar-mock)</div><div class="demo-row__body">
+      <div class="pillar-mock"><img src="eb-iconography-directions/direction-d-reference-excel-pdf-ocr.svg" width="800" height="212" alt=""></div>
+    </div></div>
+
+    <div class="weight-line"><span>Poids brut : <b>7 107 o (6,94 Ko)</b></span><span>Gzip (poids transféré estimé) : <b>1 171 o (1,14 Ko)</b></span></div>
+  </section>
+
+  <section class="direction">
+    <div class="direction__head">
+      <div class="direction__label">Bibliothèque de composants</div>
+      <h2 class="direction__title">Deux composants réutilisables issus de la référence (section 5)</h2>
+      <p class="direction__desc">Le stepper (<code>eb_status_step()</code>) et la coche de validation (<code>eb_icon('validation')</code>) existent déjà dans <code>functions.php</code> et ne sont pas reconstruits ici. Les deux composants ci-dessous sont réellement nouveaux : une rangée de tuiles d'icônes de catégories (même langage visuel que les tuiles de la Direction D, réutilisable pour toute liste d'intégrations/catégories) et une carte stat/KPI avec sparkline (chiffre réel plausible pour EB Automatisation, pas la maquette « chiffre d'affaires » de la référence).</p>
+      <div class="direction__traits">
+        <span class="trait">HTML/CSS + petits SVG inline (pas d'image)</span>
+        <span class="trait">Même style de tuile que le noyau/entrées de la Direction D</span>
+        <span class="trait">Sparkline avec remplissage + point final accentué</span>
+      </div>
+    </div>
+
+    <div class="demo-row demo-row--light">
+      <div class="demo-row__label">Rangée de tuiles — fond clair</div>
+      <div class="demo-row__body">
+        <div class="eb-icon-tiles">
+          <div class="eb-icon-tile"><span class="eb-icon-tile__box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5.5" rx="7.5" ry="3"></ellipse><path d="M4.5 5.5v6c0 1.66 3.36 3 7.5 3s7.5-1.34 7.5-3v-6"></path><path d="M4.5 11.5v6c0 1.66 3.36 3 7.5 3s7.5-1.34 7.5-3v-6"></path></svg></span><span class="eb-icon-tile__label">Base de données</span></div>
+          <div class="eb-icon-tile"><span class="eb-icon-tile__box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M4 6.5l8 6 8-6"></path></svg></span><span class="eb-icon-tile__label">Email</span></div>
+          <div class="eb-icon-tile"><span class="eb-icon-tile__box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"></circle><path d="M3.5 20c0-3.6 2.9-6.2 5.5-6.2s5.5 2.6 5.5 6.2"></path><circle cx="17.5" cy="9" r="2.3"></circle><path d="M15.3 13.6c2.4.3 4.7 2.4 4.7 6.4"></path></svg></span><span class="eb-icon-tile__label">CRM</span></div>
+          <div class="eb-icon-tile"><span class="eb-icon-tile__box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h7l4 4v14H7z"></path><path d="M14 3v4h4"></path><line x1="9.5" y1="12.5" x2="14.5" y2="12.5"></line><line x1="9.5" y1="16" x2="14.5" y2="16"></line></svg></span><span class="eb-icon-tile__label">PDF</span></div>
+          <div class="eb-icon-tile"><span class="eb-icon-tile__box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"></rect><line x1="4" y1="10" x2="20" y2="10"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10.3" y1="4" x2="10.3" y2="20"></line><line x1="15.7" y1="4" x2="15.7" y2="20"></line></svg></span><span class="eb-icon-tile__label">Excel</span></div>
+          <div class="eb-icon-tile"><span class="eb-icon-tile__box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4.5-8 4.5-8-4.5z"></path><path d="M4 12.5l8 4.5 8-4.5"></path><path d="M4 16.5l8 4.5 8-4.5"></path></svg></span><span class="eb-icon-tile__label">ERP</span></div>
+          <div class="eb-icon-tile"><span class="eb-icon-tile__box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="19" x2="5" y2="12"></line><line x1="10.3" y1="19" x2="10.3" y2="6"></line><line x1="15.7" y1="19" x2="15.7" y2="10"></line><line x1="21" y1="19" x2="21" y2="3.5"></line></svg></span><span class="eb-icon-tile__label">Tableau de bord</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="demo-row demo-row--dark">
+      <div class="demo-row__label">Carte stat/KPI — fond bleu nuit</div>
+      <div class="demo-row__body">
+        <div class="eb-stat-card">
+          <div class="eb-stat-card__label">Tâches automatisées / mois</div>
+          <div class="eb-stat-card__value-row"><span class="eb-stat-card__value">128</span><span class="eb-stat-card__delta">+24 %</span></div>
+          <svg class="eb-stat-card__spark" viewBox="0 0 220 40" preserveAspectRatio="none">
+            <defs><linearGradient id="spk-preview" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#5BB6FF" stop-opacity=".35"></stop><stop offset="100%" stop-color="#5BB6FF" stop-opacity="0"></stop></linearGradient></defs>
+            <path d="M0 30 L27 26 L55 28 L82 18 L110 20 L137 12 L165 15 L192 6 L220 8 L220 40 L0 40 Z" fill="url(#spk-preview)"></path>
+            <path d="M0 30 L27 26 L55 28 L82 18 L110 20 L137 12 L165 15 L192 6 L220 8" fill="none" stroke="#5BB6FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            <circle cx="220" cy="8" r="3.4" fill="#5BB6FF"></circle>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="demo-row demo-row--mobile"><div class="mobile-frame"><div class="demo-row__label">Carte stat/KPI — mobile 375px</div>
+      <div class="eb-stat-card" style="width:auto;">
+        <div class="eb-stat-card__label">Tâches automatisées / mois</div>
+        <div class="eb-stat-card__value-row"><span class="eb-stat-card__value">128</span><span class="eb-stat-card__delta">+24 %</span></div>
+        <svg class="eb-stat-card__spark" viewBox="0 0 220 40" preserveAspectRatio="none">
+          <path d="M0 30 L27 26 L55 28 L82 18 L110 20 L137 12 L165 15 L192 6 L220 8" fill="none" stroke="#5BB6FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+          <circle cx="220" cy="8" r="3.4" fill="#5BB6FF"></circle>
+        </svg>
+      </div>
+    </div></div>
+
+    <div class="weight-line"><span>Tuile d'icône : <b>~230 o</b> chacune (SVG inline, pas de requête)</span><span>Carte stat/KPI : <b>~950 o</b> HTML+CSS+SVG (pas de requête)</span></div>
   </section>
 
   <section class="direction" style="border-bottom:none;">
