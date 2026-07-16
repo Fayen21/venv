@@ -1,0 +1,536 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>EB Automatisation — Bibliothèque de composants</title>
+<style>
+  :root{
+    --bg: #F7F9FC;
+    --bg-elevated: #FFFFFF;
+    --bg-sunken: #F2F5FA;
+    --text: #0C1E3C;
+    --text-muted: #5A6880;
+    --text-faint: #8B96AA;
+    --border: #E4E9F2;
+    --border-strong: #CBD5E5;
+    --accent: #DD7A33;
+    --accent-text: #9B5524;
+
+    /* tokens du site (tokens.css), jamais modifiés */
+    --navy: #0C1E3C;
+    --navy-panel: #0A1A33;
+    --navy-border: #16294a;
+    --navy-border-2: #11264A;
+    --blue: #2E9BFF;
+    --blue-2: #3BA5FF;
+    --blue-3: #5BB6FF;
+    --green-bright: #5BCB8B;
+    --orange: #DD7A33;
+    --muted-on-navy: #9DAAC2;
+    --mono-on-navy: #C7D2E4;
+
+    --font-display: -apple-system, 'Segoe UI Semibold', 'Segoe UI', system-ui, sans-serif;
+    --font-body: -apple-system, 'Segoe UI', system-ui, sans-serif;
+    --font-mono: ui-monospace, 'Cascadia Code', 'Segoe UI Mono', Consolas, 'Liberation Mono', monospace;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg: #0A1220;
+      --bg-elevated: #101B30;
+      --bg-sunken: #0D1729;
+      --text: #EDF1F8;
+      --text-muted: #9DAAC2;
+      --text-faint: #6B7A96;
+      --border: #1E3458;
+      --border-strong: #2A4270;
+      --accent: #E59B6A;
+      --accent-text: #E59B6A;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg: #0A1220;
+    --bg-elevated: #101B30;
+    --bg-sunken: #0D1729;
+    --text: #EDF1F8;
+    --text-muted: #9DAAC2;
+    --text-faint: #6B7A96;
+    --border: #1E3458;
+    --border-strong: #2A4270;
+    --accent: #E59B6A;
+    --accent-text: #E59B6A;
+  }
+  :root[data-theme="light"]{
+    --bg: #F7F9FC;
+    --bg-elevated: #FFFFFF;
+    --bg-sunken: #F2F5FA;
+    --text: #0C1E3C;
+    --text-muted: #5A6880;
+    --text-faint: #8B96AA;
+    --border: #E4E9F2;
+    --border-strong: #CBD5E5;
+    --accent: #DD7A33;
+    --accent-text: #9B5524;
+  }
+
+  *{ box-sizing: border-box; }
+  html, body{ margin:0; padding:0; }
+  body{
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-body);
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  ::selection{ background: var(--accent); color: #fff; }
+  code{ font-family: var(--font-mono); font-size: .92em; background: var(--bg-sunken); padding: .1em .4em; border-radius: 4px; }
+
+  .banner{
+    font-size: 13.5px;
+    padding: 11px 32px;
+    border-bottom: 1px solid var(--border);
+    background: var(--bg-sunken);
+    color: var(--text-muted);
+  }
+  .banner strong{ color: var(--text); }
+
+  header.page-head{
+    padding: 56px 32px 40px;
+    border-bottom: 1px solid var(--border);
+    background: var(--bg-elevated);
+  }
+  .page-head__inner{ max-width: 940px; margin: 0 auto; }
+  .page-head__eyebrow{
+    font-family: var(--font-mono);
+    font-size: 11.5px; font-weight: 600;
+    letter-spacing: .08em; text-transform: uppercase;
+    color: var(--accent-text);
+    margin: 0 0 14px;
+  }
+  h1{
+    font-family: var(--font-display);
+    font-size: clamp(26px, 3.6vw, 34px);
+    font-weight: 700; letter-spacing: -.015em;
+    margin: 0 0 16px; text-wrap: balance;
+  }
+  .page-head p{ font-size: 15.5px; color: var(--text-muted); max-width: 70ch; margin: 0 0 10px; }
+  .page-head p:last-child{ margin-bottom: 0; }
+
+  main{ max-width: 1180px; margin: 0 auto; padding: 0 32px 90px; }
+
+  section{ padding: 52px 0; border-bottom: 1px solid var(--border); }
+  section:last-of-type{ border-bottom: none; }
+  h2{
+    font-family: var(--font-display);
+    font-size: 21px; font-weight: 700; letter-spacing: -.01em;
+    margin: 0 0 8px;
+  }
+  .section-desc{ font-size: 14.5px; color: var(--text-muted); max-width: 76ch; margin: 0 0 24px; }
+
+  /* ---- grille de cartes de composants (sur fond bleu nuit, leur habitat) ---- */
+  .comp-stage{
+    background: var(--navy);
+    border-radius: 20px;
+    padding: 34px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+  }
+  .comp-card{
+    background: var(--navy-panel);
+    border: 1px solid var(--navy-border);
+    border-radius: 18px;
+    padding: 22px 20px 18px;
+    display: flex; flex-direction: column; align-items: center; gap: 18px;
+    min-height: 210px;
+  }
+  .comp-card__label{
+    font-family: var(--font-display);
+    font-size: 14.5px; font-weight: 600;
+    color: #fff; text-align: center;
+  }
+  .comp-card__demo{ flex: 1; display: flex; align-items: center; justify-content: center; width: 100%; }
+  .comp-card__hover-spec{
+    font-family: var(--font-mono);
+    font-size: 11px; color: var(--muted-on-navy);
+    text-align: center; line-height: 1.5;
+  }
+  .comp-card--wide{ grid-column: 1 / -1; min-height: 0; }
+
+  /* ---- Bouton / Lien ---- */
+  .eb-btn-glow{
+    display: inline-flex; align-items: center; gap: 9px;
+    padding: 13px 24px; border-radius: 12px;
+    background: rgba(46,155,255,.07);
+    border: 1px solid var(--blue-2);
+    color: #fff; font-weight: 600; font-size: 15px;
+    font-family: var(--font-body);
+    text-decoration: none; cursor: pointer;
+    box-shadow: 0 0 14px rgba(46,155,255,.30), inset 0 0 10px rgba(46,155,255,.10);
+    transition: box-shadow .25s ease, border-color .25s ease;
+  }
+  .eb-btn-glow:hover, .eb-btn-glow:focus-visible{
+    border-color: var(--blue-3);
+    box-shadow: 0 0 26px rgba(46,155,255,.55), inset 0 0 14px rgba(46,155,255,.18);
+    outline: none;
+  }
+  .eb-btn-glow__arrow{ transition: transform .25s ease; }
+  .eb-btn-glow:hover .eb-btn-glow__arrow{ transform: translateX(4px); }
+
+  /* ---- Carte stat/KPI ---- */
+  .eb-stat-card{
+    width: 250px; max-width: 100%;
+    background: var(--navy-panel);
+    border: 1px solid var(--blue-2);
+    border-radius: 16px;
+    box-shadow: 0 0 18px rgba(46,155,255,.22), 0 24px 50px -30px rgba(12,30,60,.6);
+    padding: 18px 20px;
+    transition: box-shadow .25s ease, transform .25s ease;
+  }
+  .eb-stat-card:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 0 28px rgba(46,155,255,.40), 0 30px 60px -30px rgba(12,30,60,.7);
+  }
+  .eb-stat-card__label{ font-size: 12.5px; font-weight: 600; color: var(--muted-on-navy); }
+  .eb-stat-card__value-row{ display: flex; align-items: baseline; gap: 10px; margin: 7px 0 12px; }
+  .eb-stat-card__value{ font-family: var(--font-display); font-weight: 700; font-size: 28px; color: #fff; }
+  .eb-stat-card__delta{ font-family: var(--font-mono); font-size: 12px; font-weight: 600; color: var(--green-bright); background: rgba(91,203,139,.14); padding: 3px 8px; border-radius: 20px; }
+  .eb-stat-card__spark{ display: block; width: 100%; height: 36px; }
+
+  /* ---- Icône (nœud en anneau lumineux) ---- */
+  .eb-icon-ring{
+    position: relative;
+    width: 78px; height: 78px; border-radius: 50%;
+    border: 2px solid var(--blue-2);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--blue-3);
+    box-shadow: 0 0 18px rgba(46,155,255,.35), inset 0 0 12px rgba(46,155,255,.12);
+    transition: box-shadow .25s ease;
+  }
+  .eb-icon-ring svg{ width: 34px; height: 34px; }
+  .eb-icon-ring:hover{ box-shadow: 0 0 28px rgba(46,155,255,.6), inset 0 0 16px rgba(46,155,255,.2); }
+  @media (prefers-reduced-motion: no-preference){
+    .eb-icon-ring::after{
+      content:""; position:absolute; inset:-2px; border-radius:50%;
+      border: 2px solid rgba(46,155,255,.5);
+      opacity: 0; transform: scale(1);
+    }
+    .eb-icon-ring:hover::after{ animation: eb-pulse 1.4s ease-out infinite; }
+    @keyframes eb-pulse{
+      0%{ opacity:.55; transform:scale(1); }
+      100%{ opacity:0; transform:scale(1.35); }
+    }
+  }
+
+  /* ---- Étape / Statut (stepper) ---- */
+  .eb-stepper{ display: flex; align-items: center; }
+  .eb-step{
+    width: 46px; height: 46px; border-radius: 50%;
+    border: 2px solid var(--mono-on-navy);
+    background: var(--navy-panel);
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-display); font-weight: 700; font-size: 17px;
+    color: #fff; flex: none;
+  }
+  .eb-step--active{
+    border-color: var(--blue-3);
+    background: var(--blue);
+    box-shadow: 0 0 18px rgba(46,155,255,.55), inset 0 0 8px rgba(255,255,255,.15);
+    transition: box-shadow .25s ease;
+  }
+  .eb-stepper:hover .eb-step--active{ box-shadow: 0 0 28px rgba(46,155,255,.8), inset 0 0 8px rgba(255,255,255,.2); }
+  .eb-step__line{ width: 34px; height: 2px; background: var(--navy-border); }
+  .eb-step__line--done{ background: var(--blue-2); box-shadow: 0 0 8px rgba(46,155,255,.5); }
+
+  /* ---- Validation ---- */
+  .eb-validate{
+    width: 78px; height: 78px; border-radius: 50%;
+    border: 2px solid var(--green-bright);
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 0 20px rgba(91,203,139,.38), inset 0 0 14px rgba(91,203,139,.12);
+    transition: box-shadow .25s ease, transform .25s ease;
+  }
+  .eb-validate svg{ width: 36px; height: 36px; }
+  .eb-validate:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(91,203,139,.6), inset 0 0 18px rgba(91,203,139,.2);
+  }
+
+  /* ---- Connecteurs / Flux ---- */
+  .eb-connect{ width: 100%; max-width: 250px; }
+  .eb-connect svg{ display: block; width: 100%; height: auto; }
+  .eb-connect .flux{ opacity: 0; }
+  @media (prefers-reduced-motion: no-preference){
+    .eb-connect .flux{
+      stroke-dasharray: 6 90;
+      stroke-dashoffset: 0;
+    }
+    .comp-card:hover .eb-connect .flux{
+      opacity: 1;
+      animation: eb-flux 1.6s linear infinite;
+    }
+    @keyframes eb-flux{
+      from{ stroke-dashoffset: 96; }
+      to{ stroke-dashoffset: 0; }
+    }
+  }
+
+  /* ---- Tuiles d'icônes ---- */
+  .eb-icon-tiles{ display: flex; flex-wrap: wrap; gap: 18px; justify-content: center; }
+  .eb-icon-tile{ display: flex; flex-direction: column; align-items: center; gap: 9px; width: 86px; }
+  .eb-icon-tile__box{
+    width: 56px; height: 56px; border-radius: 14px;
+    background: var(--navy-panel);
+    border: 1px solid var(--navy-border-2);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--blue-3);
+    transition: box-shadow .25s ease, border-color .25s ease;
+  }
+  .eb-icon-tile__box svg{ width: 26px; height: 26px; }
+  .eb-icon-tile:hover .eb-icon-tile__box{
+    border-color: var(--blue-2);
+    box-shadow: 0 0 16px rgba(46,155,255,.4);
+  }
+  .eb-icon-tile__label{ font-size: 11.5px; font-weight: 600; text-align: center; color: var(--mono-on-navy); line-height: 1.25; }
+
+  /* ---- adaptation fond clair ---- */
+  .light-stage{
+    background: #FFFFFF;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 34px;
+    display: flex; flex-wrap: wrap; gap: 34px; align-items: center; justify-content: center;
+  }
+  .eb-btn-glow--light{
+    background: rgba(46,155,255,.05);
+    border-color: #1E5FD0;
+    color: #0C1E3C;
+    box-shadow: 0 0 12px rgba(46,155,255,.18);
+  }
+  .eb-btn-glow--light:hover{ box-shadow: 0 0 20px rgba(46,155,255,.35); }
+  .eb-step--on-light{ background: #fff; border-color: #5A6880; color: #0C1E3C; }
+  .eb-step--on-light.eb-step--active{ background: var(--blue); border-color: #1E5FD0; color: #fff; }
+  .eb-step__line--on-light{ background: #CBD5E5; }
+  .eb-validate--light{
+    border-color: #1E8E5A;
+    box-shadow: 0 0 14px rgba(30,142,90,.25), inset 0 0 10px rgba(30,142,90,.08);
+  }
+  .eb-validate--light:hover{ box-shadow: 0 0 22px rgba(30,142,90,.4), inset 0 0 12px rgba(30,142,90,.12); }
+
+  .note-list{
+    margin: 14px 0 0; padding-left: 20px;
+    font-size: 14px; color: var(--text-muted); line-height: 1.6; max-width: 78ch;
+  }
+  .note-list li{ margin-bottom: 9px; }
+  .note-list b{ color: var(--text); }
+  .callout{
+    background: var(--bg-sunken);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 26px 30px;
+  }
+
+  .weight-line{
+    display: flex; gap: 22px; flex-wrap: wrap; margin-top: 20px;
+    font-family: var(--font-mono); font-size: 12.5px; color: var(--text-muted);
+  }
+  .weight-line b{ color: var(--text); font-weight: 600; }
+
+  footer{
+    text-align: center; padding: 34px 32px;
+    font-size: 12.5px; color: var(--text-faint);
+    border-top: 1px solid var(--border);
+  }
+
+  @media (max-width: 860px){
+    .comp-stage{ grid-template-columns: 1fr; padding: 22px; }
+    header.page-head{ padding: 40px 20px 32px; }
+    main{ padding: 0 20px 70px; }
+  }
+</style>
+</head>
+<body>
+<div class="banner">Page privée de prévisualisation — <code>noindex,nofollow</code>, non liée depuis le site, non chargée par WordPress. Aucun composant de cette page n'est intégré aux templates publics avant validation explicite. Les illustrations maîtresses « à noyau central » (directions A/B/C/D) sont abandonnées sur décision client — cette page ne présente plus que la bibliothèque de composants.</div>
+
+<header class="page-head">
+  <div class="page-head__inner">
+    <p class="page-head__eyebrow">EB Automatisation — Iconographie de marque · Bibliothèque de composants</p>
+    <h1>Bibliothèque de composants EB — langage lumineux</h1>
+    <p>Six composants réutilisables directement inspirés de la référence « EB Flow — Design System » (sections 4, 5 et 8) : connecteurs à nœuds lumineux, stepper d'étapes, validation en anneau, bouton à lueur bleue, carte stat/KPI et tuiles d'icônes de catégories. La lueur est le fil conducteur — obtenue en pur CSS (<code>box-shadow</code>) et en double-trait SVG, sans aucun filtre SVG lourd ni image, pour ne rien coûter au score vitesse mobile.</p>
+    <p>Palette et polices du site inchangées : uniquement les couleurs de <code>tokens.css</code> (bleu nuit, bleus électriques, vert, orange en accent) — ni la palette cyan ni la police « Exo 2 » de la référence. Les animations au survol reprennent les spécifications de la section 8 de la référence et sont désactivées pour les visiteurs qui préfèrent réduire les animations (<code>prefers-reduced-motion</code>).</p>
+  </div>
+</header>
+
+<main>
+
+  <section>
+    <h2>Les six composants, sur leur fond d'usage (bleu nuit)</h2>
+    <p class="section-desc">Chaque carte reproduit le format de la référence : libellé, composant, et — en dessous, en petit — le comportement au survol. <b>Survolez chaque composant pour voir son animation.</b></p>
+
+    <div class="comp-stage">
+
+      <div class="comp-card">
+        <div class="comp-card__label">Connecteurs / Flux</div>
+        <div class="comp-card__demo">
+          <div class="eb-connect">
+            <svg viewBox="0 0 240 150" aria-hidden="true">
+              <!-- traces : double trait (halo large translucide + trait net) -->
+              <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 118 L54 118 L82 90 L146 90" stroke="#2E9BFF" stroke-width="6" opacity=".22"></path>
+                <path d="M14 118 L54 118 L82 90 L146 90" stroke="#5BB6FF" stroke-width="2"></path>
+                <path class="flux" d="M14 118 L54 118 L82 90 L146 90" stroke="#FFFFFF" stroke-width="2.4"></path>
+
+                <path d="M14 94 L44 94 L72 66 L172 66" stroke="#2E9BFF" stroke-width="6" opacity=".22"></path>
+                <path d="M14 94 L44 94 L72 66 L172 66" stroke="#3BA5FF" stroke-width="2"></path>
+                <path class="flux" d="M14 94 L44 94 L72 66 L172 66" stroke="#FFFFFF" stroke-width="2.4"></path>
+
+                <path d="M14 70 L36 70 L58 48 L110 48" stroke="#2E9BFF" stroke-width="6" opacity=".22"></path>
+                <path d="M14 70 L36 70 L58 48 L110 48" stroke="#5BB6FF" stroke-width="2"></path>
+
+                <path d="M14 142 L92 142" stroke="#2E9BFF" stroke-width="6" opacity=".22"></path>
+                <path d="M14 142 L92 142" stroke="#3BA5FF" stroke-width="2"></path>
+              </g>
+              <!-- nœuds : anneau creux + halo, tailles variées -->
+              <circle cx="152" cy="90" r="8" fill="none" stroke="#2E9BFF" stroke-width="5" opacity=".22"></circle>
+              <circle cx="152" cy="90" r="5.5" fill="#0A1A33" stroke="#5BB6FF" stroke-width="2.2"></circle>
+              <circle cx="180" cy="66" r="10" fill="none" stroke="#2E9BFF" stroke-width="6" opacity=".25"></circle>
+              <circle cx="180" cy="66" r="7" fill="#0A1A33" stroke="#5BB6FF" stroke-width="2.4"></circle>
+              <circle cx="116" cy="48" r="6.5" fill="none" stroke="#2E9BFF" stroke-width="4" opacity=".22"></circle>
+              <circle cx="116" cy="48" r="4.2" fill="#0A1A33" stroke="#3BA5FF" stroke-width="2"></circle>
+              <circle cx="98" cy="142" r="3.6" fill="#3BA5FF"></circle>
+              <circle cx="98" cy="142" r="6.5" fill="none" stroke="#2E9BFF" stroke-width="3" opacity=".25"></circle>
+              <circle cx="54" cy="118" r="3" fill="#5BB6FF"></circle>
+            </svg>
+          </div>
+        </div>
+        <div class="comp-card__hover-spec">Survol : flux lumineux, parcours dynamique</div>
+      </div>
+
+      <div class="comp-card">
+        <div class="comp-card__label">Étape / Statut</div>
+        <div class="comp-card__demo">
+          <div class="eb-stepper" aria-label="Étape 2 sur 3">
+            <div class="eb-step">1</div>
+            <div class="eb-step__line eb-step__line--done"></div>
+            <div class="eb-step eb-step--active">2</div>
+            <div class="eb-step__line"></div>
+            <div class="eb-step">3</div>
+          </div>
+        </div>
+        <div class="comp-card__hover-spec">Survol : lueur active progressive</div>
+      </div>
+
+      <div class="comp-card">
+        <div class="comp-card__label">Validation</div>
+        <div class="comp-card__demo">
+          <div class="eb-validate">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#5BCB8B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"></path></svg>
+          </div>
+        </div>
+        <div class="comp-card__hover-spec">Survol : lueur + retour visuel</div>
+      </div>
+
+      <div class="comp-card">
+        <div class="comp-card__label">Bouton / Lien</div>
+        <div class="comp-card__demo">
+          <button class="eb-btn-glow" type="button">En savoir plus <span class="eb-btn-glow__arrow">→</span></button>
+        </div>
+        <div class="comp-card__hover-spec">Survol : lueur bleue + flèche animée</div>
+      </div>
+
+      <div class="comp-card">
+        <div class="comp-card__label">Carte stat / KPI</div>
+        <div class="comp-card__demo">
+          <div class="eb-stat-card">
+            <div class="eb-stat-card__label">Tâches automatisées / mois</div>
+            <div class="eb-stat-card__value-row"><span class="eb-stat-card__value">128</span><span class="eb-stat-card__delta">+24 %</span></div>
+            <svg class="eb-stat-card__spark" viewBox="0 0 220 40" preserveAspectRatio="none" aria-hidden="true">
+              <defs><linearGradient id="spk" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#5BB6FF" stop-opacity=".35"></stop><stop offset="100%" stop-color="#5BB6FF" stop-opacity="0"></stop></linearGradient></defs>
+              <path d="M0 30 L27 26 L55 28 L82 18 L110 20 L137 12 L165 15 L192 6 L220 8 L220 40 L0 40 Z" fill="url(#spk)"></path>
+              <path d="M0 30 L27 26 L55 28 L82 18 L110 20 L137 12 L165 15 L192 6 L220 8" fill="none" stroke="#5BB6FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              <circle cx="220" cy="8" r="3.4" fill="#5BB6FF"></circle>
+            </svg>
+          </div>
+        </div>
+        <div class="comp-card__hover-spec">Survol : lueur + élévation subtile</div>
+      </div>
+
+      <div class="comp-card">
+        <div class="comp-card__label">Icône (nœud)</div>
+        <div class="comp-card__demo">
+          <div class="eb-icon-ring">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="3"></circle>
+              <path d="M12 9V4.5"></path><path d="M9.5 14l-3.6 3"></path><path d="M14.5 14l3.6 3"></path>
+              <circle cx="12" cy="3.5" r="1.3"></circle><circle cx="5" cy="17.8" r="1.3"></circle><circle cx="19" cy="17.8" r="1.3"></circle>
+            </svg>
+          </div>
+        </div>
+        <div class="comp-card__hover-spec">Survol : lueur de nœud + pulse</div>
+      </div>
+
+      <div class="comp-card comp-card--wide">
+        <div class="comp-card__label">Tuiles d'icônes de catégories</div>
+        <div class="comp-card__demo">
+          <div class="eb-icon-tiles">
+            <div class="eb-icon-tile"><span class="eb-icon-tile__box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5.5" rx="7.5" ry="3"></ellipse><path d="M4.5 5.5v6c0 1.66 3.36 3 7.5 3s7.5-1.34 7.5-3v-6"></path><path d="M4.5 11.5v6c0 1.66 3.36 3 7.5 3s7.5-1.34 7.5-3v-6"></path></svg></span><span class="eb-icon-tile__label">Base de données</span></div>
+            <div class="eb-icon-tile"><span class="eb-icon-tile__box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M4 6.5l8 6 8-6"></path></svg></span><span class="eb-icon-tile__label">Email</span></div>
+            <div class="eb-icon-tile"><span class="eb-icon-tile__box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"></circle><path d="M3.5 20c0-3.6 2.9-6.2 5.5-6.2s5.5 2.6 5.5 6.2"></path><circle cx="17.5" cy="9" r="2.3"></circle><path d="M15.3 13.6c2.4.3 4.7 2.4 4.7 6.4"></path></svg></span><span class="eb-icon-tile__label">CRM</span></div>
+            <div class="eb-icon-tile"><span class="eb-icon-tile__box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h7l4 4v14H7z"></path><path d="M14 3v4h4"></path><line x1="9.5" y1="12.5" x2="14.5" y2="12.5"></line><line x1="9.5" y1="16" x2="14.5" y2="16"></line></svg></span><span class="eb-icon-tile__label">PDF</span></div>
+            <div class="eb-icon-tile"><span class="eb-icon-tile__box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"></rect><line x1="4" y1="10" x2="20" y2="10"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10.3" y1="4" x2="10.3" y2="20"></line><line x1="15.7" y1="4" x2="15.7" y2="20"></line></svg></span><span class="eb-icon-tile__label">Excel</span></div>
+            <div class="eb-icon-tile"><span class="eb-icon-tile__box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4.5-8 4.5-8-4.5z"></path><path d="M4 12.5l8 4.5 8-4.5"></path><path d="M4 16.5l8 4.5 8-4.5"></path></svg></span><span class="eb-icon-tile__label">ERP</span></div>
+            <div class="eb-icon-tile"><span class="eb-icon-tile__box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="19" x2="5" y2="12"></line><line x1="10.3" y1="19" x2="10.3" y2="6"></line><line x1="15.7" y1="19" x2="15.7" y2="10"></line><line x1="21" y1="19" x2="21" y2="3.5"></line></svg></span><span class="eb-icon-tile__label">Tableau de bord</span></div>
+          </div>
+        </div>
+        <div class="comp-card__hover-spec">Survol : lueur de bordure sur la tuile</div>
+      </div>
+
+    </div>
+
+    <div class="weight-line">
+      <span>Connecteurs/Flux : <b>~2,4 Ko</b> SVG inline</span>
+      <span>Stepper / Validation / Bouton : <b>HTML + CSS pur</b></span>
+      <span>Carte KPI : <b>~950 o</b></span>
+      <span>Tuile : <b>~230 o</b> chacune</span>
+      <span>Aucune requête réseau, aucun filtre SVG</span>
+    </div>
+  </section>
+
+  <section>
+    <h2>Adaptation sur fond clair</h2>
+    <p class="section-desc">La lueur est un langage de fond sombre : sur les sections blanches du site, elle est réduite (halo plus discret, bordures plus foncées pour garder le contraste) et le stepper passe en variante claire. Le bouton lumineux reste réservé aux panneaux bleu nuit — sur fond clair, les CTA orange existants du site restent la norme.</p>
+    <div class="light-stage">
+      <button class="eb-btn-glow eb-btn-glow--light" type="button">En savoir plus <span class="eb-btn-glow__arrow">→</span></button>
+      <div class="eb-stepper" aria-label="Étape 2 sur 3">
+        <div class="eb-step eb-step--on-light">1</div>
+        <div class="eb-step__line eb-step__line--on-light"></div>
+        <div class="eb-step eb-step--on-light eb-step--active">2</div>
+        <div class="eb-step__line eb-step__line--on-light"></div>
+        <div class="eb-step eb-step--on-light">3</div>
+      </div>
+      <div class="eb-validate eb-validate--light">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#1E8E5A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"></path></svg>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="callout">
+      <h2>Note d'interprétation</h2>
+      <ul class="note-list">
+        <li><b>Illustrations maîtresses abandonnées :</b> les quatre directions précédentes (A/B/C/D, y compris le « noyau central ») sont écartées sur décision client. Cette page ne porte plus que la bibliothèque de composants.</li>
+        <li><b>Repris de la référence :</b> le langage lumineux (lueurs bleues douces, nœuds en anneau, connecteurs de circuit), les six familles de composants de la section 5, et les comportements de survol de la section 8.</li>
+        <li><b>Non repris :</b> la palette de la référence (cyan #00E5FF, bleu nuit #0A1020…) et la police « Exo 2 » — le site garde exclusivement <code>tokens.css</code> et ses polices actuelles.</li>
+        <li><b>Technique :</b> lueurs en <code>box-shadow</code> CSS et double-trait SVG (halo large translucide sous trait net) — aucun filtre SVG (<code>feGaussianBlur</code>…), aucun JavaScript, aucune image. Coût de poids quasi nul, aucun impact sur le score vitesse mobile.</li>
+        <li><b>Animations :</b> transitions et pulsations CSS uniquement, encapsulées dans <code>@media (prefers-reduced-motion: no-preference)</code> pour les visiteurs sensibles au mouvement.</li>
+        <li><b>Prochaine étape (après validation) :</b> intégration dans le thème sous forme de composants CSS <code>.eb-*</code> + helpers PHP dans <code>functions.php</code>, sur le modèle de <code>eb_icon()</code>/<code>eb_status_step()</code> existants — rien n'est poussé dans les templates publics avant votre accord.</li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<footer>Page de travail interne — EB Automatisation. Non indexée, non liée depuis le site public. Bibliothèque de composants en attente de validation avant intégration au thème.</footer>
+</body>
+</html>
