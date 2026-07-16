@@ -72,7 +72,7 @@
   border-top:1px solid var(--navy-panel-border);
   padding:14px 22px;display:flex;align-items:center;gap:10px;
 }
-.workflow-panel__note-check{ color:var(--green-bright);font-size:15px; }
+.workflow-panel__note-check{ color:var(--green-bright);font-size:15px;text-shadow:0 0 8px rgba(91,203,139,.6); }
 .workflow-panel__note [data-workflow-note]{ font-size:13px;color:var(--muted-on-navy); }
 
 .workflow-step{
@@ -279,6 +279,7 @@
 .bank-apres__gain-check{
   width:26px;height:26px;flex:none;border-radius:50%;background:rgba(91,203,139,.14);color:var(--green-bright);
   display:flex;align-items:center;justify-content:center;font-size:14px;margin-top:1px;
+  box-shadow:0 0 0 1px rgba(91,203,139,.35), 0 0 10px rgba(91,203,139,.4);
 }
 .bank-apres__gain-item span:last-child{ font-family:var(--font-heading);font-weight:600;font-size:16.5px;line-height:1.35;color:#fff;letter-spacing:-.01em; }
 
@@ -358,7 +359,7 @@
 .case-band__desc{ font-size:16px;line-height:1.62;color:var(--muted-on-navy);margin:0 0 26px; }
 .case-band .btn-text{ color:#fff; }
 .case-band__stats{ gap:16px; }
-.case-band__stat{ background:var(--navy-card);border:1px solid var(--navy-card-border);border-radius:var(--r-3xl);padding:24px; }
+.case-band__stat{ background:var(--navy-card);border:1px solid var(--blue-2);border-radius:var(--r-3xl);padding:24px;box-shadow:0 0 0 1px rgba(46,155,255,.14), 0 12px 28px -18px rgba(30,95,208,.6); }
 .case-band__stat-value{ font-family:var(--font-heading);font-weight:700;font-size:36px;color:#fff;letter-spacing:-.02em; }
 .case-band__stat-label{ font-size:13.5px;color:var(--muted-on-navy);margin-top:4px; }
 

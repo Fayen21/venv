@@ -70,6 +70,7 @@
 .audit-success__icon{
   width:56px; height:56px; border-radius:50%; background:var(--green-bg); color:var(--green);
   display:flex; align-items:center; justify-content:center; margin-bottom:22px;
+  box-shadow:0 0 0 1px rgba(30,142,90,.18), 0 0 14px rgba(30,142,90,.25);
 }
 .audit-success h2{ font-size:28px; letter-spacing:-.02em; margin:0 0 12px; }
 .audit-success__desc{ font-size:16px; line-height:1.6; color:var(--text-3); margin:0 0 24px; }
@@ -90,8 +91,9 @@
 .audit-success__tile{
   text-decoration:none; display:flex; flex-direction:column; align-items:center; gap:8px;
   background:var(--bg-soft); border:1px solid var(--border); border-radius:14px; padding:22px;
-  color:var(--navy);
+  color:var(--navy); transition:box-shadow .2s ease, border-color .2s ease;
 }
+.audit-success__tile:hover, .audit-success__tile:focus-visible{ border-color:var(--blue-2); box-shadow:0 0 14px rgba(46,155,255,.22); }
 .audit-success__tile span{ font-family:var(--font-heading); font-weight:600; font-size:14.5px; color:var(--navy); }
 
 .audit-success__back{

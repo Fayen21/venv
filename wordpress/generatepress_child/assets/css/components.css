@@ -148,6 +148,7 @@
   height:7px;
   border-radius:50%;
   background:var(--green-bright);
+  box-shadow:0 0 6px rgba(91,203,139,.75);
   animation:ebblink 1.4s ease-in-out infinite;
 }
 
