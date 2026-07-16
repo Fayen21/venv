@@ -57,17 +57,20 @@
   margin-bottom:18px;
   flex:none;
 }
-.icon-tile--a{ background:var(--orange-soft-bg); color:var(--orange); }
-.icon-tile--b{ background:#E7F1FF; color:var(--blue-deep); }
-.icon-tile--green{ background:var(--green-bg); color:var(--green); }
+.icon-tile--a{ background:var(--navy-panel); border:1px solid var(--orange); color:var(--orange); box-shadow:0 0 0 1px rgba(221,122,51,.25), 0 0 16px rgba(221,122,51,.35); }
+.icon-tile--b{ background:var(--navy-panel); border:1px solid var(--blue-2); color:var(--blue-3); box-shadow:0 0 0 1px rgba(46,155,255,.25), 0 0 16px rgba(46,155,255,.35); }
+.icon-tile--green{ background:var(--navy-panel); border:1px solid var(--green); color:var(--green-bright); box-shadow:0 0 0 1px rgba(30,142,90,.25), 0 0 16px rgba(30,142,90,.35); }
+.automations__card--link:hover .icon-tile--a{ box-shadow:0 0 0 1px rgba(221,122,51,.4), 0 0 26px rgba(221,122,51,.6); }
+.automations__card--link:hover .icon-tile--b{ box-shadow:0 0 0 1px rgba(46,155,255,.4), 0 0 26px rgba(46,155,255,.6); }
+.automations__card--link:hover .icon-tile--green{ box-shadow:0 0 0 1px rgba(30,142,90,.4), 0 0 26px rgba(30,142,90,.6); }
 
-/* Vignettes teintées : la carte entière reprend la couleur de son icône (pêche/bleu/vert). */
+/* Bordure teintée légère : la carte reste blanche, seul un liseré reprend la couleur de son icône (pêche/bleu/vert). */
 .automations__card:has(.icon-tile--a),
-.differentiators__card:has(.icon-tile--a){ background:var(--orange-soft-bg); border-color:var(--orange-soft-border); }
+.differentiators__card:has(.icon-tile--a){ border-color:var(--orange-soft-border); }
 .automations__card:has(.icon-tile--b),
-.differentiators__card:has(.icon-tile--b){ background:#E7F1FF; border-color:#C7E1FF; }
+.differentiators__card:has(.icon-tile--b){ border-color:#C7E1FF; }
 .automations__card:has(.icon-tile--green),
-.differentiators__card:has(.icon-tile--green){ background:var(--green-bg); border-color:var(--green-border); }
+.differentiators__card:has(.icon-tile--green){ border-color:var(--green-border); }
 
 /* ---------- badge pill ---------- */
 .badge-pill{
@@ -223,6 +226,8 @@
   transition:transform .16s ease, box-shadow .16s ease, border-color .16s ease;
 }
 .tool-chip--link:hover{ transform:translateY(-2px); box-shadow:var(--shadow-card); border-color:var(--orange-soft-border-2); }
+.tool-chip--link:hover .tool-chip__abbr{ box-shadow:inset 0 0 0 1px rgba(255,255,255,.14), 0 0 0 3px rgba(46,155,255,.22), 0 0 14px rgba(46,155,255,.55); }
+.tool-chip--link:hover .tool-chip__abbr--logo{ border-color:var(--blue-2); box-shadow:0 0 12px rgba(46,155,255,.4); }
 .tool-chip--link:focus-visible{ outline:2px solid var(--orange); outline-offset:2px; }
 .tool-chip__chevron{
   margin-left:auto; flex:none; color:var(--muted); opacity:.5;

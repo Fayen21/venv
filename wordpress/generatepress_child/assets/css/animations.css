@@ -13,3 +13,23 @@
   0%,100%{ opacity:1; }
   50%{ opacity:.25; }
 }
+
+/* ---------- lueur : ajoutées lors de l'intégration de la bibliothèque de composants "lueur" ---------- */
+@keyframes ebconnectorflow{
+  0%{ top:0%; opacity:0; }
+  15%{ opacity:1; }
+  85%{ opacity:1; }
+  100%{ top:100%; opacity:0; }
+}
+@keyframes ebcheckpulse{
+  0%,100%{ box-shadow:0 0 0 1.5px rgba(91,203,139,.55), 0 0 16px rgba(91,203,139,.7); }
+  50%{ box-shadow:0 0 0 1.5px rgba(91,203,139,.9), 0 0 28px rgba(91,203,139,1); }
+}
+@keyframes ebchecktextpulse{
+  0%,100%{ text-shadow:0 0 12px rgba(91,203,139,1); }
+  50%{ text-shadow:0 0 22px rgba(91,203,139,1); }
+}
+@keyframes ebringpulse{
+  0%,100%{ box-shadow:0 0 0 1.5px rgba(30,142,90,.4), 0 0 16px rgba(30,142,90,.35); }
+  50%{ box-shadow:0 0 0 1.5px rgba(30,142,90,.7), 0 0 26px rgba(30,142,90,.6); }
+}

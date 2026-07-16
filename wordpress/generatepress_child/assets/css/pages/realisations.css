@@ -20,8 +20,8 @@
 /* flux RH (étapes verticales) */
 .case-flow{ display:flex; flex-direction:column; gap:0; }
 .case-flow__step{ display:flex; align-items:center; gap:12px; }
-.case-flow__icon{ width:34px; height:34px; flex:none; border-radius:9px; background:var(--navy); color:#fff; display:flex; align-items:center; justify-content:center; font-size:15px; }
-.case-flow__icon--done{ background:var(--green); }
+.case-flow__icon{ width:34px; height:34px; flex:none; border-radius:9px; background:var(--navy); border:1px solid var(--blue-2); color:#fff; display:flex; align-items:center; justify-content:center; font-size:15px; box-shadow:0 0 0 1px rgba(46,155,255,.25), 0 0 12px rgba(46,155,255,.35); }
+.case-flow__icon--done{ background:var(--green); border-color:var(--green-bright); box-shadow:0 0 0 1px rgba(91,203,139,.3), 0 0 12px rgba(91,203,139,.4); }
 .case-flow__label{ font-family:var(--font-heading); font-weight:600; font-size:14.5px; color:var(--navy); }
 .case-flow__label--done{ color:var(--green-dark-text); }
 .case-flow__connector{ width:2px; height:14px; margin-left:16px; background:var(--border-4); }
@@ -84,7 +84,7 @@
 /* ============ vous gardez le contrôle (4 cartes) ============ */
 .control-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:18px; }
 .control-card{ background:#fff; border:1px solid var(--border-2); border-radius:16px; padding:28px; }
-.control-card__icon{ width:44px; height:44px; border-radius:12px; background:var(--green-bg); color:var(--green); display:flex; align-items:center; justify-content:center; margin-bottom:16px; }
+.control-card__icon{ width:44px; height:44px; border-radius:12px; background:var(--navy-panel); border:1px solid var(--green); color:var(--green-bright); display:flex; align-items:center; justify-content:center; margin-bottom:16px; box-shadow:0 0 0 1px rgba(30,142,90,.25), 0 0 16px rgba(30,142,90,.35); }
 .control-card h3{ font-size:17px; margin:0 0 7px; }
 .control-card p{ font-size:14px; line-height:1.55; color:var(--text-3); margin:0; }
 

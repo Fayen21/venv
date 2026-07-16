@@ -2,7 +2,8 @@
 
 /* ============ nos expertises (3 piliers + spécialisations) ============ */
 .home-expertise__card{ text-decoration:none; color:inherit; background:#fff; border:1px solid var(--border-2); border-radius:18px; padding:30px 26px; display:flex; flex-direction:column; gap:12px; height:100%; }
-.home-expertise__icon{ width:52px; height:52px; border-radius:14px; background:var(--orange-soft-bg); color:var(--orange); display:flex; align-items:center; justify-content:center; }
+.home-expertise__icon{ width:52px; height:52px; border-radius:14px; background:var(--navy-panel); border:1px solid var(--orange); color:var(--orange); display:flex; align-items:center; justify-content:center; box-shadow:0 0 0 1px rgba(221,122,51,.25), 0 0 16px rgba(221,122,51,.35); transition:box-shadow .2s ease; }
+.home-expertise__card:hover .home-expertise__icon{ box-shadow:0 0 0 1px rgba(221,122,51,.4), 0 0 26px rgba(221,122,51,.65); }
 .home-expertise__title{ font-family:var(--font-heading); font-weight:700; font-size:19px; color:var(--navy); letter-spacing:-.01em; }
 .home-expertise__desc{ font-size:14px; color:var(--muted); line-height:1.55; flex:1; }
 .home-expertise__link{ font-size:13.5px; font-weight:600; color:var(--orange-a11y); }
@@ -73,6 +74,9 @@
   padding:14px 22px;display:flex;align-items:center;gap:10px;
 }
 .workflow-panel__note-check{ color:var(--green-bright);font-size:15px;text-shadow:0 0 12px rgba(91,203,139,1); }
+@media (prefers-reduced-motion: no-preference){
+  .workflow-panel__note:hover .workflow-panel__note-check{ animation:ebchecktextpulse 1.3s ease-in-out infinite; }
+}
 .workflow-panel__note [data-workflow-note]{ font-size:13px;color:var(--muted-on-navy); }
 
 .workflow-step{
@@ -81,13 +85,24 @@
   border:1px solid #1E3458;background:#0E2143;
 }
 .workflow-step.is-active{ background:#12315f;border-color:#2E9BFF;box-shadow:0 0 0 1px rgba(46,155,255,.3), 0 0 28px -4px rgba(46,155,255,.65); }
-.workflow-step__connector{ height:18px;width:2px;margin-left:36px;background:#1E3458; }
+.workflow-step__connector{ height:18px;width:2px;margin-left:36px;background:#1E3458;position:relative;overflow:visible; }
 .workflow-step.is-done + .workflow-step__connector{ background:linear-gradient(180deg,var(--green-bright),var(--blue-2));box-shadow:0 0 6px rgba(91,203,139,.6); }
+.workflow-step__connector::after{
+  content:"";position:absolute;left:50%;top:0;width:6px;height:6px;margin-left:-3px;border-radius:50%;
+  background:var(--blue-3);box-shadow:0 0 10px rgba(91,203,139,.9);opacity:0;
+}
+@media (prefers-reduced-motion: no-preference){
+  .workflow-panel:hover .workflow-step.is-done + .workflow-step__connector::after{
+    animation:ebconnectorflow 1s ease-in-out infinite;
+  }
+}
 .workflow-step__icon{
   width:38px;height:38px;flex:none;border-radius:var(--r-md);
-  background:#16294a;display:flex;align-items:center;justify-content:center;
-  font-size:18px;position:relative;
+  background:#16294a;border:1px solid #2a3f66;display:flex;align-items:center;justify-content:center;
+  font-size:18px;position:relative;box-shadow:0 0 0 1px rgba(46,155,255,.12);
 }
+.workflow-step.is-active .workflow-step__icon{ border-color:var(--blue-2);box-shadow:0 0 0 1px rgba(46,155,255,.3), 0 0 16px rgba(46,155,255,.4); }
+.workflow-step.is-done .workflow-step__icon{ border-color:var(--green-bright);box-shadow:0 0 0 1px rgba(91,203,139,.3), 0 0 12px rgba(91,203,139,.3); }
 .workflow-step__dot{
   position:absolute;right:-3px;top:-3px;width:9px;height:9px;border-radius:50%;
   background:#3A4D70;
@@ -282,6 +297,9 @@
   display:flex;align-items:center;justify-content:center;font-size:14px;margin-top:1px;
   box-shadow:0 0 0 1.5px rgba(91,203,139,.55), 0 0 16px rgba(91,203,139,.7);
 }
+@media (prefers-reduced-motion: no-preference){
+  .bank-apres__gain-item:hover .bank-apres__gain-check{ animation:ebcheckpulse 1.3s ease-in-out infinite; }
+}
 .bank-apres__gain-item span:last-child{ font-family:var(--font-heading);font-weight:600;font-size:16.5px;line-height:1.35;color:#fff;letter-spacing:-.01em; }
 
 /* ============ flux logiciel visible ============ */
@@ -294,9 +312,9 @@
 .flow-panel__head{ display:flex;align-items:center;gap:9px;padding:13px 16px;border-bottom:1px solid var(--border); }
 .flow-panel--navy .flow-panel__head{ border-bottom-color:var(--navy-panel-border); }
 .flow-panel__icon{ width:24px;height:24px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:13px;color:#fff; }
-.flow-panel__icon--navy{ background:var(--navy); }
-.flow-panel__icon--orange{ background:var(--orange); }
-.flow-panel__icon--green{ background:var(--green); }
+.flow-panel__icon--navy{ background:var(--navy);box-shadow:0 0 0 1px rgba(46,155,255,.3), 0 0 10px rgba(46,155,255,.4); }
+.flow-panel__icon--orange{ background:var(--orange);box-shadow:0 0 0 1px rgba(221,122,51,.35), 0 0 10px rgba(221,122,51,.45); }
+.flow-panel__icon--green{ background:var(--green);box-shadow:0 0 0 1px rgba(30,142,90,.35), 0 0 10px rgba(30,142,90,.4); }
 .flow-panel__title{ font-family:var(--font-heading);font-weight:600;font-size:13.5px;color:var(--navy); }
 .flow-panel__title--on-dark{ color:#fff; }
 .flow-panel__dots{ margin-left:auto;font-family:var(--font-mono);font-size:10px;color:var(--green-bright); }
@@ -424,8 +442,9 @@
   padding:36px 40px;display:grid;grid-template-columns:auto 1fr;gap:26px;align-items:start;margin-bottom:40px;
 }
 .audit-why__icon{
-  width:48px;height:48px;flex:none;border-radius:var(--r-xl);background:var(--green-bg);color:var(--green);
+  width:48px;height:48px;flex:none;border-radius:var(--r-xl);background:var(--navy-panel);border:1px solid var(--green);color:var(--green-bright);
   display:flex;align-items:center;justify-content:center;font-size:22px;
+  box-shadow:0 0 0 1px rgba(30,142,90,.25), 0 0 16px rgba(30,142,90,.35);
 }
 .audit-why__text{ font-size:15.5px;line-height:1.62;color:var(--text-3);margin:0 0 8px; }
 .audit-why__text:last-child{ margin-bottom:0; }
