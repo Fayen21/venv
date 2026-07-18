@@ -24,7 +24,17 @@
 .case-flow__icon--done{ background:var(--green); border-color:var(--green-bright); box-shadow:0 0 0 1px rgba(91,203,139,.3), 0 0 12px rgba(91,203,139,.4); }
 .case-flow__label{ font-family:var(--font-heading); font-weight:600; font-size:14.5px; color:var(--navy); }
 .case-flow__label--done{ color:var(--green-dark-text); }
-.case-flow__connector{ width:2px; height:14px; margin-left:16px; background:var(--border-4); }
+.case-flow__connector{ width:2px; height:14px; margin-left:16px; background:var(--border-4); position:relative; overflow:visible; }
+.case-flow__step:has(.case-flow__icon--done) + .case-flow__connector{
+  background:linear-gradient(180deg,var(--green-bright),var(--blue-2)); box-shadow:0 0 6px rgba(91,203,139,.6);
+}
+.case-flow__connector::after{
+  content:""; position:absolute; left:50%; top:0; width:5px; height:5px; margin-left:-2.5px; border-radius:50%;
+  background:var(--blue-3); box-shadow:0 0 8px rgba(91,203,139,.9); opacity:0;
+}
+@media (prefers-reduced-motion: no-preference){
+  .case-flow__step:has(.case-flow__icon--done) + .case-flow__connector::after{ animation:ebconnectorflow 1.2s ease-in-out infinite; }
+}
 
 /* panneau navy (résultats chiffrés — cas 1) — même navy uni que les panneaux --terminal des autres cas */
 .case-study__side{ background:var(--navy-panel); color:#fff; padding:44px; display:flex; flex-direction:column; justify-content:center; gap:18px; }

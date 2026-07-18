@@ -73,7 +73,7 @@
   box-shadow:0 0 0 1.5px rgba(30,142,90,.4), 0 0 22px rgba(30,142,90,.4);
 }
 @media (prefers-reduced-motion: no-preference){
-  .audit-success:hover .audit-success__icon{ animation:ebringpulse 1.3s ease-in-out infinite; }
+  .audit-success__icon{ animation:ebringpulse 1.8s ease-in-out infinite; }
 }
 .audit-success h2{ font-size:28px; letter-spacing:-.02em; margin:0 0 12px; }
 .audit-success__desc{ font-size:16px; line-height:1.6; color:var(--text-3); margin:0 0 24px; }

@@ -260,8 +260,8 @@ get_header();
   <!-- preuves sociales -->
   <section class="section">
     <div class="section-head">
-      <span class="eyebrow">Preuves</span>
-      <h2 style="max-width:720px;margin:0 auto;">Des résultats observés sur des missions représentatives</h2>
+      <span class="eyebrow">Concrètement</span>
+      <h2 style="max-width:720px;margin:0 auto;">Ce que ça change, avant / après</h2>
     </div>
     <div class="grid grid-2 proof-cases__grid">
 
@@ -349,7 +349,7 @@ get_header();
       </div>
 
     </div>
-    <p class="proof-cases__footnote">Exemples représentatifs d'automatisations réalisables. Des cas clients détaillés seront publiés progressivement.</p>
+    <p class="proof-cases__footnote">Exemples types d'automatisations mises en place pour des TPE-PME comparables.</p>
   </section>
 
   <!-- avant / après — rapprochement bancaire -->
