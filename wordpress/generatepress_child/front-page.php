@@ -249,11 +249,10 @@ get_header();
         <div class="tool-chip"><?php echo eb_tool_icon_html('pennylane'); ?><span class="tool-chip__label">Pennylane</span></div>
         <div class="tool-chip"><?php echo eb_tool_icon_html('notion'); ?><span class="tool-chip__label">Notion</span></div>
         <div class="tool-chip"><?php echo eb_tool_icon_html('hubspot'); ?><span class="tool-chip__label">HubSpot</span></div>
-        <div class="tool-chip"><?php echo eb_tool_icon_html('pipedrive'); ?><span class="tool-chip__label">Pipedrive</span></div>
         <a href="<?php echo esc_url( eb_url('consultant-make') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('make'); ?><span class="tool-chip__label">Make</span><?php echo eb_tool_chevron(); ?></a>
         <a href="<?php echo esc_url( eb_url('consultant-n8n') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('n8n'); ?><span class="tool-chip__label">n8n</span><?php echo eb_tool_chevron(); ?></a>
-        <div class="tool-chip"><?php echo eb_tool_icon_html('ogust'); ?><span class="tool-chip__label">Ogust</span></div>
       </div>
+      <?php echo eb_tool_compat_note(); ?>
     </div>
   </section>
 

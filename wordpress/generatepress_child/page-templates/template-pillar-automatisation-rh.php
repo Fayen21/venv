@@ -107,6 +107,7 @@ if ( ! defined( 'ABSPATH' ) ) {
         <a href="<?php echo esc_url( eb_url('consultant-n8n') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('n8n'); ?><span class="tool-chip__label">n8n</span><?php echo eb_tool_chevron(); ?></a>
         <div class="tool-chip"><?php echo eb_tool_icon_html('docusign'); ?><span class="tool-chip__label">DocuSign</span></div>
       </div>
+      <?php echo eb_tool_compat_note(); ?>
     </div>
 
     <!-- comment nous intervenons -->

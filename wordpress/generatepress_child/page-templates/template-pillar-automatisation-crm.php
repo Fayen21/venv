@@ -27,7 +27,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div class="pillar-hero">
       <div class="eyebrow pillar-hero__eyebrow">Automatisation CRM</div>
       <h1>Automatisation CRM : un pipeline commercial qui se met à jour tout seul</h1>
-      <p class="pillar-hero__intro">Un CRM PME ou CRM TPE (HubSpot, Pipedrive, Salesforce…) ne vaut que si les données qu'il contient sont à jour. L'automatisation CRM connecte vos emails, formulaires et outils commerciaux pour que chaque contact, chaque étape du pipeline commercial et chaque relance se mette à jour automatiquement — sans ressaisie côté équipe commerciale.</p>
+      <p class="pillar-hero__intro">Un CRM PME ou CRM TPE (HubSpot, Salesforce…) ne vaut que si les données qu'il contient sont à jour. L'automatisation CRM connecte vos emails, formulaires et outils commerciaux pour que chaque contact, chaque étape du pipeline commercial et chaque relance se mette à jour automatiquement — sans ressaisie côté équipe commerciale.</p>
       <div class="pillar-hero__actions">
         <a href="<?php echo esc_url( eb_url('realisations') ); ?>" class="btn btn-primary">Découvrir un cas concret <span>→</span></a>
         <a href="<?php echo esc_url( eb_url('solutions') ); ?>" class="btn btn-secondary">Voir toutes les solutions</a>
@@ -101,12 +101,12 @@ if ( ! defined( 'ABSPATH' ) ) {
       <p>L'automatisation CRM se construit sur les CRM les plus utilisés par les TPE-PME françaises.</p>
       <div class="tool-chip-grid">
         <div class="tool-chip"><?php echo eb_tool_icon_html('hubspot'); ?><span class="tool-chip__label">HubSpot</span></div>
-        <div class="tool-chip"><?php echo eb_tool_icon_html('pipedrive'); ?><span class="tool-chip__label">Pipedrive</span></div>
         <div class="tool-chip"><?php echo eb_tool_icon_html('salesforce'); ?><span class="tool-chip__label">Salesforce</span></div>
         <a href="<?php echo esc_url( eb_url('automatisation-outlook') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('outlook'); ?><span class="tool-chip__label">Outlook</span><?php echo eb_tool_chevron(); ?></a>
         <a href="<?php echo esc_url( eb_url('consultant-make') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('make'); ?><span class="tool-chip__label">Make</span><?php echo eb_tool_chevron(); ?></a>
         <a href="<?php echo esc_url( eb_url('consultant-n8n') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('n8n'); ?><span class="tool-chip__label">n8n</span><?php echo eb_tool_chevron(); ?></a>
       </div>
+      <?php echo eb_tool_compat_note(); ?>
     </div>
 
     <!-- comment nous intervenons -->
@@ -155,7 +155,7 @@ if ( ! defined( 'ABSPATH' ) ) {
       <h2>Questions fréquentes</h2>
       <div class="pillar-faq__item">
         <h3>Quel CRM est le plus adapté à une TPE-PME ?</h3>
-        <p>HubSpot, Pipedrive et Salesforce couvrent la grande majorité des besoins d'un CRM PME ou CRM TPE. Le bon choix dépend surtout de votre volume de contacts et de votre budget — l'automatisation, elle, s'adapte à celui que vous avez déjà.</p>
+        <p>HubSpot et Salesforce couvrent la grande majorité des besoins d'un CRM PME ou CRM TPE. Le bon choix dépend surtout de votre volume de contacts et de votre budget — l'automatisation, elle, s'adapte à celui que vous avez déjà.</p>
       </div>
       <div class="pillar-faq__item">
         <h3>Dois-je changer de CRM pour l'automatiser ?</h3>

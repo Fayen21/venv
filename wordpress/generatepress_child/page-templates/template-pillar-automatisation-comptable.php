@@ -111,6 +111,7 @@ if ( ! defined( 'ABSPATH' ) ) {
         <div class="tool-chip"><?php echo eb_tool_icon_html('qonto'); ?><span class="tool-chip__label">Qonto</span></div>
         <a href="<?php echo esc_url( eb_url('automatisation-excel') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('excel'); ?><span class="tool-chip__label">Excel</span><?php echo eb_tool_chevron(); ?></a>
       </div>
+      <?php echo eb_tool_compat_note(); ?>
     </div>
 
     <!-- comment nous intervenons -->

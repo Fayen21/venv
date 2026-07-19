@@ -40,3 +40,6 @@
   0%,100%{ opacity:.7; text-shadow:0 0 8px rgba(221,122,51,.5); transform:translateX(0); }
   50%{ opacity:1; text-shadow:0 0 16px rgba(221,122,51,.9); transform:translateX(3px); }
 }
+@keyframes ebbtncurrent{
+  to{ offset-distance:100%; }
+}

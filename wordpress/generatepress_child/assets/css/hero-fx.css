@@ -124,7 +124,8 @@
 
 .eb-hero-fx .hero__lead,
 .eb-hero-fx .pillar-hero__intro,
-.eb-hero-fx .hero-left p{ color:var(--muted-on-navy); }
+.eb-hero-fx .hero-left p,
+.eb-hero-fx .audit-side__lead{ color:var(--muted-on-navy); }
 
 .eb-hero-fx .hero__reassurance{ color:var(--muted-on-navy); }
 .eb-hero-fx .hero__demo-label span:first-child{ color:var(--muted-on-navy); }

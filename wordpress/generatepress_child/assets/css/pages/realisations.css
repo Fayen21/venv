@@ -61,7 +61,7 @@
 .case-study__mock-live{ display:inline-flex; align-items:center; gap:6px; font-family:var(--font-mono); font-size:10px; color:var(--green-bright); flex:none; }
 .case-study__mock-live-dot{ width:6px; height:6px; border-radius:50%; background:var(--green-bright); box-shadow:0 0 10px rgba(91,203,139,1); animation:ebblink 1.6s ease-in-out infinite; }
 .case-study__mock-body{ padding:6px 18px 14px; }
-.case-study__mock-row{ display:flex; align-items:center; gap:12px; padding:13px 0; border-top:1px solid var(--navy-panel-border); }
+.case-study__mock-row{ display:flex; align-items:center; gap:12px; padding:13px 0; border-top:1px solid var(--navy-panel-border); position:relative; overflow:visible; }
 .case-study__mock-dot{ width:9px; height:9px; border-radius:50%; flex:none; }
 /* états de la puce de statut — mêmes teintes que les valeurs .case-study__mock-val
    ci-dessous, pilotées par token plutôt que par un hex répété en style="" inline. */
@@ -71,8 +71,23 @@
 .case-study__mock-label{ flex:1; font-size:13.5px; color:var(--mono-on-navy); }
 .case-study__mock-val{ font-family:var(--font-mono); font-size:11px; font-weight:500; padding:4px 10px; border-radius:20px; white-space:nowrap; }
 .case-study__mock-val--neutral{ color:var(--mono-on-navy); background:rgba(255,255,255,.05); }
-.case-study__mock-val--info{ color:var(--blue-3); background:rgba(46,155,255,.16); }
-.case-study__mock-val--success{ color:var(--green-bright); background:rgba(91,203,139,.12); }
+.case-study__mock-val--info{ color:var(--blue-3); background:rgba(46,155,255,.16); box-shadow:0 0 0 1px rgba(46,155,255,.3), 0 0 10px rgba(46,155,255,.3); }
+.case-study__mock-val--success{ color:var(--green-bright); background:rgba(91,203,139,.12); box-shadow:0 0 0 1px rgba(91,203,139,.35), 0 0 10px rgba(91,203,139,.35); }
+
+/* flux entre les lignes du mockup — même technique que sur Solutions (voir
+   solutions.css .solution-row__mock-row) : un point lumineux descend d'une
+   ligne à l'autre, coloré selon l'état de la ligne qu'il rejoint. */
+.case-study__mock-row::before{
+  content:""; position:absolute; left:4.5px; top:0; width:7px; height:7px; transform:translateX(-50%);
+  border-radius:50%; opacity:0; pointer-events:none;
+}
+.case-study__mock-row:first-child::before{ display:none; }
+.case-study__mock-row:has(.case-study__mock-dot--success)::before{ background:var(--green-bright); box-shadow:0 0 8px rgba(91,203,139,.9); }
+.case-study__mock-row:has(.case-study__mock-dot--info)::before{ background:var(--blue-3); box-shadow:0 0 8px rgba(91,182,255,.9); }
+.case-study__mock-row:has(.case-study__mock-dot--neutral)::before{ background:var(--muted-on-navy-2); box-shadow:0 0 6px rgba(157,170,194,.7); }
+@media (prefers-reduced-motion: no-preference){
+  .case-study__mock-row:not(:first-child)::before{ animation:ebconnectorflow 1.6s ease-in-out infinite; }
+}
 .case-study__big-stat{ margin-top:20px; display:inline-flex; align-items:center; gap:10px; background:var(--navy-card); border:1.5px solid var(--blue-2); border-radius:11px; padding:14px 18px; box-shadow:0 0 0 1px rgba(46,155,255,.25), 0 0 30px -6px rgba(46,155,255,.55), 0 14px 30px -18px rgba(30,95,208,.6); }
 .case-study__big-stat-value{ font-family:var(--font-heading); font-weight:700; font-size:24px; color:#fff; letter-spacing:-.02em; }
 .case-study__big-stat-label{ font-size:13px; color:var(--muted-on-navy); line-height:1.3; }
@@ -81,7 +96,8 @@
 .usecase-intro h2{ font-size:30px; letter-spacing:-.02em; margin:0 0 8px; }
 .usecase-intro p{ font-size:16px; color:var(--muted-3); margin:0 0 36px; }
 .usecase-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:14px; }
-.usecase-card{ background:#fff; border:1px solid var(--border-2); border-radius:16px; padding:22px; display:flex; flex-direction:column; height:100%; }
+.usecase-card{ background:#fff; border:1px solid var(--border-2); border-radius:16px; padding:22px; display:flex; flex-direction:column; height:100%; transition:box-shadow .2s ease, border-color .2s ease, transform .2s ease; }
+.usecase-card:hover{ border-color:var(--blue-2); box-shadow:0 0 0 1px rgba(46,155,255,.18), 0 20px 40px -22px rgba(30,95,208,.4); transform:translateY(-3px); }
 .usecase-card__sector{ font-size:12px; font-weight:600; color:var(--orange-a11y); margin-bottom:9px; }
 .usecase-card h3{ font-size:15.5px; margin:0 0 12px; line-height:1.3; }
 .usecase-card__body{ display:flex; flex-direction:column; gap:9px; flex:1; }
@@ -93,7 +109,9 @@
 
 /* ============ vous gardez le contrôle (4 cartes) ============ */
 .control-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:18px; }
-.control-card{ background:#fff; border:1px solid var(--border-2); border-radius:16px; padding:28px; }
+.control-card{ background:#fff; border:1px solid var(--border-2); border-radius:16px; padding:28px; transition:box-shadow .2s ease, border-color .2s ease, transform .2s ease; }
+.control-card:hover{ border-color:var(--green); box-shadow:0 0 0 1px rgba(30,142,90,.18), 0 20px 40px -22px rgba(30,142,90,.35); transform:translateY(-3px); }
+.control-card:hover .control-card__icon{ box-shadow:0 0 0 1px rgba(30,142,90,.4), 0 0 24px rgba(30,142,90,.6); }
 .control-card__icon{ width:44px; height:44px; border-radius:12px; background:var(--navy-panel); border:1px solid var(--green); color:var(--green-bright); display:flex; align-items:center; justify-content:center; margin-bottom:16px; box-shadow:0 0 0 1px rgba(30,142,90,.25), 0 0 16px rgba(30,142,90,.35); }
 .control-card h3{ font-size:17px; margin:0 0 7px; }
 .control-card p{ font-size:14px; line-height:1.55; color:var(--text-3); margin:0; }

@@ -13,9 +13,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 
     <!-- colonne gauche (sticky) -->
     <div class="audit-side">
+      <div class="eb-hero-fx audit-side__hero-fx">
+      <?php eb_hero_fx( eb_hero_fx_effects()['audit'] ); ?>
       <div class="eyebrow audit-side__eyebrow">Audit gratuit</div>
       <h1>45 minutes pour repérer vos automatisations les plus rentables</h1>
       <p class="audit-side__lead">Décrivez votre situation. Je reviens vers vous sous 24h pour fixer un créneau. À l'issue de l'échange, vous repartez avec des pistes concrètes — que vous travailliez avec moi ou non.</p>
+      </div>
 
       <div class="audit-points">
         <div class="audit-point"><span class="audit-point__check" aria-hidden="true">✓</span><span class="audit-point__text">45 minutes, par visioconférence ou téléphone</span></div>

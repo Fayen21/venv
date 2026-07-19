@@ -14,22 +14,29 @@
   position:relative;
   z-index:0;
 }
-/* Lueur de circuit au survol : anneau en dégradé conique masqué pour ne
-   garder que le contour (technique "gradient border"), qui tourne autour
-   du bouton. Couleur pilotée par --btn-circuit-color (orange par défaut,
-   bleu sur .btn-secondary) pour rester cohérente avec chaque style. */
-.btn::before{
-  content:"";
-  position:absolute; inset:-4px; border-radius:calc(var(--r-lg) + 4px);
-  padding:2px;
-  background:conic-gradient(from 0deg, transparent 0%, var(--btn-circuit-color, var(--orange)) 12%, #fff 18%, var(--btn-circuit-color, var(--orange)) 24%, transparent 42%);
-  -webkit-mask:linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite:xor; mask-composite:exclude;
-  opacity:0; pointer-events:none;
-  transition:opacity .2s ease;
-}
-@media (prefers-reduced-motion: no-preference){
-  .btn:hover::before{ opacity:1; animation:ebbordercircuit 1.1s linear infinite; }
+/* Courant électrique au survol : une étincelle qui parcourt le contour
+   RÉEL du bouton (offset-path:border-box suit le tracé du cadre, coins
+   arrondis compris), pas une rotation autour du centre. Couleur pilotée
+   par --btn-circuit-color (orange par défaut, bleu sur .btn-secondary)
+   pour rester cohérente avec chaque style. Dégrade proprement si le
+   navigateur ne supporte pas offset-path (bouton inchangé, sans étincelle). */
+@supports (offset-path: border-box){
+  .btn::before{
+    content:"";
+    position:absolute; inset:0; border-radius:inherit;
+    pointer-events:none;
+    background:radial-gradient(circle 10px at 0 0, #fff 0%, #fff 40%, var(--btn-circuit-color, var(--orange)) 70%, transparent 88%);
+    filter:drop-shadow(0 0 8px var(--btn-circuit-color, var(--orange))) drop-shadow(0 0 20px var(--btn-circuit-color, var(--orange)));
+    opacity:0;
+    offset-path:border-box;
+    offset-anchor:0 0;
+    offset-rotate:0deg;
+    offset-distance:0%;
+    transition:opacity .2s ease;
+  }
+  @media (prefers-reduced-motion: no-preference){
+    .btn:hover::before{ opacity:1; animation:ebbtncurrent 1.6s linear infinite; }
+  }
 }
 .btn-primary{
   background:var(--orange-a11y);
@@ -238,6 +245,7 @@
 /* ---------- tool chip (bandeaux d'outils : Accueil, Solutions, Réalisations, À propos, piliers) ---------- */
 .tool-chip-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; }
 .tool-chip-grid--home{ max-width:960px; margin:0 auto; }
+.tool-chip-grid__note{ font-size:13px; color:var(--muted-2); line-height:1.5; margin:14px 2px 0; }
 .tool-chip{
   display:flex; align-items:center; gap:12px;
   font-family:var(--font-heading); font-weight:700; font-size:14.5px; color:var(--navy);

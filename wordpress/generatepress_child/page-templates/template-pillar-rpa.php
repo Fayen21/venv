@@ -107,6 +107,7 @@ if ( ! defined( 'ABSPATH' ) ) {
         <a href="<?php echo esc_url( eb_url('automatisation-excel') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('excel'); ?><span class="tool-chip__label">Excel</span><?php echo eb_tool_chevron(); ?></a>
         <div class="tool-chip"><span class="tool-chip__abbr" style="background:#111111;color:#fff;">{}</span><span class="tool-chip__label">API REST</span></div>
       </div>
+      <?php echo eb_tool_compat_note(); ?>
     </div>
 
     <!-- comment nous intervenons -->

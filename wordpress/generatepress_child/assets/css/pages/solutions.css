@@ -61,8 +61,9 @@
 .solution-row__mock-file{ font-family:var(--font-mono); font-size:11.5px; color:var(--muted-on-navy-3); flex:1; min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; margin:0 12px; }
 .solution-row__mock-live{ display:inline-flex; align-items:center; gap:6px; font-family:var(--font-mono); font-size:10px; color:var(--green-bright); flex:none; }
 .solution-row__mock-live-dot{ width:6px; height:6px; border-radius:50%; background:var(--green-bright); box-shadow:0 0 10px rgba(91,203,139,1); animation:ebblink 1.6s ease-in-out infinite; }
+.solution-row__mock-live{ text-shadow:0 0 8px rgba(91,203,139,.5); }
 .solution-row__mock-body{ padding:6px 18px 14px; }
-.solution-row__mock-row{ display:flex; align-items:center; gap:12px; padding:13px 0; border-top:1px solid var(--navy-panel-border); }
+.solution-row__mock-row{ display:flex; align-items:center; gap:12px; padding:13px 0; border-top:1px solid var(--navy-panel-border); position:relative; overflow:visible; }
 .solution-row__mock-dot{ width:9px; height:9px; border-radius:50%; flex:none; }
 /* états de la puce de statut — mêmes teintes que les valeurs .solution-row__mock-val
    ci-dessous, pilotées par token plutôt que par un hex répété en style="" inline. */
@@ -72,14 +73,46 @@
 .solution-row__mock-label{ flex:1; font-size:13.5px; color:var(--mono-on-navy); }
 .solution-row__mock-val{ font-family:var(--font-mono); font-size:11px; font-weight:500; padding:4px 10px; border-radius:20px; white-space:nowrap; }
 .solution-row__mock-val--neutral{ color:var(--mono-on-navy); background:rgba(255,255,255,.05); }
-.solution-row__mock-val--info{ color:var(--blue-3); background:rgba(46,155,255,.16); }
-.solution-row__mock-val--success{ color:var(--green-bright); background:rgba(91,203,139,.12); }
+.solution-row__mock-val--info{ color:var(--blue-3); background:rgba(46,155,255,.16); box-shadow:0 0 0 1px rgba(46,155,255,.3), 0 0 10px rgba(46,155,255,.3); }
+.solution-row__mock-val--success{ color:var(--green-bright); background:rgba(91,203,139,.12); box-shadow:0 0 0 1px rgba(91,203,139,.35), 0 0 10px rgba(91,203,139,.35); }
 
-/* ============ méthode (réutilise .grid .grid-4 pour le collapse) ============ */
-.method-step__num{ width:42px; height:42px; border-radius:11px; border:1px solid var(--border-4); background:#fff; color:var(--navy); display:flex; align-items:center; justify-content:center; font-family:var(--font-heading); font-weight:700; font-size:16px; }
-.method-step__rule{ flex:1; height:1px; background:var(--border-4); }
-.method-step h3{ font-size:18px; margin:0 0 8px; }
-.method-step p{ font-size:14.5px; line-height:1.58; color:var(--text-3); margin:0; }
+/* flux entre les lignes du mockup : un point lumineux descend d'une ligne à
+   l'autre (même technique que .case-flow__connector), coloré selon l'état de
+   la ligne qu'il rejoint — rend le "workflow" visiblement actif plutôt que statique. */
+.solution-row__mock-row::before{
+  content:""; position:absolute; left:4.5px; top:0; width:7px; height:7px; transform:translateX(-50%);
+  border-radius:50%; opacity:0; pointer-events:none;
+}
+.solution-row__mock-row:first-child::before{ display:none; }
+.solution-row__mock-row:has(.solution-row__mock-dot--success)::before{ background:var(--green-bright); box-shadow:0 0 8px rgba(91,203,139,.9); }
+.solution-row__mock-row:has(.solution-row__mock-dot--info)::before{ background:var(--blue-3); box-shadow:0 0 8px rgba(91,182,255,.9); }
+.solution-row__mock-row:has(.solution-row__mock-dot--neutral)::before{ background:var(--muted-on-navy-2); box-shadow:0 0 6px rgba(157,170,194,.7); }
+@media (prefers-reduced-motion: no-preference){
+  .solution-row__mock-row:not(:first-child)::before{ animation:ebconnectorflow 1.6s ease-in-out infinite; }
+}
+
+/* ============ méthode — panneau navy mis en avant (réutilise .grid .grid-4 pour le collapse) ============
+   Section auparavant "quasi invisible" (fond blanc uni, num en cercle plat) :
+   même traitement panneau + lueur que .tools-band/.pillar-mid-cta pour qu'elle
+   se détache nettement entre les sections claires qui l'entourent. */
+.solutions-method{
+  background:var(--navy-gradient);
+  border-radius:26px;
+  padding:52px 44px;
+  box-shadow:0 0 0 1px rgba(46,155,255,.22), 0 30px 70px -32px rgba(12,30,60,.55);
+}
+.solutions-method .section-head .eyebrow{ color:var(--orange); }
+.solutions-method .section-head h2{ color:#fff; }
+.method-step__num{
+  width:44px; height:44px; border-radius:12px; flex:none;
+  background:var(--navy-panel); border:1px solid var(--orange); color:var(--orange);
+  display:flex; align-items:center; justify-content:center;
+  font-family:var(--font-heading); font-weight:700; font-size:17px;
+  box-shadow:0 0 0 1px rgba(221,122,51,.3), 0 0 18px rgba(221,122,51,.45);
+}
+.method-step__rule{ flex:1; height:2px; border-radius:2px; background:linear-gradient(90deg, rgba(221,122,51,.65), rgba(46,155,255,.4)); }
+.method-step h3{ font-size:18px; margin:0 0 8px; color:#fff; }
+.method-step p{ font-size:14.5px; line-height:1.58; color:var(--muted-on-navy); margin:0; }
 
 /* ============ bandeau outils — variante 2 colonnes ============ */
 .tools-band{ background:var(--bg-soft); border:1px solid var(--border); border-radius:18px; padding:38px 40px; display:grid; grid-template-columns:.85fr 1.15fr; gap:40px; align-items:center; }
@@ -87,10 +120,21 @@
 .tools-band p{ font-size:15px; line-height:1.6; color:var(--text-3); margin:0; }
 /* grille + puces d'outils : voir .tool-chip-grid / .tool-chip dans components.css */
 
-/* ============ FAQ 2 colonnes ============ */
-.faq-grid{ display:grid; grid-template-columns:1fr 1fr; gap:0 48px; }
-.faq-item{ padding:24px 0; border-top:1px solid var(--border); }
-.faq-item h3{ font-size:17px; margin:0 0 9px; }
+/* ============ FAQ 2 colonnes — cartes avec repère "Q" (au lieu de simples lignes) ============ */
+.faq-grid{ display:grid; grid-template-columns:1fr 1fr; gap:18px 40px; }
+.faq-item{
+  background:#fff; border:1px solid var(--border-2); border-radius:16px; padding:26px 28px;
+  transition:box-shadow .2s ease, border-color .2s ease;
+}
+.faq-item:hover{ border-color:var(--blue-2); box-shadow:0 0 0 1px rgba(46,155,255,.15), 0 14px 30px -18px rgba(30,95,208,.4); }
+.faq-item h3{ font-size:17px; margin:0 0 9px; padding-left:36px; position:relative; }
+.faq-item h3::before{
+  content:"?"; position:absolute; left:0; top:-2px; width:26px; height:26px; border-radius:8px;
+  background:var(--navy-panel); border:1px solid var(--orange); color:var(--orange);
+  display:flex; align-items:center; justify-content:center;
+  font-family:var(--font-heading); font-weight:700; font-size:14px;
+  box-shadow:0 0 0 1px rgba(221,122,51,.22), 0 0 12px rgba(221,122,51,.3);
+}
 .faq-item p{ font-size:15px; line-height:1.6; color:var(--text-3); margin:0; }
 
 /* ==================== responsive — miroir du retrofit 900px du prototype (toute grille -> 1fr) ==================== */
@@ -102,6 +146,7 @@
   .trust-strip__item:last-child{ border-bottom:none; }
 }
 @media (max-width:640px){
+  .solutions-method{ padding:32px 22px; border-radius:20px; }
   .tools-band{ padding:22px; text-align:center; }
   .tools-band p{ text-align:left; }
   .pillar-hub__group{ padding:20px; }

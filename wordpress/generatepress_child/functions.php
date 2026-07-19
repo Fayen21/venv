@@ -87,10 +87,8 @@ function eb_brand_icon( $key ) {
 		'pennylane'        => array( 'label' => 'Pennylane', 'bg' => '#2E2AEB', 'fg' => '#fff', 'letter' => 'P' ),
 		'notion'           => array( 'label' => 'Notion', 'bg' => '#111111', 'fg' => '#fff', 'letter' => 'N', 'logo' => 'notion' ),
 		'hubspot'          => array( 'label' => 'HubSpot', 'bg' => '#FF5C35', 'fg' => '#fff', 'letter' => 'H', 'logo' => 'hubspot' ),
-		'pipedrive'        => array( 'label' => 'Pipedrive', 'bg' => '#1A1A1A', 'fg' => '#fff', 'letter' => 'Pd' ),
 		'make'             => array( 'label' => 'Make', 'bg' => '#6D00CC', 'fg' => '#fff', 'letter' => 'M', 'logo' => 'make' ),
 		'n8n'              => array( 'label' => 'n8n', 'bg' => '#EA4B71', 'fg' => '#fff', 'letter' => 'n8', 'logo' => 'n8n' ),
-		'ogust'            => array( 'label' => 'Ogust', 'bg' => '#F29200', 'fg' => '#fff', 'letter' => 'Og' ),
 		'python'           => array( 'label' => 'Python', 'bg' => '#3776AB', 'fg' => '#fff', 'letter' => 'Py', 'logo' => 'python' ),
 		'docusign'         => array( 'label' => 'DocuSign', 'bg' => '#0C1E3C', 'fg' => '#fff', 'letter' => 'DS' ),
 		'salesforce'       => array( 'label' => 'Salesforce', 'bg' => '#00A1E0', 'fg' => '#fff', 'letter' => 'Sf' ),
@@ -124,6 +122,15 @@ function eb_tool_icon_html( $key ) {
  */
 function eb_tool_chevron() {
 	return '<span class="tool-chip__chevron" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></span>';
+}
+
+/**
+ * Note affichée sous chaque grille d'outils : la liste montre les outils les
+ * plus fréquents, mais l'automatisation ne s'y limite pas — évite de laisser
+ * penser qu'un outil absent de la grille serait incompatible.
+ */
+function eb_tool_compat_note() {
+	return '<p class="tool-chip-grid__note">Vous utilisez un autre outil ? Dans la grande majorité des cas, il peut aussi être connecté — cette liste n\'est pas exhaustive.</p>';
 }
 
 /**
@@ -290,6 +297,7 @@ function eb_hero_fx_effects() {
 		'solutions'                    => 'globe',
 		'realisations'                 => 'flow',
 		'apropos'                      => 'constellation',
+		'audit'                        => 'constellation',
 		'automatisation-entreprise'    => 'network',
 		'automatisation-processus'     => 'globe',
 		'automatisation-ia'            => 'orbit',
@@ -400,11 +408,11 @@ function eb_enqueue_assets() {
 		wp_enqueue_script( 'eb-home', EB_THEME_URI . '/assets/js/home.js', array(), filemtime( EB_THEME_DIR . '/assets/js/home.js' ), true );
 	}
 
-	// Effet canvas du hero — accueil, Solutions, Réalisations, À propos et
-	// toutes les pages piliers/outils (cf. eb_hero_fx_effects() pour le mapping
-	// page → effet). Jamais sur Audit ni les pages légales, qui n'utilisent pas
-	// le gabarit .hero / .hero-left / .apropos-hero / .pillar-hero.
-	if ( 'index' === $page || 'solutions' === $page || 'realisations' === $page || 'apropos' === $page || eb_is_pillar_page( $page ) ) {
+	// Effet canvas du hero — accueil, Solutions, Réalisations, À propos,
+	// toutes les pages piliers/outils (cf. eb_hero_fx_effects() pour le
+	// mapping page → effet) et, seulement sur le bloc H1, la page Audit.
+	// Jamais sur les pages légales, qui n'utilisent aucun gabarit de hero.
+	if ( 'index' === $page || 'solutions' === $page || 'realisations' === $page || 'apropos' === $page || 'audit' === $page || eb_is_pillar_page( $page ) ) {
 		wp_enqueue_style( 'eb-hero-fx', EB_THEME_URI . '/assets/css/hero-fx.css', array( 'eb-utilities' ), filemtime( EB_THEME_DIR . '/assets/css/hero-fx.css' ) );
 		wp_enqueue_script( 'eb-hero-fx', EB_THEME_URI . '/assets/js/hero-fx.js', array(), filemtime( EB_THEME_DIR . '/assets/js/hero-fx.js' ), true );
 	}
@@ -737,9 +745,9 @@ function eb_seo_data() {
 			),
 		),
 		'automatisation-crm'        => array(
-			'title'       => "Automatisation CRM : HubSpot, Pipedrive ou Salesforce à jour",
+			'title'       => "Automatisation CRM : HubSpot ou Salesforce à jour",
 			'description' => "Fiches créées automatiquement, relances déclenchées au bon moment, leads qualifiés sans tri manuel : un pipeline commercial fiable, sans changer de CRM.",
-			'og_title'    => "Automatisation CRM : HubSpot, Pipedrive ou Salesforce à jour",
+			'og_title'    => "Automatisation CRM : HubSpot ou Salesforce à jour",
 			'og_desc'     => "Fiches créées automatiquement, relances déclenchées au bon moment, leads qualifiés sans tri manuel : un pipeline commercial fiable, sans changer de CRM.",
 			'tw_title'    => "Automatisation CRM : pipeline commercial à jour",
 			'tw_desc'     => "Automatisez la création de fiches, les relances et la qualification des leads dans votre CRM.",
@@ -750,7 +758,7 @@ function eb_seo_data() {
 				'headline' => "Automatisation CRM : un pipeline commercial qui se met à jour tout seul",
 			),
 			'faq'         => array(
-				array( 'q' => "Quel CRM est le plus adapté à une TPE-PME ?", 'a' => "HubSpot, Pipedrive et Salesforce couvrent la grande majorité des besoins d'un CRM PME ou CRM TPE. Le bon choix dépend surtout de votre volume de contacts et de votre budget — l'automatisation, elle, s'adapte à celui que vous avez déjà." ),
+				array( 'q' => "Quel CRM est le plus adapté à une TPE-PME ?", 'a' => "HubSpot et Salesforce couvrent la grande majorité des besoins d'un CRM PME ou CRM TPE. Le bon choix dépend surtout de votre volume de contacts et de votre budget — l'automatisation, elle, s'adapte à celui que vous avez déjà." ),
 				array( 'q' => "Dois-je changer de CRM pour l'automatiser ?", 'a' => "Non. L'automatisation CRM se construit sur l'outil que vous utilisez déjà, en le connectant à vos emails, formulaires et autres outils commerciaux." ),
 				array( 'q' => "Comment fonctionne la qualification automatique des leads ?", 'a' => "Chaque nouveau contact est analysé selon des règles définies avec vous (secteur, taille, origine de la demande) puis assigné et priorisé automatiquement dans le pipeline commercial, sans intervention manuelle de tri." ),
 				array( 'q' => "Les relances automatiques ne risquent-elles pas de paraître robotiques ?", 'a' => "Les messages sont personnalisés à partir des données du CRM (nom, contexte de la demande) et le ton est défini avec vous en amont. L'automatisation gère le déclenchement et le timing, pas le contenu générique." ),
