@@ -31,6 +31,7 @@
 .case-flow__connector::after{
   content:""; position:absolute; left:50%; top:0; width:5px; height:5px; margin-left:-2.5px; border-radius:50%;
   background:var(--blue-3); box-shadow:0 0 8px rgba(91,203,139,.9); opacity:0;
+  --eb-travel:14px;
 }
 @media (prefers-reduced-motion: no-preference){
   .case-flow__step:has(.case-flow__icon--done) + .case-flow__connector::after{ animation:ebconnectorflow 1.2s ease-in-out infinite; }
@@ -80,6 +81,7 @@
 .case-study__mock-row::before{
   content:""; position:absolute; left:4.5px; top:0; width:7px; height:7px; transform:translateX(-50%);
   border-radius:50%; opacity:0; pointer-events:none;
+  --eb-x:-50%; --eb-travel:46px;
 }
 .case-study__mock-row:first-child::before{ display:none; }
 .case-study__mock-row:has(.case-study__mock-dot--success)::before{ background:var(--green-bright); box-shadow:0 0 8px rgba(91,203,139,.9); }

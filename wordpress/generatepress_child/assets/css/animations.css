@@ -15,37 +15,44 @@
 }
 
 /* ---------- lueur : ajoutées lors de l'intégration de la bibliothèque de composants "lueur" ---------- */
+/* Perf mobile (PageSpeed) : ces animations tournent en permanence tant que
+   l'élément est visible, sur de nombreux éléments à la fois — elles doivent
+   donc rester sur transform/opacity (compositées par le GPU) et ne jamais
+   toucher top/left/box-shadow/text-shadow (repaint + layout à chaque frame,
+   flaggé par l'audit Lighthouse "non-composited animations"). La lueur
+   elle-même reste un box-shadow/text-shadow STATIQUE, déjà posé sur chaque
+   composant hors animation — seule l'intensité (scale + opacity) pulse ici.
+   --eb-travel / --eb-x : distance de déplacement, propres à chaque connecteur
+   (hauteur/largeur variable), avec une valeur par défaut sur le cas le plus
+   courant pour ne pas avoir à la redéfinir partout. */
 @keyframes ebconnectorflow{
-  0%{ top:0%; opacity:0; }
+  0%{ transform:translateX(var(--eb-x,0)) translateY(0); opacity:0; }
   15%{ opacity:1; }
   85%{ opacity:1; }
-  100%{ top:100%; opacity:0; }
+  100%{ transform:translateX(var(--eb-x,0)) translateY(var(--eb-travel,18px)); opacity:0; }
 }
 @keyframes ebcheckpulse{
-  0%,100%{ box-shadow:0 0 0 2px rgba(91,203,139,.7), 0 0 22px rgba(91,203,139,.85); transform:scale(1); }
-  50%{ box-shadow:0 0 0 3px rgba(91,203,139,1), 0 0 40px rgba(91,203,139,1); transform:scale(1.18); }
+  0%,100%{ transform:scale(1); opacity:.85; }
+  50%{ transform:scale(1.2); opacity:1; }
 }
 @keyframes ebchecktextpulse{
-  0%,100%{ text-shadow:0 0 14px rgba(91,203,139,1); transform:scale(1); }
-  50%{ text-shadow:0 0 28px rgba(91,203,139,1), 0 0 40px rgba(91,203,139,.7); transform:scale(1.25); }
+  0%,100%{ transform:scale(1); opacity:.8; }
+  50%{ transform:scale(1.22); opacity:1; }
 }
 @keyframes ebringpulse{
-  0%,100%{ box-shadow:0 0 0 2px rgba(30,142,90,.55), 0 0 22px rgba(30,142,90,.5); transform:scale(1); }
-  50%{ box-shadow:0 0 0 3px rgba(30,142,90,.9), 0 0 38px rgba(30,142,90,.85); transform:scale(1.1); }
+  0%,100%{ transform:scale(1); opacity:.85; }
+  50%{ transform:scale(1.1); opacity:1; }
 }
 @keyframes ebbordercircuit{
   to{ transform:rotate(360deg); }
 }
 @keyframes ebchevronpulse{
-  0%,100%{ opacity:.7; text-shadow:0 0 8px rgba(221,122,51,.5); transform:translateX(0); }
-  50%{ opacity:1; text-shadow:0 0 16px rgba(221,122,51,.9); transform:translateX(3px); }
-}
-@keyframes ebbtncurrent{
-  to{ offset-distance:100%; }
+  0%,100%{ opacity:.7; transform:translateX(0); }
+  50%{ opacity:1; transform:translateX(3px); }
 }
 @keyframes ebconnectorflowh{
-  0%{ left:0%; opacity:0; }
+  0%{ transform:translateX(0); opacity:0; }
   15%{ opacity:1; }
   85%{ opacity:1; }
-  100%{ left:100%; opacity:0; }
+  100%{ transform:translateX(var(--eb-travel-x,22px)); opacity:0; }
 }

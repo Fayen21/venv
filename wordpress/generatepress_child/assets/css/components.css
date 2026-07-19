@@ -14,83 +14,15 @@
   position:relative;
   z-index:0;
 }
-/* Courant électrique au survol, sur tous les éléments cliquables au format
-   "bouton/puce/pastille" du site (liste ci-dessous) : un fil qui s'allume
-   (contour + lueur, ::after, permanent tant que survolé) et une étincelle
-   qui parcourt son contour RÉEL (::before, offset-path:border-box suit le
-   tracé du cadre, coins arrondis compris — jamais une rotation autour du
-   centre). Couleur pilotée par --btn-circuit-color (orange par défaut,
-   bleu sur .btn-secondary et sur tout le reste). Dégrade proprement si le
-   navigateur ne supporte pas offset-path (contour statique, sans étincelle). */
-.btn,
-.tool-chip--link,
-.pillar-related__pill,
-.workflow-tabs__btn,
-.audit-success__tile,
-.pillar-hub__child{
-  position:relative;
-}
-.tool-chip--link{ overflow:visible; }
-@supports (offset-path: border-box){
-  .btn::after,
-  .tool-chip--link::after,
-  .pillar-related__pill::after,
-  .workflow-tabs__btn::after,
-  .audit-success__tile::after,
-  .pillar-hub__child::after{
-    content:"";
-    position:absolute; inset:-2px; border-radius:inherit;
-    pointer-events:none;
-    border:1.5px solid var(--btn-circuit-color, var(--blue-2));
-    box-shadow:0 0 3px var(--btn-circuit-color, var(--blue-2)), 0 0 12px var(--btn-circuit-color, var(--blue-2));
-    opacity:0;
-    transition:opacity .2s ease;
-  }
-  .btn:hover::after,
-  .tool-chip--link:hover::after,
-  .pillar-related__pill:hover::after,
-  .workflow-tabs__btn:hover::after,
-  .audit-success__tile:hover::after,
-  .pillar-hub__child:hover::after{ opacity:1; }
-
-  .btn::before,
-  .tool-chip--link::before,
-  .pillar-related__pill::before,
-  .workflow-tabs__btn::before,
-  .audit-success__tile::before,
-  .pillar-hub__child::before{
-    content:"";
-    position:absolute; inset:0; border-radius:inherit;
-    pointer-events:none;
-    background:radial-gradient(circle 11px at 0 0, #fff 0%, #fff 30%, var(--btn-circuit-color, var(--blue-2)) 60%, transparent 82%);
-    filter:drop-shadow(0 0 10px var(--btn-circuit-color, var(--blue-2))) drop-shadow(0 0 24px var(--btn-circuit-color, var(--blue-2)));
-    opacity:0;
-    offset-path:border-box;
-    offset-anchor:0 0;
-    offset-rotate:0deg;
-    offset-distance:0%;
-    transition:opacity .2s ease;
-  }
-  @media (prefers-reduced-motion: no-preference){
-    .btn:hover::before,
-    .tool-chip--link:hover::before,
-    .pillar-related__pill:hover::before,
-    .workflow-tabs__btn:hover::before,
-    .audit-success__tile:hover::before,
-    .pillar-hub__child:hover::before{ opacity:1; animation:ebbtncurrent 1s linear infinite; }
-  }
-}
 .btn-primary{
   background:var(--orange-a11y);
   color:#fff;
-  --btn-circuit-color:var(--orange);
 }
 .btn-primary:hover{ background:var(--orange-a11y-hover); }
 .btn-secondary{
   background:#fff;
   color:var(--navy);
   border:1px solid var(--border-5);
-  --btn-circuit-color:var(--blue-2);
 }
 .btn-secondary:hover{ border-color:var(--navy); }
 .btn-text{
