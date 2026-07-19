@@ -14,19 +14,56 @@
   position:relative;
   z-index:0;
 }
-/* Courant électrique au survol : une étincelle qui parcourt le contour
-   RÉEL du bouton (offset-path:border-box suit le tracé du cadre, coins
-   arrondis compris), pas une rotation autour du centre. Couleur pilotée
-   par --btn-circuit-color (orange par défaut, bleu sur .btn-secondary)
-   pour rester cohérente avec chaque style. Dégrade proprement si le
-   navigateur ne supporte pas offset-path (bouton inchangé, sans étincelle). */
+/* Courant électrique au survol, sur tous les éléments cliquables au format
+   "bouton/puce/pastille" du site (liste ci-dessous) : un fil qui s'allume
+   (contour + lueur, ::after, permanent tant que survolé) et une étincelle
+   qui parcourt son contour RÉEL (::before, offset-path:border-box suit le
+   tracé du cadre, coins arrondis compris — jamais une rotation autour du
+   centre). Couleur pilotée par --btn-circuit-color (orange par défaut,
+   bleu sur .btn-secondary et sur tout le reste). Dégrade proprement si le
+   navigateur ne supporte pas offset-path (contour statique, sans étincelle). */
+.btn,
+.tool-chip--link,
+.pillar-related__pill,
+.workflow-tabs__btn,
+.audit-success__tile,
+.pillar-hub__child{
+  position:relative;
+}
+.tool-chip--link{ overflow:visible; }
 @supports (offset-path: border-box){
-  .btn::before{
+  .btn::after,
+  .tool-chip--link::after,
+  .pillar-related__pill::after,
+  .workflow-tabs__btn::after,
+  .audit-success__tile::after,
+  .pillar-hub__child::after{
+    content:"";
+    position:absolute; inset:-2px; border-radius:inherit;
+    pointer-events:none;
+    border:1.5px solid var(--btn-circuit-color, var(--blue-2));
+    box-shadow:0 0 3px var(--btn-circuit-color, var(--blue-2)), 0 0 12px var(--btn-circuit-color, var(--blue-2));
+    opacity:0;
+    transition:opacity .2s ease;
+  }
+  .btn:hover::after,
+  .tool-chip--link:hover::after,
+  .pillar-related__pill:hover::after,
+  .workflow-tabs__btn:hover::after,
+  .audit-success__tile:hover::after,
+  .pillar-hub__child:hover::after{ opacity:1; }
+
+  .btn::before,
+  .tool-chip--link::before,
+  .pillar-related__pill::before,
+  .workflow-tabs__btn::before,
+  .audit-success__tile::before,
+  .pillar-hub__child::before{
     content:"";
     position:absolute; inset:0; border-radius:inherit;
     pointer-events:none;
-    background:radial-gradient(circle 10px at 0 0, #fff 0%, #fff 40%, var(--btn-circuit-color, var(--orange)) 70%, transparent 88%);
-    filter:drop-shadow(0 0 8px var(--btn-circuit-color, var(--orange))) drop-shadow(0 0 20px var(--btn-circuit-color, var(--orange)));
+    background:radial-gradient(circle 11px at 0 0, #fff 0%, #fff 30%, var(--btn-circuit-color, var(--blue-2)) 60%, transparent 82%);
+    filter:drop-shadow(0 0 10px var(--btn-circuit-color, var(--blue-2))) drop-shadow(0 0 24px var(--btn-circuit-color, var(--blue-2)));
     opacity:0;
     offset-path:border-box;
     offset-anchor:0 0;
@@ -35,7 +72,12 @@
     transition:opacity .2s ease;
   }
   @media (prefers-reduced-motion: no-preference){
-    .btn:hover::before{ opacity:1; animation:ebbtncurrent 1.6s linear infinite; }
+    .btn:hover::before,
+    .tool-chip--link:hover::before,
+    .pillar-related__pill:hover::before,
+    .workflow-tabs__btn:hover::before,
+    .audit-success__tile:hover::before,
+    .pillar-hub__child:hover::before{ opacity:1; animation:ebbtncurrent 1s linear infinite; }
   }
 }
 .btn-primary{
@@ -245,7 +287,11 @@
 /* ---------- tool chip (bandeaux d'outils : Accueil, Solutions, Réalisations, À propos, piliers) ---------- */
 .tool-chip-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; }
 .tool-chip-grid--home{ max-width:960px; margin:0 auto; }
-.tool-chip-grid__note{ font-size:13px; color:var(--muted-2); line-height:1.5; margin:14px 2px 0; }
+.tool-chip-grid__note{
+  font-size:13.5px; color:var(--text-3); line-height:1.5; margin:16px 0 0;
+  background:var(--bg-soft-2); border:1px solid var(--border-2); border-radius:11px; padding:13px 18px;
+}
+.tool-chip-grid__note strong{ color:var(--navy); }
 .tool-chip{
   display:flex; align-items:center; gap:12px;
   font-family:var(--font-heading); font-weight:700; font-size:14.5px; color:var(--navy);

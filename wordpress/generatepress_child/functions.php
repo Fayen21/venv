@@ -79,17 +79,17 @@ function eb_asset( $relative_path ) {
 function eb_brand_icon( $key ) {
 	$registry = array(
 		'outlook'          => array( 'label' => 'Outlook', 'bg' => '#0A6FC2', 'fg' => '#fff', 'letter' => 'O' ),
-		'excel'            => array( 'label' => 'Excel', 'bg' => '#1D6F42', 'fg' => '#fff', 'letter' => 'X' ),
-		'microsoft365'     => array( 'label' => 'Microsoft 365', 'bg' => '#EB3C00', 'fg' => '#fff', 'letter' => 'MS' ),
-		'google-workspace' => array( 'label' => 'Google Workspace', 'bg' => '#EA4335', 'fg' => '#fff', 'letter' => 'G', 'logo' => 'google' ),
-		'sage'             => array( 'label' => 'Sage', 'bg' => '#00D639', 'fg' => '#0C2E14', 'letter' => 'S', 'logo' => 'sage' ),
-		'qonto'            => array( 'label' => 'Qonto', 'bg' => '#0C1E3C', 'fg' => '#fff', 'letter' => 'Q' ),
-		'pennylane'        => array( 'label' => 'Pennylane', 'bg' => '#2E2AEB', 'fg' => '#fff', 'letter' => 'P' ),
-		'notion'           => array( 'label' => 'Notion', 'bg' => '#111111', 'fg' => '#fff', 'letter' => 'N', 'logo' => 'notion' ),
-		'hubspot'          => array( 'label' => 'HubSpot', 'bg' => '#FF5C35', 'fg' => '#fff', 'letter' => 'H', 'logo' => 'hubspot' ),
-		'make'             => array( 'label' => 'Make', 'bg' => '#6D00CC', 'fg' => '#fff', 'letter' => 'M', 'logo' => 'make' ),
-		'n8n'              => array( 'label' => 'n8n', 'bg' => '#EA4B71', 'fg' => '#fff', 'letter' => 'n8', 'logo' => 'n8n' ),
-		'python'           => array( 'label' => 'Python', 'bg' => '#3776AB', 'fg' => '#fff', 'letter' => 'Py', 'logo' => 'python' ),
+		'excel'            => array( 'label' => 'Excel', 'bg' => '#1D6F42', 'fg' => '#fff', 'letter' => 'X', 'logo' => 'excel.png' ),
+		'microsoft365'     => array( 'label' => 'Microsoft 365', 'bg' => '#EB3C00', 'fg' => '#fff', 'letter' => 'MS', 'logo' => 'microsoft365.png' ),
+		'google-workspace' => array( 'label' => 'Google Workspace', 'bg' => '#EA4335', 'fg' => '#fff', 'letter' => 'G', 'logo' => 'google-workspace.png' ),
+		'sage'             => array( 'label' => 'Sage', 'bg' => '#00D639', 'fg' => '#0C2E14', 'letter' => 'S', 'logo' => 'sage.svg' ),
+		'qonto'            => array( 'label' => 'Qonto', 'bg' => '#0C1E3C', 'fg' => '#fff', 'letter' => 'Q', 'logo' => 'qonto.png' ),
+		'pennylane'        => array( 'label' => 'Pennylane', 'bg' => '#2E2AEB', 'fg' => '#fff', 'letter' => 'P', 'logo' => 'pennylane.png' ),
+		'notion'           => array( 'label' => 'Notion', 'bg' => '#111111', 'fg' => '#fff', 'letter' => 'N', 'logo' => 'notion.svg' ),
+		'hubspot'          => array( 'label' => 'HubSpot', 'bg' => '#FF5C35', 'fg' => '#fff', 'letter' => 'H', 'logo' => 'hubspot.svg' ),
+		'make'             => array( 'label' => 'Make', 'bg' => '#6D00CC', 'fg' => '#fff', 'letter' => 'M', 'logo' => 'make.svg' ),
+		'n8n'              => array( 'label' => 'n8n', 'bg' => '#EA4B71', 'fg' => '#fff', 'letter' => 'n8', 'logo' => 'n8n.svg' ),
+		'python'           => array( 'label' => 'Python', 'bg' => '#3776AB', 'fg' => '#fff', 'letter' => 'Py', 'logo' => 'python.svg' ),
 		'docusign'         => array( 'label' => 'DocuSign', 'bg' => '#0C1E3C', 'fg' => '#fff', 'letter' => 'DS' ),
 		'salesforce'       => array( 'label' => 'Salesforce', 'bg' => '#00A1E0', 'fg' => '#fff', 'letter' => 'Sf' ),
 		'linkedin'         => array( 'label' => 'LinkedIn', 'bg' => '#0A66C2', 'fg' => '#fff', 'letter' => 'in' ),
@@ -100,8 +100,11 @@ function eb_brand_icon( $key ) {
 }
 
 /**
- * Rend l'icône d'un outil : vrai logo SVG local si disponible, sinon un
- * repli typographique (carré coloré + initiale(s)), jamais un logo recréé.
+ * Rend l'icône d'un outil : vrai logo local si disponible (SVG pour les
+ * marques sourcées via Simple Icons, PNG pour celles fournies directement
+ * par le client), sinon un repli typographique (carré coloré + initiale(s)),
+ * jamais un logo recréé. 'logo' contient le nom de fichier complet, avec
+ * son extension.
  */
 function eb_tool_icon_html( $key ) {
 	$data = eb_brand_icon( $key );
@@ -109,7 +112,7 @@ function eb_tool_icon_html( $key ) {
 		return '';
 	}
 	if ( ! empty( $data['logo'] ) ) {
-		$src = eb_asset( 'images/logos/' . $data['logo'] . '.svg' );
+		$src = eb_asset( 'images/logos/' . $data['logo'] );
 		return '<span class="tool-chip__abbr tool-chip__abbr--logo"><img src="' . esc_url( $src ) . '" alt="' . esc_attr( $data['label'] ) . '" width="20" height="20" loading="lazy"></span>';
 	}
 	return '<span class="tool-chip__abbr" style="background:' . esc_attr( $data['bg'] ) . ';color:' . esc_attr( $data['fg'] ) . ';">' . esc_html( $data['letter'] ) . '</span>';
@@ -130,7 +133,7 @@ function eb_tool_chevron() {
  * penser qu'un outil absent de la grille serait incompatible.
  */
 function eb_tool_compat_note() {
-	return '<p class="tool-chip-grid__note">Vous utilisez un autre outil ? Dans la grande majorité des cas, il peut aussi être connecté — cette liste n\'est pas exhaustive.</p>';
+	return '<p class="tool-chip-grid__note">Vous utilisez un autre outil&nbsp;? <strong>Dans la grande majorité des cas, il peut aussi être connecté</strong> — cette liste n\'est pas exhaustive.</p>';
 }
 
 /**
