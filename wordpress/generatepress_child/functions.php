@@ -360,7 +360,7 @@ function eb_enqueue_assets() {
 		// vérifié sur l'ensemble des fichiers (h1/h2/h3 et tous les autres usages sont
 		// en 500/600/700). Ce poids n'est donc pas demandé, pour éviter un fichier de
 		// police téléchargé pour rien.
-		'https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;600;700&family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap',
+		'https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;600;700&family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=optional',
 		array(),
 		null
 	);
@@ -443,10 +443,21 @@ add_action( 'wp_enqueue_scripts', 'eb_enqueue_assets' );
  * Sort la feuille Google Fonts du chemin de rendu bloquant (LCP mobile) : le
  * <link rel="stylesheet"> classique bloque le premier paint le temps du
  * fetch. On le charge en `media="print"` (non bloquant) puis on le bascule
- * sur `all` une fois chargé — motif standard loadCSS. Sans risque de FOIT :
- * l'URL Google Fonts porte déjà `display=swap`, donc le texte s'affiche
- * immédiatement avec la police de repli, puis bascule sur la vraie police.
+ * sur `all` une fois chargé — motif standard loadCSS.
  * <noscript> fournit le fallback classique si JS est désactivé.
+ *
+ * `display=optional` (et non `swap`) sur l'URL Google Fonts : avec `swap`,
+ * le texte s'affiche avec la police de repli puis bascule sur la vraie
+ * police dès qu'elle arrive, quel que soit le délai — sur le H1 du hero
+ * (gros titre, plusieurs lignes), la police de repli générique
+ * (sans-serif) n'a pas la même largeur de caractère que Schibsted Grotesk,
+ * donc ce bascule tardif change les retours à la ligne et la hauteur du
+ * bloc = gros Cumulative Layout Shift, observé en PageSpeed réel (0.5+)
+ * mais invisible dans les traces locales de ce projet (fonts.googleapis.com
+ * n'est pas joignable depuis le bac à sable, donc jamais vraiment chargée).
+ * `optional` élimine ce bascule tardif : la police custom est utilisée si
+ * elle est déjà en cache/arrive très vite, sinon la police de repli est
+ * gardée pour toute la navigation (pas de swap après le premier rendu).
  */
 function eb_async_google_fonts( $html, $handle ) {
 	if ( 'eb-google-fonts' !== $handle ) {
