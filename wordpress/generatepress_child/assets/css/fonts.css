@@ -1,0 +1,71 @@
+/* Polices auto-hébergées (WOFF2, sous-ensemble latin — couvre les accents
+   français, U+00C0-00FF). Remplace le chargement depuis fonts.googleapis.com :
+   même rendu visuel, mais plus de round-trip vers un domaine tiers, et
+   font-display:optional (pas de bascule tardive de police après le premier
+   rendu — voir la note dans functions.php sur le CLS que ça évitait déjà
+   côté Google Fonts). Fichiers issus des paquets npm @fontsource/*
+   (licence SIL Open Font License). */
+
+@font-face{
+  font-family:'Schibsted Grotesk';
+  font-style:normal;
+  font-weight:500;
+  font-display:optional;
+  src:url('../fonts/schibsted-grotesk-500.woff2') format('woff2');
+}
+@font-face{
+  font-family:'Schibsted Grotesk';
+  font-style:normal;
+  font-weight:600;
+  font-display:optional;
+  src:url('../fonts/schibsted-grotesk-600.woff2') format('woff2');
+}
+@font-face{
+  font-family:'Schibsted Grotesk';
+  font-style:normal;
+  font-weight:700;
+  font-display:optional;
+  src:url('../fonts/schibsted-grotesk-700.woff2') format('woff2');
+}
+@font-face{
+  font-family:'Hanken Grotesk';
+  font-style:normal;
+  font-weight:400;
+  font-display:optional;
+  src:url('../fonts/hanken-grotesk-400.woff2') format('woff2');
+}
+@font-face{
+  font-family:'Hanken Grotesk';
+  font-style:normal;
+  font-weight:500;
+  font-display:optional;
+  src:url('../fonts/hanken-grotesk-500.woff2') format('woff2');
+}
+@font-face{
+  font-family:'Hanken Grotesk';
+  font-style:normal;
+  font-weight:600;
+  font-display:optional;
+  src:url('../fonts/hanken-grotesk-600.woff2') format('woff2');
+}
+@font-face{
+  font-family:'Hanken Grotesk';
+  font-style:normal;
+  font-weight:700;
+  font-display:optional;
+  src:url('../fonts/hanken-grotesk-700.woff2') format('woff2');
+}
+@font-face{
+  font-family:'IBM Plex Mono';
+  font-style:normal;
+  font-weight:400;
+  font-display:optional;
+  src:url('../fonts/ibm-plex-mono-400.woff2') format('woff2');
+}
+@font-face{
+  font-family:'IBM Plex Mono';
+  font-style:normal;
+  font-weight:500;
+  font-display:optional;
+  src:url('../fonts/ibm-plex-mono-500.woff2') format('woff2');
+}

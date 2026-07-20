@@ -18,8 +18,8 @@ $eb_is_pillar = eb_is_pillar_page( $eb_current );
 <meta name="theme-color" content="#0C1E3C">
 <link rel="icon" type="image/png" href="<?php echo esc_url( eb_asset( 'images/eb-icon.png' ) ); ?>">
 <link rel="apple-touch-icon" href="<?php echo esc_url( eb_asset( 'images/eb-icon.png' ) ); ?>">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="<?php echo esc_url( eb_asset( 'fonts/schibsted-grotesk-600.woff2' ) ); ?>" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="<?php echo esc_url( eb_asset( 'fonts/hanken-grotesk-400.woff2' ) ); ?>" crossorigin>
 <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
