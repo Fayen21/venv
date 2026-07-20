@@ -160,11 +160,11 @@ if ( ! defined( 'ABSPATH' ) ) {
       <h2>Questions fréquentes</h2>
       <div class="pillar-faq__item">
         <h3>Qu'est-ce que l'automatisation comptable, concrètement ?</h3>
-        <p>C'est la mise en place d'un enchaînement automatique entre la réception d'un document (facture, relevé bancaire, note de frais) et son enregistrement en comptabilité, en s'appuyant sur l'OCR pour lire les documents et sur des règles pour générer les écritures.</p>
+        <p>C'est la mise en place d'un enchaînement automatique entre la réception d'un document (<a href="<?php echo esc_url( eb_url('automatisation-facturation') ); ?>">facture</a>, relevé bancaire, note de frais) et son enregistrement en comptabilité, en s'appuyant sur l'<a href="<?php echo esc_url( eb_url('automatisation-ocr') ); ?>">OCR</a> pour lire les documents et sur des règles pour générer les écritures.</p>
       </div>
       <div class="pillar-faq__item">
         <h3>L'OCR peut-il lire n'importe quelle facture ?</h3>
-        <p>L'OCR facture moderne s'adapte à des mises en page très variées (PDF natif, scan, photo), contrairement à un simple gabarit fixe. Les cas ambigus sont signalés pour validation humaine plutôt que comptabilisés à l'aveugle.</p>
+        <p>L'OCR facture moderne s'adapte à des mises en page très variées (<a href="<?php echo esc_url( eb_url('extraction-pdf') ); ?>">PDF natif, scan, photo</a>), contrairement à un simple gabarit fixe. Les cas ambigus sont signalés pour validation humaine plutôt que comptabilisés à l'aveugle.</p>
       </div>
       <div class="pillar-faq__item">
         <h3>Est-ce compatible avec Pennylane, Sage, Cegid ou Quadra ?</h3>

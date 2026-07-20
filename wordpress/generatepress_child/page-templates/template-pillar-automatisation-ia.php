@@ -189,7 +189,7 @@ if ( ! defined( 'ABSPATH' ) ) {
       <h2>Questions fréquentes</h2>
       <div class="pillar-faq__item">
         <h3>L'automatisation IA remplace-t-elle mon logiciel de comptabilité ou mon CRM ?</h3>
-        <p>Non. L'IA se greffe sur vos outils existants pour interpréter des informations non structurées — emails, PDF, texte libre — avant qu'elles n'entrent dans vos logiciels métier. Elle ne remplace ni Sage, ni votre CRM : elle leur évite la ressaisie manuelle et les erreurs de saisie.</p>
+        <p>Non. L'IA se greffe sur vos outils existants pour interpréter des informations non structurées — emails, <a href="<?php echo esc_url( eb_url('extraction-pdf') ); ?>">PDF</a>, texte libre — avant qu'elles n'entrent dans vos logiciels métier. Elle ne remplace ni votre <a href="<?php echo esc_url( eb_url('automatisation-comptable') ); ?>">logiciel comptable</a>, ni votre <a href="<?php echo esc_url( eb_url('automatisation-crm') ); ?>">CRM</a> : elle leur évite la ressaisie manuelle et les erreurs de saisie.</p>
       </div>
       <div class="pillar-faq__item">
         <h3>Est-ce fiable pour des données sensibles comme la comptabilité ?</h3>
@@ -197,11 +197,11 @@ if ( ! defined( 'ABSPATH' ) ) {
       </div>
       <div class="pillar-faq__item">
         <h3>Faut-il des compétences techniques en interne pour la maintenir ?</h3>
-        <p>Non. Chaque automatisation est documentée et livrée sur des outils grand public (Make, n8n) que vous pouvez consulter sans coder. Aucune compétence en développement n'est nécessaire pour l'utiliser au quotidien.</p>
+        <p>Non. Chaque automatisation est documentée et livrée sur des outils grand public (<a href="<?php echo esc_url( eb_url('consultant-make') ); ?>">Make</a>, <a href="<?php echo esc_url( eb_url('consultant-n8n') ); ?>">n8n</a>) que vous pouvez consulter sans coder. Aucune compétence en développement n'est nécessaire pour l'utiliser au quotidien.</p>
       </div>
       <div class="pillar-faq__item">
         <h3>Quels outils utilisez-vous pour l'IA ?</h3>
-        <p>Make et n8n pour l'orchestration, Python pour les traitements sur mesure, et des modèles de langage pour la lecture et la compréhension — choisis selon le besoin, sans dépendance à un outil propriétaire fermé.</p>
+        <p><a href="<?php echo esc_url( eb_url('consultant-make') ); ?>">Make</a> et <a href="<?php echo esc_url( eb_url('consultant-n8n') ); ?>">n8n</a> pour l'orchestration, Python pour les traitements sur mesure, et des modèles de langage pour la lecture et la compréhension — choisis selon le besoin, sans dépendance à un outil propriétaire fermé.</p>
       </div>
       <div class="pillar-faq__item">
         <h3>Combien de temps avant de voir des résultats concrets ?</h3>
@@ -209,7 +209,7 @@ if ( ! defined( 'ABSPATH' ) ) {
       </div>
       <div class="pillar-faq__item">
         <h3>Quelle est la différence entre IA et RPA ?</h3>
-        <p>La RPA exécute des actions répétitives sur des données déjà bien définies. L'IA ajoute une couche de compréhension pour interpréter une information non structurée avant qu'elle n'entre dans le processus. Les deux se combinent fréquemment sur un même projet.</p>
+        <p>La <a href="<?php echo esc_url( eb_url('rpa') ); ?>">RPA</a> exécute des actions répétitives sur des données déjà bien définies. L'IA ajoute une couche de compréhension pour interpréter une information non structurée avant qu'elle n'entre dans le processus. Les deux se combinent fréquemment sur un même projet.</p>
       </div>
       <div class="pillar-faq__item">
         <h3>L'automatisation IA est-elle accessible à une petite structure ?</h3>

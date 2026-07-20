@@ -160,15 +160,15 @@ if ( ! defined( 'ABSPATH' ) ) {
       </div>
       <div class="pillar-faq__item">
         <h3>Quelle est la différence entre RPA et automatisation IA ?</h3>
-        <p>La RPA excelle sur des règles fixes et prévisibles. L'automatisation IA intervient quand l'information est moins structurée (texte libre, mise en page variable) et nécessite une interprétation avant d'être traitée. Les deux se combinent souvent sur un même processus.</p>
+        <p>La RPA excelle sur des règles fixes et prévisibles. L'<a href="<?php echo esc_url( eb_url('automatisation-ia') ); ?>">automatisation IA</a> intervient quand l'information est moins structurée (texte libre, mise en page variable) et nécessite une interprétation avant d'être traitée. Les deux se combinent souvent sur un même processus.</p>
       </div>
       <div class="pillar-faq__item">
         <h3>L'OCR fonctionne-t-il sur des documents scannés ou photographiés ?</h3>
-        <p>Oui. La lecture automatique de documents moderne traite aussi bien les PDF natifs que les scans ou photos, avec une fiabilité qui dépend de la qualité du document — les cas ambigus sont signalés pour vérification humaine.</p>
+        <p>Oui. La <a href="<?php echo esc_url( eb_url('automatisation-ocr') ); ?>">lecture automatique de documents</a> moderne traite aussi bien les <a href="<?php echo esc_url( eb_url('extraction-pdf') ); ?>">PDF natifs</a> que les scans ou photos, avec une fiabilité qui dépend de la qualité du document — les cas ambigus sont signalés pour vérification humaine.</p>
       </div>
       <div class="pillar-faq__item">
         <h3>La RPA nécessite-t-elle des compétences techniques en interne ?</h3>
-        <p>Non. Chaque robot logiciel est conçu, documenté et livré sur des outils grand public (Make, n8n) que vous pouvez consulter sans coder. Aucune compétence en développement n'est nécessaire pour l'utiliser au quotidien.</p>
+        <p>Non. Chaque robot logiciel est conçu, documenté et livré sur des outils grand public (<a href="<?php echo esc_url( eb_url('consultant-make') ); ?>">Make</a>, <a href="<?php echo esc_url( eb_url('consultant-n8n') ); ?>">n8n</a>) que vous pouvez consulter sans coder. Aucune compétence en développement n'est nécessaire pour l'utiliser au quotidien.</p>
       </div>
       <div class="pillar-faq__item">
         <h3>Que se passe-t-il si un document sort du cadre habituel ?</h3>

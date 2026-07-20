@@ -133,7 +133,7 @@ if ( ! defined( 'ABSPATH' ) ) {
       </div>
       <div class="pillar-faq__item">
         <h3>Combien coûte l'automatisation d'une boîte Outlook ?</h3>
-        <p>Les automatisations simples (tri, classement) démarrent autour de 800€. Un traitement plus poussé (lecture IA, création automatique de fiches) se chiffre après audit selon le volume d'emails concerné.</p>
+        <p>Les automatisations simples (tri, classement) démarrent autour de 800€. Un traitement plus poussé (lecture IA, création automatique de fiches) se chiffre après <a href="<?php echo esc_url( eb_url('audit') ); ?>">audit</a> selon le volume d'emails concerné.</p>
       </div>
       <div class="pillar-faq__item">
         <h3>Combien de temps pour la mettre en place ?</h3>

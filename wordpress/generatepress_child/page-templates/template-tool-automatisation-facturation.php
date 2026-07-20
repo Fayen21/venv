@@ -116,7 +116,7 @@ if ( ! defined( 'ABSPATH' ) ) {
       </div>
       <div class="pillar-faq__item">
         <h3>Quelle est la différence avec l'automatisation comptable ?</h3>
-        <p>L'automatisation comptable couvre l'ensemble de la comptabilité (factures fournisseurs, rapprochement bancaire, notes de frais). L'automatisation de la facturation se concentre spécifiquement sur le cycle devis → facture → paiement côté client, un processus commercial autant que comptable.</p>
+        <p>L'<a href="<?php echo esc_url( eb_url('automatisation-comptable') ); ?>">automatisation comptable</a> couvre l'ensemble de la comptabilité (factures fournisseurs, rapprochement bancaire, notes de frais). L'automatisation de la facturation se concentre spécifiquement sur le cycle devis → facture → paiement côté client, un processus commercial autant que comptable.</p>
       </div>
       <div class="pillar-faq__item">
         <h3>Les relances automatiques ne risquent-elles pas de froisser un bon client ?</h3>

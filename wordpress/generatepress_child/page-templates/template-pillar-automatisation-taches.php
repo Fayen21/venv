@@ -137,7 +137,7 @@ if ( ! defined( 'ABSPATH' ) ) {
       </div>
       <div class="pillar-faq__item">
         <h3>Une tâche automatisée peut-elle évoluer vers un processus complet plus tard ?</h3>
-        <p>Oui, c'est même l'évolution la plus fréquente. Une fois la confiance établie sur une tâche isolée, il devient naturel d'élargir l'automatisation aux étapes voisines jusqu'à couvrir un processus entier.</p>
+        <p>Oui, c'est même l'évolution la plus fréquente. Une fois la confiance établie sur une tâche isolée, il devient naturel d'élargir l'automatisation aux étapes voisines jusqu'à couvrir un <a href="<?php echo esc_url( eb_url('automatisation-processus') ); ?>">processus</a> entier.</p>
       </div>
       <div class="pillar-faq__item">
         <h3>Combien coûte l'automatisation d'une tâche unique ?</h3>

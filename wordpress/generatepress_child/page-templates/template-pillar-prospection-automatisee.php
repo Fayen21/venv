@@ -167,7 +167,7 @@ if ( ! defined( 'ABSPATH' ) ) {
       </div>
       <div class="pillar-faq__item">
         <h3>Comment se passe la qualification automatique des réponses ?</h3>
-        <p>Chaque réponse est analysée pour distinguer un intérêt réel d'un refus ou d'une réponse automatique, afin de ne remonter à l'équipe commerciale que les échanges qui méritent un vrai suivi.</p>
+        <p>Chaque réponse est analysée pour distinguer un intérêt réel d'un refus ou d'une réponse automatique, afin de ne remonter dans votre <a href="<?php echo esc_url( eb_url('automatisation-crm') ); ?>">CRM</a> que les échanges qui méritent un vrai suivi.</p>
       </div>
       <div class="pillar-faq__item">
         <h3>Combien de temps avant de voir des résultats ?</h3>

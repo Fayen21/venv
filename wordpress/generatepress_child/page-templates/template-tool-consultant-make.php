@@ -145,7 +145,7 @@ if ( ! defined( 'ABSPATH' ) ) {
       </div>
       <div class="pillar-faq__item">
         <h3>Make peut-il gérer de gros volumes de données ?</h3>
-        <p>Oui, dans la plupart des cas de figure d'une TPE-PME. Pour des volumes très importants ou des besoins d'hébergement spécifiques, n8n est parfois plus adapté — ce choix est évalué lors de l'audit.</p>
+        <p>Oui, dans la plupart des cas de figure d'une TPE-PME. Pour des volumes très importants ou des besoins d'hébergement spécifiques, <a href="<?php echo esc_url( eb_url('consultant-n8n') ); ?>">n8n</a> est parfois plus adapté — ce choix est évalué lors de l'audit.</p>
       </div>
       <div class="pillar-faq__item">
         <h3>Make est-il compatible avec l'intelligence artificielle ?</h3>
@@ -157,7 +157,7 @@ if ( ! defined( 'ABSPATH' ) ) {
       </div>
       <div class="pillar-faq__item">
         <h3>Travaillez-vous aussi avec Zapier ?</h3>
-        <p>Je me concentre sur Make et n8n, deux outils qui couvrent l'essentiel des besoins d'automatisation d'une TPE-PME avec un excellent rapport entre coût et puissance.</p>
+        <p>Je me concentre sur Make et <a href="<?php echo esc_url( eb_url('consultant-n8n') ); ?>">n8n</a>, deux outils qui couvrent l'essentiel des besoins d'automatisation d'une TPE-PME avec un excellent rapport entre coût et puissance.</p>
       </div>
     </div>
 

@@ -116,7 +116,7 @@ if ( ! defined( 'ABSPATH' ) ) {
       </div>
       <div class="pillar-faq__item">
         <h3>n8n est-il plus difficile à utiliser que Make ?</h3>
-        <p>La construction initiale est un peu plus technique, mais une fois le workflow livré et documenté, l'usage au quotidien reste simple : vous n'avez pas à toucher à la configuration technique.</p>
+        <p>La construction initiale est un peu plus technique que sur <a href="<?php echo esc_url( eb_url('consultant-make') ); ?>">Make</a>, mais une fois le workflow livré et documenté, l'usage au quotidien reste simple : vous n'avez pas à toucher à la configuration technique.</p>
       </div>
       <div class="pillar-faq__item">
         <h3>Combien coûte une mission de consultant n8n ?</h3>

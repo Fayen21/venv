@@ -146,7 +146,7 @@ if ( ! defined( 'ABSPATH' ) ) {
       </div>
       <div class="pillar-faq__item">
         <h3>Vers quels outils les données extraites peuvent-elles être envoyées ?</h3>
-        <p>Excel, votre logiciel comptable, votre CRM, ou tout outil disposant d'une API ou de fonctionnalités d'import — la destination est définie selon votre besoin.</p>
+        <p><a href="<?php echo esc_url( eb_url('automatisation-excel') ); ?>">Excel</a>, votre <a href="<?php echo esc_url( eb_url('automatisation-comptable') ); ?>">logiciel comptable</a>, votre <a href="<?php echo esc_url( eb_url('automatisation-crm') ); ?>">CRM</a>, ou tout outil disposant d'une API ou de fonctionnalités d'import — la destination est définie selon votre besoin.</p>
       </div>
     </div>
 

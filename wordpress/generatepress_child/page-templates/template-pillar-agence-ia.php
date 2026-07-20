@@ -122,7 +122,7 @@ if ( ! defined( 'ABSPATH' ) ) {
       </div>
       <div class="pillar-faq__item">
         <h3>Pouvez-vous gérer un projet de la taille d'un projet d'agence ?</h3>
-        <p>Cela dépend du périmètre. L'automatisation d'un service (RH, comptabilité, commercial) ou de plusieurs processus complémentaires est exactement mon terrain. Un projet nécessitant une équipe de développeurs à temps plein sur plusieurs mois dépasse le format d'un consultant indépendant — je vous le dirai franchement lors de l'audit.</p>
+        <p>Cela dépend du périmètre. L'automatisation d'un service (<a href="<?php echo esc_url( eb_url('automatisation-rh') ); ?>">RH</a>, <a href="<?php echo esc_url( eb_url('automatisation-comptable') ); ?>">comptabilité</a>, <a href="<?php echo esc_url( eb_url('automatisation-crm') ); ?>">commercial</a>) ou de plusieurs processus complémentaires est exactement mon terrain. Un projet nécessitant une équipe de développeurs à temps plein sur plusieurs mois dépasse le format d'un consultant indépendant — je vous le dirai franchement lors de l'<a href="<?php echo esc_url( eb_url('audit') ); ?>">audit</a>.</p>
       </div>
       <div class="pillar-faq__item">
         <h3>Quels sont vos tarifs comparés à une agence ?</h3>

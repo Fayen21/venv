@@ -120,7 +120,7 @@ if ( ! defined( 'ABSPATH' ) ) {
       </div>
       <div class="pillar-faq__item">
         <h3>Dois-je changer d'outils si je choisis Make ou n8n plutôt que Power Automate ?</h3>
-        <p>Non. Make et n8n se connectent à Microsoft 365 sans rien changer à votre utilisation quotidienne d'Outlook, Excel, Teams ou SharePoint.</p>
+        <p>Non. <a href="<?php echo esc_url( eb_url('consultant-make') ); ?>">Make</a> et <a href="<?php echo esc_url( eb_url('consultant-n8n') ); ?>">n8n</a> se connectent à Microsoft 365 sans rien changer à votre utilisation quotidienne d'<a href="<?php echo esc_url( eb_url('automatisation-outlook') ); ?>">Outlook</a>, <a href="<?php echo esc_url( eb_url('automatisation-excel') ); ?>">Excel</a>, Teams ou SharePoint.</p>
       </div>
       <div class="pillar-faq__item">
         <h3>Mes données Microsoft 365 restent-elles dans mon tenant ?</h3>

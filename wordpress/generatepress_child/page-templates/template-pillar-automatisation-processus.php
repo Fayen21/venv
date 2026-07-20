@@ -196,7 +196,7 @@ if ( ! defined( 'ABSPATH' ) ) {
       </div>
       <div class="pillar-faq__item">
         <h3>La cartographie du processus est-elle incluse dans l'audit gratuit ?</h3>
-        <p>L'audit de 45 minutes permet d'identifier les processus à fort potentiel et d'estimer le gain. La cartographie détaillée, elle, fait partie de la phase de mise en place une fois le projet validé.</p>
+        <p>L'<a href="<?php echo esc_url( eb_url('audit') ); ?>">audit de 45 minutes</a> permet d'identifier les processus à fort potentiel et d'estimer le gain. La cartographie détaillée, elle, fait partie de la phase de mise en place une fois le projet validé.</p>
       </div>
       <div class="pillar-faq__item">
         <h3>Un processus automatisé peut-il évoluer si mon activité change ?</h3>
@@ -204,7 +204,7 @@ if ( ! defined( 'ABSPATH' ) ) {
       </div>
       <div class="pillar-faq__item">
         <h3>Faut-il choisir entre Make et n8n, ou peut-on combiner les deux ?</h3>
-        <p>Il est possible de combiner les deux, mais la plupart des projets se stabilisent sur un seul outil pour rester simples à maintenir. Le choix se fait au démarrage selon le processus concerné.</p>
+        <p>Il est possible de combiner <a href="<?php echo esc_url( eb_url('consultant-make') ); ?>">Make</a> et <a href="<?php echo esc_url( eb_url('consultant-n8n') ); ?>">n8n</a>, mais la plupart des projets se stabilisent sur un seul outil pour rester simples à maintenir. Le choix se fait au démarrage selon le processus concerné.</p>
       </div>
       <div class="pillar-faq__item">
         <h3>Que se passe-t-il si mon processus change souvent ?</h3>

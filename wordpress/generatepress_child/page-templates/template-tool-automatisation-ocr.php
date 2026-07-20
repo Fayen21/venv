@@ -118,7 +118,7 @@ if ( ! defined( 'ABSPATH' ) ) {
       <h2>Questions fréquentes</h2>
       <div class="pillar-faq__item">
         <h3>Quelle est la différence entre OCR et automatisation comptable ?</h3>
-        <p>L'OCR est la brique technique qui lit un document. L'automatisation comptable est le processus complet (lecture, contrôle, écriture, rapprochement) qui s'appuie notamment sur l'OCR pour les factures et justificatifs.</p>
+        <p>L'OCR est la brique technique qui lit un document. L'<a href="<?php echo esc_url( eb_url('automatisation-comptable') ); ?>">automatisation comptable</a> est le processus complet (lecture, contrôle, écriture, rapprochement) qui s'appuie notamment sur l'OCR pour les factures et justificatifs.</p>
       </div>
       <div class="pillar-faq__item">
         <h3>L'OCR fonctionne-t-il sur des documents manuscrits ?</h3>
