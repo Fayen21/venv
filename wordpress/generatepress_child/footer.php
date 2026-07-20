@@ -13,7 +13,10 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div class="site-footer__identity">
       <div class="site-footer__logo"><img src="<?php echo esc_url( eb_asset( 'images/uploads/156c3b91-a695-438b-b9d7-6828e90ea7ac.png' ) ); ?>" alt="EB Automatisation" width="180" height="77" loading="lazy"></div>
       <p class="site-footer__desc">Consultant indépendant en automatisation &amp; IA pour les dirigeants de TPE-PME françaises.</p>
-      <a href="<?php echo esc_url( eb_url( 'audit' ) ); ?>" class="site-footer__cta">Audit gratuit →</a>
+      <div class="site-footer__identity-actions">
+        <a href="<?php echo esc_url( eb_url( 'audit' ) ); ?>" class="site-footer__cta">Audit gratuit →</a>
+        <?php echo eb_google_reviews_badge(); ?>
+      </div>
     </div>
     <div class="site-footer__nav">
       <div class="site-footer__col">

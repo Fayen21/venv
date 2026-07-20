@@ -321,6 +321,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
   text-decoration:none;
 }
 .site-footer__cta:hover{ background:var(--orange-hover); }
+.site-footer__identity-actions{ display:flex; flex-direction:column; align-items:center; gap:14px; }
 .site-footer__heading{
   font-size:13px;
   font-weight:600;

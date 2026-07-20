@@ -17,6 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div class="eyebrow hero-left__eyebrow">Réalisations</div>
     <h1>Découvrez ce que l'automatisation peut réellement vous faire gagner</h1>
     <p>Exemples concrets d'automatisations réalisées ou représentatives pour des TPE et PME : temps gagné, erreurs supprimées et processus simplifiés. Chaque cas ci-dessous est conçu et documenté par la même personne — <a href="<?php echo esc_url( eb_url('apropos') ); ?>">découvrez mon parcours et ma méthode</a>.</p>
+    <div class="hero-left__reviews"><?php echo eb_google_reviews_badge(); ?></div>
   </div>
   </div>
 

@@ -120,6 +120,7 @@
 .tools-band h2{ font-size:24px; margin:0 0 10px; line-height:1.2; }
 .tools-band p{ font-size:15px; line-height:1.6; color:var(--text-3); margin:0; }
 /* grille + puces d'outils : voir .tool-chip-grid / .tool-chip dans components.css */
+.tools-band__note{ grid-column:1 / -1; margin:8px 0 0 !important; }
 
 /* ============ FAQ 2 colonnes — cartes avec repère "Q" (au lieu de simples lignes) ============ */
 .faq-grid{ display:grid; grid-template-columns:1fr 1fr; gap:18px 40px; }

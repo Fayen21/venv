@@ -32,6 +32,7 @@ if ( ! defined( 'ABSPATH' ) ) {
         <a href="<?php echo esc_url( eb_url('audit') ); ?>" class="btn btn-primary">Estimer votre gain de temps <span>→</span></a>
         <a href="<?php echo esc_url( eb_url('solutions') ); ?>" class="btn btn-secondary">Voir toutes les solutions</a>
       </div>
+    <div class="pillar-hero__reviews"><?php echo eb_google_reviews_badge(); ?></div>
     </div>
     </div>
     </div>

@@ -20,6 +20,7 @@ get_header();
         <a href="<?php echo esc_url( eb_url('solutions') ); ?>" class="btn btn-secondary hero__cta-secondary">Voir les solutions</a>
       </div>
       <div class="hero__reassurance"><span class="hero__reassurance-check">✓</span> 45 minutes, sans engagement — repartez avec des pistes concrètes</div>
+      <div class="hero__reviews"><?php echo eb_google_reviews_badge(); ?></div>
     </div>
 
     <div class="hero__demo">
@@ -664,6 +665,10 @@ get_header();
         <p>Une première automatisation démarre autour de 800€ et se rentabilise souvent en quelques semaines sur le temps récupéré. L'<a href="<?php echo esc_url( eb_url('audit') ); ?>">audit gratuit</a> sert précisément à vérifier ce calcul avant tout engagement.</p>
       </div>
       <div class="faq-item">
+        <h3>Avez-vous des avis clients ?</h3>
+        <p>Oui, 5/5 sur Google (<a href="#avis">3 avis</a> à ce jour). Les clients qui ont laissé un avis soulignent surtout le professionnalisme, le fait de ne jamais survendre une prestation, et le temps concrètement récupéré au quotidien.</p>
+      </div>
+      <div class="faq-item">
         <h3>« On va perdre le contrôle sur nos données » — qu'en est-il réellement ?</h3>
         <p>L'automatisation s'appuie sur vos outils existants et leurs propres garanties de sécurité. Aucune donnée n'est revendue ni exposée à un tiers non prévu dans votre chaîne d'outils, dans le respect du <a href="<?php echo esc_url( eb_url('rgpd') ); ?>">RGPD</a>.</p>
       </div>
@@ -740,7 +745,7 @@ get_header();
   </section>
 
   <!-- avis clients -->
-  <section class="section reviews-section">
+  <section class="section reviews-section" id="avis">
     <div class="section-head">
       <span class="eyebrow">Avis clients</span>
       <h2 style="max-width:680px;margin:0 auto;">Ce qu'en disent mes clients</h2>

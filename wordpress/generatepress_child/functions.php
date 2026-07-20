@@ -132,8 +132,9 @@ function eb_tool_chevron() {
  * plus fréquents, mais l'automatisation ne s'y limite pas — évite de laisser
  * penser qu'un outil absent de la grille serait incompatible.
  */
-function eb_tool_compat_note() {
-	return '<p class="tool-chip-grid__note">Vous utilisez un autre outil&nbsp;? <strong>Dans la grande majorité des cas, il peut aussi être connecté</strong> — cette liste n\'est pas exhaustive.</p>';
+function eb_tool_compat_note( $extra_class = '' ) {
+	$class = 'tool-chip-grid__note' . ( $extra_class ? ' ' . $extra_class : '' );
+	return '<p class="' . esc_attr( $class ) . '">Vous utilisez un autre outil&nbsp;? <strong>Dans la grande majorité des cas, il peut aussi être connecté</strong> — cette liste n\'est pas exhaustive.</p>';
 }
 
 /**

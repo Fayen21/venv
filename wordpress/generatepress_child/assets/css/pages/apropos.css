@@ -8,7 +8,7 @@
 }
 .apropos-intro__text p{ font-size:17px; line-height:1.64; color:var(--text-2); margin:0 0 18px; }
 .apropos-intro__text p:last-child{ margin-bottom:0; }
-.apropos-intro__photo{ position:relative; display:flex; justify-content:center; }
+.apropos-intro__photo{ position:relative; display:flex; flex-direction:column; align-items:center; gap:20px; }
 .apropos-intro__photo-frame{
   width:100%; max-width:245px; aspect-ratio:4/5; border-radius:18px; border:1px solid var(--border-4);
   overflow:hidden; background:#EEF1F7; box-shadow:0 24px 50px -30px rgba(12,30,60,.4);
