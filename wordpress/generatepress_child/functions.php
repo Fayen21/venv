@@ -495,6 +495,21 @@ function eb_dequeue_generatepress_style() {
 add_action( 'wp_enqueue_scripts', 'eb_dequeue_generatepress_style', 100 );
 
 /**
+ * CSS core WordPress chargé par défaut mais inutile ici : ce thème n'utilise
+ * ni l'éditeur de blocs (Gutenberg) ni theme.json, chaque page/template est
+ * codée à la main. wp-block-library/global-styles/classic-theme-styles ne
+ * servent donc à rien sur ce site mais restent enqueue par défaut sur tout
+ * thème WordPress — poids CSS mort sur chaque page, mobile compris.
+ */
+function eb_dequeue_unused_core_assets() {
+	wp_dequeue_style( 'wp-block-library' );
+	wp_dequeue_style( 'wp-block-library-theme' );
+	wp_dequeue_style( 'global-styles' );
+	wp_dequeue_style( 'classic-theme-styles' );
+}
+add_action( 'wp_enqueue_scripts', 'eb_dequeue_unused_core_assets', 100 );
+
+/**
  * -----------------------------------------------------------------------
  * 4. SEO — title / meta / OG / Twitter / canonical / JSON-LD.
  *    Données statiques par page, identiques au <head> du HTML source.
