@@ -64,7 +64,7 @@
   .hero__reassurance::before{ animation:ebbadgeflash 3s ease-in-out infinite; }
 }
 .hero__reassurance-check{ color:var(--green-bright);font-size:16px;text-shadow:0 0 10px rgba(91,203,139,.9); }
-.hero__reviews{ margin-top:14px; }
+.hero__reviews{ margin-top:14px; text-align:center; }
 
 .hero__demo{ position:relative; z-index:1; }
 .hero__demo-label{ display:flex;align-items:center;gap:9px;margin-bottom:11px; }
@@ -417,40 +417,8 @@
 .value-prop__title{ font-size:21px;margin:0 0 9px; }
 .value-prop__desc{ font-size:15.5px;line-height:1.62;color:var(--text-3); }
 
-/* ============ tarifs ============ */
-.pricing__grid{ gap:18px;align-items:stretch; }
-.pricing__card{
-  background:#fff;border:1px solid var(--border-2);border-radius:var(--r-4xl);
-  padding:32px;display:flex;flex-direction:column;height:100%;position:relative;
-}
-.pricing__card--featured{ background:var(--navy-gradient);border-color:var(--orange);box-shadow:0 22px 50px -22px rgba(221,122,51,.55); }
-.pricing__ribbon{
-  position:absolute;top:-13px;left:32px;background:var(--orange-a11y);color:#fff;
-  font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;padding:5px 12px;border-radius:20px;
-}
-.pricing__name{ font-family:var(--font-heading);font-weight:600;font-size:20px;letter-spacing:-.01em;margin-bottom:6px;color:var(--navy); }
-.pricing__card--featured .pricing__name{ color:#fff; }
-.pricing__tagline{ font-size:13.5px;margin-bottom:22px;color:var(--muted); }
-.pricing__card--featured .pricing__tagline{ color:var(--muted-on-navy); }
-.pricing__features{ display:flex;flex-direction:column;gap:11px;flex:1; }
-.pricing__feature{ display:flex;align-items:center;gap:10px;font-size:14.5px;color:var(--text-5); }
-.pricing__card--featured .pricing__feature{ color:#E7ECF4; }
-.pricing__check{ color:var(--green);flex:none; }
-.pricing__card--featured .pricing__check{ color:var(--green-bright); }
-/* .pricing__check--duration : même puce que .pricing__check (couleur, alignement),
-   mais dessine une horloge (délai de déploiement), pas une coche — la classe de
-   base "check" prêtait à confusion pour ces 2 occurrences précises ; le glyphe
-   n'est pas changé (une horloge reste le bon symbole pour un délai), seul le
-   nommage est clarifié. */
-.pricing__price-row{ border-top:1px solid var(--border);margin-top:22px;padding-top:18px; }
-.pricing__card--featured .pricing__price-row{ border-top-color:var(--navy-card-border); }
-.pricing__price-label{ font-size:12.5px;color:var(--muted);margin-bottom:2px; }
-.pricing__card--featured .pricing__price-label{ color:var(--muted-on-navy); }
-.pricing__price{ font-family:var(--font-heading);font-weight:700;font-size:26px;color:var(--navy);letter-spacing:-.02em; }
-.pricing__price--free{ color:var(--green); }
-.pricing__card--featured .pricing__price{ color:#fff; }
-.pricing__footnote{ text-align:center;font-size:13.5px;color:var(--muted);margin:26px auto 0;max-width:640px;line-height:1.55; }
-.pricing__cta{ margin-top:28px;padding:16px 30px;font-size:16px;box-shadow:var(--shadow-btn-orange-md); }
+/* les styles .pricing__* (utilisés sur l'accueil ET la page Audit gratuit)
+   vivent dans components.css, chargé partout. */
 
 /* ============ comment se déroule l'audit ============ */
 .audit-highlights{ display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:22px; }
@@ -536,7 +504,7 @@
   .final-cta-card{ padding:28px; }
   .audit-why{ padding:28px; grid-template-columns:1fr; text-align:center; }
   .audit-why__icon{ margin:0 auto; }
-  .automations__grid,.proof-cases__grid,.pricing__grid,.audit-steps,.value-props__grid{ gap:26px; }
+  .automations__grid,.proof-cases__grid,.audit-steps,.value-props__grid{ gap:26px; }
   .audit-step__rule{ display:none; }
   /* les 5 onglets ne tiennent pas sur un tout petit écran sans devenir
      illisibles : on les laisse défiler horizontalement plutôt que de les

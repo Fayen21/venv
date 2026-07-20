@@ -190,7 +190,7 @@
 .hero-left__eyebrow{ margin-bottom:18px; }
 .hero-left h1{ max-width:820px; margin:0 0 20px; font-size:52px; line-height:1.06; }
 .hero-left p{ max-width:660px; font-size:19px; line-height:1.6; color:var(--muted-on-navy); margin:0; }
-.hero-left__reviews{ margin-top:22px; }
+.hero-left__reviews{ margin-top:22px; text-align:center; }
 @media (max-width:640px){
   .hero-left{ padding:48px 20px 30px; text-align:center; }
   .hero-left h1{ font-size:32px; line-height:1.14; margin-left:auto; margin-right:auto; }
@@ -337,14 +337,23 @@
 }
 
 /* ---------- avis Google ---------- */
+/* dégradé + liseré au lieu d'un aplat blanc plat : le badge est posé sur des
+   fonds très variés (hero sombre, cartes claires, footer navy) — un fond en
+   dégradé + une bordure de transition légèrement teintée l'intègrent mieux
+   que la puce blanche plate d'origine, quel que soit le contexte. */
 .google-reviews-badge{
-  display:inline-flex; align-items:center; gap:9px;
-  background:#fff; border:1px solid var(--border-2); border-radius:30px;
-  padding:9px 18px 9px 14px; box-shadow:0 6px 18px -10px rgba(12,30,60,.35);
+  display:inline-flex; align-items:center; gap:8px;
+  background:linear-gradient(180deg,#fff 0%,#F4F8FF 100%);
+  border:1px solid var(--border-2);
+  border-radius:30px;
+  padding:9px 16px 9px 13px;
+  box-shadow:0 0 0 1px rgba(46,155,255,.07), 0 8px 20px -12px rgba(12,30,60,.4);
 }
+/* le logo Google (svg brut, seul enfant non-span) a un centrage optique
+   légèrement haut par rapport au score/étoiles — recalé de 1px. */
+.google-reviews-badge > svg{ flex:none; position:relative; top:1px; }
 .google-reviews-badge__score{ font-family:var(--font-heading); font-weight:700; font-size:15px; color:var(--navy); }
 .google-reviews-badge__stars{ display:inline-flex; gap:1px; line-height:0; }
-.google-reviews-badge__count{ font-size:13.5px; color:var(--muted); }
 
 .reviews-section{ text-align:center; }
 .reviews-section .google-reviews-badge{ margin:0 auto 36px; }
@@ -368,4 +377,37 @@
 
 @media (max-width:900px){
   .reviews-grid{ grid-template-columns:1fr; }
+}
+
+/* ---------- tarifs (Accueil, Audit gratuit) ---------- */
+.pricing__grid{ gap:18px;align-items:stretch; }
+.pricing__card{
+  background:#fff;border:1px solid var(--border-2);border-radius:var(--r-4xl);
+  padding:32px;display:flex;flex-direction:column;height:100%;position:relative;
+}
+.pricing__card--featured{ background:var(--navy-gradient);border-color:var(--orange);box-shadow:0 22px 50px -22px rgba(221,122,51,.55); }
+.pricing__ribbon{
+  position:absolute;top:-13px;left:32px;background:var(--orange-a11y);color:#fff;
+  font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;padding:5px 12px;border-radius:20px;
+}
+.pricing__name{ font-family:var(--font-heading);font-weight:600;font-size:20px;letter-spacing:-.01em;margin-bottom:6px;color:var(--navy); }
+.pricing__card--featured .pricing__name{ color:#fff; }
+.pricing__tagline{ font-size:13.5px;margin-bottom:22px;color:var(--muted); }
+.pricing__card--featured .pricing__tagline{ color:var(--muted-on-navy); }
+.pricing__features{ display:flex;flex-direction:column;gap:11px;flex:1; }
+.pricing__feature{ display:flex;align-items:center;gap:10px;font-size:14.5px;color:var(--text-5); }
+.pricing__card--featured .pricing__feature{ color:#E7ECF4; }
+.pricing__check{ color:var(--green);flex:none; }
+.pricing__card--featured .pricing__check{ color:var(--green-bright); }
+.pricing__price-row{ border-top:1px solid var(--border);margin-top:22px;padding-top:18px; }
+.pricing__card--featured .pricing__price-row{ border-top-color:var(--navy-card-border); }
+.pricing__price-label{ font-size:12.5px;color:var(--muted);margin-bottom:2px; }
+.pricing__card--featured .pricing__price-label{ color:var(--muted-on-navy); }
+.pricing__price{ font-family:var(--font-heading);font-weight:700;font-size:26px;color:var(--navy);letter-spacing:-.02em; }
+.pricing__price--free{ color:var(--green); }
+.pricing__card--featured .pricing__price{ color:#fff; }
+.pricing__footnote{ text-align:center;font-size:13.5px;color:var(--muted);margin:26px auto 0;max-width:640px;line-height:1.55; }
+.pricing__cta{ margin-top:28px;padding:16px 30px;font-size:16px;box-shadow:var(--shadow-btn-orange-md); }
+@media (max-width:640px){
+  .pricing__grid{ gap:26px; }
 }

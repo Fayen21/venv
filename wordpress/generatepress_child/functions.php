@@ -183,11 +183,9 @@ function eb_google_reviews() {
  * la section complète (accueil) serait trop lourde (Audit, À propos).
  */
 function eb_google_reviews_badge() {
-	$count = count( eb_google_reviews() );
 	return '<div class="google-reviews-badge">' . eb_google_logo_svg( 20 )
 		. '<span class="google-reviews-badge__score">5,0</span>'
 		. '<span class="google-reviews-badge__stars">' . eb_star_row_svg( 5, 13 ) . '</span>'
-		. '<span class="google-reviews-badge__count">(' . $count . ' avis Google)</span>'
 		. '</div>';
 }
 

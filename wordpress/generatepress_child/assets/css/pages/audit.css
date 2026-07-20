@@ -21,6 +21,7 @@
 .audit-side__lead{ font-size:17px; line-height:1.62; color:var(--muted-on-navy); margin:0 0 32px; }
 
 .audit-points{ display:flex; flex-direction:column; gap:14px; }
+.audit-side__reviews{ margin-top:22px; text-align:center; }
 .audit-point{ display:flex; align-items:flex-start; gap:13px; }
 .audit-point__check{ width:24px; height:24px; flex:none; border-radius:50%; background:var(--green-bg); color:var(--green); display:flex; align-items:center; justify-content:center; font-size:13px; }
 .audit-point__text{ font-size:15.5px; color:var(--text-5); line-height:1.45; padding-top:1px; }

@@ -666,7 +666,7 @@ get_header();
       </div>
       <div class="faq-item">
         <h3>Avez-vous des avis clients ?</h3>
-        <p>Oui, 5/5 sur Google (<a href="#avis">3 avis</a> à ce jour). Les clients qui ont laissé un avis soulignent surtout le professionnalisme, le fait de ne jamais survendre une prestation, et le temps concrètement récupéré au quotidien.</p>
+        <p>Oui, 5/5 sur Google (<a href="<?php echo esc_url( eb_url('apropos') ); ?>#avis">3 avis</a> à ce jour). Les clients qui ont laissé un avis soulignent surtout le professionnalisme, le fait de ne jamais survendre une prestation, et le temps concrètement récupéré au quotidien.</p>
       </div>
       <div class="faq-item">
         <h3>« On va perdre le contrôle sur nos données » — qu'en est-il réellement ?</h3>
@@ -742,30 +742,6 @@ get_header();
       <p>Je ne suis pas seulement un spécialiste de l'automatisation. Je suis <span class="profile-quote__accent">un professionnel de la gestion qui automatise ce qu'il maîtrise déjà.</span></p>
     </div>
     <p class="text-center" style="margin-top:18px;"><a href="<?php echo esc_url( eb_url('apropos') ); ?>" class="btn-text">Découvrir mon parcours et ma méthode →</a></p>
-  </section>
-
-  <!-- avis clients -->
-  <section class="section reviews-section" id="avis">
-    <div class="section-head">
-      <span class="eyebrow">Avis clients</span>
-      <h2 style="max-width:680px;margin:0 auto;">Ce qu'en disent mes clients</h2>
-    </div>
-    <?php echo eb_google_reviews_badge(); ?>
-    <div class="reviews-grid">
-      <?php foreach ( eb_google_reviews() as $review ) : ?>
-      <div class="review-card">
-        <div class="review-card__stars"><?php echo eb_star_row_svg( 5, 15 ); ?></div>
-        <p class="review-card__text">« <?php echo esc_html( $review['text'] ); ?> »</p>
-        <div class="review-card__author">
-          <div class="review-card__avatar"><?php echo esc_html( mb_substr( $review['author'], 0, 1 ) ); ?></div>
-          <div>
-            <div class="review-card__name"><?php echo esc_html( $review['author'] ); ?></div>
-            <?php if ( ! empty( $review['company'] ) ) : ?><div class="review-card__company"><?php echo esc_html( $review['company'] ); ?></div><?php endif; ?>
-          </div>
-        </div>
-      </div>
-      <?php endforeach; ?>
-    </div>
   </section>
 
   <!-- final CTA -->

@@ -27,7 +27,7 @@ if ( ! defined( 'ABSPATH' ) ) {
         <div class="audit-point"><span class="audit-point__check" aria-hidden="true">✓</span><span class="audit-point__text">Réponse sous 24h pour fixer le rendez-vous</span></div>
       </div>
 
-      <?php echo eb_google_reviews_badge(); ?>
+      <div class="audit-side__reviews"><?php echo eb_google_reviews_badge(); ?></div>
 
       <div class="audit-avatar-card">
         <span class="audit-avatar-card__img"><img src="<?php echo esc_url( eb_asset('images/uploads/emmanuelavatar.jpg') ); ?>" alt="Emmanuel" width="800" height="800" loading="lazy"></span>
@@ -114,5 +114,102 @@ if ( ! defined( 'ABSPATH' ) ) {
     </div>
 
   </div>
+
+  <!-- avis clients -->
+  <section class="section reviews-section" id="avis">
+    <div class="section-head">
+      <span class="eyebrow">Avis clients</span>
+      <h2 style="max-width:680px;margin:0 auto;">Ce qu'en disent mes clients</h2>
+    </div>
+    <?php echo eb_google_reviews_badge(); ?>
+    <div class="reviews-grid">
+      <?php foreach ( eb_google_reviews() as $review ) : ?>
+      <div class="review-card">
+        <div class="review-card__stars"><?php echo eb_star_row_svg( 5, 15 ); ?></div>
+        <p class="review-card__text">« <?php echo esc_html( $review['text'] ); ?> »</p>
+        <div class="review-card__author">
+          <div class="review-card__avatar"><?php echo esc_html( mb_substr( $review['author'], 0, 1 ) ); ?></div>
+          <div>
+            <div class="review-card__name"><?php echo esc_html( $review['author'] ); ?></div>
+            <?php if ( ! empty( $review['company'] ) ) : ?><div class="review-card__company"><?php echo esc_html( $review['company'] ); ?></div><?php endif; ?>
+          </div>
+        </div>
+      </div>
+      <?php endforeach; ?>
+    </div>
+  </section>
+
+  <!-- tarifs -->
+  <section class="section">
+    <div class="section-head">
+      <span class="eyebrow">Tarifs</span>
+      <h2 style="max-width:680px;margin:0 auto;">Combien coûte une automatisation ?</h2>
+    </div>
+    <div class="grid grid-4 pricing__grid">
+
+      <div class="pricing__card">
+        <div class="pricing__name">Audit gratuit</div>
+        <div class="pricing__tagline">Le point de départ</div>
+        <div class="pricing__features">
+          <div class="pricing__feature"><span class="pricing__check">✓</span>45 minutes</div>
+          <div class="pricing__feature"><span class="pricing__check">✓</span>Sans engagement</div>
+          <div class="pricing__feature"><span class="pricing__check">✓</span>Identification des gains potentiels</div>
+        </div>
+        <div class="pricing__price-row">
+          <div class="pricing__price-label">Tarif</div>
+          <div class="pricing__price pricing__price--free">Gratuit</div>
+        </div>
+      </div>
+
+      <div class="pricing__card">
+        <div class="pricing__name">Quick Win</div>
+        <div class="pricing__tagline">Une automatisation ciblée</div>
+        <div class="pricing__features">
+          <div class="pricing__feature"><span class="pricing__check">✓</span>Une automatisation ciblée</div>
+          <div class="pricing__feature"><span class="pricing__check">✓</span>Mise en place rapide</div>
+          <div class="pricing__feature"><span class="pricing__check">✓</span>ROI immédiat</div>
+          <div class="pricing__feature"><span class="pricing__check pricing__check--duration"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"></circle><path d="M12 8v4.5l3 2"></path></svg></span>Déploiement : 1 à 2 semaines</div>
+        </div>
+        <div class="pricing__price-row">
+          <div class="pricing__price-label">À partir de</div>
+          <div class="pricing__price">800 €</div>
+        </div>
+      </div>
+
+      <div class="pricing__card pricing__card--featured">
+        <span class="pricing__ribbon">Recommandé</span>
+        <div class="pricing__name">Automatisation métier</div>
+        <div class="pricing__tagline">Un service complet automatisé</div>
+        <div class="pricing__features">
+          <div class="pricing__feature"><span class="pricing__check">✓</span>CRM</div>
+          <div class="pricing__feature"><span class="pricing__check">✓</span>RH</div>
+          <div class="pricing__feature"><span class="pricing__check">✓</span>Comptabilité</div>
+          <div class="pricing__feature"><span class="pricing__check">✓</span>Reporting</div>
+          <div class="pricing__feature"><span class="pricing__check pricing__check--duration"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"></circle><path d="M12 8v4.5l3 2"></path></svg></span>Déploiement : 2 à 4 semaines</div>
+        </div>
+        <div class="pricing__price-row">
+          <div class="pricing__price-label">À partir de</div>
+          <div class="pricing__price">1 500 €</div>
+        </div>
+      </div>
+
+      <div class="pricing__card">
+        <div class="pricing__name">Projet sur mesure</div>
+        <div class="pricing__tagline">Processus complexes &amp; IA avancée</div>
+        <div class="pricing__features">
+          <div class="pricing__feature"><span class="pricing__check">✓</span>Plusieurs logiciels</div>
+          <div class="pricing__feature"><span class="pricing__check">✓</span>IA avancée</div>
+          <div class="pricing__feature"><span class="pricing__check">✓</span>Processus complexes</div>
+        </div>
+        <div class="pricing__price-row">
+          <div class="pricing__price-label">Tarification</div>
+          <div class="pricing__price">Sur devis</div>
+        </div>
+      </div>
+
+    </div>
+    <p class="pricing__footnote">Chaque projet est chiffré après audit. Les coûts dépendent de vos outils et de vos processus.</p>
+  </section>
+
 </main>
 <?php get_footer(); ?>

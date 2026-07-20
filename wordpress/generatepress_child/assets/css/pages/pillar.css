@@ -17,7 +17,7 @@
 .pillar-hero__actions{ display:flex; gap:12px; flex-wrap:wrap; margin-top:28px; }
 .pillar-hero__actions .btn-primary{ padding:15px 26px; font-size:15.5px; box-shadow:0 14px 30px -14px rgba(221,122,51,.7); }
 .pillar-hero__actions .btn-secondary{ padding:15px 22px; font-size:15.5px; }
-.pillar-hero__reviews{ margin-top:22px; }
+.pillar-hero__reviews{ margin-top:22px; text-align:center; }
 
 /* ---------- mockup visuel ---------- */
 /* aligné sur la même colonne que le hero et les sections (820px) : en pleine

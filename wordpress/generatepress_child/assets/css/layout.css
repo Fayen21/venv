@@ -275,7 +275,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
   grid-template-columns:minmax(220px,.85fr) 2.7fr;
   gap:48px;
 }
-.site-footer__identity{ max-width:300px; }
+.site-footer__identity{ max-width:300px; text-align:center; }
 .site-footer__nav{
   display:grid;
   /* colonnes dimensionnées à leur contenu : avec des tracks 1fr, une colonne
@@ -297,12 +297,13 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
   width:auto;
   max-width:100%;
   display:block;
+  margin:0 auto;
 }
 .site-footer__desc{
   font-size:14.5px;
   line-height:1.6;
   color:var(--muted-on-navy);
-  margin:0 0 18px;
+  margin:0 auto 18px;
   max-width:320px;
 }
 .site-footer__cta{
