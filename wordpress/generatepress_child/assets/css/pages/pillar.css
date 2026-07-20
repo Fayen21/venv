@@ -13,7 +13,7 @@
 .pillar-hero{ max-width:820px; margin:0 auto 56px; }
 .pillar-hero__eyebrow{ margin-bottom:16px; }
 .pillar-hero h1{ font-size:44px; line-height:1.1; letter-spacing:-.025em; margin:0 0 20px; }
-.pillar-hero__intro{ font-size:18px; line-height:1.62; color:var(--text-2); margin:0; }
+.pillar-hero__intro{ font-size:18px; line-height:1.62; color:var(--muted-on-navy); margin:0; }
 .pillar-hero__actions{ display:flex; gap:12px; flex-wrap:wrap; margin-top:28px; }
 .pillar-hero__actions .btn-primary{ padding:15px 26px; font-size:15.5px; box-shadow:0 14px 30px -14px rgba(221,122,51,.7); }
 .pillar-hero__actions .btn-secondary{ padding:15px 22px; font-size:15.5px; }
@@ -83,8 +83,11 @@
 .pillar-mid-cta .btn-primary{ padding:14px 24px; font-size:15px; border-radius:10px; white-space:nowrap; box-shadow:none; }
 
 /* ---------- FAQ (liste simple, une colonne) ---------- */
-.pillar-faq{ max-width:820px; margin:0 auto 56px; }
-.pillar-faq h2{ font-size:28px; letter-spacing:-.02em; margin:0 0 8px; }
+/* même grille 2 colonnes que .faq-grid (Accueil, Solutions, Réalisations, À
+   propos) — uniformité demandée entre les pages piliers/expertises et le
+   reste du site. */
+.pillar-faq{ margin:0 auto 56px; display:grid; grid-template-columns:1fr 1fr; gap:0 48px; }
+.pillar-faq h2{ grid-column:1/-1; font-size:28px; letter-spacing:-.02em; margin:0 0 8px; }
 .pillar-faq__item{ padding:22px 0; border-top:1px solid var(--border); }
 .pillar-faq__item h3{ font-size:17px; margin:0 0 8px; }
 .pillar-faq__item p{ font-size:15px; line-height:1.6; color:var(--text-3); margin:0; }
@@ -152,6 +155,7 @@
   .pillar-final-cta{ padding:28px; }
   .pillar-final-cta .btn-primary{ width:100%; justify-content:center; }
   .pillar-usecases h2,.pillar-faq h2,.pillar-compare h2{ text-align:center; }
+  .pillar-faq{ grid-template-columns:1fr; }
   .pillar-usecases__grid{ gap:22px; }
   .pillar-usecase{ padding:24px; }
   .pillar-usecase p{ font-size:14.5px; }

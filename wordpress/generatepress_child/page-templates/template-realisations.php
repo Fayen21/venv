@@ -235,15 +235,15 @@ if ( ! defined( 'ABSPATH' ) ) {
       </div>
       <div class="faq-item">
         <h3>Mon entreprise ressemble-t-elle à l'un de ces cas ?</h3>
-        <p>Très probablement sur au moins un point : la plupart des TPE-PME françaises partagent les mêmes irritants administratifs (emails, Excel, relances, RH, comptabilité), quel que soit le secteur.</p>
+        <p>Très probablement sur au moins un point : la plupart des TPE-PME françaises partagent les mêmes irritants administratifs (emails, <a href="<?php echo esc_url( eb_url('automatisation-excel') ); ?>">Excel</a>, relances, <a href="<?php echo esc_url( eb_url('automatisation-rh') ); ?>">RH</a>, <a href="<?php echo esc_url( eb_url('automatisation-comptable') ); ?>">comptabilité</a>), quel que soit le secteur.</p>
       </div>
       <div class="faq-item">
         <h3>Combien de temps pour obtenir un résultat similaire ?</h3>
-        <p>Entre une et quatre semaines selon la complexité, comme détaillé sur chaque cas ci-dessus. L'audit gratuit permet d'estimer un délai précis pour votre situation.</p>
+        <p>Entre une et quatre semaines selon la complexité, comme détaillé sur chaque cas ci-dessus. L'<a href="<?php echo esc_url( eb_url('audit') ); ?>">audit gratuit</a> permet d'estimer un délai précis pour votre situation.</p>
       </div>
       <div class="faq-item">
         <h3>Ces automatisations fonctionnent-elles avec mes outils spécifiques ?</h3>
-        <p>La compatibilité se vérifie lors de l'audit. La grande majorité des logiciels professionnels (CRM, comptabilité, RH, ERP) disposent d'une API ou de fonctionnalités d'import/export exploitables.</p>
+        <p>La compatibilité se vérifie lors de l'audit. La grande majorité des logiciels professionnels (<a href="<?php echo esc_url( eb_url('automatisation-crm') ); ?>">CRM</a>, comptabilité, RH, ERP) disposent d'une API ou de fonctionnalités d'import/export exploitables.</p>
       </div>
       <div class="faq-item">
         <h3>Puis-je démarrer par une seule de ces automatisations ?</h3>
@@ -293,13 +293,13 @@ if ( ! defined( 'ABSPATH' ) ) {
         <a href="<?php echo esc_url( eb_url('consultant-make') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('make'); ?><span class="tool-chip__label">Make</span><?php echo eb_tool_chevron(); ?></a>
         <a href="<?php echo esc_url( eb_url('consultant-n8n') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('n8n'); ?><span class="tool-chip__label">n8n</span><?php echo eb_tool_chevron(); ?></a>
         <div class="tool-chip"><?php echo eb_tool_icon_html('python'); ?><span class="tool-chip__label">Python</span></div>
-        <div class="tool-chip"><?php echo eb_tool_icon_html('qonto'); ?><span class="tool-chip__label">Qonto</span></div>
+        <a href="<?php echo esc_url( eb_url('automatisation-comptable') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('qonto'); ?><span class="tool-chip__label">Qonto</span><?php echo eb_tool_chevron(); ?></a>
         <a href="<?php echo esc_url( eb_url('automatisation-microsoft-365') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('microsoft365'); ?><span class="tool-chip__label">Microsoft 365</span><?php echo eb_tool_chevron(); ?></a>
         <a href="<?php echo esc_url( eb_url('automatisation-outlook') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('outlook'); ?><span class="tool-chip__label">Outlook</span><?php echo eb_tool_chevron(); ?></a>
-        <div class="tool-chip"><?php echo eb_tool_icon_html('sage'); ?><span class="tool-chip__label">Sage</span></div>
+        <a href="<?php echo esc_url( eb_url('automatisation-comptable') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('sage'); ?><span class="tool-chip__label">Sage</span><?php echo eb_tool_chevron(); ?></a>
         <a href="<?php echo esc_url( eb_url('automatisation-excel') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('excel'); ?><span class="tool-chip__label">Excel</span><?php echo eb_tool_chevron(); ?></a>
         <div class="tool-chip"><?php echo eb_tool_icon_html('notion'); ?><span class="tool-chip__label">Notion</span></div>
-        <div class="tool-chip"><?php echo eb_tool_icon_html('hubspot'); ?><span class="tool-chip__label">HubSpot</span></div>
+        <a href="<?php echo esc_url( eb_url('automatisation-crm') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('hubspot'); ?><span class="tool-chip__label">HubSpot</span><?php echo eb_tool_chevron(); ?></a>
         <div class="tool-chip"><span class="tool-chip__abbr" style="background:#0C1E3C;color:#E59B6A;">{}</span><span class="tool-chip__label">API REST</span></div>
       </div>
       <?php echo eb_tool_compat_note(); ?>

@@ -102,7 +102,7 @@ if ( ! defined( 'ABSPATH' ) ) {
       <div class="tool-chip-grid">
         <div class="tool-chip"><?php echo eb_tool_icon_html('linkedin'); ?><span class="tool-chip__label">LinkedIn</span></div>
         <a href="<?php echo esc_url( eb_url('automatisation-outlook') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('outlook'); ?><span class="tool-chip__label">Outlook</span><?php echo eb_tool_chevron(); ?></a>
-        <div class="tool-chip"><?php echo eb_tool_icon_html('hubspot'); ?><span class="tool-chip__label">HubSpot</span></div>
+        <a href="<?php echo esc_url( eb_url('automatisation-crm') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('hubspot'); ?><span class="tool-chip__label">HubSpot</span><?php echo eb_tool_chevron(); ?></a>
         <a href="<?php echo esc_url( eb_url('consultant-make') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('make'); ?><span class="tool-chip__label">Make</span><?php echo eb_tool_chevron(); ?></a>
         <a href="<?php echo esc_url( eb_url('consultant-n8n') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('n8n'); ?><span class="tool-chip__label">n8n</span><?php echo eb_tool_chevron(); ?></a>
       </div>

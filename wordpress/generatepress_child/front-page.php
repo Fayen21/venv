@@ -123,19 +123,21 @@ get_header();
     </div>
     <div class="grid grid-3 automations__grid">
 
-      <div class="card automations__card">
+      <a href="<?php echo esc_url( eb_url('automatisation-microsoft-365') ); ?>" class="card automations__card automations__card--link">
         <div class="icon-tile icon-tile--a"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M4 6.5l8 6 8-6"></path></svg></div>
+        <span class="automations__card__chevron" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></span>
         <h3>Emails et relances</h3>
         <p class="automations__example"><strong>Factures impayées</strong> détectées et relances personnalisées envoyées au bon moment, sans oubli.</p>
         <div class="automations__gain"><span class="automations__gain-value">−38%</span><span class="automations__gain-label">de retards de paiement</span></div>
-      </div>
+      </a>
 
-      <div class="card automations__card">
+      <a href="<?php echo esc_url( eb_url('automatisation-ocr') ); ?>" class="card automations__card automations__card--link">
         <div class="icon-tile icon-tile--b"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"></rect><line x1="8" y1="8" x2="16" y2="8"></line><line x1="8" y1="12" x2="16" y2="12"></line><line x1="8" y1="16" x2="13" y2="16"></line></svg></div>
+        <span class="automations__card__chevron" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></span>
         <h3>Excel, PDF et OCR</h3>
-        <p class="automations__example">Données lues et extraites de vos fichiers <a href="<?php echo esc_url( eb_url('automatisation-excel') ); ?>">Excel</a> et <a href="<?php echo esc_url( eb_url('extraction-pdf') ); ?>">PDF</a>, puis rangées sans aucune ressaisie.</p>
+        <p class="automations__example">Données lues et extraites de vos fichiers <strong>Excel</strong> et <strong>PDF</strong>, puis rangées sans aucune ressaisie.</p>
         <div class="automations__gain"><span class="automations__gain-value">−72%</span><span class="automations__gain-label">de temps de saisie</span></div>
-      </div>
+      </a>
 
       <a href="<?php echo esc_url( eb_url('automatisation-crm') ); ?>" class="card automations__card automations__card--link">
         <div class="icon-tile icon-tile--a"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7z"></path></svg></div>
@@ -161,12 +163,13 @@ get_header();
         <div class="automations__gain"><span class="automations__gain-value">−85%</span><span class="automations__gain-label">de temps de rapprochement</span></div>
       </a>
 
-      <div class="card automations__card">
+      <a href="<?php echo esc_url( eb_url('automatisation-entreprise') ); ?>" class="card automations__card automations__card--link">
         <div class="icon-tile icon-tile--b"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="14" width="7" height="7" rx="1.5"></rect><rect x="3" y="14" width="7" height="7" rx="1.5"></rect></svg></div>
+        <span class="automations__card__chevron" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></span>
         <h3>Reporting</h3>
         <p class="automations__example">Vos chiffres consolidés depuis vos outils, <strong>tableaux de bord mis à jour automatiquement</strong>.</p>
         <div class="automations__gain"><span class="automations__gain-value">Auto</span><span class="automations__gain-label">tableaux toujours à jour</span></div>
-      </div>
+      </a>
 
     </div>
     <p class="automations__footnote">Ces chiffres sont présentés comme exemples observés sur des missions représentatives.</p>
@@ -244,11 +247,11 @@ get_header();
         <a href="<?php echo esc_url( eb_url('automatisation-excel') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('excel'); ?><span class="tool-chip__label">Excel</span><?php echo eb_tool_chevron(); ?></a>
         <a href="<?php echo esc_url( eb_url('automatisation-microsoft-365') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('microsoft365'); ?><span class="tool-chip__label">Microsoft 365</span><?php echo eb_tool_chevron(); ?></a>
         <div class="tool-chip"><?php echo eb_tool_icon_html('google-workspace'); ?><span class="tool-chip__label">Google Workspace</span></div>
-        <div class="tool-chip"><?php echo eb_tool_icon_html('sage'); ?><span class="tool-chip__label">Sage</span></div>
-        <div class="tool-chip"><?php echo eb_tool_icon_html('qonto'); ?><span class="tool-chip__label">Qonto</span></div>
-        <div class="tool-chip"><?php echo eb_tool_icon_html('pennylane'); ?><span class="tool-chip__label">Pennylane</span></div>
+        <a href="<?php echo esc_url( eb_url('automatisation-comptable') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('sage'); ?><span class="tool-chip__label">Sage</span><?php echo eb_tool_chevron(); ?></a>
+        <a href="<?php echo esc_url( eb_url('automatisation-comptable') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('qonto'); ?><span class="tool-chip__label">Qonto</span><?php echo eb_tool_chevron(); ?></a>
+        <a href="<?php echo esc_url( eb_url('automatisation-comptable') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('pennylane'); ?><span class="tool-chip__label">Pennylane</span><?php echo eb_tool_chevron(); ?></a>
         <div class="tool-chip"><?php echo eb_tool_icon_html('notion'); ?><span class="tool-chip__label">Notion</span></div>
-        <div class="tool-chip"><?php echo eb_tool_icon_html('hubspot'); ?><span class="tool-chip__label">HubSpot</span></div>
+        <a href="<?php echo esc_url( eb_url('automatisation-crm') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('hubspot'); ?><span class="tool-chip__label">HubSpot</span><?php echo eb_tool_chevron(); ?></a>
         <a href="<?php echo esc_url( eb_url('consultant-make') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('make'); ?><span class="tool-chip__label">Make</span><?php echo eb_tool_chevron(); ?></a>
         <a href="<?php echo esc_url( eb_url('consultant-n8n') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('n8n'); ?><span class="tool-chip__label">n8n</span><?php echo eb_tool_chevron(); ?></a>
       </div>
@@ -658,11 +661,11 @@ get_header();
     <div class="faq-grid">
       <div class="faq-item">
         <h3>« On n'a pas les moyens d'automatiser » — est-ce vraiment le cas ?</h3>
-        <p>Une première automatisation démarre autour de 800€ et se rentabilise souvent en quelques semaines sur le temps récupéré. L'audit gratuit sert précisément à vérifier ce calcul avant tout engagement.</p>
+        <p>Une première automatisation démarre autour de 800€ et se rentabilise souvent en quelques semaines sur le temps récupéré. L'<a href="<?php echo esc_url( eb_url('audit') ); ?>">audit gratuit</a> sert précisément à vérifier ce calcul avant tout engagement.</p>
       </div>
       <div class="faq-item">
         <h3>« On va perdre le contrôle sur nos données » — qu'en est-il réellement ?</h3>
-        <p>L'automatisation s'appuie sur vos outils existants et leurs propres garanties de sécurité. Aucune donnée n'est revendue ni exposée à un tiers non prévu dans votre chaîne d'outils, dans le respect du RGPD.</p>
+        <p>L'automatisation s'appuie sur vos outils existants et leurs propres garanties de sécurité. Aucune donnée n'est revendue ni exposée à un tiers non prévu dans votre chaîne d'outils, dans le respect du <a href="<?php echo esc_url( eb_url('rgpd') ); ?>">RGPD</a>.</p>
       </div>
       <div class="faq-item">
         <h3>« Nos process sont trop spécifiques pour être automatisés » — vraiment ?</h3>
@@ -674,15 +677,15 @@ get_header();
       </div>
       <div class="faq-item">
         <h3>Combien de temps pour mettre en place une automatisation ?</h3>
-        <p>Les premiers résultats arrivent souvent en quelques jours à quelques semaines, selon la complexité du processus.</p>
+        <p>Les premiers résultats arrivent souvent en quelques jours à quelques semaines, selon la complexité du processus. Le point de départ reste toujours l'<a href="<?php echo esc_url( eb_url('audit') ); ?>">audit gratuit</a>, qui fixe un calendrier réaliste.</p>
       </div>
       <div class="faq-item">
         <h3>Mes données sont-elles en sécurité ?</h3>
-        <p>Oui. Je travaille dans le respect du RGPD, sur vos propres outils, sans revente ni exposition de vos données.</p>
+        <p>Oui. Je travaille dans le respect du <a href="<?php echo esc_url( eb_url('rgpd') ); ?>">RGPD</a>, sur vos propres outils, sans revente ni exposition de vos données.</p>
       </div>
       <div class="faq-item">
         <h3>Faut-il changer de logiciels ?</h3>
-        <p>Non. Je m'appuie sur vos outils existants — Sage, Qonto, Excel, Outlook… — et je les connecte entre eux.</p>
+        <p>Non. Je m'appuie sur vos outils existants — <a href="<?php echo esc_url( eb_url('automatisation-comptable') ); ?>">Sage, Qonto</a>, <a href="<?php echo esc_url( eb_url('automatisation-excel') ); ?>">Excel</a>, <a href="<?php echo esc_url( eb_url('automatisation-outlook') ); ?>">Outlook</a>… — et je les connecte entre eux.</p>
       </div>
       <div class="faq-item">
         <h3>Et si je veux internaliser plus tard ?</h3>

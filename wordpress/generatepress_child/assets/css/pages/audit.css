@@ -18,7 +18,7 @@
 .audit-side__hero-fx{ border-radius:22px; padding:30px 30px 0; margin:0 0 32px; }
 .audit-side__eyebrow{ margin-bottom:18px; }
 .audit-side h1{ font-size:46px; line-height:1.06; margin:0 0 20px; }
-.audit-side__lead{ font-size:17px; line-height:1.62; color:var(--text-2); margin:0 0 32px; }
+.audit-side__lead{ font-size:17px; line-height:1.62; color:var(--muted-on-navy); margin:0 0 32px; }
 
 .audit-points{ display:flex; flex-direction:column; gap:14px; }
 .audit-point{ display:flex; align-items:flex-start; gap:13px; }

@@ -151,11 +151,11 @@ if ( ! defined( 'ABSPATH' ) ) {
           <a href="<?php echo esc_url( eb_url('automatisation-excel') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('excel'); ?><span class="tool-chip__label">Excel</span><?php echo eb_tool_chevron(); ?></a>
           <a href="<?php echo esc_url( eb_url('automatisation-microsoft-365') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('microsoft365'); ?><span class="tool-chip__label">Microsoft 365</span><?php echo eb_tool_chevron(); ?></a>
           <div class="tool-chip"><?php echo eb_tool_icon_html('google-workspace'); ?><span class="tool-chip__label">Google Workspace</span></div>
-          <div class="tool-chip"><?php echo eb_tool_icon_html('sage'); ?><span class="tool-chip__label">Sage</span></div>
-          <div class="tool-chip"><?php echo eb_tool_icon_html('qonto'); ?><span class="tool-chip__label">Qonto</span></div>
-          <div class="tool-chip"><?php echo eb_tool_icon_html('pennylane'); ?><span class="tool-chip__label">Pennylane</span></div>
+          <a href="<?php echo esc_url( eb_url('automatisation-comptable') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('sage'); ?><span class="tool-chip__label">Sage</span><?php echo eb_tool_chevron(); ?></a>
+          <a href="<?php echo esc_url( eb_url('automatisation-comptable') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('qonto'); ?><span class="tool-chip__label">Qonto</span><?php echo eb_tool_chevron(); ?></a>
+          <a href="<?php echo esc_url( eb_url('automatisation-comptable') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('pennylane'); ?><span class="tool-chip__label">Pennylane</span><?php echo eb_tool_chevron(); ?></a>
           <div class="tool-chip"><?php echo eb_tool_icon_html('notion'); ?><span class="tool-chip__label">Notion</span></div>
-          <div class="tool-chip"><?php echo eb_tool_icon_html('hubspot'); ?><span class="tool-chip__label">HubSpot</span></div>
+          <a href="<?php echo esc_url( eb_url('automatisation-crm') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('hubspot'); ?><span class="tool-chip__label">HubSpot</span><?php echo eb_tool_chevron(); ?></a>
           <a href="<?php echo esc_url( eb_url('consultant-make') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('make'); ?><span class="tool-chip__label">Make</span><?php echo eb_tool_chevron(); ?></a>
           <a href="<?php echo esc_url( eb_url('consultant-n8n') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('n8n'); ?><span class="tool-chip__label">n8n</span><?php echo eb_tool_chevron(); ?></a>
         </div>
@@ -190,11 +190,11 @@ if ( ! defined( 'ABSPATH' ) ) {
       </div>
       <div class="faq-item">
         <h3>Votre expérience en gestion sert-elle vraiment sur des sujets techniques ?</h3>
-        <p>Oui, c'est même l'angle central de mon approche : je sais reconnaître une automatisation comptable ou RH fiable d'un raccourci risqué, parce que j'ai pratiqué ces métiers avant de les automatiser.</p>
+        <p>Oui, c'est même l'angle central de mon approche : je sais reconnaître une <a href="<?php echo esc_url( eb_url('automatisation-comptable') ); ?>">automatisation comptable</a> ou <a href="<?php echo esc_url( eb_url('automatisation-rh') ); ?>">RH</a> fiable d'un raccourci risqué, parce que j'ai pratiqué ces métiers avant de les automatiser.</p>
       </div>
       <div class="faq-item">
         <h3>Comment se passe le tout premier échange ?</h3>
-        <p>Par un <strong>audit gratuit de 45 minutes, sans engagement</strong> : vous présentez vos tâches les plus chronophages, j'identifie celles qui seraient les plus rentables à automatiser.</p>
+        <p>Par un <a href="<?php echo esc_url( eb_url('audit') ); ?>"><strong>audit gratuit de 45 minutes, sans engagement</strong></a> : vous présentez vos tâches les plus chronophages, j'identifie celles qui seraient les plus rentables à automatiser.</p>
       </div>
       <div class="faq-item">
         <h3>Prenez-vous tous les projets qu'on vous propose ?</h3>

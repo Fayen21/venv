@@ -417,11 +417,11 @@ if ( ! defined( 'ABSPATH' ) ) {
         <a href="<?php echo esc_url( eb_url('automatisation-excel') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('excel'); ?><span class="tool-chip__label">Excel</span><?php echo eb_tool_chevron(); ?></a>
         <a href="<?php echo esc_url( eb_url('automatisation-microsoft-365') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('microsoft365'); ?><span class="tool-chip__label">Microsoft 365</span><?php echo eb_tool_chevron(); ?></a>
         <div class="tool-chip"><?php echo eb_tool_icon_html('google-workspace'); ?><span class="tool-chip__label">Google Workspace</span></div>
-        <div class="tool-chip"><?php echo eb_tool_icon_html('sage'); ?><span class="tool-chip__label">Sage</span></div>
-        <div class="tool-chip"><?php echo eb_tool_icon_html('qonto'); ?><span class="tool-chip__label">Qonto</span></div>
-        <div class="tool-chip"><?php echo eb_tool_icon_html('pennylane'); ?><span class="tool-chip__label">Pennylane</span></div>
+        <a href="<?php echo esc_url( eb_url('automatisation-comptable') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('sage'); ?><span class="tool-chip__label">Sage</span><?php echo eb_tool_chevron(); ?></a>
+        <a href="<?php echo esc_url( eb_url('automatisation-comptable') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('qonto'); ?><span class="tool-chip__label">Qonto</span><?php echo eb_tool_chevron(); ?></a>
+        <a href="<?php echo esc_url( eb_url('automatisation-comptable') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('pennylane'); ?><span class="tool-chip__label">Pennylane</span><?php echo eb_tool_chevron(); ?></a>
         <div class="tool-chip"><?php echo eb_tool_icon_html('notion'); ?><span class="tool-chip__label">Notion</span></div>
-        <div class="tool-chip"><?php echo eb_tool_icon_html('hubspot'); ?><span class="tool-chip__label">HubSpot</span></div>
+        <a href="<?php echo esc_url( eb_url('automatisation-crm') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('hubspot'); ?><span class="tool-chip__label">HubSpot</span><?php echo eb_tool_chevron(); ?></a>
         <a href="<?php echo esc_url( eb_url('consultant-make') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('make'); ?><span class="tool-chip__label">Make</span><?php echo eb_tool_chevron(); ?></a>
         <a href="<?php echo esc_url( eb_url('consultant-n8n') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('n8n'); ?><span class="tool-chip__label">n8n</span><?php echo eb_tool_chevron(); ?></a>
       </div>
@@ -438,23 +438,23 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div class="faq-grid">
       <div class="faq-item">
         <h3>Par où commencer si plusieurs domaines me semblent pertinents ?</h3>
-        <p>Commencez par celui où le temps perdu est le plus visible et le plus facile à chiffrer, quitte à élargir ensuite. L'audit gratuit sert précisément à trancher objectivement entre plusieurs pistes.</p>
+        <p>Commencez par celui où le temps perdu est le plus visible et le plus facile à chiffrer, quitte à élargir ensuite. L'<a href="<?php echo esc_url( eb_url('audit') ); ?>">audit gratuit</a> sert précisément à trancher objectivement entre plusieurs pistes.</p>
       </div>
       <div class="faq-item">
         <h3>Ces solutions sont-elles vendues comme des forfaits fixes ?</h3>
-        <p>Non. Chaque solution présentée ici est une famille de cas d'usage, pas un produit standard : le périmètre exact et le chiffrage se construisent avec vous après audit.</p>
+        <p>Non. Chaque solution présentée ici est une famille de cas d'usage, pas un produit standard : le périmètre exact et le chiffrage se construisent avec vous après <a href="<?php echo esc_url( eb_url('audit') ); ?>">audit</a>.</p>
       </div>
       <div class="faq-item">
         <h3>Comment cette page s'articule avec les pages piliers et les pages Outils ?</h3>
-        <p>Cette page distribue vers deux niveaux de détail : les 3 piliers (méthode par domaine) pour comprendre l'approche, et les pages Outils pour un outil précis (Excel, Outlook, Make, n8n, Microsoft 365).</p>
+        <p>Cette page distribue vers deux niveaux de détail : les 3 piliers (méthode par domaine) pour comprendre l'approche, et les pages Outils pour un outil précis (<a href="<?php echo esc_url( eb_url('automatisation-excel') ); ?>">Excel</a>, <a href="<?php echo esc_url( eb_url('automatisation-outlook') ); ?>">Outlook</a>, <a href="<?php echo esc_url( eb_url('consultant-make') ); ?>">Make</a>, <a href="<?php echo esc_url( eb_url('consultant-n8n') ); ?>">n8n</a>, <a href="<?php echo esc_url( eb_url('automatisation-microsoft-365') ); ?>">Microsoft 365</a>).</p>
       </div>
       <div class="faq-item">
         <h3>Peut-on combiner plusieurs de ces solutions dans un même projet ?</h3>
-        <p>Oui, c'est même fréquent : une automatisation commerciale s'articule souvent avec la comptabilité, ou un traitement documentaire IA vient renforcer une automatisation RH existante.</p>
+        <p>Oui, c'est même fréquent : une <a href="<?php echo esc_url( eb_url('automatisation-crm') ); ?>">automatisation commerciale</a> s'articule souvent avec la <a href="<?php echo esc_url( eb_url('automatisation-comptable') ); ?>">comptabilité</a>, ou un traitement documentaire IA vient renforcer une <a href="<?php echo esc_url( eb_url('automatisation-rh') ); ?>">automatisation RH</a> existante.</p>
       </div>
       <div class="faq-item">
         <h3>Quelle est la différence entre les solutions et les pages d'expertise ?</h3>
-        <p>Cette page présente une vue d'ensemble par domaine. Chaque pilier (entreprise, processus, IA) et chaque page d'expertise détaille ensuite la méthode, les cas d'usage et les questions spécifiques à ce sujet.</p>
+        <p>Cette page présente une vue d'ensemble par domaine. Chaque pilier (<a href="<?php echo esc_url( eb_url('automatisation-entreprise') ); ?>">entreprise</a>, <a href="<?php echo esc_url( eb_url('automatisation-processus') ); ?>">processus</a>, <a href="<?php echo esc_url( eb_url('automatisation-ia') ); ?>">IA</a>) et chaque page d'expertise détaille ensuite la méthode, les cas d'usage et les questions spécifiques à ce sujet.</p>
       </div>
       <div class="faq-item">
         <h3>Proposez-vous des solutions sectorielles spécifiques ?</h3>
@@ -462,7 +462,7 @@ if ( ! defined( 'ABSPATH' ) ) {
       </div>
       <div class="faq-item">
         <h3>Comment savoir si un outil que j'utilise est automatisable ?</h3>
-        <p>La quasi-totalité des logiciels professionnels modernes proposent une API ou des fonctionnalités d'import/export exploitables. La faisabilité exacte se vérifie lors de l'audit, outil par outil.</p>
+        <p>La quasi-totalité des logiciels professionnels modernes proposent une API ou des fonctionnalités d'import/export exploitables. La faisabilité exacte se vérifie lors de l'<a href="<?php echo esc_url( eb_url('audit') ); ?>">audit</a>, outil par outil.</p>
       </div>
     </div>
   </section>
