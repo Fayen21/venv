@@ -43,10 +43,6 @@
   0%,100%{ transform:scale(1); opacity:.85; }
   50%{ transform:scale(1.1); opacity:1; }
 }
-@keyframes ebchevronpulse{
-  0%,100%{ opacity:.7; transform:translateX(0); }
-  50%{ opacity:1; transform:translateX(3px); }
-}
 @keyframes ebbadgeflash{
   0%,60%,100%{ opacity:0; }
   75%{ opacity:1; }

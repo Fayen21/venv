@@ -99,6 +99,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     <!-- mid CTA -->
     <div class="pillar-mid-cta">
       <p>Combien d'heures votre cycle de facturation vous prend-il chaque mois ?</p>
+      <span class="pillar-mid-cta__connector" aria-hidden="true"></span>
       <a href="<?php echo esc_url( eb_url('audit') ); ?>" class="btn btn-primary">Estimer votre gain de temps <span>→</span></a>
     </div>
 

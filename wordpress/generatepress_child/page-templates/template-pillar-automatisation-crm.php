@@ -114,11 +114,11 @@ if ( ! defined( 'ABSPATH' ) ) {
       <div class="pillar-flow__label">Comment nous intervenons</div>
       <div class="pillar-flow__row">
         <div class="pillar-flow__step"><span class="pillar-flow__icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h4l2 3h4l2-3h4"></path><path d="M4 12v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6"></path><path d="M4 12l2-7h12l2 7"></path></svg></span><span class="pillar-flow__step-label">Demande reçue</span></div>
-        <span class="pillar-flow__arrow">→</span>
+        <span class="pillar-flow__arrow"></span>
         <div class="pillar-flow__step"><span class="pillar-flow__icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41L11 3.83A2 2 0 0 0 9.59 3.24L4 3a1 1 0 0 0-1 1l.24 5.59a2 2 0 0 0 .59 1.41l9.58 9.58a2 2 0 0 0 2.83 0l4.35-4.35a2 2 0 0 0 0-2.82z"></path><circle cx="7.5" cy="7.5" r="1.2"></circle></svg></span><span class="pillar-flow__step-label">Lead qualifié</span></div>
-        <span class="pillar-flow__arrow">→</span>
+        <span class="pillar-flow__arrow"></span>
         <div class="pillar-flow__step"><span class="pillar-flow__icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="4" width="12" height="17" rx="2"></rect><path d="M9 4V3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1"></path><path d="M9 11h6M9 15h6"></path></svg></span><span class="pillar-flow__step-label">Fiche CRM créée</span></div>
-        <span class="pillar-flow__arrow">→</span>
+        <span class="pillar-flow__arrow"></span>
         <div class="pillar-flow__step"><span class="pillar-flow__icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.7 21a2 2 0 0 1-3.4 0"></path></svg></span><span class="pillar-flow__step-label">Relance programmée</span></div>
       </div>
     </div>
@@ -147,6 +147,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     <!-- mid CTA -->
     <div class="pillar-mid-cta">
       <p>Votre CRM affiche-t-il vraiment la réalité de votre activité commerciale ?</p>
+      <span class="pillar-mid-cta__connector" aria-hidden="true"></span>
       <a href="<?php echo esc_url( eb_url('audit') ); ?>" class="btn btn-primary">Réserver un audit gratuit <span>→</span></a>
     </div>
 

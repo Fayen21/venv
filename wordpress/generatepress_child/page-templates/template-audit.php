@@ -27,6 +27,8 @@ if ( ! defined( 'ABSPATH' ) ) {
         <div class="audit-point"><span class="audit-point__check" aria-hidden="true">✓</span><span class="audit-point__text">Réponse sous 24h pour fixer le rendez-vous</span></div>
       </div>
 
+      <?php echo eb_google_reviews_badge(); ?>
+
       <div class="audit-avatar-card">
         <span class="audit-avatar-card__img"><img src="<?php echo esc_url( eb_asset('images/uploads/emmanuelavatar.jpg') ); ?>" alt="Emmanuel" width="800" height="800" loading="lazy"></span>
         <div>

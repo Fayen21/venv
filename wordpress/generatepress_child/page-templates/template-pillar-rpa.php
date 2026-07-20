@@ -115,11 +115,11 @@ if ( ! defined( 'ABSPATH' ) ) {
       <div class="pillar-flow__label">Comment nous intervenons</div>
       <div class="pillar-flow__row">
         <div class="pillar-flow__step"><span class="pillar-flow__icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"></rect><path d="M9 8h6M9 12h6M9 16h4"></path></svg></span><span class="pillar-flow__step-label">Document reçu</span></div>
-        <span class="pillar-flow__arrow">→</span>
+        <span class="pillar-flow__arrow"></span>
         <div class="pillar-flow__step"><span class="pillar-flow__icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="8" width="16" height="11" rx="3"></rect><circle cx="9" cy="13.5" r="1.2"></circle><circle cx="15" cy="13.5" r="1.2"></circle><path d="M12 8V4M9 4h6"></path></svg></span><span class="pillar-flow__step-label">Lu par le robot logiciel</span></div>
-        <span class="pillar-flow__arrow">→</span>
+        <span class="pillar-flow__arrow"></span>
         <div class="pillar-flow__step"><span class="pillar-flow__icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="6.5"></circle><path d="M20 20l-4.35-4.35"></path></svg></span><span class="pillar-flow__step-label">Données extraites (OCR)</span></div>
-        <span class="pillar-flow__arrow">→</span>
+        <span class="pillar-flow__arrow"></span>
         <div class="pillar-flow__step"><span class="pillar-flow__icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M8.5 12.5l2.3 2.3 4.7-4.8"></path></svg></span><span class="pillar-flow__step-label">Reporté dans votre outil</span></div>
       </div>
     </div>
@@ -148,6 +148,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     <!-- mid CTA -->
     <div class="pillar-mid-cta">
       <p>Une tâche documentaire répétitive vous fait perdre du temps chaque semaine ?</p>
+      <span class="pillar-mid-cta__connector" aria-hidden="true"></span>
       <a href="<?php echo esc_url( eb_url('audit') ); ?>" class="btn btn-primary">Réserver un audit gratuit <span>→</span></a>
     </div>
 

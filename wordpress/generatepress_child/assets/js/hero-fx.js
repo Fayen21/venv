@@ -394,9 +394,13 @@
 			t++;
 			ctx.clearRect(0, 0, st.w, st.h);
 			var cx = st.w * 0.72, cy = st.h * 0.47, baseR = Math.min(st.w, st.h) * 0.4;
-			var coreHitR = Math.max(46, baseR * 0.16);
-			var targeting = Math.hypot(mx - cx, my - cy) < coreHitR ? 1 : 0;
-			engage += (targeting - engage) * 0.045;
+			// proximité continue (0..1 selon la distance), pas un simple seuil dedans/dehors :
+			// un seuil dur faisait bondir l'engagement dès l'entrée dans le cercle central,
+			// perçu comme une accélération soudaine plutôt qu'un ralliement progressif.
+			var proxR = Math.max(90, baseR * 0.55);
+			var dist = Math.hypot(mx - cx, my - cy);
+			var prox = Math.max(0, Math.min(1, 1 - dist / proxR));
+			engage += (prox - engage) * 0.03;
 			var R = baseR * (1 + engage * 0.22);
 			var speedMul = 1 + engage * 3.0;
 			var spacingBoost = engage * 0.06;

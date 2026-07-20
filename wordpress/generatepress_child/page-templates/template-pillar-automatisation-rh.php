@@ -115,11 +115,11 @@ if ( ! defined( 'ABSPATH' ) ) {
       <div class="pillar-flow__label">Comment nous intervenons</div>
       <div class="pillar-flow__row">
         <div class="pillar-flow__step"><span class="pillar-flow__icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M8.5 12.5l2.3 2.3 4.7-4.8"></path></svg></span><span class="pillar-flow__step-label">Embauche validée</span></div>
-        <span class="pillar-flow__arrow">→</span>
+        <span class="pillar-flow__arrow"></span>
         <div class="pillar-flow__step"><span class="pillar-flow__icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.85 2.85 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5z"></path></svg></span><span class="pillar-flow__step-label">Contrat signé électroniquement</span></div>
-        <span class="pillar-flow__arrow">→</span>
+        <span class="pillar-flow__arrow"></span>
         <div class="pillar-flow__step"><span class="pillar-flow__icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="15" r="4"></circle><path d="M11 12l8-8M16 7l2 2M13 10l2 2"></path></svg></span><span class="pillar-flow__step-label">Accès créés</span></div>
-        <span class="pillar-flow__arrow">→</span>
+        <span class="pillar-flow__arrow"></span>
         <div class="pillar-flow__step"><span class="pillar-flow__icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7z"></path></svg></span><span class="pillar-flow__step-label">Dossier salarié prêt</span></div>
       </div>
     </div>
@@ -148,6 +148,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     <!-- mid CTA -->
     <div class="pillar-mid-cta">
       <p>Vos process RH reposent encore sur des emails et des tableurs ?</p>
+      <span class="pillar-mid-cta__connector" aria-hidden="true"></span>
       <a href="<?php echo esc_url( eb_url('audit') ); ?>" class="btn btn-primary">Réserver un audit gratuit <span>→</span></a>
     </div>
 

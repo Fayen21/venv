@@ -25,6 +25,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div class="apropos-intro__text">
       <p>Je travaille en indépendant, à distance, avec des TPE et PME françaises de tous secteurs, sur l'ensemble de <a href="<?php echo esc_url( eb_url('solutions') ); ?>">mes solutions d'automatisation</a>. Je conçois, documente et livre chaque automatisation avec les outils grand public que vous utilisez déjà, afin que <strong>vous restiez autonome et propriétaire</strong> de ce qui est mis en place.</p>
       <p>Mon approche s'appuie sur une méthode simple : je cartographie vos processus existants avant de choisir les bons outils — intelligence artificielle, RPA ou simple connecteur — pour chaque cas. Cette rigueur vient directement de mon parcours en gestion et en comptabilité : je sais distinguer une <a href="<?php echo esc_url( eb_url('automatisation-comptable') ); ?>">automatisation comptable</a> fiable d'un raccourci risqué. Contrairement à une <a href="<?php echo esc_url( eb_url('agence-ia') ); ?>">agence IA</a>, vous n'avez qu'<strong>un seul interlocuteur, du premier audit à la mise en production</strong> — ce qui simplifie le suivi de votre <a href="<?php echo esc_url( eb_url('automatisation-processus') ); ?>">automatisation des processus</a>, service par service.</p>
+      <?php echo eb_google_reviews_badge(); ?>
     </div>
     <div class="apropos-intro__photo">
       <div class="apropos-intro__photo-frame">

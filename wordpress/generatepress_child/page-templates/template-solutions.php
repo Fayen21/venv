@@ -411,6 +411,7 @@ if ( ! defined( 'ABSPATH' ) ) {
       <div>
         <h2>Je connecte les outils que vous utilisez déjà</h2>
         <p>Vos données circulent entre vos logiciels, sans ressaisie et sans migration. Côté technique, je m'appuie sur des outils éprouvés.</p>
+        <?php echo eb_tool_compat_note(); ?>
       </div>
       <div class="tool-chip-grid">
         <a href="<?php echo esc_url( eb_url('automatisation-outlook') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('outlook'); ?><span class="tool-chip__label">Outlook</span><?php echo eb_tool_chevron(); ?></a>
@@ -425,7 +426,6 @@ if ( ! defined( 'ABSPATH' ) ) {
         <a href="<?php echo esc_url( eb_url('consultant-make') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('make'); ?><span class="tool-chip__label">Make</span><?php echo eb_tool_chevron(); ?></a>
         <a href="<?php echo esc_url( eb_url('consultant-n8n') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('n8n'); ?><span class="tool-chip__label">n8n</span><?php echo eb_tool_chevron(); ?></a>
       </div>
-      <?php echo eb_tool_compat_note(); ?>
     </div>
   </section>
 

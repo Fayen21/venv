@@ -169,11 +169,11 @@ if ( ! defined( 'ABSPATH' ) ) {
       <div class="pillar-flow__label">Comment ça s'enchaîne</div>
       <div class="pillar-flow__row">
         <div class="pillar-flow__step"><span class="pillar-flow__icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"></rect><path d="M9 8h6M9 12h6M9 16h4"></path></svg></span><span class="pillar-flow__step-label">Document reçu</span></div>
-        <span class="pillar-flow__arrow">→</span>
+        <span class="pillar-flow__arrow"></span>
         <div class="pillar-flow__step"><span class="pillar-flow__icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="8" width="16" height="11" rx="3"></rect><circle cx="9" cy="13.5" r="1.2"></circle><circle cx="15" cy="13.5" r="1.2"></circle><path d="M12 8V4M9 4h6"></path></svg></span><span class="pillar-flow__step-label">Lu par l'IA</span></div>
-        <span class="pillar-flow__arrow">→</span>
+        <span class="pillar-flow__arrow"></span>
         <div class="pillar-flow__step"><span class="pillar-flow__icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7z"></path></svg></span><span class="pillar-flow__step-label">Classé automatiquement</span></div>
-        <span class="pillar-flow__arrow">→</span>
+        <span class="pillar-flow__arrow"></span>
         <div class="pillar-flow__step"><span class="pillar-flow__icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M8.5 12.5l2.3 2.3 4.7-4.8"></path></svg></span><span class="pillar-flow__step-label">Action déclenchée</span></div>
       </div>
     </div>
@@ -181,6 +181,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     <!-- mid CTA -->
     <div class="pillar-mid-cta">
       <p>Un email, un PDF ou un document que vous traitez encore à la main chaque semaine ?</p>
+      <span class="pillar-mid-cta__connector" aria-hidden="true"></span>
       <a href="<?php echo esc_url( eb_url('audit') ); ?>" class="btn btn-primary">Estimer votre gain de temps <span>→</span></a>
     </div>
 

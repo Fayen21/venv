@@ -114,11 +114,11 @@ if ( ! defined( 'ABSPATH' ) ) {
       <div class="pillar-flow__label">Comment nous intervenons</div>
       <div class="pillar-flow__row">
         <div class="pillar-flow__step"><span class="pillar-flow__icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="5"></circle><circle cx="12" cy="12" r="1"></circle></svg></span><span class="pillar-flow__step-label">Ciblage défini</span></div>
-        <span class="pillar-flow__arrow">→</span>
+        <span class="pillar-flow__arrow"></span>
         <div class="pillar-flow__step"><span class="pillar-flow__icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M4 6.5l8 6 8-6"></path></svg></span><span class="pillar-flow__step-label">Premier message envoyé</span></div>
-        <span class="pillar-flow__arrow">→</span>
+        <span class="pillar-flow__arrow"></span>
         <div class="pillar-flow__step"><span class="pillar-flow__icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 0 1 14-5l2 2"></path><path d="M20 5v4h-4"></path><path d="M20 12a8 8 0 0 1-14 5l-2-2"></path><path d="M4 19v-4h4"></path></svg></span><span class="pillar-flow__step-label">Relances automatiques</span></div>
-        <span class="pillar-flow__arrow">→</span>
+        <span class="pillar-flow__arrow"></span>
         <div class="pillar-flow__step"><span class="pillar-flow__icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="4" width="12" height="17" rx="2"></rect><path d="M9 4V3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1"></path><path d="M9 11h6M9 15h6"></path></svg></span><span class="pillar-flow__step-label">Lead qualifié dans le CRM</span></div>
       </div>
     </div>
@@ -147,6 +147,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     <!-- mid CTA -->
     <div class="pillar-mid-cta">
       <p>Votre prospection s'arrête dès que vous n'avez plus le temps de vous en occuper ?</p>
+      <span class="pillar-mid-cta__connector" aria-hidden="true"></span>
       <a href="<?php echo esc_url( eb_url('audit') ); ?>" class="btn btn-primary">Réserver un audit gratuit <span>→</span></a>
     </div>
 
