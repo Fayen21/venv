@@ -43,31 +43,31 @@ get_header();
           <span class="mockup__live"><span class="mockup__live-dot"></span>en direct</span>
         </div>
         <div class="workflow-panel__body">
-          <div class="workflow-step" data-step="0">
-            <span class="workflow-step__icon" data-step-icon><span data-step-icon-emoji></span><span class="workflow-step__dot" data-step-dot></span></span>
+          <div class="workflow-step is-active" data-step="0">
+            <span class="workflow-step__icon" data-step-icon><span data-step-icon-emoji><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="6.5"></circle><path d="M20 20l-4.35-4.35"></path></svg></span><span class="workflow-step__dot" data-step-dot></span></span>
             <div class="workflow-step__text">
-              <div class="workflow-step__title" data-step-title></div>
-              <div class="workflow-step__sub" data-step-sub></div>
+              <div class="workflow-step__title" data-step-title>Facture impayée détectée</div>
+              <div class="workflow-step__sub" data-step-sub>échéance dépassée de 3 j</div>
             </div>
-            <span class="workflow-step__badge" data-step-badge></span>
+            <span class="workflow-step__badge" data-step-badge>traitement…</span>
           </div>
           <div class="workflow-step__connector"></div>
-          <div class="workflow-step" data-step="1">
-            <span class="workflow-step__icon" data-step-icon><span data-step-icon-emoji></span><span class="workflow-step__dot" data-step-dot></span></span>
+          <div class="workflow-step is-pending" data-step="1">
+            <span class="workflow-step__icon" data-step-icon><span data-step-icon-emoji><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="8" width="16" height="11" rx="3"></rect><circle cx="9" cy="13.5" r="1.2"></circle><circle cx="15" cy="13.5" r="1.2"></circle><path d="M12 8V4M9 4h6"></path></svg></span><span class="workflow-step__dot" data-step-dot></span></span>
             <div class="workflow-step__text">
-              <div class="workflow-step__title" data-step-title></div>
-              <div class="workflow-step__sub" data-step-sub></div>
+              <div class="workflow-step__title" data-step-title>Relance rédigée par l'IA</div>
+              <div class="workflow-step__sub" data-step-sub>ton adapté au client</div>
             </div>
-            <span class="workflow-step__badge" data-step-badge></span>
+            <span class="workflow-step__badge" data-step-badge>en attente</span>
           </div>
           <div class="workflow-step__connector"></div>
-          <div class="workflow-step" data-step="2">
-            <span class="workflow-step__icon" data-step-icon><span data-step-icon-emoji></span><span class="workflow-step__dot" data-step-dot></span></span>
+          <div class="workflow-step is-pending" data-step="2">
+            <span class="workflow-step__icon" data-step-icon><span data-step-icon-emoji><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13"></path><path d="M22 2l-7 20-4-9-9-4 20-7z"></path></svg></span><span class="workflow-step__dot" data-step-dot></span></span>
             <div class="workflow-step__text">
-              <div class="workflow-step__title" data-step-title></div>
-              <div class="workflow-step__sub" data-step-sub></div>
+              <div class="workflow-step__title" data-step-title>Email envoyé &amp; tracé</div>
+              <div class="workflow-step__sub" data-step-sub>suivi dans le CRM</div>
             </div>
-            <span class="workflow-step__badge" data-step-badge></span>
+            <span class="workflow-step__badge" data-step-badge>en attente</span>
           </div>
         </div>
         <div class="workflow-panel__note">
