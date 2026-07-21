@@ -38,8 +38,9 @@ if ( ! defined( 'ABSPATH' ) ) {
     </div>
     </div>
 
-    <div class="pillar-section">
-      <h2>Pourquoi l'extraction PDF est différente de l'OCR classique</h2>
+    <!-- distinction OCR vs PDF -->
+    <div class="pillar-mini-case pillar-mini-case--info">
+      <h3 class="pillar-mini-case__label">Extraction PDF ou OCR ?</h3>
       <p>Un PDF n'est pas toujours une image : lorsqu'il est généré directement par un logiciel (facturation, export comptable, devis en ligne), il contient déjà du texte sélectionnable, sans qu'aucune reconnaissance optique ne soit nécessaire. <strong>L'enjeu n'est alors plus de « lire » le document mais d'en extraire les bons champs</strong>, malgré des mises en page qui varient d'un émetteur à l'autre. Ce n'est que pour les PDF scannés ou photographiés que l'<a href="<?php echo esc_url( eb_url('automatisation-ocr') ); ?>">OCR</a> entre en jeu, en amont de l'extraction.</p>
     </div>
 
@@ -69,6 +70,11 @@ if ( ! defined( 'ABSPATH' ) ) {
           </tbody>
         </table>
       </div>
+    </div>
+
+    <!-- avis clients -->
+    <div style="max-width:480px;margin:0 auto 56px;">
+      <?php echo eb_mini_review_html( 2 ); ?>
     </div>
 
     <!-- cas d'usage -->
@@ -163,6 +169,9 @@ if ( ! defined( 'ABSPATH' ) ) {
         <a href="<?php echo esc_url( eb_url('automatisation-comptable') ); ?>" class="pillar-related__pill">Automatisation comptable <span>→</span></a>
       </div>
     </div>
+
+    <!-- tarif contextuel -->
+    <?php echo eb_price_teaser_html( 'Extraction de données PDF : un premier cas d\'usage démarre généralement <strong>autour de 800 à 1 200 €</strong>, selon la variété des documents à traiter.' ); ?>
 
     <!-- CTA final -->
     <div class="pillar-final-cta">

@@ -38,6 +38,12 @@ if ( ! defined( 'ABSPATH' ) ) {
     </div>
     </div>
 
+    <!-- mini cas concret -->
+    <div class="pillar-mini-case">
+      <h3 class="pillar-mini-case__label">Cas concret</h3>
+      <p>Un cabinet manipulant des données clients sensibles ne pouvait pas faire transiter ses documents par un cloud tiers standard. <strong>Un workflow n8n auto-hébergé</strong> lit, classe et route désormais les documents entrants sans qu'aucune donnée ne quitte l'infrastructure choisie par le client — un niveau de maîtrise qu'un outil purement cloud ne permet pas.</p>
+    </div>
+
     <div class="pillar-section">
       <h2>Pourquoi choisir n8n plutôt qu'un autre outil</h2>
       <p>n8n se distingue par trois caractéristiques qui comptent pour certaines PME : son code source ouvert permet un audit technique complet si nécessaire, <strong>son modèle d'hébergement peut être auto-géré</strong> (sur votre propre serveur ou une infrastructure choisie par vous) plutôt que systématiquement dans le cloud d'un éditeur, et sa logique de construction plus proche du développement offre une souplesse supérieure pour des workflows non standards.</p>

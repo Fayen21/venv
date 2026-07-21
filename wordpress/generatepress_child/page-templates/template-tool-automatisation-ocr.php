@@ -38,10 +38,16 @@ if ( ! defined( 'ABSPATH' ) ) {
     </div>
     </div>
 
+    <!-- distinction OCR vs PDF -->
+    <div class="pillar-mini-case pillar-mini-case--info">
+      <h3 class="pillar-mini-case__label">OCR ou extraction PDF ?</h3>
+      <p><strong>L'OCR, c'est pour ce qui n'est pas déjà du texte</strong> : un scan, une photo de document, un PDF sans texte sélectionnable — il faut d'abord le « lire » avant de pouvoir l'exploiter. L'<a href="<?php echo esc_url( eb_url('extraction-pdf') ); ?>">extraction PDF</a> couvre un périmètre plus large : elle traite aussi les PDF natifs (générés directement par un logiciel, texte déjà sélectionnable) où seule l'identification des bons champs compte. Dans la pratique, un même flux combine souvent les deux : détection du type de document, OCR si besoin, puis extraction structurée.</p>
+    </div>
+
     <div class="pillar-section">
       <h2>Qu'est-ce que l'OCR, et pourquoi ce n'est plus un simple scanner de texte</h2>
       <p>L'OCR historique se contentait de transformer une image en texte brut, sans en comprendre le sens — charge ensuite à un humain de relire et de ranger l'information au bon endroit. L'OCR moderne, associé à un modèle de langage, va plus loin : il identifie les champs qui comptent (montant TTC, date d'échéance, numéro de facture, nom du fournisseur) directement dans le document, quelle que soit sa mise en page, puis les transmet structurés à votre logiciel cible.</p>
-      <p>Pour une TPE-PME, cette évolution change concrètement ce qui devient automatisable : factures, notes de frais, bons de livraison, certificats, contrats — <strong>tout document reçu en PDF, scan ou photo peut désormais alimenter vos outils sans étape de saisie manuelle</strong>.</p>
+      <p>Pour une TPE-PME, cette évolution change concrètement ce qui devient automatisable : documents scannés ou photographiés — factures, notes de frais, bons de livraison, certificats, contrats — <strong>peuvent désormais alimenter vos outils sans étape de saisie manuelle</strong>.</p>
     </div>
 
     <div class="pillar-section">
@@ -53,11 +59,6 @@ if ( ! defined( 'ABSPATH' ) ) {
         <div class="pillar-section__list-item"><span>✓</span>Lecture de bons de commande ou bons de livraison pour mise à jour automatique du stock ou de la facturation.</div>
         <div class="pillar-section__list-item"><span>✓</span>Numérisation et classement automatique d'archives papier lors d'une reprise de dossiers.</div>
       </div>
-    </div>
-
-    <div class="pillar-section">
-      <h2>OCR vs extraction PDF : quelle différence</h2>
-      <p>Les deux sujets sont proches mais distincts. L'OCR concerne spécifiquement les documents « images » — un scan, une photo, un PDF sans texte sélectionnable — qu'il faut d'abord convertir en texte avant de pouvoir l'exploiter. L'<a href="<?php echo esc_url( eb_url('extraction-pdf') ); ?>">extraction PDF</a> couvre un périmètre plus large : elle traite aussi les PDF natifs (générés directement par un logiciel, texte déjà sélectionnable) où l'OCR n'est pas nécessaire, mais où il faut identifier et structurer les bonnes données. Dans la pratique, un même flux documentaire combine souvent les deux : détection du type de PDF, puis OCR si besoin, puis extraction structurée.</p>
     </div>
 
     <!-- cas d'usage -->

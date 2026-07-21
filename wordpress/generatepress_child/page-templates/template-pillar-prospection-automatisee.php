@@ -26,8 +26,8 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div class="eb-hero-fx__inner">
     <div class="pillar-hero">
       <div class="eyebrow pillar-hero__eyebrow">Prospection automatisée</div>
-      <h1>Prospection automatisée : générez des leads B2B sans y passer vos journées</h1>
-      <p class="pillar-hero__intro">Automatisation LinkedIn, relance email, enrichissement CRM : la génération de leads en prospection B2B demande de la régularité, pas seulement de bons messages. La prospection automatisée prend en charge le volume et le suivi — recherche de contacts, premiers messages, relances — pendant que vous vous concentrez sur les échanges qui comptent.</p>
+      <h1>Prospection automatisée : qualifiez, relancez et suivez vos leads sans effort</h1>
+      <p class="pillar-hero__intro">La plupart des dirigeants n'ont pas un problème de volume de contacts, mais un problème de suivi : des demandes entrantes qui traînent, des relances qui n'arrivent jamais, un pipeline qu'on reconstruit à la main avant chaque point commercial. La prospection automatisée s'attaque d'abord à ça — <strong>qualification, relance et suivi des leads</strong>, entrants comme sortants — avant d'ajouter du volume.</p>
       <div class="pillar-hero__actions">
         <a href="<?php echo esc_url( eb_url('audit') ); ?>" class="btn btn-primary">Estimer votre potentiel de prospection <span>→</span></a>
         <a href="<?php echo esc_url( eb_url('solutions') ); ?>" class="btn btn-secondary">Voir toutes les solutions</a>
@@ -45,19 +45,19 @@ if ( ! defined( 'ABSPATH' ) ) {
 
     <!-- le problème -->
     <div class="pillar-section">
-      <h2>Le problème : la prospection s'arrête dès que le rythme retombe</h2>
-      <p>La prospection B2B fonctionne quand elle est régulière : identifier des contacts pertinents, engager la conversation, relancer sans lâcher l'affaire trop tôt. Mais dès qu'un dirigeant ou un commercial se retrouve pris par le quotidien, <strong>la recherche de nouveaux contacts s'arrête en premier</strong> — et le pipeline commercial se vide quelques semaines plus tard.</p>
-      <p>La relance manuelle pose le même problème : sans rappel automatique, <strong>une majorité des prospects qui n'ont pas répondu au premier message ne seront jamais relancés</strong>, alors qu'une part significative des réponses positives arrive justement à la deuxième ou troisième relance.</p>
+      <h2>Le problème : les leads entrants se perdent avant même d'être qualifiés</h2>
+      <p>Une demande arrive par formulaire ou par email, personne ne la qualifie dans les heures qui suivent, et le prospect passe à autre chose. <strong>Le problème n'est presque jamais le manque de contacts</strong> — c'est l'absence d'un suivi systématique une fois le contact établi.</p>
+      <p>La relance manuelle pose le même problème : sans rappel automatique, <strong>une majorité des prospects qui n'ont pas répondu au premier échange ne seront jamais relancés</strong>, alors qu'une part significative des réponses positives arrive justement à la deuxième ou troisième relance.</p>
     </div>
 
     <!-- pourquoi automatiser -->
     <div class="pillar-section">
-      <h2>Pourquoi automatiser sa prospection</h2>
+      <h2>Pourquoi automatiser la qualification et le suivi de vos leads</h2>
       <div class="pillar-section__list">
-        <div class="pillar-section__list-item"><span>✓</span>L'automatisation LinkedIn identifie et engage des contacts pertinents selon des critères précis, sans recherche manuelle profil par profil.</div>
-        <div class="pillar-section__list-item"><span>✓</span>La relance email s'envoie automatiquement selon un calendrier fixe, sans dépendre d'y penser au bon moment.</div>
+        <div class="pillar-section__list-item"><span>✓</span>La qualification automatique trie les demandes entrantes pour ne remonter que les échanges qui méritent un vrai suivi humain.</div>
+        <div class="pillar-section__list-item"><span>✓</span>La relance s'envoie automatiquement selon un calendrier fixe, sans dépendre d'y penser au bon moment.</div>
         <div class="pillar-section__list-item"><span>✓</span><span>L'<a href="<?php echo esc_url( eb_url('automatisation-crm') ); ?>">enrichissement CRM</a> complète automatiquement les fiches contact avec les informations utiles à la qualification.</span></div>
-        <div class="pillar-section__list-item"><span>✓</span>La qualification automatique trie les réponses pour ne remonter que les échanges qui méritent un vrai suivi humain.</div>
+        <div class="pillar-section__list-item"><span>✓</span>L'automatisation LinkedIn identifie des contacts pertinents selon des critères précis, en complément du suivi des leads entrants — jamais en volume au détriment de la pertinence.</div>
       </div>
     </div>
 

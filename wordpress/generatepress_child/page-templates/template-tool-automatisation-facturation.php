@@ -55,6 +55,11 @@ if ( ! defined( 'ABSPATH' ) ) {
       </div>
     </div>
 
+    <!-- avis clients -->
+    <div style="max-width:480px;margin:0 auto 56px;">
+      <?php echo eb_mini_review_html( 0 ); ?>
+    </div>
+
     <!-- comparatif -->
     <div class="pillar-table">
       <h2>Facturation manuelle vs automatisée</h2>
@@ -165,6 +170,9 @@ if ( ! defined( 'ABSPATH' ) ) {
         <a href="<?php echo esc_url( eb_url('extraction-pdf') ); ?>" class="pillar-related__pill">Extraction de données PDF <span>→</span></a>
       </div>
     </div>
+
+    <!-- tarif contextuel -->
+    <?php echo eb_price_teaser_html( 'Automatisation de la facturation : les premiers scénarios démarrent généralement <strong>autour de 1 000 à 1 800 €</strong>, selon le volume de factures.' ); ?>
 
     <!-- CTA final -->
     <div class="pillar-final-cta">

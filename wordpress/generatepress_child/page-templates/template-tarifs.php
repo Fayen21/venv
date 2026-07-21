@@ -10,12 +10,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 <?php get_header(); ?>
 <main id="main">
 
-  <!-- hero -->
+  <!-- hero (fond sombre, même gabarit que À propos) -->
+  <div class="eb-hero-fx">
+  <?php eb_hero_fx( eb_hero_fx_effects()['tarifs'] ); ?>
   <section class="tarifs-hero">
     <div class="eyebrow">Tarifs</div>
-    <h1>Tarifs automatisation entreprise : exemples de budgets et ROI</h1>
+    <h1>Tarifs automatisation entreprise : exemples de budgets</h1>
     <p>Chaque automatisation est différente, mais les budgets suivent des ordres de grandeur assez stables. Cette page détaille les fourchettes de prix par type de projet, ce qui les fait varier, et à partir de quel volume d'heures gagnées une automatisation devient rentable.</p>
   </section>
+  </div>
 
   <!-- tarifs -->
   <section class="section">
@@ -57,12 +60,11 @@ if ( ! defined( 'ABSPATH' ) ) {
       <div class="pricing__card pricing__card--featured">
         <span class="pricing__ribbon">Recommandé</span>
         <div class="pricing__name">Automatisation métier</div>
-        <div class="pricing__tagline">Un service complet automatisé</div>
+        <div class="pricing__tagline">Un service métier au choix : CRM, RH, comptabilité ou reporting</div>
         <div class="pricing__features">
-          <div class="pricing__feature"><span class="pricing__check">✓</span>CRM</div>
-          <div class="pricing__feature"><span class="pricing__check">✓</span>RH</div>
-          <div class="pricing__feature"><span class="pricing__check">✓</span>Comptabilité</div>
-          <div class="pricing__feature"><span class="pricing__check">✓</span>Reporting</div>
+          <div class="pricing__feature"><span class="pricing__check">✓</span>Un domaine métier automatisé de bout en bout</div>
+          <div class="pricing__feature"><span class="pricing__check">✓</span>Connexion à vos outils existants</div>
+          <div class="pricing__feature"><span class="pricing__check">✓</span>Formation &amp; documentation incluses</div>
           <div class="pricing__feature"><span class="pricing__check pricing__check--duration"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"></circle><path d="M12 8v4.5l3 2"></path></svg></span>Déploiement : 2 à 4 semaines</div>
         </div>
         <div class="pricing__price-row">
@@ -86,7 +88,29 @@ if ( ! defined( 'ABSPATH' ) ) {
       </div>
 
     </div>
-    <p class="pricing__footnote">Chaque projet est chiffré après audit. Les coûts dépendent de vos outils et de vos processus.</p>
+    <p class="pricing__footnote">Budgets indicatifs HT, hors abonnements éventuels aux outils utilisés (Make, n8n, OpenAI…). Chaque projet est chiffré après audit.</p>
+  </section>
+
+  <!-- inclus / non inclus -->
+  <section class="section">
+    <div class="tarifs-scope">
+      <div class="tarifs-scope__col tarifs-scope__col--yes">
+        <h3>Ce qui est inclus</h3>
+        <div class="tarifs-scope__list">
+          <div class="tarifs-scope__item"><span aria-hidden="true">✓</span><span>L'audit et la conception du scénario</span></div>
+          <div class="tarifs-scope__item"><span aria-hidden="true">✓</span><span>La mise en place et les tests sur vos cas réels</span></div>
+          <div class="tarifs-scope__item"><span aria-hidden="true">✓</span><span>La documentation complète, qui vous appartient</span></div>
+        </div>
+      </div>
+      <div class="tarifs-scope__col tarifs-scope__col--no">
+        <h3>Ce qui n'est pas inclus</h3>
+        <div class="tarifs-scope__list">
+          <div class="tarifs-scope__item"><span aria-hidden="true">✕</span><span>Les abonnements aux outils tiers (Make, n8n, OpenAI, logiciels métier…)</span></div>
+          <div class="tarifs-scope__item"><span aria-hidden="true">✕</span><span>Le suivi ou la maintenance sur la durée (accord séparé si besoin)</span></div>
+          <div class="tarifs-scope__item"><span aria-hidden="true">✕</span><span>Un hébergement spécifique, si votre projet en nécessite un</span></div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- exemples de budgets -->
@@ -94,6 +118,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div class="section-head">
       <span class="eyebrow">Exemples concrets</span>
       <h2 style="max-width:680px;margin:0 auto;">Quelques projets et leur budget indicatif</h2>
+      <p style="max-width:680px;margin:12px auto 0;font-size:14px;color:var(--muted);">Montants indicatifs HT, hors abonnements aux outils utilisés.</p>
     </div>
     <div class="tarifs-examples__grid">
       <div class="tarifs-example">
@@ -119,6 +144,13 @@ if ( ! defined( 'ABSPATH' ) ) {
     </div>
   </section>
 
+  <!-- avis clients (réassurance avant de parler des facteurs de prix) -->
+  <section class="section" style="padding-top:0;">
+    <div class="tarifs-mini-reviews">
+      <?php echo eb_mini_reviews_row_html( array( 1, 0 ) ); ?>
+    </div>
+  </section>
+
   <!-- ce qui fait varier le prix -->
   <section class="section">
     <div class="section-head">
@@ -139,6 +171,18 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div class="tarifs-roi">
       <h2>À partir de combien d'heures gagnées c'est rentable ?</h2>
       <p>Une automatisation à 800 € qui fait gagner <strong>2 heures par semaine</strong> est déjà amortie en quelques mois pour la plupart des TPE-PME. Le calcul se fait toujours sur le temps réellement récupéré, pas sur le prix affiché seul — c'est précisément ce que <a href="<?php echo esc_url( eb_url('audit') ); ?>" style="color:#fff;text-decoration:underline;">l'audit gratuit</a> permet de vérifier avant tout engagement, sur votre cas précis.</p>
+      <div class="tarifs-roi-table__wrap">
+        <table class="tarifs-roi-table">
+          <thead>
+            <tr><th>Projet</th><th>Budget</th><th>Gain estimé</th><th>Rentabilité</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Relance devis</td><td>800 – 1 200 €</td><td>2h / semaine</td><td>quelques mois</td></tr>
+            <tr><td>Extraction PDF</td><td>1 000 – 1 800 €</td><td>10 min / facture</td><td>selon volume</td></tr>
+            <tr><td>Reporting</td><td>1 500 – 3 000 €</td><td>4 à 8h / mois</td><td>3 à 6 mois</td></tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </section>
 

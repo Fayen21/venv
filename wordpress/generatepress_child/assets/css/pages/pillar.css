@@ -10,14 +10,17 @@
 .pillar-breadcrumb__current{ color:var(--navy); font-weight:600; }
 
 /* ---------- hero ---------- */
-.pillar-hero{ max-width:820px; margin:0 auto 56px; }
+/* hero entièrement centré (texte + boutons + pastille + badge) sur la
+   colonne 820px, plutôt qu'un texte aligné à gauche avec un badge centré
+   sur une largeur différente — plus simple et plus cohérent visuellement. */
+.pillar-hero{ max-width:820px; margin:0 auto 56px; text-align:center; }
 .pillar-hero__eyebrow{ margin-bottom:16px; }
 .pillar-hero h1{ font-size:44px; line-height:1.1; letter-spacing:-.025em; margin:0 0 20px; }
 .pillar-hero__intro{ font-size:18px; line-height:1.62; color:var(--muted-on-navy); margin:0; }
-.pillar-hero__actions{ display:flex; gap:12px; flex-wrap:wrap; margin-top:28px; }
+.pillar-hero__actions{ display:flex; justify-content:center; gap:12px; flex-wrap:wrap; margin-top:28px; }
 .pillar-hero__actions .btn-primary{ padding:15px 26px; font-size:15.5px; box-shadow:0 14px 30px -14px rgba(221,122,51,.7); }
 .pillar-hero__actions .btn-secondary{ padding:15px 22px; font-size:15.5px; }
-.pillar-hero__reassurance{ margin-top:22px; }
+.pillar-hero__reassurance{ margin:22px auto 0; }
 .pillar-hero__reviews{ margin-top:22px; text-align:center; }
 
 /* ---------- mockup visuel ---------- */
@@ -26,6 +29,21 @@
    paraissait disproportionné par rapport aux visuels plus compacts de Réalisations */
 .pillar-mock{ max-width:820px; margin:0 auto 56px; background:var(--navy-panel); border:1px solid var(--navy-panel-border); border-radius:16px; box-shadow:0 30px 60px -38px rgba(12,30,60,.5); overflow:hidden; }
 .pillar-mock img{ display:block; width:100%; height:auto; }
+
+/* ---------- mini cas concret (pages sans mockup dédié) ---------- */
+.pillar-mini-case{
+  max-width:820px; margin:0 auto 56px; background:#fff; border:1px solid var(--border-2);
+  border-left:4px solid var(--orange-a11y); border-radius:14px; padding:24px 28px;
+  box-shadow:var(--shadow-card);
+}
+.pillar-mini-case__label{ font-family:var(--font-heading); font-weight:700; font-size:13px; text-transform:uppercase; letter-spacing:.06em; color:var(--orange-a11y); margin-bottom:8px; }
+.pillar-mini-case p{ font-size:15px; line-height:1.6; color:var(--text-2); margin:0; }
+.pillar-mini-case strong{ color:var(--navy); }
+/* variante "clarification" (distinction entre 2 notions proches) : liseré
+   bleu plutôt qu'orange, pour ne pas se confondre visuellement avec un cas
+   concret. */
+.pillar-mini-case--info{ border-left-color:var(--blue-2); }
+.pillar-mini-case--info .pillar-mini-case__label{ color:var(--blue-2); }
 
 /* ---------- sections de contenu ---------- */
 .pillar-section{ max-width:820px; margin:0 auto 48px; }

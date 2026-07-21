@@ -61,6 +61,11 @@ if ( ! defined( 'ABSPATH' ) ) {
       </div>
     </div>
 
+    <!-- avis clients -->
+    <div style="max-width:480px;margin:0 auto 56px;">
+      <?php echo eb_mini_review_html( 1 ); ?>
+    </div>
+
     <!-- bénéfices -->
     <div class="pillar-section">
       <h2>Bénéfices concrets pour votre entreprise</h2>
@@ -189,6 +194,9 @@ if ( ! defined( 'ABSPATH' ) ) {
         <a href="<?php echo esc_url( eb_url('rpa') ); ?>" class="pillar-related__pill">RPA <span>→</span></a>
       </div>
     </div>
+
+    <!-- tarif contextuel -->
+    <?php echo eb_price_teaser_html( 'Automatisation RH : les premiers scénarios démarrent généralement <strong>autour de 1 000 à 1 500 €</strong>, selon les outils à connecter.' ); ?>
 
     <!-- CTA final -->
     <div class="pillar-final-cta">

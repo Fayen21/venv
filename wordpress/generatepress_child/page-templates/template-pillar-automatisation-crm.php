@@ -61,6 +61,25 @@ if ( ! defined( 'ABSPATH' ) ) {
       </div>
     </div>
 
+    <!-- flux -->
+    <div class="pillar-flow">
+      <div class="pillar-flow__label">Le flux, concrètement</div>
+      <div class="pillar-flow__row">
+        <div class="pillar-flow__step"><span class="pillar-flow__icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M4 6.5l8 6 8-6"></path></svg></span><span class="pillar-flow__step-label">Email ou formulaire reçu</span></div>
+        <span class="pillar-flow__arrow"></span>
+        <div class="pillar-flow__step"><span class="pillar-flow__icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7z"></path></svg></span><span class="pillar-flow__step-label">Fiche créée dans le CRM</span></div>
+        <span class="pillar-flow__arrow"></span>
+        <div class="pillar-flow__step"><span class="pillar-flow__icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3.5 2"></path></svg></span><span class="pillar-flow__step-label">Tâche de relance programmée</span></div>
+        <span class="pillar-flow__arrow"></span>
+        <div class="pillar-flow__step"><span class="pillar-flow__icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M8.5 12.5l2.3 2.3 4.7-4.8"></path></svg></span><span class="pillar-flow__step-label">0 prospect oublié</span></div>
+      </div>
+    </div>
+
+    <!-- avis clients -->
+    <div style="max-width:480px;margin:0 auto 56px;">
+      <?php echo eb_mini_review_html( 2 ); ?>
+    </div>
+
     <!-- bénéfices -->
     <div class="pillar-section">
       <h2>Bénéfices concrets pour votre entreprise</h2>
@@ -103,6 +122,7 @@ if ( ! defined( 'ABSPATH' ) ) {
       <p>L'automatisation CRM se construit sur les CRM les plus utilisés par les TPE-PME françaises.</p>
       <div class="tool-chip-grid">
         <div class="tool-chip"><?php echo eb_tool_icon_html('hubspot'); ?><span class="tool-chip__label">HubSpot</span></div>
+        <div class="tool-chip"><?php echo eb_tool_icon_html('pipedrive'); ?><span class="tool-chip__label">Pipedrive</span></div>
         <div class="tool-chip"><?php echo eb_tool_icon_html('salesforce'); ?><span class="tool-chip__label">Salesforce</span></div>
         <a href="<?php echo esc_url( eb_url('automatisation-outlook') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('outlook'); ?><span class="tool-chip__label">Outlook</span><?php echo eb_tool_chevron(); ?></a>
         <a href="<?php echo esc_url( eb_url('consultant-make') ); ?>" class="tool-chip tool-chip--link"><?php echo eb_tool_icon_html('make'); ?><span class="tool-chip__label">Make</span><?php echo eb_tool_chevron(); ?></a>
@@ -188,6 +208,9 @@ if ( ! defined( 'ABSPATH' ) ) {
         <a href="<?php echo esc_url( eb_url('rpa') ); ?>" class="pillar-related__pill">RPA <span>→</span></a>
       </div>
     </div>
+
+    <!-- tarif contextuel -->
+    <?php echo eb_price_teaser_html( 'Automatisation CRM : une première automatisation (relance, qualification) démarre généralement <strong>autour de 800 à 1 200 €</strong>.' ); ?>
 
     <!-- CTA final -->
     <div class="pillar-final-cta">

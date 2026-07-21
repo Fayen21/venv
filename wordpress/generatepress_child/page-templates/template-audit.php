@@ -42,6 +42,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
     <!-- colonne droite : formulaire / succès -->
     <div>
+      <?php echo eb_mini_review_html( 1 ); ?>
       <form id="audit-form" class="audit-form" novalidate>
         <h2>Demander un audit gratuit</h2>
         <p class="audit-form__intro">Réponse sous 24h. Seuls les champs marqués * sont obligatoires.</p>

@@ -2,9 +2,9 @@
    (mêmes cartes .pricing__*, globales via components.css) + contenu propre :
    exemples de budgets, facteurs de prix, ROI, FAQ. */
 
-.tarifs-hero{ max-width:820px; margin:0 auto; text-align:center; padding:64px 40px 10px; }
+.tarifs-hero{ max-width:820px; margin:0 auto; text-align:center; padding:80px 40px 56px; }
 .tarifs-hero h1{ margin:18px 0 16px; font-size:38px; line-height:1.15; }
-.tarifs-hero p{ font-size:17px; line-height:1.62; color:var(--text-2); margin:0; }
+.tarifs-hero p{ font-size:17px; line-height:1.62; color:var(--muted-on-navy); margin:0 auto; }
 
 .tarifs-examples__grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:18px; }
 .tarifs-example{
@@ -28,8 +28,30 @@
   padding:36px 40px; color:#fff; text-align:center;
 }
 .tarifs-roi h2{ font-size:24px; margin:0 0 12px; color:#fff; }
-.tarifs-roi p{ font-size:15.5px; line-height:1.62; color:var(--muted-on-navy); margin:0; }
+.tarifs-roi p{ font-size:15.5px; line-height:1.62; color:var(--muted-on-navy); margin:0 0 28px; }
 .tarifs-roi strong{ color:#fff; }
+.tarifs-roi-table{ width:100%; border-collapse:collapse; font-size:14px; }
+.tarifs-roi-table th{
+  text-align:left; padding:10px 14px; font-family:var(--font-heading); font-weight:600;
+  color:var(--muted-on-navy); border-bottom:1px solid rgba(255,255,255,.16); white-space:nowrap;
+}
+.tarifs-roi-table td{ text-align:left; padding:12px 14px; border-bottom:1px solid rgba(255,255,255,.1); color:#fff; }
+.tarifs-roi-table tr:last-child td{ border-bottom:none; }
+.tarifs-roi-table__wrap{ overflow-x:auto; }
+
+/* ---------- inclus / non inclus ---------- */
+.tarifs-scope{ max-width:820px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+.tarifs-scope__col{ background:#fff; border:1px solid var(--border-2); border-radius:16px; padding:22px 24px; }
+.tarifs-scope__col h3{ font-size:15px; margin:0 0 14px; font-family:var(--font-heading); }
+.tarifs-scope__col--yes h3{ color:var(--green); }
+.tarifs-scope__col--no h3{ color:var(--red); }
+.tarifs-scope__list{ display:flex; flex-direction:column; gap:10px; }
+.tarifs-scope__item{ display:flex; align-items:flex-start; gap:9px; font-size:14px; line-height:1.5; color:var(--text-2); }
+.tarifs-scope__col--yes .tarifs-scope__item span:first-child{ color:var(--green); flex:none; }
+.tarifs-scope__col--no .tarifs-scope__item span:first-child{ color:var(--red); flex:none; }
+
+/* ---------- avis (mini-reviews) intercalés ---------- */
+.tarifs-mini-reviews{ max-width:820px; margin:0 auto; }
 
 /* FAQ — même motif que sur les autres pages (dupliqué par page, cf. solutions.css/home.css/apropos.css/realisations.css) */
 .faq-grid{ display:grid; grid-template-columns:1fr 1fr; gap:18px 40px; }
@@ -51,9 +73,10 @@
 @media (max-width:900px){
   .faq-grid{ grid-template-columns:1fr; }
   .tarifs-examples__grid{ grid-template-columns:1fr; }
+  .tarifs-scope{ grid-template-columns:1fr; }
 }
 @media (max-width:640px){
-  .tarifs-hero{ padding:44px 20px 6px; }
+  .tarifs-hero{ padding:44px 20px 36px; }
   .tarifs-hero h1{ font-size:28px; }
   .tarifs-roi{ padding:28px 22px; }
 }

@@ -85,6 +85,12 @@ if ( ! defined( 'ABSPATH' ) ) {
       <p>Le raisonnement inverse est tout aussi important : il n'est pas nécessaire d'attendre une grande transformation digitale pour démarrer. <strong>La bonne approche est incrémentale</strong> — une automatisation ciblée, un gain mesuré, puis la suivante — plutôt qu'un grand projet qui repousse indéfiniment le premier résultat concret.</p>
     </div>
 
+    <!-- budget type -->
+    <div class="pillar-mini-case">
+      <h3 class="pillar-mini-case__label">Budget type</h3>
+      <p>Une première automatisation ciblée démarre généralement <strong>autour de 800 €</strong>, et un service métier automatisé de bout en bout (CRM, RH, comptabilité…) se situe le plus souvent <strong>entre 1 500 € et 3 000 €</strong>, selon le nombre d'outils à connecter. Le détail par type de projet est sur la page <a href="<?php echo esc_url( eb_url('tarifs') ); ?>">tarifs</a>.</p>
+    </div>
+
     <div class="pillar-section">
       <h2>Erreurs fréquentes à éviter</h2>
       <div class="pillar-section__list">

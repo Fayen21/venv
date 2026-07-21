@@ -38,6 +38,12 @@ if ( ! defined( 'ABSPATH' ) ) {
     </div>
     </div>
 
+    <!-- mini cas concret -->
+    <div class="pillar-mini-case">
+      <h3 class="pillar-mini-case__label">Cas concret</h3>
+      <p>Une PME de services recevait ses demandes de devis par formulaire, sans suivi structuré. <strong>Un scénario Make</strong> crée désormais automatiquement une fiche CRM à chaque demande, envoie une confirmation au client et programme une relance à J+3 si aucune réponse n'a été donnée — mis en place en une dizaine de jours, sans une ligne de code.</p>
+    </div>
+
     <div class="pillar-section">
       <h2>Pourquoi passer par un consultant Make plutôt que de le faire soi-même</h2>
       <p>Make est conçu pour être accessible, mais la différence entre un scénario qui fonctionne en démonstration et un scénario fiable en production tient à des détails qu'on ne découvre qu'à l'usage : gestion des erreurs, cas limites, volumes de données, limites d'API des outils connectés. <strong>Un consultant Make expérimenté construit des scénarios robustes dès le départ</strong> — avec gestion des exceptions, notifications en cas d'échec et documentation claire — plutôt que des automatisations qui fonctionnent seulement sur le cas testé le jour de la mise en place.</p>

@@ -60,6 +60,11 @@ if ( ! defined( 'ABSPATH' ) ) {
       <p>Chaque email reçu est analysé pour en identifier l'expéditeur, la catégorie et la priorité, puis déclenche automatiquement l'action correspondante — classement, création de tâche, transfert à la bonne personne. Cette approche s'appuie sur les mêmes principes que l'<a href="<?php echo esc_url( eb_url('automatisation-ia') ); ?>">automatisation IA</a> appliquée aux autres documents de l'entreprise : lire une information non structurée pour la rendre exploitable automatiquement.</p>
     </div>
 
+    <!-- avis clients -->
+    <div style="max-width:480px;margin:0 auto 56px;">
+      <?php echo eb_mini_review_html( 1 ); ?>
+    </div>
+
     <!-- comparatif -->
     <div class="pillar-table">
       <h2>Comparatif : traitement manuel vs automatisé de la boîte mail</h2>
@@ -84,8 +89,8 @@ if ( ! defined( 'ABSPATH' ) ) {
       <div class="pillar-usecases__grid">
         <div class="pillar-usecase">
           <div class="pillar-usecase__icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M4 6.5l8 6 8-6"></path></svg></div>
-          <h3>Tri intelligent de la boîte mail commune</h3>
-          <p>Les emails reçus sur une adresse partagée sont catégorisés et affectés automatiquement à la bonne personne.</p>
+          <h3>Tri intelligent de la boîte contact@</h3>
+          <p>Les emails reçus sur une adresse partagée comme contact@ ou info@ sont catégorisés et affectés automatiquement à la bonne personne, sans que personne n'ait à tout ouvrir un par un.</p>
           <div class="pillar-usecase__gain">0 email oublié</div>
         </div>
         <div class="pillar-usecase">
@@ -96,8 +101,8 @@ if ( ! defined( 'ABSPATH' ) ) {
         </div>
         <div class="pillar-usecase">
           <div class="pillar-usecase__icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"></circle><circle cx="17" cy="9" r="2.4"></circle><path d="M3.5 19.5a5.5 5.5 0 0 1 11 0"></path><path d="M14.5 19.5a4.5 4.5 0 0 1 7.5-3.3"></path></svg></div>
-          <h3>Qualification automatique des demandes entrantes</h3>
-          <p>Chaque demande de devis ou de contact crée automatiquement une fiche et une tâche de suivi dans le CRM.</p>
+          <h3>Demandes de devis et urgences RH repérées en priorité</h3>
+          <p>Une demande de devis crée automatiquement une fiche et une tâche de suivi dans le CRM ; un email marqué « urgent » par un salarié (arrêt maladie, accident) remonte immédiatement à la bonne personne RH, sans attendre le tri du matin.</p>
           <div class="pillar-usecase__gain">Réponse plus rapide</div>
         </div>
       </div>
@@ -175,6 +180,9 @@ if ( ! defined( 'ABSPATH' ) ) {
         <a href="<?php echo esc_url( eb_url('automatisation-taches') ); ?>" class="pillar-related__pill">Automatisation des tâches <span>→</span></a>
       </div>
     </div>
+
+    <!-- tarif contextuel -->
+    <?php echo eb_price_teaser_html( 'Automatisation Outlook : le tri et la qualification d\'une boîte mail démarrent généralement <strong>autour de 800 à 1 200 €</strong>, selon le nombre de règles à mettre en place.' ); ?>
 
     <!-- CTA final -->
     <div class="pillar-final-cta">

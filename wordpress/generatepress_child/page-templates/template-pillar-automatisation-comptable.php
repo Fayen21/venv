@@ -65,6 +65,11 @@ if ( ! defined( 'ABSPATH' ) ) {
       </div>
     </div>
 
+    <!-- avis clients -->
+    <div style="max-width:480px;margin:0 auto 56px;">
+      <?php echo eb_mini_review_html( 0 ); ?>
+    </div>
+
     <!-- bénéfices -->
     <div class="pillar-section">
       <h2>Bénéfices concrets pour votre entreprise</h2>
@@ -193,6 +198,9 @@ if ( ! defined( 'ABSPATH' ) ) {
         <a href="<?php echo esc_url( eb_url('automatisation-rh') ); ?>" class="pillar-related__pill">Automatisation RH <span>→</span></a>
       </div>
     </div>
+
+    <!-- tarif contextuel -->
+    <?php echo eb_price_teaser_html( 'Automatisation comptable : les premiers scénarios démarrent généralement <strong>autour de 900 à 1 500 €</strong>, selon le nombre de flux à connecter.' ); ?>
 
     <!-- CTA final -->
     <div class="pillar-final-cta">

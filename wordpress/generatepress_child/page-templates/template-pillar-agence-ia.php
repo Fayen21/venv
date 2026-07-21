@@ -60,6 +60,25 @@ if ( ! defined( 'ABSPATH' ) ) {
       </div>
     </div>
 
+    <!-- comparatif -->
+    <div class="pillar-table">
+      <h2>Agence IA ou consultant indépendant : le comparatif</h2>
+      <div class="pillar-table__wrap">
+        <table>
+          <thead>
+            <tr><th>Critère</th><th>Agence IA</th><th>Consultant indépendant</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Interlocuteur</td><td>Chef de projet, souvent relais vers un développeur</td><td>Une seule personne, du premier échange à la mise en production</td></tr>
+            <tr><td>Expertise métier</td><td>Variable selon les studios</td><td>Gestion, comptabilité, RH pratiquées avant l'automatisation</td></tr>
+            <tr><td>Structure de coûts</td><td>Marge de gestion de compte, commercial à financer</td><td>Coûts plus légers, sans structure commerciale</td></tr>
+            <tr><td>Délai de mise en place</td><td>Souvent plusieurs semaines de cadrage</td><td>Audit gratuit puis mise en place directe</td></tr>
+            <tr><td>Adapté pour</td><td>Produit IA complexe, équipe pluridisciplinaire</td><td>Automatisation ciblée d'un service ou processus métier</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
     <div class="pillar-section">
       <h2>Quand une agence reste le bon choix</h2>
       <p>Il faut être honnête : si votre projet nécessite une équipe pluridisciplinaire sur plusieurs mois — un produit IA à part entière, une infrastructure dédiée, des développements front et back en parallèle — une agence structurée a davantage de sens qu'un consultant seul. Pour l'automatisation ciblée d'un service ou d'un processus métier, en revanche, un consultant indépendant est le plus souvent <strong>plus rapide, plus économique et plus simple à piloter</strong> au quotidien.</p>

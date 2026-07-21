@@ -35,6 +35,9 @@
 .audit-alt-contact{ margin-top:16px; font-size:14px; color:var(--muted); line-height:1.55; }
 .audit-alt-contact a{ color:var(--navy); font-weight:600; text-decoration:none; border-bottom:1px solid var(--orange); }
 
+/* ---------- colonne droite : mini-avis au-dessus du formulaire ---------- */
+.mini-review{ margin-bottom:18px; }
+
 /* ---------- colonne droite : formulaire ---------- */
 .audit-form{
   background:#fff;

@@ -177,6 +177,11 @@ if ( ! defined( 'ABSPATH' ) ) {
     </div>
   </section>
 
+  <!-- avis clients -->
+  <section class="section" style="padding:10px 40px;">
+    <?php echo eb_mini_reviews_row_html( array( 0, 2 ) ); ?>
+  </section>
+
   <!-- solutions détaillées -->
   <section class="section" style="padding:14px 40px 30px;">
 
@@ -450,8 +455,8 @@ if ( ! defined( 'ABSPATH' ) ) {
         <p>Non. Chaque solution présentée ici est une famille de cas d'usage, pas un produit standard : le périmètre exact et le chiffrage se construisent avec vous après <a href="<?php echo esc_url( eb_url('audit') ); ?>">audit</a>.</p>
       </div>
       <div class="faq-item">
-        <h3>Comment cette page s'articule avec les pages piliers et les pages Outils ?</h3>
-        <p>Cette page distribue vers deux niveaux de détail : les 3 piliers (méthode par domaine) pour comprendre l'approche, et les pages Outils pour un outil précis (<a href="<?php echo esc_url( eb_url('automatisation-excel') ); ?>">Excel</a>, <a href="<?php echo esc_url( eb_url('automatisation-outlook') ); ?>">Outlook</a>, <a href="<?php echo esc_url( eb_url('consultant-make') ); ?>">Make</a>, <a href="<?php echo esc_url( eb_url('consultant-n8n') ); ?>">n8n</a>, <a href="<?php echo esc_url( eb_url('automatisation-microsoft-365') ); ?>">Microsoft 365</a>).</p>
+        <h3>Combien de temps avant de voir les premiers résultats ?</h3>
+        <p>Pour une automatisation ciblée (Quick Win), souvent quelques jours à deux semaines après l'audit. Les projets plus complets, qui touchent plusieurs outils, prennent généralement deux à quatre semaines. Le calendrier exact se fixe pendant l'<a href="<?php echo esc_url( eb_url('audit') ); ?>">audit gratuit</a>.</p>
       </div>
       <div class="faq-item">
         <h3>Peut-on combiner plusieurs de ces solutions dans un même projet ?</h3>
@@ -470,6 +475,11 @@ if ( ! defined( 'ABSPATH' ) ) {
         <p>La quasi-totalité des logiciels professionnels modernes proposent une API ou des fonctionnalités d'import/export exploitables. La faisabilité exacte se vérifie lors de l'<a href="<?php echo esc_url( eb_url('audit') ); ?>">audit</a>, outil par outil.</p>
       </div>
     </div>
+  </section>
+
+  <!-- tarif contextuel -->
+  <section class="section" style="padding:10px 40px;">
+    <?php echo eb_price_teaser_html( 'Une première automatisation démarre généralement <strong>autour de 800 €</strong>, un service métier complet plutôt <strong>entre 1 500 € et 3 000 €</strong>.' ); ?>
   </section>
 
   <!-- CTA final -->

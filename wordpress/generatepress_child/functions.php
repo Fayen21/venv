@@ -93,6 +93,7 @@ function eb_brand_icon( $key ) {
 		'python'           => array( 'label' => 'Python', 'bg' => '#3776AB', 'fg' => '#fff', 'letter' => 'Py', 'logo' => 'python.svg' ),
 		'docusign'         => array( 'label' => 'DocuSign', 'bg' => '#0C1E3C', 'fg' => '#fff', 'letter' => 'DS' ),
 		'salesforce'       => array( 'label' => 'Salesforce', 'bg' => '#00A1E0', 'fg' => '#fff', 'letter' => 'Sf' ),
+		'pipedrive'        => array( 'label' => 'Pipedrive', 'bg' => '#1A1A1A', 'fg' => '#fff', 'letter' => 'Pd' ),
 		'linkedin'         => array( 'label' => 'LinkedIn', 'bg' => '#0A66C2', 'fg' => '#fff', 'letter' => 'in' ),
 		'cegid'            => array( 'label' => 'Cegid', 'bg' => '#0C1E3C', 'fg' => '#fff', 'letter' => 'C' ),
 		'quadra'           => array( 'label' => 'Quadra', 'bg' => '#7C5CFC', 'fg' => '#fff', 'letter' => 'Qd' ),
@@ -165,16 +166,19 @@ function eb_google_reviews() {
 			'text'    => 'Merci beaucoup à Emmanuel pour son travail très efficace et son professionnalisme. Un grand gain de temps pour mon équipe !',
 			'author'  => 'Audrey',
 			'company' => 'Top-Famille',
+			'color'   => '#3BA5FF',
 		),
 		array(
 			'text'    => "Prestataire très sérieux, il a répondu à mes demandes et n'a pas essayé de survendre. Je ferai de nouveau appel à lui dans les prochains mois. Merci !",
 			'author'  => 'Anthony',
 			'company' => 'Vélo-Tourisme',
+			'color'   => '#DD7A33',
 		),
 		array(
 			'text'    => 'Parfait, tout marche bien et on peut compter sur Emmanuel pour trouver des solutions, donc à bientôt je l\'espère.',
-			'author'  => 'Odile',
+			'author'  => 'Zoheir',
 			'company' => '',
+			'color'   => '#1E8E5A',
 		),
 	);
 }
@@ -202,6 +206,17 @@ function eb_reassurance_pill( $text = '45 minutes, sans engagement — repartez 
 }
 
 /**
+ * Cercle-avatar (initiale) d'un avis client, coloré selon $review['color']
+ * (voir eb_google_reviews()) — un enfant appelle ceci depuis la grille
+ * complète ET depuis un éventuel mini-teaser d'avis isolé.
+ */
+function eb_review_avatar_html( $review ) {
+	$color = ! empty( $review['color'] ) ? $review['color'] : '#2E6BFF';
+	$style = 'background:' . esc_attr( $color ) . '; border-color:' . esc_attr( $color ) . '; box-shadow:0 0 0 1px ' . esc_attr( $color ) . '55, 0 0 12px ' . esc_attr( $color ) . '55;';
+	return '<div class="review-card__avatar" style="' . $style . '">' . esc_html( mb_substr( $review['author'], 0, 1 ) ) . '</div>';
+}
+
+/**
  * Section complète "avis clients" (eyebrow + titre + badge + 3 cartes d'avis
  * + bloc "Ce que les clients apprécient") — utilisée à l'identique sur
  * l'accueil, À propos et Audit gratuit ; centralisée ici pour ne pas
@@ -222,7 +237,7 @@ function eb_reviews_section_html() {
 			. '<div class="review-card__stars">' . eb_star_row_svg( 5, 15 ) . '</div>'
 			. '<p class="review-card__text">« ' . esc_html( $review['text'] ) . ' »</p>'
 			. '<div class="review-card__author">'
-			. '<div class="review-card__avatar">' . esc_html( mb_substr( $review['author'], 0, 1 ) ) . '</div>'
+			. eb_review_avatar_html( $review )
 			. '<div><div class="review-card__name">' . esc_html( $review['author'] ) . '</div>'
 			. ( ! empty( $review['company'] ) ? '<div class="review-card__company">' . esc_html( $review['company'] ) . '</div>' : '' )
 			. '</div></div></div>';
@@ -240,6 +255,48 @@ function eb_reviews_section_html() {
 	$out .= '</div></div>';
 
 	return $out;
+}
+
+/**
+ * Mini-carte d'avis isolée (étoiles + citation courte + auteur), pour glisser
+ * une preuve sociale ponctuelle hors de la section "avis clients" complète
+ * (ex. page Audit près du formulaire, pages Tarifs/Solutions/métier).
+ * $index désigne l'avis dans eb_google_reviews() (0=Audrey, 1=Anthony, 2=Zoheir).
+ */
+function eb_mini_review_html( $index = 0 ) {
+	$reviews = eb_google_reviews();
+	if ( ! isset( $reviews[ $index ] ) ) {
+		return '';
+	}
+	$r = $reviews[ $index ];
+	return '<div class="mini-review">'
+		. '<div class="mini-review__stars">' . eb_star_row_svg( 5, 13 ) . '</div>'
+		. '<p class="mini-review__text">« ' . esc_html( $r['text'] ) . ' »</p>'
+		. '<div class="mini-review__author">' . eb_review_avatar_html( $r )
+		. '<span>' . esc_html( $r['author'] ) . ( ! empty( $r['company'] ) ? ' · ' . esc_html( $r['company'] ) : '' ) . '</span>'
+		. '</div></div>';
+}
+
+/**
+ * Rangée de mini-avis (2 ou 3 côte à côte) — $indexes est un tableau d'index
+ * eb_google_reviews(), ex. array(1,2) pour Anthony + Zoheir.
+ */
+function eb_mini_reviews_row_html( $indexes ) {
+	$out = '<div class="mini-reviews-row">';
+	foreach ( $indexes as $i ) {
+		$out .= eb_mini_review_html( $i );
+	}
+	$out .= '</div>';
+	return $out;
+}
+
+/**
+ * Teaser tarif contextuel, glissé vers la fin d'une page métier avant le CTA
+ * final — donne un ordre de grandeur sans dupliquer toute la page Tarifs.
+ * $text ne doit pas inclure le lien final, ajouté automatiquement.
+ */
+function eb_price_teaser_html( $text ) {
+	return '<div class="price-teaser">' . $text . ' <a href="' . esc_url( eb_url( 'tarifs' ) ) . '">Voir le détail des tarifs →</a></div>';
 }
 
 /**
@@ -408,6 +465,7 @@ function eb_hero_fx_effects() {
 		'realisations'                 => 'flow',
 		'apropos'                      => 'constellation',
 		'audit'                        => 'constellation',
+		'tarifs'                       => 'constellation',
 		'automatisation-entreprise'    => 'network',
 		'automatisation-processus'     => 'globe',
 		'automatisation-ia'            => 'orbit',
@@ -519,7 +577,7 @@ function eb_enqueue_assets() {
 	// toutes les pages piliers/outils (cf. eb_hero_fx_effects() pour le
 	// mapping page → effet) et, seulement sur le bloc H1, la page Audit.
 	// Jamais sur les pages légales, qui n'utilisent aucun gabarit de hero.
-	if ( 'index' === $page || 'solutions' === $page || 'realisations' === $page || 'apropos' === $page || 'audit' === $page || eb_is_pillar_page( $page ) ) {
+	if ( 'index' === $page || 'solutions' === $page || 'realisations' === $page || 'apropos' === $page || 'audit' === $page || 'tarifs' === $page || eb_is_pillar_page( $page ) ) {
 		wp_enqueue_style( 'eb-hero-fx', EB_THEME_URI . '/assets/css/hero-fx.css', array( 'eb-utilities' ), filemtime( EB_THEME_DIR . '/assets/css/hero-fx.css' ) );
 		wp_enqueue_script( 'eb-hero-fx', EB_THEME_URI . '/assets/js/hero-fx.js', array(), filemtime( EB_THEME_DIR . '/assets/js/hero-fx.js' ), true );
 	}
@@ -1118,11 +1176,11 @@ function eb_seo_data() {
 			),
 		),
 		'tarifs'                    => array(
-			'title'       => "Tarifs automatisation entreprise : exemples de budgets et ROI",
+			'title'       => "Tarifs automatisation entreprise : exemples de budgets",
 			'description' => "Combien coûte une automatisation pour une TPE-PME ? Exemples de budgets réels (relance devis, extraction PDF, RH, reporting), facteurs de prix et seuil de rentabilité.",
-			'og_title'    => "Tarifs automatisation entreprise : exemples de budgets et ROI",
+			'og_title'    => "Tarifs automatisation entreprise : exemples de budgets",
 			'og_desc'     => "Exemples de budgets réels par projet, ce qui fait varier le prix, et à partir de quand une automatisation devient rentable.",
-			'tw_title'    => "Tarifs automatisation entreprise : exemples de budgets et ROI",
+			'tw_title'    => "Tarifs automatisation entreprise : exemples de budgets",
 			'tw_desc'     => "Exemples de budgets réels par projet, ce qui fait varier le prix, et à partir de quand une automatisation devient rentable.",
 			'canonical'   => eb_url( 'tarifs' ),
 		),

@@ -199,6 +199,100 @@ if ( ! defined( 'ABSPATH' ) ) {
     </div>
   </section>
 
+  <!-- cas n°5 — extraction PDF, cas nommé -->
+  <section class="section" style="padding:24px 40px 0;">
+    <div class="case-study">
+      <div class="case-study__grid">
+        <div class="case-study__body">
+          <span class="case-study__tag" style="background:#FDEFE6;color:#AC5F28;">Négoce · Établissements Rousseau — 20 salariés</span>
+          <h2>Fini la ressaisie des bons de commande fournisseurs</h2>
+          <div class="case-study__block">
+            <div class="case-study__label">Le problème</div>
+            <p>Chez Établissements Rousseau, négociant en matériaux près de Nantes, <strong>chaque bon de commande fournisseur arrivait en PDF, avec une mise en page différente</strong>. Une salariée ressaisissait les lignes à la main dans le logiciel de gestion, plusieurs heures par semaine, avec un risque d'erreur de quantité à chaque saisie.</p>
+          </div>
+          <div class="case-study__block">
+            <div class="case-study__label">La solution</div>
+            <p>Un flux d'<a href="<?php echo esc_url( eb_url('extraction-pdf') ); ?>">extraction de données PDF</a> lit chaque bon de commande, identifie les lignes quelle que soit la mise en page d'origine, et les envoie directement dans le logiciel de gestion existant — sans changer d'outil.</p>
+          </div>
+          <div class="case-study__quote">
+            <p>« Je pensais qu'il faudrait changer de logiciel pour automatiser ça. En fait, tout s'est branché sur notre outil de gestion existant, sans rien migrer. »</p>
+            <cite>Marc Rousseau<span>Dirigeant, Établissements Rousseau</span></cite>
+          </div>
+          <div class="case-study__results">
+            <div class="case-study__result"><span>✓</span>0 ressaisie manuelle des bons de commande</div>
+            <div class="case-study__result"><span>✓</span>Mise en place en 10 jours, sans changer de logiciel</div>
+            <div class="case-study__result"><span>✓</span>Erreurs de quantité éliminées</div>
+          </div>
+        </div>
+        <div class="case-study__side case-study__side--terminal">
+          <div class="case-study__mock">
+            <div class="case-study__mock-titlebar">
+              <div class="case-study__mock-dots"><span></span><span></span><span></span></div>
+              <span class="case-study__mock-file">bons_commande · Make</span>
+              <span class="case-study__mock-live"><span class="case-study__mock-live-dot"></span>actif</span>
+            </div>
+            <div class="case-study__mock-body">
+              <div class="case-study__mock-row"><span class="case-study__mock-dot case-study__mock-dot--neutral"></span><span class="case-study__mock-label">Bon de commande PDF reçu</span><span class="case-study__mock-val case-study__mock-val--neutral">détecté</span></div>
+              <div class="case-study__mock-row"><span class="case-study__mock-dot case-study__mock-dot--info"></span><span class="case-study__mock-label">Lignes extraites</span><span class="case-study__mock-val case-study__mock-val--info">14 lignes</span></div>
+              <div class="case-study__mock-row"><span class="case-study__mock-dot case-study__mock-dot--success"></span><span class="case-study__mock-label">Envoyé au logiciel de gestion</span><span class="case-study__mock-val case-study__mock-val--success">importé ✓</span></div>
+            </div>
+          </div>
+          <div class="case-study__big-stat">
+            <span class="case-study__big-stat-value">0</span>
+            <span class="case-study__big-stat-label">ressaisie manuelle</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- cas n°6 — n8n auto-hébergé, cas nommé -->
+  <section class="section" style="padding:24px 40px 20px;">
+    <div class="case-study">
+      <div class="case-study__grid">
+        <div class="case-study__body">
+          <span class="case-study__tag" style="background:#E5F3EF;color:#1E8A6E;">Conseil RH · Cabinet Lemoine Conseil — 9 salariés</span>
+          <h2>Automatiser le tri des documents sans sortir les données de l'entreprise</h2>
+          <div class="case-study__block">
+            <div class="case-study__label">Le problème</div>
+            <p>Le Cabinet Lemoine Conseil accompagne des PME sur la paie et les dossiers RH, avec des documents contenant des <strong>données sociales et de santé sensibles</strong>. Le tri manuel des pièces reçues par email prenait un temps important, mais la dirigeante refusait d'envoyer ces documents vers un service cloud tiers.</p>
+          </div>
+          <div class="case-study__block">
+            <div class="case-study__label">La solution</div>
+            <p>Un workflow <a href="<?php echo esc_url( eb_url('consultant-n8n') ); ?>">n8n auto-hébergé</a> trie, classe et signale les documents entrants sans qu'aucune donnée ne quitte l'infrastructure du cabinet — un critère non négociable pour ce type de dossiers.</p>
+          </div>
+          <div class="case-study__quote">
+            <p>« Le sujet RGPD était non négociable pour nous, vu la nature des documents que l'on traite. Le fait que tout reste hébergé chez nous a débloqué le projet. »</p>
+            <cite>Camille Lemoine<span>Fondatrice, Cabinet Lemoine Conseil</span></cite>
+          </div>
+          <div class="case-study__results">
+            <div class="case-study__result"><span>✓</span>100% des données hébergées en interne</div>
+            <div class="case-study__result"><span>✓</span>−65% de temps de tri des documents entrants</div>
+            <div class="case-study__result"><span>✓</span>0 donnée sensible envoyée vers un service tiers</div>
+          </div>
+        </div>
+        <div class="case-study__side case-study__side--terminal">
+          <div class="case-study__mock">
+            <div class="case-study__mock-titlebar">
+              <div class="case-study__mock-dots"><span></span><span></span><span></span></div>
+              <span class="case-study__mock-file">tri_documents · n8n auto-hébergé</span>
+              <span class="case-study__mock-live"><span class="case-study__mock-live-dot"></span>actif</span>
+            </div>
+            <div class="case-study__mock-body">
+              <div class="case-study__mock-row"><span class="case-study__mock-dot case-study__mock-dot--neutral"></span><span class="case-study__mock-label">Document reçu par email</span><span class="case-study__mock-val case-study__mock-val--neutral">détecté</span></div>
+              <div class="case-study__mock-row"><span class="case-study__mock-dot case-study__mock-dot--info"></span><span class="case-study__mock-label">Classé &amp; type identifié</span><span class="case-study__mock-val case-study__mock-val--info">local</span></div>
+              <div class="case-study__mock-row"><span class="case-study__mock-dot case-study__mock-dot--success"></span><span class="case-study__mock-label">Aucune sortie vers un cloud tiers</span><span class="case-study__mock-val case-study__mock-val--success">100% ✓</span></div>
+            </div>
+          </div>
+          <div class="case-study__big-stat">
+            <span class="case-study__big-stat-value">100%</span>
+            <span class="case-study__big-stat-label">données hébergées en interne</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- autres cas d'usage -->
   <section class="section usecase-intro">
     <h2>Autres exemples d'automatisation en entreprise</h2>
@@ -236,7 +330,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div class="faq-grid">
       <div class="faq-item">
         <h3>Ces chiffres sont-ils vérifiables ?</h3>
-        <p>Ce sont des exemples représentatifs de missions réalisées ou de scénarios rentables similaires, présentés de façon anonymisée. Des cas clients nommés seront publiés progressivement à mesure des autorisations obtenues.</p>
+        <p>Ce sont des exemples représentatifs de missions réalisées ou de scénarios rentables similaires. Certains cas sont présentés avec le nom de l'entreprise, d'autres restent anonymisés à la demande du client — d'autres cas nommés seront publiés progressivement à mesure des autorisations obtenues.</p>
       </div>
       <div class="faq-item">
         <h3>Mon entreprise ressemble-t-elle à l'un de ces cas ?</h3>
