@@ -29,10 +29,11 @@ if ( ! defined( 'ABSPATH' ) ) {
       <h1>RPA : un robot logiciel pour vos tâches documentaires répétitives</h1>
       <p class="pillar-hero__intro">La RPA (Robotic Process Automation) consiste à confier à un robot logiciel les tâches répétitives et réglées qu'un collaborateur exécute aujourd'hui à la main : lire un document, en extraire des données, les reporter dans un autre outil. Combinée à l'<a href="<?php echo esc_url( eb_url('automatisation-ocr') ); ?>">OCR</a> pour l'<a href="<?php echo esc_url( eb_url('extraction-pdf') ); ?>">extraction PDF</a> et la lecture automatique de documents, elle couvre l'essentiel du traitement documentaire d'une TPE-PME.</p>
       <div class="pillar-hero__actions">
-        <a href="<?php echo esc_url( eb_url('realisations') ); ?>" class="btn btn-primary">Découvrir un cas concret <span>→</span></a>
+        <a href="<?php echo esc_url( eb_url('audit') ); ?>" class="btn btn-primary">Identifier vos automatisations RPA <span>→</span></a>
         <a href="<?php echo esc_url( eb_url('solutions') ); ?>" class="btn btn-secondary">Voir toutes les solutions</a>
       </div>
-    <div class="pillar-hero__reviews"><?php echo eb_google_reviews_badge(); ?></div>
+    <div class="pillar-hero__reassurance"><?php echo eb_reassurance_pill(); ?></div>
+    <div class="pillar-hero__reviews"><?php echo eb_google_reviews_badge( true ); ?></div>
     </div>
 
     <!-- mockup visuel -->

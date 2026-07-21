@@ -393,7 +393,7 @@
 		loop(function () {
 			t++;
 			ctx.clearRect(0, 0, st.w, st.h);
-			var cx = st.w * 0.72, cy = st.h * 0.47, baseR = Math.min(st.w, st.h) * 0.4;
+			var cx = st.w * 0.72, cy = st.h * 0.41, baseR = Math.min(st.w, st.h) * 0.4;
 			// proximité continue (0..1 selon la distance), pas un simple seuil dedans/dehors :
 			// un seuil dur faisait bondir l'engagement dès l'entrée dans le cercle central,
 			// perçu comme une accélération soudaine plutôt qu'un ralliement progressif.

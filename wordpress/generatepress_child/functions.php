@@ -53,6 +53,7 @@ function eb_url( $page ) {
 		'automatisation-ocr'        => home_url( '/automatisation-ocr/' ),
 		'extraction-pdf'            => home_url( '/extraction-pdf/' ),
 		'automatisation-facturation' => home_url( '/automatisation-facturation/' ),
+		'tarifs'                    => home_url( '/tarifs/' ),
 		'mentions-legales'          => home_url( '/mentions-legales/' ),
 		'confidentialite'           => home_url( '/confidentialite/' ),
 		'rgpd'                      => home_url( '/rgpd/' ),
@@ -182,11 +183,63 @@ function eb_google_reviews() {
  * Badge compact "5,0 ★★★★★ (3 avis)" avec logo Google — utilisé partout où
  * la section complète (accueil) serait trop lourde (Audit, À propos).
  */
-function eb_google_reviews_badge() {
-	return '<div class="google-reviews-badge">' . eb_google_logo_svg( 20 )
+function eb_google_reviews_badge( $on_dark = false ) {
+	$class = 'google-reviews-badge' . ( $on_dark ? ' google-reviews-badge--on-dark' : '' );
+	return '<div class="' . esc_attr( $class ) . '">' . eb_google_logo_svg( 20 )
 		. '<span class="google-reviews-badge__score">5,0</span>'
 		. '<span class="google-reviews-badge__stars">' . eb_star_row_svg( 5, 13 ) . '</span>'
 		. '</div>';
+}
+
+/**
+ * Pastille de réassurance verte ("✓ 45 minutes, sans engagement…") — même
+ * bandeau que celui de l'accueil, réutilisé sous les CTA de hero de toutes
+ * les pages (Solutions, Réalisations, piliers, Outils) pour une même
+ * "logique de cadrage" partout.
+ */
+function eb_reassurance_pill( $text = '45 minutes, sans engagement — repartez avec des pistes concrètes' ) {
+	return '<div class="reassurance-pill"><span class="reassurance-pill__check" aria-hidden="true">✓</span> ' . esc_html( $text ) . '</div>';
+}
+
+/**
+ * Section complète "avis clients" (eyebrow + titre + badge + 3 cartes d'avis
+ * + bloc "Ce que les clients apprécient") — utilisée à l'identique sur
+ * l'accueil, À propos et Audit gratuit ; centralisée ici pour ne pas
+ * tripler la même liste d'avis et de points forts dans 3 templates.
+ */
+function eb_reviews_section_html() {
+	$points = array(
+		array( 'title' => 'Professionnalisme &amp; pédagogie', 'desc' => "Une approche claire, sans jargon inutile, à chaque étape du projet." ),
+		array( 'title' => 'Aucune prestation survendue', 'desc' => "Un discours honnête sur ce qui est vraiment utile — et ce qui ne l'est pas." ),
+		array( 'title' => 'Un gain de temps concret', 'desc' => "Des heures récupérées au quotidien, pas seulement une promesse sur le papier." ),
+	);
+
+	$out  = '<div class="section-head"><span class="eyebrow">Avis clients</span><h2 style="max-width:680px;margin:0 auto;">Ce qu\'en disent mes clients</h2></div>';
+	$out .= eb_google_reviews_badge();
+	$out .= '<div class="reviews-grid">';
+	foreach ( eb_google_reviews() as $review ) {
+		$out .= '<div class="review-card">'
+			. '<div class="review-card__stars">' . eb_star_row_svg( 5, 15 ) . '</div>'
+			. '<p class="review-card__text">« ' . esc_html( $review['text'] ) . ' »</p>'
+			. '<div class="review-card__author">'
+			. '<div class="review-card__avatar">' . esc_html( mb_substr( $review['author'], 0, 1 ) ) . '</div>'
+			. '<div><div class="review-card__name">' . esc_html( $review['author'] ) . '</div>'
+			. ( ! empty( $review['company'] ) ? '<div class="review-card__company">' . esc_html( $review['company'] ) . '</div>' : '' )
+			. '</div></div></div>';
+	}
+	$out .= '</div>';
+
+	$out .= '<div class="reviews-appreciated"><h3>Ce que les clients apprécient</h3><div class="reviews-appreciated__grid">';
+	foreach ( $points as $point ) {
+		$out .= '<div class="reviews-appreciated__item">'
+			. '<span class="reviews-appreciated__icon" aria-hidden="true">✓</span>'
+			. '<div><div class="reviews-appreciated__title">' . $point['title'] . '</div>'
+			. '<div class="reviews-appreciated__desc">' . esc_html( $point['desc'] ) . '</div></div>'
+			. '</div>';
+	}
+	$out .= '</div></div>';
+
+	return $out;
 }
 
 /**
@@ -315,6 +368,7 @@ function eb_current_page_key() {
 		'page-templates/template-tool-automatisation-ocr.php'          => 'automatisation-ocr',
 		'page-templates/template-tool-extraction-pdf.php'              => 'extraction-pdf',
 		'page-templates/template-tool-automatisation-facturation.php'  => 'automatisation-facturation',
+		'page-templates/template-tarifs.php'                           => 'tarifs',
 		'page-templates/template-mentions-legales.php'                 => 'mentions-legales',
 		'page-templates/template-confidentialite.php'                  => 'confidentialite',
 		'page-templates/template-rgpd.php'                             => 'rgpd',
@@ -424,6 +478,7 @@ function eb_enqueue_assets() {
 	// CSS de page : même fichier que le <link> spécifique de chaque page HTML source.
 	$page_css_map = array(
 		'index'                     => 'home',
+		'tarifs'                    => 'tarifs',
 		'solutions'                 => 'solutions',
 		'realisations'               => 'realisations',
 		'apropos'                   => 'apropos',
@@ -1061,6 +1116,15 @@ function eb_seo_data() {
 				array( 'q' => "Puis-je automatiser uniquement les relances, sans toucher au reste ?", 'a' => "Oui, c'est un excellent point de départ : automatiser uniquement les relances est rapide à mettre en place et donne un gain immédiatement mesurable." ),
 				array( 'q' => "Qui reste propriétaire du scénario mis en place ?", 'a' => "Vous. Le scénario, les accès et la documentation vous appartiennent dès la livraison, indépendamment de moi." ),
 			),
+		),
+		'tarifs'                    => array(
+			'title'       => "Tarifs automatisation entreprise : exemples de budgets et ROI",
+			'description' => "Combien coûte une automatisation pour une TPE-PME ? Exemples de budgets réels (relance devis, extraction PDF, RH, reporting), facteurs de prix et seuil de rentabilité.",
+			'og_title'    => "Tarifs automatisation entreprise : exemples de budgets et ROI",
+			'og_desc'     => "Exemples de budgets réels par projet, ce qui fait varier le prix, et à partir de quand une automatisation devient rentable.",
+			'tw_title'    => "Tarifs automatisation entreprise : exemples de budgets et ROI",
+			'tw_desc'     => "Exemples de budgets réels par projet, ce qui fait varier le prix, et à partir de quand une automatisation devient rentable.",
+			'canonical'   => eb_url( 'tarifs' ),
 		),
 		'mentions-legales'          => array(
 			'title'       => "Mentions légales — EB Automatisation",

@@ -29,10 +29,11 @@ if ( ! defined( 'ABSPATH' ) ) {
       <h1>Automatiser un processus métier : méthode et exemples concrets</h1>
       <p class="pillar-hero__intro">Un processus, ce n'est pas une tâche isolée : c'est un enchaînement d'étapes, de validations et de décisions qui traverse souvent plusieurs outils, parfois plusieurs personnes. L'automatiser mal ne fait que déplacer le goulot d'étranglement plus loin dans la chaîne — <strong>l'automatiser bien demande une cartographie préalable</strong>.</p>
       <div class="pillar-hero__actions">
-        <a href="<?php echo esc_url( eb_url('realisations') ); ?>" class="btn btn-primary">Découvrir un cas concret <span>→</span></a>
+        <a href="<?php echo esc_url( eb_url('audit') ); ?>" class="btn btn-primary">Identifier vos process rentables <span>→</span></a>
         <a href="<?php echo esc_url( eb_url('solutions') ); ?>" class="btn btn-secondary">Voir toutes les solutions</a>
       </div>
-    <div class="pillar-hero__reviews"><?php echo eb_google_reviews_badge(); ?></div>
+    <div class="pillar-hero__reassurance"><?php echo eb_reassurance_pill(); ?></div>
+    <div class="pillar-hero__reviews"><?php echo eb_google_reviews_badge( true ); ?></div>
     </div>
 
     <!-- mockup visuel -->

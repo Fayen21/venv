@@ -206,26 +206,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
   <!-- avis clients -->
   <section class="section reviews-section" id="avis">
-    <div class="section-head">
-      <span class="eyebrow">Avis clients</span>
-      <h2 style="max-width:680px;margin:0 auto;">Ce qu'en disent mes clients</h2>
-    </div>
-    <?php echo eb_google_reviews_badge(); ?>
-    <div class="reviews-grid">
-      <?php foreach ( eb_google_reviews() as $review ) : ?>
-      <div class="review-card">
-        <div class="review-card__stars"><?php echo eb_star_row_svg( 5, 15 ); ?></div>
-        <p class="review-card__text">« <?php echo esc_html( $review['text'] ); ?> »</p>
-        <div class="review-card__author">
-          <div class="review-card__avatar"><?php echo esc_html( mb_substr( $review['author'], 0, 1 ) ); ?></div>
-          <div>
-            <div class="review-card__name"><?php echo esc_html( $review['author'] ); ?></div>
-            <?php if ( ! empty( $review['company'] ) ) : ?><div class="review-card__company"><?php echo esc_html( $review['company'] ); ?></div><?php endif; ?>
-          </div>
-        </div>
-      </div>
-      <?php endforeach; ?>
-    </div>
+    <?php echo eb_reviews_section_html(); ?>
   </section>
 
   <!-- CTA final -->

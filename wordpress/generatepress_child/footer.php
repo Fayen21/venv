@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
       <p class="site-footer__desc">Consultant indépendant en automatisation &amp; IA pour les dirigeants de TPE-PME françaises.</p>
       <div class="site-footer__identity-actions">
         <a href="<?php echo esc_url( eb_url( 'audit' ) ); ?>" class="site-footer__cta">Audit gratuit →</a>
-        <?php echo eb_google_reviews_badge(); ?>
+        <?php echo eb_google_reviews_badge( true ); ?>
       </div>
     </div>
     <div class="site-footer__nav">
@@ -26,6 +26,7 @@ if ( ! defined( 'ABSPATH' ) ) {
           <a href="<?php echo esc_url( eb_url( 'solutions' ) ); ?>">Solutions</a>
           <a href="<?php echo esc_url( eb_url( 'realisations' ) ); ?>">Réalisations</a>
           <a href="<?php echo esc_url( eb_url( 'apropos' ) ); ?>">À propos</a>
+          <a href="<?php echo esc_url( eb_url( 'tarifs' ) ); ?>">Tarifs</a>
           <a href="<?php echo esc_url( eb_url( 'audit' ) ); ?>">Audit gratuit</a>
         </div>
       </div>

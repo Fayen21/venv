@@ -29,10 +29,11 @@ if ( ! defined( 'ABSPATH' ) ) {
       <h1>Automatisation RH : de l'onboarding à la paie, sans ressaisie</h1>
       <p class="pillar-hero__intro">Onboarding salarié, gestion des congés, préparation de la paie, signature électronique des contrats : la gestion RH d'une TPE-PME repose encore souvent sur des échanges d'emails et des tableurs. <strong>Un workflow RH automatisé connecte ces étapes entre elles</strong>, sans ajouter de logiciel supplémentaire à gérer.</p>
       <div class="pillar-hero__actions">
-        <a href="<?php echo esc_url( eb_url('realisations') ); ?>" class="btn btn-primary">Découvrir un cas concret <span>→</span></a>
+        <a href="<?php echo esc_url( eb_url('audit') ); ?>" class="btn btn-primary">Estimer votre gain de temps RH <span>→</span></a>
         <a href="<?php echo esc_url( eb_url('solutions') ); ?>" class="btn btn-secondary">Voir toutes les solutions</a>
       </div>
-    <div class="pillar-hero__reviews"><?php echo eb_google_reviews_badge(); ?></div>
+    <div class="pillar-hero__reassurance"><?php echo eb_reassurance_pill(); ?></div>
+    <div class="pillar-hero__reviews"><?php echo eb_google_reviews_badge( true ); ?></div>
     </div>
 
     <!-- mockup visuel -->

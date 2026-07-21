@@ -32,7 +32,8 @@ if ( ! defined( 'ABSPATH' ) ) {
         <a href="<?php echo esc_url( eb_url('audit') ); ?>" class="btn btn-primary">Identifier vos automatisations rentables <span>→</span></a>
         <a href="<?php echo esc_url( eb_url('solutions') ); ?>" class="btn btn-secondary">Voir toutes les solutions</a>
       </div>
-    <div class="pillar-hero__reviews"><?php echo eb_google_reviews_badge(); ?></div>
+    <div class="pillar-hero__reassurance"><?php echo eb_reassurance_pill(); ?></div>
+    <div class="pillar-hero__reviews"><?php echo eb_google_reviews_badge( true ); ?></div>
     </div>
 
     <!-- mockup visuel -->

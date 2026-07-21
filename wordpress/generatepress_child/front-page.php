@@ -19,8 +19,9 @@ get_header();
         <a href="<?php echo esc_url( eb_url('audit') ); ?>" class="btn btn-primary hero__cta-primary">Demander un audit gratuit <span>→</span></a>
         <a href="<?php echo esc_url( eb_url('solutions') ); ?>" class="btn btn-secondary hero__cta-secondary">Voir les solutions</a>
       </div>
+      <p class="hero__price-signal">Premières automatisations à partir de <a href="<?php echo esc_url( eb_url('tarifs') ); ?>">800 €</a> · audit gratuit de 45 min</p>
       <div class="hero__reassurance"><span class="hero__reassurance-check">✓</span> 45 minutes, sans engagement — repartez avec des pistes concrètes</div>
-      <div class="hero__reviews"><?php echo eb_google_reviews_badge(); ?></div>
+      <div class="hero__reviews"><?php echo eb_google_reviews_badge( true ); ?></div>
     </div>
 
     <div class="hero__demo">
@@ -536,6 +537,11 @@ get_header();
     </div>
   </section>
 
+  <!-- avis clients -->
+  <section class="section reviews-section" id="avis">
+    <?php echo eb_reviews_section_html(); ?>
+  </section>
+
   <!-- tarifs -->
   <section class="section">
     <div class="section-head">
@@ -605,7 +611,7 @@ get_header();
       </div>
 
     </div>
-    <p class="pricing__footnote">Chaque projet est chiffré après audit. Les coûts dépendent de vos outils et de vos processus.</p>
+    <p class="pricing__footnote">Chaque projet est chiffré après audit. Les coûts dépendent de vos outils et de vos processus. <a href="<?php echo esc_url( eb_url('tarifs') ); ?>">Voir des exemples de budgets détaillés →</a></p>
     <div class="text-center">
       <a href="<?php echo esc_url( eb_url('audit') ); ?>" class="btn btn-primary pricing__cta">Demander un audit gratuit <span aria-hidden="true">→</span></a>
     </div>
@@ -666,7 +672,7 @@ get_header();
       </div>
       <div class="faq-item">
         <h3>Avez-vous des avis clients ?</h3>
-        <p>Oui, 5/5 sur Google (<a href="<?php echo esc_url( eb_url('apropos') ); ?>#avis">3 avis</a> à ce jour). Les clients qui ont laissé un avis soulignent surtout le professionnalisme, le fait de ne jamais survendre une prestation, et le temps concrètement récupéré au quotidien.</p>
+        <p>Oui, 5/5 sur Google (<a href="#avis">3 avis</a> à ce jour). Les clients qui ont laissé un avis soulignent surtout le professionnalisme, le fait de ne jamais survendre une prestation, et le temps concrètement récupéré au quotidien.</p>
       </div>
       <div class="faq-item">
         <h3>« On va perdre le contrôle sur nos données » — qu'en est-il réellement ?</h3>
@@ -698,7 +704,7 @@ get_header();
       </div>
       <div class="faq-item">
         <h3>Combien coûte une automatisation ?</h3>
-        <p>Chaque projet est différent. Certaines automatisations simples démarrent autour de 800 €, tandis que les projets plus complets font l'objet d'un devis après audit.</p>
+        <p>Chaque projet est différent. Certaines automatisations simples démarrent autour de 800 €, tandis que les projets plus complets font l'objet d'un devis après audit. Le détail des budgets par type de projet est sur la page <a href="<?php echo esc_url( eb_url('tarifs') ); ?>">tarifs</a>.</p>
       </div>
       <div class="faq-item">
         <h3>Ai-je besoin d'une équipe informatique ?</h3>

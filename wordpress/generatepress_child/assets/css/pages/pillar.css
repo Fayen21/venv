@@ -17,6 +17,7 @@
 .pillar-hero__actions{ display:flex; gap:12px; flex-wrap:wrap; margin-top:28px; }
 .pillar-hero__actions .btn-primary{ padding:15px 26px; font-size:15.5px; box-shadow:0 14px 30px -14px rgba(221,122,51,.7); }
 .pillar-hero__actions .btn-secondary{ padding:15px 22px; font-size:15.5px; }
+.pillar-hero__reassurance{ margin-top:22px; }
 .pillar-hero__reviews{ margin-top:22px; text-align:center; }
 
 /* ---------- mockup visuel ---------- */
@@ -186,6 +187,7 @@
   .pillar-hero__actions{ flex-direction:column; align-items:stretch; gap:12px; margin-top:24px; }
   .pillar-hero__actions .btn-primary,.pillar-hero__actions .btn-secondary{ width:100%; justify-content:center; }
   .pillar-hero__actions .btn-secondary{ padding:14px 22px; }
+  .pillar-hero__reassurance{ margin-left:auto; margin-right:auto; }
   .pillar-mid-cta{ padding:28px 22px; flex-direction:column; text-align:center; }
   .pillar-mid-cta .btn-primary{ width:100%; justify-content:center; }
   .pillar-mid-cta__connector{ flex:none; width:28px; min-width:0; max-width:none; margin:4px auto; transform:rotate(90deg); }

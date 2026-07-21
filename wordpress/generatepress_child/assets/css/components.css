@@ -190,11 +190,17 @@
 .hero-left__eyebrow{ margin-bottom:18px; }
 .hero-left h1{ max-width:820px; margin:0 0 20px; font-size:52px; line-height:1.06; }
 .hero-left p{ max-width:660px; font-size:19px; line-height:1.6; color:var(--muted-on-navy); margin:0; }
+.hero-left__actions{ display:flex; gap:12px; flex-wrap:wrap; margin-top:28px; }
+.hero-left__actions .btn-primary{ padding:15px 26px; font-size:15.5px; box-shadow:0 14px 30px -14px rgba(221,122,51,.7); }
+.hero-left__reassurance{ margin-top:22px; }
 .hero-left__reviews{ margin-top:22px; text-align:center; }
 @media (max-width:640px){
   .hero-left{ padding:48px 20px 30px; text-align:center; }
   .hero-left h1{ font-size:32px; line-height:1.14; margin-left:auto; margin-right:auto; }
   .hero-left p{ margin-left:auto; margin-right:auto; }
+  .hero-left__actions{ flex-direction:column; align-items:stretch; }
+  .hero-left__actions .btn-primary{ width:100%; justify-content:center; }
+  .hero-left__reassurance{ margin-left:auto; margin-right:auto; }
 }
 
 /* ---------- CTA final navy à motif de points (Solutions, Réalisations, À propos) ---------- */
@@ -337,10 +343,6 @@
 }
 
 /* ---------- avis Google ---------- */
-/* dégradé + liseré au lieu d'un aplat blanc plat : le badge est posé sur des
-   fonds très variés (hero sombre, cartes claires, footer navy) — un fond en
-   dégradé + une bordure de transition légèrement teintée l'intègrent mieux
-   que la puce blanche plate d'origine, quel que soit le contexte. */
 .google-reviews-badge{
   display:inline-flex; align-items:center; gap:8px;
   background:linear-gradient(180deg,#fff 0%,#F4F8FF 100%);
@@ -349,6 +351,37 @@
   padding:9px 16px 9px 13px;
   box-shadow:0 0 0 1px rgba(46,155,255,.07), 0 8px 20px -12px rgba(12,30,60,.4);
 }
+/* variante posée sur un fond sombre (hero, footer) : une puce blanche plate
+   tranche trop fort sur le navy — même traitement "lueur" que le reste des
+   composants de ces panneaux (fond translucide + liseré + halo bleu), au
+   lieu d'essayer de la fondre avec un simple dégradé interne (imperceptible
+   sur un fond sombre). */
+.google-reviews-badge--on-dark{
+  background:rgba(10,26,51,.6);
+  border:1px solid rgba(46,155,255,.45);
+  box-shadow:0 0 0 1px rgba(46,155,255,.18), 0 0 22px rgba(46,155,255,.3);
+}
+.google-reviews-badge--on-dark .google-reviews-badge__score{ color:#fff; }
+
+/* ---------- pastille de réassurance (bandeau CTA), partagée par toutes les
+   pages avec un hero sombre — même traitement que .hero__reassurance
+   (accueil) sous un nom générique pour être réutilisée telle quelle. ---------- */
+.reassurance-pill{
+  display:flex;align-items:center;gap:10px;color:#fff;font-size:14px;
+  width:fit-content;padding:11px 20px;border-radius:30px;
+  background:rgba(10,26,51,.6);border:1px solid rgba(91,203,139,.45);position:relative;
+  box-shadow:0 0 0 1px rgba(91,203,139,.18), 0 0 22px rgba(91,203,139,.3);
+}
+.reassurance-pill::before{
+  content:"";position:absolute;inset:-2px;border-radius:inherit;
+  border:1.5px solid var(--green-bright);
+  box-shadow:0 0 18px rgba(91,203,139,.9), 0 0 34px rgba(91,203,139,.6);
+  opacity:0;pointer-events:none;
+}
+@media (prefers-reduced-motion: no-preference){
+  .reassurance-pill::before{ animation:ebbadgeflash 3s ease-in-out infinite; }
+}
+.reassurance-pill__check{ color:var(--green-bright);font-size:16px;text-shadow:0 0 10px rgba(91,203,139,.9); }
 /* le logo Google (svg brut, seul enfant non-span) a un centrage optique
    légèrement haut par rapport au score/étoiles — recalé de 1px. */
 .google-reviews-badge > svg{ flex:none; position:relative; top:1px; }
@@ -375,8 +408,25 @@
 .review-card__name{ font-family:var(--font-heading); font-weight:700; font-size:14.5px; color:var(--navy); }
 .review-card__company{ font-size:13px; color:var(--muted); }
 
+.reviews-appreciated{ margin-top:52px; text-align:center; }
+.reviews-appreciated h3{ font-size:19px; margin:0 0 24px; color:var(--navy); }
+.reviews-appreciated__grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:16px; text-align:left; }
+.reviews-appreciated__item{
+  display:flex; gap:12px; align-items:flex-start;
+  background:var(--bg-soft); border:1px solid var(--border); border-radius:14px; padding:20px;
+}
+.reviews-appreciated__icon{
+  width:30px; height:30px; flex:none; border-radius:9px;
+  background:var(--navy-panel); border:1px solid var(--blue-2); color:#fff;
+  display:flex; align-items:center; justify-content:center; font-size:14px;
+  box-shadow:0 0 0 1px rgba(46,155,255,.25), 0 0 10px rgba(46,155,255,.3);
+}
+.reviews-appreciated__title{ font-family:var(--font-heading); font-weight:700; font-size:14.5px; color:var(--navy); margin-bottom:4px; }
+.reviews-appreciated__desc{ font-size:13.5px; line-height:1.5; color:var(--text-3); }
+
 @media (max-width:900px){
   .reviews-grid{ grid-template-columns:1fr; }
+  .reviews-appreciated__grid{ grid-template-columns:1fr; }
 }
 
 /* ---------- tarifs (Accueil, Audit gratuit) ---------- */

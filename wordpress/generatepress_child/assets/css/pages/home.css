@@ -48,6 +48,8 @@
 .hero__actions{ display:flex;align-items:center;gap:14px;flex-wrap:wrap; }
 .hero__cta-primary{ padding:16px 28px;font-size:16px;box-shadow:var(--shadow-btn-orange-md); }
 .hero__cta-secondary{ padding:16px 24px;font-size:16px; }
+.hero__price-signal{ margin:18px 0 0; font-size:13.5px; color:var(--muted-on-navy); }
+.hero__price-signal a{ color:#fff; font-weight:600; text-decoration:underline; text-underline-offset:2px; }
 .hero__reassurance{
   display:flex;align-items:center;gap:10px;margin-top:30px;color:#fff;font-size:14px;
   width:fit-content;padding:11px 20px;border-radius:30px;

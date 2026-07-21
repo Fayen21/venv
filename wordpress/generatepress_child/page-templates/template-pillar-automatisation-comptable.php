@@ -29,10 +29,11 @@ if ( ! defined( 'ABSPATH' ) ) {
       <h1>Automatisation comptable : éliminez la saisie manuelle grâce à l'IA</h1>
       <p class="pillar-hero__intro">Factures fournisseurs, notes de frais, rapprochement bancaire : la comptabilité d'une TPE-PME reste souvent une succession de ressaisies manuelles. L'automatisation comptable connecte l'OCR de lecture de facture à votre logiciel (Pennylane, Sage, Cegid, Quadra…) pour que <strong>les écritures se génèrent seules, sans changer d'outil</strong>.</p>
       <div class="pillar-hero__actions">
-        <a href="<?php echo esc_url( eb_url('realisations') ); ?>" class="btn btn-primary">Découvrir un cas concret <span>→</span></a>
+        <a href="<?php echo esc_url( eb_url('audit') ); ?>" class="btn btn-primary">Estimer vos gains comptables <span>→</span></a>
         <a href="<?php echo esc_url( eb_url('solutions') ); ?>" class="btn btn-secondary">Voir toutes les solutions</a>
       </div>
-    <div class="pillar-hero__reviews"><?php echo eb_google_reviews_badge(); ?></div>
+    <div class="pillar-hero__reassurance"><?php echo eb_reassurance_pill(); ?></div>
+    <div class="pillar-hero__reviews"><?php echo eb_google_reviews_badge( true ); ?></div>
     </div>
 
     <!-- mockup visuel -->

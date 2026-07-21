@@ -17,7 +17,11 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div class="eyebrow hero-left__eyebrow">Solutions</div>
     <h1>Connectez vos logiciels et supprimez les tâches répétitives</h1>
     <p>Je connecte les outils que vous utilisez déjà (Outlook, Excel, Sage, Qonto, CRM, logiciels RH…) afin d'éliminer les ressaisies, les oublis et les tâches chronophages. Aucun logiciel à remplacer.</p>
-    <div class="hero-left__reviews"><?php echo eb_google_reviews_badge(); ?></div>
+    <div class="hero-left__actions">
+      <a href="<?php echo esc_url( eb_url('audit') ); ?>" class="btn btn-primary">Identifier vos automatisations rentables <span>→</span></a>
+    </div>
+    <div class="hero-left__reassurance"><?php echo eb_reassurance_pill(); ?></div>
+    <div class="hero-left__reviews"><?php echo eb_google_reviews_badge( true ); ?></div>
   </div>
   </div>
 

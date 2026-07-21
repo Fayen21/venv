@@ -29,10 +29,11 @@ if ( ! defined( 'ABSPATH' ) ) {
       <h1>Automatisation CRM : un pipeline commercial qui se met à jour tout seul</h1>
       <p class="pillar-hero__intro">Un CRM PME ou CRM TPE (HubSpot, Salesforce…) ne vaut que si les données qu'il contient sont à jour. L'automatisation CRM connecte vos emails, formulaires et outils commerciaux pour que chaque contact, chaque étape du pipeline commercial et chaque relance se mette à jour automatiquement — sans ressaisie côté équipe commerciale.</p>
       <div class="pillar-hero__actions">
-        <a href="<?php echo esc_url( eb_url('realisations') ); ?>" class="btn btn-primary">Découvrir un cas concret <span>→</span></a>
+        <a href="<?php echo esc_url( eb_url('audit') ); ?>" class="btn btn-primary">Identifier vos automatisations CRM <span>→</span></a>
         <a href="<?php echo esc_url( eb_url('solutions') ); ?>" class="btn btn-secondary">Voir toutes les solutions</a>
       </div>
-    <div class="pillar-hero__reviews"><?php echo eb_google_reviews_badge(); ?></div>
+    <div class="pillar-hero__reassurance"><?php echo eb_reassurance_pill(); ?></div>
+    <div class="pillar-hero__reviews"><?php echo eb_google_reviews_badge( true ); ?></div>
     </div>
 
     <!-- mockup visuel -->

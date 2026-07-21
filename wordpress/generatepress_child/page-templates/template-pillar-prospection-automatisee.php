@@ -29,10 +29,11 @@ if ( ! defined( 'ABSPATH' ) ) {
       <h1>Prospection automatisée : générez des leads B2B sans y passer vos journées</h1>
       <p class="pillar-hero__intro">Automatisation LinkedIn, relance email, enrichissement CRM : la génération de leads en prospection B2B demande de la régularité, pas seulement de bons messages. La prospection automatisée prend en charge le volume et le suivi — recherche de contacts, premiers messages, relances — pendant que vous vous concentrez sur les échanges qui comptent.</p>
       <div class="pillar-hero__actions">
-        <a href="<?php echo esc_url( eb_url('realisations') ); ?>" class="btn btn-primary">Découvrir un cas concret <span>→</span></a>
+        <a href="<?php echo esc_url( eb_url('audit') ); ?>" class="btn btn-primary">Estimer votre potentiel de prospection <span>→</span></a>
         <a href="<?php echo esc_url( eb_url('solutions') ); ?>" class="btn btn-secondary">Voir toutes les solutions</a>
       </div>
-    <div class="pillar-hero__reviews"><?php echo eb_google_reviews_badge(); ?></div>
+    <div class="pillar-hero__reassurance"><?php echo eb_reassurance_pill(); ?></div>
+    <div class="pillar-hero__reviews"><?php echo eb_google_reviews_badge( true ); ?></div>
     </div>
 
     <!-- mockup visuel -->
