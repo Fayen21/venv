@@ -62,7 +62,7 @@ if ( ! defined( 'ABSPATH' ) ) {
         <div class="site-footer__heading">Contact</div>
         <div class="site-footer__contact">
           <span class="site-footer__contact-name">Emmanuel Brançon</span>
-          <a href="mailto:contact@eb-automatisation.fr">contact@eb-automatisation.fr</a>
+          <a href="mailto:emmanuel@eb-automatisation.fr">emmanuel@eb-automatisation.fr</a>
           <a href="tel:+33695204127">06 95 20 41 27</a>
           <span>Réponse sous 24h · France, à distance</span>
           <span>21850 Saint-Apollinaire</span>

@@ -17,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
       <h2 style="font-size:22px;margin-top:36px;margin-bottom:14px;">Qui est responsable de vos données ?</h2>
       <p>Emmanuel Brançon, en tant que responsable de la protection des données pour ce site, est votre interlocuteur unique pour toute question relative à vos données personnelles.</p>
-      <p>Contact : <a href="mailto:contact@eb-automatisation.fr">contact@eb-automatisation.fr</a></p>
+      <p>Contact : <a href="mailto:emmanuel@eb-automatisation.fr">emmanuel@eb-automatisation.fr</a></p>
 
       <h2 style="font-size:22px;margin-top:36px;margin-bottom:14px;">Vos droits</h2>
       <p>Conformément au Règlement Général sur la Protection des Données (RGPD) et à la loi Informatique et Libertés, vous disposez des droits suivants sur les données vous concernant :</p>
@@ -31,7 +31,7 @@ if ( ! defined( 'ABSPATH' ) ) {
       </ul>
 
       <h2 style="font-size:22px;margin-top:36px;margin-bottom:14px;">Comment exercer vos droits ?</h2>
-      <p>Par email à <a href="mailto:contact@eb-automatisation.fr">contact@eb-automatisation.fr</a>, en précisant votre demande et en joignant un justificatif d'identité si nécessaire. Une réponse vous sera apportée dans un délai maximal d'un mois.</p>
+      <p>Par email à <a href="mailto:emmanuel@eb-automatisation.fr">emmanuel@eb-automatisation.fr</a>, en précisant votre demande et en joignant un justificatif d'identité si nécessaire. Une réponse vous sera apportée dans un délai maximal d'un mois.</p>
 
       <h2 style="font-size:22px;margin-top:36px;margin-bottom:14px;">Durées de conservation de vos données</h2>
       <ul style="margin:0;padding-left:22px;">

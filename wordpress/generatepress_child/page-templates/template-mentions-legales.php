@@ -25,7 +25,7 @@ if ( ! defined( 'ABSPATH' ) ) {
       Date d'immatriculation : 18 juin 2026<br>
       Siège social : 650D Route de Gray, 21850 Saint-Apollinaire<br>
       N° TVA intracommunautaire : FR82106501141<br>
-      E-mail : <a href="mailto:contact@eb-automatisation.fr">contact@eb-automatisation.fr</a><br>
+      E-mail : <a href="mailto:emmanuel@eb-automatisation.fr">emmanuel@eb-automatisation.fr</a><br>
       Téléphone : <a href="tel:+33695204127">06 95 20 41 27</a></p>
 
       <h2 style="font-size:22px;margin-top:36px;margin-bottom:14px;">Directeur de la publication</h2>

@@ -37,7 +37,7 @@ if ( ! defined( 'ABSPATH' ) ) {
         </div>
       </div>
 
-      <div class="audit-alt-contact">Pas envie de remplir un formulaire ? <a href="tel:+33695204127">Appelez-moi</a> ou <a href="mailto:contact@eb-automatisation.fr">écrivez-moi</a> directement.</div>
+      <div class="audit-alt-contact">Pas envie de remplir un formulaire ? <a href="tel:+33695204127">Appelez-moi</a> ou <a href="mailto:emmanuel@eb-automatisation.fr">écrivez-moi</a> directement.</div>
     </div>
 
     <!-- colonne droite : formulaire / succès -->
@@ -85,7 +85,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
         <button type="submit" class="btn btn-primary audit-form__submit">Demander un audit gratuit <span aria-hidden="true">→</span></button>
         <p class="audit-form__disclaimer">En envoyant ce formulaire, vous acceptez d'être recontacté. Vos données sont traitées dans le respect du RGPD et ne sont jamais cédées.</p>
-        <p id="audit-form__server-error" class="audit-form__error" role="alert">Une erreur est survenue lors de l'envoi. Merci de réessayer, ou de nous <a href="mailto:contact@eb-automatisation.fr">écrire directement</a>.</p>
+        <p id="audit-form__server-error" class="audit-form__error" role="alert">Une erreur est survenue lors de l'envoi. Merci de réessayer, ou de nous <a href="mailto:emmanuel@eb-automatisation.fr">écrire directement</a>.</p>
       </form>
 
       <div id="audit-success" class="audit-success" hidden>
@@ -104,7 +104,7 @@ if ( ! defined( 'ABSPATH' ) ) {
             <?php echo eb_contact_icon( 'phone-alt', 22, '1.6' ); ?>
             <span>06 95 20 41 27</span>
           </a>
-          <a href="mailto:contact@eb-automatisation.fr" class="audit-success__tile">
+          <a href="mailto:emmanuel@eb-automatisation.fr" class="audit-success__tile">
             <?php echo eb_contact_icon( 'email', 22, '1.6' ); ?>
             <span>Écrire un email</span>
           </a>

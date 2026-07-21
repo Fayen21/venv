@@ -25,7 +25,7 @@ $organization = array(
 	),
 	'image'       => $logo,
 	'telephone'   => '+33695204127',
-	'email'       => 'contact@eb-automatisation.fr',
+	'email'       => 'emmanuel@eb-automatisation.fr',
 	'address'     => array(
 		'@type'           => 'PostalAddress',
 		'streetAddress'   => '650D Route de Gray',
@@ -71,7 +71,7 @@ $organization = array(
 	'contactPoint' => array(
 		'@type'             => 'ContactPoint',
 		'telephone'         => '+33695204127',
-		'email'             => 'contact@eb-automatisation.fr',
+		'email'             => 'emmanuel@eb-automatisation.fr',
 		'contactType'       => 'customer service',
 		'areaServed'        => 'FR',
 		'availableLanguage' => array( 'French' ),
