@@ -162,9 +162,9 @@
 			// pic de vitesse atteint après ~10s d'engagement continu (1/600 à 60fps) ;
 			// relâché, la décélération reste rapide (-0.02/frame).
 			engage = prox > 0.15 ? Math.min(1, engage + 0.00167) : Math.max(0, engage - 0.02);
-			var maxBoost = 0.012 + engage * 0.010;
+			var maxBoost = 0.014 + engage * 0.016;
 			var speedDelta = prox * maxBoost;
-			var speedNorm = Math.min(1, speedDelta / 0.022); // 0..1, utilisé pour l'intensité lumineuse
+			var speedNorm = Math.min(1, speedDelta / 0.03); // 0..1, utilisé pour l'intensité lumineuse
 			rScale += (1 + prox * 0.22 - rScale) * 0.08;
 			ang += 0.0035 + speedDelta;
 			var R = baseR * rScale;
@@ -179,7 +179,7 @@
 					var a = pr[i], b = pr[j];
 					var d = Math.hypot(a.sx - b.sx, a.sy - b.sy);
 					if (d < R * 0.36) {
-						var lineA = Math.min(1, (1 - d / (R * 0.36)) * 0.5 * ((a.depth + b.depth) / 2) * (1 + speedNorm * 0.9));
+						var lineA = Math.min(1, (1 - d / (R * 0.36)) * 0.5 * ((a.depth + b.depth) / 2) * (1 + speedNorm * 1.3));
 						ctx.strokeStyle = 'rgba(90,170,255,' + lineA + ')';
 						ctx.lineWidth = 1;
 						ctx.beginPath();
@@ -191,10 +191,10 @@
 			}
 			for (var i = 0; i < pr.length; i++) {
 				var p = pr[i];
-				var dotA = Math.min(1, (0.25 + p.depth * 0.75) * (1 + speedNorm * 1.1));
+				var dotA = Math.min(1, (0.25 + p.depth * 0.75) * (1 + speedNorm * 1.6));
 				ctx.fillStyle = 'rgba(150,205,255,' + dotA + ')';
 				ctx.beginPath();
-				ctx.arc(p.sx, p.sy, 0.9 + p.depth * 2.3, 0, 7);
+				ctx.arc(p.sx, p.sy, 1.1 + p.depth * 2.8, 0, 7);
 				ctx.fill();
 			}
 		});
@@ -386,14 +386,13 @@
 	effects.orbit = function (cv, wrap, setup, loop) {
 		var r = setup(cv), ctx = r.ctx, st = r.st;
 		var rings = [
-			{ tilt: 0.32, rot: 0, sp: 0.006, n: 7, col: '90,165,255', ph: 0 },
-			{ tilt: 0.5, rot: 1.2, sp: -0.009, n: 5, col: '221,140,70', ph: 1 },
-			{ tilt: 0.2, rot: 2.4, sp: 0.013, n: 6, col: '150,205,255', ph: 2 },
+			{ tilt: 0.32, rot: 0, sp: 0.006, n: 7, col: '90,165,255', ph: 0, ang: 0 },
+			{ tilt: 0.5, rot: 1.2, sp: -0.009, n: 5, col: '221,140,70', ph: 1, ang: 0 },
+			{ tilt: 0.2, rot: 2.4, sp: 0.013, n: 6, col: '150,205,255', ph: 2, ang: 0 },
 			// orbite éloignée supplémentaire : rayon nettement plus grand (ph=3),
 			// rotation plus lente pour un effet de profondeur.
-			{ tilt: 0.42, rot: 0.6, sp: 0.0045, n: 8, col: '190,225,255', ph: 3 }
+			{ tilt: 0.42, rot: 0.6, sp: 0.0045, n: 8, col: '190,225,255', ph: 3, ang: 0 }
 		];
-		var t = 0;
 		// engage : 0..1, s'anime en douceur vers 1 quand le curseur cible l'astre
 		// central (et seulement lui, pas l'ensemble des anneaux), vers 0 sinon —
 		// jamais de saut instantané, d'où l'accélération/ralentissement progressifs.
@@ -406,7 +405,6 @@
 		});
 		wrap.addEventListener('pointerleave', function () { mx = my = -9999; });
 		loop(function () {
-			t++;
 			ctx.clearRect(0, 0, st.w, st.h);
 			var cx = st.w * 0.72, cy = st.h * 0.41, baseR = Math.min(st.w, st.h) * 0.4;
 			// proximité continue (0..1 selon la distance), pas un simple seuil dedans/dehors :
@@ -430,8 +428,15 @@
 					var a = s / 64 * Math.PI * 2 + ring.rot;
 					items.push({ type: 'seg', ring: ring, x: cx + Math.cos(a) * rr, y: cy + Math.sin(a) * rr * ring.tilt, z: Math.sin(a) });
 				}
+				// angle accumulé image par image (vitesse instantanée intégrée dans le
+				// temps), plutôt que recalculé depuis un compteur de frames absolu
+				// multiplié par la vitesse courante : cette dernière approche produisait
+				// un saut de position (donc une "vitesse" apparente énorme et immédiate)
+				// à chaque variation de speedMul, proportionnel au nombre de frames déjà
+				// écoulées — d'où les à-coups signalés.
+				ring.ang += ring.sp * speedMul;
 				for (var i = 0; i < ring.n; i++) {
-					var a = t * ring.sp * speedMul + i / ring.n * Math.PI * 2 + ring.rot;
+					var a = ring.ang + i / ring.n * Math.PI * 2 + ring.rot;
 					items.push({ type: 'dot', ring: ring, x: cx + Math.cos(a) * rr, y: cy + Math.sin(a) * rr * ring.tilt, z: Math.sin(a) });
 				}
 			}

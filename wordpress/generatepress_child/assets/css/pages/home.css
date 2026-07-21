@@ -36,7 +36,11 @@
   pointer-events:none;
   z-index:0;
 }
-.hero__content{ position:relative; z-index:1; }
+/* centré à toutes les largeurs : le prix et l'avis Google plus bas sont
+   déjà centrés en permanence (cf. .hero__price-signal / .hero__reviews) —
+   laisser le titre/texte/boutons alignés à gauche au-dessus créait un bloc
+   visuellement incohérent, y compris en plein desktop. */
+.hero__content{ position:relative; z-index:1; text-align:center; }
 .hero__eyebrow{ margin-bottom:24px; }
 .hero__dot{
   width:8px;height:8px;border-radius:50%;
@@ -44,14 +48,14 @@
   box-shadow:0 0 0 3px rgba(46,155,255,.18),0 0 10px rgba(46,155,255,.7);
 }
 .hero__title{ margin:0 0 22px; }
-.hero__lead{ font-size:18px;line-height:1.62;color:var(--muted-on-navy);margin:0 0 34px;max-width:560px; }
-.hero__actions{ display:flex;align-items:center;gap:14px;flex-wrap:wrap; }
+.hero__lead{ font-size:18px;line-height:1.62;color:var(--muted-on-navy);margin:0 auto 34px;max-width:560px; }
+.hero__actions{ display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap; }
 .hero__cta-primary{ padding:16px 28px;font-size:16px;box-shadow:var(--shadow-btn-orange-md); }
 .hero__cta-secondary{ padding:16px 24px;font-size:16px; }
 .hero__price-signal{ margin:18px 0 0; font-size:13.5px; color:var(--muted-on-navy); text-align:center; }
 .hero__price-signal a{ color:#fff; font-weight:600; text-decoration:underline; text-underline-offset:2px; }
 .hero__reassurance{
-  display:flex;align-items:center;gap:10px;margin-top:30px;color:#fff;font-size:14px;
+  display:flex;align-items:center;gap:10px;margin:30px auto 0;color:#fff;font-size:14px;
   width:fit-content;padding:11px 20px;border-radius:30px;
   background:rgba(10,26,51,.6);border:1px solid rgba(91,203,139,.45);position:relative;
   box-shadow:0 0 0 1px rgba(91,203,139,.18), 0 0 22px rgba(91,203,139,.3);
@@ -473,13 +477,6 @@
   .faq-grid{
     grid-template-columns:1fr;
   }
-  /* .hero passe en une colonne ici : le bloc de gauche (boutons, pastille,
-     badge) doit se centrer avec le reste du contenu plutôt que rester
-     aligné à gauche pendant que le prix et l'avis Google (déjà centrés en
-     permanence) créent un bloc visuellement incohérent. */
-  .hero__content{ text-align:center; }
-  .hero__actions{ justify-content:center; }
-  .hero__reassurance{ margin:24px auto 0; }
   /* les enfants directs d'une grille 1fr ont un min-width:auto implicite : sans
      ce reset, une piste ne peut pas rétrécir sous la largeur intrinsèque de son
      contenu (ici .workflow-tabs) et fait déborder .hero au-delà du viewport —
