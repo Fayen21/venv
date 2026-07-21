@@ -158,7 +158,10 @@
 			var baseR = Math.min(st.w, st.h) * 0.42, cx = st.w * 0.72, cy = st.h * 0.5;
 			var dist = Math.hypot(mx - cx, my - cy);
 			var prox = Math.max(0, Math.min(1, 1 - dist / baseR));
-			engage = prox > 0.15 ? Math.min(1, engage + 0.01) : Math.max(0, engage - 0.02);
+			// pointer maintenu sur le centre : montée en régime progressive,
+			// pic de vitesse atteint après ~10s d'engagement continu (1/600 à 60fps) ;
+			// relâché, la décélération reste rapide (-0.02/frame).
+			engage = prox > 0.15 ? Math.min(1, engage + 0.00167) : Math.max(0, engage - 0.02);
 			var maxBoost = 0.012 + engage * 0.010;
 			var speedDelta = prox * maxBoost;
 			var speedNorm = Math.min(1, speedDelta / 0.022); // 0..1, utilisé pour l'intensité lumineuse
@@ -176,7 +179,7 @@
 					var a = pr[i], b = pr[j];
 					var d = Math.hypot(a.sx - b.sx, a.sy - b.sy);
 					if (d < R * 0.36) {
-						var lineA = Math.min(1, (1 - d / (R * 0.36)) * 0.5 * ((a.depth + b.depth) / 2) * (1 + speedNorm * 0.5));
+						var lineA = Math.min(1, (1 - d / (R * 0.36)) * 0.5 * ((a.depth + b.depth) / 2) * (1 + speedNorm * 0.9));
 						ctx.strokeStyle = 'rgba(90,170,255,' + lineA + ')';
 						ctx.lineWidth = 1;
 						ctx.beginPath();
@@ -188,10 +191,10 @@
 			}
 			for (var i = 0; i < pr.length; i++) {
 				var p = pr[i];
-				var dotA = Math.min(1, (0.25 + p.depth * 0.75) * (1 + speedNorm * 0.6));
+				var dotA = Math.min(1, (0.25 + p.depth * 0.75) * (1 + speedNorm * 1.1));
 				ctx.fillStyle = 'rgba(150,205,255,' + dotA + ')';
 				ctx.beginPath();
-				ctx.arc(p.sx, p.sy, 0.7 + p.depth * 1.8, 0, 7);
+				ctx.arc(p.sx, p.sy, 0.9 + p.depth * 2.3, 0, 7);
 				ctx.fill();
 			}
 		});
@@ -210,6 +213,10 @@
 		var cometCycle = 360; // ~6s à 60fps
 		var cometCycleIdx = -1;
 		var cometStart = { x: 0, y: 0 }, cometEnd = { x: 1, y: 1 };
+		// ~1 comète sur 3 est une "vague" plus grande et plus lumineuse que la
+		// normale, pour que l'effet reste impressionnant sans que chaque passage
+		// soit identique.
+		var cometBig = false;
 		// point aléatoire sur un bord étendu (légèrement hors cadre pour une
 		// entrée/sortie naturelle) — sert à tirer un nouveau trajet de comète.
 		function randEdgePoint() {
@@ -226,6 +233,7 @@
 				cometEnd = randEdgePoint();
 				tries++;
 			} while (tries < 6 && Math.hypot(cometEnd.x - cometStart.x, cometEnd.y - cometStart.y) < 0.6);
+			cometBig = Math.random() < 0.32;
 		}
 		loop(function () {
 			t += 0.0016;
@@ -241,12 +249,14 @@
 				if (p.x > 1) p.x = 0;
 				if (p.y < 0) p.y = 1;
 				if (p.y > 1) p.y = 0;
-				ctx.fillStyle = 'rgba(' + p.c + ',.5)';
-				ctx.fillRect(p.x * st.w, p.y * st.h, 1.5, 1.5);
+				ctx.fillStyle = 'rgba(' + p.c + ',.62)';
+				ctx.fillRect(p.x * st.w, p.y * st.h, 1.8, 1.8);
 			}
 			// comète : traverse le hero toutes les ~6s selon un trajet aléatoire
 			// (tiré à chaque nouveau cycle), traînée en dégradé qui s'estompe
-			// grâce au fondu de fond ci-dessus.
+			// grâce au fondu de fond ci-dessus. Une comète sur ~3 est une "vague"
+			// nettement plus grande et lumineuse (cometBig), tirée au sort à
+			// chaque nouveau trajet pour varier le rythme visuel.
 			var cycleIdx = Math.floor(frameN / cometCycle);
 			if (cycleIdx !== cometCycleIdx) {
 				cometCycleIdx = cycleIdx;
@@ -255,17 +265,19 @@
 			var cp = (frameN % cometCycle) / cometCycle;
 			var cx = (cometStart.x + (cometEnd.x - cometStart.x) * cp) * st.w;
 			var cy = (cometStart.y + (cometEnd.y - cometStart.y) * cp) * st.h;
-			var glow = ctx.createRadialGradient(cx, cy, 0, cx, cy, 18);
-			glow.addColorStop(0, 'rgba(255,255,255,.95)');
-			glow.addColorStop(0.35, 'rgba(150,205,255,.55)');
+			var glowR = cometBig ? 32 : 18;
+			var coreR = cometBig ? 2.6 : 1.5;
+			var glow = ctx.createRadialGradient(cx, cy, 0, cx, cy, glowR);
+			glow.addColorStop(0, 'rgba(255,255,255,.98)');
+			glow.addColorStop(0.35, cometBig ? 'rgba(170,215,255,.75)' : 'rgba(150,205,255,.55)');
 			glow.addColorStop(1, 'rgba(150,205,255,0)');
 			ctx.fillStyle = glow;
 			ctx.beginPath();
-			ctx.arc(cx, cy, 18, 0, 7);
+			ctx.arc(cx, cy, glowR, 0, 7);
 			ctx.fill();
-			ctx.fillStyle = 'rgba(255,255,255,.95)';
+			ctx.fillStyle = 'rgba(255,255,255,.98)';
 			ctx.beginPath();
-			ctx.arc(cx, cy, 1.5, 0, 7);
+			ctx.arc(cx, cy, coreR, 0, 7);
 			ctx.fill();
 		});
 	};
@@ -376,7 +388,10 @@
 		var rings = [
 			{ tilt: 0.32, rot: 0, sp: 0.006, n: 7, col: '90,165,255', ph: 0 },
 			{ tilt: 0.5, rot: 1.2, sp: -0.009, n: 5, col: '221,140,70', ph: 1 },
-			{ tilt: 0.2, rot: 2.4, sp: 0.013, n: 6, col: '150,205,255', ph: 2 }
+			{ tilt: 0.2, rot: 2.4, sp: 0.013, n: 6, col: '150,205,255', ph: 2 },
+			// orbite éloignée supplémentaire : rayon nettement plus grand (ph=3),
+			// rotation plus lente pour un effet de profondeur.
+			{ tilt: 0.42, rot: 0.6, sp: 0.0045, n: 8, col: '190,225,255', ph: 3 }
 		];
 		var t = 0;
 		// engage : 0..1, s'anime en douceur vers 1 quand le curseur cible l'astre
@@ -400,7 +415,9 @@
 			var proxR = Math.max(90, baseR * 0.55);
 			var dist = Math.hypot(mx - cx, my - cy);
 			var prox = Math.max(0, Math.min(1, 1 - dist / proxR));
-			engage += (prox - engage) * 0.03;
+			// montée en régime progressive : pic de vitesse atteint après ~10s
+			// d'engagement continu sur le centre (constante de temps ~0.005/frame à 60fps).
+			engage += (prox - engage) * 0.005;
 			var R = baseR * (1 + engage * 0.22);
 			var speedMul = 1 + engage * 3.0;
 			var spacingBoost = engage * 0.06;
@@ -423,18 +440,18 @@
 				var it = items[i];
 				var depth = (it.z + 1) / 2;
 				if (it.type === 'seg') {
-					ctx.fillStyle = 'rgba(' + it.ring.col + ',' + Math.min(1, (0.05 + depth * 0.18) * (1 + speedNorm * 0.5)) + ')';
-					ctx.fillRect(it.x, it.y, 1.4, 1.4);
+					ctx.fillStyle = 'rgba(' + it.ring.col + ',' + Math.min(1, (0.05 + depth * 0.18) * (1 + speedNorm * 1.0)) + ')';
+					ctx.fillRect(it.x, it.y, 1.7, 1.7);
 				} else {
-					var s = 1.5 + depth * 3.5;
+					var s = 1.8 + depth * 4.2;
 					var g = ctx.createRadialGradient(it.x, it.y, 0, it.x, it.y, s * 3);
-					g.addColorStop(0, 'rgba(' + it.ring.col + ',' + Math.min(1, (0.35 + depth * 0.6) * (1 + speedNorm * 0.5)) + ')');
+					g.addColorStop(0, 'rgba(' + it.ring.col + ',' + Math.min(1, (0.35 + depth * 0.6) * (1 + speedNorm * 1.0)) + ')');
 					g.addColorStop(1, 'rgba(' + it.ring.col + ',0)');
 					ctx.fillStyle = g;
 					ctx.beginPath();
 					ctx.arc(it.x, it.y, s * 3, 0, 7);
 					ctx.fill();
-					ctx.fillStyle = 'rgba(230,242,255,' + Math.min(1, (0.5 + depth * 0.5) * (1 + speedNorm * 0.4)) + ')';
+					ctx.fillStyle = 'rgba(230,242,255,' + Math.min(1, (0.5 + depth * 0.5) * (1 + speedNorm * 0.8)) + ')';
 					ctx.beginPath();
 					ctx.arc(it.x, it.y, s, 0, 7);
 					ctx.fill();
@@ -442,8 +459,8 @@
 			}
 			var coreR = 40 * (1 + engage * 0.2);
 			var core = ctx.createRadialGradient(cx, cy, 0, cx, cy, coreR);
-			core.addColorStop(0, 'rgba(200,230,255,' + Math.min(1, 0.95 * (1 + speedNorm * 0.3)) + ')');
-			core.addColorStop(0.4, 'rgba(46,155,255,' + Math.min(1, 0.55 * (1 + speedNorm * 0.4)) + ')');
+			core.addColorStop(0, 'rgba(200,230,255,' + Math.min(1, 0.95 * (1 + speedNorm * 0.6)) + ')');
+			core.addColorStop(0.4, 'rgba(46,155,255,' + Math.min(1, 0.55 * (1 + speedNorm * 0.8)) + ')');
 			core.addColorStop(1, 'rgba(46,155,255,0)');
 			ctx.fillStyle = core;
 			ctx.beginPath();

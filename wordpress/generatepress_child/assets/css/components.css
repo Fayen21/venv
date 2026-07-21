@@ -203,7 +203,7 @@
   .hero-left p{ margin-left:auto; margin-right:auto; }
   .hero-left__actions{ flex-direction:column; align-items:stretch; }
   .hero-left__actions .btn-primary{ width:100%; justify-content:center; }
-  .hero-left__reassurance{ margin-left:auto; margin-right:auto; }
+  .hero-left__reassurance{ display:flex; justify-content:center; }
 }
 
 /* ---------- CTA final navy à motif de points (Solutions, Réalisations, À propos) ---------- */

@@ -473,6 +473,13 @@
   .faq-grid{
     grid-template-columns:1fr;
   }
+  /* .hero passe en une colonne ici : le bloc de gauche (boutons, pastille,
+     badge) doit se centrer avec le reste du contenu plutôt que rester
+     aligné à gauche pendant que le prix et l'avis Google (déjà centrés en
+     permanence) créent un bloc visuellement incohérent. */
+  .hero__content{ text-align:center; }
+  .hero__actions{ justify-content:center; }
+  .hero__reassurance{ margin:24px auto 0; }
   /* les enfants directs d'une grille 1fr ont un min-width:auto implicite : sans
      ce reset, une piste ne peut pas rétrécir sous la largeur intrinsèque de son
      contenu (ici .workflow-tabs) et fait déborder .hero au-delà du viewport —

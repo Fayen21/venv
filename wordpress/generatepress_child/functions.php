@@ -177,7 +177,7 @@ function eb_google_reviews() {
 		array(
 			'text'    => 'Parfait, tout marche bien et on peut compter sur Emmanuel pour trouver des solutions, donc à bientôt je l\'espère.',
 			'author'  => 'Zoheir',
-			'company' => '',
+			'company' => 'Kefta Plaza',
 			'color'   => '#1E8E5A',
 		),
 	);
