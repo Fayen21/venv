@@ -132,7 +132,7 @@ if ( ! defined( 'ABSPATH' ) ) {
       </div>
       <div class="pillar-faq__item">
         <h3>Combien coûte l'automatisation de la facturation ?</h3>
-        <p>Un premier flux ciblé (génération + relances) démarre autour de 1 000 à 1 500€. Un cycle complet avec rapprochement automatique se chiffre après audit.</p>
+        <p>Un premier flux ciblé (génération + relances) démarre autour de 1 000 à 1 500€. Un cycle complet avec rapprochement automatique se chiffre après audit.</p>
       </div>
       <div class="pillar-faq__item">
         <h3>Combien de temps pour la mettre en place ?</h3>
@@ -172,13 +172,13 @@ if ( ! defined( 'ABSPATH' ) ) {
     </div>
 
     <!-- tarif contextuel -->
-    <?php echo eb_price_teaser_html( 'Automatisation de la facturation : les premiers scénarios démarrent généralement <strong>autour de 1 000 à 1 800 €</strong>, selon le volume de factures.' ); ?>
+    <?php echo eb_price_teaser_html( 'Automatisation de la facturation : les premiers scénarios démarrent généralement <strong>autour de 1 000 à 1 800 €</strong>, selon le volume de factures.' ); ?>
 
     <!-- CTA final -->
     <div class="pillar-final-cta">
       <h2>Voyons combien d'heures votre cycle de facturation pourrait vous faire gagner</h2>
-      <p>Audit gratuit de 45 minutes, sans engagement.</p>
-      <a href="<?php echo esc_url( eb_url('audit') ); ?>" class="btn btn-primary">Réserver un audit gratuit <span>→</span></a>
+      <p>45 minutes pour chiffrer précisément ce que l'automatisation ferait gagner à votre cycle de facturation.</p>
+      <a href="<?php echo esc_url( eb_url('audit') ); ?>" class="btn btn-primary">Estimer mon gain sur la facturation <span>→</span></a>
     </div>
 
   </div>

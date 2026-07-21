@@ -154,7 +154,7 @@ if ( ! defined( 'ABSPATH' ) ) {
         </div>
         <div class="pricing__price-row">
           <div class="pricing__price-label">À partir de</div>
-          <div class="pricing__price">800 €</div>
+          <div class="pricing__price">800 €</div>
         </div>
       </div>
 
@@ -171,7 +171,7 @@ if ( ! defined( 'ABSPATH' ) ) {
         </div>
         <div class="pricing__price-row">
           <div class="pricing__price-label">À partir de</div>
-          <div class="pricing__price">1 500 €</div>
+          <div class="pricing__price">1 500 €</div>
         </div>
       </div>
 

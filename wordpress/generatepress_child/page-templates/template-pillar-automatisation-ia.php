@@ -62,6 +62,11 @@ if ( ! defined( 'ABSPATH' ) ) {
       </div>
     </div>
 
+    <!-- avis clients -->
+    <div style="max-width:480px;margin:0 auto 56px;">
+      <?php echo eb_mini_review_html( 0 ); ?>
+    </div>
+
     <div class="pillar-section">
       <h2>Où l'automatisation IA a le plus d'impact</h2>
       <div class="pillar-section__sub">
@@ -132,7 +137,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
     <div class="pillar-section">
       <h2>Combien coûte une automatisation IA</h2>
-      <p>Un premier cas d'usage ciblé — lecture d'un seul type de document ou tri d'une boîte mail — démarre généralement autour de 1 000 à 1 500€, un peu au-dessus d'une automatisation classique du fait du calibrage nécessaire au démarrage. Un projet combinant plusieurs sources de documents et une logique de décision plus fine se situe le plus souvent entre 2 000€ et 4 000€. Le chiffrage précis dépend surtout du volume de documents à traiter et de la variabilité de leur mise en forme, deux points évalués dès l'audit gratuit.</p>
+      <p>Un premier cas d'usage ciblé — lecture d'un seul type de document ou tri d'une boîte mail — démarre généralement autour de 1 000 à 1 500€, un peu au-dessus d'une automatisation classique du fait du calibrage nécessaire au démarrage. Un projet combinant plusieurs sources de documents et une logique de décision plus fine se situe le plus souvent entre 2 000€ et 4 000€. Le chiffrage précis dépend surtout du volume de documents à traiter et de la variabilité de leur mise en forme, deux points évalués dès l'audit gratuit.</p>
     </div>
 
     <div class="pillar-section">
@@ -255,8 +260,8 @@ if ( ! defined( 'ABSPATH' ) ) {
     <!-- CTA final -->
     <div class="pillar-final-cta">
       <h2>Voyons ce que l'IA peut réellement automatiser chez vous</h2>
-      <p>Audit gratuit de 45 minutes, sans jargon ni promesse en l'air.</p>
-      <a href="<?php echo esc_url( eb_url('audit') ); ?>" class="btn btn-primary">Réserver un audit gratuit <span>→</span></a>
+      <p>45 minutes, sans jargon, pour voir concrètement ce que l'IA peut prendre en charge chez vous.</p>
+      <a href="<?php echo esc_url( eb_url('audit') ); ?>" class="btn btn-primary">Évaluer mon potentiel IA <span>→</span></a>
     </div>
 
   </div>

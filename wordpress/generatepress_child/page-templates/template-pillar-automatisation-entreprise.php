@@ -69,6 +69,11 @@ if ( ! defined( 'ABSPATH' ) ) {
       </div>
     </div>
 
+    <!-- avis clients -->
+    <div style="max-width:480px;margin:0 auto 56px;">
+      <?php echo eb_mini_review_html( 2 ); ?>
+    </div>
+
     <div class="pillar-section">
       <h2>La méthode que j'applique à l'échelle de l'entreprise</h2>
       <p>Un audit transverse plutôt qu'un audit limité à un seul service, pour ne pas manquer une automatisation à fort impact ailleurs. Une priorisation par gain horaire réel et facilité de mise en œuvre, pas par nouveauté technologique. Un déploiement service par service, pour que chaque automatisation soit adoptée avant de passer à la suivante. Et une mesure du temps effectivement récupéré, pas seulement promis.</p>
@@ -88,7 +93,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     <!-- budget type -->
     <div class="pillar-mini-case">
       <h3 class="pillar-mini-case__label">Budget type</h3>
-      <p>Une première automatisation ciblée démarre généralement <strong>autour de 800 €</strong>, et un service métier automatisé de bout en bout (CRM, RH, comptabilité…) se situe le plus souvent <strong>entre 1 500 € et 3 000 €</strong>, selon le nombre d'outils à connecter. Le détail par type de projet est sur la page <a href="<?php echo esc_url( eb_url('tarifs') ); ?>">tarifs</a>.</p>
+      <p>Une première automatisation ciblée démarre généralement <strong>autour de 800 €</strong>, et un service métier automatisé de bout en bout (CRM, RH, comptabilité…) se situe le plus souvent <strong>entre 1 500 € et 3 000 €</strong>, selon le nombre d'outils à connecter. Le détail par type de projet est sur la page <a href="<?php echo esc_url( eb_url('tarifs') ); ?>">tarifs</a>.</p>
     </div>
 
     <div class="pillar-section">
@@ -295,8 +300,8 @@ if ( ! defined( 'ABSPATH' ) ) {
     <!-- CTA final -->
     <div class="pillar-final-cta">
       <h2>Voyons quels services de votre entreprise gagneraient le plus de temps</h2>
-      <p>Audit gratuit de 45 minutes, sans engagement.</p>
-      <a href="<?php echo esc_url( eb_url('audit') ); ?>" class="btn btn-primary">Identifier vos automatisations rentables <span>→</span></a>
+      <p>45 minutes pour cartographier, service par service, les automatisations les plus rentables pour votre entreprise.</p>
+      <a href="<?php echo esc_url( eb_url('audit') ); ?>" class="btn btn-primary">Cartographier mes automatisations <span>→</span></a>
     </div>
 
   </div>

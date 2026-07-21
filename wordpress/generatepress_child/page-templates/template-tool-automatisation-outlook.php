@@ -182,13 +182,13 @@ if ( ! defined( 'ABSPATH' ) ) {
     </div>
 
     <!-- tarif contextuel -->
-    <?php echo eb_price_teaser_html( 'Automatisation Outlook : le tri et la qualification d\'une boîte mail démarrent généralement <strong>autour de 800 à 1 200 €</strong>, selon le nombre de règles à mettre en place.' ); ?>
+    <?php echo eb_price_teaser_html( 'Automatisation Outlook : le tri et la qualification d\'une boîte mail démarrent généralement <strong>autour de 800 à 1 200 €</strong>, selon le nombre de règles à mettre en place.' ); ?>
 
     <!-- CTA final -->
     <div class="pillar-final-cta">
       <h2>Prêt à reprendre le contrôle de votre boîte mail ?</h2>
-      <p>Audit gratuit de 45 minutes, sans engagement.</p>
-      <a href="<?php echo esc_url( eb_url('audit') ); ?>" class="btn btn-primary">Réserver un audit gratuit <span>→</span></a>
+      <p>45 minutes pour savoir combien de temps votre boîte mail peut vous rendre chaque semaine.</p>
+      <a href="<?php echo esc_url( eb_url('audit') ); ?>" class="btn btn-primary">Reprendre le contrôle de ma boîte mail <span>→</span></a>
     </div>
 
   </div>

@@ -27,7 +27,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div class="pillar-hero">
       <div class="eyebrow pillar-hero__eyebrow">Automatisation CRM</div>
       <h1>Automatisation CRM : un pipeline commercial qui se met à jour tout seul</h1>
-      <p class="pillar-hero__intro">Un CRM PME ou CRM TPE (HubSpot, Salesforce…) ne vaut que si les données qu'il contient sont à jour. L'automatisation CRM connecte vos emails, formulaires et outils commerciaux pour que chaque contact, chaque étape du pipeline commercial et chaque relance se mette à jour automatiquement — sans ressaisie côté équipe commerciale.</p>
+      <p class="pillar-hero__intro">Un CRM PME ou CRM TPE (HubSpot, Salesforce…) ne vaut que si les données qu'il contient sont à jour. Le principe est simple : <strong>email ou formulaire → fiche CRM → tâche de relance</strong>, sans ressaisie côté équipe commerciale. Résultat : <strong>0 prospect oublié</strong> entre la première demande et la relance.</p>
       <div class="pillar-hero__actions">
         <a href="<?php echo esc_url( eb_url('audit') ); ?>" class="btn btn-primary">Identifier vos automatisations CRM <span>→</span></a>
         <a href="<?php echo esc_url( eb_url('solutions') ); ?>" class="btn btn-secondary">Voir toutes les solutions</a>
@@ -168,7 +168,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
     <!-- mid CTA -->
     <div class="pillar-mid-cta">
-      <p>Votre CRM affiche-t-il vraiment la réalité de votre activité commerciale ?</p>
+      <p>Email ou formulaire → CRM → relance : combien de prospects ce circuit vous fait-il gagner ?</p>
       <span class="pillar-mid-cta__connector" aria-hidden="true"></span>
       <a href="<?php echo esc_url( eb_url('audit') ); ?>" class="btn btn-primary">Réserver un audit gratuit <span>→</span></a>
     </div>
@@ -210,13 +210,13 @@ if ( ! defined( 'ABSPATH' ) ) {
     </div>
 
     <!-- tarif contextuel -->
-    <?php echo eb_price_teaser_html( 'Automatisation CRM : une première automatisation (relance, qualification) démarre généralement <strong>autour de 800 à 1 200 €</strong>.' ); ?>
+    <?php echo eb_price_teaser_html( 'Automatisation CRM : une première automatisation (relance, qualification) démarre généralement <strong>autour de 800 à 1 200 €</strong>.' ); ?>
 
     <!-- CTA final -->
     <div class="pillar-final-cta">
-      <h2>Combien d'opportunités votre CRM laisse-t-il passer aujourd'hui ?</h2>
-      <p>45 minutes suffisent pour identifier les automatisations CRM les plus rentables pour votre équipe commerciale.</p>
-      <a href="<?php echo esc_url( eb_url('audit') ); ?>" class="btn btn-primary">Réserver un audit gratuit <span>→</span></a>
+      <h2>0 prospect oublié : et si votre CRM fonctionnait vraiment comme ça ?</h2>
+      <p>En 45 minutes, on identifie ensemble où votre pipeline commercial perd le plus de temps.</p>
+      <a href="<?php echo esc_url( eb_url('audit') ); ?>" class="btn btn-primary">Auditer mon pipeline commercial <span>→</span></a>
     </div>
 
   </div>

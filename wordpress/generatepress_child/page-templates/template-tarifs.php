@@ -53,7 +53,7 @@ if ( ! defined( 'ABSPATH' ) ) {
         </div>
         <div class="pricing__price-row">
           <div class="pricing__price-label">À partir de</div>
-          <div class="pricing__price">800 €</div>
+          <div class="pricing__price">800 €</div>
         </div>
       </div>
 
@@ -69,7 +69,7 @@ if ( ! defined( 'ABSPATH' ) ) {
         </div>
         <div class="pricing__price-row">
           <div class="pricing__price-label">À partir de</div>
-          <div class="pricing__price">1 500 €</div>
+          <div class="pricing__price">1 500 €</div>
         </div>
       </div>
 
@@ -124,22 +124,22 @@ if ( ! defined( 'ABSPATH' ) ) {
       <div class="tarifs-example">
         <div class="tarifs-example__name">Relance automatique de devis</div>
         <div class="tarifs-example__desc">Un devis sans réponse relance automatiquement le prospect à J+3 et J+7, avec alerte si aucune réponse après la 2ᵉ relance.</div>
-        <div class="tarifs-example__price">≈ 800 – 1 200 €</div>
+        <div class="tarifs-example__price">≈ 800 – 1 200 €</div>
       </div>
       <div class="tarifs-example">
         <div class="tarifs-example__name">Extraction de données PDF (factures)</div>
         <div class="tarifs-example__desc">Lecture automatique des factures fournisseurs par OCR, génération d'un brouillon d'écriture comptable prêt à valider.</div>
-        <div class="tarifs-example__price">≈ 1 000 – 1 800 €</div>
+        <div class="tarifs-example__price">≈ 1 000 – 1 800 €</div>
       </div>
       <div class="tarifs-example">
         <div class="tarifs-example__name">Onboarding RH automatisé</div>
         <div class="tarifs-example__desc">Création de compte, envoi des documents contractuels et planning des premiers jours déclenchés automatiquement à la signature.</div>
-        <div class="tarifs-example__price">≈ 1 200 – 2 200 €</div>
+        <div class="tarifs-example__price">≈ 1 200 – 2 200 €</div>
       </div>
       <div class="tarifs-example">
         <div class="tarifs-example__name">Reporting automatique multi-outils</div>
         <div class="tarifs-example__desc">Tableau de bord alimenté automatiquement depuis plusieurs logiciels (CRM, comptabilité, ventes), mis à jour sans ressaisie.</div>
-        <div class="tarifs-example__price">≈ 1 500 – 3 000 €</div>
+        <div class="tarifs-example__price">≈ 1 500 – 3 000 €</div>
       </div>
     </div>
   </section>
@@ -170,16 +170,16 @@ if ( ! defined( 'ABSPATH' ) ) {
   <section class="section">
     <div class="tarifs-roi">
       <h2>À partir de combien d'heures gagnées c'est rentable ?</h2>
-      <p>Une automatisation à 800 € qui fait gagner <strong>2 heures par semaine</strong> est déjà amortie en quelques mois pour la plupart des TPE-PME. Le calcul se fait toujours sur le temps réellement récupéré, pas sur le prix affiché seul — c'est précisément ce que <a href="<?php echo esc_url( eb_url('audit') ); ?>" style="color:#fff;text-decoration:underline;">l'audit gratuit</a> permet de vérifier avant tout engagement, sur votre cas précis.</p>
+      <p>Une automatisation à 800 € qui fait gagner <strong>2 heures par semaine</strong> est déjà amortie en quelques mois pour la plupart des TPE-PME. Le calcul se fait toujours sur le temps réellement récupéré, pas sur le prix affiché seul — c'est précisément ce que <a href="<?php echo esc_url( eb_url('audit') ); ?>" style="color:#fff;text-decoration:underline;">l'audit gratuit</a> permet de vérifier avant tout engagement, sur votre cas précis.</p>
       <div class="tarifs-roi-table__wrap">
         <table class="tarifs-roi-table">
           <thead>
             <tr><th>Projet</th><th>Budget</th><th>Gain estimé</th><th>Rentabilité</th></tr>
           </thead>
           <tbody>
-            <tr><td>Relance devis</td><td>800 – 1 200 €</td><td>2h / semaine</td><td>quelques mois</td></tr>
-            <tr><td>Extraction PDF</td><td>1 000 – 1 800 €</td><td>10 min / facture</td><td>selon volume</td></tr>
-            <tr><td>Reporting</td><td>1 500 – 3 000 €</td><td>4 à 8h / mois</td><td>3 à 6 mois</td></tr>
+            <tr><td>Relance devis</td><td>800 – 1 200 €</td><td>2h / semaine</td><td>quelques mois</td></tr>
+            <tr><td>Extraction PDF</td><td>1 000 – 1 800 €</td><td>10 min / facture</td><td>selon volume</td></tr>
+            <tr><td>Reporting</td><td>1 500 – 3 000 €</td><td>4 à 8h / mois</td><td>3 à 6 mois</td></tr>
           </tbody>
         </table>
       </div>

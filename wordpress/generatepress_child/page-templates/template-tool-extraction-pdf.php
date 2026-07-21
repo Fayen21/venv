@@ -131,7 +131,7 @@ if ( ! defined( 'ABSPATH' ) ) {
       </div>
       <div class="pillar-faq__item">
         <h3>Combien coûte une automatisation d'extraction PDF ?</h3>
-        <p>Un cas d'usage ciblé (un type de document, une destination) démarre autour de 800 à 1 200€. Un projet couvrant plusieurs types de documents se chiffre après audit.</p>
+        <p>Un cas d'usage ciblé (un type de document, une destination) démarre autour de 800 à 1 200€. Un projet couvrant plusieurs types de documents se chiffre après audit.</p>
       </div>
       <div class="pillar-faq__item">
         <h3>Combien de temps pour la mettre en place ?</h3>
@@ -171,13 +171,13 @@ if ( ! defined( 'ABSPATH' ) ) {
     </div>
 
     <!-- tarif contextuel -->
-    <?php echo eb_price_teaser_html( 'Extraction de données PDF : un premier cas d\'usage démarre généralement <strong>autour de 800 à 1 200 €</strong>, selon la variété des documents à traiter.' ); ?>
+    <?php echo eb_price_teaser_html( 'Extraction de données PDF : un premier cas d\'usage démarre généralement <strong>autour de 800 à 1 200 €</strong>, selon la variété des documents à traiter.' ); ?>
 
     <!-- CTA final -->
     <div class="pillar-final-cta">
       <h2>Quel PDF recopiez-vous encore ligne par ligne ?</h2>
-      <p>Audit gratuit de 45 minutes, sans engagement.</p>
-      <a href="<?php echo esc_url( eb_url('audit') ); ?>" class="btn btn-primary">Réserver un audit gratuit <span>→</span></a>
+      <p>45 minutes pour savoir combien de temps l'extraction automatique de vos PDF peut vous faire gagner.</p>
+      <a href="<?php echo esc_url( eb_url('audit') ); ?>" class="btn btn-primary">Estimer mon gain sur mes PDF <span>→</span></a>
     </div>
 
   </div>

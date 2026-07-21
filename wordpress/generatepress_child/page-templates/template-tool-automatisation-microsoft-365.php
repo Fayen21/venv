@@ -77,6 +77,11 @@ if ( ! defined( 'ABSPATH' ) ) {
       </div>
     </div>
 
+    <!-- avis clients -->
+    <div style="max-width:480px;margin:0 auto 56px;">
+      <?php echo eb_mini_review_html( 2 ); ?>
+    </div>
+
     <!-- cas d'usage -->
     <div class="pillar-usecases">
       <h2>Cas d'usage concrets</h2>
@@ -131,7 +136,7 @@ if ( ! defined( 'ABSPATH' ) ) {
       </div>
       <div class="pillar-faq__item">
         <h3>Combien coûte une automatisation Microsoft 365 ?</h3>
-        <p>Les automatisations simples démarrent autour de 800€. Un projet reliant plusieurs applications de la suite à un outil tiers se chiffre après audit, entre 1 500€ et plusieurs milliers d'euros.</p>
+        <p>Les automatisations simples démarrent autour de 800€. Un projet reliant plusieurs applications de la suite à un outil tiers se chiffre après audit, entre 1 500€ et plusieurs milliers d'euros.</p>
       </div>
       <div class="pillar-faq__item">
         <h3>Faut-il des droits d'administrateur pour mettre en place ces automatisations ?</h3>
@@ -174,8 +179,8 @@ if ( ! defined( 'ABSPATH' ) ) {
     <!-- CTA final -->
     <div class="pillar-final-cta">
       <h2>Exploitons ensemble le potentiel de votre suite Microsoft 365</h2>
-      <p>Audit gratuit de 45 minutes, sans engagement.</p>
-      <a href="<?php echo esc_url( eb_url('audit') ); ?>" class="btn btn-primary">Réserver un audit gratuit <span>→</span></a>
+      <p>45 minutes pour repérer ce qui, dans votre suite Microsoft 365, pourrait déjà tourner tout seul.</p>
+      <a href="<?php echo esc_url( eb_url('audit') ); ?>" class="btn btn-primary">Explorer mon potentiel M365 <span>→</span></a>
     </div>
 
   </div>

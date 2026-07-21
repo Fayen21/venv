@@ -61,6 +61,11 @@ if ( ! defined( 'ABSPATH' ) ) {
       </div>
     </div>
 
+    <!-- avis clients -->
+    <div style="max-width:480px;margin:0 auto 56px;">
+      <?php echo eb_mini_review_html( 0 ); ?>
+    </div>
+
     <!-- cas d'usage -->
     <div class="pillar-usecases">
       <h2>Cas d'usage concrets</h2>
@@ -134,7 +139,7 @@ if ( ! defined( 'ABSPATH' ) ) {
       </div>
       <div class="pillar-faq__item">
         <h3>Combien coûte une automatisation OCR ?</h3>
-        <p>Un premier cas d'usage ciblé (un type de document) démarre autour de 1 000 à 1 500€. Un projet couvrant plusieurs types de documents et davantage de règles se chiffre après audit.</p>
+        <p>Un premier cas d'usage ciblé (un type de document) démarre autour de 1 000 à 1 500€. Un projet couvrant plusieurs types de documents et davantage de règles se chiffre après audit.</p>
       </div>
       <div class="pillar-faq__item">
         <h3>Combien de temps pour mettre en place une lecture OCR ?</h3>
@@ -176,8 +181,8 @@ if ( ! defined( 'ABSPATH' ) ) {
     <!-- CTA final -->
     <div class="pillar-final-cta">
       <h2>Quel document papier ou PDF vous fait encore perdre du temps ?</h2>
-      <p>Audit gratuit de 45 minutes, sans engagement.</p>
-      <a href="<?php echo esc_url( eb_url('audit') ); ?>" class="btn btn-primary">Réserver un audit gratuit <span>→</span></a>
+      <p>45 minutes pour savoir combien de temps la lecture automatique de vos documents peut vous rendre.</p>
+      <a href="<?php echo esc_url( eb_url('audit') ); ?>" class="btn btn-primary">Estimer mon gain avec l'OCR <span>→</span></a>
     </div>
 
   </div>

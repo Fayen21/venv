@@ -72,15 +72,20 @@ if ( ! defined( 'ABSPATH' ) ) {
       </div>
     </div>
 
+    <!-- avis clients -->
+    <div style="max-width:480px;margin:0 auto 56px;">
+      <?php echo eb_mini_review_html( 0 ); ?>
+    </div>
+
     <!-- exemples concrets -->
     <div class="pillar-usecases">
       <h2>Exemples concrets</h2>
       <div class="pillar-usecases__grid">
         <div class="pillar-usecase">
           <div class="pillar-usecase__icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"></circle><path d="M4 20a8 8 0 0 1 16 0"></path></svg></div>
-          <h3>Prospection LinkedIn automatisée</h3>
-          <p>Recherche de contacts selon vos critères (secteur, taille, fonction), premier message personnalisé envoyé automatiquement.</p>
-          <div class="pillar-usecase__gain">3× plus de contacts engagés</div>
+          <h3>Ciblage LinkedIn qualifié</h3>
+          <p>Recherche de contacts selon vos critères précis (secteur, taille, fonction), premier message personnalisé envoyé automatiquement — pas d'envoi de masse.</p>
+          <div class="pillar-usecase__gain">3× plus de réponses qualifiées</div>
         </div>
         <div class="pillar-usecase">
           <div class="pillar-usecase__icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M4 6.5l8 6 8-6"></path></svg></div>
@@ -192,8 +197,8 @@ if ( ! defined( 'ABSPATH' ) ) {
     <!-- CTA final -->
     <div class="pillar-final-cta">
       <h2>Votre génération de leads B2B laisse-t-elle des opportunités de côté ?</h2>
-      <p>45 minutes suffisent pour identifier les automatisations de prospection les plus rentables pour votre activité.</p>
-      <a href="<?php echo esc_url( eb_url('audit') ); ?>" class="btn btn-primary">Réserver un audit gratuit <span>→</span></a>
+      <p>45 minutes pour voir où, dans votre suivi commercial, les leads se perdent aujourd'hui.</p>
+      <a href="<?php echo esc_url( eb_url('audit') ); ?>" class="btn btn-primary">Auditer mon suivi commercial <span>→</span></a>
     </div>
 
   </div>

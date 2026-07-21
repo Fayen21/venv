@@ -72,6 +72,11 @@ if ( ! defined( 'ABSPATH' ) ) {
       </div>
     </div>
 
+    <!-- avis clients -->
+    <div style="max-width:480px;margin:0 auto 56px;">
+      <?php echo eb_mini_review_html( 1 ); ?>
+    </div>
+
     <!-- exemples concrets -->
     <div class="pillar-usecases">
       <h2>Exemples concrets</h2>
@@ -194,8 +199,8 @@ if ( ! defined( 'ABSPATH' ) ) {
     <!-- CTA final -->
     <div class="pillar-final-cta">
       <h2>Quelle tâche documentaire pourrait être prise en charge par un robot logiciel ?</h2>
-      <p>45 minutes suffisent pour identifier les automatisations RPA les plus rentables pour votre activité.</p>
-      <a href="<?php echo esc_url( eb_url('audit') ); ?>" class="btn btn-primary">Réserver un audit gratuit <span>→</span></a>
+      <p>45 minutes pour repérer les tâches documentaires les plus faciles à déléguer à un robot logiciel.</p>
+      <a href="<?php echo esc_url( eb_url('audit') ); ?>" class="btn btn-primary">Identifier mes automatisations RPA <span>→</span></a>
     </div>
 
   </div>

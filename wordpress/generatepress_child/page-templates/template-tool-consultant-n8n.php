@@ -66,6 +66,11 @@ if ( ! defined( 'ABSPATH' ) ) {
       <p>Le choix ne dépend jamais d'une préférence personnelle mais du projet : pour une automatisation métier standard, avec des connecteurs déjà disponibles, <a href="<?php echo esc_url( eb_url('consultant-make') ); ?>">Make</a> permet une mise en place plus rapide et une prise en main plus simple pour vos équipes. Pour un besoin d'hébergement spécifique, une API non standard ou une volumétrie importante, n8n devient le meilleur choix. Ce choix est posé et argumenté dès l'audit, avant tout engagement.</p>
     </div>
 
+    <!-- avis clients -->
+    <div style="max-width:480px;margin:0 auto 56px;">
+      <?php echo eb_mini_review_html( 2 ); ?>
+    </div>
+
     <!-- cas d'usage -->
     <div class="pillar-usecases">
       <h2>Cas d'usage concrets réalisés avec n8n</h2>
@@ -129,7 +134,7 @@ if ( ! defined( 'ABSPATH' ) ) {
       </div>
       <div class="pillar-faq__item">
         <h3>Combien coûte une mission de consultant n8n ?</h3>
-        <p>Les workflows standards démarrent autour de 1 000 à 1 500€, un peu au-dessus de Make du fait de la complexité technique. Les projets avec hébergement dédié ou API sur mesure sont chiffrés après audit.</p>
+        <p>Les workflows standards démarrent autour de 1 000 à 1 500€, un peu au-dessus de Make du fait de la complexité technique. Les projets avec hébergement dédié ou API sur mesure sont chiffrés après audit.</p>
       </div>
       <div class="pillar-faq__item">
         <h3>Puis-je faire évoluer le workflow moi-même après la livraison ?</h3>
@@ -172,7 +177,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div class="pillar-final-cta">
       <h2>Un projet technique qui dépasse les outils no-code classiques ?</h2>
       <p>Audit gratuit de 45 minutes pour évaluer la meilleure approche.</p>
-      <a href="<?php echo esc_url( eb_url('audit') ); ?>" class="btn btn-primary">Réserver un audit gratuit <span>→</span></a>
+      <a href="<?php echo esc_url( eb_url('audit') ); ?>" class="btn btn-primary">Évaluer la meilleure approche <span>→</span></a>
     </div>
 
   </div>

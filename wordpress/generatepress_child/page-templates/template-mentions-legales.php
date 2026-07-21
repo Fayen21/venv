@@ -19,8 +19,8 @@ if ( ! defined( 'ABSPATH' ) ) {
       <p>Le site eb-automatisation.fr est édité par :</p>
       <p>Emmanuel Brançon, entreprise individuelle<br>
       Activité : Programmation informatique (code APE/NAF 6201Z)<br>
-      SIRET : 106 501 141 00019<br>
-      SIREN : 106 501 141<br>
+      SIRET : 106 501 141 00019<br>
+      SIREN : 106 501 141<br>
       RCS Dijon<br>
       Date d'immatriculation : 18 juin 2026<br>
       Siège social : 650D Route de Gray, 21850 Saint-Apollinaire<br>

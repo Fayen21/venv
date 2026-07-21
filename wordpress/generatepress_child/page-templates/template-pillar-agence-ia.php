@@ -60,6 +60,11 @@ if ( ! defined( 'ABSPATH' ) ) {
       </div>
     </div>
 
+    <!-- avis clients -->
+    <div style="max-width:480px;margin:0 auto 56px;">
+      <?php echo eb_mini_review_html( 1 ); ?>
+    </div>
+
     <!-- comparatif -->
     <div class="pillar-table">
       <h2>Agence IA ou consultant indépendant : le comparatif</h2>
@@ -148,7 +153,7 @@ if ( ! defined( 'ABSPATH' ) ) {
       </div>
       <div class="pillar-faq__item">
         <h3>Quels sont vos tarifs comparés à une agence ?</h3>
-        <p>Les premières automatisations démarrent autour de 800€, une automatisation métier complète autour de 1 500€, les projets sur mesure sont chiffrés après audit. Sans structure commerciale à financer, les coûts restent nettement inférieurs à ceux d'une agence pour un périmètre équivalent.</p>
+        <p>Les premières automatisations démarrent autour de 800€, une automatisation métier complète autour de 1 500€, les projets sur mesure sont chiffrés après audit. Sans structure commerciale à financer, les coûts restent nettement inférieurs à ceux d'une agence pour un périmètre équivalent.</p>
       </div>
       <div class="pillar-faq__item">
         <h3>Comment se passe la collaboration au quotidien ?</h3>
@@ -174,7 +179,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div class="pillar-final-cta">
       <h2>Parlons de votre projet, sans structure ni intermédiaire</h2>
       <p>45 minutes suffisent pour savoir si un consultant indépendant est le bon format pour vous.</p>
-      <a href="<?php echo esc_url( eb_url('audit') ); ?>" class="btn btn-primary">Réserver un audit gratuit <span>→</span></a>
+      <a href="<?php echo esc_url( eb_url('audit') ); ?>" class="btn btn-primary">Échanger sur mon projet <span>→</span></a>
     </div>
 
   </div>

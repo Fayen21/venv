@@ -193,10 +193,10 @@
 .hero-left__actions{ display:flex; gap:12px; flex-wrap:wrap; margin-top:28px; }
 .hero-left__actions .btn-primary{ padding:15px 26px; font-size:15.5px; box-shadow:0 14px 30px -14px rgba(221,122,51,.7); }
 .hero-left__reassurance{ margin-top:22px; }
-/* max-width aligné sur .hero-left h1 (820px) : sans cette limite, le badge
-   se centre sur toute la largeur du hero (jusque sous l'illustration réseau
-   à droite) au lieu de se centrer sous le bloc de texte/bouton visible. */
-.hero-left__reviews{ margin-top:22px; max-width:820px; text-align:center; }
+/* aligné à gauche comme le reste du bloc (titre, texte, bouton, pastille) :
+   le centrer dans une colonne plus large que le texte visible le faisait
+   flotter, déconnecté, du côté droit du hero. */
+.hero-left__reviews{ margin-top:22px; }
 @media (max-width:640px){
   .hero-left{ padding:48px 20px 30px; text-align:center; }
   .hero-left h1{ font-size:32px; line-height:1.14; margin-left:auto; margin-right:auto; }
@@ -232,7 +232,7 @@
 .tool-chip-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; }
 .tool-chip-grid--home{ max-width:960px; margin:0 auto; }
 .tool-chip-grid__note{
-  font-size:13.5px; color:var(--text-3); line-height:1.5; margin:16px 0 0;
+  font-size:13.5px; color:var(--text-3); line-height:1.5; margin:16px 0 0; text-align:center;
   background:var(--bg-soft-2); border:1px solid var(--border-2); border-radius:11px; padding:13px 18px;
 }
 .tool-chip-grid__note strong{ color:var(--navy); }

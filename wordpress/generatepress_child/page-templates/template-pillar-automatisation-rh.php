@@ -196,13 +196,13 @@ if ( ! defined( 'ABSPATH' ) ) {
     </div>
 
     <!-- tarif contextuel -->
-    <?php echo eb_price_teaser_html( 'Automatisation RH : les premiers scénarios démarrent généralement <strong>autour de 1 000 à 1 500 €</strong>, selon les outils à connecter.' ); ?>
+    <?php echo eb_price_teaser_html( 'Automatisation RH : les premiers scénarios démarrent généralement <strong>autour de 1 000 à 1 500 €</strong>, selon les outils à connecter.' ); ?>
 
     <!-- CTA final -->
     <div class="pillar-final-cta">
       <h2>Combien de temps votre gestion RH pourrait-elle vous faire gagner ?</h2>
-      <p>45 minutes suffisent pour identifier les automatisations RH les plus rentables pour votre équipe.</p>
-      <a href="<?php echo esc_url( eb_url('audit') ); ?>" class="btn btn-primary">Réserver un audit gratuit <span>→</span></a>
+      <p>En 45 minutes, on repère ensemble les tâches RH qui gagneraient le plus à être automatisées.</p>
+      <a href="<?php echo esc_url( eb_url('audit') ); ?>" class="btn btn-primary">Auditer ma gestion RH <span>→</span></a>
     </div>
 
   </div>

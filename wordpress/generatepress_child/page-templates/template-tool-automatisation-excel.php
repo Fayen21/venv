@@ -55,6 +55,11 @@ if ( ! defined( 'ABSPATH' ) ) {
       </div>
     </div>
 
+    <!-- avis clients -->
+    <div style="max-width:480px;margin:0 auto 56px;">
+      <?php echo eb_mini_review_html( 0 ); ?>
+    </div>
+
     <div class="pillar-section">
       <h2>Ce qui reste manuel — et pourquoi c'est un choix</h2>
       <p>L'automatisation Excel ne remplace pas votre jugement sur les chiffres : elle vous évite la collecte et la ressaisie qui précèdent l'analyse. Les décisions, arbitrages et corrections restent de votre ressort. C'est une différence importante avec l'idée reçue selon laquelle « automatiser Excel » signifierait le rendre incontrôlable ou opaque — au contraire, <strong>un fichier alimenté automatiquement selon des règles documentées est souvent plus fiable</strong> qu'un fichier mis à jour à la main.</p>
@@ -192,11 +197,14 @@ if ( ! defined( 'ABSPATH' ) ) {
       </div>
     </div>
 
+    <!-- tarif contextuel -->
+    <?php echo eb_price_teaser_html( 'Automatisation Excel : un premier tableau alimenté automatiquement démarre généralement <strong>autour de 800 €</strong>, selon le nombre de sources à connecter.' ); ?>
+
     <!-- CTA final -->
     <div class="pillar-final-cta">
       <h2>Quel fichier Excel vous prend encore le plus de temps ?</h2>
-      <p>Audit gratuit de 45 minutes, sans engagement.</p>
-      <a href="<?php echo esc_url( eb_url('audit') ); ?>" class="btn btn-primary">Réserver un audit gratuit <span>→</span></a>
+      <p>45 minutes pour repérer les fichiers Excel qui gagneraient à se remplir tout seuls.</p>
+      <a href="<?php echo esc_url( eb_url('audit') ); ?>" class="btn btn-primary">Fiabiliser mon fichier Excel <span>→</span></a>
     </div>
 
   </div>

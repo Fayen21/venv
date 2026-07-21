@@ -200,13 +200,13 @@ if ( ! defined( 'ABSPATH' ) ) {
     </div>
 
     <!-- tarif contextuel -->
-    <?php echo eb_price_teaser_html( 'Automatisation comptable : les premiers scénarios démarrent généralement <strong>autour de 900 à 1 500 €</strong>, selon le nombre de flux à connecter.' ); ?>
+    <?php echo eb_price_teaser_html( 'Automatisation comptable : les premiers scénarios démarrent généralement <strong>autour de 900 à 1 500 €</strong>, selon le nombre de flux à connecter.' ); ?>
 
     <!-- CTA final -->
     <div class="pillar-final-cta">
       <h2>Combien de temps votre comptabilité pourrait-elle vous faire gagner ?</h2>
-      <p>45 minutes suffisent pour identifier les automatisations comptables les plus rentables pour votre activité.</p>
-      <a href="<?php echo esc_url( eb_url('audit') ); ?>" class="btn btn-primary">Réserver un audit gratuit <span>→</span></a>
+      <p>En 45 minutes, vous saurez précisément quels flux comptables valent la peine d'être automatisés.</p>
+      <a href="<?php echo esc_url( eb_url('audit') ); ?>" class="btn btn-primary">Estimer mon gain comptable <span>→</span></a>
     </div>
 
   </div>

@@ -79,6 +79,11 @@ if ( ! defined( 'ABSPATH' ) ) {
       <p style="font-size:14.5px;color:var(--text-3);margin-top:14px;">Voir aussi le détail de l'accompagnement <a href="<?php echo esc_url( eb_url('consultant-n8n') ); ?>">consultant n8n</a> pour comparer les deux approches selon votre projet.</p>
     </div>
 
+    <!-- avis clients -->
+    <div style="max-width:480px;margin:0 auto 56px;">
+      <?php echo eb_mini_review_html( 1 ); ?>
+    </div>
+
     <!-- cas d'usage -->
     <div class="pillar-usecases">
       <h2>Cas d'usage concrets réalisés avec Make</h2>
@@ -142,7 +147,7 @@ if ( ! defined( 'ABSPATH' ) ) {
       </div>
       <div class="pillar-faq__item">
         <h3>Combien coûte une mission de consultant Make ?</h3>
-        <p>Les scénarios simples démarrent autour de 800€. Les projets combinant plusieurs outils et de l'intelligence artificielle se chiffrent après audit, généralement entre 1 500€ et plusieurs milliers d'euros.</p>
+        <p>Les scénarios simples démarrent autour de 800€. Les projets combinant plusieurs outils et de l'intelligence artificielle se chiffrent après audit, généralement entre 1 500€ et plusieurs milliers d'euros.</p>
       </div>
       <div class="pillar-faq__item">
         <h3>Puis-je modifier moi-même le scénario une fois livré ?</h3>
@@ -185,8 +190,8 @@ if ( ! defined( 'ABSPATH' ) ) {
     <!-- CTA final -->
     <div class="pillar-final-cta">
       <h2>Voyons ensemble ce que Make peut automatiser chez vous</h2>
-      <p>Audit gratuit de 45 minutes, sans jargon ni promesse en l'air.</p>
-      <a href="<?php echo esc_url( eb_url('audit') ); ?>" class="btn btn-primary">Réserver un audit gratuit <span>→</span></a>
+      <p>45 minutes pour cadrer précisément ce qu'un scénario Make peut prendre en charge chez vous.</p>
+      <a href="<?php echo esc_url( eb_url('audit') ); ?>" class="btn btn-primary">Discuter de mon scénario Make <span>→</span></a>
     </div>
 
   </div>

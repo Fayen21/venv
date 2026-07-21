@@ -17,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div style="margin-top:32px;color:var(--text-2);font-size:16px;line-height:1.7;">
 
       <h2 style="font-size:22px;margin-top:36px;margin-bottom:14px;">1. Responsable du traitement</h2>
-      <p>Le responsable du traitement des données collectées sur ce site est Emmanuel Brançon, entreprise individuelle, SIRET 106 501 141 00019, 650D Route de Gray, 21850 Saint-Apollinaire, contactable à <a href="mailto:contact@eb-automatisation.fr">contact@eb-automatisation.fr</a>.</p>
+      <p>Le responsable du traitement des données collectées sur ce site est Emmanuel Brançon, entreprise individuelle, SIRET 106 501 141 00019, 650D Route de Gray, 21850 Saint-Apollinaire, contactable à <a href="mailto:contact@eb-automatisation.fr">contact@eb-automatisation.fr</a>.</p>
 
       <h2 style="font-size:22px;margin-top:36px;margin-bottom:14px;">2. Données collectées</h2>
       <p>Le seul formulaire de collecte de données présent sur ce site est celui de la page <a href="<?php echo esc_url( eb_url( 'audit' ) ); ?>">Audit gratuit</a>. Il recueille : prénom, nom (facultatif), entreprise (facultatif), email, téléphone (facultatif), et la description de votre besoin.</p>

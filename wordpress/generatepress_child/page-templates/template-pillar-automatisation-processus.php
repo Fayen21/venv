@@ -65,6 +65,11 @@ if ( ! defined( 'ABSPATH' ) ) {
       </div>
     </div>
 
+    <!-- avis clients -->
+    <div style="max-width:480px;margin:0 auto 56px;">
+      <?php echo eb_mini_review_html( 1 ); ?>
+    </div>
+
     <div class="pillar-section">
       <h2>Les outils utilisés pour orchestrer un processus</h2>
       <p><a href="<?php echo esc_url( eb_url('consultant-make') ); ?>">Make</a> et <a href="<?php echo esc_url( eb_url('consultant-n8n') ); ?>">n8n</a> servent de chef d'orchestre : ils relient vos logiciels via leurs API, déclenchent les étapes dans le bon ordre et gèrent les cas d'exception. Python intervient pour les traitements plus spécifiques. Ce workflow reste lisible de bout en bout : sur les étapes qui nécessitent un jugement humain — validation d'une dépense inhabituelle, décision commerciale — <strong>le processus s'arrête et attend une action</strong>, plutôt que de forcer une automatisation complète là où elle n'a pas sa place.</p>
@@ -127,7 +132,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
     <div class="pillar-section">
       <h2>Combien coûte l'automatisation d'un processus</h2>
-      <p>Le coût dépend directement du nombre d'outils reliés et du nombre de branches conditionnelles à gérer. Un processus simple à deux étapes (par exemple devis puis relance automatique) démarre autour de 800 à 1 200€. Un processus plus complet, impliquant trois à quatre outils et plusieurs points de décision — un onboarding RH complet ou un cycle achat-facture-paiement — se situe généralement entre 1 500€ et 3 000€. Les processus les plus complexes, avec de nombreuses exceptions ou une intégration à un logiciel métier spécifique, sont chiffrés au cas par cas après l'audit.</p>
+      <p>Le coût dépend directement du nombre d'outils reliés et du nombre de branches conditionnelles à gérer. Un processus simple à deux étapes (par exemple devis puis relance automatique) démarre autour de 800 à 1 200€. Un processus plus complet, impliquant trois à quatre outils et plusieurs points de décision — un onboarding RH complet ou un cycle achat-facture-paiement — se situe généralement entre 1 500€ et 3 000€. Les processus les plus complexes, avec de nombreuses exceptions ou une intégration à un logiciel métier spécifique, sont chiffrés au cas par cas après l'audit.</p>
       <p>Dans tous les cas, le chiffrage est communiqué avant tout engagement, avec une estimation du gain de temps attendu pour évaluer le retour sur investissement réel avant de démarrer.</p>
     </div>
 
@@ -256,7 +261,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div class="pillar-final-cta">
       <h2>Cartographions ensemble votre processus le plus chronophage</h2>
       <p>Audit gratuit de 45 minutes, pistes concrètes et chiffrées à la clé.</p>
-      <a href="<?php echo esc_url( eb_url('audit') ); ?>" class="btn btn-primary">Réserver un audit gratuit <span>→</span></a>
+      <a href="<?php echo esc_url( eb_url('audit') ); ?>" class="btn btn-primary">Cartographier mon processus <span>→</span></a>
     </div>
 
   </div>

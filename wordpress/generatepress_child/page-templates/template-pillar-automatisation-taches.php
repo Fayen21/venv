@@ -81,6 +81,11 @@ if ( ! defined( 'ABSPATH' ) ) {
       </div>
     </div>
 
+    <!-- avis clients -->
+    <div style="max-width:480px;margin:0 auto 56px;">
+      <?php echo eb_mini_review_html( 2 ); ?>
+    </div>
+
     <!-- cas d'usage -->
     <div class="pillar-usecases">
       <h2>Cas d'usage concrets</h2>
@@ -167,7 +172,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div class="pillar-final-cta">
       <h2>Quelle tâche vous fait perdre le plus de temps chaque semaine ?</h2>
       <p>45 minutes suffisent pour le savoir, sans engagement.</p>
-      <a href="<?php echo esc_url( eb_url('audit') ); ?>" class="btn btn-primary">Réserver un audit gratuit <span>→</span></a>
+      <a href="<?php echo esc_url( eb_url('audit') ); ?>" class="btn btn-primary">Identifier la tâche à automatiser <span>→</span></a>
     </div>
 
   </div>
