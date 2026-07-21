@@ -1265,6 +1265,35 @@ function eb_document_title( $title ) {
 add_filter( 'pre_get_document_title', 'eb_document_title' );
 
 /**
+ * header.php précharge déjà schibsted-grotesk-600 (H1/H2/H3) et
+ * hanken-grotesk-400 (corps de texte), mais deux graisses réellement
+ * utilisées au-dessus de la ligne de flottaison de l'accueil n'y sont pas :
+ * Hanken Grotesk 700 (.hero__eyebrow — la ligne au-dessus du H1, tout en haut
+ * du bloc) et Schibsted Grotesk 700 (le score "5,0" du badge avis Google).
+ * Vérifié via getComputedStyle() sur le rendu réel, pas une supposition.
+ * Avec font-display:optional, si l'un de ces fichiers n'est pas prêt avant
+ * le tout premier rendu, la police de secours s'applique — jamais de
+ * bascule tardive, donc pas de décalage à cause de CE fichier isolément.
+ * Mais l'eyebrow est le tout premier élément du bloc de texte, et .hero
+ * centre ses deux colonnes verticalement (align-items:center) : un écart de
+ * métriques change sa hauteur (nombre de lignes), donc la hauteur totale de
+ * la colonne, donc son recentrage — et par ricochet la position de tout ce
+ * qui suit en dessous (pastille de réassurance, badge). Le score du badge,
+ * lui, décale directement sa propre pastille via son text-align:center. Ces
+ * deux fichiers n'étant précédemment jamais préchargés, leur disponibilité
+ * avant le premier rendu dépendait du hasard du réseau — d'où un CLS
+ * variable d'un chargement à l'autre, précisément sur les deux éléments que
+ * PageSpeed Insights signale.
+ */
+function eb_preload_critical_fonts() {
+	$fonts = array( 'hanken-grotesk-700.woff2', 'schibsted-grotesk-700.woff2' );
+	foreach ( $fonts as $font ) {
+		echo '<link rel="preload" href="' . esc_url( EB_THEME_URI . '/assets/fonts/' . $font ) . '" as="font" type="font/woff2" crossorigin>' . "\n";
+	}
+}
+add_action( 'wp_head', 'eb_preload_critical_fonts', 0 );
+
+/**
  * Injecte meta description / OG / Twitter / canonical / JSON-LD dans <head>.
  * Rien de tout cela n'est fourni par GeneratePress ou par WordPress core :
  * aucun conflit possible, pas besoin de désactiver quoi que ce soit ici.
