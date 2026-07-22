@@ -72,6 +72,7 @@ $eb_is_pillar = eb_is_pillar_page( $eb_current );
           </a>
         </div>
       </div>
+      <a href="<?php echo esc_url( eb_url( 'tarifs' ) ); ?>" class="site-nav__link<?php echo ( 'tarifs' === $eb_current ) ? ' is-active' : ''; ?>">Tarifs</a>
       <a href="<?php echo esc_url( eb_url( 'audit' ) ); ?>" class="nav-cta">Audit gratuit <span aria-hidden="true">→</span></a>
     </nav>
   </div>

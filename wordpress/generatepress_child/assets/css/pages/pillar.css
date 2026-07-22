@@ -227,6 +227,15 @@
   .pillar-hero__actions{ flex-direction:column; align-items:stretch; gap:12px; margin-top:24px; }
   .pillar-hero__actions .btn-primary,.pillar-hero__actions .btn-secondary{ width:100%; justify-content:center; }
   .pillar-hero__actions .btn-secondary{ padding:14px 22px; }
+  /* .pillar-mock est une image SVG statique (texte figé dans le viewBox
+     800×258) : à cette largeur elle est ramenée à ~350px de large, donc son
+     texte interne (15.5px/12.5px d'origine) devient ~6-7px — illisible, avec
+     un grand vide apparent entre le libellé à gauche et le badge à droite
+     puisque l'un et l'autre rétrécissent au même rythme que l'espace entre
+     eux. Contrairement à .pillar-flow (HTML/CSS, déjà adapté), le texte est
+     ici gravé dans l'image et ne peut pas se réorganiser : on la masque sur
+     mobile plutôt que de laisser un contenu illisible. */
+  .pillar-mock{ display:none; }
   .pillar-mid-cta{ padding:28px 22px; flex-direction:column; text-align:center; }
   .pillar-mid-cta .btn-primary{ width:100%; justify-content:center; }
   .pillar-mid-cta__connector{ flex:none; width:28px; min-width:0; max-width:none; margin:4px auto; transform:rotate(90deg); }

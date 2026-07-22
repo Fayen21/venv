@@ -4,6 +4,17 @@
 .case-study{ background:#fff; border:1px solid var(--border-2); border-radius:22px; overflow:hidden; }
 .case-study__grid{ display:grid; grid-template-columns:1.1fr .9fr; }
 .case-study__body{ padding:48px; }
+/* le cas "Onboarding RH" est le seul à coupler .case-study__body avec le
+   panneau .case-study__side "stats" (pas --terminal), qui lui est centré
+   verticalement (justify-content:center) — sans le même centrage côté texte,
+   son contenu (plus court que la colonne stats) s'arrête en haut en laissant
+   un grand vide blanc en bas, pendant que la colonne sombre reste pleine :
+   décalage visuel entre les deux colonnes. On ne centre le texte que dans ce
+   cas précis, pour ne pas toucher les 5 autres cartes (side--terminal reste
+   volontairement calé en haut, comme une fenêtre d'appli). */
+.case-study__body:has(+ .case-study__side:not(.case-study__side--terminal)){
+  display:flex; flex-direction:column; justify-content:center;
+}
 .case-study__tag{ display:inline-flex; align-items:center; gap:8px; font-size:12.5px; font-weight:600; padding:6px 12px; border-radius:20px; margin-bottom:22px; }
 .case-study__body h2{ font-size:30px; letter-spacing:-.02em; margin:0 0 22px; line-height:1.2; }
 .case-study__block{ margin-bottom:22px; }
