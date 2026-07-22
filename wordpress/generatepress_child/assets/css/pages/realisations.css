@@ -118,7 +118,7 @@
 .control-card{ background:#fff; border:1px solid var(--border-2); border-radius:16px; padding:28px; transition:box-shadow .2s ease, border-color .2s ease, transform .2s ease; }
 .control-card:hover{ border-color:var(--green); box-shadow:0 0 0 1px rgba(30,142,90,.18), 0 20px 40px -22px rgba(30,142,90,.35); transform:translateY(-3px); }
 .control-card:hover .control-card__icon{ box-shadow:0 0 0 1px rgba(30,142,90,.4), 0 0 24px rgba(30,142,90,.6); }
-.control-card__icon{ width:44px; height:44px; border-radius:12px; background:var(--navy-panel); border:1px solid var(--green); color:var(--green-bright); display:flex; align-items:center; justify-content:center; margin-bottom:16px; box-shadow:0 0 0 1px rgba(30,142,90,.25), 0 0 16px rgba(30,142,90,.35); }
+.control-card__icon{ width:44px; height:44px; border-radius:12px; background:var(--navy-gradient); border:1px solid var(--green); color:var(--green-bright); display:flex; align-items:center; justify-content:center; margin-bottom:16px; box-shadow:0 0 0 1px rgba(30,142,90,.25), 0 0 16px rgba(30,142,90,.35); }
 .control-card h3{ font-size:17px; margin:0 0 7px; }
 .control-card p{ font-size:14px; line-height:1.55; color:var(--text-3); margin:0; }
 
@@ -131,21 +131,14 @@
 /* puces d'outils : voir .tool-chip-grid / .tool-chip dans components.css */
 
 /* ============ FAQ (même motif que solutions.css/pillar.css) ============ */
-.faq-grid{ display:grid; grid-template-columns:1fr 1fr; gap:18px 40px; }
+.faq-grid{ display:grid; grid-template-columns:1fr 1fr; gap:14px 28px; }
 .faq-item{
-  background:#fff; border:1px solid var(--border-2); border-radius:16px; padding:26px 28px;
+  background:#fff; border:1px solid var(--border-2); border-radius:14px; padding:22px 24px;
   transition:box-shadow .2s ease, border-color .2s ease;
 }
 .faq-item:hover{ border-color:var(--blue-2); box-shadow:0 0 0 1px rgba(46,155,255,.15), 0 14px 30px -18px rgba(30,95,208,.4); }
-.faq-item h3{ font-size:17px; margin:0 0 9px; padding-left:36px; position:relative; }
-.faq-item h3::before{
-  content:"?"; position:absolute; left:0; top:-2px; width:26px; height:26px; border-radius:8px;
-  background:var(--navy-panel); border:1px solid var(--orange); color:var(--orange);
-  display:flex; align-items:center; justify-content:center;
-  font-family:var(--font-heading); font-weight:700; font-size:14px;
-  box-shadow:0 0 0 1px rgba(221,122,51,.22), 0 0 12px rgba(221,122,51,.3);
-}
-.faq-item p{ font-size:15px; line-height:1.6; color:var(--text-3); margin:0; }
+.faq-item h3{ font-size:16.5px; margin:0 0 8px; }
+.faq-item p{ font-size:14.5px; line-height:1.58; color:var(--text-3); margin:0; }
 
 /* ==================== responsive — miroir du retrofit 900px du prototype ==================== */
 @media (max-width:900px){

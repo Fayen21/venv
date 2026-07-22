@@ -2,7 +2,7 @@
 
 /* ============ nos expertises (3 piliers + spécialisations) ============ */
 .home-expertise__card{ text-decoration:none; color:inherit; background:#fff; border:1px solid var(--border-2); border-radius:18px; padding:30px 26px; display:flex; flex-direction:column; gap:12px; height:100%; }
-.home-expertise__icon{ width:52px; height:52px; border-radius:14px; background:var(--navy-panel); border:1px solid var(--orange); color:var(--orange); display:flex; align-items:center; justify-content:center; box-shadow:0 0 0 1px rgba(221,122,51,.25), 0 0 16px rgba(221,122,51,.35); transition:box-shadow .2s ease; }
+.home-expertise__icon{ width:52px; height:52px; border-radius:14px; background:var(--navy-gradient); border:1px solid var(--orange); color:var(--orange); display:flex; align-items:center; justify-content:center; box-shadow:0 0 0 1px rgba(221,122,51,.25), 0 0 16px rgba(221,122,51,.35); transition:box-shadow .2s ease; }
 .home-expertise__card:hover .home-expertise__icon{ box-shadow:0 0 0 1px rgba(221,122,51,.4), 0 0 26px rgba(221,122,51,.65); }
 .home-expertise__title{ font-family:var(--font-heading); font-weight:700; font-size:19px; color:var(--navy); letter-spacing:-.01em; }
 .home-expertise__desc{ font-size:14px; color:var(--muted); line-height:1.55; flex:1; }
@@ -445,7 +445,7 @@
   padding:36px 40px;display:grid;grid-template-columns:auto 1fr;gap:26px;align-items:start;margin-bottom:40px;
 }
 .audit-why__icon{
-  width:48px;height:48px;flex:none;border-radius:var(--r-xl);background:var(--navy-panel);border:1px solid var(--green);color:var(--green-bright);
+  width:48px;height:48px;flex:none;border-radius:var(--r-xl);background:var(--navy-gradient);border:1px solid var(--green);color:var(--green-bright);
   display:flex;align-items:center;justify-content:center;font-size:22px;
   box-shadow:0 0 0 1px rgba(30,142,90,.25), 0 0 16px rgba(30,142,90,.35);
 }
@@ -461,21 +461,14 @@
 /* final CTA : voir .final-cta-section / .final-cta-card dans components.css (partagé avec solutions/réalisations/apropos) */
 
 /* ============ FAQ (même motif que solutions.css/pillar.css) ============ */
-.faq-grid{ display:grid; grid-template-columns:1fr 1fr; gap:18px 40px; }
+.faq-grid{ display:grid; grid-template-columns:1fr 1fr; gap:14px 28px; }
 .faq-item{
-  background:#fff; border:1px solid var(--border-2); border-radius:16px; padding:26px 28px;
+  background:#fff; border:1px solid var(--border-2); border-radius:14px; padding:22px 24px;
   transition:box-shadow .2s ease, border-color .2s ease;
 }
 .faq-item:hover{ border-color:var(--blue-2); box-shadow:0 0 0 1px rgba(46,155,255,.15), 0 14px 30px -18px rgba(30,95,208,.4); }
-.faq-item h3{ font-size:17px; margin:0 0 9px; padding-left:36px; position:relative; }
-.faq-item h3::before{
-  content:"?"; position:absolute; left:0; top:-2px; width:26px; height:26px; border-radius:8px;
-  background:var(--navy-panel); border:1px solid var(--orange); color:var(--orange);
-  display:flex; align-items:center; justify-content:center;
-  font-family:var(--font-heading); font-weight:700; font-size:14px;
-  box-shadow:0 0 0 1px rgba(221,122,51,.22), 0 0 12px rgba(221,122,51,.3);
-}
-.faq-item p{ font-size:15px; line-height:1.6; color:var(--text-3); margin:0; }
+.faq-item h3{ font-size:16.5px; margin:0 0 8px; }
+.faq-item p{ font-size:14.5px; line-height:1.58; color:var(--text-3); margin:0; }
 
 /* ==================== responsive ==================== */
 @media (max-width:900px){

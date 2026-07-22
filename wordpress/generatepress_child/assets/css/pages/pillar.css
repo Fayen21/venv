@@ -68,7 +68,7 @@
 .pillar-usecase{ background:#fff; border:1px solid var(--border-2); border-radius:16px; padding:26px; display:flex; flex-direction:column; height:100%; transition:box-shadow .2s ease, border-color .2s ease, transform .2s ease; }
 .pillar-usecase:hover{ border-color:var(--blue-2); box-shadow:0 0 0 1px rgba(46,155,255,.18), 0 20px 40px -22px rgba(30,95,208,.4); transform:translateY(-3px); }
 .pillar-usecase:hover .pillar-usecase__icon{ box-shadow:0 0 0 1px rgba(221,122,51,.4), 0 0 24px rgba(221,122,51,.6); }
-.pillar-usecase__icon{ width:42px; height:42px; border-radius:11px; background:var(--navy-panel); border:1px solid var(--orange); color:var(--orange); display:flex; align-items:center; justify-content:center; margin-bottom:14px; box-shadow:0 0 0 1px rgba(221,122,51,.22), 0 0 14px rgba(221,122,51,.3); }
+.pillar-usecase__icon{ width:42px; height:42px; border-radius:11px; background:var(--navy-gradient); border:1px solid var(--orange); color:var(--orange); display:flex; align-items:center; justify-content:center; margin-bottom:14px; box-shadow:0 0 0 1px rgba(221,122,51,.22), 0 0 14px rgba(221,122,51,.3); }
 .pillar-usecase h3{ font-size:16.5px; margin:0 0 8px; line-height:1.3; }
 .pillar-usecase p{ font-size:13.5px; line-height:1.55; color:var(--text-3); margin:0 0 16px; flex:1; }
 .pillar-usecase__gain{ border-top:1px solid var(--border); padding-top:13px; font-family:var(--font-heading); font-weight:700; font-size:15.5px; color:var(--green); }
@@ -124,25 +124,16 @@
 }
 .pillar-mid-cta .btn-primary{ padding:14px 24px; font-size:15px; border-radius:10px; white-space:nowrap; box-shadow:none; }
 
-/* ---------- FAQ (cartes avec repère "Q", même motif que .faq-grid) ---------- */
-/* même grille 2 colonnes que .faq-grid (Accueil, Solutions, Réalisations, À
-   propos) — uniformité demandée entre les pages piliers/expertises et le
-   reste du site. */
-.pillar-faq{ margin:0 auto 56px; display:grid; grid-template-columns:1fr 1fr; gap:18px 40px; }
+/* ---------- FAQ (même motif que .faq-grid — Accueil, Solutions, Réalisations,
+   À propos, Tarifs — uniformisé entre toutes les pages du site) ---------- */
+.pillar-faq{ margin:0 auto 56px; display:grid; grid-template-columns:1fr 1fr; gap:14px 28px; }
 .pillar-faq h2{ grid-column:1/-1; font-size:28px; letter-spacing:-.02em; margin:0 0 8px; }
 .pillar-faq__item{
-  background:#fff; border:1px solid var(--border-2); border-radius:16px; padding:26px 28px;
+  background:#fff; border:1px solid var(--border-2); border-radius:14px; padding:22px 24px;
   transition:box-shadow .2s ease, border-color .2s ease;
 }
 .pillar-faq__item:hover{ border-color:var(--blue-2); box-shadow:0 0 0 1px rgba(46,155,255,.15), 0 14px 30px -18px rgba(30,95,208,.4); }
-.pillar-faq__item h3{ font-size:17px; margin:0 0 9px; padding-left:36px; position:relative; }
-.pillar-faq__item h3::before{
-  content:"?"; position:absolute; left:0; top:-2px; width:26px; height:26px; border-radius:8px;
-  background:var(--navy-panel); border:1px solid var(--orange); color:var(--orange);
-  display:flex; align-items:center; justify-content:center;
-  font-family:var(--font-heading); font-weight:700; font-size:14px;
-  box-shadow:0 0 0 1px rgba(221,122,51,.22), 0 0 12px rgba(221,122,51,.3);
-}
+.pillar-faq__item h3{ font-size:16.5px; margin:0 0 8px; }
 .pillar-faq__item p{ font-size:15px; line-height:1.6; color:var(--text-3); margin:0; }
 
 /* ---------- explorer aussi (pills) ---------- */

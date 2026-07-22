@@ -170,14 +170,14 @@ function eb_google_reviews() {
 		),
 		array(
 			'text'    => "Prestataire très sérieux, il a répondu à mes demandes et n'a pas essayé de survendre. Je ferai de nouveau appel à lui dans les prochains mois. Merci !",
-			'author'  => 'Anthony',
-			'company' => 'Vélo-Tourisme',
+			'author'  => 'Zoheir',
+			'company' => 'Kefta Plaza',
 			'color'   => '#DD7A33',
 		),
 		array(
 			'text'    => 'Parfait, tout marche bien et on peut compter sur Emmanuel pour trouver des solutions, donc à bientôt je l\'espère.',
-			'author'  => 'Zoheir',
-			'company' => 'Kefta Plaza',
+			'author'  => 'Nandu',
+			'company' => 'Vélo-Tourisme',
 			'color'   => '#1E8E5A',
 		),
 	);
@@ -261,7 +261,7 @@ function eb_reviews_section_html() {
  * Mini-carte d'avis isolée (étoiles + citation courte + auteur), pour glisser
  * une preuve sociale ponctuelle hors de la section "avis clients" complète
  * (ex. page Audit près du formulaire, pages Tarifs/Solutions/métier).
- * $index désigne l'avis dans eb_google_reviews() (0=Audrey, 1=Anthony, 2=Zoheir).
+ * $index désigne l'avis dans eb_google_reviews() (0=Audrey, 1=Zoheir, 2=Nandu).
  */
 function eb_mini_review_html( $index = 0 ) {
 	$reviews = eb_google_reviews();
@@ -279,7 +279,7 @@ function eb_mini_review_html( $index = 0 ) {
 
 /**
  * Rangée de mini-avis (2 ou 3 côte à côte) — $indexes est un tableau d'index
- * eb_google_reviews(), ex. array(1,2) pour Anthony + Zoheir.
+ * eb_google_reviews(), ex. array(1,2) pour Zoheir + Nandu.
  */
 function eb_mini_reviews_row_html( $indexes ) {
 	$out = '<div class="mini-reviews-row">';

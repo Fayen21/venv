@@ -478,7 +478,7 @@ if ( ! defined( 'ABSPATH' ) ) {
   </section>
 
   <!-- tarif contextuel -->
-  <section class="section" style="padding:10px 40px;">
+  <section class="section" style="padding:0 40px;">
     <?php echo eb_price_teaser_html( 'Une première automatisation démarre généralement <strong>autour de 800 €</strong>, un service métier complet plutôt <strong>entre 1 500 € et 3 000 €</strong>.' ); ?>
   </section>
 
