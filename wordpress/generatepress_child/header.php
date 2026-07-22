@@ -40,7 +40,7 @@ $eb_is_pillar = eb_is_pillar_page( $eb_current );
 <header class="site-header">
   <div class="site-header__row">
     <a href="<?php echo esc_url( eb_url( 'index' ) ); ?>" class="brand" aria-label="EB Automatisation — retour à l'accueil">
-      <img src="<?php echo esc_url( eb_asset( 'images/eb-icon.png' ) ); ?>" alt="EB Automatisation" width="51" height="51">
+      <img src="<?php echo esc_url( eb_asset( 'images/eb-icon.png' ) ); ?>" alt="EB Automatisation" width="51" height="51" loading="eager" fetchpriority="high">
       <span class="brand__name">EB Automatisation</span>
     </a>
     <button class="menu-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" data-menu-toggle>
