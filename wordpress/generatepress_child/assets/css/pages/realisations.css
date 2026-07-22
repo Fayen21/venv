@@ -131,9 +131,20 @@
 /* puces d'outils : voir .tool-chip-grid / .tool-chip dans components.css */
 
 /* ============ FAQ (même motif que solutions.css/pillar.css) ============ */
-.faq-grid{ display:grid; grid-template-columns:1fr 1fr; gap:0 48px; }
-.faq-item{ padding:24px 0; border-top:1px solid var(--border); }
-.faq-item h3{ font-size:17px; margin:0 0 9px; }
+.faq-grid{ display:grid; grid-template-columns:1fr 1fr; gap:18px 40px; }
+.faq-item{
+  background:#fff; border:1px solid var(--border-2); border-radius:16px; padding:26px 28px;
+  transition:box-shadow .2s ease, border-color .2s ease;
+}
+.faq-item:hover{ border-color:var(--blue-2); box-shadow:0 0 0 1px rgba(46,155,255,.15), 0 14px 30px -18px rgba(30,95,208,.4); }
+.faq-item h3{ font-size:17px; margin:0 0 9px; padding-left:36px; position:relative; }
+.faq-item h3::before{
+  content:"?"; position:absolute; left:0; top:-2px; width:26px; height:26px; border-radius:8px;
+  background:var(--navy-panel); border:1px solid var(--orange); color:var(--orange);
+  display:flex; align-items:center; justify-content:center;
+  font-family:var(--font-heading); font-weight:700; font-size:14px;
+  box-shadow:0 0 0 1px rgba(221,122,51,.22), 0 0 12px rgba(221,122,51,.3);
+}
 .faq-item p{ font-size:15px; line-height:1.6; color:var(--text-3); margin:0; }
 
 /* ==================== responsive — miroir du retrofit 900px du prototype ==================== */
@@ -141,6 +152,13 @@
   .case-study__grid, .usecase-grid, .control-grid, .faq-grid{
     grid-template-columns:1fr;
   }
+  /* en 1 colonne, .case-study__body et .case-study__side (2 items de grid,
+     empilés) gardent leur min-width:auto implicite : si un descendant a une
+     largeur de contenu minimale (ex. .case-study__mock-file en
+     white-space:nowrap), la piste de grille s'élargit pour l'accueillir et
+     déborde du conteneur — même si ce descendant a lui-même overflow:hidden.
+     On neutralise ce min-width implicite sur les items de grille eux-mêmes. */
+  .case-study__body, .case-study__side{ min-width:0; }
 }
 @media (max-width:640px){
   .case-study__body{ padding:28px; }

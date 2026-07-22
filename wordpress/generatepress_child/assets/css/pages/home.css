@@ -461,9 +461,20 @@
 /* final CTA : voir .final-cta-section / .final-cta-card dans components.css (partagé avec solutions/réalisations/apropos) */
 
 /* ============ FAQ (même motif que solutions.css/pillar.css) ============ */
-.faq-grid{ display:grid; grid-template-columns:1fr 1fr; gap:0 48px; }
-.faq-item{ padding:24px 0; border-top:1px solid var(--border); }
-.faq-item h3{ font-size:17px; margin:0 0 9px; }
+.faq-grid{ display:grid; grid-template-columns:1fr 1fr; gap:18px 40px; }
+.faq-item{
+  background:#fff; border:1px solid var(--border-2); border-radius:16px; padding:26px 28px;
+  transition:box-shadow .2s ease, border-color .2s ease;
+}
+.faq-item:hover{ border-color:var(--blue-2); box-shadow:0 0 0 1px rgba(46,155,255,.15), 0 14px 30px -18px rgba(30,95,208,.4); }
+.faq-item h3{ font-size:17px; margin:0 0 9px; padding-left:36px; position:relative; }
+.faq-item h3::before{
+  content:"?"; position:absolute; left:0; top:-2px; width:26px; height:26px; border-radius:8px;
+  background:var(--navy-panel); border:1px solid var(--orange); color:var(--orange);
+  display:flex; align-items:center; justify-content:center;
+  font-family:var(--font-heading); font-weight:700; font-size:14px;
+  box-shadow:0 0 0 1px rgba(221,122,51,.22), 0 0 12px rgba(221,122,51,.3);
+}
 .faq-item p{ font-size:15px; line-height:1.6; color:var(--text-3); margin:0; }
 
 /* ==================== responsive ==================== */
@@ -499,7 +510,13 @@
 @media (max-width:640px){
   .hero{ padding:52px 20px 44px; gap:40px; }
   .hero__content{ text-align:center; }
-  .hero__eyebrow{ margin-left:auto; margin-right:auto; margin-bottom:20px; }
+  /* le texte de l'eyebrow est trop long pour tenir sur une ligne à cette
+     largeur : une fois qu'il doit passer à la ligne, la boîte inline-flex
+     s'étend sur toute la largeur disponible (comportement normal d'un
+     inline-flex contenant du texte qui wrap) et text-align:center sur
+     l'ancêtre n'a alors plus aucun effet visible sur une boîte déjà pleine
+     largeur — on centre donc explicitement le contenu de l'eyebrow lui-même. */
+  .hero__eyebrow{ flex-wrap:wrap; justify-content:center; text-align:center; margin-bottom:20px; }
   .hero__title{ margin-bottom:16px; }
   .hero__lead{ margin-left:auto; margin-right:auto; font-size:16px; line-height:1.6; margin-bottom:28px; }
   .hero__actions{ flex-direction:column; align-items:stretch; gap:12px; }
@@ -517,4 +534,20 @@
      écraser ou de casser la mise en page (cf. min-width:0 ci-dessus). */
   .workflow-tabs{ overflow-x:auto; -webkit-overflow-scrolling:touch; }
   .workflow-tabs__btn{ flex:0 0 auto; white-space:nowrap; }
+  /* les titres d'étape n'ont pas tous la même longueur selon le scénario
+     affiché (rotation automatique toutes les 6s) : à cette largeur, certains
+     tiennent sur 1 ligne et d'autres passent sur 2, ce qui faisait varier la
+     hauteur du panneau de démo à chaque changement — un "saut" visible à
+     l'écran. On réserve la hauteur de 2 lignes en permanence. */
+  .workflow-step__title{ min-height:54px; }
+  /* même souci pour le sous-titre (data-step-sub) : sa largeur disponible
+     dépend aussi de la longueur du badge affiché à côté (ex. "traitement…"
+     vs "100% ✓"), donc son passage à 2 lignes ne suit pas forcément celui du
+     titre — troisième contributeur du "saut" de hauteur, mesuré séparément. */
+  .workflow-step__sub{ min-height:30px; }
+  /* même souci pour la note de bas de panneau (data-workflow-note) : son
+     texte varie de ~37 à ~52 caractères selon le scénario, ce qui la fait
+     passer de 1 à 2 lignes à cette largeur — c'était le second contributeur
+     du "saut" de hauteur du panneau, non couvert par le fix du titre ci-dessus. */
+  [data-workflow-note]{ min-height:34px; display:flex; align-items:center; }
 }

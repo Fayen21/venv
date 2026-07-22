@@ -2,6 +2,12 @@
 	'use strict';
 
 	var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+	// Sur mobile, chaque canvas s'anime quelques secondes puis se fige (voir
+	// start() ci-dessous) : un geste visuel au chargement plutôt qu'une boucle
+	// rAF indéfinie, qui pénalisait fortement le Speed Index PageSpeed tant
+	// que la page ne pouvait jamais être comptée "visuellement stable".
+	var isMobile = window.innerWidth < 768;
+	var MOBILE_ANIM_BUDGET_MS = 3500;
 
 	/**
 	 * Fabrique les deux helpers partagés par tous les effets, scopés à UN canvas :
@@ -41,6 +47,8 @@
 
 		var raf = null;
 		var visible = false;
+		var mobileBudgetSpent = false;
+		var mobileTimer = null;
 
 		function frame() {
 			if (!drawFn) return;
@@ -49,7 +57,14 @@
 		}
 		function start() {
 			if (raf || reduceMotion || !drawFn) return;
+			if (isMobile && mobileBudgetSpent) return;
 			raf = requestAnimationFrame(frame);
+			if (isMobile && !mobileTimer) {
+				mobileTimer = setTimeout(function () {
+					mobileBudgetSpent = true;
+					stop();
+				}, MOBILE_ANIM_BUDGET_MS);
+			}
 		}
 		function stop() {
 			if (raf) cancelAnimationFrame(raf);

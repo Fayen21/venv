@@ -157,6 +157,6 @@
   .pillar-hub__title{ font-size:17px; }
   .pillar-hub__arrow{ display:none; }
   .solution-row{ padding:32px 0; gap:28px; }
-  .solution-row__transition{ flex-direction:column; align-items:flex-start; }
-  .solution-row__arrow{ transform:rotate(90deg); }
+  .solution-row__transition{ flex-direction:column; align-items:center; }
+  .solution-row__arrow{ transform:rotate(90deg); font-size:22px; font-weight:700; }
 }

@@ -124,14 +124,25 @@
 }
 .pillar-mid-cta .btn-primary{ padding:14px 24px; font-size:15px; border-radius:10px; white-space:nowrap; box-shadow:none; }
 
-/* ---------- FAQ (liste simple, une colonne) ---------- */
+/* ---------- FAQ (cartes avec repère "Q", même motif que .faq-grid) ---------- */
 /* même grille 2 colonnes que .faq-grid (Accueil, Solutions, Réalisations, À
    propos) — uniformité demandée entre les pages piliers/expertises et le
    reste du site. */
-.pillar-faq{ margin:0 auto 56px; display:grid; grid-template-columns:1fr 1fr; gap:0 48px; }
+.pillar-faq{ margin:0 auto 56px; display:grid; grid-template-columns:1fr 1fr; gap:18px 40px; }
 .pillar-faq h2{ grid-column:1/-1; font-size:28px; letter-spacing:-.02em; margin:0 0 8px; }
-.pillar-faq__item{ padding:22px 0; border-top:1px solid var(--border); }
-.pillar-faq__item h3{ font-size:17px; margin:0 0 8px; }
+.pillar-faq__item{
+  background:#fff; border:1px solid var(--border-2); border-radius:16px; padding:26px 28px;
+  transition:box-shadow .2s ease, border-color .2s ease;
+}
+.pillar-faq__item:hover{ border-color:var(--blue-2); box-shadow:0 0 0 1px rgba(46,155,255,.15), 0 14px 30px -18px rgba(30,95,208,.4); }
+.pillar-faq__item h3{ font-size:17px; margin:0 0 9px; padding-left:36px; position:relative; }
+.pillar-faq__item h3::before{
+  content:"?"; position:absolute; left:0; top:-2px; width:26px; height:26px; border-radius:8px;
+  background:var(--navy-panel); border:1px solid var(--orange); color:var(--orange);
+  display:flex; align-items:center; justify-content:center;
+  font-family:var(--font-heading); font-weight:700; font-size:14px;
+  box-shadow:0 0 0 1px rgba(221,122,51,.22), 0 0 12px rgba(221,122,51,.3);
+}
 .pillar-faq__item p{ font-size:15px; line-height:1.6; color:var(--text-3); margin:0; }
 
 /* ---------- explorer aussi (pills) ---------- */
@@ -185,7 +196,27 @@
 /* ==================== tableau comparatif (réutilise les tokens existants) ==================== */
 .pillar-table{ margin:56px auto; max-width:820px; }
 .pillar-table h2{ font-size:28px; letter-spacing:-.02em; margin:0 0 18px; }
-.pillar-table__wrap{ overflow-x:auto; border:1px solid var(--border-2); border-radius:16px; }
+.pillar-table__wrap{
+  overflow-x:auto;
+  border:1px solid var(--border-2);
+  border-radius:16px;
+  /* indice visuel de défilement en pur CSS : les deux dégradés "scroll"
+     (fixes par rapport au cadre) dessinent une ombre sur le bord qui a encore
+     du contenu caché ; les deux dégradés "local" (qui défilent avec le
+     contenu) recouvrent cette ombre en blanc dès que ce bord est atteint —
+     l'ombre de droite disparaît donc d'elle-même une fois arrivé en bout de
+     tableau. Sans ça, un tableau plus large que l'écran donnait l'impression
+     d'être "coupé" plutôt que "défilable" sur mobile. */
+  background:
+    linear-gradient(to right, var(--bg) 50%, rgba(255,255,255,0)) 0 0,
+    linear-gradient(to right, rgba(255,255,255,0), var(--bg) 50%) 100% 0,
+    linear-gradient(to right, rgba(13,30,58,.14), rgba(13,30,58,0)) 0 0,
+    linear-gradient(to right, rgba(13,30,58,0), rgba(13,30,58,.14)) 100% 0;
+  background-repeat:no-repeat;
+  background-color:var(--bg);
+  background-size:24px 100%, 24px 100%, 10px 100%, 10px 100%;
+  background-attachment:local, local, scroll, scroll;
+}
 .pillar-table table{ width:100%; border-collapse:collapse; font-size:14.5px; min-width:520px; }
 .pillar-table thead th{ background:var(--bg-soft); color:var(--navy); font-family:var(--font-heading); font-weight:600; text-align:left; padding:14px 18px; border-bottom:1px solid var(--border-2); white-space:nowrap; }
 .pillar-table tbody td{ padding:14px 18px; border-bottom:1px solid var(--border); color:var(--text-3); line-height:1.5; vertical-align:top; }
@@ -208,9 +239,27 @@
   .pillar-mid-cta{ padding:28px 22px; flex-direction:column; text-align:center; }
   .pillar-mid-cta .btn-primary{ width:100%; justify-content:center; }
   .pillar-mid-cta__connector{ flex:none; width:28px; min-width:0; max-width:none; margin:4px auto; transform:rotate(90deg); }
-  .pillar-flow{ padding:22px; }
-  .pillar-flow__row{ flex-direction:column; gap:16px; }
-  .pillar-flow__arrow{ margin:0; transform:rotate(90deg); }
+  /* le diagramme desktop (icônes 48px isolées, colonnes de 150px) devient à
+     cette largeur une "colonne de 150px flottant au milieu d'un pavé sombre
+     bien plus large" — d'où l'impression de vide/dézoom signalée. On reprend
+     plutôt le même schéma que .workflow-step de l'accueil : icône à gauche,
+     libellé à droite sur toute la largeur, relié par un rail vertical. */
+  .pillar-flow{ padding:24px 20px; }
+  .pillar-flow__row{ flex-direction:column; align-items:stretch; gap:0; }
+  .pillar-flow__step{ flex-direction:row; align-items:center; width:auto; gap:14px; }
+  .pillar-flow__icon{ width:46px; height:46px; font-size:19px; flex:none; }
+  .pillar-flow__step-label{ text-align:left; font-size:14.5px; }
+  .pillar-flow__arrow{
+    width:2px; height:20px; margin:2px 0 2px 23px; flex:none;
+    background:linear-gradient(180deg, rgba(46,155,255,.4), rgba(46,155,255,.12));
+  }
+  .pillar-flow__arrow::before,.pillar-flow__arrow::after{ left:50%; top:0; margin-left:-3px; margin-top:0; }
+}
+@media (max-width:640px) and (prefers-reduced-motion: no-preference){
+  .pillar-flow__arrow::before{ animation:ebconnectorflow 1.4s ease-in-out infinite; --eb-travel:16px; }
+  .pillar-flow__arrow::after{ animation:ebconnectorflow 1.4s ease-in-out infinite; animation-delay:.5s; --eb-travel:16px; }
+}
+@media (max-width:640px){
   .pillar-final-cta{ padding:28px; }
   .pillar-final-cta .btn-primary{ width:100%; justify-content:center; }
   .pillar-usecases h2,.pillar-faq h2,.pillar-compare h2{ text-align:center; }
@@ -220,4 +269,23 @@
   .pillar-usecase p{ font-size:14.5px; }
   .pillar-compare__grid{ grid-template-columns:1fr; gap:14px; }
   .pillar-table h2{ text-align:center; }
+  /* la 1ère colonne (libellé de tâche) est en nowrap sur desktop pour rester
+     lisible sur une ligne — à cette largeur ça gonfle inutilement la largeur
+     totale du tableau et donc la distance de défilement nécessaire. */
+  .pillar-table tbody td:first-child{ white-space:normal; }
+  .pillar-table table{ min-width:460px; }
+  .pillar-table thead th,.pillar-table tbody td{ padding:12px 14px; }
+  /* rappel visuel discret que le tableau se fait défiler horizontalement
+     (en plus de l'ombre de bord ci-dessus) — généré en CSS, pas de balisage
+     supplémentaire à répercuter sur les 9 pages qui utilisent ce composant. */
+  .pillar-table__wrap::after{
+    content:"◂ Faites glisser pour tout voir ▸";
+    display:block;
+    text-align:center;
+    font-size:11.5px;
+    color:var(--text-4,#7A8699);
+    padding:8px 10px;
+    border-top:1px solid var(--border-2);
+    background:var(--bg-soft);
+  }
 }

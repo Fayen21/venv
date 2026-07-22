@@ -91,17 +91,14 @@
   .eb-hero-fx__aurora{ animation:none; }
 }
 @media (max-width:768px){
+  /* halos aurora toujours coupés sur mobile : coût de blur() continu, le
+     poste le plus cher de tout le hero-fx. */
   .eb-hero-fx__aurora{ display:none; }
-  /* Perf mobile (Speed Index PageSpeed) : le canvas tourne en boucle rAF en
-     continu tant qu'il est visible (réseau/globe/flow/particules...) — coût
-     CPU nul grâce à l'IntersectionObserver/prefers-reduced-motion déjà en
-     place, mais Speed Index pénalise toute image qui continue de changer
-     visuellement, peu importe le coût réel ; la page n'est jamais comptée
-     "visuellement stable" tant que ça bouge (observé : 17s+ sur mobile).
-     display:none retire aussi l'élément du viewport de l'IntersectionObserver
-     (isIntersecting devient false), donc la boucle rAF s'arrête d'elle-même
-     sans changement JS. */
-  .eb-hero-fx__canvas{ display:none; }
+  /* Le canvas, lui, reste affiché (voir hero-fx.js : sur mobile la boucle
+     d'animation s'arrête d'elle-même après quelques secondes — geste visuel
+     présent au chargement, sans faire tourner le rAF en continu pendant
+     toute la visite, ce qui pénalisait fortement le Speed Index PageSpeed
+     quand le canvas restait actif indéfiniment. */
 }
 
 /* sans position/z-index propre, le contenu du hero (bloc en flux normal)
