@@ -94,11 +94,7 @@
   /* halos aurora toujours coupés sur mobile : coût de blur() continu, le
      poste le plus cher de tout le hero-fx. */
   .eb-hero-fx__aurora{ display:none; }
-  /* Le canvas, lui, reste affiché (voir hero-fx.js : sur mobile la boucle
-     d'animation s'arrête d'elle-même après quelques secondes — geste visuel
-     présent au chargement, sans faire tourner le rAF en continu pendant
-     toute la visite, ce qui pénalisait fortement le Speed Index PageSpeed
-     quand le canvas restait actif indéfiniment. */
+  /* Le canvas, lui, reste affiché et animé en continu, comme sur desktop. */
 }
 
 /* sans position/z-index propre, le contenu du hero (bloc en flux normal)
