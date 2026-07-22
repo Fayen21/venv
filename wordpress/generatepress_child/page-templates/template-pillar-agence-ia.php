@@ -74,11 +74,11 @@ if ( ! defined( 'ABSPATH' ) ) {
             <tr><th>Critère</th><th>Agence IA</th><th>Consultant indépendant</th></tr>
           </thead>
           <tbody>
-            <tr><td>Interlocuteur</td><td>Chef de projet, souvent relais vers un développeur</td><td>Une seule personne, du premier échange à la mise en production</td></tr>
-            <tr><td>Expertise métier</td><td>Variable selon les studios</td><td>Gestion, comptabilité, RH pratiquées avant l'automatisation</td></tr>
-            <tr><td>Structure de coûts</td><td>Marge de gestion de compte, commercial à financer</td><td>Coûts plus légers, sans structure commerciale</td></tr>
-            <tr><td>Délai de mise en place</td><td>Souvent plusieurs semaines de cadrage</td><td>Audit gratuit puis mise en place directe</td></tr>
-            <tr><td>Adapté pour</td><td>Produit IA complexe, équipe pluridisciplinaire</td><td>Automatisation ciblée d'un service ou processus métier</td></tr>
+            <tr><td>Interlocuteur</td><td data-label="Agence IA">Chef de projet, souvent relais vers un développeur</td><td data-label="Consultant indépendant">Une seule personne, du premier échange à la mise en production</td></tr>
+            <tr><td>Expertise métier</td><td data-label="Agence IA">Variable selon les studios</td><td data-label="Consultant indépendant">Gestion, comptabilité, RH pratiquées avant l'automatisation</td></tr>
+            <tr><td>Structure de coûts</td><td data-label="Agence IA">Marge de gestion de compte, commercial à financer</td><td data-label="Consultant indépendant">Coûts plus légers, sans structure commerciale</td></tr>
+            <tr><td>Délai de mise en place</td><td data-label="Agence IA">Souvent plusieurs semaines de cadrage</td><td data-label="Consultant indépendant">Audit gratuit puis mise en place directe</td></tr>
+            <tr><td>Adapté pour</td><td data-label="Agence IA">Produit IA complexe, équipe pluridisciplinaire</td><td data-label="Consultant indépendant">Automatisation ciblée d'un service ou processus métier</td></tr>
           </tbody>
         </table>
       </div>

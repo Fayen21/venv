@@ -109,10 +109,10 @@ if ( ! defined( 'ABSPATH' ) ) {
             <tr><th>Type de processus</th><th>Nombre d'outils reliés</th><th>Complexité</th><th>Délai type</th></tr>
           </thead>
           <tbody>
-            <tr><td>Devis → relance → commande</td><td>1 à 2</td><td>Faible</td><td>1 à 2 semaines</td></tr>
-            <tr><td>Onboarding RH complet</td><td>2 à 4</td><td>Moyenne</td><td>2 à 3 semaines</td></tr>
-            <tr><td>Cycle achat → facture → paiement</td><td>2 à 3</td><td>Moyenne</td><td>2 à 4 semaines</td></tr>
-            <tr><td>Clôture mensuelle comptable</td><td>2 à 3</td><td>Moyenne à élevée</td><td>3 à 4 semaines</td></tr>
+            <tr><td>Devis → relance → commande</td><td data-label="Nombre d'outils reliés">1 à 2</td><td data-label="Complexité">Faible</td><td data-label="Délai type">1 à 2 semaines</td></tr>
+            <tr><td>Onboarding RH complet</td><td data-label="Nombre d'outils reliés">2 à 4</td><td data-label="Complexité">Moyenne</td><td data-label="Délai type">2 à 3 semaines</td></tr>
+            <tr><td>Cycle achat → facture → paiement</td><td data-label="Nombre d'outils reliés">2 à 3</td><td data-label="Complexité">Moyenne</td><td data-label="Délai type">2 à 4 semaines</td></tr>
+            <tr><td>Clôture mensuelle comptable</td><td data-label="Nombre d'outils reliés">2 à 3</td><td data-label="Complexité">Moyenne à élevée</td><td data-label="Délai type">3 à 4 semaines</td></tr>
           </tbody>
         </table>
       </div>

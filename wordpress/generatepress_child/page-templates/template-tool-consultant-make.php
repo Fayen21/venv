@@ -69,10 +69,10 @@ if ( ! defined( 'ABSPATH' ) ) {
             <tr><th>Critère</th><th>Make</th><th>n8n</th></tr>
           </thead>
           <tbody>
-            <tr><td>Prise en main</td><td>Très visuelle, accessible rapidement</td><td>Un peu plus technique</td></tr>
-            <tr><td>Connecteurs prêts à l'emploi</td><td>Très large catalogue</td><td>Large catalogue, plus orienté développeur</td></tr>
-            <tr><td>Hébergement</td><td>Cloud Make uniquement</td><td>Cloud ou auto-hébergé</td></tr>
-            <tr><td>Adapté à</td><td>Automatisations métier standards</td><td>Logiques complexes, données sensibles</td></tr>
+            <tr><td>Prise en main</td><td data-label="Make">Très visuelle, accessible rapidement</td><td data-label="n8n">Un peu plus technique</td></tr>
+            <tr><td>Connecteurs prêts à l'emploi</td><td data-label="Make">Très large catalogue</td><td data-label="n8n">Large catalogue, plus orienté développeur</td></tr>
+            <tr><td>Hébergement</td><td data-label="Make">Cloud Make uniquement</td><td data-label="n8n">Cloud ou auto-hébergé</td></tr>
+            <tr><td>Adapté à</td><td data-label="Make">Automatisations métier standards</td><td data-label="n8n">Logiques complexes, données sensibles</td></tr>
           </tbody>
         </table>
       </div>

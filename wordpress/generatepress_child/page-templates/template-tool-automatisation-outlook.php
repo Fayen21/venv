@@ -74,10 +74,10 @@ if ( ! defined( 'ABSPATH' ) ) {
             <tr><th>Tâche</th><th>Temps manuel</th><th>Temps automatisé</th></tr>
           </thead>
           <tbody>
-            <tr><td>Tri et classement quotidien</td><td>30 à 60 min/jour</td><td>Quasi 0</td></tr>
-            <tr><td>Extraction d'une pièce jointe</td><td>2 à 5 min/email</td><td>Quelques secondes</td></tr>
-            <tr><td>Création de fiche CRM depuis un email</td><td>3 à 5 min</td><td>Automatique</td></tr>
-            <tr><td>Relance sur email sans réponse</td><td>Souvent oubliée</td><td>Systématique</td></tr>
+            <tr><td>Tri et classement quotidien</td><td data-label="Temps manuel">30 à 60 min/jour</td><td data-label="Temps automatisé">Quasi 0</td></tr>
+            <tr><td>Extraction d'une pièce jointe</td><td data-label="Temps manuel">2 à 5 min/email</td><td data-label="Temps automatisé">Quelques secondes</td></tr>
+            <tr><td>Création de fiche CRM depuis un email</td><td data-label="Temps manuel">3 à 5 min</td><td data-label="Temps automatisé">Automatique</td></tr>
+            <tr><td>Relance sur email sans réponse</td><td data-label="Temps manuel">Souvent oubliée</td><td data-label="Temps automatisé">Systématique</td></tr>
           </tbody>
         </table>
       </div>

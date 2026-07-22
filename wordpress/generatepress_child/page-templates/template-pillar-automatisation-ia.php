@@ -101,9 +101,9 @@ if ( ! defined( 'ABSPATH' ) ) {
             <tr><th>Approche</th><th>Ce qu'elle fait</th><th>Type de donnée</th><th>Exemple</th></tr>
           </thead>
           <tbody>
-            <tr><td>Automatisation classique</td><td>Exécute une règle fixe</td><td>Structurée</td><td>Déclencher un email à date fixe</td></tr>
-            <tr><td>RPA</td><td>Reproduit une action répétitive</td><td>Structurée à semi-structurée</td><td>Copier des données d'un outil à un autre</td></tr>
-            <tr><td>Automatisation IA</td><td>Lit, comprend, classe, décide</td><td>Non structurée</td><td>Interpréter un email ou une facture scannée</td></tr>
+            <tr><td>Automatisation classique</td><td data-label="Ce qu'elle fait">Exécute une règle fixe</td><td data-label="Type de donnée">Structurée</td><td data-label="Exemple">Déclencher un email à date fixe</td></tr>
+            <tr><td>RPA</td><td data-label="Ce qu'elle fait">Reproduit une action répétitive</td><td data-label="Type de donnée">Structurée à semi-structurée</td><td data-label="Exemple">Copier des données d'un outil à un autre</td></tr>
+            <tr><td>Automatisation IA</td><td data-label="Ce qu'elle fait">Lit, comprend, classe, décide</td><td data-label="Type de donnée">Non structurée</td><td data-label="Exemple">Interpréter un email ou une facture scannée</td></tr>
           </tbody>
         </table>
       </div>

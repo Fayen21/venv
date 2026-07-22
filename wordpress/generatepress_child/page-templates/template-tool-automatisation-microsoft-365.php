@@ -69,9 +69,9 @@ if ( ! defined( 'ABSPATH' ) ) {
             <tr><th>Outil</th><th>Idéal pour</th><th>Limite principale</th></tr>
           </thead>
           <tbody>
-            <tr><td>Power Automate</td><td>Scénarios 100% internes à Microsoft 365</td><td>Moins flexible hors de l'écosystème Microsoft</td></tr>
-            <tr><td>Make</td><td>Connecter Microsoft 365 à des outils tiers</td><td>Cloud uniquement</td></tr>
-            <tr><td>n8n</td><td>Logiques complexes, hébergement maîtrisé</td><td>Prise en main plus technique</td></tr>
+            <tr><td>Power Automate</td><td data-label="Idéal pour">Scénarios 100% internes à Microsoft 365</td><td data-label="Limite principale">Moins flexible hors de l'écosystème Microsoft</td></tr>
+            <tr><td>Make</td><td data-label="Idéal pour">Connecter Microsoft 365 à des outils tiers</td><td data-label="Limite principale">Cloud uniquement</td></tr>
+            <tr><td>n8n</td><td data-label="Idéal pour">Logiques complexes, hébergement maîtrisé</td><td data-label="Limite principale">Prise en main plus technique</td></tr>
           </tbody>
         </table>
       </div>

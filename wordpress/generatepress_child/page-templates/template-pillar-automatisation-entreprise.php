@@ -127,11 +127,11 @@ if ( ! defined( 'ABSPATH' ) ) {
             <tr><th>Service</th><th>Gain de temps observé</th><th>Complexité de mise en place</th><th>Délai type</th></tr>
           </thead>
           <tbody>
-            <tr><td>Relances clients &amp; comptabilité</td><td>≈ 1 journée / mois</td><td>Faible</td><td>1 à 2 semaines</td></tr>
-            <tr><td>Onboarding RH</td><td>2 jours → 2 heures / embauche</td><td>Moyenne</td><td>2 à 3 semaines</td></tr>
-            <tr><td>CRM &amp; suivi commercial</td><td>0 prospect oublié</td><td>Moyenne</td><td>2 à 4 semaines</td></tr>
-            <tr><td>Reporting multi-outils</td><td>Tableaux toujours à jour</td><td>Moyenne à élevée</td><td>3 à 4 semaines</td></tr>
-            <tr><td>Documents &amp; tâches administratives</td><td>≈ 5 à 10 h / semaine</td><td>Faible à moyenne</td><td>1 à 2 semaines</td></tr>
+            <tr><td>Relances clients &amp; comptabilité</td><td data-label="Gain de temps observé">≈ 1 journée / mois</td><td data-label="Complexité de mise en place">Faible</td><td data-label="Délai type">1 à 2 semaines</td></tr>
+            <tr><td>Onboarding RH</td><td data-label="Gain de temps observé">2 jours → 2 heures / embauche</td><td data-label="Complexité de mise en place">Moyenne</td><td data-label="Délai type">2 à 3 semaines</td></tr>
+            <tr><td>CRM &amp; suivi commercial</td><td data-label="Gain de temps observé">0 prospect oublié</td><td data-label="Complexité de mise en place">Moyenne</td><td data-label="Délai type">2 à 4 semaines</td></tr>
+            <tr><td>Reporting multi-outils</td><td data-label="Gain de temps observé">Tableaux toujours à jour</td><td data-label="Complexité de mise en place">Moyenne à élevée</td><td data-label="Délai type">3 à 4 semaines</td></tr>
+            <tr><td>Documents &amp; tâches administratives</td><td data-label="Gain de temps observé">≈ 5 à 10 h / semaine</td><td data-label="Complexité de mise en place">Faible à moyenne</td><td data-label="Délai type">1 à 2 semaines</td></tr>
           </tbody>
         </table>
       </div>

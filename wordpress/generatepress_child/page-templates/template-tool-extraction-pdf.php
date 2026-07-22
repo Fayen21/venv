@@ -64,9 +64,9 @@ if ( ! defined( 'ABSPATH' ) ) {
             <tr><th>Type de PDF</th><th>Traitement nécessaire</th><th>Fiabilité</th></tr>
           </thead>
           <tbody>
-            <tr><td>PDF natif (texte sélectionnable)</td><td>Extraction directe, pas d'OCR</td><td>Très élevée</td></tr>
-            <tr><td>PDF scanné net</td><td>OCR puis extraction</td><td>Élevée</td></tr>
-            <tr><td>Photo de document</td><td>OCR puis extraction, avec contrôle renforcé</td><td>Variable selon la qualité</td></tr>
+            <tr><td>PDF natif (texte sélectionnable)</td><td data-label="Traitement nécessaire">Extraction directe, pas d'OCR</td><td data-label="Fiabilité">Très élevée</td></tr>
+            <tr><td>PDF scanné net</td><td data-label="Traitement nécessaire">OCR puis extraction</td><td data-label="Fiabilité">Élevée</td></tr>
+            <tr><td>Photo de document</td><td data-label="Traitement nécessaire">OCR puis extraction, avec contrôle renforcé</td><td data-label="Fiabilité">Variable selon la qualité</td></tr>
           </tbody>
         </table>
       </div>

@@ -69,10 +69,10 @@ if ( ! defined( 'ABSPATH' ) ) {
             <tr><th>Étape</th><th>Manuelle</th><th>Automatisée</th></tr>
           </thead>
           <tbody>
-            <tr><td>Génération de la facture</td><td>10 à 20 min par facture</td><td>Automatique, quelques secondes</td></tr>
-            <tr><td>Envoi au client</td><td>Manuel, parfois oublié</td><td>Systématique et tracé</td></tr>
-            <tr><td>Relance en cas d'impayé</td><td>Faite au cas par cas</td><td>Déclenchée automatiquement selon un calendrier</td></tr>
-            <tr><td>Rapprochement paiement / facture</td><td>Pointage manuel mensuel</td><td>Continu, écarts signalés</td></tr>
+            <tr><td>Génération de la facture</td><td data-label="Manuelle">10 à 20 min par facture</td><td data-label="Automatisée">Automatique, quelques secondes</td></tr>
+            <tr><td>Envoi au client</td><td data-label="Manuelle">Manuel, parfois oublié</td><td data-label="Automatisée">Systématique et tracé</td></tr>
+            <tr><td>Relance en cas d'impayé</td><td data-label="Manuelle">Faite au cas par cas</td><td data-label="Automatisée">Déclenchée automatiquement selon un calendrier</td></tr>
+            <tr><td>Rapprochement paiement / facture</td><td data-label="Manuelle">Pointage manuel mensuel</td><td data-label="Automatisée">Continu, écarts signalés</td></tr>
           </tbody>
         </table>
       </div>
