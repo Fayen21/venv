@@ -31,7 +31,7 @@ $eb_is_pillar = eb_is_pillar_page( $eb_current );
   <div class="topbar__inner">
     <div class="topbar__label">Consultant indépendant en automatisation &amp; IA · TPE-PME françaises</div>
     <div class="topbar__links">
-      <a href="tel:+33695204127"><span aria-hidden="true"><?php echo eb_contact_icon( 'phone', 14, '2' ); ?></span> 06 95 20 41 27</a>
+      <a href="tel:+33743296698"><span aria-hidden="true"><?php echo eb_contact_icon( 'phone', 14, '2' ); ?></span> 07 43 29 66 98</a>
       <a href="mailto:emmanuel@eb-automatisation.fr"><span aria-hidden="true"><?php echo eb_contact_icon( 'email', 14, '1.8' ); ?></span> emmanuel@eb-automatisation.fr</a>
     </div>
   </div>

@@ -26,7 +26,7 @@ if ( ! defined( 'ABSPATH' ) ) {
       Siège social : 650D Route de Gray, 21850 Saint-Apollinaire<br>
       N° TVA intracommunautaire : FR82106501141<br>
       E-mail : <a href="mailto:emmanuel@eb-automatisation.fr">emmanuel@eb-automatisation.fr</a><br>
-      Téléphone : <a href="tel:+33695204127">06 95 20 41 27</a></p>
+      Téléphone : <a href="tel:+33743296698">07 43 29 66 98</a></p>
 
       <h2 style="font-size:22px;margin-top:36px;margin-bottom:14px;">Directeur de la publication</h2>
       <p>Emmanuel Brançon, en qualité de gérant de l'entreprise individuelle.</p>

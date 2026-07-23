@@ -595,11 +595,74 @@ function eb_enqueue_assets() {
 			array(
 				'homeUrl'    => eb_url( 'index' ),
 				'webhookUrl' => EB_AUDIT_WEBHOOK_URL,
+				'ajaxUrl'    => admin_url( 'admin-ajax.php' ),
+				'nonce'      => wp_create_nonce( 'eb_audit_submit' ),
 			)
 		);
 	}
 }
 add_action( 'wp_enqueue_scripts', 'eb_enqueue_assets' );
+
+/**
+ * Traitement serveur du formulaire /audit/ : envoie un email à l'adresse de
+ * contact du site via wp_mail(), avec Reply-To réglé sur l'email du
+ * demandeur pour pouvoir lui répondre directement depuis sa messagerie.
+ * Fonctionne dès l'installation, sans configuration — contrairement au
+ * webhook Make optionnel ci-dessus (EB_AUDIT_WEBHOOK_URL).
+ */
+function eb_handle_audit_submission() {
+	check_ajax_referer( 'eb_audit_submit', 'nonce' );
+
+	// Piège à robots : un champ caché rempli signale un bot — on répond
+	// succès sans rien envoyer, pour ne pas le renseigner sur la détection.
+	if ( ! empty( $_POST['website'] ) ) {
+		wp_send_json_success();
+	}
+
+	$prenom     = isset( $_POST['prenom'] ) ? sanitize_text_field( wp_unslash( $_POST['prenom'] ) ) : '';
+	$nom        = isset( $_POST['nom'] ) ? sanitize_text_field( wp_unslash( $_POST['nom'] ) ) : '';
+	$entreprise = isset( $_POST['entreprise'] ) ? sanitize_text_field( wp_unslash( $_POST['entreprise'] ) ) : '';
+	$email      = isset( $_POST['email'] ) ? sanitize_email( wp_unslash( $_POST['email'] ) ) : '';
+	$telephone  = isset( $_POST['telephone'] ) ? sanitize_text_field( wp_unslash( $_POST['telephone'] ) ) : '';
+	$besoin     = isset( $_POST['besoin'] ) ? sanitize_textarea_field( wp_unslash( $_POST['besoin'] ) ) : '';
+	$page       = isset( $_POST['page'] ) ? esc_url_raw( wp_unslash( $_POST['page'] ) ) : '';
+
+	if ( '' === $prenom || ! is_email( $email ) || '' === $besoin ) {
+		wp_send_json_error( array( 'message' => 'Champs obligatoires manquants.' ), 400 );
+	}
+
+	$subject = "Nouvelle demande d'audit — " . $prenom . ( $nom ? ' ' . $nom : '' );
+
+	$body = implode(
+		"\n",
+		array(
+			"Nouvelle demande d'audit gratuit depuis le site.",
+			'',
+			'Prénom : ' . $prenom,
+			'Nom : ' . ( $nom ? $nom : '—' ),
+			'Entreprise : ' . ( $entreprise ? $entreprise : '—' ),
+			'Email : ' . $email,
+			'Téléphone : ' . ( $telephone ? $telephone : '—' ),
+			'',
+			'Besoin décrit :',
+			$besoin,
+			'',
+			'Page : ' . $page,
+		)
+	);
+
+	$headers = array( 'Reply-To: ' . $prenom . ' <' . $email . '>' );
+
+	$sent = wp_mail( 'emmanuel@eb-automatisation.fr', $subject, $body, $headers );
+
+	if ( $sent ) {
+		wp_send_json_success();
+	}
+
+	wp_send_json_error( array( 'message' => "Échec de l'envoi." ), 500 );
+}
+add_action( 'wp_ajax_eb_audit_submit', 'eb_handle_audit_submission' );
+add_action( 'wp_ajax_nopriv_eb_audit_submit', 'eb_handle_audit_submission' );
 
 /**
  * Retire le style principal du parent GeneratePress : ses règles de base

@@ -37,7 +37,7 @@ if ( ! defined( 'ABSPATH' ) ) {
         </div>
       </div>
 
-      <div class="audit-alt-contact">Pas envie de remplir un formulaire ? <a href="tel:+33695204127">Appelez-moi</a> ou <a href="mailto:emmanuel@eb-automatisation.fr">écrivez-moi</a> directement.</div>
+      <div class="audit-alt-contact">Pas envie de remplir un formulaire ? <a href="tel:+33743296698">Appelez-moi</a> ou <a href="mailto:emmanuel@eb-automatisation.fr">écrivez-moi</a> directement.</div>
     </div>
 
     <!-- colonne droite : formulaire / succès -->
@@ -74,7 +74,7 @@ if ( ! defined( 'ABSPATH' ) ) {
           </div>
           <div class="audit-form__row">
             <label class="audit-form__label" for="f-tel">Téléphone <span class="audit-form__optional">(optionnel)</span></label>
-            <input class="audit-form__input" type="tel" id="f-tel" name="telephone" autocomplete="tel" placeholder="06 95 20 41 27">
+            <input class="audit-form__input" type="tel" id="f-tel" name="telephone" autocomplete="tel" placeholder="07 43 29 66 98">
           </div>
           <div class="audit-form__row audit-form__row--full">
             <label class="audit-form__label" for="f-besoin">Décrivez votre besoin *</label>
@@ -100,9 +100,9 @@ if ( ! defined( 'ABSPATH' ) ) {
         </div>
 
         <div class="audit-success__tiles">
-          <a href="tel:+33695204127" class="audit-success__tile">
+          <a href="tel:+33743296698" class="audit-success__tile">
             <?php echo eb_contact_icon( 'phone-alt', 22, '1.6' ); ?>
-            <span>06 95 20 41 27</span>
+            <span>07 43 29 66 98</span>
           </a>
           <a href="mailto:emmanuel@eb-automatisation.fr" class="audit-success__tile">
             <?php echo eb_contact_icon( 'email', 22, '1.6' ); ?>

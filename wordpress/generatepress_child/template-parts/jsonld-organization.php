@@ -24,7 +24,7 @@ $organization = array(
 		'height' => 256,
 	),
 	'image'       => $logo,
-	'telephone'   => '+33695204127',
+	'telephone'   => '+33743296698',
 	'email'       => 'emmanuel@eb-automatisation.fr',
 	'address'     => array(
 		'@type'           => 'PostalAddress',
@@ -70,7 +70,7 @@ $organization = array(
 	),
 	'contactPoint' => array(
 		'@type'             => 'ContactPoint',
-		'telephone'         => '+33695204127',
+		'telephone'         => '+33743296698',
 		'email'             => 'emmanuel@eb-automatisation.fr',
 		'contactType'       => 'customer service',
 		'areaServed'        => 'FR',

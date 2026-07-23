@@ -114,35 +114,49 @@
       return;
     }
 
+    var ajaxUrl = (window.ebSiteData && window.ebSiteData.ajaxUrl) || '';
+    var nonce = (window.ebSiteData && window.ebSiteData.nonce) || '';
     var webhookUrl = (window.ebSiteData && window.ebSiteData.webhookUrl) || '';
 
-    // Webhook non configuré : on garde le comportement de démonstration
-    // (aucun envoi réseau), pour que le site reste fonctionnel tel quel.
-    if (!webhookUrl) {
-      showSuccess();
-      return;
-    }
-
-    var payload = {
+    var fields = {
       prenom: fieldValue('f-prenom'),
       nom: fieldValue('f-nom'),
       entreprise: fieldValue('f-entreprise'),
       email: fieldValue('f-email'),
       telephone: fieldValue('f-tel'),
       besoin: fieldValue('f-besoin'),
-      page: window.location.href,
-      submittedAt: new Date().toISOString()
+      website: fieldValue('f-website'),
+      page: window.location.href
     };
+
+    // Aucun endpoint WordPress disponible (ex. aperçu statique hors
+    // WordPress) : on garde le comportement de démonstration.
+    if (!ajaxUrl) {
+      showSuccess();
+      return;
+    }
 
     isSubmitting = true;
 
-    fetch(webhookUrl, {
+    // Envoi réel : POST vers admin-ajax.php, traité côté serveur par
+    // eb_handle_audit_submission() (functions.php) qui envoie un email via
+    // wp_mail() — fonctionne sans configuration supplémentaire.
+    var body = [];
+    var postFields = { action: 'eb_audit_submit', nonce: nonce };
+    Object.keys(fields).forEach(function (key) { postFields[key] = fields[key]; });
+    Object.keys(postFields).forEach(function (key) {
+      body.push(encodeURIComponent(key) + '=' + encodeURIComponent(postFields[key]));
+    });
+
+    fetch(ajaxUrl, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload)
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: body.join('&')
     }).then(function (response) {
+      return response.json().catch(function () { return null; });
+    }).then(function (json) {
       isSubmitting = false;
-      if (response.ok) {
+      if (json && json.success) {
         showSuccess();
       } else {
         showServerError();
@@ -151,6 +165,25 @@
       isSubmitting = false;
       showServerError();
     });
+
+    // Webhook Make optionnel, best-effort en plus de l'email : ne bloque
+    // jamais l'affichage du succès s'il n'est pas configuré ou échoue.
+    if (webhookUrl) {
+      fetch(webhookUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          prenom: fields.prenom,
+          nom: fields.nom,
+          entreprise: fields.entreprise,
+          email: fields.email,
+          telephone: fields.telephone,
+          besoin: fields.besoin,
+          page: fields.page,
+          submittedAt: new Date().toISOString()
+        })
+      }).catch(function () {});
+    }
   });
 
   if (backBtn) {
