@@ -54,6 +54,7 @@ function eb_url( $page ) {
 		'extraction-pdf'            => home_url( '/extraction-pdf/' ),
 		'automatisation-facturation' => home_url( '/automatisation-facturation/' ),
 		'tarifs'                    => home_url( '/tarifs/' ),
+		'programme-pilote'          => home_url( '/programme-pilote/' ),
 		'mentions-legales'          => home_url( '/mentions-legales/' ),
 		'confidentialite'           => home_url( '/confidentialite/' ),
 		'rgpd'                      => home_url( '/rgpd/' ),
@@ -426,6 +427,7 @@ function eb_current_page_key() {
 		'page-templates/template-tool-extraction-pdf.php'              => 'extraction-pdf',
 		'page-templates/template-tool-automatisation-facturation.php'  => 'automatisation-facturation',
 		'page-templates/template-tarifs.php'                           => 'tarifs',
+		'page-templates/template-programme-pilote.php'                 => 'programme-pilote',
 		'page-templates/template-mentions-legales.php'                 => 'mentions-legales',
 		'page-templates/template-confidentialite.php'                  => 'confidentialite',
 		'page-templates/template-rgpd.php'                             => 'rgpd',
@@ -466,6 +468,7 @@ function eb_hero_fx_effects() {
 		'apropos'                      => 'constellation',
 		'audit'                        => 'constellation',
 		'tarifs'                       => 'constellation',
+		'programme-pilote'             => 'constellation',
 		'automatisation-entreprise'    => 'network',
 		'automatisation-processus'     => 'globe',
 		'automatisation-ia'            => 'orbit',
@@ -537,6 +540,7 @@ function eb_enqueue_assets() {
 	$page_css_map = array(
 		'index'                     => 'home',
 		'tarifs'                    => 'tarifs',
+		'programme-pilote'          => 'programme-pilote',
 		'solutions'                 => 'solutions',
 		'realisations'               => 'realisations',
 		'apropos'                   => 'apropos',
@@ -566,6 +570,13 @@ function eb_enqueue_assets() {
 		wp_enqueue_style( 'eb-page-' . $file, EB_THEME_URI . '/assets/css/pages/' . $file . '.css', array( 'eb-utilities' ), filemtime( EB_THEME_DIR . '/assets/css/pages/' . $file . '.css' ) );
 	}
 
+	// Programme pilote : réutilise tel quel le layout hero/formulaire/succès
+	// de la page Audit (colonne sticky + formulaire carte), donc dépend
+	// aussi de audit.css en plus de son propre fichier de page.
+	if ( 'programme-pilote' === $page ) {
+		wp_enqueue_style( 'eb-page-audit', EB_THEME_URI . '/assets/css/pages/audit.css', array( 'eb-utilities' ), filemtime( EB_THEME_DIR . '/assets/css/pages/audit.css' ) );
+	}
+
 	// JS — main.js partout, home.js/audit.js seulement sur leur page respective (comme en HTML).
 	wp_enqueue_script( 'eb-main', EB_THEME_URI . '/assets/js/main.js', array(), filemtime( EB_THEME_DIR . '/assets/js/main.js' ), true );
 
@@ -577,7 +588,7 @@ function eb_enqueue_assets() {
 	// toutes les pages piliers/outils (cf. eb_hero_fx_effects() pour le
 	// mapping page → effet) et, seulement sur le bloc H1, la page Audit.
 	// Jamais sur les pages légales, qui n'utilisent aucun gabarit de hero.
-	if ( 'index' === $page || 'solutions' === $page || 'realisations' === $page || 'apropos' === $page || 'audit' === $page || 'tarifs' === $page || eb_is_pillar_page( $page ) ) {
+	if ( 'index' === $page || 'solutions' === $page || 'realisations' === $page || 'apropos' === $page || 'audit' === $page || 'tarifs' === $page || 'programme-pilote' === $page || eb_is_pillar_page( $page ) ) {
 		wp_enqueue_style( 'eb-hero-fx', EB_THEME_URI . '/assets/css/hero-fx.css', array( 'eb-utilities' ), filemtime( EB_THEME_DIR . '/assets/css/hero-fx.css' ) );
 		wp_enqueue_script( 'eb-hero-fx', EB_THEME_URI . '/assets/js/hero-fx.js', array(), filemtime( EB_THEME_DIR . '/assets/js/hero-fx.js' ), true );
 	}
@@ -597,6 +608,19 @@ function eb_enqueue_assets() {
 				'webhookUrl' => EB_AUDIT_WEBHOOK_URL,
 				'ajaxUrl'    => admin_url( 'admin-ajax.php' ),
 				'nonce'      => wp_create_nonce( 'eb_audit_submit' ),
+			)
+		);
+	}
+
+	if ( 'programme-pilote' === $page ) {
+		wp_enqueue_script( 'eb-programme-pilote', EB_THEME_URI . '/assets/js/programme-pilote.js', array(), filemtime( EB_THEME_DIR . '/assets/js/programme-pilote.js' ), true );
+		wp_localize_script(
+			'eb-programme-pilote',
+			'ebSiteData',
+			array(
+				'homeUrl' => eb_url( 'index' ),
+				'ajaxUrl' => admin_url( 'admin-ajax.php' ),
+				'nonce'   => wp_create_nonce( 'eb_pilot_submit' ),
 			)
 		);
 	}
@@ -663,6 +687,112 @@ function eb_handle_audit_submission() {
 }
 add_action( 'wp_ajax_eb_audit_submit', 'eb_handle_audit_submission' );
 add_action( 'wp_ajax_nopriv_eb_audit_submit', 'eb_handle_audit_submission' );
+
+/**
+ * Configuration du programme pilote — point unique et éditable pour ouvrir,
+ * fermer, changer le nombre de places, le secteur ciblé ou le texte de la
+ * campagne en cours, sans toucher au template ni au reste du code.
+ */
+function eb_pilot_campaign() {
+	return array(
+		'status' => 'open', // 'open' ou 'closed'.
+		'places' => 3,
+		'secteur' => '', // Secteur prioritaire de la campagne en cours (facultatif, ex. "organismes de formation").
+		'open'   => array(
+			'badge' => 'Candidatures ouvertes',
+			'title' => '%d accompagnements pilotes actuellement ouverts',
+			'text'  => "Nous recherchons actuellement des entreprises ayant une tâche administrative répétitive clairement identifiée, notamment autour d'Excel, des e-mails, des relances, des documents ou du reporting.",
+			'cta'   => 'Déposer ma candidature',
+		),
+		'closed' => array(
+			'badge' => 'Candidatures temporairement fermées',
+			'title' => 'Les places de la sélection en cours ont été attribuées.',
+			'text'  => "Vous pouvez toutefois laisser vos coordonnées afin d'être informé(e) de la prochaine ouverture du programme pilote.",
+			'cta'   => 'Être informé(e) de la prochaine sélection',
+		),
+	);
+}
+
+/**
+ * Traitement serveur du formulaire /programme-pilote/ : même principe que
+ * eb_handle_audit_submission() (wp_mail natif, Reply-To sur l'email du
+ * candidat), avec le jeu de champs propre à la candidature pilote et les
+ * paramètres UTM/campagne transmis pour traçabilité.
+ */
+function eb_handle_pilot_submission() {
+	check_ajax_referer( 'eb_pilot_submit', 'nonce' );
+
+	// Piège à robots : un champ caché rempli signale un bot — on répond
+	// succès sans rien envoyer, pour ne pas le renseigner sur la détection.
+	if ( ! empty( $_POST['website'] ) ) {
+		wp_send_json_success();
+	}
+
+	$prenom           = isset( $_POST['prenom'] ) ? sanitize_text_field( wp_unslash( $_POST['prenom'] ) ) : '';
+	$nom              = isset( $_POST['nom'] ) ? sanitize_text_field( wp_unslash( $_POST['nom'] ) ) : '';
+	$entreprise       = isset( $_POST['entreprise'] ) ? sanitize_text_field( wp_unslash( $_POST['entreprise'] ) ) : '';
+	$email            = isset( $_POST['email'] ) ? sanitize_email( wp_unslash( $_POST['email'] ) ) : '';
+	$telephone        = isset( $_POST['telephone'] ) ? sanitize_text_field( wp_unslash( $_POST['telephone'] ) ) : '';
+	$secteur_activite = isset( $_POST['secteur_activite'] ) ? sanitize_text_field( wp_unslash( $_POST['secteur_activite'] ) ) : '';
+	$taille           = isset( $_POST['taille_entreprise'] ) ? sanitize_text_field( wp_unslash( $_POST['taille_entreprise'] ) ) : '';
+	$besoin           = isset( $_POST['besoin'] ) ? sanitize_textarea_field( wp_unslash( $_POST['besoin'] ) ) : '';
+	$outils           = isset( $_POST['outils'] ) && is_array( $_POST['outils'] ) ? array_map( 'sanitize_text_field', wp_unslash( $_POST['outils'] ) ) : array();
+	$consent          = ! empty( $_POST['consent'] );
+	$page             = isset( $_POST['page'] ) ? esc_url_raw( wp_unslash( $_POST['page'] ) ) : '';
+
+	$utm_source     = isset( $_POST['utm_source'] ) ? sanitize_text_field( wp_unslash( $_POST['utm_source'] ) ) : '';
+	$utm_medium     = isset( $_POST['utm_medium'] ) ? sanitize_text_field( wp_unslash( $_POST['utm_medium'] ) ) : '';
+	$utm_campaign   = isset( $_POST['utm_campaign'] ) ? sanitize_text_field( wp_unslash( $_POST['utm_campaign'] ) ) : '';
+	$utm_content    = isset( $_POST['utm_content'] ) ? sanitize_text_field( wp_unslash( $_POST['utm_content'] ) ) : '';
+	$campagne       = isset( $_POST['campagne'] ) ? sanitize_text_field( wp_unslash( $_POST['campagne'] ) ) : '';
+	$secteur_campagne = isset( $_POST['secteur_campagne'] ) ? sanitize_text_field( wp_unslash( $_POST['secteur_campagne'] ) ) : '';
+
+	if ( '' === $prenom || '' === $nom || '' === $entreprise || ! is_email( $email ) || '' === $besoin || ! $consent ) {
+		wp_send_json_error( array( 'message' => 'Champs obligatoires manquants.' ), 400 );
+	}
+
+	$subject = 'Nouvelle candidature — programme pilote — ' . $prenom . ' ' . $nom . ' (' . $entreprise . ')';
+
+	$body = implode(
+		"\n",
+		array(
+			'Nouvelle candidature au programme pilote depuis le site.',
+			'',
+			'Prénom : ' . $prenom,
+			'Nom : ' . $nom,
+			'Entreprise : ' . $entreprise,
+			'Email : ' . $email,
+			'Téléphone : ' . ( $telephone ? $telephone : '—' ),
+			'Secteur d\'activité : ' . ( $secteur_activite ? $secteur_activite : '—' ),
+			'Taille de l\'entreprise : ' . ( $taille ? $taille : '—' ),
+			'Outils utilisés : ' . ( $outils ? implode( ', ', $outils ) : '—' ),
+			'',
+			'Tâche à automatiser :',
+			$besoin,
+			'',
+			'--- Traçabilité campagne ---',
+			'Page : ' . $page,
+			'Campagne (champ caché) : ' . ( $campagne ? $campagne : '—' ),
+			'Secteur ciblé (URL) : ' . ( $secteur_campagne ? $secteur_campagne : '—' ),
+			'utm_source : ' . ( $utm_source ? $utm_source : '—' ),
+			'utm_medium : ' . ( $utm_medium ? $utm_medium : '—' ),
+			'utm_campaign : ' . ( $utm_campaign ? $utm_campaign : '—' ),
+			'utm_content : ' . ( $utm_content ? $utm_content : '—' ),
+		)
+	);
+
+	$headers = array( 'Reply-To: ' . $prenom . ' ' . $nom . ' <' . $email . '>' );
+
+	$sent = wp_mail( 'emmanuel@eb-automatisation.fr', $subject, $body, $headers );
+
+	if ( $sent ) {
+		wp_send_json_success();
+	}
+
+	wp_send_json_error( array( 'message' => "Échec de l'envoi." ), 500 );
+}
+add_action( 'wp_ajax_eb_pilot_submit', 'eb_handle_pilot_submission' );
+add_action( 'wp_ajax_nopriv_eb_pilot_submit', 'eb_handle_pilot_submission' );
 
 /**
  * Retire le style principal du parent GeneratePress : ses règles de base
@@ -795,6 +925,24 @@ function eb_seo_data() {
 			'tw_title'    => "Audit gratuit — EB Automatisation",
 			'tw_desc'     => "45 minutes, sans engagement. Repartez avec des pistes d'automatisation concrètes.",
 			'canonical'   => eb_url( 'audit' ),
+		),
+		'programme-pilote'          => array(
+			'title'       => "Programme pilote automatisation PME | EB Automatisation",
+			'description' => "Candidatez au programme pilote EB Automatisation : une automatisation concrète pour réduire les tâches répétitives, à tarif préférentiel et avec un accompagnement cadré.",
+			'og_title'    => "Programme pilote automatisation PME | EB Automatisation",
+			'og_desc'     => "Candidatez au programme pilote EB Automatisation : une automatisation concrète pour réduire les tâches répétitives, à tarif préférentiel et avec un accompagnement cadré.",
+			'tw_title'    => "Programme pilote — EB Automatisation",
+			'tw_desc'     => "Candidatez au programme pilote : automatisation concrète, tarif préférentiel, accompagnement cadré.",
+			'canonical'   => eb_url( 'programme-pilote' ),
+			'faq'         => array(
+				array( 'q' => "À qui s'adresse le programme pilote ?", 'a' => "Le programme s'adresse aux indépendants, TPE et PME qui ont identifié une tâche répétitive et souhaitent étudier une automatisation concrète. Chaque candidature est évaluée selon son intérêt et sa faisabilité." ),
+				array( 'q' => "Est-ce que toutes les candidatures sont acceptées ?", 'a' => "Non. Les places sont limitées et les projets doivent être suffisamment cadrés pour être réalisés dans de bonnes conditions." ),
+				array( 'q' => "Quel type de tâche peut être automatisé ?", 'a' => "Cela peut concerner, par exemple, la préparation de fichiers, les relances, le traitement d'e-mails, la génération de documents, la mise à jour de tableaux ou certains reportings. La solution dépend toujours de vos outils et de votre besoin réel." ),
+				array( 'q' => "Devrai-je changer tous mes outils ?", 'a' => "Pas nécessairement. L'objectif est d'améliorer l'existant lorsque cela est pertinent, sans imposer une transformation inutile de vos habitudes de travail." ),
+				array( 'q' => "Mes données resteront-elles confidentielles ?", 'a' => "Oui. La confidentialité et la sécurité des informations sont prises en compte dès l'étude du besoin. Aucun élément identifiable n'est communiqué ou publié sans accord." ),
+				array( 'q' => "L'étude de cas sera-t-elle publiée au nom de mon entreprise ?", 'a' => "Non, pas dans le cadre standard du programme. Les retours d'expérience sont anonymisés. Toute utilisation du nom, du logo ou d'informations identifiantes nécessite un accord distinct." ),
+				array( 'q' => "Quel est le coût d'un accompagnement pilote ?", 'a' => "Le budget dépend du périmètre et des outils concernés. Après l'échange de qualification, une proposition claire et chiffrée vous est présentée avant tout démarrage." ),
+			),
 		),
 		'agence-ia'                 => array(
 			'title'       => "Agence IA ou consultant indépendant : que choisir en PME ?",

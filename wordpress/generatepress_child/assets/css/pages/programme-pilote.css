@@ -1,0 +1,94 @@
+/* Programme pilote — styles propres à cette page (hero + formulaire réutilisent
+   audit.css tel quel, voir eb_enqueue_assets()). */
+
+/* ---------- hero : actions + micro-réassurance ---------- */
+.pilot-hero__actions{ display:flex; flex-wrap:wrap; gap:14px; margin:28px 0 14px; }
+/* .btn/.btn-primary/.btn-secondary n'ont pas de padding par défaut (chaque
+   contexte d'usage le définit, cf. audit.css) : chaque bouton ajouté sur
+   cette page doit donc fixer le sien explicitement. */
+.pilot-hero__actions .btn{ padding:14px 22px; font-size:15px; }
+.pilot-hero__micro{ font-size:13px; color:var(--muted-on-navy); margin:0; }
+
+/* ---------- CTA "Comment ça marche" : .audit-steps__cta vit dans home.css,
+   non chargé sur cette page — on redéfinit juste son padding ici. ---------- */
+.audit-steps__cta{ padding:16px 30px; font-size:16px; box-shadow:var(--shadow-btn-orange-md); }
+
+/* ---------- CTA final : bouton secondaire à côté du bouton .cta-dotted déjà stylé ---------- */
+.pilot-final-cta__actions .btn-secondary{ padding:18px 32px; font-size:16.5px; white-space:nowrap; }
+
+/* ---------- formulaire : cases à cocher "outils" + consentement ---------- */
+.pilot-form__checks{
+  display:grid; grid-template-columns:1fr 1fr; gap:9px 14px;
+  padding:12px 14px; background:var(--bg-soft); border:1px solid var(--border-4); border-radius:10px;
+}
+.pilot-form__check{
+  display:flex; align-items:center; gap:8px;
+  font-size:14px; color:var(--navy); cursor:pointer;
+}
+.pilot-form__check input{ flex:none; width:16px; height:16px; accent-color:var(--orange); }
+
+.pilot-form__consent{
+  display:flex; align-items:flex-start; gap:10px;
+  font-size:13.5px; line-height:1.5; color:var(--text-3); cursor:pointer;
+}
+.pilot-form__consent input{ flex:none; width:17px; height:17px; margin-top:2px; accent-color:var(--orange); }
+.pilot-form__consent a{ color:var(--navy); font-weight:600; text-decoration:underline; }
+
+/* ---------- callout de transparence ---------- */
+.pilot-callout{
+  background:var(--orange-soft-bg); border:1px solid var(--orange-soft-border); border-radius:14px;
+  padding:20px 26px; text-align:center;
+}
+.pilot-callout p{ margin:0; font-size:14.5px; line-height:1.6; color:var(--navy); }
+
+/* ---------- 5 étapes "ce qui est inclus" : variante à 5 colonnes de .audit-steps ---------- */
+.pilot-steps-5{ grid-template-columns:repeat(5,1fr); }
+@media (max-width:1100px){
+  .pilot-steps-5{ grid-template-columns:repeat(3,1fr); }
+}
+@media (max-width:640px){
+  .pilot-steps-5{ grid-template-columns:1fr; }
+}
+
+/* ---------- campagne actuellement ouverte ---------- */
+.pilot-campaign{
+  max-width:760px; margin:0 auto; text-align:center;
+  background:var(--navy-gradient); border-radius:var(--r-5xl);
+  padding:44px 40px; display:flex; flex-direction:column; align-items:center; gap:14px;
+}
+.pilot-campaign h2{ color:#fff; font-size:26px; margin:0; max-width:520px; }
+.pilot-campaign p{ color:var(--muted-on-navy); font-size:15px; line-height:1.6; margin:0; max-width:560px; }
+.pilot-campaign .btn{ margin-top:10px; padding:15px 28px; font-size:15.5px; }
+.pilot-campaign--closed .badge-pill{ background:var(--orange-soft-bg); color:var(--navy); }
+
+/* ---------- FAQ en accordéons natifs (details/summary) ---------- */
+.pilot-faq{ max-width:760px; margin:0 auto; display:flex; flex-direction:column; gap:10px; }
+.pilot-faq__item{
+  background:#fff; border:1px solid var(--border-2); border-radius:14px; padding:4px 22px;
+}
+.pilot-faq__question{
+  cursor:pointer; list-style:none; padding:18px 28px 18px 0; position:relative;
+  font-family:var(--font-heading); font-weight:600; font-size:15.5px; color:var(--navy);
+}
+.pilot-faq__question::-webkit-details-marker{ display:none; }
+.pilot-faq__question::after{
+  content:'+'; position:absolute; right:0; top:50%; transform:translateY(-50%);
+  font-size:22px; line-height:1; color:var(--orange); font-weight:400;
+}
+.pilot-faq__item[open] .pilot-faq__question::after{ content:'−'; }
+.pilot-faq__answer{ margin:0 0 18px; font-size:14.5px; line-height:1.62; color:var(--text-3); }
+.pilot-faq__question:focus-visible{ outline:2px solid var(--orange); outline-offset:3px; border-radius:6px; }
+
+/* ---------- CTA final : deux boutons ---------- */
+.pilot-final-cta__actions{ display:flex; flex-wrap:wrap; gap:14px; align-items:center; }
+
+/* ==================== responsive ==================== */
+@media (max-width:640px){
+  .pilot-hero__actions{ flex-direction:column; }
+  .pilot-hero__actions .btn{ width:100%; justify-content:center; }
+  .pilot-form__checks{ grid-template-columns:1fr; }
+  .pilot-campaign{ padding:32px 24px; }
+  .pilot-campaign h2{ font-size:22px; }
+  .pilot-final-cta__actions{ flex-direction:column; width:100%; }
+  .pilot-final-cta__actions .btn{ width:100%; justify-content:center; }
+}
