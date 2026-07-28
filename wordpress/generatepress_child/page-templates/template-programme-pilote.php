@@ -20,7 +20,7 @@ $eb_pilot_faq    = isset( eb_seo_data()['programme-pilote']['faq'] ) ? eb_seo_da
     <div class="audit-side">
       <div class="eb-hero-fx audit-side__hero-fx">
       <?php eb_hero_fx( eb_hero_fx_effects()['programme-pilote'] ); ?>
-      <div class="eyebrow audit-side__eyebrow pilot-hero__badge">Programme pilote · Places limitées</div>
+      <div class="eyebrow audit-side__eyebrow pilot-hero__badge">Programme pilote · 3 accompagnements ouverts</div>
       <h1>Automatisez une tâche qui vous fait perdre du temps chaque semaine.</h1>
       <p class="audit-side__lead">EB Automatisation sélectionne ponctuellement quelques TPE et PME pour concevoir une automatisation concrète, à tarif pilote, avec un accompagnement cadré de A à Z.</p>
       <p class="audit-side__lead">Excel, e-mails, relances, documents, reporting : partons d'un problème réel de votre quotidien.</p>
@@ -29,8 +29,7 @@ $eb_pilot_faq    = isset( eb_seo_data()['programme-pilote']['faq'] ) ? eb_seo_da
         <a href="#pilot-form" class="btn btn-primary" data-pilot-scroll="pilot-form">Vérifier si mon besoin est adapté <span aria-hidden="true">→</span></a>
         <a href="#comment-ca-marche" class="btn btn-secondary">Voir comment cela fonctionne</a>
       </div>
-      <div class="pilot-hero__reassurance"><?php echo eb_reassurance_pill( 'Candidature sans engagement · Réponse après étude de votre besoin' ); ?></div>
-      </div>
+      <div class="pilot-hero__reassurance"><?php echo eb_reassurance_pill( 'Échange de qualification gratuit · Réponse sous 2 jours ouvrés' ); ?></div>
 
       <div class="audit-points">
         <div class="audit-point"><span class="audit-point__check" aria-hidden="true">✓</span><span class="audit-point__text">Un accompagnement cadré, de l'échange initial à la mise en service</span></div>
@@ -39,8 +38,9 @@ $eb_pilot_faq    = isset( eb_seo_data()['programme-pilote']['faq'] ) ? eb_seo_da
       </div>
 
       <div class="audit-side__reviews">
-        <?php echo eb_google_reviews_badge(); ?>
-        <a href="#avis" class="pilot-hero__reviews-link" data-pilot-scroll="avis">5,0/5 · 3 avis vérifiés · Lire les avis clients</a>
+        <?php echo eb_google_reviews_badge( true ); ?>
+        <a href="#avis" class="pilot-hero__reviews-link" data-pilot-scroll="avis">5,0/5 sur Google · 3 avis · Lire les avis clients</a>
+      </div>
       </div>
     </div>
 
@@ -129,7 +129,7 @@ $eb_pilot_faq    = isset( eb_seo_data()['programme-pilote']['faq'] ) ? eb_seo_da
           </div>
         </div>
 
-        <button type="submit" class="btn btn-primary audit-form__submit">Envoyer ma candidature <span aria-hidden="true">→</span></button>
+        <button type="submit" class="btn btn-primary audit-form__submit">Demander une étude de faisabilité <span aria-hidden="true">→</span></button>
         <p class="pilot-form__price-note">L'échange de qualification est gratuit et sans engagement. Si votre besoin est retenu, vous recevez ensuite une proposition chiffrée pour une prestation d'automatisation à tarif pilote.</p>
         <p class="audit-form__disclaimer">Vos données sont traitées dans le respect du RGPD et ne sont jamais cédées à un tiers.</p>
         <p id="pilot-form__server-error" class="audit-form__error" role="alert">Une erreur est survenue lors de l'envoi. Merci de réessayer, ou de nous <a href="mailto:emmanuel@eb-automatisation.fr">écrire directement</a>.</p>

@@ -3,10 +3,25 @@
    audit.css pour pouvoir surcharger son hero sans toucher à la page Audit,
    qui ne charge jamais ce fichier). */
 
-/* ---------- hero : contenu centré (mêmes principes que .hero__content sur
-   l'accueil : eyebrow/H1/lead/actions/réassurance centrés dans la carte). ---------- */
-.audit-side__hero-fx{ position:relative; text-align:center; }
-.audit-points{ align-items:center; }
+/* ---------- hero : une seule carte unifiée ----------
+   audit.css conçoit .audit-side__hero-fx comme un bloc H1/lead sur fond
+   sombre, suivi de .audit-points/.audit-side__reviews sur le fond clair de
+   .audit-side (c'est le cas voulu sur la page Audit). Ici, garanties et
+   preuve sociale sont désormais des enfants du même .audit-side__hero-fx
+   (déplacés dans le template) : tout partage donc déjà le même fond, les
+   mêmes bordures et le même rayon — il ne reste qu'à étendre le bloc sur
+   toute la hauteur disponible et à retirer le padding/margin pensés pour
+   un bloc qui s'arrêtait après le lead. */
+.audit-side__hero-fx{
+  position:relative; text-align:center;
+  display:flex; flex-direction:column; flex:1;
+  margin-bottom:0; padding-bottom:34px;
+}
+.audit-points{ align-items:center; margin-top:30px; }
+/* .audit-point__check/__text sont pensés pour le fond clair de .audit-side
+   (page Audit) — variante lisible sur le fond sombre de cette carte. */
+.audit-side__hero-fx .audit-point__check{ background:rgba(91,203,139,.16); color:var(--green-bright); }
+.audit-side__hero-fx .audit-point__text{ color:#CBD7EE; }
 
 /* ---------- hero : badge premium au-dessus du H1 ----------
    .eyebrow porte déjà la typo (majuscules, letter-spacing) via typography.css
@@ -68,12 +83,14 @@
 /* ---------- hero : bas de carte aligné avec le formulaire ----------
    .audit-layout passe de align-items:start (audit.css, pour la colonne
    sticky de la page Audit) à stretch : les deux colonnes occupent alors la
-   même hauteur, et .audit-side (mise en colonne flex) pousse son dernier
-   bloc (avis) tout en bas avec margin-top:auto, pour que la carte de
-   présentation et celle du formulaire se terminent au même niveau. */
+   même hauteur. .audit-side étire son unique enfant (.audit-side__hero-fx,
+   flex:1 ci-dessus) sur toute cette hauteur, et à l'intérieur de la carte,
+   le bloc avis est pousé tout en bas via margin-top:auto — la carte de
+   présentation et celle du formulaire commencent et se terminent donc au
+   même niveau, sans que rien ne "tombe" sur le fond blanc entre les deux. */
 .audit-layout{ align-items:stretch; }
-.audit-side{ display:flex; flex-direction:column; padding-bottom:10px; }
-.audit-side__reviews{ display:flex; flex-direction:column; align-items:center; gap:8px; margin-top:auto; padding-top:22px; }
+.audit-side{ display:flex; flex-direction:column; }
+.audit-side__reviews{ display:flex; flex-direction:column; align-items:center; gap:8px; margin-top:auto; padding-top:26px; }
 .pilot-hero__reviews-link{
   font-size:12.5px; font-weight:600; color:var(--muted-on-navy);
   text-decoration:none; border-bottom:1px solid rgba(157,170,194,.5);
