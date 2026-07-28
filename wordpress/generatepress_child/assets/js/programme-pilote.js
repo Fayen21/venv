@@ -102,10 +102,11 @@
     });
   })();
 
-  // ---------- défilement doux vers le formulaire pour les CTA de la page ----------
+  // ---------- défilement doux vers le formulaire (ou une autre ancre, ex. les avis) ----------
   document.querySelectorAll('[data-pilot-scroll]').forEach(function (link) {
     link.addEventListener('click', function (e) {
-      var target = document.getElementById('pilot-form');
+      var targetId = link.getAttribute('data-pilot-scroll') || 'pilot-form';
+      var target = document.getElementById(targetId);
       if (!target) return;
       e.preventDefault();
       target.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -139,9 +140,6 @@
 
     var ajaxUrl = (window.ebSiteData && window.ebSiteData.ajaxUrl) || '';
     var nonce = (window.ebSiteData && window.ebSiteData.nonce) || '';
-
-    var outils = Array.prototype.slice.call(form.querySelectorAll('input[name="outils[]"]:checked'))
-      .map(function (el) { return el.value; });
 
     var fields = {
       prenom: fieldValue('p-prenom'),
@@ -178,9 +176,6 @@
     Object.keys(fields).forEach(function (key) { postFields[key] = fields[key]; });
     Object.keys(postFields).forEach(function (key) {
       body.push(encodeURIComponent(key) + '=' + encodeURIComponent(postFields[key]));
-    });
-    outils.forEach(function (val) {
-      body.push(encodeURIComponent('outils[]') + '=' + encodeURIComponent(val));
     });
 
     fetch(ajaxUrl, {

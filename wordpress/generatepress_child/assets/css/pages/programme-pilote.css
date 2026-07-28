@@ -1,13 +1,62 @@
 /* Programme pilote — styles propres à cette page (hero + formulaire réutilisent
-   audit.css tel quel, voir eb_enqueue_assets()). */
+   audit.css tel quel, voir eb_enqueue_assets() — ce fichier est chargé APRÈS
+   audit.css pour pouvoir surcharger son hero sans toucher à la page Audit,
+   qui ne charge jamais ce fichier). */
+
+/* ---------- hero : badge premium au-dessus du H1 ----------
+   .eyebrow porte déjà la typo (majuscules, letter-spacing) via typography.css
+   et sa couleur orange via hero-fx.css — on ajoute juste l'habillage "pilule". */
+.pilot-hero__badge{
+  padding:7px 16px;
+  border-radius:999px;
+  background:rgba(221,122,51,.16);
+  border:1px solid rgba(221,122,51,.45);
+}
+
+/* ---------- hero : assombrissement léger + lueur de flux très lente derrière
+   le texte, pour renforcer le contraste sans toucher au canvas partagé
+   (hero-fx.js) ni aux autres pages qui réutilisent le même effet. ---------- */
+.audit-side__hero-fx{ position:relative; }
+.audit-side__hero-fx::before{
+  content:'';
+  position:absolute; inset:0; z-index:2; pointer-events:none;
+  background:
+    linear-gradient(120deg, transparent 42%, rgba(70,150,255,.05) 50%, transparent 58%),
+    radial-gradient(ellipse 75% 60% at 26% 34%, rgba(5,14,30,.6) 0%, rgba(5,14,30,.24) 46%, rgba(5,14,30,0) 76%);
+  background-size:280% 280%, 100% 100%;
+  background-position:0% 0%, 0 0;
+  animation:pilotFlowDrift 38s linear infinite;
+}
+@keyframes pilotFlowDrift{
+  0%{ background-position:0% 0%, 0 0; }
+  100%{ background-position:100% 100%, 0 0; }
+}
+@media (prefers-reduced-motion: reduce){
+  .audit-side__hero-fx::before{ animation:none; }
+}
+
+/* texte plus lisible sur fond sombre : override plus spécifique que la règle
+   partagée .eb-hero-fx .audit-side__lead (hero-fx.css, chargé après ce
+   fichier) pour gagner la cascade sans !important. */
+.audit-side .audit-side__hero-fx .audit-side__lead{ color:#CBD7EE; }
 
 /* ---------- hero : actions + micro-réassurance ---------- */
-.pilot-hero__actions{ display:flex; flex-wrap:wrap; gap:14px; margin:28px 0 14px; }
+.pilot-hero__actions{ display:flex; flex-wrap:wrap; justify-content:center; gap:14px; margin:28px 0 14px; }
 /* .btn/.btn-primary/.btn-secondary n'ont pas de padding par défaut (chaque
    contexte d'usage le définit, cf. audit.css) : chaque bouton ajouté sur
    cette page doit donc fixer le sien explicitement. */
 .pilot-hero__actions .btn{ padding:14px 22px; font-size:15px; }
-.pilot-hero__micro{ font-size:13px; color:var(--muted-on-navy); margin:0; }
+.pilot-hero__micro{ font-size:13px; color:rgba(255,255,255,.62); margin:0; text-align:center; }
+
+/* ---------- hero : lien vers les avis, à côté du badge Google ---------- */
+.audit-side__reviews{ display:flex; flex-direction:column; align-items:center; gap:8px; }
+.pilot-hero__reviews-link{
+  font-size:12.5px; font-weight:600; color:var(--muted-on-navy);
+  text-decoration:none; border-bottom:1px solid rgba(157,170,194,.5);
+  padding-bottom:1px;
+}
+.pilot-hero__reviews-link:hover,
+.pilot-hero__reviews-link:focus-visible{ color:#fff; border-bottom-color:#fff; }
 
 /* ---------- CTA "Comment ça marche" : .audit-steps__cta vit dans home.css,
    non chargé sur cette page — on redéfinit juste son padding ici. ---------- */
@@ -16,16 +65,12 @@
 /* ---------- CTA final : bouton secondaire à côté du bouton .cta-dotted déjà stylé ---------- */
 .pilot-final-cta__actions .btn-secondary{ padding:18px 32px; font-size:16.5px; white-space:nowrap; }
 
-/* ---------- formulaire : cases à cocher "outils" + consentement ---------- */
-.pilot-form__checks{
-  display:grid; grid-template-columns:1fr 1fr; gap:9px 14px;
-  padding:12px 14px; background:var(--bg-soft); border:1px solid var(--border-4); border-radius:10px;
+/* ---------- formulaire : précision gratuit/payant + consentement ---------- */
+.pilot-form__price-note{
+  margin:16px 0 0; padding:14px 18px;
+  background:var(--bg-soft); border:1px solid var(--border-4); border-radius:10px;
+  font-size:13px; line-height:1.55; color:var(--text-3); text-align:center;
 }
-.pilot-form__check{
-  display:flex; align-items:center; gap:8px;
-  font-size:14px; color:var(--navy); cursor:pointer;
-}
-.pilot-form__check input{ flex:none; width:16px; height:16px; accent-color:var(--orange); }
 
 .pilot-form__consent{
   display:flex; align-items:flex-start; gap:10px;
@@ -34,6 +79,20 @@
 .pilot-form__consent input{ flex:none; width:17px; height:17px; margin-top:2px; accent-color:var(--orange); }
 .pilot-form__consent a{ color:var(--navy); font-weight:600; text-decoration:underline; }
 
+/* ---------- cartes "le programme en bref" : profondeur discrète au survol
+   (mêmes teintes que .audit-success__tile:hover ailleurs sur le site) —
+   sûr à écrire ici même sur un sélecteur partagé (.differentiators__card),
+   puisque ce fichier ne charge que sur cette page. ---------- */
+.differentiators__card{ transition:box-shadow .2s ease, border-color .2s ease, transform .2s ease; }
+.differentiators__card:hover{
+  transform:translateY(-2px);
+  box-shadow:0 16px 32px -18px rgba(46,155,255,.35);
+}
+@media (prefers-reduced-motion: reduce){
+  .differentiators__card{ transition:none; }
+  .differentiators__card:hover{ transform:none; }
+}
+
 /* ---------- callout de transparence ---------- */
 .pilot-callout{
   background:var(--orange-soft-bg); border:1px solid var(--orange-soft-border); border-radius:14px;
@@ -41,8 +100,14 @@
 }
 .pilot-callout p{ margin:0; font-size:14.5px; line-height:1.6; color:var(--navy); }
 
-/* ---------- 5 étapes "ce qui est inclus" : variante à 5 colonnes de .audit-steps ---------- */
+/* ---------- 5 étapes "ce qui est inclus" : variante à 5 colonnes de .audit-steps,
+   avec une légère lueur sur les repères numérotés pour appuyer l'idée de
+   méthode/parcours (mêmes teintes bleues que le reste du site). ---------- */
 .pilot-steps-5{ grid-template-columns:repeat(5,1fr); }
+.pilot-steps-5 .audit-step__num,
+#comment-ca-marche .audit-step__num{
+  box-shadow:0 8px 20px -8px rgba(30,95,208,.6), 0 0 0 3px rgba(70,150,255,.1);
+}
 @media (max-width:1100px){
   .pilot-steps-5{ grid-template-columns:repeat(3,1fr); }
 }
@@ -55,6 +120,7 @@
   max-width:760px; margin:0 auto; text-align:center;
   background:var(--navy-gradient); border-radius:var(--r-5xl);
   padding:44px 40px; display:flex; flex-direction:column; align-items:center; gap:14px;
+  box-shadow:0 30px 60px -30px rgba(12,30,60,.5);
 }
 .pilot-campaign h2{ color:#fff; font-size:26px; margin:0; max-width:520px; }
 .pilot-campaign p{ color:var(--muted-on-navy); font-size:15px; line-height:1.6; margin:0; max-width:560px; }
@@ -86,7 +152,6 @@
 @media (max-width:640px){
   .pilot-hero__actions{ flex-direction:column; }
   .pilot-hero__actions .btn{ width:100%; justify-content:center; }
-  .pilot-form__checks{ grid-template-columns:1fr; }
   .pilot-campaign{ padding:32px 24px; }
   .pilot-campaign h2{ font-size:22px; }
   .pilot-final-cta__actions{ flex-direction:column; width:100%; }

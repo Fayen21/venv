@@ -20,13 +20,13 @@ $eb_pilot_faq    = isset( eb_seo_data()['programme-pilote']['faq'] ) ? eb_seo_da
     <div class="audit-side">
       <div class="eb-hero-fx audit-side__hero-fx">
       <?php eb_hero_fx( eb_hero_fx_effects()['programme-pilote'] ); ?>
-      <div class="eyebrow audit-side__eyebrow">Programme pilote · Places limitées</div>
+      <div class="eyebrow audit-side__eyebrow pilot-hero__badge">Programme pilote · Places limitées</div>
       <h1>Automatisez une tâche qui vous fait perdre du temps chaque semaine.</h1>
       <p class="audit-side__lead">EB Automatisation sélectionne ponctuellement quelques TPE et PME pour concevoir une automatisation concrète, à tarif pilote, avec un accompagnement cadré de A à Z.</p>
       <p class="audit-side__lead">Excel, e-mails, relances, documents, reporting : partons d'un problème réel de votre quotidien.</p>
 
       <div class="pilot-hero__actions">
-        <a href="#pilot-form" class="btn btn-primary" data-pilot-scroll>Candidater au programme <span aria-hidden="true">→</span></a>
+        <a href="#pilot-form" class="btn btn-primary" data-pilot-scroll="pilot-form">Vérifier si mon besoin est adapté <span aria-hidden="true">→</span></a>
         <a href="#comment-ca-marche" class="btn btn-secondary">Voir comment cela fonctionne</a>
       </div>
       <p class="pilot-hero__micro">Candidature sans engagement · Réponse après étude de votre besoin</p>
@@ -38,7 +38,10 @@ $eb_pilot_faq    = isset( eb_seo_data()['programme-pilote']['faq'] ) ? eb_seo_da
         <div class="audit-point"><span class="audit-point__check" aria-hidden="true">✓</span><span class="audit-point__text">Nombre de places limité à chaque campagne</span></div>
       </div>
 
-      <div class="audit-side__reviews"><?php echo eb_google_reviews_badge(); ?></div>
+      <div class="audit-side__reviews">
+        <?php echo eb_google_reviews_badge(); ?>
+        <a href="#avis" class="pilot-hero__reviews-link" data-pilot-scroll="avis">5,0/5 · 3 avis vérifiés · Lire les avis clients</a>
+      </div>
     </div>
 
     <!-- colonne droite : formulaire de candidature / succès -->
@@ -112,17 +115,6 @@ $eb_pilot_faq    = isset( eb_seo_data()['programme-pilote']['faq'] ) ? eb_seo_da
               <option value="50+">50 salariés ou plus</option>
             </select>
           </div>
-          <div class="audit-form__row">
-            <span class="audit-form__label">Outils utilisés actuellement</span>
-            <div class="pilot-form__checks">
-              <label class="pilot-form__check"><input type="checkbox" name="outils[]" value="Excel"> Excel</label>
-              <label class="pilot-form__check"><input type="checkbox" name="outils[]" value="Outlook / e-mail"> Outlook / e-mail</label>
-              <label class="pilot-form__check"><input type="checkbox" name="outils[]" value="Logiciel métier"> Logiciel métier</label>
-              <label class="pilot-form__check"><input type="checkbox" name="outils[]" value="Facturation"> Facturation</label>
-              <label class="pilot-form__check"><input type="checkbox" name="outils[]" value="Documents PDF"> Documents PDF</label>
-              <label class="pilot-form__check"><input type="checkbox" name="outils[]" value="Autre"> Autre</label>
-            </div>
-          </div>
           <div class="audit-form__row audit-form__row--full">
             <label class="audit-form__label" for="p-besoin">Quelle tâche vous prend le plus de temps aujourd'hui ? *</label>
             <textarea class="audit-form__textarea" id="p-besoin" name="besoin" rows="4" placeholder="Décrivez la tâche répétitive que vous aimeriez simplifier…" required aria-required="true" aria-describedby="p-besoin-error"></textarea>
@@ -138,6 +130,7 @@ $eb_pilot_faq    = isset( eb_seo_data()['programme-pilote']['faq'] ) ? eb_seo_da
         </div>
 
         <button type="submit" class="btn btn-primary audit-form__submit">Envoyer ma candidature <span aria-hidden="true">→</span></button>
+        <p class="pilot-form__price-note">L'échange de qualification est gratuit et sans engagement. Si votre besoin est retenu, vous recevez ensuite une proposition chiffrée pour une prestation d'automatisation à tarif pilote.</p>
         <p class="audit-form__disclaimer">Vos données sont traitées dans le respect du RGPD et ne sont jamais cédées à un tiers.</p>
         <p id="pilot-form__server-error" class="audit-form__error" role="alert">Une erreur est survenue lors de l'envoi. Merci de réessayer, ou de nous <a href="mailto:emmanuel@eb-automatisation.fr">écrire directement</a>.</p>
       </form>
@@ -186,6 +179,16 @@ $eb_pilot_faq    = isset( eb_seo_data()['programme-pilote']['faq'] ) ? eb_seo_da
         <h3>Un résultat mesurable</h3>
         <p>L'objectif est de réduire les manipulations manuelles, sécuriser le processus et mesurer le temps potentiellement libéré.</p>
       </div>
+    </div>
+  </section>
+
+  <!-- campagne actuellement ouverte (remontée juste après "le programme en bref") -->
+  <section class="section">
+    <div class="pilot-campaign pilot-campaign--<?php echo esc_attr( $eb_pilot['status'] ); ?>">
+      <span class="badge-pill badge-pill--<?php echo ( 'open' === $eb_pilot['status'] ) ? 'green' : 'orange'; ?>"><?php echo esc_html( $eb_pilot_state['badge'] ); ?></span>
+      <h2><?php echo esc_html( $eb_pilot_title ); ?></h2>
+      <p><?php echo esc_html( $eb_pilot_state['text'] ); ?></p>
+      <a href="#pilot-form" class="btn btn-primary" data-pilot-scroll="pilot-form"><?php echo esc_html( $eb_pilot_state['cta'] ); ?> <span aria-hidden="true">→</span></a>
     </div>
   </section>
 
@@ -255,16 +258,6 @@ $eb_pilot_faq    = isset( eb_seo_data()['programme-pilote']['faq'] ) ? eb_seo_da
     </div>
   </section>
 
-  <!-- 5. campagne actuellement ouverte -->
-  <section class="section">
-    <div class="pilot-campaign pilot-campaign--<?php echo esc_attr( $eb_pilot['status'] ); ?>">
-      <span class="badge-pill badge-pill--<?php echo ( 'open' === $eb_pilot['status'] ) ? 'green' : 'orange'; ?>"><?php echo esc_html( $eb_pilot_state['badge'] ); ?></span>
-      <h2><?php echo esc_html( $eb_pilot_title ); ?></h2>
-      <p><?php echo esc_html( $eb_pilot_state['text'] ); ?></p>
-      <a href="#pilot-form" class="btn btn-primary" data-pilot-scroll><?php echo esc_html( $eb_pilot_state['cta'] ); ?> <span aria-hidden="true">→</span></a>
-    </div>
-  </section>
-
   <!-- 6. comment ça marche -->
   <section class="section" id="comment-ca-marche" style="background:var(--bg-soft);">
     <div class="section-head">
@@ -278,7 +271,7 @@ $eb_pilot_faq    = isset( eb_seo_data()['programme-pilote']['faq'] ) ? eb_seo_da
       </div>
       <div class="audit-step">
         <div class="audit-step__head"><span class="audit-step__num">2</span><span class="audit-step__rule"></span></div>
-        <p class="audit-step__text"><strong>Nous échangeons.</strong> Un échange court permet de vérifier l'intérêt, la faisabilité et le périmètre du projet.</p>
+        <p class="audit-step__text"><strong>Nous vous répondons sous 2 jours ouvrés.</strong> Un échange de 20 minutes permet de vérifier l'intérêt, la faisabilité et le périmètre du projet.</p>
       </div>
       <div class="audit-step">
         <div class="audit-step__head"><span class="audit-step__num">3</span><span class="audit-step__rule"></span></div>
@@ -286,7 +279,7 @@ $eb_pilot_faq    = isset( eb_seo_data()['programme-pilote']['faq'] ) ? eb_seo_da
       </div>
     </div>
     <div style="text-align:center;">
-      <a href="#pilot-form" class="btn btn-primary audit-steps__cta" data-pilot-scroll>Candidater au programme pilote <span aria-hidden="true">→</span></a>
+      <a href="#pilot-form" class="btn btn-primary audit-steps__cta" data-pilot-scroll="pilot-form">Vérifier si mon besoin est adapté <span aria-hidden="true">→</span></a>
     </div>
   </section>
 
@@ -321,7 +314,7 @@ $eb_pilot_faq    = isset( eb_seo_data()['programme-pilote']['faq'] ) ? eb_seo_da
         <p>Expliquez-nous en quelques lignes ce qui vous fait perdre du temps aujourd'hui. Nous vous dirons honnêtement si le programme pilote peut correspondre à votre besoin.</p>
       </div>
       <div class="pilot-final-cta__actions">
-        <a href="#pilot-form" class="btn btn-primary" data-pilot-scroll>Candidater au programme pilote <span aria-hidden="true">→</span></a>
+        <a href="#pilot-form" class="btn btn-primary" data-pilot-scroll="pilot-form">Présenter mon besoin <span aria-hidden="true">→</span></a>
         <a href="<?php echo esc_url( eb_url( 'apropos' ) ); ?>" class="btn btn-secondary">Découvrir EB Automatisation</a>
       </div>
     </div>

@@ -565,16 +565,21 @@ function eb_enqueue_assets() {
 		'automatisation-facturation' => 'pillar',
 	);
 
-	if ( isset( $page_css_map[ $page ] ) ) {
-		$file = $page_css_map[ $page ];
-		wp_enqueue_style( 'eb-page-' . $file, EB_THEME_URI . '/assets/css/pages/' . $file . '.css', array( 'eb-utilities' ), filemtime( EB_THEME_DIR . '/assets/css/pages/' . $file . '.css' ) );
-	}
-
 	// Programme pilote : réutilise tel quel le layout hero/formulaire/succès
 	// de la page Audit (colonne sticky + formulaire carte), donc dépend
-	// aussi de audit.css en plus de son propre fichier de page.
+	// aussi de audit.css, enqueuée AVANT son propre fichier de page pour que
+	// ce dernier puisse surcharger certains réglages (contraste du hero, etc.).
 	if ( 'programme-pilote' === $page ) {
 		wp_enqueue_style( 'eb-page-audit', EB_THEME_URI . '/assets/css/pages/audit.css', array( 'eb-utilities' ), filemtime( EB_THEME_DIR . '/assets/css/pages/audit.css' ) );
+	}
+
+	if ( isset( $page_css_map[ $page ] ) ) {
+		$file          = $page_css_map[ $page ];
+		$page_css_deps = array( 'eb-utilities' );
+		if ( 'programme-pilote' === $page ) {
+			$page_css_deps[] = 'eb-page-audit';
+		}
+		wp_enqueue_style( 'eb-page-' . $file, EB_THEME_URI . '/assets/css/pages/' . $file . '.css', $page_css_deps, filemtime( EB_THEME_DIR . '/assets/css/pages/' . $file . '.css' ) );
 	}
 
 	// JS — main.js partout, home.js/audit.js seulement sur leur page respective (comme en HTML).
@@ -702,7 +707,7 @@ function eb_pilot_campaign() {
 			'badge' => 'Candidatures ouvertes',
 			'title' => '%d accompagnements pilotes actuellement ouverts',
 			'text'  => "Nous recherchons actuellement des entreprises ayant une tâche administrative répétitive clairement identifiée, notamment autour d'Excel, des e-mails, des relances, des documents ou du reporting.",
-			'cta'   => 'Déposer ma candidature',
+			'cta'   => 'Demander une étude de faisabilité',
 		),
 		'closed' => array(
 			'badge' => 'Candidatures temporairement fermées',
@@ -736,7 +741,6 @@ function eb_handle_pilot_submission() {
 	$secteur_activite = isset( $_POST['secteur_activite'] ) ? sanitize_text_field( wp_unslash( $_POST['secteur_activite'] ) ) : '';
 	$taille           = isset( $_POST['taille_entreprise'] ) ? sanitize_text_field( wp_unslash( $_POST['taille_entreprise'] ) ) : '';
 	$besoin           = isset( $_POST['besoin'] ) ? sanitize_textarea_field( wp_unslash( $_POST['besoin'] ) ) : '';
-	$outils           = isset( $_POST['outils'] ) && is_array( $_POST['outils'] ) ? array_map( 'sanitize_text_field', wp_unslash( $_POST['outils'] ) ) : array();
 	$consent          = ! empty( $_POST['consent'] );
 	$page             = isset( $_POST['page'] ) ? esc_url_raw( wp_unslash( $_POST['page'] ) ) : '';
 
@@ -765,7 +769,6 @@ function eb_handle_pilot_submission() {
 			'Téléphone : ' . ( $telephone ? $telephone : '—' ),
 			'Secteur d\'activité : ' . ( $secteur_activite ? $secteur_activite : '—' ),
 			'Taille de l\'entreprise : ' . ( $taille ? $taille : '—' ),
-			'Outils utilisés : ' . ( $outils ? implode( ', ', $outils ) : '—' ),
 			'',
 			'Tâche à automatiser :',
 			$besoin,
