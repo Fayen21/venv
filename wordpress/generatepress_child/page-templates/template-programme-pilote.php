@@ -29,7 +29,7 @@ $eb_pilot_faq    = isset( eb_seo_data()['programme-pilote']['faq'] ) ? eb_seo_da
         <a href="#pilot-form" class="btn btn-primary" data-pilot-scroll="pilot-form">Vérifier si mon besoin est adapté <span aria-hidden="true">→</span></a>
         <a href="#comment-ca-marche" class="btn btn-secondary">Voir comment cela fonctionne</a>
       </div>
-      <p class="pilot-hero__micro">Candidature sans engagement · Réponse après étude de votre besoin</p>
+      <div class="pilot-hero__reassurance"><?php echo eb_reassurance_pill( 'Candidature sans engagement · Réponse après étude de votre besoin' ); ?></div>
       </div>
 
       <div class="audit-points">
@@ -259,7 +259,7 @@ $eb_pilot_faq    = isset( eb_seo_data()['programme-pilote']['faq'] ) ? eb_seo_da
   </section>
 
   <!-- 6. comment ça marche -->
-  <section class="section" id="comment-ca-marche" style="background:var(--bg-soft);">
+  <section class="section" id="comment-ca-marche">
     <div class="section-head">
       <span class="eyebrow">Comment ça marche ?</span>
       <h2 style="max-width:680px;margin:0 auto;">Une démarche simple, en trois étapes</h2>
@@ -284,7 +284,7 @@ $eb_pilot_faq    = isset( eb_seo_data()['programme-pilote']['faq'] ) ? eb_seo_da
   </section>
 
   <!-- avis clients -->
-  <section class="section reviews-section" id="avis">
+  <section class="section reviews-section" id="avis" style="background:var(--bg-soft);">
     <?php echo eb_reviews_section_html(); ?>
   </section>
 
@@ -308,7 +308,7 @@ $eb_pilot_faq    = isset( eb_seo_data()['programme-pilote']['faq'] ) ? eb_seo_da
 
   <!-- CTA final -->
   <section class="section final-cta-section">
-    <div class="cta-dotted">
+    <div class="cta-dotted pilot-final-cta">
       <div class="cta-dotted__text">
         <h2 style="font-size:30px;margin-bottom:8px;">Et si votre prochaine tâche répétitive devenait votre premier gain de temps ?</h2>
         <p>Expliquez-nous en quelques lignes ce qui vous fait perdre du temps aujourd'hui. Nous vous dirons honnêtement si le programme pilote peut correspondre à votre besoin.</p>

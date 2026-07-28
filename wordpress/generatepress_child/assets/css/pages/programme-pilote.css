@@ -3,26 +3,40 @@
    audit.css pour pouvoir surcharger son hero sans toucher à la page Audit,
    qui ne charge jamais ce fichier). */
 
+/* ---------- hero : contenu centré (mêmes principes que .hero__content sur
+   l'accueil : eyebrow/H1/lead/actions/réassurance centrés dans la carte). ---------- */
+.audit-side__hero-fx{ position:relative; text-align:center; }
+.audit-points{ align-items:center; }
+
 /* ---------- hero : badge premium au-dessus du H1 ----------
    .eyebrow porte déjà la typo (majuscules, letter-spacing) via typography.css
-   et sa couleur orange via hero-fx.css — on ajoute juste l'habillage "pilule". */
+   et sa couleur orange via hero-fx.css — on ajoute l'habillage "pilule" avec
+   une lueur discrète, dans le même esprit que .reassurance-pill plus bas. */
 .pilot-hero__badge{
-  padding:7px 16px;
+  padding:8px 18px;
   border-radius:999px;
-  background:rgba(221,122,51,.16);
-  border:1px solid rgba(221,122,51,.45);
+  background:rgba(221,122,51,.18);
+  border:1px solid rgba(221,122,51,.5);
+  box-shadow:0 0 0 1px rgba(221,122,51,.08), 0 0 20px rgba(221,122,51,.22);
 }
 
-/* ---------- hero : assombrissement léger + lueur de flux très lente derrière
-   le texte, pour renforcer le contraste sans toucher au canvas partagé
-   (hero-fx.js) ni aux autres pages qui réutilisent le même effet. ---------- */
-.audit-side__hero-fx{ position:relative; }
+/* ---------- hero : fond plus riche (lueur bleue, même teinte et principe que
+   .hero__glow sur l'accueil, redimensionnée pour cette carte plus étroite) +
+   assombrissement léger derrière le texte pour la lisibilité + très léger
+   flux animé, sans toucher au canvas partagé (hero-fx.js) ni aux autres
+   pages qui réutilisent le même effet. ---------- */
+.audit-side__hero-fx::after{
+  content:'';
+  position:absolute; top:-70px; right:-50px; width:300px; height:300px;
+  border-radius:50%; z-index:1; pointer-events:none;
+  background:radial-gradient(circle, rgba(46,155,255,.22) 0%, rgba(46,155,255,0) 72%);
+}
 .audit-side__hero-fx::before{
   content:'';
   position:absolute; inset:0; z-index:2; pointer-events:none;
   background:
-    linear-gradient(120deg, transparent 42%, rgba(70,150,255,.05) 50%, transparent 58%),
-    radial-gradient(ellipse 75% 60% at 26% 34%, rgba(5,14,30,.6) 0%, rgba(5,14,30,.24) 46%, rgba(5,14,30,0) 76%);
+    linear-gradient(120deg, transparent 42%, rgba(70,150,255,.06) 50%, transparent 58%),
+    radial-gradient(ellipse 78% 62% at 26% 30%, rgba(4,11,26,.68) 0%, rgba(4,11,26,.3) 48%, rgba(4,11,26,0) 78%);
   background-size:280% 280%, 100% 100%;
   background-position:0% 0%, 0 0;
   animation:pilotFlowDrift 38s linear infinite;
@@ -40,16 +54,26 @@
    fichier) pour gagner la cascade sans !important. */
 .audit-side .audit-side__hero-fx .audit-side__lead{ color:#CBD7EE; }
 
-/* ---------- hero : actions + micro-réassurance ---------- */
-.pilot-hero__actions{ display:flex; flex-wrap:wrap; justify-content:center; gap:14px; margin:28px 0 14px; }
+/* ---------- hero : actions ---------- */
+.pilot-hero__actions{ display:flex; flex-wrap:wrap; justify-content:center; gap:14px; margin:28px 0 4px; }
 /* .btn/.btn-primary/.btn-secondary n'ont pas de padding par défaut (chaque
    contexte d'usage le définit, cf. audit.css) : chaque bouton ajouté sur
    cette page doit donc fixer le sien explicitement. */
 .pilot-hero__actions .btn{ padding:14px 22px; font-size:15px; }
-.pilot-hero__micro{ font-size:13px; color:rgba(255,255,255,.62); margin:0; text-align:center; }
 
-/* ---------- hero : lien vers les avis, à côté du badge Google ---------- */
-.audit-side__reviews{ display:flex; flex-direction:column; align-items:center; gap:8px; }
+/* ---------- hero : réassurance (réutilise .reassurance-pill, le composant
+   partagé déjà utilisé sous les CTA de hero de tout le site). ---------- */
+.pilot-hero__reassurance{ display:flex; justify-content:center; margin-top:22px; }
+
+/* ---------- hero : bas de carte aligné avec le formulaire ----------
+   .audit-layout passe de align-items:start (audit.css, pour la colonne
+   sticky de la page Audit) à stretch : les deux colonnes occupent alors la
+   même hauteur, et .audit-side (mise en colonne flex) pousse son dernier
+   bloc (avis) tout en bas avec margin-top:auto, pour que la carte de
+   présentation et celle du formulaire se terminent au même niveau. */
+.audit-layout{ align-items:stretch; }
+.audit-side{ display:flex; flex-direction:column; padding-bottom:10px; }
+.audit-side__reviews{ display:flex; flex-direction:column; align-items:center; gap:8px; margin-top:auto; padding-top:22px; }
 .pilot-hero__reviews-link{
   font-size:12.5px; font-weight:600; color:var(--muted-on-navy);
   text-decoration:none; border-bottom:1px solid rgba(157,170,194,.5);
@@ -58,12 +82,72 @@
 .pilot-hero__reviews-link:hover,
 .pilot-hero__reviews-link:focus-visible{ color:#fff; border-bottom-color:#fff; }
 
-/* ---------- CTA "Comment ça marche" : .audit-steps__cta vit dans home.css,
-   non chargé sur cette page — on redéfinit juste son padding ici. ---------- */
-.audit-steps__cta{ padding:16px 30px; font-size:16px; box-shadow:var(--shadow-btn-orange-md); }
+/* ============================================================
+   Étapes numérotées ("Ce qui est inclus" / "Comment ça marche") —
+   .audit-step* n'existe que dans home.css, jamais chargé sur cette page :
+   on redéfinit ici la base (cercle numéroté + trait) puis on l'habille en
+   vraies cartes de workflow premium (fond, bordure, ombre, halo, connecteur
+   discret entre les cartes).
+   ============================================================ */
+.audit-steps{ gap:24px; }
+.audit-step__head{ display:flex; align-items:center; gap:12px; margin-bottom:14px; }
+.audit-step__num{
+  width:42px; height:42px; border-radius:var(--r-lg); flex:none;
+  background:linear-gradient(135deg,var(--navy),var(--blue-deep)); color:#fff;
+  display:flex; align-items:center; justify-content:center;
+  font-family:var(--font-heading); font-weight:700; font-size:16px;
+  box-shadow:0 8px 20px -8px rgba(30,95,208,.6), 0 0 0 3px rgba(70,150,255,.1);
+}
+.audit-step__rule{ flex:1; height:1px; background:linear-gradient(90deg,#2E9BFF,#E6EAF2); }
+.audit-step__text{ font-size:15.5px; line-height:1.5; color:var(--text-5); font-weight:500; }
 
-/* ---------- CTA final : bouton secondaire à côté du bouton .cta-dotted déjà stylé ---------- */
-.pilot-final-cta__actions .btn-secondary{ padding:18px 32px; font-size:16.5px; white-space:nowrap; }
+.pilot-steps-5 .audit-step,
+#comment-ca-marche .audit-step{
+  background:#fff; border:1px solid var(--border-2); border-radius:16px;
+  padding:24px 20px 26px; position:relative; z-index:1;
+  box-shadow:0 20px 38px -30px rgba(12,30,60,.3);
+  transition:box-shadow .2s ease, border-color .2s ease, transform .2s ease;
+}
+.pilot-steps-5 .audit-step:hover,
+#comment-ca-marche .audit-step:hover{
+  transform:translateY(-3px);
+  border-color:rgba(70,150,255,.35);
+  box-shadow:0 26px 46px -26px rgba(46,155,255,.3);
+}
+@media (prefers-reduced-motion: reduce){
+  .pilot-steps-5 .audit-step,
+  #comment-ca-marche .audit-step{ transition:none; }
+  .pilot-steps-5 .audit-step:hover,
+  #comment-ca-marche .audit-step:hover{ transform:none; }
+}
+
+/* connecteur fin, visible uniquement dans les espaces entre les cartes (les
+   cartes, opaques, le recouvrent ailleurs) — évoque un fil de méthode plutôt
+   qu'une simple liste, sans dépendance ni script. */
+.pilot-steps-5{ position:relative; grid-template-columns:repeat(5,1fr); }
+.pilot-steps-5::before,
+#comment-ca-marche .grid-3::before{
+  content:''; position:absolute; left:45px; right:45px; top:45px; height:2px; z-index:0;
+  background:linear-gradient(90deg, rgba(46,155,255,.06), rgba(46,155,255,.4) 12%, rgba(46,155,255,.4) 88%, rgba(46,155,255,.06));
+  pointer-events:none;
+}
+#comment-ca-marche .grid-3{ position:relative; }
+@media (max-width:1100px){
+  .pilot-steps-5{ grid-template-columns:repeat(3,1fr); }
+  .pilot-steps-5::before{ display:none; }
+}
+@media (max-width:900px){
+  #comment-ca-marche .grid-3::before{ display:none; }
+}
+@media (max-width:640px){
+  .pilot-steps-5{ grid-template-columns:1fr; }
+}
+
+/* ---------- CTA "Comment ça marche" : espace généreux avant le bouton, qui
+   ne doit jamais sembler accroché à la 3e carte. .audit-steps__cta vit dans
+   home.css, non chargé ici — on redéfinit padding + espacement. ---------- */
+#comment-ca-marche .audit-steps{ margin-bottom:44px; }
+.audit-steps__cta{ padding:16px 30px; font-size:16px; box-shadow:var(--shadow-btn-orange-md); }
 
 /* ---------- formulaire : précision gratuit/payant + consentement ---------- */
 .pilot-form__price-note{
@@ -97,23 +181,9 @@
 .pilot-callout{
   background:var(--orange-soft-bg); border:1px solid var(--orange-soft-border); border-radius:14px;
   padding:20px 26px; text-align:center;
+  box-shadow:0 14px 30px -24px rgba(221,122,51,.4);
 }
 .pilot-callout p{ margin:0; font-size:14.5px; line-height:1.6; color:var(--navy); }
-
-/* ---------- 5 étapes "ce qui est inclus" : variante à 5 colonnes de .audit-steps,
-   avec une légère lueur sur les repères numérotés pour appuyer l'idée de
-   méthode/parcours (mêmes teintes bleues que le reste du site). ---------- */
-.pilot-steps-5{ grid-template-columns:repeat(5,1fr); }
-.pilot-steps-5 .audit-step__num,
-#comment-ca-marche .audit-step__num{
-  box-shadow:0 8px 20px -8px rgba(30,95,208,.6), 0 0 0 3px rgba(70,150,255,.1);
-}
-@media (max-width:1100px){
-  .pilot-steps-5{ grid-template-columns:repeat(3,1fr); }
-}
-@media (max-width:640px){
-  .pilot-steps-5{ grid-template-columns:1fr; }
-}
 
 /* ---------- campagne actuellement ouverte ---------- */
 .pilot-campaign{
@@ -145,8 +215,24 @@
 .pilot-faq__answer{ margin:0 0 18px; font-size:14.5px; line-height:1.62; color:var(--text-3); }
 .pilot-faq__question:focus-visible{ outline:2px solid var(--orange); outline-offset:3px; border-radius:6px; }
 
-/* ---------- CTA final : deux boutons ---------- */
-.pilot-final-cta__actions{ display:flex; flex-wrap:wrap; gap:14px; align-items:center; }
+/* ============================================================
+   CTA final — variante centrée et enrichie de .cta-dotted (partagé), dans le
+   même esprit que le hero : dégradé bleu nuit + lueurs discrètes, réservée à
+   cette page (.cta-dotted lui-même, utilisé tel quel par apropos/solutions/
+   réalisations, n'est jamais modifié).
+   ============================================================ */
+.pilot-final-cta{
+  flex-direction:column; text-align:center; justify-content:center;
+  background-image:
+    radial-gradient(ellipse 60% 65% at 18% 0%, rgba(46,155,255,.16), transparent 70%),
+    radial-gradient(ellipse 55% 60% at 88% 100%, rgba(221,122,51,.12), transparent 70%),
+    var(--navy-gradient);
+}
+.pilot-final-cta .cta-dotted__text{ max-width:640px; margin:0 auto; }
+.pilot-final-cta h2{ text-align:center; }
+.pilot-final-cta p{ text-align:center; }
+.pilot-final-cta__actions{ display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:14px; margin-top:8px; }
+.pilot-final-cta__actions .btn-secondary{ padding:18px 32px; font-size:16.5px; white-space:nowrap; }
 
 /* ==================== responsive ==================== */
 @media (max-width:640px){
