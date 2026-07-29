@@ -932,10 +932,10 @@ function eb_seo_data() {
 		'programme-pilote'          => array(
 			'title'       => "Programme pilote automatisation PME | EB Automatisation",
 			'description' => "Candidatez au programme pilote EB Automatisation : une automatisation concrète pour réduire les tâches répétitives, à tarif préférentiel et avec un accompagnement cadré.",
-			'og_title'    => "Programme pilote automatisation PME | EB Automatisation",
-			'og_desc'     => "Candidatez au programme pilote EB Automatisation : une automatisation concrète pour réduire les tâches répétitives, à tarif préférentiel et avec un accompagnement cadré.",
-			'tw_title'    => "Programme pilote — EB Automatisation",
-			'tw_desc'     => "Candidatez au programme pilote : automatisation concrète, tarif préférentiel, accompagnement cadré.",
+			'og_title'    => "Programme pilote | EB Automatisation",
+			'og_desc'     => "Programme pilote EB Automatisation : échange de qualification gratuit pour étudier l'automatisation d'une tâche répétitive. Proposition chiffrée si le besoin est retenu.",
+			'tw_title'    => "Programme pilote | EB Automatisation",
+			'tw_desc'     => "Programme pilote EB Automatisation : échange de qualification gratuit pour étudier l'automatisation d'une tâche répétitive. Proposition chiffrée si le besoin est retenu.",
 			'canonical'   => eb_url( 'programme-pilote' ),
 			'faq'         => array(
 				array( 'q' => "À qui s'adresse le programme pilote ?", 'a' => "Le programme s'adresse aux indépendants, TPE et PME qui ont identifié une tâche répétitive et souhaitent étudier une automatisation concrète. Chaque candidature est évaluée selon son intérêt et sa faisabilité." ),

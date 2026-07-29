@@ -22,18 +22,18 @@ $eb_pilot_faq    = isset( eb_seo_data()['programme-pilote']['faq'] ) ? eb_seo_da
       <?php eb_hero_fx( eb_hero_fx_effects()['programme-pilote'] ); ?>
       <div class="eyebrow audit-side__eyebrow pilot-hero__badge">Programme pilote · 3 accompagnements ouverts</div>
       <h1>Automatisez une tâche qui vous fait perdre du temps chaque semaine.</h1>
-      <p class="audit-side__lead">EB Automatisation sélectionne ponctuellement quelques TPE et PME pour concevoir une automatisation concrète, à tarif pilote, avec un accompagnement cadré de A à Z.</p>
+      <p class="audit-side__lead">EB Automatisation sélectionne ponctuellement quelques TPE et PME pour concevoir une <strong>automatisation</strong> concrète, à <strong>tarif pilote</strong>, avec un accompagnement cadré de A à Z.</p>
       <p class="audit-side__lead">Excel, e-mails, relances, documents, reporting : partons d'un problème réel de votre quotidien.</p>
 
       <div class="pilot-hero__actions">
         <a href="#pilot-form" class="btn btn-primary" data-pilot-scroll="pilot-form">Vérifier si mon besoin est adapté <span aria-hidden="true">→</span></a>
         <a href="#comment-ca-marche" class="btn btn-secondary">Voir comment cela fonctionne</a>
       </div>
-      <div class="pilot-hero__reassurance"><?php echo eb_reassurance_pill( 'Échange de qualification gratuit · Réponse sous 2 jours ouvrés' ); ?></div>
+      <div class="pilot-hero__reassurance"><?php echo eb_reassurance_pill( 'Échange gratuit · Réponse sous 2 jours' ); ?></div>
 
       <div class="audit-points">
         <div class="audit-point"><span class="audit-point__check" aria-hidden="true">✓</span><span class="audit-point__text">Un accompagnement cadré, de l'échange initial à la mise en service</span></div>
-        <div class="audit-point"><span class="audit-point__check" aria-hidden="true">✓</span><span class="audit-point__text">Un tarif pilote, sans engagement avant proposition chiffrée</span></div>
+        <div class="audit-point"><span class="audit-point__check" aria-hidden="true">✓</span><span class="audit-point__text">Un <strong>tarif pilote</strong>, sans engagement avant <strong>proposition chiffrée</strong></span></div>
         <div class="audit-point"><span class="audit-point__check" aria-hidden="true">✓</span><span class="audit-point__text">Nombre de places limité à chaque campagne</span></div>
       </div>
 
@@ -130,12 +130,12 @@ $eb_pilot_faq    = isset( eb_seo_data()['programme-pilote']['faq'] ) ? eb_seo_da
         </div>
 
         <button type="submit" class="btn btn-primary audit-form__submit">Demander une étude de faisabilité <span aria-hidden="true">→</span></button>
-        <p class="pilot-form__price-note">L'échange de qualification est gratuit et sans engagement. Si votre besoin est retenu, vous recevez ensuite une proposition chiffrée pour une prestation d'automatisation à tarif pilote.</p>
+        <p class="pilot-form__price-note">L'échange de qualification est <strong>gratuit</strong> et sans engagement. Si votre <strong>besoin est retenu</strong>, vous recevez ensuite une <strong>proposition chiffrée</strong> pour une prestation d'automatisation à <strong>tarif pilote</strong>.</p>
         <p class="audit-form__disclaimer">Vos données sont traitées dans le respect du RGPD et ne sont jamais cédées à un tiers.</p>
         <p id="pilot-form__server-error" class="audit-form__error" role="alert">Une erreur est survenue lors de l'envoi. Merci de réessayer, ou de nous <a href="mailto:emmanuel@eb-automatisation.fr">écrire directement</a>.</p>
       </form>
 
-      <div id="pilot-success" class="audit-success" hidden>
+      <div id="pilot-success" class="audit-success" role="status" aria-live="polite" hidden>
         <div class="audit-success__icon" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"></path></svg></div>
         <h2>Candidature bien reçue</h2>
         <p class="audit-success__desc">Merci, votre candidature a bien été transmise. Nous l'étudierons et reviendrons vers vous rapidement.</p>
@@ -179,6 +179,13 @@ $eb_pilot_faq    = isset( eb_seo_data()['programme-pilote']['faq'] ) ? eb_seo_da
         <h3>Un résultat mesurable</h3>
         <p>L'objectif est de réduire les manipulations manuelles, sécuriser le processus et mesurer le temps potentiellement libéré.</p>
       </div>
+    </div>
+
+    <div class="pilot-mini-flows">
+      <p class="pilot-mini-flows__label">Quelques exemples concrets d'automatisation :</p>
+      <div class="pilot-mini-flow"><span>Demande reçue</span><span class="pilot-mini-flow__arrow" aria-hidden="true">→</span><span>Informations vérifiées</span><span class="pilot-mini-flow__arrow" aria-hidden="true">→</span><span>Réponse préparée</span></div>
+      <div class="pilot-mini-flow"><span>Document reçu</span><span class="pilot-mini-flow__arrow" aria-hidden="true">→</span><span>Données extraites</span><span class="pilot-mini-flow__arrow" aria-hidden="true">→</span><span>Tableau mis à jour</span></div>
+      <div class="pilot-mini-flow"><span>Échéance détectée</span><span class="pilot-mini-flow__arrow" aria-hidden="true">→</span><span>Relance préparée</span><span class="pilot-mini-flow__arrow" aria-hidden="true">→</span><span>Suivi centralisé</span></div>
     </div>
   </section>
 
@@ -247,7 +254,7 @@ $eb_pilot_faq    = isset( eb_seo_data()['programme-pilote']['faq'] ) ? eb_seo_da
       <span class="eyebrow">Contrepartie du tarif pilote</span>
       <h2 style="max-width:680px;margin:0 auto;">Pourquoi un tarif pilote ?</h2>
     </div>
-    <p style="max-width:720px;margin:0 auto 28px;text-align:center;color:var(--text-3);font-size:16px;line-height:1.65;">Le programme pilote permet à EB Automatisation de consolider ses méthodes sur des cas réels et de produire des retours d'expérience utiles. En échange d'un tarif préférentiel, les entreprises sélectionnées s'engagent à participer à un bilan de mission.</p>
+    <p style="max-width:720px;margin:0 auto 28px;text-align:center;color:var(--text-3);font-size:16px;line-height:1.65;">Le programme pilote permet à EB Automatisation de consolider ses méthodes sur des cas réels et de produire des retours d'expérience utiles. En échange d'un <strong>tarif préférentiel</strong>, les entreprises sélectionnées s'engagent à participer à un bilan de mission.</p>
     <div class="audit-points" style="max-width:640px;margin:0 auto 28px;">
       <div class="audit-point"><span class="audit-point__check" aria-hidden="true">✓</span><span class="audit-point__text">Un retour d'expérience honnête après le déploiement</span></div>
       <div class="audit-point"><span class="audit-point__check" aria-hidden="true">✓</span><span class="audit-point__text">L'autorisation de présenter les enseignements du projet sous forme anonymisée</span></div>

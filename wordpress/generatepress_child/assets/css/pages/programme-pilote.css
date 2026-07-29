@@ -88,6 +88,20 @@
    le bloc avis est pousé tout en bas via margin-top:auto — la carte de
    présentation et celle du formulaire commencent et se terminent donc au
    même niveau, sans que rien ne "tombe" sur le fond blanc entre les deux. */
+/* ---------- environnement bleu nuit du haut de page ----------
+   étend le fond premium à toute la zone hero + formulaire (colonne gauche,
+   espace entre les deux colonnes, pourtour du formulaire), pour que la carte
+   blanche du formulaire ressorte comme l'élément central contrasté plutôt
+   que de paraître détachée sur un fond blanc. .audit-form/.audit-success
+   ont leur propre background:#fff (audit.css) : ils restent blancs. */
+.audit-layout{
+  background:
+    radial-gradient(ellipse 50% 45% at 12% 0%, rgba(46,155,255,.12), transparent 65%),
+    radial-gradient(ellipse 45% 50% at 92% 100%, rgba(221,122,51,.08), transparent 65%),
+    var(--navy-gradient);
+  border-radius:28px;
+  box-shadow:0 40px 90px -55px rgba(12,30,60,.55);
+}
 .audit-layout{ align-items:stretch; }
 .audit-side{ display:flex; flex-direction:column; }
 .audit-side__reviews{ display:flex; flex-direction:column; align-items:center; gap:8px; margin-top:auto; padding-top:26px; }
@@ -194,6 +208,24 @@
   .differentiators__card:hover{ transform:none; }
 }
 
+/* ---------- "le programme en bref" : exemples de flux, simples et concrets,
+   pour rendre "une automatisation" immédiatement tangible sans promettre de
+   chiffres. ---------- */
+.pilot-mini-flows{ max-width:760px; margin:36px auto 0; display:flex; flex-direction:column; gap:12px; }
+.pilot-mini-flows__label{
+  text-align:center; font-size:13px; font-weight:600; color:var(--muted);
+  margin:0 0 4px; text-transform:uppercase; letter-spacing:.04em;
+}
+.pilot-mini-flow{
+  display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:8px 10px;
+  background:var(--bg-soft); border:1px solid var(--border-2); border-radius:12px;
+  padding:14px 20px; font-size:14px; font-weight:500; color:var(--navy); text-align:center;
+}
+.pilot-mini-flow__arrow{ color:var(--orange); font-weight:700; }
+@media (max-width:480px){
+  .pilot-mini-flow{ font-size:13px; padding:12px 14px; gap:6px 8px; }
+}
+
 /* ---------- callout de transparence ---------- */
 .pilot-callout{
   background:var(--orange-soft-bg); border:1px solid var(--orange-soft-border); border-radius:14px;
@@ -259,4 +291,9 @@
   .pilot-campaign h2{ font-size:22px; }
   .pilot-final-cta__actions{ flex-direction:column; width:100%; }
   .pilot-final-cta__actions .btn{ width:100%; justify-content:center; }
+  /* audit.css fixe gap:64px entre les colonnes empilées (pensé pour la page
+     Audit) — sur cette page, hero et formulaire partagent désormais le même
+     fond bleu nuit (.audit-layout ci-dessus) : un tel écart les fait paraître
+     détachés l'un de l'autre. On resserre uniquement en mobile. */
+  .audit-layout{ gap:30px; }
 }

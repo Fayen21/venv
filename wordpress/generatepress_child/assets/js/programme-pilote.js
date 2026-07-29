@@ -84,23 +84,56 @@
   }
 
   // ---------- traçabilité campagne : UTM + secteur ciblé depuis l'URL ----------
+  var TRACKING_FIELD_MAP = {
+    utm_source: 'p-utm-source',
+    utm_medium: 'p-utm-medium',
+    utm_campaign: 'p-utm-campaign',
+    utm_content: 'p-utm-content',
+    campagne: 'p-campagne',
+    secteur: 'p-secteur-campagne'
+  };
+
   (function captureTracking() {
     var params = new URLSearchParams(window.location.search);
-    var map = {
-      utm_source: 'p-utm-source',
-      utm_medium: 'p-utm-medium',
-      utm_campaign: 'p-utm-campaign',
-      utm_content: 'p-utm-content',
-      campagne: 'p-campagne',
-      secteur: 'p-secteur-campagne'
-    };
-    Object.keys(map).forEach(function (param) {
+    Object.keys(TRACKING_FIELD_MAP).forEach(function (param) {
       var value = params.get(param);
       if (!value) return;
-      var field = document.getElementById(map[param]);
+      var field = document.getElementById(TRACKING_FIELD_MAP[param]);
       if (field) field.value = value;
     });
   })();
+
+  // ---------- suivi de conversion, léger et sans dépendance ----------
+  // Aucun outil d'analytics n'est installé sur le thème à ce jour : ces
+  // événements sont poussés dans window.dataLayer s'il existe (no-op sinon,
+  // donc sans effet tant qu'aucun GTM/GA4 n'est branché) et diffusés en
+  // parallèle via un CustomEvent DOM, pour qu'un futur script de mesure
+  // puisse s'y brancher sans toucher à ce fichier. Ne modifie ni ne duplique
+  // la capture UTM ci-dessus : elle relit les mêmes champs cachés déjà
+  // renseignés (URL en priorité, valeur du champ en repli).
+  function trackingParams() {
+    var params = new URLSearchParams(window.location.search);
+    var data = {};
+    Object.keys(TRACKING_FIELD_MAP).forEach(function (param) {
+      var fromUrl = params.get(param);
+      var field = document.getElementById(TRACKING_FIELD_MAP[param]);
+      var value = fromUrl || (field ? field.value.trim() : '');
+      if (value) data[param] = value;
+    });
+    return data;
+  }
+
+  function pilotTrack(eventName, extra) {
+    var detail = trackingParams();
+    if (extra) {
+      Object.keys(extra).forEach(function (key) { detail[key] = extra[key]; });
+    }
+    detail.event = eventName;
+    if (Array.isArray(window.dataLayer)) {
+      window.dataLayer.push(detail);
+    }
+    document.dispatchEvent(new CustomEvent('ebPilotTrack', { detail: detail }));
+  }
 
   // ---------- défilement doux vers le formulaire (ou une autre ancre, ex. les avis) ----------
   document.querySelectorAll('[data-pilot-scroll]').forEach(function (link) {
@@ -109,6 +142,7 @@
       var target = document.getElementById(targetId);
       if (!target) return;
       e.preventDefault();
+      if (targetId === 'pilot-form') pilotTrack('pilot_cta_click');
       target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
   });
@@ -187,6 +221,7 @@
     }).then(function (json) {
       isSubmitting = false;
       if (json && json.success) {
+        pilotTrack('pilot_form_submit');
         showSuccess();
       } else {
         showServerError();
