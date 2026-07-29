@@ -31,16 +31,23 @@
 .audit-side__hero-fx .audit-point__check{ background:rgba(91,203,139,.16); color:var(--green-bright); }
 .audit-side__hero-fx .audit-point__text{ color:#CBD7EE; }
 
-/* ---------- hero : badge premium au-dessus du H1 ----------
+/* ---------- hero : badge en introduction commune aux deux colonnes ----------
+   .pilot-hero__badge-row occupe sa propre ligne de la grille .audit-layout
+   (grid-column:1/-1, voir plus bas) : centré sur toute la largeur du fond
+   bleu, au-dessus de la colonne de présentation ET de la colonne
+   formulaire, plutôt que seulement au-dessus du H1 — le badge se lit comme
+   une intro commune, pas comme un élément de la seule colonne gauche.
    .eyebrow porte déjà la typo (majuscules, letter-spacing) via typography.css
    et sa couleur orange via hero-fx.css — on ajoute l'habillage "pilule" avec
    une lueur discrète, dans le même esprit que .reassurance-pill plus bas. */
+.pilot-hero__badge-row{ grid-column:1/-1; display:flex; justify-content:center; }
 .pilot-hero__badge{
   padding:8px 18px;
   border-radius:999px;
   background:rgba(221,122,51,.18);
   border:1px solid rgba(221,122,51,.5);
   box-shadow:0 0 0 1px rgba(221,122,51,.08), 0 0 20px rgba(221,122,51,.22);
+  text-align:center;
 }
 
 /* ---------- hero : assombrissement léger derrière le texte pour la
@@ -105,8 +112,20 @@
 
    .eb-hero-fx{overflow:hidden} (hero-fx.css) reste inchangée : elle clippe
    les halos aurora (positionnés en négatif) et arrondit le canvas — hérité
-   tel quel, même rendu que la carte hero elle-même. */
+   tel quel, même rendu que la carte hero elle-même.
+
+   padding-top réduit de 80px (audit.css) à 56px : avec l'ajout de la ligne
+   badge au-dessus des deux colonnes (voir .pilot-hero__badge-row), 80px de
+   marge avant le badge créait une zone vide excessive en haut de page.
+   row-gap/column-gap remplacent le "gap:64px" d'audit.css (qui vaudrait
+   pour les deux, une fois le badge ajouté comme ligne de grille à part) :
+   64px reste l'écart horizontal entre les deux colonnes (inchangé), mais
+   l'écart vertical badge → colonnes est resserré à 24px, dans la fourchette
+   "premium et équilibré" demandée. */
 .audit-layout.eb-hero-fx{
+  padding-top:56px;
+  row-gap:24px;
+  column-gap:64px;
   border-radius:28px;
   box-shadow:0 0 0 1px rgba(46,155,255,.18), 0 40px 90px -55px rgba(12,30,60,.6);
 }
@@ -385,6 +404,10 @@
   /* audit.css fixe gap:64px entre les colonnes empilées (pensé pour la page
      Audit) — sur cette page, hero et formulaire partagent désormais le même
      fond bleu nuit (.audit-layout ci-dessus) : un tel écart les fait paraître
-     détachés l'un de l'autre. On resserre uniquement en mobile. */
-  .audit-layout{ gap:30px; }
+     détachés l'un de l'autre. On resserre uniquement en mobile — badge,
+     colonne de présentation et formulaire sont ici 3 lignes empilées de la
+     même grille, séparées du même row-gap. Sélecteur à deux classes pour
+     gagner la cascade face à la règle desktop (row-gap:24px) ci-dessus, de
+     même spécificité, quel que soit l'ordre de chargement réel. */
+  .audit-layout.eb-hero-fx{ gap:30px; }
 }

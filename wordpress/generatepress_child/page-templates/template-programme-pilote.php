@@ -17,12 +17,18 @@ $eb_pilot_faq    = isset( eb_seo_data()['programme-pilote']['faq'] ) ? eb_seo_da
   <div class="eb-hero-fx audit-layout">
   <?php eb_hero_fx( eb_hero_fx_effects()['programme-pilote'] ); ?>
 
+    <!-- badge en introduction commune aux deux colonnes : occupe sa propre ligne de la
+         grille (grid-column:1/-1), centré sur toute la largeur du fond bleu, au-dessus
+         de la colonne de présentation ET de la colonne formulaire. -->
+    <div class="pilot-hero__badge-row">
+      <div class="eyebrow pilot-hero__badge">Programme pilote · 3 accompagnements ouverts</div>
+    </div>
+
     <!-- colonne gauche (sticky) : hero, même effet "constellation" que la page À propos —
          le canvas et les halos sont désormais portés par .audit-layout ci-dessus (partagés
          avec la colonne formulaire), .audit-side__hero-fx n'a plus son propre eb-hero-fx. -->
     <div class="audit-side">
       <div class="audit-side__hero-fx">
-      <div class="eyebrow audit-side__eyebrow pilot-hero__badge">Programme pilote · 3 accompagnements ouverts</div>
       <h1>Automatisez une tâche qui vous fait perdre du temps chaque semaine.</h1>
       <p class="audit-side__lead">EB Automatisation sélectionne ponctuellement quelques TPE et PME pour concevoir une <strong>automatisation</strong> concrète, à <strong>tarif pilote</strong>, avec un accompagnement cadré de A à Z.</p>
       <p class="audit-side__lead">Excel, e-mails, relances, documents, reporting : partons d'un problème réel de votre quotidien.</p>
