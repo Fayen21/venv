@@ -181,11 +181,32 @@ $eb_pilot_faq    = isset( eb_seo_data()['programme-pilote']['faq'] ) ? eb_seo_da
       </div>
     </div>
 
-    <div class="pilot-mini-flows">
-      <p class="pilot-mini-flows__label">Quelques exemples concrets d'automatisation :</p>
-      <div class="pilot-mini-flow"><span>Demande reçue</span><span class="pilot-mini-flow__arrow" aria-hidden="true">→</span><span>Informations vérifiées</span><span class="pilot-mini-flow__arrow" aria-hidden="true">→</span><span>Réponse préparée</span></div>
-      <div class="pilot-mini-flow"><span>Document reçu</span><span class="pilot-mini-flow__arrow" aria-hidden="true">→</span><span>Données extraites</span><span class="pilot-mini-flow__arrow" aria-hidden="true">→</span><span>Tableau mis à jour</span></div>
-      <div class="pilot-mini-flow"><span>Échéance détectée</span><span class="pilot-mini-flow__arrow" aria-hidden="true">→</span><span>Relance préparée</span><span class="pilot-mini-flow__arrow" aria-hidden="true">→</span><span>Suivi centralisé</span></div>
+    <div class="pilot-flow">
+      <p class="pilot-flow__label">Quelques exemples concrets d'automatisation</p>
+
+      <div class="pilot-flow__row">
+        <div class="pilot-flow__step"><span class="pilot-flow__icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M3 7l9 6 9-6"></path></svg></span><span class="pilot-flow__step-label">Demande reçue</span></div>
+        <span class="pilot-flow__arrow" aria-hidden="true">→</span>
+        <div class="pilot-flow__step"><span class="pilot-flow__icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M8 12l3 3 5-6"></path></svg></span><span class="pilot-flow__step-label">Informations vérifiées</span></div>
+        <span class="pilot-flow__arrow" aria-hidden="true">→</span>
+        <div class="pilot-flow__step"><span class="pilot-flow__icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13"></path><path d="M22 2l-7 20-4-9-9-4 20-7z"></path></svg></span><span class="pilot-flow__step-label">Réponse préparée</span></div>
+      </div>
+
+      <div class="pilot-flow__row">
+        <div class="pilot-flow__step"><span class="pilot-flow__icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6"></path></svg></span><span class="pilot-flow__step-label">Document reçu</span></div>
+        <span class="pilot-flow__arrow" aria-hidden="true">→</span>
+        <div class="pilot-flow__step"><span class="pilot-flow__icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="19" x2="5" y2="12"></line><line x1="12" y1="19" x2="12" y2="7"></line><line x1="19" y1="19" x2="19" y2="14"></line></svg></span><span class="pilot-flow__step-label">Données extraites</span></div>
+        <span class="pilot-flow__arrow" aria-hidden="true">→</span>
+        <div class="pilot-flow__step"><span class="pilot-flow__icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg></span><span class="pilot-flow__step-label">Tableau mis à jour</span></div>
+      </div>
+
+      <div class="pilot-flow__row">
+        <div class="pilot-flow__step"><span class="pilot-flow__icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg></span><span class="pilot-flow__step-label">Échéance détectée</span></div>
+        <span class="pilot-flow__arrow" aria-hidden="true">→</span>
+        <div class="pilot-flow__step"><span class="pilot-flow__icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg></span><span class="pilot-flow__step-label">Relance préparée</span></div>
+        <span class="pilot-flow__arrow" aria-hidden="true">→</span>
+        <div class="pilot-flow__step"><span class="pilot-flow__icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"></rect><path d="M9 8h6M9 12h6M9 16h4"></path></svg></span><span class="pilot-flow__step-label">Suivi centralisé</span></div>
+      </div>
     </div>
   </section>
 
