@@ -232,6 +232,140 @@
     });
   });
 
+  // ---------- démonstration en direct ("le programme en bref") ----------
+  // Même mécanique que la démo de l'accueil (assets/js/home.js) : onglets +
+  // progression d'étapes animée, adaptée à un jeu de données propre à cette
+  // page (3 exemples déjà validés) plutôt que les 5 scénarios de l'accueil.
+  var ICON_PATHS = {
+    mail: '<rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M4 6.5l8 6 8-6"></path>',
+    check: '<circle cx="12" cy="12" r="9"></circle><path d="M8.5 12.5l2.3 2.3 4.7-4.8"></path>',
+    send: '<path d="M22 2L11 13"></path><path d="M22 2l-7 20-4-9-9-4 20-7z"></path>',
+    document: '<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6"></path>',
+    extract: '<line x1="5" y1="19" x2="5" y2="12"></line><line x1="12" y1="19" x2="12" y2="7"></line><line x1="19" y1="19" x2="19" y2="14"></line>',
+    grid: '<rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect>',
+    calendar: '<rect x="3" y="4" width="18" height="18" rx="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>',
+    bell: '<path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path>',
+    clipboard: '<rect x="5" y="3" width="14" height="18" rx="2"></rect><path d="M9 8h6M9 12h6M9 16h4"></path>'
+  };
+  function pilotStepIconSvg(name) {
+    return '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">' + ICON_PATHS[name] + '</svg>';
+  }
+
+  var PILOT_SCENARIOS = {
+    demande: {
+      file: 'demande_qualification · n8n',
+      note: 'Réponse préparée à partir des informations vérifiées',
+      steps: [
+        { icon: 'mail', title: 'Demande reçue', sub: 'formulaire ou email entrant' },
+        { icon: 'check', title: 'Informations vérifiées', sub: 'données recoupées automatiquement' },
+        { icon: 'send', title: 'Réponse préparée', sub: 'prête à être envoyée' }
+      ]
+    },
+    document: {
+      file: 'traitement_documents · Make',
+      note: 'Tableau mis à jour sans ressaisie manuelle',
+      steps: [
+        { icon: 'document', title: 'Document reçu', sub: 'facture, contrat, justificatif…' },
+        { icon: 'extract', title: 'Données extraites', sub: 'lecture automatique des champs clés' },
+        { icon: 'grid', title: 'Tableau mis à jour', sub: 'ligne ajoutée, sans erreur' }
+      ]
+    },
+    echeance: {
+      file: 'suivi_echeances · n8n',
+      note: 'Suivi centralisé, aucune échéance oubliée',
+      steps: [
+        { icon: 'calendar', title: 'Échéance détectée', sub: 'date approchant identifiée' },
+        { icon: 'bell', title: 'Relance préparée', sub: 'message prêt à valider' },
+        { icon: 'clipboard', title: 'Suivi centralisé', sub: 'statut mis à jour' }
+      ]
+    }
+  };
+  var PILOT_ORDER = ['demande', 'document', 'echeance'];
+
+  var pilotReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  var pilotDemoRoot = document.querySelector('[data-workflow-tabs]');
+  if (pilotDemoRoot) {
+    var pilotState = { scenario: 'demande', step: 0 };
+    var pilotRotateTimer = null;
+    var pilotFileEl = document.querySelector('[data-workflow-file]');
+    var pilotNoteEl = document.querySelector('[data-workflow-note]');
+    var pilotTabs = pilotDemoRoot.querySelectorAll('.workflow-tabs__btn');
+    var pilotStepEls = document.querySelectorAll('.workflow-step[data-step]');
+    var pilotStepRefs = Array.prototype.map.call(pilotStepEls, function (stepEl) {
+      return {
+        el: stepEl,
+        icon: stepEl.querySelector('[data-step-icon-emoji]'),
+        title: stepEl.querySelector('[data-step-title]'),
+        sub: stepEl.querySelector('[data-step-sub]'),
+        badge: stepEl.querySelector('[data-step-badge]')
+      };
+    });
+
+    function pilotRenderScenario() {
+      var scen = PILOT_SCENARIOS[pilotState.scenario];
+      if (pilotFileEl) pilotFileEl.textContent = scen.file;
+      if (pilotNoteEl) pilotNoteEl.textContent = scen.note;
+      pilotTabs.forEach(function (btn) {
+        btn.classList.toggle('is-active', btn.dataset.scenario === pilotState.scenario);
+      });
+      pilotStepRefs.forEach(function (ref, i) {
+        var st = scen.steps[i];
+        if (ref.icon) ref.icon.innerHTML = pilotStepIconSvg(st.icon);
+        if (ref.title) ref.title.textContent = st.title;
+        if (ref.sub) ref.sub.textContent = st.sub;
+      });
+      pilotRenderStepStates();
+    }
+
+    function pilotRenderStepStates() {
+      var allDone = pilotState.step >= 3;
+      pilotStepRefs.forEach(function (ref, i) {
+        var done = allDone || pilotState.step > i;
+        var active = !allDone && pilotState.step === i;
+        ref.el.classList.toggle('is-done', done);
+        ref.el.classList.toggle('is-active', active);
+        ref.el.classList.toggle('is-pending', !done && !active);
+        if (ref.badge) ref.badge.textContent = done ? 'terminé' : (active ? 'traitement…' : 'en attente');
+      });
+    }
+
+    function pilotTick() {
+      pilotState.step = Math.min(pilotState.step + 1, 3);
+      pilotRenderStepStates();
+    }
+
+    function pilotStartRotation() {
+      if (pilotReducedMotion) return;
+      if (pilotRotateTimer) clearInterval(pilotRotateTimer);
+      pilotRotateTimer = setInterval(function () {
+        var idx = PILOT_ORDER.indexOf(pilotState.scenario);
+        pilotState.scenario = PILOT_ORDER[(idx + 1) % PILOT_ORDER.length];
+        pilotState.step = 0;
+        pilotRenderScenario();
+      }, 6000);
+    }
+
+    function pilotSelectScenario(key) {
+      pilotState.scenario = key;
+      pilotState.step = 0;
+      pilotRenderScenario();
+      pilotStartRotation();
+    }
+
+    pilotTabs.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        pilotSelectScenario(btn.dataset.scenario);
+      });
+    });
+
+    pilotRenderScenario();
+    if (!pilotReducedMotion) {
+      setInterval(pilotTick, 1500);
+    }
+    pilotStartRotation();
+  }
+
   if (backBtn) {
     backBtn.addEventListener('click', function (e) {
       e.preventDefault();

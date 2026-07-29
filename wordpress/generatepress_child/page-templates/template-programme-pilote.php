@@ -14,12 +14,14 @@ $eb_pilot_faq    = isset( eb_seo_data()['programme-pilote']['faq'] ) ? eb_seo_da
 ?>
 <?php get_header(); ?>
 <main id="main">
-  <div class="audit-layout">
+  <div class="eb-hero-fx audit-layout">
+  <?php eb_hero_fx( eb_hero_fx_effects()['programme-pilote'] ); ?>
 
-    <!-- colonne gauche (sticky) : hero, même effet "constellation" que la page À propos -->
+    <!-- colonne gauche (sticky) : hero, même effet "constellation" que la page À propos —
+         le canvas et les halos sont désormais portés par .audit-layout ci-dessus (partagés
+         avec la colonne formulaire), .audit-side__hero-fx n'a plus son propre eb-hero-fx. -->
     <div class="audit-side">
-      <div class="eb-hero-fx audit-side__hero-fx">
-      <?php eb_hero_fx( eb_hero_fx_effects()['programme-pilote'] ); ?>
+      <div class="audit-side__hero-fx">
       <div class="eyebrow audit-side__eyebrow pilot-hero__badge">Programme pilote · 3 accompagnements ouverts</div>
       <h1>Automatisez une tâche qui vous fait perdre du temps chaque semaine.</h1>
       <p class="audit-side__lead">EB Automatisation sélectionne ponctuellement quelques TPE et PME pour concevoir une <strong>automatisation</strong> concrète, à <strong>tarif pilote</strong>, avec un accompagnement cadré de A à Z.</p>
@@ -181,31 +183,60 @@ $eb_pilot_faq    = isset( eb_seo_data()['programme-pilote']['faq'] ) ? eb_seo_da
       </div>
     </div>
 
-    <div class="pilot-flow">
-      <p class="pilot-flow__label">Quelques exemples concrets d'automatisation</p>
-
-      <div class="pilot-flow__row">
-        <div class="pilot-flow__step"><span class="pilot-flow__icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M3 7l9 6 9-6"></path></svg></span><span class="pilot-flow__step-label">Demande reçue</span></div>
-        <span class="pilot-flow__arrow" aria-hidden="true">→</span>
-        <div class="pilot-flow__step"><span class="pilot-flow__icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M8 12l3 3 5-6"></path></svg></span><span class="pilot-flow__step-label">Informations vérifiées</span></div>
-        <span class="pilot-flow__arrow" aria-hidden="true">→</span>
-        <div class="pilot-flow__step"><span class="pilot-flow__icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13"></path><path d="M22 2l-7 20-4-9-9-4 20-7z"></path></svg></span><span class="pilot-flow__step-label">Réponse préparée</span></div>
+    <!-- démonstration en direct : même composant que sur l'accueil
+         (.workflow-tabs / .mockup--navy.workflow-panel / .workflow-step),
+         3 onglets reprenant les 3 exemples déjà validés — CSS redéfinie
+         dans programme-pilote.css (home.css n'est pas chargé ici), JS
+         adapté dans programme-pilote.js (progression + pulse, sans les
+         5 scénarios propres à l'accueil). -->
+    <div class="pilot-demo">
+      <div class="hero__demo-label">
+        <span>Démonstration en direct</span>
+        <span class="hero__demo-rule"></span>
       </div>
-
-      <div class="pilot-flow__row">
-        <div class="pilot-flow__step"><span class="pilot-flow__icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6"></path></svg></span><span class="pilot-flow__step-label">Document reçu</span></div>
-        <span class="pilot-flow__arrow" aria-hidden="true">→</span>
-        <div class="pilot-flow__step"><span class="pilot-flow__icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="19" x2="5" y2="12"></line><line x1="12" y1="19" x2="12" y2="7"></line><line x1="19" y1="19" x2="19" y2="14"></line></svg></span><span class="pilot-flow__step-label">Données extraites</span></div>
-        <span class="pilot-flow__arrow" aria-hidden="true">→</span>
-        <div class="pilot-flow__step"><span class="pilot-flow__icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg></span><span class="pilot-flow__step-label">Tableau mis à jour</span></div>
+      <div class="workflow-tabs" data-workflow-tabs>
+        <button class="workflow-tabs__btn is-active" type="button" data-scenario="demande"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M4 6.5l8 6 8-6"></path></svg>Demande</button>
+        <button class="workflow-tabs__btn" type="button" data-scenario="document"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"></rect><path d="M9 8h6M9 12h6M9 16h4"></path></svg>Document</button>
+        <button class="workflow-tabs__btn" type="button" data-scenario="echeance"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>Échéance</button>
       </div>
-
-      <div class="pilot-flow__row">
-        <div class="pilot-flow__step"><span class="pilot-flow__icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg></span><span class="pilot-flow__step-label">Échéance détectée</span></div>
-        <span class="pilot-flow__arrow" aria-hidden="true">→</span>
-        <div class="pilot-flow__step"><span class="pilot-flow__icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg></span><span class="pilot-flow__step-label">Relance préparée</span></div>
-        <span class="pilot-flow__arrow" aria-hidden="true">→</span>
-        <div class="pilot-flow__step"><span class="pilot-flow__icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"></rect><path d="M9 8h6M9 12h6M9 16h4"></path></svg></span><span class="pilot-flow__step-label">Suivi centralisé</span></div>
+      <div class="mockup mockup--navy workflow-panel">
+        <div class="mockup__titlebar">
+          <div class="mockup__dots"><span></span><span></span><span></span></div>
+          <span class="mockup__filename" data-workflow-file>demande_qualification · n8n</span>
+          <span class="mockup__live"><span class="mockup__live-dot"></span>en direct</span>
+        </div>
+        <div class="workflow-panel__body">
+          <div class="workflow-step is-active" data-step="0">
+            <span class="workflow-step__icon" data-step-icon><span data-step-icon-emoji><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M4 6.5l8 6 8-6"></path></svg></span><span class="workflow-step__dot" data-step-dot></span></span>
+            <div class="workflow-step__text">
+              <div class="workflow-step__title" data-step-title>Demande reçue</div>
+              <div class="workflow-step__sub" data-step-sub>formulaire ou email entrant</div>
+            </div>
+            <span class="workflow-step__badge" data-step-badge>traitement…</span>
+          </div>
+          <div class="workflow-step__connector"></div>
+          <div class="workflow-step is-pending" data-step="1">
+            <span class="workflow-step__icon" data-step-icon><span data-step-icon-emoji><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M8.5 12.5l2.3 2.3 4.7-4.8"></path></svg></span><span class="workflow-step__dot" data-step-dot></span></span>
+            <div class="workflow-step__text">
+              <div class="workflow-step__title" data-step-title>Informations vérifiées</div>
+              <div class="workflow-step__sub" data-step-sub>données recoupées automatiquement</div>
+            </div>
+            <span class="workflow-step__badge" data-step-badge>en attente</span>
+          </div>
+          <div class="workflow-step__connector"></div>
+          <div class="workflow-step is-pending" data-step="2">
+            <span class="workflow-step__icon" data-step-icon><span data-step-icon-emoji><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13"></path><path d="M22 2l-7 20-4-9-9-4 20-7z"></path></svg></span><span class="workflow-step__dot" data-step-dot></span></span>
+            <div class="workflow-step__text">
+              <div class="workflow-step__title" data-step-title>Réponse préparée</div>
+              <div class="workflow-step__sub" data-step-sub>prête à être envoyée</div>
+            </div>
+            <span class="workflow-step__badge" data-step-badge>en attente</span>
+          </div>
+        </div>
+        <div class="workflow-panel__note">
+          <span class="workflow-panel__note-check">✓</span>
+          <span data-workflow-note>Réponse préparée à partir des informations vérifiées</span>
+        </div>
       </div>
     </div>
   </section>
