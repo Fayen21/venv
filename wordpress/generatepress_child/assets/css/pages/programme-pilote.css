@@ -105,10 +105,7 @@
 
    .eb-hero-fx{overflow:hidden} (hero-fx.css) reste inchangée : elle clippe
    les halos aurora (positionnés en négatif) et arrondit le canvas — hérité
-   tel quel, même rendu que la carte hero elle-même. (.audit-side porte
-   position:sticky, mais ce collage n'est déjà pas actif sur cette page — ni
-   même sur la page Audit d'origine, vérifié indépendamment de ce
-   changement : overflow:hidden ici ne retire donc rien qui fonctionnait.) */
+   tel quel, même rendu que la carte hero elle-même. */
 .audit-layout.eb-hero-fx{
   border-radius:28px;
   box-shadow:0 0 0 1px rgba(46,155,255,.18), 0 40px 90px -55px rgba(12,30,60,.6);
@@ -118,6 +115,16 @@
    effet voulu sur le lien du message d'erreur du formulaire, qui reste sur
    fond blanc à l'intérieur du même .eb-hero-fx désormais partagé. */
 .audit-layout .audit-form__error a{ color:inherit; }
+/* .audit-side{position:sticky;top:104px} (audit.css) prévoit ce décalage
+   pour dégager le bandeau sticky de la page Audit d'origine. Une fois
+   .audit-side imbriquée dans .eb-hero-fx (overflow:hidden ci-dessus),
+   l'ancêtre en overflow:hidden change le contexte de collage : le
+   navigateur rend .audit-side en permanence décalée de 104px vers le bas
+   (au lieu de ne décaler qu'en cas de collage réel au défilement), ce qui
+   désaligne visiblement son sommet par rapport à la carte du formulaire.
+   top:0 annule ce décalage — le collage au défilement ne change rien
+   d'observable ici de toute façon (colonnes de hauteur quasi égale). */
+.audit-layout.eb-hero-fx > .audit-side{ top:0; }
 .audit-layout{ align-items:stretch; }
 .audit-side{ display:flex; flex-direction:column; }
 .audit-side__reviews{ display:flex; flex-direction:column; align-items:center; gap:8px; margin-top:auto; padding-top:26px; }
